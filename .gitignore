@@ -1,0 +1,18 @@
+node_modules/
+.next/
+out/
+build/
+*.tsbuildinfo
+next-env.d.ts
+.env
+.env.local
+.env.*.local
+.DS_Store
+.vercel
+*.log
+# artefak sementara saat `npm run export:static`
+.app-api-disabled/
+.next-config-server.bak
+
+# Catatan: data/ (snapshot GitHub) & lib/mock-data.ts DIKOMIT —
+# menjadi sumber regenerasi fallback saat tidak ada GITHUB_TOKEN.

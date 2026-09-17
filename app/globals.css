@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink font-sans text-cream antialiased;
+    background-image:
+      radial-gradient(900px 520px at 88% -10%, rgba(224, 90, 30, 0.13), transparent 60%),
+      radial-gradient(760px 520px at -8% 108%, rgba(0, 229, 255, 0.07), transparent 60%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* dot-grid ambient (referensi template: micro-dot layer) */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image: radial-gradient(rgba(242, 236, 223, 0.05) 1px, transparent 1px);
+    background-size: 22px 22px;
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 85%);
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 85%);
+  }
+
+  ::selection {
+    background: #e05a1e;
+    color: #14110d;
+  }
+
+  ::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(242, 236, 223, 0.14);
+    border-radius: 99px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(242, 236, 223, 0.26);
+  }
+}
+
+@layer components {
+  /* glassmorphism */
+  .glass {
+    @apply border border-white/10 bg-white/[0.035] backdrop-blur-xl;
+  }
+
+  /* micro-label mono uppercase (referensi template) */
+  .micro {
+    @apply font-mono text-[10px] uppercase tracking-[0.22em];
+  }
+
+  .grad-text {
+    background: linear-gradient(92deg, #f07f45 12%, #00e5ff 92%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* glow hover untuk kartu */
+  .card-glow:hover {
+    box-shadow:
+      0 0 0 1px rgba(224, 90, 30, 0.3),
+      0 14px 48px -18px rgba(224, 90, 30, 0.35);
+  }
+
+  /* dot-grid (currentColor) */
+  .dotgrid {
+    background-image: radial-gradient(currentColor 1px, transparent 1.2px);
+    background-size: 14px 14px;
+  }
+
+  /* skeleton shimmer */
+  .skel {
+    @apply relative overflow-hidden bg-white/[0.05];
+  }
+  .skel::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(242, 236, 223, 0.07), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 1.8s linear infinite;
+  }
+
+  /* cmdk styling */
+  [cmdk-group-heading] {
+    padding: 14px 12px 6px;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    color: rgba(242, 236, 223, 0.4);
+  }
+  [cmdk-item][data-selected='true'] {
+    background: rgba(224, 90, 30, 0.14);
+    outline: 1px solid rgba(224, 90, 30, 0.35);
+  }
+
+  .codex-scroll {
+    scrollbar-width: thin;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-orb,
+  .animate-breathe,
+  .animate-rise,
+  .animate-pulse-ring,
+  .animate-marquee,
+  .animate-spin-slow {
+    animation: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}

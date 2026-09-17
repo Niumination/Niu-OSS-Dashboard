@@ -1,0 +1,38 @@
+{
+  "name": "niumination",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page + portfolio dashboard interaktif untuk github.com/niumination — Next.js App Router, R3F hero, command palette, GitHub aggregator, payment modal.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "gen:mock": "node scripts/gen-mock.mjs",
+    "export:static": "node scripts/export-static.mjs"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.0.6",
+    "@react-three/fiber": "^9.1.2",
+    "@vercel/og": "^0.6.4",
+    "cmdk": "^1.1.1",
+    "framer-motion": "^12.12.1",
+    "lucide-react": "^0.518.0",
+    "next": "15.3.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "three": "^0.178.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@types/three": "^0.178.0",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.3"
+  }
+}
