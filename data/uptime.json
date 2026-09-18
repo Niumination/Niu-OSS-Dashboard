@@ -1,0 +1,196 @@
+{
+  "updatedAt": "2026-09-18T16:25:39.237Z",
+  "intervalMinutes": 15,
+  "sites": [
+    {
+      "repo": "PemdiAcehTengah",
+      "url": "https://pemdi-aceh-tengah.vercel.app",
+      "days": [
+        {
+          "d": "2026-09-18",
+          "n": 1,
+          "ok": 1,
+          "ms": 632
+        }
+      ],
+      "recent": [
+        {
+          "t": "2026-09-18T16:25:39.237Z",
+          "ms": 632,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "repo": "mata-aihackfest-2026",
+      "url": "https://watchdog-mata.niumination.web.id",
+      "days": [
+        {
+          "d": "2026-09-18",
+          "n": 1,
+          "ok": 1,
+          "ms": 128
+        }
+      ],
+      "recent": [
+        {
+          "t": "2026-09-18T16:25:39.237Z",
+          "ms": 128,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "repo": "Niu-LKH",
+      "url": "https://niumination.github.io/Niu-LKH/",
+      "days": [
+        {
+          "d": "2026-09-18",
+          "n": 1,
+          "ok": 1,
+          "ms": 158
+        }
+      ],
+      "recent": [
+        {
+          "t": "2026-09-18T16:25:39.237Z",
+          "ms": 158,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "repo": "sapa-ai",
+      "url": "https://sapa-ai-indol.vercel.app",
+      "days": [
+        {
+          "d": "2026-09-18",
+          "n": 1,
+          "ok": 1,
+          "ms": 100
+        }
+      ],
+      "recent": [
+        {
+          "t": "2026-09-18T16:25:39.237Z",
+          "ms": 100,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "repo": "cc-acehtengah",
+      "url": "https://cc-acehtengah.vercel.app",
+      "days": [
+        {
+          "d": "2026-09-18",
+          "n": 1,
+          "ok": 1,
+          "ms": 938
+        }
+      ],
+      "recent": [
+        {
+          "t": "2026-09-18T16:25:39.237Z",
+          "ms": 938,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "repo": "niu-dash",
+      "url": "https://niumination.github.io/niu-dash/",
+      "days": [
+        {
+          "d": "2026-09-18",
+          "n": 1,
+          "ok": 1,
+          "ms": 217
+        }
+      ],
+      "recent": [
+        {
+          "t": "2026-09-18T16:25:39.237Z",
+          "ms": 217,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "repo": "kune-ya.com",
+      "url": "https://kune-ya-com.vercel.app",
+      "days": [
+        {
+          "d": "2026-09-18",
+          "n": 1,
+          "ok": 1,
+          "ms": 1253
+        }
+      ],
+      "recent": [
+        {
+          "t": "2026-09-18T16:25:39.237Z",
+          "ms": 1253,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "repo": "didong-code",
+      "url": "https://github.com/Niumination/didong-code",
+      "days": [
+        {
+          "d": "2026-09-18",
+          "n": 1,
+          "ok": 1,
+          "ms": 583
+        }
+      ],
+      "recent": [
+        {
+          "t": "2026-09-18T16:25:39.237Z",
+          "ms": 583,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "repo": "niu-private",
+      "url": "https://niumination.github.io/niu-private/",
+      "days": [
+        {
+          "d": "2026-09-18",
+          "n": 1,
+          "ok": 1,
+          "ms": 190
+        }
+      ],
+      "recent": [
+        {
+          "t": "2026-09-18T16:25:39.237Z",
+          "ms": 190,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "repo": "VirtualAssistance",
+      "url": "https://virtual-assistance-pi.vercel.app",
+      "days": [
+        {
+          "d": "2026-09-18",
+          "n": 1,
+          "ok": 1,
+          "ms": 668
+        }
+      ],
+      "recent": [
+        {
+          "t": "2026-09-18T16:25:39.237Z",
+          "ms": 668,
+          "ok": true
+        }
+      ]
+    }
+  ]
+}

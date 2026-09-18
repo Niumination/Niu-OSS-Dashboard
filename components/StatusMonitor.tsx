@@ -4,7 +4,8 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Globe, RefreshCw } from 'lucide-react';
-import type { Deployment } from '@/lib/types';
+import type { Deployment, UptimeData } from '@/lib/types';
+import { dayColor, uptimePct } from '@/lib/uptime';
 import { hostOf, timeAgo } from '@/lib/utils';
 
 type Status = 'checking' | 'online' | 'down';
@@ -19,7 +20,15 @@ const AUTO_REFRESH_MS = 5 * 60 * 1000;
  * Untuk status HTTP penuh (200 vs 500) dibutuhkan CORS proxy/server —
  * dokumentasikan di README.
  */
-export default function StatusMonitor({ deployments }: { deployments: Deployment[] }) {
+export default function StatusMonitor({
+  deployments,
+  history,
+}: {
+  deployments: Deployment[];
+  /** Riwayat GitOps (data/uptime.json) — opsional. */
+  history?: UptimeData;
+}) {
+  const historyByRepo = new Map((history?.sites ?? []).map((s) => [s.repo, s]));
   const [statuses, setStatuses] = useState<Record<string, Status>>({});
   const [tick, setTick] = useState(0);
   const [lastCheck, setLastCheck] = useState<string | null>(null);
@@ -87,6 +96,12 @@ export default function StatusMonitor({ deployments }: { deployments: Deployment
         <div className="micro flex items-center gap-2 text-cream/50">
           <Globe className="size-3.5 text-ember" />
           deployment live · status layanan
+          <Link
+            href="/status"
+            className="ml-1 text-ember/80 underline-offset-4 transition-colors hover:text-ember hover:underline"
+          >
+            riwayat 30 hari →
+          </Link>
           {lastCheck && (
             <span suppressHydrationWarning className="hidden text-cream/30 sm:inline">
               · periksa {timeAgo(lastCheck)}
@@ -128,7 +143,27 @@ export default function StatusMonitor({ deployments }: { deployments: Deployment
                 >
                   {d.repo}
                 </Link>
-                <span className="block truncate font-mono text-[9.5px] text-cream/35">{hostOf(d.url)}</span>
+                <span className="block truncate font-mono text-[9.5px] text-cream/35">
+                  {hostOf(d.url)}
+                  {historyByRepo.has(d.repo) && (
+                    <> · uptime 30h {uptimePct(historyByRepo.get(d.repo)!, 30).toFixed(1)}%</>
+                  )}
+                </span>
+                {historyByRepo.get(d.repo) && (
+                  <span className="mt-1.5 flex items-end gap-[2px]" aria-hidden="true">
+                    {historyByRepo
+                      .get(d.repo)!
+                      .days.slice(-30)
+                      .map((hd) => (
+                        <span
+                          key={hd.d}
+                          title={`${hd.d}: ${hd.ok}/${hd.n}`}
+                          className="h-3.5 flex-1 rounded-[2px]"
+                          style={{ background: dayColor(hd.ok / Math.max(1, hd.n)) }}
+                        />
+                      ))}
+                  </span>
+                )}
               </div>
               <span
                 className={

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Instrument_Serif, Inter, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
+import WebVitals from '@/components/WebVitals';
 import { SITE } from '@/lib/site.config';
 
 /* Tipografi (referensi template):
@@ -120,6 +121,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebSite) }}
         />
         {children}
+        <WebVitals />
       </body>
     </html>
   );

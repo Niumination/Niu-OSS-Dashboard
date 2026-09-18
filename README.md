@@ -322,6 +322,30 @@ Situs diaudit dan di-hardening sebelum deploy:
   ber-ikon per jenis (push/create/release/fork/watch/issue/PR),
   StatusMonitor menampilkan waktu periksa terakhir + auto-refresh 5 menit.
 
+### Fase 2 — status publik, insight, studi kasus, observabilitas (2026-09)
+
+- **Halaman status GitOps ala Upptime** (`/status`): GitHub Actions
+  (`uptime.yml`, tiap 15 menit) menjalankan `scripts/uptime-check.mjs`
+  yang memeriksa 10 deployment publik teratas, lalu hasilnya di-commit
+  ke `data/uptime.json` + `lib/uptime-data.ts` (regenerasi otomatis,
+  tidak pernah diedit manual). Tanpa server — history 30 hari, uptime %,
+  dan latensi rata-rata per situs bisa diaudit publik lewat git.
+- **Pola kontribusi ala OSS Insight** (`/system`): grafik aktivitas
+  12 bulan, distribusi per hari-dalam-minggu, dan 5 repo teratas.
+  Pakai GraphQL `contributionsCalendar` bila `GITHUB_TOKEN` tersedia;
+  tanpa token otomatis fallback ke data events (±90 hari) dengan
+  catatan sumber yang jujur.
+- **Studi kasus** (`/studies`): 3 proyek unggulan dengan narasi
+  masalah → pendekatan → hasil + metrik (Pemdi Aceh Tengah, Flame Ade,
+  AI-First OS). Konten di-repo (`lib/case-studies.ts`), navigasi
+  prev/next, fakta repo live dari snapshot, tercantum di sitemap.
+- **Observabilitas**: komponen `<WebVitals/>` melaporkan LCP/INP/CLS/
+  TTFB/FCP ke `POST /api/vitals` (log Functions — siap disambungkan ke
+  penyimpanan metrik); **Lighthouse CI** (`lighthouse.yml` +
+  `lighthouserc.json`) mengaudit build statis mingguan dengan budget
+  performa ≥ 0.75, aksesibilitas/best-practices/SEO ≥ 0.9, CLS < 0.15.
+  Sentry opsional via `SENTRY_DSN`.
+
 ## ✦ Kontribusi / kustomisasi cepat
 
 - **Ganti warna tema** → `tailwind.config.ts` (blok `colors`) + `app/globals.css`.

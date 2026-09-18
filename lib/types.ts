@@ -66,3 +66,33 @@ export interface Deployment {
   url: string;
   pushedAt: string;
 }
+
+/* ------------------------------ uptime ----------------------------------- */
+
+/** Satu pemeriksaan mentah (24 jam terakhir). */
+export interface UptimeCheck {
+  t: string;
+  ms: number | null;
+  ok: boolean;
+}
+
+/** Agregat harian (30 hari terakhir). */
+export interface UptimeDay {
+  d: string;
+  n: number;
+  ok: number;
+  ms: number;
+}
+
+export interface UptimeSite {
+  repo: string;
+  url: string;
+  days: UptimeDay[];
+  recent: UptimeCheck[];
+}
+
+export interface UptimeData {
+  updatedAt: string;
+  intervalMinutes: number;
+  sites: UptimeSite[];
+}

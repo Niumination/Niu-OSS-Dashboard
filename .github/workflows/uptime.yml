@@ -1,0 +1,38 @@
+name: Uptime
+
+# Pola GitOps ala Upptime: cek deployment tiap 15 menit, commit riwayat ke
+# repo — status page (/status) membaca data ter-commit. Tanpa server tambahan.
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    name: Periksa deployment
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Jalankan pemeriksa uptime
+        run: node scripts/uptime-check.mjs
+
+      - name: Commit & push bila ada perubahan
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/uptime.json lib/uptime-data.ts
+          if git diff --cached --quiet; then
+            echo "Tidak ada perubahan uptime."
+          else
+            git commit -m "chore(uptime): periksa berkala [skip ci]"
+            git push
+          fi

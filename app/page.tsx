@@ -2,6 +2,7 @@ import Link from 'next/link';
 import {
   Activity,
   ArrowRight,
+  BookOpen,
   Code2,
   Coffee,
   Heart,
@@ -17,6 +18,7 @@ import ErrorBoundary from '@/components/ErrorBoundary';
 import RepoCard from '@/components/RepoCard';
 import SectionHead from '@/components/SectionHead';
 import { getGithubSnapshot, getRecentReleases } from '@/lib/github';
+import { CASE_STUDIES } from '@/lib/case-studies';
 import { computeSummary } from '@/lib/summary';
 import { SERVICE_PACKAGES, SITE } from '@/lib/site.config';
 import type { RepoLite } from '@/lib/types';
@@ -118,6 +120,41 @@ export default async function Home() {
           <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             {showFeatured.map((r, i) => (
               <RepoCard key={r.name} repo={r} index={i} />
+            ))}
+          </div>
+        </section>
+
+        {/* Studi kasus teaser */}
+        <section className="mt-14">
+          <SectionHead
+            icon={BookOpen}
+            micro="studi kasus // masalah → hasil"
+            title="Dibedah, bukan sekadar dipamer"
+            sub="Tiga karya unggulan dibedah lengkap: masalahnya, pendekatannya, dan hasil yang bisa diverifikasi dari kode."
+            action={{ href: '/studies', label: 'Semua studi kasus' }}
+          />
+          <div className="mt-6 grid gap-4 lg:grid-cols-3">
+            {CASE_STUDIES.map((c) => (
+              <Link
+                key={c.slug}
+                href={`/studies/${c.slug}`}
+                className="card-glow group relative overflow-hidden rounded-3xl border border-white/[0.09] bg-white/[0.025] p-5 transition-colors hover:border-ember/35"
+              >
+                <div
+                  className="pointer-events-none absolute -top-16 -right-12 size-40 rounded-full opacity-[0.12] blur-3xl"
+                  style={{ background: c.accent }}
+                />
+                <div className="relative micro" style={{ color: c.accent }}>{c.kind}</div>
+                <h3 className="relative mt-3 font-display text-[24px] leading-tight tracking-tight text-cream">
+                  {c.title}
+                </h3>
+                <p className="relative mt-2 line-clamp-2 text-[12.5px] leading-relaxed text-cream/55">
+                  {c.tagline}
+                </p>
+                <span className="relative mt-4 flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider text-cream/45 transition-colors group-hover:text-ember">
+                  Baca studi <ArrowRight className="size-3 transition-transform group-hover:translate-x-0.5" />
+                </span>
+              </Link>
             ))}
           </div>
         </section>

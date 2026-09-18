@@ -7,8 +7,11 @@ import { formatDate } from '@/lib/utils';
 const NAV = [
   { href: '/', label: 'Beranda' },
   { href: '/repositories', label: 'Semua Repositori' },
+  { href: '/studies', label: 'Studi Kasus' },
   { href: '/services', label: 'Jasa & Komisi' },
   { href: '/system', label: 'Sistem & Metrik' },
+  { href: '/status', label: 'Halaman Status' },
+  { href: '/feed.xml', label: 'RSS Aktivitas' },
 ];
 
 export default function Footer({ snapshot }: { snapshot: Snapshot }) {

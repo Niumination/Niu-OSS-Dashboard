@@ -77,6 +77,8 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
     { value: 'nav-repos', label: 'Semua Repositori', icon: FolderGit2, href: '/repositories' },
     { value: 'nav-services', label: 'Jasa & Komisi', icon: Wrench, href: '/services' },
     { value: 'nav-system', label: 'Sistem & Metrik', icon: Activity, href: '/system' },
+    { value: 'nav-status', label: 'Halaman Status', icon: Activity, href: '/status' },
+    { value: 'nav-studies', label: 'Studi Kasus', icon: FolderGit2, href: '/studies' },
   ];
 
   const linkItems = [

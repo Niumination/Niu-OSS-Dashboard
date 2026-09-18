@@ -5,6 +5,9 @@ import DashboardMetrics from '@/components/DashboardMetrics';
 import StatusMonitor from '@/components/StatusMonitor';
 import { getGithubSnapshot } from '@/lib/github';
 import { computeSummary } from '@/lib/summary';
+import { getContributions } from '@/lib/insights';
+import InsightsPanel from '@/components/InsightsPanel';
+import { UPTIME_DATA } from '@/lib/uptime-data';
 import { formatDate, timeAgo } from '@/lib/utils';
 
 // Nilai statis (persyaratan parser config Next). Pada static export semua
@@ -21,6 +24,7 @@ export const metadata: Metadata = {
 export default async function SystemPage() {
   const snap = await getGithubSnapshot();
   const s = computeSummary(snap);
+  const contributions = await getContributions(snap);
 
   return (
     <AppShell snapshot={snap}>
@@ -58,7 +62,24 @@ export default async function SystemPage() {
           <DashboardMetrics snapshot={snap} />
         </div>
 
-        <StatusMonitor deployments={s.deployments} />
+        <section className="mt-10">
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <div className="micro flex items-center gap-2 text-cream/45">
+                <span className="size-1.5 rounded-full bg-ember" />
+                insight // kontribusi
+              </div>
+              <h2 className="mt-2 font-display text-[30px] tracking-tight md:text-[38px]">
+                Pola Kontribusi
+              </h2>
+            </div>
+          </div>
+          <div className="mt-6">
+            <InsightsPanel data={contributions} />
+          </div>
+        </section>
+
+        <StatusMonitor deployments={s.deployments} history={UPTIME_DATA} />
 
         <div className="mt-6 flex items-center gap-2 font-mono text-[9.5px] uppercase tracking-[0.18em] text-cream/30">
           <Activity className="size-3 text-ember" />
