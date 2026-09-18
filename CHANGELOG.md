@@ -7,6 +7,8 @@ proyek ini tidak memakai versioning semver ketat (satu repo, satu situs).
 
 ## [Fase 3.2] — persiapan produksi Vercel + domain, ID penuh, roadmap — 2026-09-19
 
+Commit: `36a8847`
+
 ### Diubah
 - **Target produksi: Vercel + domain `niumination.web.id` (idwebhost)** —
   semua fallback URL beralih dari github.io; README Deployment A kini berisi

@@ -64,7 +64,7 @@ Setiap fase punya entri [CHANGELOG.md](./CHANGELOG.md) + commit yang bisa diaudi
 | Fase 2 | Status GitOps (/status), pola kontribusi, studi kasus, observabilitas | `3159eed` | ✅ |
 | Fase 3 | i18n id/en, PWA, API publik v1, QR share | `ab0737f` | ✅ |
 | Fase 3.1 | i18n dashboard penuh, /developers, deskripsi repo EN | `48727b1` | ✅ |
-| Fase 3.2 | Persiapan produksi Vercel + domain web.id, ID penuh, ROADMAP | lihat CHANGELOG | ✅ |
+| Fase 3.2 | Persiapan produksi Vercel + domain web.id, ID penuh, ROADMAP | `36a8847` | ✅ |
 | PPR | Partial Prerendering | — | ⏸ ditunda (target deploy statis; ukur p50/p95 dari `/api/vitals` dulu bila pindah ke Vercel) |
 
 ## ✦ Fitur
