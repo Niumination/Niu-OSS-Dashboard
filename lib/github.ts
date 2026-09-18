@@ -244,25 +244,47 @@ export async function getGithubSnapshot(): Promise<Snapshot> {
   }
 }
 
+/**
+ * Nama-nama README umum yang dicoba berurutan.
+ * Dipakai dari raw.githubusercontent.com (CDN, TANPA rate limit GitHub API)
+ * — penting karena halaman detail 91 repo di-prerender saat build.
+ */
+const README_NAMES = ['README.md', 'readme.md', 'Readme.md', 'README.rst', 'README'];
+
+async function fetchRawReadme(slug: string): Promise<string | null> {
+  for (const name of README_NAMES) {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), FETCH_TIMEOUT_MS);
+    try {
+      // Ref `HEAD` bekerja untuk branch default apa pun (main/master/…).
+      const res = await fetch(`https://raw.githubusercontent.com/${OWNER}/${slug}/HEAD/${name}`, {
+        signal: ctrl.signal,
+        next: { revalidate: 600, tags: ['github'] },
+      });
+      if (res.ok) {
+        const text = await res.text();
+        if (text.trim()) return text;
+      }
+    } catch {
+      // coba nama berikutnya
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+  return null;
+}
+
 /** Detail satu repo + README (untuk halaman /repo/[slug]). */
 export async function getRepoDetail(slug: string): Promise<{ repo: RepoLite | null; readme: string | null }> {
   if (isStaticExport) {
     const repo = MOCK_SNAPSHOT.repos.find((r) => r.name === slug) ?? null;
     return { repo, readme: null };
   }
-  const repo = await gh<RawRepo>(`/repos/${OWNER}/${slug}`).catch(() => null);
-  let readme: string | null = null;
-  if (repo) {
-    try {
-      const content = await gh<{ content?: string; encoding?: string }>(
-        `/repos/${OWNER}/${slug}/readme`,
-      );
-      if (content?.content && content.encoding === 'base64') {
-        readme = Buffer.from(content.content, 'base64').toString('utf-8');
-      }
-    } catch {
-      readme = null;
-    }
-  }
+  // Metadata repo via API (best-effort, ISR 300 dtk); README via raw CDN
+  // (tanpa rate limit) agar 91 halaman detail tetap lengkap saat build.
+  const [repo, readme] = await Promise.all([
+    gh<RawRepo>(`/repos/${OWNER}/${slug}`).catch(() => null),
+    fetchRawReadme(slug),
+  ]);
   return { repo: repo ? mapRepo(repo) : null, readme };
 }

@@ -16,9 +16,9 @@ export default function ErrorPage({
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-5 p-6 text-center">
-      <div className="micro text-ember">error // route</div>
+      <div className="micro text-ember">error // halaman</div>
       <h1 className="font-display text-[40px] leading-tight tracking-tight md:text-[52px]">
-        Something glitched.
+        Terjadi gangguan.
       </h1>
       <p className="max-w-md text-[14px] leading-relaxed text-cream/60">
         {error.message || 'Terjadi kesalahan tak terduga saat merender halaman ini.'}

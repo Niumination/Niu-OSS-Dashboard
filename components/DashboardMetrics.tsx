@@ -5,12 +5,15 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import {
   Activity,
-  ExternalLink,
+  Eye,
   FolderGit2,
   GitBranch,
   GitCommitHorizontal,
+  GitFork,
   Languages,
   MonitorPlay,
+  Package,
+  Sparkles,
   Star,
   Timer,
   Trophy,
@@ -19,6 +22,29 @@ import {
 import { computeSummary } from '@/lib/summary';
 import type { Ghevent, Snapshot } from '@/lib/types';
 import { formatNumber, langColor } from '@/lib/utils';
+import CategoryDonut from './CategoryDonut';
+
+/** Ikon & warna per jenis event GitHub (feed aktivitas). */
+const EVENT_ICON: Record<string, React.ComponentType<{ className?: string }>> = {
+  PushEvent: GitCommitHorizontal,
+  CreateEvent: Sparkles,
+  ReleaseEvent: Package,
+  ForkEvent: GitFork,
+  WatchEvent: Eye,
+  IssuesEvent: Activity,
+  PullRequestEvent: GitBranch,
+  PublicEvent: Sparkles,
+};
+const EVENT_COLOR: Record<string, string> = {
+  PushEvent: 'text-ember',
+  CreateEvent: 'text-spotlight',
+  ReleaseEvent: 'text-success',
+  ForkEvent: 'text-cream/60',
+  WatchEvent: 'text-warn',
+  IssuesEvent: 'text-ember',
+  PullRequestEvent: 'text-spotlight',
+  PublicEvent: 'text-success',
+};
 
 /*
  * DashboardMetrics — metrik aktivitas terintegrasi:
@@ -33,9 +59,9 @@ export default function DashboardMetrics({ snapshot }: { snapshot: Snapshot }) {
     { icon: FolderGit2, label: 'Repositori publik', value: s.totalRepos, hint: `${s.originalRepos} original` },
     { icon: Star, label: 'Total stars', value: s.totalStars },
     { icon: GitBranch, label: 'Total forks', value: s.totalForks },
-    { icon: Users, label: 'Followers', value: s.followers },
+    { icon: Users, label: 'Pengikut', value: s.followers },
     { icon: Timer, label: 'Aktif 90 hari', value: s.activeLast90d, hint: 'repo dengan push' },
-    { icon: MonitorPlay, label: 'Live demo', value: s.withLiveDemo, hint: 'punya homepage' },
+    { icon: MonitorPlay, label: 'Demo langsung', value: s.withLiveDemo, hint: 'punya homepage' },
   ];
 
   const topRepos = useMemo(
@@ -73,7 +99,7 @@ export default function DashboardMetrics({ snapshot }: { snapshot: Snapshot }) {
         <Panel
           className="lg:col-span-7"
           icon={GitCommitHorizontal}
-          micro="commit heatmap · 26 minggu"
+          micro="peta commit · 26 minggu"
           aside={`${s.commitsLast4Weeks} push (4 mgg terakhir)`}
         >
           <CommitHeatmap events={snapshot.events} />
@@ -99,8 +125,8 @@ export default function DashboardMetrics({ snapshot }: { snapshot: Snapshot }) {
           <ActivityBars events={snapshot.events} />
         </Panel>
 
-        {/* Top repos + feed */}
-        <Panel className="lg:col-span-7" icon={Trophy} micro="top repositori & aktivitas" aside="live dari github">
+        {/* Donat kategori */}
+        <Panel className="lg:col-span-7" icon={Trophy} micro="repo teratas & aktivitas terbaru" aside="langsung dari github">
           <div className="grid gap-4 md:grid-cols-2">
             <div className="space-y-1.5">
               {topRepos.map((r, i) => (
@@ -124,19 +150,28 @@ export default function DashboardMetrics({ snapshot }: { snapshot: Snapshot }) {
               ))}
             </div>
             <div className="space-y-1.5">
-              {recent.map((e) => (
-                <div key={e.id} className="flex items-center gap-3 rounded-2xl border border-white/[0.06] bg-white/[0.02] px-3.5 py-2.5">
-                  <span className="grid size-7 shrink-0 place-items-center rounded-lg bg-ember/10 text-ember">
-                    <Activity className="size-3" />
-                  </span>
-                  <div className="min-w-0 flex-1">
-                    <div className="truncate text-[12px] text-cream/80">{e.summary}</div>
-                    <div className="truncate font-mono text-[9.5px] text-cream/35">{e.repo}</div>
+              {recent.map((e) => {
+                const EvIcon = EVENT_ICON[e.type] ?? Activity;
+                const evColor = EVENT_COLOR[e.type] ?? 'text-ember';
+                return (
+                  <div key={e.id} className="flex items-center gap-3 rounded-2xl border border-white/[0.06] bg-white/[0.02] px-3.5 py-2.5">
+                    <span className={`grid size-7 shrink-0 place-items-center rounded-lg bg-white/[0.04] ${evColor}`}>
+                      <EvIcon className="size-3.5" />
+                    </span>
+                    <div className="min-w-0 flex-1">
+                      <div className="truncate text-[12px] text-cream/80">{e.summary}</div>
+                      <div className="truncate font-mono text-[9.5px] text-cream/35">{e.repo}</div>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
+        </Panel>
+
+        {/* Distribusi kategori */}
+        <Panel className="lg:col-span-12" icon={Languages} micro="kategorisasi otomatis · seluruh repositori" aside={`${s.totalRepos} repo`}>
+          <CategoryDonut counts={s.categoryCounts} total={s.totalRepos} />
         </Panel>
       </div>
     </div>

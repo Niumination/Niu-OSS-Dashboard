@@ -73,10 +73,10 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
   const close = () => onOpenChange(false);
 
   const navItems = [
-    { value: 'nav-overview', label: 'Overview / Landing', icon: LayoutDashboard, href: '/' },
-    { value: 'nav-repos', label: 'All Repositories', icon: FolderGit2, href: '/repositories' },
-    { value: 'nav-services', label: 'Services & Commissions', icon: Wrench, href: '/services' },
-    { value: 'nav-system', label: 'System & Metrics', icon: Activity, href: '/system' },
+    { value: 'nav-overview', label: 'Beranda / Landing', icon: LayoutDashboard, href: '/' },
+    { value: 'nav-repos', label: 'Semua Repositori', icon: FolderGit2, href: '/repositories' },
+    { value: 'nav-services', label: 'Jasa & Komisi', icon: Wrench, href: '/services' },
+    { value: 'nav-system', label: 'Sistem & Metrik', icon: Activity, href: '/system' },
   ];
 
   const linkItems = [
@@ -239,7 +239,7 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
             </Command>
 
             <div className="flex items-center gap-4 border-t border-white/[0.08] px-5 py-3 font-mono text-[9.5px] uppercase tracking-[0.18em] text-cream/35">
-              <span>↑↓ navigasi</span>
+              <span>↑↓ telusuri</span>
               <span>↵ pilih</span>
               <span>esc tutup</span>
               <span className="ml-auto text-cream/25">⌘K / Ctrl+K</span>

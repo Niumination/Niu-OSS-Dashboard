@@ -1,16 +1,16 @@
 import Link from 'next/link';
 
 const LINKS = [
-  { href: '/', label: 'Overview' },
-  { href: '/repositories', label: 'All Repositories' },
-  { href: '/services', label: 'Services' },
-  { href: '/system', label: 'System & Metrics' },
+  { href: '/', label: 'Beranda' },
+  { href: '/repositories', label: 'Semua Repositori' },
+  { href: '/services', label: 'Jasa' },
+  { href: '/system', label: 'Sistem & Metrik' },
 ];
 
 export default function NotFound() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-5 p-6 text-center">
-      <div className="micro text-ember">404 // not found</div>
+      <div className="micro text-ember">404 // tidak ditemukan</div>
       <h1 className="font-display text-[52px] leading-none tracking-tight md:text-[72px]">
         Halaman tidak ada.
       </h1>

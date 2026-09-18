@@ -71,8 +71,8 @@ export default function RepoGrid({ repos, offline = false, offlineDate }: Props)
         <div className="mb-4 flex items-start gap-3 rounded-2xl border border-warn/25 bg-warn/[0.07] px-4 py-3">
           <AlertTriangle className="mt-0.5 size-4 shrink-0 text-warn" />
           <p className="text-[12.5px] leading-relaxed text-warn/90">
-            GitHub API sedang rate-limited atau tidak terjangkau — menampilkan{' '}
-            <strong>snapshot fallback</strong> ({formatDate(offlineDate ?? new Date().toISOString())}).
+            GitHub API sedang dibatasi laju (rate limit) atau tidak terjangkau — menampilkan{' '}
+            <strong>snapshot cadangan</strong> ({formatDate(offlineDate ?? new Date().toISOString())}).
             Data akan kembali otomatis saat API pulih (cache ISR 5 menit).
           </p>
         </div>
@@ -176,7 +176,7 @@ export default function RepoGrid({ repos, offline = false, offlineDate }: Props)
             }}
             className="mt-4 h-9 rounded-full border border-white/15 px-4 font-mono text-[10px] uppercase tracking-wider text-cream/70 transition hover:border-ember/50 hover:text-cream"
           >
-            Reset filter
+            Atur ulang filter
           </button>
         </div>
       ) : (

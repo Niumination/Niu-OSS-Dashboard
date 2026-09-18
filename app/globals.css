@@ -129,6 +129,90 @@
   .codex-scroll {
     scrollbar-width: thin;
   }
+
+  /* Render README (markdown) */
+  .readme {
+    @apply px-6 py-5 text-[13.5px] leading-relaxed text-cream/75;
+    overflow-wrap: break-word;
+  }
+  .readme > *:first-child {
+    margin-top: 0;
+  }
+  .readme > *:last-child {
+    margin-bottom: 0;
+  }
+  .readme h1,
+  .readme h2,
+  .readme h3,
+  .readme h4 {
+    @apply mt-7 mb-3 font-semibold text-cream;
+    line-height: 1.25;
+  }
+  .readme h1 {
+    @apply border-b border-white/10 pb-2 text-[26px];
+  }
+  .readme h2 {
+    @apply text-[21px];
+  }
+  .readme h3 {
+    @apply text-[17px];
+  }
+  .readme h4 {
+    @apply text-[15px];
+  }
+  .readme p {
+    @apply my-3;
+  }
+  .readme a {
+    @apply text-ember-soft underline underline-offset-2 transition-colors hover:text-ember;
+  }
+  .readme strong {
+    @apply text-cream;
+  }
+  .readme ul,
+  .readme ol {
+    @apply my-3 pl-6;
+  }
+  .readme ul {
+    list-style: disc;
+  }
+  .readme ol {
+    list-style: decimal;
+  }
+  .readme li {
+    @apply my-1;
+  }
+  .readme li::marker {
+    color: #e05a1e;
+  }
+  .readme code {
+    @apply rounded-md border border-white/10 bg-ink/80 px-1.5 py-0.5 font-mono text-[12px] text-ember-soft;
+  }
+  .readme pre {
+    @apply my-4 overflow-x-auto codex-scroll rounded-2xl border border-white/10 bg-ink/80 p-4;
+  }
+  .readme pre code {
+    @apply border-0 bg-transparent p-0 text-[12px] leading-relaxed text-cream/80;
+  }
+  .readme blockquote {
+    @apply my-4 border-l-2 border-ember/60 pl-4 italic text-cream/55;
+  }
+  .readme table {
+    @apply my-4 w-full border-collapse text-[12.5px];
+  }
+  .readme th,
+  .readme td {
+    @apply border border-white/10 px-3 py-1.5 text-left;
+  }
+  .readme th {
+    @apply bg-white/[0.04] font-medium text-cream;
+  }
+  .readme hr {
+    @apply my-6 border-white/10;
+  }
+  .readme img {
+    @apply my-4 max-w-full rounded-xl border border-white/10;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

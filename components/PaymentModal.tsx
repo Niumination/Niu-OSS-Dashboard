@@ -254,7 +254,7 @@ function OssTab() {
           ))}
         </div>
         <span className="font-mono text-[11px] text-cream/45">
-          {freq === 'monthly' ? 'recurring — via GitHub Sponsors' : 'sekali bayar'}
+          {freq === 'monthly' ? 'berulang — via GitHub Sponsors' : 'sekali bayar'}
         </span>
       </div>
 
@@ -323,10 +323,10 @@ function OssTab() {
           name="Midtrans — QRIS / VA / E-Wallet"
           desc={
             SITE.midtransClientKey
-              ? 'Checkout Snap: QRIS, GoPay, OVO, ShopeePay, DANA, VA bank.'
+              ? 'Bayar via Snap: QRIS, GoPay, OVO, ShopeePay, DANA, VA bank.'
               : 'Aktif setelah NEXT_PUBLIC_MIDTRANS_CLIENT_KEY diisi di environment.'
           }
-          cta="Checkout"
+          cta="Bayar"
           onClick={payMidtrans}
           disabled={!SITE.midtransClientKey}
           state={midStatus}
@@ -467,7 +467,7 @@ function ServicesTab() {
     return (
       <div className="grid place-items-center rounded-3xl border border-success/25 bg-success/[0.06] px-6 py-12 text-center">
         <CheckCircle2 className="size-10 text-success" />
-        <h3 className="mt-4 font-display text-2xl text-cream">Request terkirim!</h3>
+        <h3 className="mt-4 font-display text-2xl text-cream">Permintaan terkirim!</h3>
         <p className="mt-2 max-w-sm text-[13px] leading-relaxed text-cream/60">
           Balasan diproses dalam 1–24 jam kerja. Cek email/{` `}WhatsApp Anda — berikutnya tinggal
           konfirmasi penawaran & pembayaran.
@@ -481,7 +481,7 @@ function ServicesTab() {
           }}
           className="mt-5 h-10 rounded-full border border-white/15 px-5 font-mono text-[10.5px] uppercase tracking-wider text-cream/75 transition hover:border-ember/50 hover:text-cream"
         >
-          Kirim request lain
+          Kirim permintaan lain
         </button>
       </div>
     );
@@ -602,7 +602,7 @@ function ServicesTab() {
                 </span>
                 {p.highlight && (
                   <span className="rounded-full bg-ember px-2.5 py-1 font-mono text-[8.5px] uppercase tracking-wider text-ink">
-                    populer
+                    terpopuler
                   </span>
                 )}
               </div>

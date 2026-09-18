@@ -1,13 +1,16 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Globe, RefreshCw } from 'lucide-react';
 import type { Deployment } from '@/lib/types';
-import { hostOf } from '@/lib/utils';
+import { hostOf, timeAgo } from '@/lib/utils';
 
 type Status = 'checking' | 'online' | 'down';
+
+/** Auto-periksa ulang tiap 5 menit agar status tetap segar. */
+const AUTO_REFRESH_MS = 5 * 60 * 1000;
 
 /*
  * StatusMonitor — memantau deployment live (repo dengan homepage).
@@ -19,13 +22,26 @@ type Status = 'checking' | 'online' | 'down';
 export default function StatusMonitor({ deployments }: { deployments: Deployment[] }) {
   const [statuses, setStatuses] = useState<Record<string, Status>>({});
   const [tick, setTick] = useState(0);
+  const [lastCheck, setLastCheck] = useState<string | null>(null);
+  const mounted = useRef(true);
+
+  useEffect(() => {
+    mounted.current = true;
+    const iv = setInterval(() => setTick((t) => t + 1), AUTO_REFRESH_MS);
+    return () => {
+      mounted.current = false;
+      clearInterval(iv);
+    };
+  }, []);
 
   const runChecks = useCallback(() => {
+    if (!mounted.current) return () => {};
     let cancelled = false;
     const timers: ReturnType<typeof setTimeout>[] = [];
     const initial: Record<string, Status> = {};
     for (const d of deployments) initial[d.repo] = 'checking';
     setStatuses(initial);
+    setLastCheck(new Date().toISOString());
 
     deployments.forEach((d, i) => {
       timers.push(
@@ -70,7 +86,12 @@ export default function StatusMonitor({ deployments }: { deployments: Deployment
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="micro flex items-center gap-2 text-cream/50">
           <Globe className="size-3.5 text-ember" />
-          live deployments · status layanan
+          deployment live · status layanan
+          {lastCheck && (
+            <span suppressHydrationWarning className="hidden text-cream/30 sm:inline">
+              · periksa {timeAgo(lastCheck)}
+            </span>
+          )}
         </div>
         <div className="flex items-center gap-3">
           <span className="font-mono text-[9.5px] uppercase tracking-wider text-cream/40">
@@ -118,7 +139,7 @@ export default function StatusMonitor({ deployments }: { deployments: Deployment
                       : 'font-mono text-[9px] uppercase tracking-wider text-ember'
                 }
               >
-                {st === 'online' ? 'online' : st === 'down' ? 'unreach' : 'check'}
+                {st === 'online' ? 'online' : st === 'down' ? 'offline' : 'cek'}
               </span>
             </motion.div>
           );
@@ -126,8 +147,9 @@ export default function StatusMonitor({ deployments }: { deployments: Deployment
       </div>
 
       <p className="mt-4 font-mono text-[9.5px] leading-relaxed text-cream/30">
-        * Status = jangkauan jaringan (opaque check, no-cors + timeout 6 dtk). Respons 403/CORS
-        tetap dihitung “terjangkau”. Untuk status HTTP penuh, hubungkan CORS proxy / uptime server.
+        * Status = jangkauan jaringan (periksa opak, no-cors + timeout 6 dtk), perbarui otomatis
+        tiap 5 menit. Respons 403/CORS tetap dihitung “terjangkau”. Untuk status HTTP penuh,
+        hubungkan proksi CORS / layanan uptime.
       </p>
     </section>
   );

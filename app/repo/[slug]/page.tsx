@@ -3,25 +3,25 @@ import Link from 'next/link';
 import {
   ArrowLeft,
   ExternalLink,
+  Eye,
   FolderGit2,
   GitBranch,
   GitFork,
-  Lock,
+  HardDrive,
   Package,
   Play,
   Star,
   Users,
 } from 'lucide-react';
 import AppShell from '@/components/AppShell';
+import CloneBox from '@/components/CloneBox';
+import Readme from '@/components/Readme';
 import RepoCard from '@/components/RepoCard';
 import { getGithubSnapshot, getRepoDetail } from '@/lib/github';
 import { isStaticExport } from '@/lib/env';
-import { SITE } from '@/lib/site.config';
 import type { RepoLite } from '@/lib/types';
 import { formatDate, formatNumber, langColor, timeAgo } from '@/lib/utils';
 
-// Nilai statis (persyaratan parser config Next). Pada static export semua
-// halaman memang dirender statis; dynamicParams diabaikan saat output: 'export'.
 export const revalidate = 300;
 export const dynamicParams = true;
 
@@ -43,7 +43,7 @@ export async function generateMetadata({
   const snap = await getGithubSnapshot();
   const repo = snap.repos.find((r) => r.name === slug);
   if (!repo) {
-    return { title: 'Repo tidak ditemukan' };
+    return { title: 'Repositori tidak ditemukan' };
   }
   const base = process.env.SITE_URL ?? 'https://niumination.github.io';
   return {
@@ -56,7 +56,6 @@ export async function generateMetadata({
       url: `${base}/repo/${repo.name}`,
       // OG image per repo — file convention `opengraph-image.tsx` (satori).
       // Dipakai baik pada Vercel (ISR 1 jam) maupun static export (baked).
-      // Varian dinamis juga tersedia di /api/og/repo/<nama> bila dibutuhkan.
       images: [
         {
           url: `${base}/repo/${repo.name}/opengraph-image`,
@@ -67,6 +66,12 @@ export async function generateMetadata({
       ],
     },
   };
+}
+
+/** Format ukuran repo GitHub (unit: KB) jadi KB/MB yang manusiawi. */
+function formatSize(kb: number): string {
+  if (kb < 1024) return `${kb} KB`;
+  return `${(kb / 1024).toFixed(1)} MB`;
 }
 
 export default async function RepoPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -90,7 +95,7 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
             href="/repositories"
             className="mt-6 inline-flex h-11 items-center rounded-full bg-ember px-6 font-mono text-[11px] uppercase tracking-wider text-ink"
           >
-            All Repositories
+            Semua Repositori
           </Link>
         </div>
       </AppShell>
@@ -104,10 +109,10 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
   const stats: Array<{ icon: React.ComponentType<{ className?: string }>; label: string; value: string }> = [
     { icon: Star, label: 'stars', value: formatNumber(repo.stars) },
     { icon: GitFork, label: 'forks', value: formatNumber(repo.forks) },
-    { icon: Users, label: 'watchers', value: formatNumber(repo.watchers) },
-    { icon: GitBranch, label: 'open issues', value: formatNumber(repo.openIssues) },
-    { icon: Package, label: 'size', value: `${Math.max(1, Math.round(repo.size / 102.4))} MB` },
-    { icon: Lock, label: 'license', value: repo.license ?? '—' },
+    { icon: Eye, label: 'pengamat', value: formatNumber(repo.watchers) },
+    { icon: GitBranch, label: 'isu terbuka', value: formatNumber(repo.openIssues) },
+    { icon: HardDrive, label: 'ukuran', value: formatSize(repo.size) },
+    { icon: Package, label: 'lisensi', value: repo.license ?? '—' },
   ];
 
   return (
@@ -117,14 +122,15 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
           href="/repositories"
           className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-cream/50 transition-colors hover:text-ember"
         >
-          <ArrowLeft className="size-3.5" /> all repositories
+          <ArrowLeft className="size-3.5" /> semua repositori
         </Link>
 
         <header className="mt-5 flex flex-wrap items-start justify-between gap-6">
           <div className="min-w-0 max-w-3xl">
             <div className="flex flex-wrap items-center gap-3">
-              <FolderGit2 className="size-5 text-ember" />
+              <FolderGit2 className="size-5 shrink-0 text-ember" />
               <h1 className="break-all font-mono text-[24px] font-semibold tracking-tight text-cream md:text-[32px]">
+                <span className="text-cream/40">{repo.fullName.split('/')[0]}/</span>
                 {repo.name}
               </h1>
               {repo.fork && (
@@ -134,7 +140,7 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
               )}
               {repo.archived && (
                 <span className="rounded-full border border-danger/30 px-2.5 py-1 font-mono text-[9px] uppercase tracking-wider text-danger">
-                  archived
+                  diarsipkan
                 </span>
               )}
               {repo.language && (
@@ -150,9 +156,14 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
             {repo.topics.length > 0 && (
               <div className="mt-4 flex flex-wrap gap-2">
                 {repo.topics.map((t) => (
-                  <span key={t} className="rounded-full bg-white/[0.05] px-3 py-1 font-mono text-[10px] text-cream/55">
+                  <Link
+                    key={t}
+                    href={`/repositories?q=${encodeURIComponent(t)}`}
+                    title={`Cari repositori bertopik “${t}”`}
+                    className="rounded-full bg-white/[0.05] px-3 py-1 font-mono text-[10px] text-cream/55 transition-colors hover:bg-ember/15 hover:text-cream"
+                  >
                     #{t}
-                  </span>
+                  </Link>
                 ))}
               </div>
             )}
@@ -165,7 +176,7 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
                 rel="noreferrer"
                 className="flex h-11 items-center gap-2 rounded-full bg-ember px-6 font-mono text-[11px] uppercase tracking-wider text-ink transition hover:bg-ember-soft hover:shadow-glow"
               >
-                <Play className="size-4" /> Live Demo
+                <Play className="size-4" /> Demo Langsung
               </a>
             )}
             <a
@@ -174,13 +185,15 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
               rel="noreferrer"
               className="flex h-11 items-center gap-2 rounded-full border border-white/15 px-6 font-mono text-[11px] uppercase tracking-wider text-cream/80 transition hover:border-spotlight/50 hover:text-spotlight"
             >
-              <ExternalLink className="size-4" /> GitHub Source
+              <ExternalLink className="size-4" /> Sumber GitHub
             </a>
           </div>
         </header>
 
+        <CloneBox fullName={repo.fullName} />
+
         {/* Stats strip */}
-        <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+        <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
           {stats.map((st) => (
             <div key={st.label} className="rounded-2xl border border-white/[0.08] bg-white/[0.03] px-4 py-3.5">
               <div className="flex items-center gap-2 text-cream/45">
@@ -194,41 +207,28 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
         <div className="mt-3 flex flex-wrap gap-x-6 gap-y-1 font-mono text-[10px] text-cream/35">
           <span>dibuat {formatDate(repo.createdAt)}</span>
           <span>push terakhir {timeAgo(repo.pushedAt)}</span>
-          <span>
-            clone:{' '}
-            <code className="text-cream/55">
-              git clone https://github.com/{repo.fullName}.git
-            </code>
-          </span>
         </div>
 
         {/* README */}
         <section className="mt-8 overflow-hidden rounded-3xl border border-white/[0.08] bg-white/[0.02]">
           <div className="flex items-center gap-2.5 border-b border-white/[0.07] px-5 py-3.5">
-            <span className="flex gap-1.5">
+            <span className="flex gap-1.5" aria-hidden="true">
               <span className="size-2.5 rounded-full bg-danger/70" />
               <span className="size-2.5 rounded-full bg-warn/70" />
               <span className="size-2.5 rounded-full bg-success/70" />
             </span>
             <span className="ml-2 font-mono text-[10.5px] text-cream/50">README.md</span>
             <span className="ml-auto font-mono text-[9.5px] uppercase tracking-wider text-cream/30">
-              {readme ? `${readme.length.toLocaleString('id-ID')} chars` : 'tidak tersedia'}
+              {readme ? `${readme.length.toLocaleString('id-ID')} karakter` : 'tidak tersedia'}
             </span>
           </div>
           {readme ? (
-            <pre className="max-h-[560px] overflow-auto codex-scroll whitespace-pre-wrap break-words p-6 font-mono text-[12px] leading-relaxed text-cream/70">
-              {readme.slice(0, 20_000)}
-              {readme.length > 20_000 && (
-                <span className="text-cream/35">
-                  {'\n\n… (dipotong — buka sumber untuk versi penuh)'}
-                </span>
-              )}
-            </pre>
+            <Readme source={readme} />
           ) : (
             <div className="grid place-items-center px-6 py-16 text-center">
               <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-cream/40">
                 {isStaticExport
-                  ? 'README tidak ikut pada static export — buka GitHub source.'
+                  ? 'README tidak ikut pada ekspor statis — buka sumber GitHub.'
                   : 'README tidak ditemukan di repositori ini.'}
               </p>
             </div>
@@ -239,7 +239,7 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
         {related.length > 0 && (
           <section className="mt-10">
             <div className="micro text-cream/45">
-              related // juga dibuat dalam {repo.language ?? 'stack serupa'}
+              terkait // juga dibuat dalam {repo.language ?? 'stack serupa'}
             </div>
             <div className="mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
               {related.map((r, i) => (

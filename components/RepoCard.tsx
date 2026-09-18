@@ -55,7 +55,7 @@ export default function RepoCard({ repo, index = 0, instant = false }: Props) {
           )}
           {repo.archived && (
             <span className="rounded-full border border-danger/30 px-2 py-0.5 font-mono text-[8.5px] uppercase tracking-wider text-danger">
-              archived
+              diarsipkan
             </span>
           )}
           {repo.homepage && !repo.archived && (
@@ -119,21 +119,21 @@ export default function RepoCard({ repo, index = 0, instant = false }: Props) {
             rel="noreferrer"
             className="flex h-9 flex-1 items-center justify-center gap-1.5 rounded-full bg-ember font-mono text-[10.5px] uppercase tracking-wider text-ink transition hover:bg-ember-soft hover:shadow-glow"
           >
-            <Play className="size-3" /> Live Demo
+            <Play className="size-3" /> Demo Langsung
           </a>
         ) : (
           <span className="flex h-9 flex-1 items-center justify-center rounded-full border border-white/5 font-mono text-[10px] uppercase tracking-wider text-cream/25">
             demo —
           </span>
         )}
-        <a
-          href={repo.url}
-          target="_blank"
-          rel="noreferrer"
-          className="flex h-9 items-center gap-1.5 rounded-full border border-white/15 px-3.5 font-mono text-[10.5px] uppercase tracking-wider text-cream/75 transition hover:border-spotlight/50 hover:text-spotlight"
-        >
-          Source <ExternalLink className="size-3" />
-        </a>
+          <a
+            href={repo.url}
+            target="_blank"
+            rel="noreferrer"
+            className="flex h-9 items-center gap-1.5 rounded-full border border-white/15 px-3.5 font-mono text-[10.5px] uppercase tracking-wider text-cream/75 transition hover:border-spotlight/50 hover:text-spotlight"
+          >
+            Sumber <ExternalLink className="size-3" />
+          </a>
       </div>
     </motion.article>
   );

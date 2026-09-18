@@ -77,7 +77,7 @@ export default function Hero3D({ stats }: { stats: HeroStats }) {
     ['Repositori', stats.repos],
     ['Stars', stats.stars],
     ['Forks', stats.forks],
-    ['Followers', stats.followers],
+    ['Pengikut', stats.followers],
   ];
 
   return (
@@ -105,16 +105,16 @@ export default function Hero3D({ stats }: { stats: HeroStats }) {
             </div>
 
             <h1 className="mt-4 font-display text-[42px] leading-[0.98] tracking-tight text-cream sm:text-[54px] md:text-[64px]">
-              Open systems,
+              Sistem terbuka,
               <br />
-              built <span className="grad-text">in public.</span>
+              dibangun <span className="grad-text">di depan umum.</span>
             </h1>
 
             <p className="mt-5 max-w-xl text-sm leading-relaxed text-cream/70 md:text-[15px]">
-              Full-stack developer &amp; AI tooling engineer. Civic tech untuk pemerintah daerah, AI
-              terminal 7&nbsp;MB, dan dotfiles yang benar-benar boot —{' '}
-              <span className="font-mono text-cream/90">{stats.repos}</span> repositori publik, dihitung
-              langsung dari GitHub API.
+              Pengembang full-stack &amp; engineer AI tooling. Civic tech untuk pemerintah daerah,
+              AI terminal 7&nbsp;MB, dan dotfiles yang benar-benar boot —{' '}
+              <span className="font-mono text-cream/90">{stats.repos}</span> repositori publik,
+              dihitung langsung dari API GitHub.
             </p>
 
             <div className="mt-7 flex flex-wrap items-center gap-3">
@@ -176,10 +176,10 @@ export default function Hero3D({ stats }: { stats: HeroStats }) {
             </ErrorBoundary>
 
             <div className="pointer-events-none absolute top-3 left-4 micro text-cream/40">
-              tech-core // node-graph
+              inti-teknologi // graf-simpul
             </div>
             <div className="pointer-events-none absolute top-3 right-4 rounded-full border border-white/10 bg-ink/70 px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.18em] text-cream/70 backdrop-blur">
-              {mode === '3d' ? `3d · ${fps ?? '—'} fps` : mode === 'lite' ? 'lite · css/canvas' : 'boot…'}
+              {mode === '3d' ? `3d · ${fps ?? '—'} fps` : mode === 'lite' ? 'lite · css/canvas' : 'memuat…'}
             </div>
             <div className="pointer-events-none absolute bottom-3 left-4 font-mono text-[9px] uppercase tracking-[0.2em] text-cream/30">
               gerakkan kursor untuk berinteraksi

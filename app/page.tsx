@@ -108,7 +108,7 @@ export default async function Home() {
         <section className="mt-14">
           <SectionHead
             icon={Rocket}
-            micro="featured // pilihan editor"
+            micro="unggulan // pilihan editor"
             title="Karya Unggulan"
             sub="Empat proyek yang paling mewakili arah kerja saat ini — dari civic tech Aceh sampai AI terminal 7 MB."
             action={{ href: '/repositories', label: 'Semua repositori' }}
@@ -124,7 +124,7 @@ export default async function Home() {
         <section className="mt-14">
           <SectionHead
             icon={Wrench}
-            micro="services // jasa & komisi"
+            micro="jasa // layanan & komisi"
             title="Bekerja Bareng"
             sub="Konsultasi, audit, atau aplikasi web custom — mulai dari brief di bawah ini."
             action={{ href: '/services', label: 'Lihat semua' }}
@@ -165,7 +165,7 @@ export default async function Home() {
               <div className="relative">
                 <div className="micro flex items-center gap-2 text-cream/60">
                   <Heart className="size-3.5 text-ember" />
-                  support // open source
+                  dukungan // open source
                 </div>
                 <h3 className="mt-3 font-display text-[28px] leading-tight tracking-tight text-cream">
                   Dukung Open Source
@@ -201,10 +201,10 @@ export default async function Home() {
         <section className="mt-14">
           <SectionHead
             icon={Activity}
-            micro="activity // feed github"
+            micro="aktivitas // umpan github"
             title="Aktivitas Terbaru"
             sub="Push, release, dan event publik lain — langsung dari Events API."
-            action={{ href: '/system', label: 'System & Metrics' }}
+            action={{ href: '/system', label: 'Sistem & Metrik' }}
           />
           <div className="mt-6 grid gap-3 lg:grid-cols-2">
             {recent.map((e) => {

@@ -9,10 +9,10 @@ import type { UserLite } from '@/lib/types';
 import { useUi } from './ui-context';
 
 const TABS = [
-  { href: '/', label: 'Overview', num: '01' },
-  { href: '/repositories', label: 'Repositories', num: '02' },
-  { href: '/services', label: 'Services', num: '03' },
-  { href: '/system', label: 'System', num: '04' },
+  { href: '/', label: 'Beranda', num: '01' },
+  { href: '/repositories', label: 'Repositori', num: '02' },
+  { href: '/services', label: 'Jasa', num: '03' },
+  { href: '/system', label: 'Sistem', num: '04' },
 ];
 
 export default function NavBar({ user }: { user: UserLite }) {
@@ -27,7 +27,7 @@ export default function NavBar({ user }: { user: UserLite }) {
           <div className="leading-none">
             <div className="font-mono text-[13px] font-semibold tracking-tight text-cream">niumination</div>
             <div className="mt-1 hidden font-mono text-[8px] uppercase tracking-[0.26em] text-cream/40 sm:block">
-              oss dashboard
+              dasbor oss
             </div>
           </div>
         </Link>

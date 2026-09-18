@@ -8,7 +8,7 @@ import { formatNumber } from '@/lib/utils';
 export const revalidate = 300;
 
 export const metadata: Metadata = {
-  title: 'All Repositories',
+  title: 'Semua Repositori',
   description:
     'Agregator dinamis seluruh repositori publik Niumination — pencarian real-time, kategori otomatis, dan filter tech stack.',
   alternates: { canonical: '/repositories' },
@@ -27,7 +27,7 @@ export default async function RepositoriesPage() {
             02 // aggregator dinamis
           </div>
           <h1 className="mt-3 font-display text-[40px] leading-[1.0] tracking-tight md:text-[54px]">
-            All Repositories
+            Semua Repositori
           </h1>
           <p className="mt-3 max-w-2xl text-[13.5px] leading-relaxed text-cream/60">
             {formatNumber(s.totalRepos)} repositori publik ({s.originalRepos} original,{' '}

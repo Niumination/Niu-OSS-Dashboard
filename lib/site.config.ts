@@ -8,7 +8,7 @@ export const SITE = {
   handle: 'Niumination',
   github: 'https://github.com/Niumination',
   avatar: 'https://avatars.githubusercontent.com/u/123625275?v=4',
-  tagline: 'Open systems, built in public.',
+  tagline: 'Sistem terbuka, dibangun di depan umum.',
   description:
     'Full-stack developer & AI tooling engineer dari Aceh Tengah — civic tech, terminal-native AI, dan dotfiles yang benar-benar boot. 91 repositori publik, kerja dalam public.',
   location: 'Aceh Tengah, Indonesia',
@@ -77,7 +77,7 @@ export const SERVICE_PACKAGES: ServicePackage[] = [
   },
   {
     id: 'custom',
-    name: 'Custom Web App',
+    name: 'Aplikasi Web Custom',
     icon: 'custom',
     price: 7_500_000,
     unit: '/ mulai dari',

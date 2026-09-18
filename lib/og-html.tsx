@@ -120,7 +120,7 @@ function Frame({ children }: { children: React.ReactNode }) {
         }}
       >
         <div style={{ fontSize: 19, color: OG.faint, letterSpacing: 1 }}>
-          open systems, built in public.
+          sistem terbuka, dibangun di depan umum.
         </div>
         <div style={{ fontSize: 19, color: OG.emberSoft, letterSpacing: 1 }}>
           github.com/Niumination
@@ -165,7 +165,7 @@ function Header() {
           </div>
         </div>
       </div>
-      <div style={{ fontSize: 17, color: OG.faint, letterSpacing: 5 }}>OSS DASHBOARD</div>
+      <div style={{ fontSize: 17, color: OG.faint, letterSpacing: 5 }}>DASBOR OSS</div>
     </div>
   );
 }
@@ -185,15 +185,15 @@ export function HomeOg({
       <div style={{ display: 'flex', flexDirection: 'column', gap: 30, width: '100%' }}>
         <div style={{ fontSize: 32, color: 'rgba(242,236,223,0.82)', lineHeight: 1.4, letterSpacing: 0.5 }}>
           {
-            'Full-stack developer & AI tooling engineer — civic tech, ' +
+            'Pengembang full-stack & engineer AI tooling — civic tech, ' +
             '\n' +
-            'terminal-native AI, dan dotfiles yang benar-benar boot.'
+            'AI terminal 7 MB, dan dotfiles yang benar-benar boot.'
           }
         </div>
         <div style={{ display: 'flex', flexDirection: 'row', gap: 22 }}>
-          <StatBox value={String(repos)} label="REPOSITORIES" accent={OG.ember} />
+          <StatBox value={String(repos)} label="REPOSITORY" accent={OG.ember} />
           <StatBox value={String(stars)} label="STARS" accent={OG.cyan} />
-          <StatBox value={String(followers)} label="FOLLOWERS" accent={OG.emberSoft} />
+          <StatBox value={String(followers)} label="PENGIKUT" accent={OG.emberSoft} />
         </div>
       </div>
     </Frame>
@@ -227,7 +227,7 @@ export function RepoOg({
           </div>
         </div>
         <div style={{ display: 'flex', flexDirection: 'row', gap: 16, alignItems: 'center' }}>
-          <Chip label={language ?? 'no language'} dotColor={language ? OG.cyan : undefined} />
+          <Chip label={language ?? 'tanpa bahasa'} dotColor={language ? OG.cyan : undefined} />
           <Chip label={`${stars} stars`} dotColor="#f5c518" />
           <Chip label={fork ? 'fork' : 'original'} dotColor={fork ? OG.ember : OG.emberSoft} />
         </div>

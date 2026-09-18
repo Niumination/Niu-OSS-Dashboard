@@ -285,6 +285,20 @@ Situs diaudit dan di-hardening sebelum deploy:
   (`/repositories?q=…`), canonical URL per halaman, `apple-icon`.
 - **Konten** — marquee tech stack agregat di beranda; 404 dengan quick-links.
 
+### Lokalisasi & polesan (2026-09)
+
+- **Bahasa Indonesia sebagai default** di seluruh UI, metadata, JSON-LD, dan
+  OpenGraph image (satori).
+- **Detail repo**: README dirender sebagai markdown tersanitasi
+  (`marked` + `DOMPurify`, client-side) — diambil dari
+  `raw.githubusercontent.com` (CDN, tanpa rate limit) dengan fallback
+  nama `README.md/readme.md/Readme.md/README.rst/README`; kotak clone
+  interaktif (salin perintah / salin tautan); topik bisa diklik →
+  pencarian `/repositories?q=topik`; ukuran KB/MB manusiawi.
+- **Dashboard**: donat distribusi kategori otomatis (SVG), feed event
+  ber-ikon per jenis (push/create/release/fork/watch/issue/PR),
+  StatusMonitor menampilkan waktu periksa terakhir + auto-refresh 5 menit.
+
 ## ✦ Kontribusi / kustomisasi cepat
 
 - **Ganti warna tema** → `tailwind.config.ts` (blok `colors`) + `app/globals.css`.

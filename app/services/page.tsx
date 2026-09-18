@@ -16,7 +16,7 @@ import { formatIDR } from '@/lib/utils';
 export const revalidate = 300;
 
 export const metadata: Metadata = {
-  title: 'Services & Commissions',
+  title: 'Jasa & Komisi',
   description:
     'Konsultasi Teknis, Audit & Optimasi, dan Custom Web App oleh Niumination — mulai dari brief langsung ke email/WhatsApp.',
   alternates: { canonical: '/services' },
@@ -60,7 +60,7 @@ export default async function ServicesPage() {
         <header className="max-w-2xl">
           <div className="micro flex items-center gap-2 text-cream/45">
             <span className="size-1.5 rounded-full bg-ember" />
-            03 // services & commissions
+            03 // jasa & komisi
           </div>
           <h1 className="mt-3 font-display text-[40px] leading-[1.0] tracking-tight md:text-[54px]">
             Sewa Jasa & Konsultasi
@@ -86,7 +86,7 @@ export default async function ServicesPage() {
               >
                 {p.highlight && (
                   <span className="absolute -top-3 left-6 rounded-full bg-ember px-3 py-1 font-mono text-[9px] uppercase tracking-wider text-ink">
-                    paling populer
+                    terpopuler
                   </span>
                 )}
                 <span
@@ -143,7 +143,7 @@ export default async function ServicesPage() {
 
         {/* Metode pembayaran */}
         <section className="mt-16">
-          <div className="micro text-cream/45">payment // metode</div>
+          <div className="micro text-cream/45">pembayaran // metode</div>
           <h2 className="mt-2 font-display text-[30px] tracking-tight md:text-[38px]">
             Bayar dengan cara yang paling mudah.
           </h2>

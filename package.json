@@ -18,14 +18,17 @@
     "@react-three/fiber": "^9.1.2",
     "@vercel/og": "^0.6.4",
     "cmdk": "^1.1.1",
+    "dompurify": "^3.4.15",
     "framer-motion": "^12.12.1",
     "lucide-react": "^0.518.0",
+    "marked": "^18.0.13",
     "next": "15.3.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "three": "^0.178.0"
   },
   "devDependencies": {
+    "@types/dompurify": "^3.0.5",
     "@types/node": "^20.19.0",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",

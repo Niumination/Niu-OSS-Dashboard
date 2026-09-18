@@ -17,7 +17,7 @@ export default function ServicesCtas() {
         className="group flex h-12 items-center gap-2.5 rounded-full bg-ember px-7 font-mono text-[11px] uppercase tracking-wider text-ink transition hover:bg-ember-soft hover:shadow-glow"
       >
         <Wrench className="size-4" />
-        Mulai Proses Booking
+        Mulai Proses
         <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
       </motion.button>
       <motion.button

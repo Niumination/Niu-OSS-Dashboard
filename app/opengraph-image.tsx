@@ -2,7 +2,7 @@ import { ImageResponse } from '@vercel/og';
 import { MOCK_SNAPSHOT } from '@/lib/mock-data';
 import { HomeOg } from '@/lib/og-html';
 
-export const alt = 'Niumination — OSS Dashboard';
+export const alt = 'Niumination — Dasbor OSS';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 export const dynamic = 'force-static';

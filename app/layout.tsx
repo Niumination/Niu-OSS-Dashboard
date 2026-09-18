@@ -72,7 +72,7 @@ const jsonLdPerson = {
   '@type': 'Person',
   name: 'Niumination',
   url: SITE.github,
-  jobTitle: 'Full-Stack Developer & AI Tooling Engineer',
+  jobTitle: 'Pengembang Full-Stack & Engineer AI Tooling',
   sameAs: [SITE.github, SITE.sponsors, SITE.buyMeACoffee],
   address: {
     '@type': 'PostalAddress',
@@ -85,7 +85,7 @@ const jsonLdPerson = {
 const jsonLdWebSite = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'Niumination — OSS Dashboard',
+  name: 'Niumination — Dasbor OSS',
   url: base,
   inLanguage: 'id',
   publisher: { '@type': 'Person', name: 'Niumination', url: SITE.github },

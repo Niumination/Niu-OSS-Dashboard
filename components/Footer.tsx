@@ -5,10 +5,10 @@ import type { Snapshot } from '@/lib/types';
 import { formatDate } from '@/lib/utils';
 
 const NAV = [
-  { href: '/', label: 'Overview' },
-  { href: '/repositories', label: 'All Repositories' },
-  { href: '/services', label: 'Services & Commissions' },
-  { href: '/system', label: 'System & Metrics' },
+  { href: '/', label: 'Beranda' },
+  { href: '/repositories', label: 'Semua Repositori' },
+  { href: '/services', label: 'Jasa & Komisi' },
+  { href: '/system', label: 'Sistem & Metrik' },
 ];
 
 export default function Footer({ snapshot }: { snapshot: Snapshot }) {
@@ -46,7 +46,7 @@ export default function Footer({ snapshot }: { snapshot: Snapshot }) {
         </div>
 
         <div>
-          <div className="micro text-cream/40">dukung &amp; kontak</div>
+          <div className="micro text-cream/40">dukungan &amp; kontak</div>
           <ul className="mt-4 space-y-2.5">
             <li>
               <a href={SITE.github} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-[13px] text-cream/65 transition-colors hover:text-ember">
@@ -77,7 +77,7 @@ export default function Footer({ snapshot }: { snapshot: Snapshot }) {
           <span>© 2026 Niumination · Aceh Tengah, ID</span>
           <span className="hidden md:inline">next.js · react-three/fiber · tailwind · framer motion</span>
           <span className="ml-auto">
-            data: github api · snapshot {formatDate(snapshot.updatedAt)}
+            data: api github · snapshot {formatDate(snapshot.updatedAt)}
           </span>
         </div>
       </div>

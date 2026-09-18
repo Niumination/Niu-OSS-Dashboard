@@ -12,9 +12,9 @@ import { formatDate, timeAgo } from '@/lib/utils';
 export const revalidate = 300;
 
 export const metadata: Metadata = {
-  title: 'System & Metrics',
+  title: 'Sistem & Metrik',
   description:
-    'Metrik aktivitas GitHub Niumination — commit heatmap, distribusi bahasa, aktivitas 30 hari, dan monitor status deployment live.',
+    'Metrik aktivitas GitHub Niumination — peta commit, distribusi bahasa, aktivitas 30 hari, dan monitor status deployment live.',
   alternates: { canonical: '/system' },
 };
 
@@ -29,13 +29,13 @@ export default async function SystemPage() {
           <div>
             <div className="micro flex items-center gap-2 text-cream/45">
               <span className="size-1.5 rounded-full bg-ember" />
-              04 // system & metrics
+              04 // sistem & metrik
             </div>
             <h1 className="mt-3 font-display text-[40px] leading-[1.0] tracking-tight md:text-[54px]">
-              System & Metrics
+              Sistem & Metrik
             </h1>
             <p className="mt-3 max-w-2xl text-[13.5px] leading-relaxed text-cream/60">
-              Kesehatan ekosistem: statistik agregat, commit heatmap, bahasa dominan, dan status
+              Kesehatan ekosistem: statistik agregat, peta commit, bahasa dominan, dan status
               deployment yang sedang tayang.
             </p>
           </div>
@@ -49,8 +49,8 @@ export default async function SystemPage() {
           >
             <Radio className={`size-3.5 ${snap.live ? 'animate-breathe' : ''}`} />
             {snap.live
-              ? `live · github api · ${timeAgo(snap.updatedAt)}`
-              : `fallback snapshot · ${formatDate(snap.updatedAt)}${snap.rateLimited ? ' · rate-limited' : ''}`}
+              ? `langsung · api github · ${timeAgo(snap.updatedAt)}`
+              : `cadangan snapshot · ${formatDate(snap.updatedAt)}${snap.rateLimited ? ' · batas laju tercapai' : ''}`}
           </div>
         </header>
 
