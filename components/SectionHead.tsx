@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { ArrowRight, type LucideIcon } from 'lucide-react';
 
 interface Props {
-  micro: string;
-  title: string;
-  sub?: string;
+  micro: React.ReactNode;
+  title: React.ReactNode;
+  sub?: React.ReactNode;
   icon?: LucideIcon;
-  action?: { href: string; label: string };
+  action?: { href: string; label: React.ReactNode };
 }
 
 /** Heading seksi seragam: micro-label mono + judul display serif + aksi link. */

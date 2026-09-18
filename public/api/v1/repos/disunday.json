@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "disunday",
+  "fullName": "Niumination/disunday",
+  "description": "Control opencode from Discord. Say goodbye to Sundays—manage your AI coding projects 24/7 through Discord channels.",
+  "url": "https://github.com/Niumination/disunday",
+  "homepage": null,
+  "language": null,
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": true,
+  "archived": false,
+  "license": "MIT",
+  "sizeKb": 1978,
+  "createdAt": "2026-05-29T01:44:06Z",
+  "pushedAt": "2026-02-23T09:31:42Z"
+ }
+}

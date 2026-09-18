@@ -25,11 +25,14 @@ jobs:
       - name: Jalankan pemeriksa uptime
         run: node scripts/uptime-check.mjs
 
+      - name: Segarkan endpoint uptime API publik
+        run: node scripts/gen-api.mjs
+
       - name: Commit & push bila ada perubahan
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/uptime.json lib/uptime-data.ts
+          git add data/uptime.json lib/uptime-data.ts public/api/v1/uptime.json
           if git diff --cached --quiet; then
             echo "Tidak ada perubahan uptime."
           else

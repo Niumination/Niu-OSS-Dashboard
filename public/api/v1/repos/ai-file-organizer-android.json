@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "ai-file-organizer-android",
+  "fullName": "Niumination/ai-file-organizer-android",
+  "description": "AI File Organizer for Android — merapikan file SD Card / internal storage pakai Google Gemini AI. Kotlin, Jetpack Compose, SAF Scoped Storage.",
+  "url": "https://github.com/Niumination/ai-file-organizer-android",
+  "homepage": null,
+  "language": "Kotlin",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": null,
+  "sizeKb": 2772,
+  "createdAt": "2026-06-23T06:36:58Z",
+  "pushedAt": "2026-09-13T15:20:10Z"
+ }
+}

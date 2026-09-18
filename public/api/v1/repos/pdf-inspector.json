@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "pdf-inspector",
+  "fullName": "Niumination/pdf-inspector",
+  "description": "Inspeksi PDF lokal tanpa LLM (no-agent) — pypdf. Baca isi PDF ke teks/ringkasan untuk agen.",
+  "url": "https://github.com/Niumination/pdf-inspector",
+  "homepage": null,
+  "language": "Python",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": null,
+  "sizeKb": 2,
+  "createdAt": "2026-08-20T04:30:28Z",
+  "pushedAt": "2026-08-20T04:30:40Z"
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "agsv1-hyprpanel",
+  "fullName": "Niumination/agsv1-hyprpanel",
+  "description": "for use agsv1",
+  "url": "https://github.com/Niumination/agsv1-hyprpanel",
+  "homepage": null,
+  "language": "TypeScript",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": "MIT",
+  "sizeKb": 10122,
+  "createdAt": "2025-01-09T11:35:51Z",
+  "pushedAt": "2025-01-09T11:36:03Z"
+ }
+}

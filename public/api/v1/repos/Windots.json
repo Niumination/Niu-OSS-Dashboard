@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "Windots",
+  "fullName": "Niumination/Windots",
+  "description": "A collection of my personal Windows dotfiles and configs.",
+  "url": "https://github.com/Niumination/Windots",
+  "homepage": null,
+  "language": null,
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": true,
+  "archived": false,
+  "license": "MIT",
+  "sizeKb": 73283,
+  "createdAt": "2025-07-02T09:02:09Z",
+  "pushedAt": "2025-08-04T05:04:36Z"
+ }
+}

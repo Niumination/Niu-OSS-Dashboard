@@ -2,6 +2,9 @@ import type { Metadata, Viewport } from 'next';
 import { Instrument_Serif, Inter, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import WebVitals from '@/components/WebVitals';
+import { LocaleProvider } from '@/components/LocaleProvider';
+import ServiceWorkerRegister from '@/components/ServiceWorkerRegister';
+import T from '@/components/T';
 import { SITE } from '@/lib/site.config';
 
 /* Tipografi (referensi template):
@@ -110,7 +113,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="#konten"
           className="fixed top-2 left-2 z-[100] -translate-y-24 rounded-full bg-ember px-4 py-2 font-mono text-[11px] uppercase tracking-wider text-ink transition-transform focus:translate-y-0"
         >
-          Lewati ke konten
+          <T k="a11y.skip" />
         </a>
         <script
           type="application/ld+json"
@@ -120,8 +123,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebSite) }}
         />
-        {children}
+        <LocaleProvider>
+          {children}
+        </LocaleProvider>
         <WebVitals />
+        <ServiceWorkerRegister />
       </body>
     </html>
   );

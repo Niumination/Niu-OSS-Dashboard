@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "matt-dotfiles",
+  "fullName": "Niumination/matt-dotfiles",
+  "description": "💄 Yet another Aesthetic Hyprland Config",
+  "url": "https://github.com/Niumination/matt-dotfiles",
+  "homepage": "https://dotfiles-docs.vercel.app/",
+  "language": null,
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": true,
+  "archived": false,
+  "license": "GPL-3.0",
+  "sizeKb": 322770,
+  "createdAt": "2024-12-03T06:51:25Z",
+  "pushedAt": "2024-11-28T10:25:41Z"
+ }
+}

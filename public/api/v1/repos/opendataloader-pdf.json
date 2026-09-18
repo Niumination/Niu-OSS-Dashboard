@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "opendataloader-pdf",
+  "fullName": "Niumination/opendataloader-pdf",
+  "description": "PDF Parser for AI-ready data. Automate PDF accessibility. Open-source.",
+  "url": "https://github.com/Niumination/opendataloader-pdf",
+  "homepage": "https://opendataloader.org",
+  "language": null,
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": true,
+  "archived": false,
+  "license": "Apache-2.0",
+  "sizeKb": 87651,
+  "createdAt": "2026-07-27T09:55:52Z",
+  "pushedAt": "2026-07-27T00:17:13Z"
+ }
+}

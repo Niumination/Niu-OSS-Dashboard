@@ -1,0 +1,66 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "count": 3,
+ "studies": [
+  {
+   "slug": "pemdi-aceh-tengah",
+   "title": "Pemdi Aceh Tengah",
+   "tagline": "Portal pemerintah digital untuk kabupaten di dataran tinggi Gayo.",
+   "kind": "Civic Tech",
+   "year": "2024–2026",
+   "repo": "PemdiAcehTengah",
+   "demo": "https://pemdi-aceh-tengah.vercel.app",
+   "stack": [
+    "JavaScript",
+    "Vercel",
+    "Static-first"
+   ],
+   "accent": "#00e5ff",
+   "availableLocales": [
+    "id",
+    "en"
+   ]
+  },
+  {
+   "slug": "flame-ade",
+   "title": "Flame ADE",
+   "tagline": "Emulator terminal AI-native ~7 MB — Tauri 2 + Rust + React 19.",
+   "kind": "Desktop / AI Tooling",
+   "year": "2025–2026",
+   "repo": "Flame-ADE",
+   "demo": null,
+   "stack": [
+    "Tauri 2",
+    "Rust",
+    "React 19",
+    "TypeScript",
+    "BYOK AI"
+   ],
+   "accent": "#e05a1e",
+   "availableLocales": [
+    "id",
+    "en"
+   ]
+  },
+  {
+   "slug": "ai-first-os",
+   "title": "AI First OS",
+   "tagline": "Arch Linux ISO builder dengan Hermes Agent sebagai warga kelas satu.",
+   "kind": "Sistem Operasi / Dotfiles",
+   "year": "2025–2026",
+   "repo": "AI-First-OS",
+   "demo": null,
+   "stack": [
+    "Shell",
+    "Arch Linux",
+    "AI-First",
+    "Hermes Agent"
+   ],
+   "accent": "#a78bfa",
+   "availableLocales": [
+    "id",
+    "en"
+   ]
+  }
+ ]
+}

@@ -28,11 +28,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Regenerasi API publik v1
+        run: node scripts/gen-api.mjs
+
       - name: Commit & push bila ada perubahan
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data lib/mock-data.ts
+          git add data lib/mock-data.ts public/api/v1
           if git diff --cached --quiet; then
             echo "Tidak ada perubahan data."
           else

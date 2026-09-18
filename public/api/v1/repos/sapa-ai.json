@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "sapa-ai",
+  "fullName": "Niumination/sapa-ai",
+  "description": null,
+  "url": "https://github.com/Niumination/sapa-ai",
+  "homepage": "https://sapa-ai-indol.vercel.app",
+  "language": "TypeScript",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": null,
+  "sizeKb": 1235,
+  "createdAt": "2026-09-01T17:26:26Z",
+  "pushedAt": "2026-09-05T19:08:29Z"
+ }
+}

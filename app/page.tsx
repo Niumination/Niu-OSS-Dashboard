@@ -19,10 +19,12 @@ import RepoCard from '@/components/RepoCard';
 import SectionHead from '@/components/SectionHead';
 import { getGithubSnapshot, getRecentReleases } from '@/lib/github';
 import { CASE_STUDIES } from '@/lib/case-studies';
+import { StudiesTeaser } from '@/components/studies-ui';
 import { computeSummary } from '@/lib/summary';
 import { SERVICE_PACKAGES, SITE } from '@/lib/site.config';
 import type { RepoLite } from '@/lib/types';
 import { formatIDR, langColor, timeAgo } from '@/lib/utils';
+import T from '@/components/T';
 
 export const revalidate = 300;
 
@@ -80,7 +82,6 @@ export default async function Home() {
         {/* Marquee tech stack — agregat bahasa & topik dari seluruh repo */}
         <div
           className="mt-8 overflow-hidden border-y border-white/[0.06] py-3"
-          aria-label="Teknologi yang sering dipakai"
         >
           <div className="flex w-max animate-marquee gap-8 whitespace-nowrap">
             {[0, 1].map((dup) => (
@@ -112,10 +113,10 @@ export default async function Home() {
         <section className="mt-14">
           <SectionHead
             icon={Rocket}
-            micro="unggulan // pilihan editor"
-            title="Karya Unggulan"
-            sub="Empat proyek yang paling mewakili arah kerja saat ini — dari civic tech Aceh sampai AI terminal 7 MB."
-            action={{ href: '/repositories', label: 'Semua repositori' }}
+            micro={<T k="home.featured.micro" />}
+            title={<T k="home.featured.title" />}
+            sub={<T k="home.featured.sub" />}
+            action={{ href: '/repositories', label: <T k="home.featured.cta" /> }}
           />
           <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             {showFeatured.map((r, i) => (
@@ -128,35 +129,12 @@ export default async function Home() {
         <section className="mt-14">
           <SectionHead
             icon={BookOpen}
-            micro="studi kasus // masalah → hasil"
-            title="Dibedah, bukan sekadar dipamer"
-            sub="Tiga karya unggulan dibedah lengkap: masalahnya, pendekatannya, dan hasil yang bisa diverifikasi dari kode."
-            action={{ href: '/studies', label: 'Semua studi kasus' }}
+            micro={<T k="home.studies.micro" />}
+            title={<T k="home.studies.title" />}
+            sub={<T k="home.studies.sub" />}
+            action={{ href: '/studies', label: <T k="home.studies.cta" /> }}
           />
-          <div className="mt-6 grid gap-4 lg:grid-cols-3">
-            {CASE_STUDIES.map((c) => (
-              <Link
-                key={c.slug}
-                href={`/studies/${c.slug}`}
-                className="card-glow group relative overflow-hidden rounded-3xl border border-white/[0.09] bg-white/[0.025] p-5 transition-colors hover:border-ember/35"
-              >
-                <div
-                  className="pointer-events-none absolute -top-16 -right-12 size-40 rounded-full opacity-[0.12] blur-3xl"
-                  style={{ background: c.accent }}
-                />
-                <div className="relative micro" style={{ color: c.accent }}>{c.kind}</div>
-                <h3 className="relative mt-3 font-display text-[24px] leading-tight tracking-tight text-cream">
-                  {c.title}
-                </h3>
-                <p className="relative mt-2 line-clamp-2 text-[12.5px] leading-relaxed text-cream/55">
-                  {c.tagline}
-                </p>
-                <span className="relative mt-4 flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider text-cream/45 transition-colors group-hover:text-ember">
-                  Baca studi <ArrowRight className="size-3 transition-transform group-hover:translate-x-0.5" />
-                </span>
-              </Link>
-            ))}
-          </div>
+          <StudiesTeaser studies={CASE_STUDIES} />
         </section>
 
         {/* Rilisan terbaru (GraphQL, aktif saat GITHUB_TOKEN dipasang) */}
@@ -164,10 +142,10 @@ export default async function Home() {
           <section className="mt-14">
             <SectionHead
               icon={Tag}
-              micro="rilisan // feed github"
-              title="Rilisan Terbaru"
-              sub="Tag & release terbaru lintas repositori — digabung dalam satu permintaan GraphQL."
-              action={{ href: '/repositories', label: 'Semua repositori' }}
+              micro={<T k="home.releases.micro" />}
+              title={<T k="home.releases.title" />}
+              sub={<T k="home.releases.sub" />}
+              action={{ href: '/repositories', label: <T k="home.featured.cta" /> }}
             />
             <div className="mt-6 grid gap-3 lg:grid-cols-2">
               {releases.map((rel) => (
@@ -201,10 +179,10 @@ export default async function Home() {
         <section className="mt-14">
           <SectionHead
             icon={Wrench}
-            micro="jasa // layanan & komisi"
-            title="Bekerja Bareng"
-            sub="Konsultasi, audit, atau aplikasi web custom — mulai dari brief di bawah ini."
-            action={{ href: '/services', label: 'Lihat semua' }}
+            micro={<T k="home.services.micro" />}
+            title={<T k="home.services.title" />}
+            sub={<T k="home.services.sub" />}
+            action={{ href: '/services', label: <T k="home.services.cta" /> }}
           />
           <div className="mt-6 grid gap-4 lg:grid-cols-12">
             <div className="grid gap-4 sm:grid-cols-3 lg:col-span-7">
@@ -219,18 +197,20 @@ export default async function Home() {
                     <span className="grid size-10 place-items-center rounded-xl bg-ember/10 text-ember">
                       <Icon className="size-[18px]" />
                     </span>
-                    <h3 className="mt-4 text-[15px] font-semibold text-cream">{p.name}</h3>
+                    <h3 className="mt-4 text-[15px] font-semibold text-cream">
+                      <T k={`pkg.${p.id}.name`} />
+                    </h3>
                     <p className="mt-1.5 line-clamp-2 text-[11.5px] leading-relaxed text-cream/55">
-                      {p.blurb}
+                      <T k={`pkg.${p.id}.blurb`} />
                     </p>
                     <div className="mt-3 flex-1 font-display text-[20px] tabular-nums text-cream">
                       {formatIDR(p.price)}
                       <span className="ml-1.5 font-mono text-[9.5px] tracking-wider text-cream/45">
-                        {p.unit}
+                        <T k={`pkg.${p.id}.unit`} />
                       </span>
                     </div>
                     <span className="mt-4 flex items-center gap-1 font-mono text-[10px] uppercase tracking-wider text-cream/50 transition-colors group-hover:text-ember">
-                      Mulai proses <ArrowRight className="size-3 transition-transform group-hover:translate-x-0.5" />
+                      <T k="home.services.start" /> <ArrowRight className="size-3 transition-transform group-hover:translate-x-0.5" />
                     </span>
                   </Link>
                 );
@@ -242,14 +222,13 @@ export default async function Home() {
               <div className="relative">
                 <div className="micro flex items-center gap-2 text-cream/60">
                   <Heart className="size-3.5 text-ember" />
-                  dukungan // open source
+                  <T k="home.support.micro" />
                 </div>
                 <h3 className="mt-3 font-display text-[28px] leading-tight tracking-tight text-cream">
-                  Dukung Open Source
+                  <T k="home.support.title" />
                 </h3>
                 <p className="mt-2 max-w-sm text-[12.5px] leading-relaxed text-cream/65">
-                  Setiap repo di sini gratis dan terbuka. Donasi menjaga server, domain, dan waktu
-                  membangunnya — sekali atau bulanan.
+                  <T k="home.support.desc" />
                 </p>
                 <div className="mt-5 flex flex-wrap gap-2.5">
                   <a
@@ -278,10 +257,10 @@ export default async function Home() {
         <section className="mt-14">
           <SectionHead
             icon={Activity}
-            micro="aktivitas // umpan github"
-            title="Aktivitas Terbaru"
-            sub="Push, release, dan event publik lain — langsung dari Events API."
-            action={{ href: '/system', label: 'Sistem & Metrik' }}
+            micro={<T k="home.activity.micro" />}
+            title={<T k="home.activity.title" />}
+            sub={<T k="home.activity.sub" />}
+            action={{ href: '/system', label: <T k="home.activity.cta" /> }}
           />
           <div className="mt-6 grid gap-3 lg:grid-cols-2">
             {recent.map((e) => {
@@ -306,7 +285,7 @@ export default async function Home() {
               );
             })}
             {recent.length === 0 && (
-              <p className="font-mono text-[11px] text-cream/40">Belum ada event publik tercatat.</p>
+              <p className="font-mono text-[11px] text-cream/40"><T k="home.activity.empty" /></p>
             )}
           </div>
         </section>

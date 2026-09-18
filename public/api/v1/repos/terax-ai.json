@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "terax-ai",
+  "fullName": "Niumination/terax-ai",
+  "description": "Lightweight (7MB) AI terminal emulator (ADE) built in Rust & Tauri & React",
+  "url": "https://github.com/Niumination/terax-ai",
+  "homepage": "https://terax.app",
+  "language": "TypeScript",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": true,
+  "archived": false,
+  "license": "Apache-2.0",
+  "sizeKb": 12345,
+  "createdAt": "2026-05-20T07:36:30Z",
+  "pushedAt": "2026-05-31T07:20:40Z"
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "ryuland-dotfiles",
+  "fullName": "Niumination/ryuland-dotfiles",
+  "description": "Rice built for usability",
+  "url": "https://github.com/Niumination/ryuland-dotfiles",
+  "homepage": "https://end-4.github.io/dots-hyprland-wiki/en/",
+  "language": null,
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": true,
+  "archived": false,
+  "license": "GPL-3.0",
+  "sizeKb": 19628,
+  "createdAt": "2025-09-29T11:02:27Z",
+  "pushedAt": "2025-09-29T08:28:56Z"
+ }
+}

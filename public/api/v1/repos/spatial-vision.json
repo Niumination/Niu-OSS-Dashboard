@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "spatial-vision",
+  "fullName": "Niumination/spatial-vision",
+  "description": "Full-stack Rust/WASM spatial UI — Axum backend + wasm-bindgen frontend, gesture/pinch detection, WebSocket broadcast",
+  "url": "https://github.com/Niumination/spatial-vision",
+  "homepage": null,
+  "language": "HTML",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": null,
+  "sizeKb": 19789,
+  "createdAt": "2026-07-22T06:25:04Z",
+  "pushedAt": "2026-08-18T12:26:03Z"
+ }
+}

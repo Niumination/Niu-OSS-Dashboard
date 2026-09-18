@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "hyprdots",
+  "fullName": "Niumination/hyprdots",
+  "description": "// Aesthetic, dynamic and minimal dots for Arch hyprland",
+  "url": "https://github.com/Niumination/hyprdots",
+  "homepage": null,
+  "language": "Shell",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": true,
+  "archived": false,
+  "license": "GPL-3.0",
+  "sizeKb": 973984,
+  "createdAt": "2024-12-04T03:49:52Z",
+  "pushedAt": "2025-02-13T07:15:15Z"
+ }
+}

@@ -1,0 +1,81 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "study": {
+  "slug": "pemdi-aceh-tengah",
+  "title": "Pemdi Aceh Tengah",
+  "tagline": "Portal pemerintah digital untuk kabupaten di dataran tinggi Gayo.",
+  "kind": "Civic Tech",
+  "year": "2024–2026",
+  "repo": "PemdiAcehTengah",
+  "demo": "https://pemdi-aceh-tengah.vercel.app",
+  "stack": [
+   "JavaScript",
+   "Vercel",
+   "Static-first"
+  ],
+  "metrics": [
+   {
+    "label": "halaman layanan",
+    "value": "lengkap"
+   },
+   {
+    "label": "biaya hosting",
+    "value": "Rp 0"
+   },
+   {
+    "label": "pembaruan",
+    "value": "aktif"
+   }
+  ],
+  "problem": "Informasi layanan publik kabupaten tersebar di banyak tempat dan sulit dijangkau warga. Portal resmi membutuhkan infrastruktur berbayar dan alur konten yang berat untuk dioperasikan satu orang — sementara kebutuhan sebenarnya: cepat, ringan, dan bisa dirawat dari mana saja.",
+  "approach": [
+   {
+    "title": "Static-first, deploy gratis",
+    "text": "Seluruh halaman dirender statis lalu di-host di Vercel — biaya nol, waktu muat cepat, dan tahan lonjakan trafik saat momen layanan ramai (penerimaan, cut bersama)."
+   },
+   {
+    "title": "Konten terstruktur in-repo",
+    "text": "Konten layanan hidup sebagai berkas dalam repositori — perubahan lewat git, terlacak siapa mengubah apa, bisa dikoreksi siapa saja lewat pull request."
+   },
+   {
+    "title": "Aksesibilitas daratan tinggi",
+    "text": "Desain hemat kuota: tanpa pustaka berat, gambar terkompresi, dan tetap terbaca di koneksi lambat — khas jaringan dataran tinggi Gayo."
+   }
+  ],
+  "outcome": "Portal non-resmi yang menjadi rujukan praktis layanan digital kabupaten, dirawat berkala, dan membuktikan pola \"pemerintahan digital tanpa anggaran besar\" yang bisa direplikasi kabupaten lain.",
+  "accent": "#00e5ff",
+  "en": {
+   "tagline": "A digital government portal for a highland Gayo regency.",
+   "metrics": [
+    {
+     "label": "service pages",
+     "value": "complete"
+    },
+    {
+     "label": "hosting cost",
+     "value": "Rp 0"
+    },
+    {
+     "label": "updates",
+     "value": "active"
+    }
+   ],
+   "problem": "Public service information for the regency was scattered and hard for residents to reach. An official portal would require paid infrastructure and a heavy publishing workflow for a one-person team — while the real need was: fast, light, and maintainable from anywhere.",
+   "approach": [
+    {
+     "title": "Static-first, free deploys",
+     "text": "Every page is rendered statically and hosted on Vercel — zero cost, fast loads, and resilient to traffic spikes during busy service seasons (enrollment, joint holidays)."
+    },
+    {
+     "title": "Structured content in-repo",
+     "text": "Service content lives as files in the repository — changes flow through git, who-changed-what is tracked, and anyone can submit corrections via pull request."
+    },
+    {
+     "title": "Highland accessibility",
+     "text": "Data-frugal design: no heavy libraries, compressed images, and still readable on slow connections — typical of Gayo highland networks."
+    }
+   ],
+   "outcome": "An unofficial portal that became a practical reference for the regency's digital services, maintained regularly, and proof of the \"digital government without a big budget\" pattern other regencies can replicate."
+  }
+ }
+}

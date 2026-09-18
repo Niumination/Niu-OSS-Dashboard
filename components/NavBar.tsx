@@ -7,45 +7,47 @@ import { Command, Github } from 'lucide-react';
 import { SITE } from '@/lib/site.config';
 import type { UserLite } from '@/lib/types';
 import { useUi } from './ui-context';
+import { useLocale } from './LocaleProvider';
 
 const TABS = [
-  { href: '/', label: 'Beranda', num: '01' },
-  { href: '/repositories', label: 'Repositori', num: '02' },
-  { href: '/services', label: 'Jasa', num: '03' },
-  { href: '/system', label: 'Sistem', num: '04' },
+  { href: '/', key: 'nav.home', num: '01' },
+  { href: '/repositories', key: 'nav.repos', num: '02' },
+  { href: '/services', key: 'nav.services', num: '03' },
+  { href: '/system', key: 'nav.system', num: '04' },
 ];
 
 export default function NavBar({ user }: { user: UserLite }) {
   const pathname = usePathname();
   const { openCommand } = useUi();
+  const { locale, setLocale, t } = useLocale();
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/[0.07] bg-ink/85 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-[1440px] items-center gap-3 px-4 md:px-6 lg:px-8">
-        <Link href="/" className="flex shrink-0 items-center gap-2.5" aria-label="Beranda Niumination">
+        <Link href="/" className="flex shrink-0 items-center gap-2.5" aria-label={t('nav.aria.home')}>
           <BrandMark />
           <div className="leading-none">
             <div className="font-mono text-[13px] font-semibold tracking-tight text-cream">niumination</div>
             <div className="mt-1 hidden font-mono text-[8px] uppercase tracking-[0.26em] text-cream/40 sm:block">
-              dasbor oss
+              {t('nav.kicker')}
             </div>
           </div>
         </Link>
 
-        <nav className="ml-auto flex items-center gap-0.5 overflow-x-auto" aria-label="Navigasi utama">
-          {TABS.map((t) => {
-            const active = pathname === t.href;
+        <nav className="ml-auto flex items-center gap-0.5 overflow-x-auto" aria-label={t('cm.group.nav')}>
+          {TABS.map((tab) => {
+            const active = pathname === tab.href;
             return (
               <Link
-                key={t.href}
-                href={t.href}
+                key={tab.href}
+                href={tab.href}
                 className={`relative whitespace-nowrap rounded-full px-3 py-2 font-mono text-[11px] uppercase tracking-wider transition-colors ${
                   active ? 'text-ember' : 'text-cream/55 hover:text-cream'
                 }`}
                 aria-current={active ? 'page' : undefined}
               >
-                <span className="mr-1.5 text-[9px] opacity-50">{t.num}</span>
-                {t.label}
+                <span className="mr-1.5 text-[9px] opacity-50">{tab.num}</span>
+                {t(tab.key)}
                 {active && (
                   <motion.span
                     layoutId="nav-active"
@@ -59,12 +61,32 @@ export default function NavBar({ user }: { user: UserLite }) {
         </nav>
 
         <div className="flex shrink-0 items-center gap-2">
+          {/* Pemilih bahasa (id | en) */}
+          <div
+            className="flex h-9 items-center gap-0.5 rounded-full border border-white/10 bg-white/[0.03] p-0.5"
+            role="group"
+            aria-label={t('nav.aria.lang')}
+          >
+            {(['id', 'en'] as const).map((l) => (
+              <button
+                key={l}
+                type="button"
+                onClick={() => setLocale(l)}
+                aria-pressed={locale === l}
+                className={`h-8 rounded-full px-2.5 font-mono text-[10px] uppercase tracking-wider transition-colors ${
+                  locale === l ? 'bg-ember text-ink' : 'text-cream/50 hover:text-cream'
+                }`}
+              >
+                {l}
+              </button>
+            ))}
+          </div>
           <button
             type="button"
             onClick={openCommand}
             className="flex h-9 items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 font-mono text-[10px] uppercase tracking-wider text-cream/60 transition-colors hover:border-ember/40 hover:text-cream"
-            title="Buka command palette (Ctrl+K)"
-            aria-label="Buka command palette (Ctrl+K)"
+            title={t('nav.aria.command')}
+            aria-label={t('nav.aria.command')}
           >
             <Command className="size-3" />
             <span className="hidden md:inline">Ctrl K</span>
@@ -74,7 +96,7 @@ export default function NavBar({ user }: { user: UserLite }) {
             href={SITE.github}
             target="_blank"
             rel="noreferrer"
-            aria-label="Profil GitHub"
+            aria-label={t('nav.aria.github')}
             className="grid size-9 place-items-center rounded-full border border-white/10 bg-white/[0.03] text-cream/70 transition-colors hover:border-ember/40 hover:text-cream"
           >
             <Github className="size-4" />

@@ -14,6 +14,17 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        // API publik v1: file statis public/api/v1 dilayani sebelum route
+        // handler — set CORS/cache di level ini (di GitHub Pages, Pages
+        // sudah menyetel Access-Control-Allow-Origin: * otomatis).
+        source: '/api/v1/:path*',
+        headers: [
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+          { key: 'Access-Control-Allow-Methods', value: 'GET, OPTIONS' },
+          { key: 'Cache-Control', value: 'public, max-age=60, s-maxage=300' },
+        ],
+      },
+      {
         source: '/:path*',
         headers: [
           // Catatan: X-Frame-Options sengaja TIDAK di-set agar situs bisa

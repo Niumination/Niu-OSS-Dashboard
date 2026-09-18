@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "niu-journal",
+  "fullName": "Niumination/niu-journal",
+  "description": "Aplikasi Tahap dua - Akademi Gen AI edisi APAC",
+  "url": "https://github.com/Niumination/niu-journal",
+  "homepage": null,
+  "language": "TypeScript",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": null,
+  "sizeKb": 183,
+  "createdAt": "2026-09-05T10:08:31Z",
+  "pushedAt": "2026-09-05T10:09:48Z"
+ }
+}

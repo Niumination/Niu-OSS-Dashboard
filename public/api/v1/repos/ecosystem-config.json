@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "ecosystem-config",
+  "fullName": "Niumination/ecosystem-config",
+  "description": "Niumination Ecosystem — orchestration/index repo: AGENTS.md, BACKLOG.md, scripts, docs. v4.0 maturity pipeline.",
+  "url": "https://github.com/Niumination/ecosystem-config",
+  "homepage": null,
+  "language": "JavaScript",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": null,
+  "sizeKb": 43997,
+  "createdAt": "2026-07-16T17:39:24Z",
+  "pushedAt": "2026-09-17T17:17:07Z"
+ }
+}

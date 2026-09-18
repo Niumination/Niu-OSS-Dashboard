@@ -6,6 +6,7 @@ import { getGithubSnapshot } from '@/lib/github';
 import { UPTIME_DATA } from '@/lib/uptime-data';
 import { avgMs, dayColor, lastCheck, lastIncident, overall, uptimePct } from '@/lib/uptime';
 import { hostOf, timeAgo } from '@/lib/utils';
+import T from '@/components/T';
 
 export const revalidate = 300;
 
@@ -31,22 +32,20 @@ export default async function StatusPage() {
           href="/system"
           className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-cream/50 transition-colors hover:text-ember"
         >
-          <ArrowLeft className="size-3.5" /> sistem &amp; metrik
+          <ArrowLeft className="size-3.5" /> <T k="status.back" />
         </Link>
 
         <header className="mt-5 flex flex-wrap items-end justify-between gap-4">
           <div>
             <div className="micro flex items-center gap-2 text-cream/45">
               <span className="size-1.5 rounded-full bg-ember" />
-              05 // status layanan
+              <T k="status.micro" />
             </div>
             <h1 className="mt-3 font-display text-[40px] leading-[1.0] tracking-tight md:text-[54px]">
-              Halaman Status
+              <T k="status.title" />
             </h1>
             <p className="mt-3 max-w-2xl text-[13.5px] leading-relaxed text-cream/60">
-              Riwayat uptime deployment publik — diperiksa otomatis tiap{' '}
-              {UPTIME_DATA.intervalMinutes} menit oleh GitHub Actions dan di-commit ke repo (GitOps
-              ala Upptime). Tanpa server monitoring tambahan.
+              <T k="status.desc" vars={{ interval: UPTIME_DATA.intervalMinutes }} />
             </p>
           </div>
           <div
@@ -62,25 +61,25 @@ export default async function StatusPage() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-current opacity-60" />
               <span className="relative inline-flex size-2 rounded-full bg-current" />
             </span>
-            {ov.up}/{ov.sites} operasional
+            <T k="status.badge" vars={{ up: ov.up, sites: ov.sites }} />
           </div>
         </header>
 
         {/* Ringkasan */}
         <div className="mt-8 grid grid-cols-2 gap-3 lg:grid-cols-4">
           <StatCard
-            label="uptime 30 hari"
+            label={<T k="status.card.uptime30" />}
             value={`${ov.uptime30d.toFixed(2)}%`}
             icon={Globe}
           />
           <StatCard label="situs dipantau" value={String(ov.sites)} icon={Activity} />
           <StatCard
-            label="interval periksa"
-            value={`${UPTIME_DATA.intervalMinutes} mnt`}
+            label={<T k="status.card.interval" />}
+            value={`${UPTIME_DATA.intervalMinutes} ${'mnt'}`}
             icon={Timer}
           />
           <StatCard
-            label="pembaruan terakhir"
+            label={<T k="status.card.updated" />}
             value={timeAgo(UPTIME_DATA.updatedAt)}
             icon={Activity}
           />
@@ -125,7 +124,7 @@ export default async function StatusPage() {
                       lc?.ok ? 'text-success' : 'text-danger'
                     }`}
                   >
-                    {lc?.ok ? 'operasional' : 'gangguan'}
+                    {lc?.ok ? <T k="status.site.up" /> : <T k="status.site.down" />}
                     {lc?.ms != null ? ` · ${lc.ms} ms` : ''}
                   </span>
                 </div>
@@ -144,16 +143,16 @@ export default async function StatusPage() {
 
                 <div className="mt-3 flex flex-wrap gap-x-6 gap-y-1 font-mono text-[10px] text-cream/40">
                   <span>
-                    7 hari: <span className="text-cream/75">{up7.toFixed(1)}%</span>
+                    <T k="status.d7" />: <span className="text-cream/75">{up7.toFixed(1)}%</span>
                   </span>
                   <span>
-                    30 hari: <span className="text-cream/75">{up30.toFixed(1)}%</span>
+                    <T k="status.d30" />: <span className="text-cream/75">{up30.toFixed(1)}%</span>
                   </span>
                   <span>
-                    rata-rata: <span className="text-cream/75">{ms != null ? `${ms} ms` : '—'}</span>
+                    <T k="status.avg" />: <span className="text-cream/75">{ms != null ? `${ms} ms` : '—'}</span>
                   </span>
                   <span>
-                    insiden terakhir: <span className="text-cream/75">{inc ?? 'tidak ada'}</span>
+                    <T k="status.lastInc" />: <span className="text-cream/75">{inc ?? <T k="status.none" />}</span>
                   </span>
                 </div>
               </section>
@@ -162,9 +161,7 @@ export default async function StatusPage() {
         </div>
 
         <p className="mt-6 font-mono text-[9.5px] leading-relaxed text-cream/30">
-          * “Operasional” = respons diterima dengan status HTTP &lt; 500 (proteksi bot 403/429 tetap
-          dianggap terjangkau). Riwayat dibatasi 30 hari agregat + 24 jam mentah. Sumber riwayat:
-          data/uptime.json di repo — dapat diaudit publik.
+          <T k="status.note" />
         </p>
       </div>
     </AppShell>
@@ -176,7 +173,7 @@ function StatCard({
   value,
   icon: Icon,
 }: {
-  label: string;
+  label: React.ReactNode;
   value: string;
   icon: React.ComponentType<{ className?: string }>;
 }) {

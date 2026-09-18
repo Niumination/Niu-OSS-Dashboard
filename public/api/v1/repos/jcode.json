@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "jcode",
+  "fullName": "Niumination/jcode",
+  "description": "Coding Agent Harness",
+  "url": "https://github.com/Niumination/jcode",
+  "homepage": null,
+  "language": null,
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": true,
+  "archived": false,
+  "license": "MIT",
+  "sizeKb": 381348,
+  "createdAt": "2026-05-17T14:19:36Z",
+  "pushedAt": "2026-05-17T03:36:04Z"
+ }
+}

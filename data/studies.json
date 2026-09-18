@@ -1,0 +1,168 @@
+[
+  {
+    "slug": "pemdi-aceh-tengah",
+    "title": "Pemdi Aceh Tengah",
+    "tagline": "Portal pemerintah digital untuk kabupaten di dataran tinggi Gayo.",
+    "kind": "Civic Tech",
+    "year": "2024–2026",
+    "repo": "PemdiAcehTengah",
+    "demo": "https://pemdi-aceh-tengah.vercel.app",
+    "stack": ["JavaScript", "Vercel", "Static-first"],
+    "metrics": [
+      { "label": "halaman layanan", "value": "lengkap" },
+      { "label": "biaya hosting", "value": "Rp 0" },
+      { "label": "pembaruan", "value": "aktif" }
+    ],
+    "problem": "Informasi layanan publik kabupaten tersebar di banyak tempat dan sulit dijangkau warga. Portal resmi membutuhkan infrastruktur berbayar dan alur konten yang berat untuk dioperasikan satu orang — sementara kebutuhan sebenarnya: cepat, ringan, dan bisa dirawat dari mana saja.",
+    "approach": [
+      {
+        "title": "Static-first, deploy gratis",
+        "text": "Seluruh halaman dirender statis lalu di-host di Vercel — biaya nol, waktu muat cepat, dan tahan lonjakan trafik saat momen layanan ramai (penerimaan, cut bersama)."
+      },
+      {
+        "title": "Konten terstruktur in-repo",
+        "text": "Konten layanan hidup sebagai berkas dalam repositori — perubahan lewat git, terlacak siapa mengubah apa, bisa dikoreksi siapa saja lewat pull request."
+      },
+      {
+        "title": "Aksesibilitas daratan tinggi",
+        "text": "Desain hemat kuota: tanpa pustaka berat, gambar terkompresi, dan tetap terbaca di koneksi lambat — khas jaringan dataran tinggi Gayo."
+      }
+    ],
+    "outcome": "Portal non-resmi yang menjadi rujukan praktis layanan digital kabupaten, dirawat berkala, dan membuktikan pola \"pemerintahan digital tanpa anggaran besar\" yang bisa direplikasi kabupaten lain.",
+    "accent": "#00e5ff",
+    "en": {
+      "tagline": "A digital government portal for a highland Gayo regency.",
+      "metrics": [
+        { "label": "service pages", "value": "complete" },
+        { "label": "hosting cost", "value": "Rp 0" },
+        { "label": "updates", "value": "active" }
+      ],
+      "problem": "Public service information for the regency was scattered and hard for residents to reach. An official portal would require paid infrastructure and a heavy publishing workflow for a one-person team — while the real need was: fast, light, and maintainable from anywhere.",
+      "approach": [
+        {
+          "title": "Static-first, free deploys",
+          "text": "Every page is rendered statically and hosted on Vercel — zero cost, fast loads, and resilient to traffic spikes during busy service seasons (enrollment, joint holidays)."
+        },
+        {
+          "title": "Structured content in-repo",
+          "text": "Service content lives as files in the repository — changes flow through git, who-changed-what is tracked, and anyone can submit corrections via pull request."
+        },
+        {
+          "title": "Highland accessibility",
+          "text": "Data-frugal design: no heavy libraries, compressed images, and still readable on slow connections — typical of Gayo highland networks."
+        }
+      ],
+      "outcome": "An unofficial portal that became a practical reference for the regency's digital services, maintained regularly, and proof of the \"digital government without a big budget\" pattern other regencies can replicate."
+    }
+  },
+  {
+    "slug": "flame-ade",
+    "title": "Flame ADE",
+    "tagline": "Emulator terminal AI-native ~7 MB — Tauri 2 + Rust + React 19.",
+    "kind": "Desktop / AI Tooling",
+    "year": "2025–2026",
+    "repo": "Flame-ADE",
+    "stack": ["Tauri 2", "Rust", "React 19", "TypeScript", "BYOK AI"],
+    "metrics": [
+      { "label": "ukuran binary", "value": "±7 MB" },
+      { "label": "runtime", "value": "native" },
+      { "label": "model AI", "value": "BYOK" }
+    ],
+    "problem": "Terminal modern dengan AI biasanya membawa Electron (ratusan MB) dan mengunci pengguna ke satu penyedia model. Pengguna menginginkan terminal yang punya \"otak\" tapi tetap ringan, cepat, dan tidak memaksa langganan.",
+    "approach": [
+      {
+        "title": "Tauri, bukan Electron",
+        "text": "Shell desktop ditulis Rust dengan WebView sistem — hasilnya binary ±7 MB dan konsumsi memori orde lebih kecil dibanding Electron."
+      },
+      {
+        "title": "AI sebagai fitur, bukan kandungan",
+        "text": "Bring-your-own-key: pengguna menempel kunci model pilihannya (lokal atau cloud) — terminal tidak pernah mengirim data ke server siapa pun selain milik pengguna sendiri."
+      },
+      {
+        "title": "UI React 19 di atas core Rust",
+        "text": "Pengalaman antarmuka modern (React 19 + TypeScript) tanpa mengorbankan kecepatan proses inti yang tetap di sisi Rust."
+      }
+    ],
+    "outcome": "Terminal AI-native yang benar-benar seukuran notepad — target utama macOS Tahoe, dengan disiplin ukuran yang dijaga sejak commit pertama. Bukti bahwa \"AI di mana-mana\" tidak harus berarti \"berat di mana-mana\".",
+    "accent": "#e05a1e",
+    "en": {
+      "tagline": "An AI-native terminal emulator ~7 MB — Tauri 2 + Rust + React 19.",
+      "metrics": [
+        { "label": "binary size", "value": "±7 MB" },
+        { "label": "runtime", "value": "native" },
+        { "label": "AI model", "value": "BYOK" }
+      ],
+      "problem": "Modern AI terminals usually ship Electron (hundreds of MB) and lock users to a single model provider. People want a terminal with a \"brain\" that stays light, fast, and free of forced subscriptions.",
+      "approach": [
+        {
+          "title": "Tauri, not Electron",
+          "text": "The desktop shell is written in Rust with the system WebView — resulting in a ±7 MB binary and an order of magnitude lower memory use than Electron."
+        },
+        {
+          "title": "AI as a feature, not baggage",
+          "text": "Bring-your-own-key: users plug in the model key of their choice (local or cloud) — the terminal never sends data to anyone's server but their own."
+        },
+        {
+          "title": "React 19 UI over a Rust core",
+          "text": "A modern interface experience (React 19 + TypeScript) without sacrificing the speed of core processes that stay on the Rust side."
+        }
+      ],
+      "outcome": "An AI-native terminal genuinely the size of a text file — primarily targeting macOS Tahoe, with size discipline enforced since the first commit. Proof that \"AI everywhere\" doesn't have to mean \"heavy everywhere\"."
+    }
+  },
+  {
+    "slug": "ai-first-os",
+    "title": "AI First OS",
+    "tagline": "Arch Linux ISO builder dengan Hermes Agent sebagai warga kelas satu.",
+    "kind": "Sistem Operasi / Dotfiles",
+    "year": "2025–2026",
+    "repo": "AI-First-OS",
+    "stack": ["Shell", "Arch Linux", "AI-First", "Hermes Agent"],
+    "metrics": [
+      { "label": "basis", "value": "Arch" },
+      { "label": "agent", "value": "Hermes" },
+      { "label": "build", "value": "ISO otomatis" }
+    ],
+    "problem": "Distribusi Linux umum memperlakukan AI sebagai aplikasi tambahan yang dipasang belakangan. Bagaimana jika OS dibangun dari ISO dengan agen AI sebagai \"warga negara kelas satu\" — tersedia sejak boot pertama, bukan setelah setup manual berjam-jam?",
+    "approach": [
+      {
+        "title": "ISO builder ter-skrip penuh",
+        "text": "Seluruh proses build ISO ditulis dalam skrip shell yang bisa diaudit — tidak ada sihir GUI; hasil build reproducible dan bisa dijalankan CI."
+      },
+      {
+        "title": "Hermes sejak boot",
+        "text": "Agen Hermes terintegrasi pada tahap image — pengguna langsung punya asisten sistem yang memahami konfigurasi mesinnya sendiri."
+      },
+      {
+        "title": "Ekosistem terorkestrasi",
+        "text": "Terhubung dengan repo orchestration (AGENTS.md, backlog, pipeline kematangan v4) sehingga evolusi OS, dotfiles, dan tooling berjalan di satu alur kerja."
+      }
+    ],
+    "outcome": "Eksperimen sistem operasi AI-first yang reproducible: satu perintah build ISO, agen aktif sejak boot, dan seluruh keputusan arsitektur terdokumentasi terbuka untuk ditelusuri siapa saja.",
+    "accent": "#a78bfa",
+    "en": {
+      "tagline": "An Arch Linux ISO builder with Hermes Agent as a first-class citizen.",
+      "metrics": [
+        { "label": "base", "value": "Arch" },
+        { "label": "agent", "value": "Hermes" },
+        { "label": "build", "value": "automated ISO" }
+      ],
+      "problem": "Mainstream Linux distributions treat AI as an afterthought app installed later. What if an OS were built from the ISO up with an AI agent as a \"first-class citizen\" — available from first boot, not after hours of manual setup?",
+      "approach": [
+        {
+          "title": "Fully scripted ISO builder",
+          "text": "The entire ISO build process is written in auditable shell scripts — no GUI magic; builds are reproducible and CI-runnable."
+        },
+        {
+          "title": "Hermes from boot",
+          "text": "The Hermes agent is integrated at the image stage — users immediately get a system assistant that understands its own machine's configuration."
+        },
+        {
+          "title": "An orchestrated ecosystem",
+          "text": "Connected to the orchestration repo (AGENTS.md, backlog, v4 maturity pipeline) so the OS, dotfiles, and tooling evolve in one workflow."
+        }
+      ],
+      "outcome": "A reproducible AI-first OS experiment: one command builds the ISO, the agent is active from boot, and every architectural decision is documented in the open for anyone to trace."
+    }
+  }
+]

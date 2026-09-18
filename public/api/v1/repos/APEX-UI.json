@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "APEX-UI",
+  "fullName": "Niumination/APEX-UI",
+  "description": "The front interface of the AI assistant APEX by Reznikov Engineering ",
+  "url": "https://github.com/Niumination/APEX-UI",
+  "homepage": "https://apex-ui-xi.vercel.app",
+  "language": null,
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": true,
+  "archived": false,
+  "license": "MIT",
+  "sizeKb": 107,
+  "createdAt": "2026-08-20T14:04:21Z",
+  "pushedAt": "2026-08-20T10:22:24Z"
+ }
+}

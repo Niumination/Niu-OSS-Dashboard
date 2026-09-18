@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "opencode",
+  "fullName": "Niumination/opencode",
+  "description": "The open source coding agent.",
+  "url": "https://github.com/Niumination/opencode",
+  "homepage": "https://opencode.ai",
+  "language": null,
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": true,
+  "archived": false,
+  "license": "MIT",
+  "sizeKb": 414981,
+  "createdAt": "2026-07-18T11:02:44Z",
+  "pushedAt": "2026-07-18T07:38:02Z"
+ }
+}

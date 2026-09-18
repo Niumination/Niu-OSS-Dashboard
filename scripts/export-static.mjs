@@ -56,6 +56,8 @@ process.on('exit', () => {
 
 try {
   sh('node scripts/gen-mock.mjs');
+  // API publik v1 (JSON statis) ikut di-regenerate dari snapshot segar.
+  sh('node scripts/gen-api.mjs');
 
   if (!existsSync(cfgBackup)) writeFileSync(cfgBackup, readFileSync(cfg, 'utf8'));
   writeFileSync(

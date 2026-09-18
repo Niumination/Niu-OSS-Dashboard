@@ -23,6 +23,7 @@ import { SITE } from '@/lib/site.config';
 import { categorize, CATEGORY_MAP } from '@/lib/categories';
 import type { Snapshot } from '@/lib/types';
 import type { PaymentTab } from './ui-context';
+import { useLocale } from './LocaleProvider';
 
 interface Props {
   open: boolean;
@@ -39,6 +40,7 @@ interface Props {
 export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }: Props) {
   const router = useRouter();
   const [copied, setCopied] = useState(false);
+  const { t } = useLocale();
 
   const lastFocused = useRef<HTMLElement | null>(null);
 
@@ -73,24 +75,24 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
   const close = () => onOpenChange(false);
 
   const navItems = [
-    { value: 'nav-overview', label: 'Beranda / Landing', icon: LayoutDashboard, href: '/' },
-    { value: 'nav-repos', label: 'Semua Repositori', icon: FolderGit2, href: '/repositories' },
-    { value: 'nav-services', label: 'Jasa & Komisi', icon: Wrench, href: '/services' },
-    { value: 'nav-system', label: 'Sistem & Metrik', icon: Activity, href: '/system' },
-    { value: 'nav-status', label: 'Halaman Status', icon: Activity, href: '/status' },
-    { value: 'nav-studies', label: 'Studi Kasus', icon: FolderGit2, href: '/studies' },
+    { value: 'nav-overview', label: t('cm.nav.overview'), icon: LayoutDashboard, href: '/' },
+    { value: 'nav-repos', label: t('cm.nav.repos'), icon: FolderGit2, href: '/repositories' },
+    { value: 'nav-services', label: t('cm.nav.services'), icon: Wrench, href: '/services' },
+    { value: 'nav-system', label: t('cm.nav.system'), icon: Activity, href: '/system' },
+    { value: 'nav-status', label: t('cm.nav.status'), icon: Activity, href: '/status' },
+    { value: 'nav-studies', label: t('cm.nav.studies'), icon: FolderGit2, href: '/studies' },
   ];
 
   const linkItems = [
-    { value: 'link-github', label: 'Profil GitHub', icon: Github, href: SITE.github },
+    { value: 'link-github', label: t('cm.link.github'), icon: Github, href: SITE.github },
     { value: 'link-sponsors', label: 'GitHub Sponsors', icon: Heart, href: SITE.sponsors },
     { value: 'link-bmac', label: 'Buy Me a Coffee', icon: Coffee, href: SITE.buyMeACoffee },
-    { value: 'link-email', label: `Email — ${SITE.email}`, icon: Mail, href: `mailto:${SITE.email}` },
+    { value: 'link-email', label: t('cm.link.email', { email: SITE.email }), icon: Mail, href: `mailto:${SITE.email}` },
   ];
 
   const actionItems = [
-    { value: 'act-donate', label: 'Dukung Open Source', icon: Heart, payment: 'oss' as PaymentTab },
-    { value: 'act-hire', label: 'Sewa Jasa / Konsultasi', icon: Stethoscope, payment: 'services' as PaymentTab },
+    { value: 'act-donate', label: t('cm.act.donate'), icon: Heart, payment: 'oss' as PaymentTab },
+    { value: 'act-hire', label: t('cm.act.hire'), icon: Stethoscope, payment: 'services' as PaymentTab },
   ];
 
   const copyEmail = async () => {
@@ -112,7 +114,7 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
         <div className="fixed inset-0 z-[90] flex items-start justify-center p-4 pt-[10vh] md:pt-[14vh]">
           <motion.button
             type="button"
-            aria-label="Tutup command palette"
+            aria-label={t('cm.aria.close')}
             className="absolute inset-0 cursor-default bg-ink/75 backdrop-blur-sm"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -122,7 +124,7 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
           <motion.div
             role="dialog"
             aria-modal="true"
-            aria-label="Command palette"
+            aria-label={t('cm.aria.dialog')}
             className="relative w-full max-w-xl overflow-hidden rounded-3xl border border-white/15 bg-ink-2/95 shadow-card backdrop-blur-2xl"
             initial={{ opacity: 0, scale: 0.97, y: 12 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -134,7 +136,7 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
                 <Search className="size-4 shrink-0 text-ember" />
                 <Command.Input
                   autoFocus
-                  placeholder="Cari repo, seksi halaman, tautan, atau aksi…"
+                  placeholder={t('cm.placeholder')}
                   className="h-14 flex-1 bg-transparent text-[15px] text-cream outline-none placeholder:text-cream/35"
                 />
                 <kbd className="hidden shrink-0 rounded-md border border-white/10 bg-white/[0.04] px-2 py-1 font-mono text-[10px] text-cream/45 sm:block">
@@ -143,7 +145,7 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
               </div>
 
               <Command.List className="max-h-[52vh] overflow-y-auto p-2">
-                <Command.Group heading="Navigasi">
+                <Command.Group heading={t('cm.group.nav')}>
                   {navItems.map((item) => (
                     <Command.Item
                       key={item.value}
@@ -163,7 +165,7 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
                   ))}
                 </Command.Group>
 
-                <Command.Group heading="Repositori">
+                <Command.Group heading={t('cm.group.repos')}>
                   {snapshot.repos.slice(0, 40).map((r) => {
                     const cat = CATEGORY_MAP[categorize(r)];
                     return (
@@ -187,7 +189,7 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
                   })}
                 </Command.Group>
 
-                <Command.Group heading="Tautan sosial">
+                <Command.Group heading={t('cm.group.links')}>
                   {linkItems.map((item) => (
                     <Command.Item
                       key={item.value}
@@ -205,7 +207,7 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
                   ))}
                 </Command.Group>
 
-                <Command.Group heading="Aksi">
+                <Command.Group heading={t('cm.group.actions')}>
                   {actionItems.map((item) => (
                     <Command.Item
                       key={item.value}
@@ -230,20 +232,20 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
                     ) : (
                       <MessageSquare className="size-4 shrink-0 text-cream/50" />
                     )}
-                    {copied ? 'Email tersalin!' : 'Salin alamat email'}
+                    {copied ? t('cm.copied') : t('cm.copy')}
                   </Command.Item>
                 </Command.Group>
 
                 <Command.Empty className="grid place-items-center py-10 font-mono text-[11px] uppercase tracking-[0.2em] text-cream/35">
-                  Tidak ada hasil
+                  {t('cm.empty')}
                 </Command.Empty>
               </Command.List>
             </Command>
 
             <div className="flex items-center gap-4 border-t border-white/[0.08] px-5 py-3 font-mono text-[9.5px] uppercase tracking-[0.18em] text-cream/35">
-              <span>↑↓ telusuri</span>
-              <span>↵ pilih</span>
-              <span>esc tutup</span>
+              <span>{t('cm.hint.up')}</span>
+              <span>{t('cm.hint.enter')}</span>
+              <span>{t('cm.hint.esc')}</span>
               <span className="ml-auto text-cream/25">⌘K / Ctrl+K</span>
             </div>
           </motion.div>

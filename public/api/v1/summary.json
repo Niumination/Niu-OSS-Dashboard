@@ -1,0 +1,115 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "totals": {
+  "repos": 91,
+  "original": 51,
+  "stars": 4,
+  "forks": 0,
+  "followers": 2,
+  "withHomepage": 31
+ },
+ "topLanguages": [
+  {
+   "name": "TypeScript",
+   "count": 19
+  },
+  {
+   "name": "JavaScript",
+   "count": 12
+  },
+  {
+   "name": "HTML",
+   "count": 6
+  },
+  {
+   "name": "Python",
+   "count": 5
+  },
+  {
+   "name": "Shell",
+   "count": 4
+  },
+  {
+   "name": "CSS",
+   "count": 3
+  },
+  {
+   "name": "Kotlin",
+   "count": 2
+  },
+  {
+   "name": "Java",
+   "count": 1
+  },
+  {
+   "name": "Rust",
+   "count": 1
+  },
+  {
+   "name": "C++",
+   "count": 1
+  }
+ ],
+ "topTopics": [
+  {
+   "name": "aceh-tengah",
+   "count": 1
+  },
+  {
+   "name": "github-profile",
+   "count": 1
+  },
+  {
+   "name": "niumination",
+   "count": 1
+  },
+  {
+   "name": "readme",
+   "count": 1
+  },
+  {
+   "name": "spbe",
+   "count": 1
+  },
+  {
+   "name": "ade",
+   "count": 1
+  },
+  {
+   "name": "ai",
+   "count": 1
+  },
+  {
+   "name": "ai-agent",
+   "count": 1
+  },
+  {
+   "name": "byok",
+   "count": 1
+  },
+  {
+   "name": "codemirror",
+   "count": 1
+  },
+  {
+   "name": "hackintosh",
+   "count": 1
+  },
+  {
+   "name": "macos",
+   "count": 1
+  },
+  {
+   "name": "opensource",
+   "count": 1
+  },
+  {
+   "name": "portable-pty",
+   "count": 1
+  },
+  {
+   "name": "react",
+   "count": 1
+  }
+ ]
+}

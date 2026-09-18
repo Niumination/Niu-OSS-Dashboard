@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "Android-Dex",
+  "fullName": "Niumination/Android-Dex",
+  "description": "Enable a full desktop experience from any Android device over Wi‑Fi. No root, scrcpy-powered, Flutter desktop app with wireless ADB, per‑app audio, and quick controls.",
+  "url": "https://github.com/Niumination/Android-Dex",
+  "homepage": "https://shrey113.github.io/Android-Dex/",
+  "language": null,
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": true,
+  "archived": false,
+  "license": null,
+  "sizeKb": 141776,
+  "createdAt": "2026-08-05T08:41:42Z",
+  "pushedAt": "2026-08-04T19:21:44Z"
+ }
+}

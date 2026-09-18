@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "docker-mcp-tutorial",
+  "fullName": "Niumination/docker-mcp-tutorial",
+  "description": "Complete tutorial materials for building MCP servers with Docker - from NetworkChuck's video",
+  "url": "https://github.com/Niumination/docker-mcp-tutorial",
+  "homepage": null,
+  "language": null,
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": true,
+  "archived": false,
+  "license": "MIT",
+  "sizeKb": 35,
+  "createdAt": "2025-10-07T10:15:42Z",
+  "pushedAt": "2025-09-12T15:21:49Z"
+ }
+}

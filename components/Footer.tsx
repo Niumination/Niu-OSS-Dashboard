@@ -3,15 +3,16 @@ import { Coffee, Github, Heart, Mail } from 'lucide-react';
 import { SITE } from '@/lib/site.config';
 import type { Snapshot } from '@/lib/types';
 import { formatDate } from '@/lib/utils';
+import T from '@/components/T';
 
 const NAV = [
-  { href: '/', label: 'Beranda' },
-  { href: '/repositories', label: 'Semua Repositori' },
-  { href: '/studies', label: 'Studi Kasus' },
-  { href: '/services', label: 'Jasa & Komisi' },
-  { href: '/system', label: 'Sistem & Metrik' },
-  { href: '/status', label: 'Halaman Status' },
-  { href: '/feed.xml', label: 'RSS Aktivitas' },
+  { href: '/', key: 'footer.nav.home' },
+  { href: '/repositories', key: 'footer.nav.repos' },
+  { href: '/studies', key: 'footer.nav.studies' },
+  { href: '/services', key: 'footer.nav.services' },
+  { href: '/system', key: 'footer.nav.system' },
+  { href: '/status', key: 'footer.nav.status' },
+  { href: '/feed.xml', key: 'footer.nav.rss' },
 ];
 
 export default function Footer({ snapshot }: { snapshot: Snapshot }) {
@@ -28,7 +29,7 @@ export default function Footer({ snapshot }: { snapshot: Snapshot }) {
             <span className="font-mono text-[13px] font-semibold text-cream">niumination</span>
           </div>
           <p className="mt-4 max-w-xs text-[13px] leading-relaxed text-cream/55">
-            {SITE.tagline} — civic tech, AI tooling, dan sistem yang dirawat dalam public.
+            <T k="footer.blurb" />
           </p>
           <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.2em] text-cream/35">
             {SITE.location}
@@ -36,12 +37,12 @@ export default function Footer({ snapshot }: { snapshot: Snapshot }) {
         </div>
 
         <div>
-          <div className="micro text-cream/40">menu</div>
+          <div className="micro text-cream/40"><T k="footer.menu" /></div>
           <ul className="mt-4 space-y-2.5">
             {NAV.map((n) => (
               <li key={n.href}>
                 <Link href={n.href} className="text-[13px] text-cream/65 transition-colors hover:text-ember">
-                  {n.label}
+                  <T k={n.key} />
                 </Link>
               </li>
             ))}
@@ -49,7 +50,7 @@ export default function Footer({ snapshot }: { snapshot: Snapshot }) {
         </div>
 
         <div>
-          <div className="micro text-cream/40">dukungan &amp; kontak</div>
+          <div className="micro text-cream/40"><T k="footer.support" /></div>
           <ul className="mt-4 space-y-2.5">
             <li>
               <a href={SITE.github} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-[13px] text-cream/65 transition-colors hover:text-ember">
@@ -80,7 +81,7 @@ export default function Footer({ snapshot }: { snapshot: Snapshot }) {
           <span>© 2026 Niumination · Aceh Tengah, ID</span>
           <span className="hidden md:inline">next.js · react-three/fiber · tailwind · framer motion</span>
           <span className="ml-auto">
-            data: api github · snapshot {formatDate(snapshot.updatedAt)}
+            <T k="footer.data" vars={{ date: formatDate(snapshot.updatedAt) }} />
           </span>
         </div>
       </div>

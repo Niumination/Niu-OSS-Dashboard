@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import AppShell from '@/components/AppShell';
 import CloneBox from '@/components/CloneBox';
+import QrCard from '@/components/QrCard';
 import Readme from '@/components/Readme';
 import RepoCard from '@/components/RepoCard';
 import { getGithubSnapshot, getRepoDetail } from '@/lib/github';
@@ -248,6 +249,12 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
             </div>
           </section>
         )}
+        {/* QR share */}
+        <QrCard
+          url={`${process.env.SITE_URL ?? 'https://niumination.github.io'}/repo/${repo.name}`}
+          filename={`qr-repo-${repo.name}.svg`}
+        />
+
       </div>
     </AppShell>
   );

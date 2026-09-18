@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Command, Heart } from 'lucide-react';
 import ErrorBoundary from './ErrorBoundary';
 import { useUi } from './ui-context';
+import { useLocale } from './LocaleProvider';
 import { formatNumber } from '@/lib/utils';
 import SceneLite from './hero/SceneLite';
 
@@ -37,11 +38,12 @@ function detectLite(): boolean {
 }
 
 function ScenePlaceholder() {
+  const { t } = useLocale();
   return (
     <div className="absolute inset-0 grid place-items-center">
       <div className="flex flex-col items-center gap-3">
         <div className="size-10 rounded-full border-2 border-ember/40 border-t-ember animate-spin" />
-        <span className="micro text-cream/40">memuat scene…</span>
+        <span className="micro text-cream/40">{t('hero.scene.loading')}</span>
       </div>
     </div>
   );
@@ -59,6 +61,7 @@ export default function Hero3D({ stats }: { stats: HeroStats }) {
   const [fps, setFps] = useState<number | null>(null);
   const degradeRef = useRef(false);
   const { openCommand, openPayment } = useUi();
+  const { t } = useLocale();
 
   useEffect(() => {
     setMode(detectLite() ? 'lite' : '3d');
@@ -74,10 +77,10 @@ export default function Hero3D({ stats }: { stats: HeroStats }) {
   }, []);
 
   const chips: Array<[string, number]> = [
-    ['Repositori', stats.repos],
-    ['Stars', stats.stars],
-    ['Forks', stats.forks],
-    ['Pengikut', stats.followers],
+    [t('hero.chip.repos'), stats.repos],
+    [t('hero.chip.stars'), stats.stars],
+    [t('hero.chip.forks'), stats.forks],
+    [t('hero.chip.followers'), stats.followers],
   ];
 
   return (
@@ -105,16 +108,13 @@ export default function Hero3D({ stats }: { stats: HeroStats }) {
             </div>
 
             <h1 className="mt-4 font-display text-[42px] leading-[0.98] tracking-tight text-cream sm:text-[54px] md:text-[64px]">
-              Sistem terbuka,
+              {t('hero.h1a')}
               <br />
-              dibangun <span className="grad-text">di depan umum.</span>
+              {t('hero.h1b')} <span className="grad-text">{t('hero.h1c')}</span>
             </h1>
 
             <p className="mt-5 max-w-xl text-sm leading-relaxed text-cream/70 md:text-[15px]">
-              Pengembang full-stack &amp; engineer AI tooling. Civic tech untuk pemerintah daerah,
-              AI terminal 7&nbsp;MB, dan dotfiles yang benar-benar boot —{' '}
-              <span className="font-mono text-cream/90">{stats.repos}</span> repositori publik,
-              dihitung langsung dari API GitHub.
+              {t('hero.p', { repos: stats.repos })}
             </p>
 
             <div className="mt-7 flex flex-wrap items-center gap-3">
@@ -122,7 +122,7 @@ export default function Hero3D({ stats }: { stats: HeroStats }) {
                 href="/repositories"
                 className="group inline-flex h-11 items-center gap-2 rounded-full bg-ember px-6 font-mono text-[11px] uppercase tracking-wider text-ink transition hover:bg-ember-soft hover:shadow-glow"
               >
-                Jelajahi Repositori
+                {t('hero.cta.repos')}
                 <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
               </Link>
               <button
@@ -131,7 +131,7 @@ export default function Hero3D({ stats }: { stats: HeroStats }) {
                 className="inline-flex h-11 items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 font-mono text-[11px] uppercase tracking-wider text-cream transition hover:border-ember/50 hover:bg-white/10"
               >
                 <Heart className="size-3.5 text-ember" />
-                Dukung OSS
+                {t('hero.cta.donate')}
               </button>
               <button
                 type="button"
@@ -176,13 +176,13 @@ export default function Hero3D({ stats }: { stats: HeroStats }) {
             </ErrorBoundary>
 
             <div className="pointer-events-none absolute top-3 left-4 micro text-cream/40">
-              inti-teknologi // graf-simpul
+              {t('hero.scene.label')}
             </div>
             <div className="pointer-events-none absolute top-3 right-4 rounded-full border border-white/10 bg-ink/70 px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.18em] text-cream/70 backdrop-blur">
-              {mode === '3d' ? `3d · ${fps ?? '—'} fps` : mode === 'lite' ? 'lite · css/canvas' : 'memuat…'}
+              {mode === '3d' ? `3d · ${fps ?? '—'} fps` : mode === 'lite' ? t('hero.scene.lite') : t('hero.scene.boot')}
             </div>
             <div className="pointer-events-none absolute bottom-3 left-4 font-mono text-[9px] uppercase tracking-[0.2em] text-cream/30">
-              gerakkan kursor untuk berinteraksi
+              {t('hero.scene.hint')}
             </div>
           </div>
         </div>

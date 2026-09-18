@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "airi",
+  "fullName": "Niumination/airi",
+  "description": "💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
+  "url": "https://github.com/Niumination/airi",
+  "homepage": "https://airi.moeru.ai/docs/",
+  "language": null,
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": true,
+  "archived": false,
+  "license": "MIT",
+  "sizeKb": 519728,
+  "createdAt": "2026-07-27T12:22:30Z",
+  "pushedAt": "2026-07-27T11:50:02Z"
+ }
+}

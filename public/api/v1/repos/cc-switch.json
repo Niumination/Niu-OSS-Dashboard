@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "cc-switch",
+  "fullName": "Niumination/cc-switch",
+  "description": "A cross-platform desktop All-in-One assistant for Claude Code, Codex, OpenCode, OpenClaw, Gemini CLI & Hermes Agent. Only official website: ccswitch.io",
+  "url": "https://github.com/Niumination/cc-switch",
+  "homepage": "https://ccswitch.io",
+  "language": "Rust",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": true,
+  "archived": false,
+  "license": "MIT",
+  "sizeKb": 66120,
+  "createdAt": "2026-07-19T17:46:39Z",
+  "pushedAt": "2026-08-07T20:36:46Z"
+ }
+}

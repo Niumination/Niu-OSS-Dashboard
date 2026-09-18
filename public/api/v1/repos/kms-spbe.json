@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "kms-spbe",
+  "fullName": "Niumination/kms-spbe",
+  "description": null,
+  "url": "https://github.com/Niumination/kms-spbe",
+  "homepage": "https://kms-spbe.vercel.app",
+  "language": "TypeScript",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": null,
+  "sizeKb": 469,
+  "createdAt": "2025-10-24T19:45:35Z",
+  "pushedAt": "2025-10-26T16:41:02Z"
+ }
+}

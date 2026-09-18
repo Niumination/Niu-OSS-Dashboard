@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "agentic-awesome-skills",
+  "fullName": "Niumination/agentic-awesome-skills",
+  "description": "AAS Core is the local, agent-first control plane for complete catalog discovery, agent-owned selection, stack validation, and planning, backed by 1,987+ agentic skills. Includes CLI, local MCP, catalog, plugins, and Workbench.",
+  "url": "https://github.com/Niumination/agentic-awesome-skills",
+  "homepage": "https://sickn33.github.io/agentic-awesome-skills/",
+  "language": null,
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": true,
+  "archived": false,
+  "license": "MIT",
+  "sizeKb": 111656,
+  "createdAt": "2026-07-27T10:02:51Z",
+  "pushedAt": "2026-07-27T05:13:52Z"
+ }
+}

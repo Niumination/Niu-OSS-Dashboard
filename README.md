@@ -346,6 +346,38 @@ Situs diaudit dan di-hardening sebelum deploy:
   performa ≥ 0.75, aksesibilitas/best-practices/SEO ≥ 0.9, CLS < 0.15.
   Sentry opsional via `SENTRY_DSN`.
 
+### Fase 3 — i18n, PWA, API publik, QR share (2026-09)
+
+- **i18n id/en**: kamus tunggal `lib/i18n.ts` (id = sumber, en lengkap),
+  `LocaleProvider` + tombol **ID | EN** di navbar (preferensi tersimpan di
+  localStorage, `<html lang>` ikut berubah). Pola terjemahan: `<T k="...">`
+  untuk komponen server, `useLocale()` untuk komponen client. Cakupan saat
+  ini: seluruh kerangka situs (nav, footer, command palette), beranda,
+  halaman status, 404/error, offline — **plus isi studi kasus** (field `en`
+  di `data/studies.json`). Dashboard internal (/system, /repositories,
+  /services) masih ID — tinggal tambah kunci kamus bila ingin diterjemahkan.
+  Paritas kunci id↔en ditegakkan otomatis oleh `tests/i18n.test.ts`.
+- **PWA**: `app/manifest.ts` (+`force-static`), ikon 192/512/maskable
+  digenerate tanpa dependensi (`npm run gen:icons` → `public/icons/`),
+  service worker `public/sw.js` (precache shell, navigasi network-first,
+  aset stale-while-revalidate, fallback `/offline`), halaman `/offline`
+  bergaya situs. Terpasang otomatis di production.
+- **API publik v1** (`npm run gen:api` → `public/api/v1/`): JSON statis ala
+  GitOps — `index` (discovery), `user`, `repos`, `repos/{name}` (91 repo),
+  `events` (100 terakhir), `summary`, `uptime` (uptime% per situs),
+  `studies`, `studies/{slug}` (id+en). Di GitHub Pages dilayani sebagai file
+  statis (CORS-open); di server mode mirror via
+  `app/api/v1/[...resource]/route.ts` + header CORS di `next.config.ts`.
+  Regenerasi terjadwal: `refresh-data.yml` (mingguan), `uptime.yml`
+  (endpoint uptime, tiap 15 menit), dan setiap `export:static`.
+- **QR share**: `components/QrCard.tsx` — QR SVG (paket `qrcode`) di halaman
+  detail repo dan detail studi kasus, dengan tautan unduh SVG (tanpa JS
+  tambahan).
+- **PPR: sengaja ditunda.** Target deploy utama adalah GitHub Pages (statis)
+  sehingga Partial Prerendering tidak memberi nilai; pola "shell statis +
+  lubang dinamis client-side" sudah dipakai. Revisi bila pindah ke Vercel —
+  ukur p50/p95 dari log `/api/vitals` dulu.
+
 ## ✦ Kontribusi / kustomisasi cepat
 
 - **Ganti warna tema** → `tailwind.config.ts` (blok `colors`) + `app/globals.css`.

@@ -1,0 +1,42 @@
+{
+ "name": "Niumination OSS API",
+ "version": "1.0.0",
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "description": "API publik read-only untuk repositori, aktivitas, uptime, dan studi kasus Niumination. Statis (GitOps) — di-regenerasi bersama snapshot data; tanpa rate limit.",
+ "docs": "https://github.com/Niumination/niumination#api-publik-v1",
+ "license": "CC-BY-4.0 (data), kode MIT",
+ "endpoints": [
+  {
+   "path": "/api/v1/user.json",
+   "description": "Profil GitHub publik"
+  },
+  {
+   "path": "/api/v1/repos.json",
+   "description": "Daftar repositori (diurut push terbaru)"
+  },
+  {
+   "path": "/api/v1/repos/{name}.json",
+   "description": "Detail satu repositori"
+  },
+  {
+   "path": "/api/v1/events.json",
+   "description": "100 event publik terakhir"
+  },
+  {
+   "path": "/api/v1/summary.json",
+   "description": "Agregat statistik"
+  },
+  {
+   "path": "/api/v1/uptime.json",
+   "description": "Uptime deployment per situs"
+  },
+  {
+   "path": "/api/v1/studies.json",
+   "description": "Indeks studi kasus"
+  },
+  {
+   "path": "/api/v1/studies/{slug}.json",
+   "description": "Detail studi kasus (id + en)"
+  }
+ ]
+}

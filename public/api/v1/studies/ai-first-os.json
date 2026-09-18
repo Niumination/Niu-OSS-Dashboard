@@ -1,0 +1,81 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "study": {
+  "slug": "ai-first-os",
+  "title": "AI First OS",
+  "tagline": "Arch Linux ISO builder dengan Hermes Agent sebagai warga kelas satu.",
+  "kind": "Sistem Operasi / Dotfiles",
+  "year": "2025–2026",
+  "repo": "AI-First-OS",
+  "stack": [
+   "Shell",
+   "Arch Linux",
+   "AI-First",
+   "Hermes Agent"
+  ],
+  "metrics": [
+   {
+    "label": "basis",
+    "value": "Arch"
+   },
+   {
+    "label": "agent",
+    "value": "Hermes"
+   },
+   {
+    "label": "build",
+    "value": "ISO otomatis"
+   }
+  ],
+  "problem": "Distribusi Linux umum memperlakukan AI sebagai aplikasi tambahan yang dipasang belakangan. Bagaimana jika OS dibangun dari ISO dengan agen AI sebagai \"warga negara kelas satu\" — tersedia sejak boot pertama, bukan setelah setup manual berjam-jam?",
+  "approach": [
+   {
+    "title": "ISO builder ter-skrip penuh",
+    "text": "Seluruh proses build ISO ditulis dalam skrip shell yang bisa diaudit — tidak ada sihir GUI; hasil build reproducible dan bisa dijalankan CI."
+   },
+   {
+    "title": "Hermes sejak boot",
+    "text": "Agen Hermes terintegrasi pada tahap image — pengguna langsung punya asisten sistem yang memahami konfigurasi mesinnya sendiri."
+   },
+   {
+    "title": "Ekosistem terorkestrasi",
+    "text": "Terhubung dengan repo orchestration (AGENTS.md, backlog, pipeline kematangan v4) sehingga evolusi OS, dotfiles, dan tooling berjalan di satu alur kerja."
+   }
+  ],
+  "outcome": "Eksperimen sistem operasi AI-first yang reproducible: satu perintah build ISO, agen aktif sejak boot, dan seluruh keputusan arsitektur terdokumentasi terbuka untuk ditelusuri siapa saja.",
+  "accent": "#a78bfa",
+  "en": {
+   "tagline": "An Arch Linux ISO builder with Hermes Agent as a first-class citizen.",
+   "metrics": [
+    {
+     "label": "base",
+     "value": "Arch"
+    },
+    {
+     "label": "agent",
+     "value": "Hermes"
+    },
+    {
+     "label": "build",
+     "value": "automated ISO"
+    }
+   ],
+   "problem": "Mainstream Linux distributions treat AI as an afterthought app installed later. What if an OS were built from the ISO up with an AI agent as a \"first-class citizen\" — available from first boot, not after hours of manual setup?",
+   "approach": [
+    {
+     "title": "Fully scripted ISO builder",
+     "text": "The entire ISO build process is written in auditable shell scripts — no GUI magic; builds are reproducible and CI-runnable."
+    },
+    {
+     "title": "Hermes from boot",
+     "text": "The Hermes agent is integrated at the image stage — users immediately get a system assistant that understands its own machine's configuration."
+    },
+    {
+     "title": "An orchestrated ecosystem",
+     "text": "Connected to the orchestration repo (AGENTS.md, backlog, v4 maturity pipeline) so the OS, dotfiles, and tooling evolve in one workflow."
+    }
+   ],
+   "outcome": "A reproducible AI-first OS experiment: one command builds the ISO, the agent is active from boot, and every architectural decision is documented in the open for anyone to trace."
+  }
+ }
+}

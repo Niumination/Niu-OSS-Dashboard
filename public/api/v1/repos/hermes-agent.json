@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "hermes-agent",
+  "fullName": "Niumination/hermes-agent",
+  "description": "The agent that grows with you",
+  "url": "https://github.com/Niumination/hermes-agent",
+  "homepage": "https://hermes-agent.nousresearch.com",
+  "language": "Python",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": true,
+  "archived": false,
+  "license": "MIT",
+  "sizeKb": 774843,
+  "createdAt": "2026-08-24T17:55:30Z",
+  "pushedAt": "2026-09-09T18:13:10Z"
+ }
+}

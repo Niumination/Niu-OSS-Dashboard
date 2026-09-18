@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "skills",
+  "fullName": "Niumination/skills",
+  "description": "Skills for Real Engineers. Straight from my .claude directory.",
+  "url": "https://github.com/Niumination/skills",
+  "homepage": null,
+  "language": null,
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": true,
+  "archived": false,
+  "license": "MIT",
+  "sizeKb": 200,
+  "createdAt": "2026-05-18T11:53:28Z",
+  "pushedAt": "2026-05-13T13:05:22Z"
+ }
+}

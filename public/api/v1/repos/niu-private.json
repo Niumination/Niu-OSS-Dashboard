@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "niu-private",
+  "fullName": "Niumination/niu-private",
+  "description": "Niu Private — Document Vault & Kanban Project Board",
+  "url": "https://github.com/Niumination/niu-private",
+  "homepage": "https://niumination.github.io/niu-private/",
+  "language": "TypeScript",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": null,
+  "sizeKb": 130,
+  "createdAt": "2026-06-06T06:52:57Z",
+  "pushedAt": "2026-06-08T05:25:27Z"
+ }
+}

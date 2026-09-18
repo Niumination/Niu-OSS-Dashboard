@@ -1,0 +1,43 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "Flame-ADE",
+  "fullName": "Niumination/Flame-ADE",
+  "description": "~7MB AI-native terminal emulator (ADE) — Tauri 2 + Rust + React 19. macOS Tahoe 26.5 primary target. BYOK AI, no telemetry, OS keychain.",
+  "url": "https://github.com/Niumination/Flame-ADE",
+  "homepage": null,
+  "language": "TypeScript",
+  "topics": [
+   "ade",
+   "ai",
+   "ai-agent",
+   "byok",
+   "codemirror",
+   "hackintosh",
+   "macos",
+   "opensource",
+   "portable-pty",
+   "react",
+   "rust",
+   "tailwindcss",
+   "tauri",
+   "tauri-app",
+   "terminal",
+   "terminal-emulator",
+   "typescript",
+   "vite",
+   "xterm",
+   "zustand"
+  ],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 1,
+  "fork": false,
+  "archived": false,
+  "license": "Apache-2.0",
+  "sizeKb": 703,
+  "createdAt": "2026-05-23T00:11:54Z",
+  "pushedAt": "2026-08-28T10:23:37Z"
+ }
+}

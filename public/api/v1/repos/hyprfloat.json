@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "hyprfloat",
+  "fullName": "Niumination/hyprfloat",
+  "description": "Hyprland floating window manager and workspace overview utility.",
+  "url": "https://github.com/Niumination/hyprfloat",
+  "homepage": null,
+  "language": null,
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": true,
+  "archived": false,
+  "license": "MIT",
+  "sizeKb": 15165,
+  "createdAt": "2025-09-11T08:18:35Z",
+  "pushedAt": "2025-09-11T07:10:07Z"
+ }
+}

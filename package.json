@@ -15,7 +15,9 @@
     "export:static": "node scripts/export-static.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "gen:icons": "node scripts/gen-icons.mjs",
+    "gen:api": "node scripts/gen-api.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^10.0.6",
@@ -28,6 +30,7 @@
     "lucide-react": "^0.518.0",
     "marked": "^18.0.13",
     "next": "15.3.3",
+    "qrcode": "^1.5.4",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "three": "^0.178.0"
@@ -35,6 +38,7 @@
   "devDependencies": {
     "@types/dompurify": "^3.0.5",
     "@types/node": "^20.19.0",
+    "@types/qrcode": "^1.5.6",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
     "@types/three": "^0.178.0",

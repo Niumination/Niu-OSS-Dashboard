@@ -1,0 +1,22 @@
+{
+ "generatedAt": "2026-09-18T16:57:54.564Z",
+ "repo": {
+  "name": "AI-First-OS",
+  "fullName": "Niumination/AI-First-OS",
+  "description": "Arch Linux ISO builder — AI First OS. Sistem operasi dengan Hermes Agent sebagai warga negara kelas satu.",
+  "url": "https://github.com/Niumination/AI-First-OS",
+  "homepage": null,
+  "language": "Shell",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": null,
+  "sizeKb": 5,
+  "createdAt": "2026-06-21T17:44:50Z",
+  "pushedAt": "2026-06-27T07:39:47Z"
+ }
+}
