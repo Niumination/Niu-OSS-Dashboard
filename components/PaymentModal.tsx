@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
   Check,
@@ -17,6 +17,7 @@ import {
   Stethoscope,
   Code2,
   MessagesSquare,
+  ShieldCheck,
   X,
 } from 'lucide-react';
 import { SERVICE_PACKAGES, SITE, type ServicePackage } from '@/lib/site.config';
@@ -27,13 +28,17 @@ import type { PaymentTab } from './ui-context';
  * ============================================================================
  *  PaymentModal — sistem monetisasi
  * ----------------------------------------------------------------------------
- *  Tab 1 "Dukung OSS": donasi sekali / bulanan dengan nominal cepat,
- *    metode: GitHub Sponsors, BuyMeACoffee, Midtrans SNAP (QRIS/VA/e-wallet,
- *    aktif jika NEXT_PUBLIC_MIDTRANS_CLIENT_KEY terisi), Stripe (hosted
- *    payment link, aktif jika NEXT_PUBLIC_STRIPE_PAYMENT_LINK terisi).
- *  Tab 2 "Sewa Jasa": 3 paket (Konsultasi Teknis, Audit & Optimization,
- *    Custom Web App) -> form brief -> checkout/kontak langsung via
- *    email (mailto) & WhatsApp (wa.me).
+ *  Tab 1 "Dukung OSS": donasi sekali (bulanan diarahkan ke GitHub Sponsors)
+ *    dengan pembayaran SUNGGUHAN:
+ *    - Midtrans SNAP: POST /api/pay/midtrans (server key) -> snap.pay(token)
+ *    - Stripe Checkout: POST /api/pay/stripe -> redirect halaman Stripe
+ *    - GitHub Sponsors & BuyMeACoffee: tautan langsung
+ *  Tab 2 "Sewa Jasa": pilih paket -> form brief -> email/WhatsApp;
+ *    opsi bayar DEPOSIT 50% via Midtrans/Stripe bila terkonfigurasi.
+ *
+ *  Konfigurasi dideteksi via /api/pay/config (boolean saja, kunci aman).
+ *  Pada deployment statis (GitHub Pages) route API tidak tersedia —
+ *  tombol pembayaran penuh ditandai nonaktif dengan penjelasan jujur.
  * ============================================================================
  */
 
@@ -42,6 +47,13 @@ interface Props {
   initialTab: PaymentTab;
   onClose: () => void;
 }
+
+interface PayCfg {
+  midtrans: boolean;
+  stripe: boolean;
+}
+
+type PayMethod = 'midtrans' | 'stripe';
 
 function loadScript(src: string): Promise<void> {
   return new Promise((resolve, reject) => {
@@ -57,11 +69,32 @@ function loadScript(src: string): Promise<void> {
 
 export default function PaymentModal({ open, initialTab, onClose }: Props) {
   const [tab, setTab] = useState<PaymentTab>(initialTab);
+  const [cfg, setCfg] = useState<PayCfg | null>(null);
+  const [cfgError, setCfgError] = useState<string | null>(null);
+  const [busy, setBusy] = useState<PayMethod | null>(null);
+  const [payError, setPayError] = useState<string | null>(null);
   const panelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (open) setTab(initialTab);
   }, [open, initialTab]);
+
+  // Deteksi metode aktif sekali saat modal dibuka.
+  useEffect(() => {
+    if (!open || cfg) return;
+    let live = true;
+    fetch('/api/pay/config')
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error('gagal'))))
+      .then((c: PayCfg) => live && setCfg(c))
+      .catch(() => {
+        if (!live) return;
+        setCfg({ midtrans: false, stripe: false });
+        setCfgError('Mode statis / server pembayaran tidak aktif — pembayaran penuh tersedia pada deployment Vercel.');
+      });
+    return () => {
+      live = false;
+    };
+  }, [open, cfg]);
 
   useEffect(() => {
     if (!open) return;
@@ -80,6 +113,50 @@ export default function PaymentModal({ open, initialTab, onClose }: Props) {
       previous?.focus?.();
     };
   }, [open, onClose]);
+
+  /** Alur pembayaran server-side: Midtrans Snap / Stripe Checkout. */
+  const payVia = useCallback(
+    async (method: PayMethod, amount: number, name: string) => {
+      if (busy) return;
+      setBusy(method);
+      setPayError(null);
+      try {
+        if (method === 'midtrans') {
+          const res = await fetch('/api/pay/midtrans', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ amount, name }),
+          });
+          const data = await res.json();
+          if (!res.ok) throw new Error(data.error ?? 'Gagal membuat transaksi Midtrans.');
+          await loadScript('https://app.midtrans.com/snap/snap.js');
+          const w = window as unknown as { snap: { pay: (token: string, opts?: Record<string, unknown>) => void } };
+          w.snap.pay(data.token, {
+            onSuccess: () => setBusy(null),
+            onPending: () => setBusy(null),
+            onError: () => {
+              setBusy(null);
+              setPayError('Pembayaran Midtrans gagal — coba lagi atau gunakan metode lain.');
+            },
+            onClose: () => setBusy(null),
+          });
+        } else {
+          const res = await fetch('/api/pay/stripe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ amount, name }),
+          });
+          const data = await res.json();
+          if (!res.ok) throw new Error(data.error ?? 'Gagal membuat sesi Stripe.');
+          window.location.assign(data.url as string);
+        }
+      } catch (e) {
+        setBusy(null);
+        setPayError(e instanceof Error ? e.message : 'Terjadi kesalahan tak terduga.');
+      }
+    },
+    [busy],
+  );
 
   return (
     <AnimatePresence>
@@ -142,8 +219,18 @@ export default function PaymentModal({ open, initialTab, onClose }: Props) {
                   </TabButton>
                 </div>
 
+                {payError && (
+                  <p className="mt-4 rounded-2xl border border-danger/30 bg-danger/[0.08] px-4 py-2.5 text-[12px] leading-relaxed text-danger">
+                    {payError}
+                  </p>
+                )}
+
                 <div className="mt-6">
-                  {tab === 'oss' ? <OssTab /> : <ServicesTab />}
+                  {tab === 'oss' ? (
+                    <OssTab cfg={cfg} cfgError={cfgError} busy={busy} onPay={payVia} />
+                  ) : (
+                    <ServicesTab cfg={cfg} cfgError={cfgError} busy={busy} onPay={payVia} />
+                  )}
                 </div>
               </div>
             </motion.section>
@@ -185,49 +272,28 @@ function TabButton({
 
 /* ------------------------------ Tab: OSS -------------------------------- */
 
-function OssTab() {
+function OssTab({
+  cfg,
+  cfgError,
+  busy,
+  onPay,
+}: {
+  cfg: PayCfg | null;
+  cfgError: string | null;
+  busy: PayMethod | null;
+  onPay: (m: PayMethod, amount: number, name: string) => void;
+}) {
   const [freq, setFreq] = useState<'once' | 'monthly'>('once');
   const [amount, setAmount] = useState<number>(50000);
   const [custom, setCustom] = useState('');
-  const [midStatus, setMidStatus] = useState<'idle' | 'loading' | 'error'>('idle');
 
   const finalAmount = useMemo(() => {
     const c = Number(custom.replace(/\D/g, ''));
     return c > 0 ? c : amount;
   }, [custom, amount]);
 
-  const payMidtrans = async () => {
-    if (!SITE.midtransClientKey || midStatus === 'loading') return;
-    setMidStatus('loading');
-    try {
-      await loadScript('https://app.midtrans.com/snap/snap.js');
-      const w = window as unknown as {
-        snap: {
-          pay: (payload: Record<string, unknown>) => void;
-          buildPaymentMethods: (methods: string[]) => Record<string, unknown>;
-        };
-      };
-      w.snap.pay({
-        clientKey: SITE.midtransClientKey,
-        transactionItems: [
-          {
-            name: freq === 'monthly' ? 'Donasi bulanan OSS' : 'Donasi OSS',
-            price: finalAmount,
-            quantity: 1,
-          },
-        ],
-        ...w.snap.buildPaymentMethods(['qris', 'gopay', 'shopeepay', 'ovo', 'dana', 'va_bri', 'va_mandiri']),
-        onSuccess: () => {
-          setMidStatus('idle');
-        },
-        onPending: () => setMidStatus('idle'),
-        onError: () => setMidStatus('error'),
-        onClose: () => setMidStatus('idle'),
-      });
-    } catch {
-      setMidStatus('error');
-    }
-  };
+  const midtransReady = cfg?.midtrans === true && freq === 'once';
+  const stripeReady = cfg?.stripe === true;
 
   return (
     <div className="space-y-5">
@@ -322,28 +388,41 @@ function OssTab() {
           icon={QrCode}
           name="Midtrans — QRIS / VA / E-Wallet"
           desc={
-            SITE.midtransClientKey
+            midtransReady
               ? 'Bayar via Snap: QRIS, GoPay, OVO, ShopeePay, DANA, VA bank.'
-              : 'Aktif setelah NEXT_PUBLIC_MIDTRANS_CLIENT_KEY diisi di environment.'
+              : freq === 'monthly'
+                ? 'Langganan bulanan Midtrans belum tersedia — gunakan GitHub Sponsors.'
+                : cfg === null
+                  ? 'Memeriksa konfigurasi server…'
+                  : 'Aktif setelah MIDTRANS_SERVER_KEY & CLIENT_KEY diisi di environment.'
           }
           cta="Bayar"
-          onClick={payMidtrans}
-          disabled={!SITE.midtransClientKey}
-          state={midStatus}
+          onClick={() => onPay('midtrans', finalAmount, 'Donasi Open Source')}
+          disabled={!midtransReady}
+          state={busy === 'midtrans' ? 'loading' : 'idle'}
         />
         <MethodRow
           icon={CreditCard}
           name="Stripe — kartu internasional"
           desc={
-            SITE.stripePaymentLink
-              ? 'Hosted payment link Stripe (USD). Ideal untuk donor luar negeri.'
-              : 'Aktif setelah NEXT_PUBLIC_STRIPE_PAYMENT_LINK diisi di environment.'
+            stripeReady
+              ? 'Stripe Checkout (IDR) — kartu kredit/debit, ideal untuk donor luar negeri.'
+              : cfg === null
+                ? 'Memeriksa konfigurasi server…'
+                : 'Aktif setelah STRIPE_SECRET_KEY diisi di environment.'
           }
-          href={SITE.stripePaymentLink || undefined}
-          cta="Buka Stripe"
-          disabled={!SITE.stripePaymentLink}
+          cta="Bayar"
+          onClick={() => onPay('stripe', finalAmount, 'Donasi Open Source')}
+          disabled={!stripeReady}
+          state={busy === 'stripe' ? 'loading' : 'idle'}
         />
       </div>
+
+      {cfgError && (
+        <p className="rounded-2xl border border-warn/25 bg-warn/[0.06] px-4 py-2.5 text-[11px] leading-relaxed text-warn/80">
+          {cfgError}
+        </p>
+      )}
 
       <p className="rounded-2xl border border-white/[0.07] bg-white/[0.02] px-4 py-3 text-[11.5px] leading-relaxed text-cream/45">
         Dana digunakan untuk: server & domain proyek civic (Pemdi Aceh Tengah), biaya riset tooling
@@ -411,8 +490,6 @@ function MethodRow({
             <>
               <Loader2 className="size-3.5 animate-spin" /> memproses…
             </>
-          ) : state === 'error' ? (
-            'coba lagi'
           ) : (
             <>
               {cta} <ChevronRight className="size-3.5" />
@@ -426,14 +503,26 @@ function MethodRow({
 
 /* --------------------------- Tab: Services ------------------------------- */
 
-function ServicesTab() {
+function ServicesTab({
+  cfg,
+  cfgError,
+  busy,
+  onPay,
+}: {
+  cfg: PayCfg | null;
+  cfgError: string | null;
+  busy: PayMethod | null;
+  onPay: (m: PayMethod, amount: number, name: string) => void;
+}) {
   const [sel, setSel] = useState<ServicePackage | null>(null);
   const [form, setForm] = useState({ name: '', email: '', wa: '', brief: '' });
   const [sent, setSent] = useState(false);
 
+  const depositAmount = sel ? Math.ceil(sel.price / 2 / 1000) * 1000 : 0;
+
   const mailtoHref = useMemo(() => {
     if (!sel) return '#';
-    const subject = `Request ${sel.name} — via niumination dashboard`;
+    const subject = `Permintaan ${sel.name} — via dasbor niumination`;
     const body = [
       'Halo Niumination,',
       '',
@@ -445,7 +534,7 @@ function ServicesTab() {
       'Detail kebutuhan:',
       form.brief || '-',
       '',
-      '— dikirim dari dashboard niumination',
+      '— dikirim dari dasbor niumination',
     ].join('\n');
     return `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }, [sel, form]);
@@ -557,6 +646,57 @@ function ServicesTab() {
               <MessageCircle className="size-3.5" /> Chat WhatsApp
             </a>
           </div>
+
+          {/* Deposit 50% via pembayaran server */}
+          <div className="mt-5 rounded-2xl border border-white/[0.08] bg-ink/50 p-4">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div className="flex items-center gap-2.5">
+                <ShieldCheck className="size-4 shrink-0 text-spotlight" />
+                <div>
+                  <div className="text-[12.5px] font-medium text-cream/85">
+                    Bayar deposit 50% sekarang — <span className="font-mono text-ember-soft">{formatIDR(depositAmount)}</span>
+                  </div>
+                  <div className="mt-0.5 text-[11px] text-cream/45">
+                    Sisa dibayar setelah penawaran final. Kuitansi otomatis dari Midtrans/Stripe.
+                  </div>
+                </div>
+              </div>
+              <div className="flex gap-2">
+                <button
+                  type="button"
+                  disabled={!cfg?.midtrans}
+                  onClick={() => onPay('midtrans', depositAmount, `Deposit 50% — ${sel.name}`)}
+                  className={cx(
+                    'flex h-9 items-center gap-1.5 rounded-full px-4 font-mono text-[10px] uppercase tracking-wider transition',
+                    cfg?.midtrans
+                      ? 'border border-ember/50 bg-ember/10 text-cream hover:bg-ember/20'
+                      : 'cursor-not-allowed border border-white/10 text-cream/30',
+                  )}
+                >
+                  {busy === 'midtrans' ? <Loader2 className="size-3 animate-spin" /> : <QrCode className="size-3" />} Midtrans
+                </button>
+                <button
+                  type="button"
+                  disabled={!cfg?.stripe}
+                  onClick={() => onPay('stripe', depositAmount, `Deposit 50% — ${sel.name}`)}
+                  className={cx(
+                    'flex h-9 items-center gap-1.5 rounded-full px-4 font-mono text-[10px] uppercase tracking-wider transition',
+                    cfg?.stripe
+                      ? 'border border-spotlight/50 bg-spotlight/10 text-cream hover:bg-spotlight/20'
+                      : 'cursor-not-allowed border border-white/10 text-cream/30',
+                  )}
+                >
+                  {busy === 'stripe' ? <Loader2 className="size-3 animate-spin" /> : <CreditCard className="size-3" />} Stripe
+                </button>
+              </div>
+            </div>
+            {cfg && !cfg.midtrans && !cfg.stripe && (
+              <p className="mt-2.5 font-mono text-[9.5px] leading-relaxed text-cream/35">
+                {cfgError ?? 'Pembayaran deposit aktif setelah kunci Midtrans/Stripe dikonfigurasi di server.'}
+              </p>
+            )}
+          </div>
+
           <p className="mt-3 text-[11px] leading-relaxed text-cream/40">
             Tidak ada biaya di tahap ini — pembayaran baru dikonfirmasi setelah penawaran final
             (Midtrans / transfer bank / Stripe).

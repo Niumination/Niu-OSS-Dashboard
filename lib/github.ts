@@ -203,6 +203,95 @@ function mapEvent(e: RawEvent): Ghevent | null {
   };
 }
 
+/* ------------------------------- rilis ----------------------------------- */
+
+export interface ReleaseItem {
+  repo: string;
+  tagName: string;
+  name: string;
+  url: string;
+  createdAt: string;
+}
+
+const RELEASES_QUERY = `query($owner: String!) {
+  user(login: $owner) {
+    repositories(first: 60, ownerAffiliations: OWNER, isFork: false, orderBy: {field: PUSHED_AT, direction: DESC}) {
+      nodes {
+        name
+        releases(first: 1, orderBy: {field: CREATED_AT, direction: DESC}) {
+          nodes { tagName name createdAt url }
+        }
+      }
+    }
+  }
+}`;
+
+/**
+ * Rilisan terbaru lintas repositori (untuk beranda + RSS).
+ * 1 request GraphQL (butuh GITHUB_TOKEN) — bukan 91 request REST.
+ * Tanpa token / gagal: fallback ke event ReleaseEvent pada snapshot.
+ */
+export async function getRecentReleases(snap: Snapshot): Promise<ReleaseItem[]> {
+  const fromEvents = (): ReleaseItem[] =>
+    snap.events
+      .filter((e) => e.type === 'ReleaseEvent')
+      .map((e) => ({
+        repo: e.repo,
+        tagName: '',
+        name: e.summary,
+        url: `https://github.com/${e.repo}/releases`,
+        createdAt: e.createdAt,
+      }));
+
+  if (isStaticExport) return fromEvents();
+
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) return fromEvents();
+
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), FETCH_TIMEOUT_MS);
+  try {
+    const res = await fetch('https://api.github.com/graphql', {
+      method: 'POST',
+      signal: ctrl.signal,
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+        'User-Agent': 'niumination-dashboard',
+      },
+      body: JSON.stringify({ query: RELEASES_QUERY, variables: { owner: OWNER } }),
+      next: { revalidate: 3600, tags: ['github'] },
+    });
+    if (!res.ok) return fromEvents();
+    const json = (await res.json()) as {
+      data?: {
+        user?: {
+          repositories?: {
+            nodes?: Array<{
+              name: string;
+              releases?: { nodes?: Array<{ tagName: string; name: string; createdAt: string; url: string }> };
+            }>;
+          };
+        };
+      };
+    };
+    const items: ReleaseItem[] = (json.data?.user?.repositories?.nodes ?? []).flatMap((r) =>
+      (r.releases?.nodes ?? []).map((rel) => ({
+        repo: r.name,
+        tagName: rel.tagName,
+        name: rel.name || rel.tagName,
+        url: rel.url,
+        createdAt: rel.createdAt,
+      })),
+    );
+    return items.sort((a, b) => +new Date(b.createdAt) - +new Date(a.createdAt)).slice(0, 8);
+  } catch {
+    return fromEvents();
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 /* ----------------------------- public API -------------------------------- */
 
 export interface SnapshotResult {

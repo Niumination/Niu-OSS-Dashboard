@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  ci:
+    name: Uji & build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Pasang dependensi
+        run: npm ci
+
+      - name: Unit test (vitest)
+        run: npm test
+
+      - name: Typecheck (tsc)
+        run: npm run typecheck
+
+      - name: Build produksi
+        run: npm run build
+        env:
+          SITE_URL: https://niumination.github.io

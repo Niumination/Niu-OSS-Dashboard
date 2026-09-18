@@ -24,7 +24,8 @@ export function computeSummary(snap: Snapshot): Summary {
   const DAY = 86_400_000;
 
   const langMap = new Map<string, number>();
-  const catCounts: Record<string, number> = {};
+  // Konsisten dengan countByCategory(): sertakan 'all' = total repositori.
+  const catCounts: Record<string, number> = { all: repos.length };
   let stars = 0;
   let forks = 0;
   let originals = 0;

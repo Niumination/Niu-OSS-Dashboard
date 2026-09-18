@@ -285,6 +285,29 @@ Situs diaudit dan di-hardening sebelum deploy:
   (`/repositories?q=…`), canonical URL per halaman, `apple-icon`.
 - **Konten** — marquee tech stack agregat di beranda; 404 dengan quick-links.
 
+### Fase 1 — pembayaran sungguhan, feed & GitOps (2026-09)
+
+- **Pembayaran server-side**: `POST /api/pay/midtrans` (Snap API v1, kunci
+  `MIDTRANS_SERVER_KEY` tidak pernah terekspos) → `snap.pay(token)`;
+  `POST /api/pay/stripe` (Checkout Session, IDR zero-decimal) → redirect.
+  Webhook Midtrans di `/api/pay/midtrans/webhook` dengan verifikasi tanda
+  tangan SHA-512. Tab *Sewa Jasa* kini punya **bayar deposit 50%**.
+  `/api/pay/config` memberi tahu UI metode mana yang aktif (boolean saja).
+- **`.github/FUNDING.yml`** — tombol Sponsor GitHub + Buy Me a Coffee
+  otomatis tampil di semua repo.
+- **Feed rilis** — seksi "Rilisan Terbaru" di beranda via **satu request
+  GraphQL** (`GITHUB_TOKEN` dibutuhkan; fallback ke event ReleaseEvent).
+- **RSS `/feed.xml`** — RSS 2.0 dari snapshot (aktif juga di static export),
+  didaftarkan di metadata `alternates.types`.
+- **Pencarian fuzzy Fuse.js** — salah ketik tetap menemukan ("pemdi" ≈
+  "PemdiAcehTengah"), skor + limit 60 hasil, defer agar tetap 60fps.
+- **CI + test + cron data**: GitHub Actions `ci.yml` (vitest → tsc → build),
+  `refresh-data.yml` regenerasi snapshot mingguan otomatis (mode `--fresh`
+  pada `gen-mock`, pola GitOps ala Upptime), `Dockerfile` multi-stage,
+  28 unit test vitest (`tests/`).
+- Perbaikan dari test: `computeSummary().categoryCounts` kini konsisten
+  menyertakan `all` (sama seperti `countByCategory`).
+
 ### Lokalisasi & polesan (2026-09)
 
 - **Bahasa Indonesia sebagai default** di seluruh UI, metadata, JSON-LD, dan

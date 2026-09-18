@@ -11,7 +11,11 @@
     "build": "next build",
     "start": "next start",
     "gen:mock": "node scripts/gen-mock.mjs",
-    "export:static": "node scripts/export-static.mjs"
+    "gen:mock:fresh": "node scripts/gen-mock.mjs --fresh",
+    "export:static": "node scripts/export-static.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@react-three/drei": "^10.0.6",
@@ -20,6 +24,7 @@
     "cmdk": "^1.1.1",
     "dompurify": "^3.4.15",
     "framer-motion": "^12.12.1",
+    "fuse.js": "^7.5.0",
     "lucide-react": "^0.518.0",
     "marked": "^18.0.13",
     "next": "15.3.3",
@@ -36,6 +41,7 @@
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vitest": "^4.1.11"
   }
 }

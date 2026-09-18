@@ -58,7 +58,12 @@ export const metadata: Metadata = {
     title: 'Niumination — OSS Dashboard',
     description: SITE.description,
   },
-  alternates: { canonical: '/' },
+  alternates: {
+    canonical: '/',
+    types: {
+      'application/rss+xml': '/feed.xml',
+    },
+  },
 };
 
 export const viewport: Viewport = {

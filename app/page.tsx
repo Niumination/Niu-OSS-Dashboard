@@ -8,6 +8,7 @@ import {
   MessagesSquare,
   Rocket,
   Stethoscope,
+  Tag,
   Wrench,
 } from 'lucide-react';
 import AppShell from '@/components/AppShell';
@@ -15,7 +16,7 @@ import Hero3D from '@/components/Hero3D';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import RepoCard from '@/components/RepoCard';
 import SectionHead from '@/components/SectionHead';
-import { getGithubSnapshot } from '@/lib/github';
+import { getGithubSnapshot, getRecentReleases } from '@/lib/github';
 import { computeSummary } from '@/lib/summary';
 import { SERVICE_PACKAGES, SITE } from '@/lib/site.config';
 import type { RepoLite } from '@/lib/types';
@@ -32,6 +33,7 @@ const PKG_ICON = {
 export default async function Home() {
   const snap = await getGithubSnapshot();
   const s = computeSummary(snap);
+  const releases = await getRecentReleases(snap);
 
   // Tech stack agregat untuk marquee: top bahasa + top topik.
   const langCount = new Map<string, number>();
@@ -119,6 +121,44 @@ export default async function Home() {
             ))}
           </div>
         </section>
+
+        {/* Rilisan terbaru (GraphQL, aktif saat GITHUB_TOKEN dipasang) */}
+        {releases.length > 0 && (
+          <section className="mt-14">
+            <SectionHead
+              icon={Tag}
+              micro="rilisan // feed github"
+              title="Rilisan Terbaru"
+              sub="Tag & release terbaru lintas repositori — digabung dalam satu permintaan GraphQL."
+              action={{ href: '/repositories', label: 'Semua repositori' }}
+            />
+            <div className="mt-6 grid gap-3 lg:grid-cols-2">
+              {releases.map((rel) => (
+                <a
+                  key={rel.url}
+                  href={rel.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group flex items-center gap-3 rounded-2xl border border-white/[0.07] bg-white/[0.02] px-4 py-3.5 transition-colors hover:border-spotlight/30"
+                >
+                  <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-spotlight/10 text-spotlight">
+                    <Tag className="size-4" />
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <div className="truncate text-[13.5px] text-cream/85">
+                      <span className="font-mono text-cream/50">{rel.repo}</span>{' '}
+                      <span className="text-ember-soft">{rel.tagName || 'release'}</span>
+                    </div>
+                    <div className="truncate font-mono text-[10px] text-cream/40">{rel.name}</div>
+                  </div>
+                  <span className="shrink-0 font-mono text-[10px] text-cream/35">
+                    {timeAgo(rel.createdAt)}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Services teaser + support panel */}
         <section className="mt-14">

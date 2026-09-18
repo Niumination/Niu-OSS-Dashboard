@@ -5,13 +5,18 @@
  * saat script dijalankan, sehingga saat API rate-limit halaman tetap menampilkan
  * data yang akurat (hanya tanggalnya yang membeku).
  *
- * Jalankan:  npm run gen:mock
+ * Jalankan:  npm run gen:mock          (pakai data/*.json lokal jika ada)
+ *            npm run gen:mock:fresh    (--fresh: paksa fetch API + perbarui data/*.json)
  * Sumber:    data/*.json lokal (jika ada), jika tidak fetch langsung ke API.
+ *
+ * --fresh dipakai oleh workflow GitHub Actions mingguan agar snapshot
+ * cadangan tidak pernah basi (pola GitOps ala Upptime).
  */
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 const OWNER = process.env.GITHUB_OWNER ?? 'Niumination';
+const FRESH = process.argv.includes('--fresh');
 
 function readLocal(name) {
   const p = join(process.cwd(), 'data', name);
@@ -31,9 +36,9 @@ async function gh(url) {
   return res.json();
 }
 
-const localUser = readLocal('user.json');
-const localRepos = readLocal('repos.json');
-const localEvents = readLocal('events.json');
+const localUser = FRESH ? null : readLocal('user.json');
+const localRepos = FRESH ? null : readLocal('repos.json');
+const localEvents = FRESH ? null : readLocal('events.json');
 
 let user = localUser;
 let repos = localRepos;
@@ -55,6 +60,15 @@ if (!user || !repos) {
   }
 }
 events = events ?? [];
+
+// Mode --fresh: simpan ulang data/*.json agar snapshot lokal ikut segar.
+if (FRESH) {
+  mkdirSync(join(process.cwd(), 'data'), { recursive: true });
+  writeFileSync(join(process.cwd(), 'data', 'user.json'), JSON.stringify(user, null, 2));
+  writeFileSync(join(process.cwd(), 'data', 'repos.json'), JSON.stringify(repos, null, 2));
+  writeFileSync(join(process.cwd(), 'data', 'events.json'), JSON.stringify(events, null, 2));
+  console.log('✔ data/*.json diperbarui dari API');
+}
 
 function eventSummary(type, payload) {
   if (type === 'PushEvent') return `${payload?.size?.total ?? 0} commits`;

@@ -2,6 +2,7 @@
 
 import { useDeferredValue, useEffect, useMemo, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
+import Fuse from 'fuse.js';
 import { AlertTriangle, SearchX } from 'lucide-react';
 import RepoCard from './RepoCard';
 import { CATEGORIES, categorize, countByCategory } from '@/lib/categories';
@@ -47,15 +48,34 @@ export default function RepoGrid({ repos, offline = false, offlineDate }: Props)
 
   const counts = useMemo(() => countByCategory(repos), [repos]);
 
+  // Indeks fuzzy (Fuse.js): salah ketik tetap menemukan ("pemdi" ~ "PemdiAcehTengah").
+  const fuse = useMemo(
+    () =>
+      new Fuse(repos, {
+        keys: [
+          { name: 'name', weight: 0.55 },
+          { name: 'description', weight: 0.3 },
+          { name: 'topics', weight: 0.1 },
+          { name: 'language', weight: 0.05 },
+        ],
+        threshold: 0.35,
+        ignoreLocation: true,
+        minMatchCharLength: 2,
+      }),
+    [repos],
+  );
+
   const filtered = useMemo(() => {
-    const needle = dq.trim().toLowerCase();
-    const list = repos.filter((r) => {
+    const needle = dq.trim();
+    // Hasil pencarian dulu (fuzzy, terurut skor) — lalu saring kategori/fork.
+    const base = needle
+      ? fuse.search(needle, { limit: 60 }).map((r) => r.item)
+      : repos;
+    const list = base.filter((r) => {
       if (forkF === 'original' && r.fork) return false;
       if (forkF === 'fork' && !r.fork) return false;
       if (cat !== 'all' && categorize(r) !== cat) return false;
-      if (!needle) return true;
-      const hay = `${r.name} ${r.description ?? ''} ${(r.topics ?? []).join(' ')} ${r.language ?? ''}`.toLowerCase();
-      return hay.includes(needle);
+      return true;
     });
     list.sort((a, b) => {
       if (sort === 'stars') return b.stars - a.stars || +new Date(b.pushedAt) - +new Date(a.pushedAt);
@@ -63,7 +83,7 @@ export default function RepoGrid({ repos, offline = false, offlineDate }: Props)
       return +new Date(b.pushedAt) - +new Date(a.pushedAt);
     });
     return list;
-  }, [repos, dq, cat, sort, forkF]);
+  }, [repos, dq, cat, sort, forkF, fuse]);
 
   return (
     <div>
