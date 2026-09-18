@@ -1,9 +1,10 @@
 {
- "generatedAt": "2026-09-18T16:57:54.564Z",
+ "generatedAt": "2026-09-18T19:23:14.931Z",
  "repo": {
   "name": "Smart-ASN-Gayo-Mengaji",
   "fullName": "Niumination/Smart-ASN-Gayo-Mengaji",
   "description": "Gayo-Mengaji",
+  "descriptionEn": "Gayo-Mengaji — Quran memorization community app for the Gayo highlands",
   "url": "https://github.com/Niumination/Smart-ASN-Gayo-Mengaji",
   "homepage": null,
   "language": "TypeScript",

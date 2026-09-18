@@ -1,9 +1,10 @@
 {
- "generatedAt": "2026-09-18T16:57:54.564Z",
+ "generatedAt": "2026-09-18T19:23:14.931Z",
  "repo": {
   "name": "NiuHomePage",
   "fullName": "Niumination/NiuHomePage",
   "description": "I wanted a home page, so I made one.",
+  "descriptionEn": null,
   "url": "https://github.com/Niumination/NiuHomePage",
   "homepage": "https://niumination.github.io/NiuHomePage/",
   "language": "CSS",

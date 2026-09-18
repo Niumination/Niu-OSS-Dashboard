@@ -1,9 +1,10 @@
 {
- "generatedAt": "2026-09-18T16:57:54.564Z",
+ "generatedAt": "2026-09-18T19:23:14.931Z",
  "repo": {
   "name": "agsv1-hyprpanel",
   "fullName": "Niumination/agsv1-hyprpanel",
   "description": "for use agsv1",
+  "descriptionEn": null,
   "url": "https://github.com/Niumination/agsv1-hyprpanel",
   "homepage": null,
   "language": "TypeScript",

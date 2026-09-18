@@ -9,6 +9,7 @@ import { getContributions } from '@/lib/insights';
 import InsightsPanel from '@/components/InsightsPanel';
 import { UPTIME_DATA } from '@/lib/uptime-data';
 import { formatDate, timeAgo } from '@/lib/utils';
+import T from '@/components/T';
 
 // Nilai statis (persyaratan parser config Next). Pada static export semua
 // halaman memang dirender statis, jadi revalidate tidak berdampak apa pun.
@@ -33,14 +34,13 @@ export default async function SystemPage() {
           <div>
             <div className="micro flex items-center gap-2 text-cream/45">
               <span className="size-1.5 rounded-full bg-ember" />
-              04 // sistem & metrik
+              <T k="sys.micro" />
             </div>
             <h1 className="mt-3 font-display text-[40px] leading-[1.0] tracking-tight md:text-[54px]">
-              Sistem & Metrik
+              <T k="sys.title" />
             </h1>
             <p className="mt-3 max-w-2xl text-[13.5px] leading-relaxed text-cream/60">
-              Kesehatan ekosistem: statistik agregat, peta commit, bahasa dominan, dan status
-              deployment yang sedang tayang.
+              <T k="sys.desc" />
             </p>
           </div>
           <div
@@ -52,9 +52,14 @@ export default async function SystemPage() {
             title={snap.source}
           >
             <Radio className={`size-3.5 ${snap.live ? 'animate-breathe' : ''}`} />
-            {snap.live
-              ? `langsung · api github · ${timeAgo(snap.updatedAt)}`
-              : `cadangan snapshot · ${formatDate(snap.updatedAt)}${snap.rateLimited ? ' · batas laju tercapai' : ''}`}
+            {snap.live ? (
+              <T k="sys.live" vars={{ ago: timeAgo(snap.updatedAt) }} />
+            ) : (
+              <>
+                <T k="sys.snap" vars={{ date: formatDate(snap.updatedAt) }} />
+                {snap.rateLimited && <T k="sys.snapLimited" />}
+              </>
+            )}
           </div>
         </header>
 
@@ -67,10 +72,10 @@ export default async function SystemPage() {
             <div>
               <div className="micro flex items-center gap-2 text-cream/45">
                 <span className="size-1.5 rounded-full bg-ember" />
-                insight // kontribusi
+                <T k="sys.insight.micro" />
               </div>
               <h2 className="mt-2 font-display text-[30px] tracking-tight md:text-[38px]">
-                Pola Kontribusi
+                <T k="sys.insight.title" />
               </h2>
             </div>
           </div>
@@ -83,7 +88,7 @@ export default async function SystemPage() {
 
         <div className="mt-6 flex items-center gap-2 font-mono text-[9.5px] uppercase tracking-[0.18em] text-cream/30">
           <Activity className="size-3 text-ember" />
-          heatmap & aktivitas dihitung dari Events API publik (maks 90 hari, 300 event)
+          <T k="sys.foot" />
         </div>
       </div>
     </AppShell>

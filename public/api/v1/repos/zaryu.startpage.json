@@ -1,9 +1,10 @@
 {
- "generatedAt": "2026-09-18T16:57:54.564Z",
+ "generatedAt": "2026-09-18T19:23:14.931Z",
  "repo": {
   "name": "zaryu.startpage",
   "fullName": "Niumination/zaryu.startpage",
   "description": "🐱✨ Aesthetic and clean startpage in Catppuccin style, hosted on GitHub Pages",
+  "descriptionEn": null,
   "url": "https://github.com/Niumination/zaryu.startpage",
   "homepage": "https://niumination.github.io/zaryu.startpage/",
   "language": "JavaScript",

@@ -1,9 +1,10 @@
 {
- "generatedAt": "2026-09-18T16:57:54.564Z",
+ "generatedAt": "2026-09-18T19:23:14.931Z",
  "repo": {
   "name": "niu-dash-fullstack",
   "fullName": "Niumination/niu-dash-fullstack",
   "description": "Next.js 16 Fullstack Dashboard — Prisma, Three.js, TanStack Query, next-auth",
+  "descriptionEn": null,
   "url": "https://github.com/Niumination/niu-dash-fullstack",
   "homepage": null,
   "language": "TypeScript",

@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { dictionaries, translate } from '@/lib/i18n';
 import { CASE_STUDIES, getAdjacent, getStudy, localizedStudy } from '@/lib/case-studies';
+import { localizedDescription, descriptionEn } from '@/lib/repo-i18n';
+import rawRepos from '../data/repos.json';
 
 describe('i18n — kamus', () => {
   const idKeys = Object.keys(dictionaries.id).sort();
@@ -74,5 +76,36 @@ describe('studi kasus — data & lokalizasi', () => {
     const id = localizedStudy(c, 'id');
     expect(id.problem).toBe(c.problem);
     expect(id.metrics).toEqual(c.metrics);
+  });
+});
+
+describe('repo-i18n — overlay deskripsi EN', () => {
+  const repos = rawRepos as Array<{ name: string; description: string | null }>;
+  const byName = new Map(repos.map((r) => [r.name, r]));
+
+  it('setiap entri overlay menunjuk repo yang ada & nilainya tidak kosong', () => {
+    // ambil map EN lewat descriptionEn pada seluruh repo
+    const overlays = repos.filter((r) => descriptionEn(r) !== null);
+    expect(overlays.length).toBeGreaterThanOrEqual(10);
+    for (const r of overlays) {
+      expect(descriptionEn(r)).toBeTruthy();
+    }
+  });
+
+  it('locale id mengembalikan deskripsi sumber; en memakai overlay bila ada', () => {
+    const pemdi = byName.get('PemdiAcehTengah')!;
+    expect(localizedDescription(pemdi, 'id')).toBe(pemdi.description);
+    const en = localizedDescription(pemdi, 'en');
+    expect(en).toBeTruthy();
+    expect(en).not.toBe(pemdi.description);
+    // repo ber-desripsi EN tidak berubah
+    const flame = byName.get('Flame-ADE')!;
+    expect(localizedDescription(flame, 'en')).toBe(flame.description);
+  });
+
+  it('repo tanpa deskripsi tetap null di kedua locale', () => {
+    const bare = repos.find((r) => !r.description)!;
+    expect(localizedDescription(bare, 'id')).toBeNull();
+    expect(localizedDescription(bare, 'en')).toBeNull();
   });
 });

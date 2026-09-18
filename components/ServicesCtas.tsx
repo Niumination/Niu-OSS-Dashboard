@@ -3,10 +3,12 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Heart, Wrench } from 'lucide-react';
 import { useUi } from './ui-context';
+import { useLocale } from './LocaleProvider';
 
 /** CTA di halaman /services — memicu modal pembayaran/booking global. */
 export default function ServicesCtas() {
   const { openPayment } = useUi();
+  const { t } = useLocale();
   return (
     <div className="mt-8 flex flex-wrap gap-3">
       <motion.button
@@ -17,7 +19,7 @@ export default function ServicesCtas() {
         className="group flex h-12 items-center gap-2.5 rounded-full bg-ember px-7 font-mono text-[11px] uppercase tracking-wider text-ink transition hover:bg-ember-soft hover:shadow-glow"
       >
         <Wrench className="size-4" />
-        Mulai Proses
+        {t('svc.cta.start')}
         <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
       </motion.button>
       <motion.button
@@ -28,7 +30,7 @@ export default function ServicesCtas() {
         className="flex h-12 items-center gap-2.5 rounded-full border border-white/15 bg-white/[0.04] px-7 font-mono text-[11px] uppercase tracking-wider text-cream transition hover:border-ember/50"
       >
         <Heart className="size-4 text-ember" />
-        Dukung OSS
+        {t('hero.cta.donate')}
       </motion.button>
     </div>
   );

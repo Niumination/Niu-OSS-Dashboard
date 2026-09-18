@@ -26,6 +26,9 @@ const generatedAt = new Date().toISOString();
 
 const readJson = (p) => JSON.parse(readFileSync(join(root, 'data', p), 'utf8'));
 
+// Overlay terjemahan EN untuk deskripsi berbahasa Indonesia.
+const descEn = readJson('repo-descriptions.en.json');
+
 const rawRepos = readJson('repos.json');
 const events = readJson('events.json');
 const user = readJson('user.json');
@@ -37,6 +40,7 @@ const repo = (r) => ({
   name: r.name,
   fullName: r.full_name,
   description: r.description,
+  descriptionEn: descEn[r.name] ?? null,
   url: r.html_url,
   homepage: r.homepage || null,
   language: r.language || null,
@@ -164,7 +168,8 @@ const index = {
   docs: 'https://github.com/Niumination/niumination#api-publik-v1',
   license: 'CC-BY-4.0 (data), kode MIT',
   endpoints: [
-    { path: `${API_BASE}/user.json`, description: 'Profil GitHub publik' },
+    { path: `${API_BASE}/index.json`, description: 'Dokumen discovery API / API discovery document' },
+    { path: `${API_BASE}/user.json`, description: 'Profil GitHub publik / Public GitHub profile' },
     { path: `${API_BASE}/repos.json`, description: 'Daftar repositori (diurut push terbaru)' },
     { path: `${API_BASE}/repos/{name}.json`, description: 'Detail satu repositori' },
     { path: `${API_BASE}/events.json`, description: '100 event publik terakhir' },

@@ -1,9 +1,10 @@
 {
- "generatedAt": "2026-09-18T16:57:54.564Z",
+ "generatedAt": "2026-09-18T19:23:14.931Z",
  "repo": {
   "name": "VirtualAssistance",
   "fullName": "Niumination/VirtualAssistance",
   "description": null,
+  "descriptionEn": null,
   "url": "https://github.com/Niumination/VirtualAssistance",
   "homepage": "https://virtual-assistance-pi.vercel.app",
   "language": "TypeScript",

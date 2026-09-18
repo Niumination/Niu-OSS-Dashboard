@@ -13,6 +13,7 @@ const NAV = [
   { href: '/system', key: 'footer.nav.system' },
   { href: '/status', key: 'footer.nav.status' },
   { href: '/feed.xml', key: 'footer.nav.rss' },
+  { href: '/developers', key: 'footer.nav.dev' },
 ];
 
 export default function Footer({ snapshot }: { snapshot: Snapshot }) {

@@ -1,9 +1,10 @@
 {
- "generatedAt": "2026-09-18T16:57:54.564Z",
+ "generatedAt": "2026-09-18T19:23:14.931Z",
  "repo": {
   "name": "mata-aihackfest-2026",
   "fullName": "Niumination/mata-aihackfest-2026",
   "description": "MATA — Watchdog Akuntabilitas Pengadaan. AI HackFest 2026 Batch 3 (Productivity & Personal AI).",
+  "descriptionEn": "MATA — Procurement Accountability Watchdog. AI HackFest 2026 Batch 3 (Productivity & Personal AI).",
   "url": "https://github.com/Niumination/mata-aihackfest-2026",
   "homepage": "https://watchdog-mata.niumination.web.id",
   "language": "HTML",

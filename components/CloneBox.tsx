@@ -2,12 +2,14 @@
 
 import { useState } from 'react';
 import { Check, Copy, GitBranch, Link2 } from 'lucide-react';
+import { useLocale } from './LocaleProvider';
 
 /*
  * CloneBox — kotak clone interaktif: salin perintah git clone
  * atau salin tautan repositori (dengan feedback visual).
  */
 export default function CloneBox({ fullName }: { fullName: string }) {
+  const { t } = useLocale();
   const [copied, setCopied] = useState<'clone' | 'link' | null>(null);
 
   const cloneCmd = `git clone https://github.com/${fullName}.git`;
@@ -36,22 +38,22 @@ export default function CloneBox({ fullName }: { fullName: string }) {
         <button type="button" onClick={() => copy('clone', cloneCmd)} className={btnCls}>
           {copied === 'clone' ? (
             <>
-              <Check className="size-3 text-success" /> tersalin
+              <Check className="size-3 text-success" /> {t('cb.copied')}
             </>
           ) : (
             <>
-              <Copy className="size-3" /> salin clone
+              <Copy className="size-3" /> {t('cb.clone')}
             </>
           )}
         </button>
         <button type="button" onClick={() => copy('link', repoUrl)} className={btnCls} title={repoUrl}>
           {copied === 'link' ? (
             <>
-              <Check className="size-3 text-success" /> tersalin
+              <Check className="size-3 text-success" /> {t('cb.copied')}
             </>
           ) : (
             <>
-              <Link2 className="size-3" /> salin tautan
+              <Link2 className="size-3" /> {t('cb.link')}
             </>
           )}
         </button>

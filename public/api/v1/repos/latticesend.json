@@ -1,9 +1,10 @@
 {
- "generatedAt": "2026-09-18T16:57:54.564Z",
+ "generatedAt": "2026-09-18T19:23:14.931Z",
  "repo": {
   "name": "latticesend",
   "fullName": "Niumination/latticesend",
   "description": "P2P file transfer tool — built with Rust/Flutter. Part of Niumination Ecosystem services.",
+  "descriptionEn": null,
   "url": "https://github.com/Niumination/latticesend",
   "homepage": null,
   "language": "HTML",

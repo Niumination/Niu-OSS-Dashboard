@@ -1,9 +1,10 @@
 {
- "generatedAt": "2026-09-18T16:57:54.564Z",
+ "generatedAt": "2026-09-18T19:23:14.931Z",
  "repo": {
   "name": "niu-journal",
   "fullName": "Niumination/niu-journal",
   "description": "Aplikasi Tahap dua - Akademi Gen AI edisi APAC",
+  "descriptionEn": "Phase two app — Gen AI Academy, APAC edition",
   "url": "https://github.com/Niumination/niu-journal",
   "homepage": null,
   "language": "TypeScript",

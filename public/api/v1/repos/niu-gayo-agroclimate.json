@@ -1,9 +1,10 @@
 {
- "generatedAt": "2026-09-18T16:57:54.564Z",
+ "generatedAt": "2026-09-18T19:23:14.931Z",
  "repo": {
   "name": "niu-gayo-agroclimate",
   "fullName": "Niumination/niu-gayo-agroclimate",
   "description": "Sistem Presisi Cuaca Pertanian Kopi Arabika Gayo & Mitigasi Bencana Aceh Tengah (WeatherNext Pipeline)",
+  "descriptionEn": "Precision weather system for Gayo Arabica coffee farming & Central Aceh disaster mitigation (WeatherNext Pipeline)",
   "url": "https://github.com/Niumination/niu-gayo-agroclimate",
   "homepage": null,
   "language": "JavaScript",

@@ -13,6 +13,8 @@ import {
 import { categorize, CATEGORY_MAP } from '@/lib/categories';
 import type { RepoLite } from '@/lib/types';
 import { formatDate, formatNumber, langColor, timeAgo } from '@/lib/utils';
+import { useLocale } from './LocaleProvider';
+import { localizedDescription } from '@/lib/repo-i18n';
 
 interface Props {
   repo: RepoLite;
@@ -28,6 +30,8 @@ interface Props {
  */
 export default function RepoCard({ repo, index = 0, instant = false }: Props) {
   const cat = CATEGORY_MAP[categorize(repo)];
+  const { t, locale } = useLocale();
+  const description = localizedDescription(repo, locale);
 
   return (
     <motion.article
@@ -55,7 +59,7 @@ export default function RepoCard({ repo, index = 0, instant = false }: Props) {
           )}
           {repo.archived && (
             <span className="rounded-full border border-danger/30 px-2 py-0.5 font-mono text-[8.5px] uppercase tracking-wider text-danger">
-              diarsipkan
+              {t('rc.archived')}
             </span>
           )}
           {repo.homepage && !repo.archived && (
@@ -76,7 +80,7 @@ export default function RepoCard({ repo, index = 0, instant = false }: Props) {
       </div>
 
       <p className="mt-2.5 line-clamp-3 flex-1 text-[13px] leading-relaxed text-cream/65">
-        {repo.description ?? '— repositori tanpa deskripsi.'}
+        {description ?? t('rc.nodesc')}
       </p>
 
       {(repo.topics.length > 0 || repo.language) && (
@@ -105,7 +109,7 @@ export default function RepoCard({ repo, index = 0, instant = false }: Props) {
         <span
           suppressHydrationWarning
           className="ml-auto flex items-center gap-1"
-          title={`Push terakhir: ${formatDate(repo.pushedAt)}`}
+          title={t('rc.pushed', { date: formatDate(repo.pushedAt) })}
         >
           <Clock className="size-3" /> {timeAgo(repo.pushedAt)}
         </span>
@@ -119,11 +123,11 @@ export default function RepoCard({ repo, index = 0, instant = false }: Props) {
             rel="noreferrer"
             className="flex h-9 flex-1 items-center justify-center gap-1.5 rounded-full bg-ember font-mono text-[10.5px] uppercase tracking-wider text-ink transition hover:bg-ember-soft hover:shadow-glow"
           >
-            <Play className="size-3" /> Demo Langsung
+            <Play className="size-3" /> {t('rc.demo')}
           </a>
         ) : (
           <span className="flex h-9 flex-1 items-center justify-center rounded-full border border-white/5 font-mono text-[10px] uppercase tracking-wider text-cream/25">
-            demo —
+            {t('rc.demoNone')}
           </span>
         )}
           <a
@@ -132,7 +136,7 @@ export default function RepoCard({ repo, index = 0, instant = false }: Props) {
             rel="noreferrer"
             className="flex h-9 items-center gap-1.5 rounded-full border border-white/15 px-3.5 font-mono text-[10.5px] uppercase tracking-wider text-cream/75 transition hover:border-spotlight/50 hover:text-spotlight"
           >
-            Sumber <ExternalLink className="size-3" />
+            {t('rc.source')} <ExternalLink className="size-3" />
           </a>
       </div>
     </motion.article>

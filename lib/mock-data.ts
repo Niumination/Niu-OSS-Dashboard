@@ -1,4 +1,4 @@
-// AUTO-GENERATED oleh scripts/gen-mock.mjs pada 2026-09-18T16:57:54.522Z
+// AUTO-GENERATED oleh scripts/gen-mock.mjs pada 2026-09-18T19:23:14.888Z
 // Sumber: data/*.json lokal
 // Snapshot nyata akun GitHub — dipakai OTOMATIS saat GitHub API rate-limit
 // atau saat build static export (GitHub Pages). Regenerasi: npm run gen:mock
@@ -2565,6 +2565,6 @@ export const MOCK_SNAPSHOT: Snapshot = {
   ],
   "live": false,
   "rateLimited": false,
-  "updatedAt": "2026-09-18T16:57:54.521Z",
+  "updatedAt": "2026-09-18T19:23:14.887Z",
   "source": "fallback-cache"
 };

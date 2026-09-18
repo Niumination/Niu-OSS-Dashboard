@@ -7,6 +7,8 @@ import { Globe, RefreshCw } from 'lucide-react';
 import type { Deployment, UptimeData } from '@/lib/types';
 import { dayColor, uptimePct } from '@/lib/uptime';
 import { hostOf, timeAgo } from '@/lib/utils';
+import { useLocale } from './LocaleProvider';
+import T from './T';
 
 type Status = 'checking' | 'online' | 'down';
 
@@ -29,6 +31,7 @@ export default function StatusMonitor({
   history?: UptimeData;
 }) {
   const historyByRepo = new Map((history?.sites ?? []).map((s) => [s.repo, s]));
+  const { t } = useLocale();
   const [statuses, setStatuses] = useState<Record<string, Status>>({});
   const [tick, setTick] = useState(0);
   const [lastCheck, setLastCheck] = useState<string | null>(null);
@@ -95,29 +98,29 @@ export default function StatusMonitor({
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="micro flex items-center gap-2 text-cream/50">
           <Globe className="size-3.5 text-ember" />
-          deployment live · status layanan
+          {t('sm.micro')}
           <Link
             href="/status"
             className="ml-1 text-ember/80 underline-offset-4 transition-colors hover:text-ember hover:underline"
           >
-            riwayat 30 hari →
+            {t('sm.history')}
           </Link>
           {lastCheck && (
             <span suppressHydrationWarning className="hidden text-cream/30 sm:inline">
-              · periksa {timeAgo(lastCheck)}
+              {t('sm.checked', { ago: timeAgo(lastCheck) })}
             </span>
           )}
         </div>
         <div className="flex items-center gap-3">
           <span className="font-mono text-[9.5px] uppercase tracking-wider text-cream/40">
-            {checking ? 'mengecek…' : `${online}/${deployments.length} online`}
+            {checking ? t('sm.checking') : t('sm.count', { n: online, m: deployments.length })}
           </span>
           <button
             type="button"
             onClick={() => setTick((t) => t + 1)}
             className="grid size-8 place-items-center rounded-full border border-white/10 bg-white/[0.03] text-cream/60 transition hover:border-ember/40 hover:text-cream"
-            aria-label="Ulangi pemeriksaan status"
-            title="Ulangi pemeriksaan"
+            aria-label={t('sm.retry')}
+            title={t('sm.retry')}
           >
             <RefreshCw className={`size-3.5 ${checking ? 'animate-spin' : ''}`} />
           </button>
@@ -146,7 +149,7 @@ export default function StatusMonitor({
                 <span className="block truncate font-mono text-[9.5px] text-cream/35">
                   {hostOf(d.url)}
                   {historyByRepo.has(d.repo) && (
-                    <> · uptime 30h {uptimePct(historyByRepo.get(d.repo)!, 30).toFixed(1)}%</>
+                    <> · {t('sm.up30', { pct: uptimePct(historyByRepo.get(d.repo)!, 30).toFixed(1) })}</>
                   )}
                 </span>
                 {historyByRepo.get(d.repo) && (
@@ -174,7 +177,7 @@ export default function StatusMonitor({
                       : 'font-mono text-[9px] uppercase tracking-wider text-ember'
                 }
               >
-                {st === 'online' ? 'online' : st === 'down' ? 'offline' : 'cek'}
+                {st === 'online' ? t('sm.st.online') : st === 'down' ? t('sm.st.down') : t('sm.st.check')}
               </span>
             </motion.div>
           );
@@ -182,9 +185,7 @@ export default function StatusMonitor({
       </div>
 
       <p className="mt-4 font-mono text-[9.5px] leading-relaxed text-cream/30">
-        * Status = jangkauan jaringan (periksa opak, no-cors + timeout 6 dtk), perbarui otomatis
-        tiap 5 menit. Respons 403/CORS tetap dihitung “terjangkau”. Untuk status HTTP penuh,
-        hubungkan proksi CORS / layanan uptime.
+        <T k="sm.note" />
       </p>
     </section>
   );

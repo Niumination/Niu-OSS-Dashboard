@@ -1,9 +1,10 @@
 {
- "generatedAt": "2026-09-18T16:57:54.564Z",
+ "generatedAt": "2026-09-18T19:23:14.931Z",
  "repo": {
   "name": "Activate-Office-365-on-Windows-10-11",
   "fullName": "Niumination/Activate-Office-365-on-Windows-10-11",
   "description": "Leverage the cloud when you Download Microsoft 365 (Office 365). Microsoft 365 has the tools you need to seamlessly create, collaborate, and share from all your devices. And with security features such as encrypted email and data loss prevention, you and your team can work safely from anywhere.",
+  "descriptionEn": null,
   "url": "https://github.com/Niumination/Activate-Office-365-on-Windows-10-11",
   "homepage": "https://www.microsoft.com/en-us/microsoft-365/download-office",
   "language": null,

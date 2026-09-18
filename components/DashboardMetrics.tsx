@@ -23,6 +23,7 @@ import { computeSummary } from '@/lib/summary';
 import type { Ghevent, Snapshot } from '@/lib/types';
 import { formatNumber, langColor } from '@/lib/utils';
 import CategoryDonut from './CategoryDonut';
+import { useLocale } from './LocaleProvider';
 
 /** Ikon & warna per jenis event GitHub (feed aktivitas). */
 const EVENT_ICON: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -54,14 +55,15 @@ const EVENT_COLOR: Record<string, string> = {
 
 export default function DashboardMetrics({ snapshot }: { snapshot: Snapshot }) {
   const s = useMemo(() => computeSummary(snapshot), [snapshot]);
+  const { t, locale } = useLocale();
 
   const stats: Array<{ icon: React.ComponentType<{ className?: string }>; label: string; value: number; hint?: string }> = [
-    { icon: FolderGit2, label: 'Repositori publik', value: s.totalRepos, hint: `${s.originalRepos} original` },
-    { icon: Star, label: 'Total stars', value: s.totalStars },
-    { icon: GitBranch, label: 'Total forks', value: s.totalForks },
-    { icon: Users, label: 'Pengikut', value: s.followers },
-    { icon: Timer, label: 'Aktif 90 hari', value: s.activeLast90d, hint: 'repo dengan push' },
-    { icon: MonitorPlay, label: 'Demo langsung', value: s.withLiveDemo, hint: 'punya homepage' },
+    { icon: FolderGit2, label: t('dash.stat.repos'), value: s.totalRepos, hint: t('dash.original', { n: s.originalRepos }) },
+    { icon: Star, label: t('dash.stat.stars'), value: s.totalStars },
+    { icon: GitBranch, label: t('dash.stat.forks'), value: s.totalForks },
+    { icon: Users, label: t('dash.stat.followers'), value: s.followers },
+    { icon: Timer, label: t('dash.stat.active'), value: s.activeLast90d, hint: t('dash.stat.activeHint') },
+    { icon: MonitorPlay, label: t('dash.stat.demo'), value: s.withLiveDemo, hint: t('dash.stat.demoHint') },
   ];
 
   const topRepos = useMemo(
@@ -99,8 +101,8 @@ export default function DashboardMetrics({ snapshot }: { snapshot: Snapshot }) {
         <Panel
           className="lg:col-span-7"
           icon={GitCommitHorizontal}
-          micro="peta commit · 26 minggu"
-          aside={`${s.commitsLast4Weeks} push (4 mgg terakhir)`}
+          micro={t('dash.heatmap')}
+          aside={t('dash.heatmap.aside', { n: s.commitsLast4Weeks })}
         >
           <CommitHeatmap events={snapshot.events} />
         </Panel>
@@ -109,7 +111,7 @@ export default function DashboardMetrics({ snapshot }: { snapshot: Snapshot }) {
         <Panel
           className="lg:col-span-5"
           icon={Languages}
-          micro="bahasa paling sering digunakan"
+          micro={t('dash.langs')}
           aside={s.mostUsedLanguage ?? '—'}
         >
           <LanguageBars counts={s.languageCounts} />
@@ -119,8 +121,8 @@ export default function DashboardMetrics({ snapshot }: { snapshot: Snapshot }) {
         <Panel
           className="lg:col-span-5"
           icon={Activity}
-          micro="aktivitas publik · 30 hari"
-          aside={`${s.eventsLast30d} event`}
+          micro={t('dash.activity')}
+          aside={t('dash.activity.aside', { n: s.eventsLast30d })}
         >
           <ActivityBars events={snapshot.events} />
         </Panel>
@@ -170,7 +172,7 @@ export default function DashboardMetrics({ snapshot }: { snapshot: Snapshot }) {
         </Panel>
 
         {/* Distribusi kategori */}
-        <Panel className="lg:col-span-12" icon={Languages} micro="kategorisasi otomatis · seluruh repositori" aside={`${s.totalRepos} repo`}>
+        <Panel className="lg:col-span-12" icon={Languages} micro={t('dash.cats')} aside={t('dash.cats.aside', { n: s.totalRepos })}>
           <CategoryDonut counts={s.categoryCounts} total={s.totalRepos} />
         </Panel>
       </div>
@@ -210,6 +212,7 @@ function Panel({
 /* --------------------------- Commit heatmap ------------------------------ */
 
 function CommitHeatmap({ events }: { events: Ghevent[] }) {
+  const { t, locale } = useLocale();
   const WEEKS = 26;
 
   const { columns, monthLabels } = useMemo(() => {
@@ -240,12 +243,12 @@ function CommitHeatmap({ events }: { events: Ghevent[] }) {
       m.setDate(start.getDate() + w * 7);
       if (m.getMonth() !== lastMonth) {
         lastMonth = m.getMonth();
-        labels.push({ col: w, label: m.toLocaleDateString('id-ID', { month: 'short' }) });
+        labels.push({ col: w, label: m.toLocaleDateString(locale === 'en' ? 'en-US' : 'id-ID', { month: 'short' }) });
       }
       cols.push(col);
     }
     return { columns: cols, monthLabels: labels };
-  }, [events]);
+  }, [events, locale]);
 
   const levelColor = (count: number, future: boolean) => {
     if (future) return 'rgba(242,236,223,0.02)';
@@ -260,7 +263,7 @@ function CommitHeatmap({ events }: { events: Ghevent[] }) {
     <div>
       <div className="flex gap-2">
         <div className="flex flex-col gap-[3px] pt-[18px]">
-          {['Min', '', 'Sen', '', 'Rab', '', 'Jum', ''].map((d, i) => (
+          {[t('dow.0'), '', t('dow.1'), '', t('dow.3'), '', t('dow.5'), ''].map((d, i) => (
             <span key={i} className="grid h-[11px] font-mono text-[8px] leading-[11px] text-cream/30">
               {d}
             </span>
@@ -274,7 +277,7 @@ function CommitHeatmap({ events }: { events: Ghevent[] }) {
                   {col.map((c) => (
                     <div
                       key={c.key}
-                      title={c.future ? '' : `${c.count} aktivitas · ${c.key}`}
+                      title={c.future ? '' : t('dash.heatmap.cell', { n: c.count, date: c.key })}
                       className="size-[11px] rounded-[3px]"
                       style={{ background: levelColor(c.count, c.future) }}
                     />
@@ -297,11 +300,11 @@ function CommitHeatmap({ events }: { events: Ghevent[] }) {
         </div>
       </div>
       <div className="mt-3 flex items-center justify-end gap-1.5 font-mono text-[8.5px] text-cream/35">
-        sedikit
+        {t('dash.heatmap.less')}
         {[0, 1, 2, 4, 6].map((c) => (
           <span key={c} className="size-[10px] rounded-[3px]" style={{ background: levelColor(c, false) }} />
         ))}
-        banyak
+        {t('dash.heatmap.more')}
       </div>
     </div>
   );
@@ -336,6 +339,7 @@ function LanguageBars({ counts }: { counts: { lang: string; count: number }[] })
 /* ----------------------------- Activity bars ----------------------------- */
 
 function ActivityBars({ events }: { events: Ghevent[] }) {
+  const { t, locale } = useLocale();
   const DAYS = 30;
   const { bars, peak } = useMemo(() => {
     const perDay = new Array<number>(DAYS).fill(0);
@@ -351,14 +355,14 @@ function ActivityBars({ events }: { events: Ghevent[] }) {
     const peakIdx = perDay.indexOf(max);
     const peakDate = new Date(now);
     peakDate.setDate(now.getDate() - (DAYS - 1 - peakIdx));
-    return { bars: perDay, peak: { count: max, label: peakDate.toLocaleDateString('id-ID', { day: 'numeric', month: 'short' }) } };
-  }, [events]);
+    return { bars: perDay, peak: { count: max, label: peakDate.toLocaleDateString(locale === 'en' ? 'en-US' : 'id-ID', { day: 'numeric', month: 'short' }) } };
+  }, [events, locale]);
 
   const max = Math.max(1, ...bars);
 
   return (
     <div>
-      <svg viewBox={`0 0 ${DAYS * 10} 64`} className="w-full" role="img" aria-label="Grafik aktivitas 30 hari">
+      <svg viewBox={`0 0 ${DAYS * 10} 64`} className="w-full" role="img" aria-label={t('dash.activity.aria')}>
         {bars.map((b, i) => {
           const h = Math.max(2, (b / max) * 54);
           return (
@@ -372,17 +376,17 @@ function ActivityBars({ events }: { events: Ghevent[] }) {
               fill={b === 0 ? 'rgba(242,236,223,0.08)' : b === max ? '#e05a1e' : '#f07f45'}
               opacity={b === 0 ? 1 : 0.4 + 0.6 * (b / max)}
             >
-              <title>{`${b} aktivitas`}</title>
+              <title>{t('dash.activity.cell', { n: b })}</title>
             </rect>
           );
         })}
       </svg>
       <div className="mt-2 flex items-center justify-between font-mono text-[9.5px] text-cream/35">
-        <span>30 hari lalu</span>
+        <span>{t('dash.activity.ago')}</span>
         <span>
-          puncak: <span className="text-ember-soft">{peak.count}</span> · {peak.label}
+          {t('dash.activity.peak')} <span className="text-ember-soft">{peak.count}</span> · {peak.label}
         </span>
-        <span>hari ini</span>
+        <span>{t('dash.activity.today')}</span>
       </div>
     </div>
   );

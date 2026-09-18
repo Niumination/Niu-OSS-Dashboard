@@ -1,9 +1,10 @@
 {
- "generatedAt": "2026-09-18T16:57:54.564Z",
+ "generatedAt": "2026-09-18T19:23:14.931Z",
  "repo": {
   "name": "matt-dotfiles",
   "fullName": "Niumination/matt-dotfiles",
   "description": "💄 Yet another Aesthetic Hyprland Config",
+  "descriptionEn": null,
   "url": "https://github.com/Niumination/matt-dotfiles",
   "homepage": "https://dotfiles-docs.vercel.app/",
   "language": null,

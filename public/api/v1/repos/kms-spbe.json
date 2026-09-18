@@ -1,9 +1,10 @@
 {
- "generatedAt": "2026-09-18T16:57:54.564Z",
+ "generatedAt": "2026-09-18T19:23:14.931Z",
  "repo": {
   "name": "kms-spbe",
   "fullName": "Niumination/kms-spbe",
   "description": null,
+  "descriptionEn": null,
   "url": "https://github.com/Niumination/kms-spbe",
   "homepage": "https://kms-spbe.vercel.app",
   "language": "TypeScript",

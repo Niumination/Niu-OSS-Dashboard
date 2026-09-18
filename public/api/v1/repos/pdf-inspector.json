@@ -1,9 +1,10 @@
 {
- "generatedAt": "2026-09-18T16:57:54.564Z",
+ "generatedAt": "2026-09-18T19:23:14.931Z",
  "repo": {
   "name": "pdf-inspector",
   "fullName": "Niumination/pdf-inspector",
   "description": "Inspeksi PDF lokal tanpa LLM (no-agent) — pypdf. Baca isi PDF ke teks/ringkasan untuk agen.",
+  "descriptionEn": "Local PDF inspection without an LLM (no-agent) — pypdf. Extracts PDF contents into text/summaries for agents.",
   "url": "https://github.com/Niumination/pdf-inspector",
   "homepage": null,
   "language": "Python",

@@ -6,6 +6,7 @@ import { Command } from 'cmdk';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
   Activity,
+  Boxes,
   Check,
   Coffee,
   ExternalLink,
@@ -81,6 +82,7 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
     { value: 'nav-system', label: t('cm.nav.system'), icon: Activity, href: '/system' },
     { value: 'nav-status', label: t('cm.nav.status'), icon: Activity, href: '/status' },
     { value: 'nav-studies', label: t('cm.nav.studies'), icon: FolderGit2, href: '/studies' },
+    { value: 'nav-developers', label: t('cm.nav.dev'), icon: Boxes, href: '/developers' },
   ];
 
   const linkItems = [

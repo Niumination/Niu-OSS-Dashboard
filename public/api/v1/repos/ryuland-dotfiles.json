@@ -1,9 +1,10 @@
 {
- "generatedAt": "2026-09-18T16:57:54.564Z",
+ "generatedAt": "2026-09-18T19:23:14.931Z",
  "repo": {
   "name": "ryuland-dotfiles",
   "fullName": "Niumination/ryuland-dotfiles",
   "description": "Rice built for usability",
+  "descriptionEn": null,
   "url": "https://github.com/Niumination/ryuland-dotfiles",
   "homepage": "https://end-4.github.io/dots-hyprland-wiki/en/",
   "language": null,

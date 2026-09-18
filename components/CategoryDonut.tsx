@@ -1,4 +1,5 @@
 import { CATEGORIES } from '@/lib/categories';
+import { useLocale } from './LocaleProvider';
 
 /*
  * CategoryDonut — donat SVG distribusi kategori otomatis (RSC murni, tanpa JS).
@@ -16,6 +17,7 @@ const STROKE = 26;
 const CIRC = 2 * Math.PI * R;
 
 export default function CategoryDonut({ counts, total }: Props) {
+  const { t } = useLocale();
   const items = CATEGORIES.filter((c) => c.id !== 'all')
     .map((c) => ({ ...c, value: counts[c.id] ?? 0 }))
     .filter((c) => c.value > 0)
@@ -36,7 +38,7 @@ export default function CategoryDonut({ counts, total }: Props) {
         height={SIZE}
         viewBox={`0 0 ${SIZE} ${SIZE}`}
         role="img"
-        aria-label="Distribusi kategori repositori"
+        aria-label={t('donut.aria')}
         className="shrink-0"
       >
         <g transform={`rotate(-90 ${SIZE / 2} ${SIZE / 2})`}>

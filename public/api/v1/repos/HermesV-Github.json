@@ -1,9 +1,10 @@
 {
- "generatedAt": "2026-09-18T16:57:54.564Z",
+ "generatedAt": "2026-09-18T19:23:14.931Z",
  "repo": {
   "name": "HermesV-Github",
   "fullName": "Niumination/HermesV-Github",
   "description": "Hermes Agent Portable on Github Codespace",
+  "descriptionEn": null,
   "url": "https://github.com/Niumination/HermesV-Github",
   "homepage": null,
   "language": null,

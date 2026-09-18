@@ -22,6 +22,8 @@ import { getGithubSnapshot, getRepoDetail } from '@/lib/github';
 import { isStaticExport } from '@/lib/env';
 import type { RepoLite } from '@/lib/types';
 import { formatDate, formatNumber, langColor, timeAgo } from '@/lib/utils';
+import T from '@/components/T';
+import RepoDescription from '@/components/RepoDescription';
 
 export const revalidate = 300;
 export const dynamicParams = true;
@@ -88,15 +90,15 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
       <AppShell snapshot={snap}>
         <div className="mx-auto max-w-[1440px] px-4 py-24 text-center md:px-6 lg:px-8">
           <p className="font-mono text-[12px] uppercase tracking-[0.24em] text-ember">404</p>
-          <h1 className="mt-3 font-display text-5xl">Repositori tidak ditemukan</h1>
+          <h1 className="mt-3 font-display text-5xl"><T k="r404.title" /></h1>
           <p className="mt-3 text-sm text-cream/60">
-            “{slug}” tidak ada di snapshot saat ini (mungkin di-rename atau dihapus).
+            <T k="r404.desc" vars={{ slug }} />
           </p>
           <Link
             href="/repositories"
             className="mt-6 inline-flex h-11 items-center rounded-full bg-ember px-6 font-mono text-[11px] uppercase tracking-wider text-ink"
           >
-            Semua Repositori
+            <T k="rep.title" />
           </Link>
         </div>
       </AppShell>
@@ -110,10 +112,10 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
   const stats: Array<{ icon: React.ComponentType<{ className?: string }>; label: string; value: string }> = [
     { icon: Star, label: 'stars', value: formatNumber(repo.stars) },
     { icon: GitFork, label: 'forks', value: formatNumber(repo.forks) },
-    { icon: Eye, label: 'pengamat', value: formatNumber(repo.watchers) },
-    { icon: GitBranch, label: 'isu terbuka', value: formatNumber(repo.openIssues) },
-    { icon: HardDrive, label: 'ukuran', value: formatSize(repo.size) },
-    { icon: Package, label: 'lisensi', value: repo.license ?? '—' },
+    { icon: Eye, label: 'rd.stat.watchers', value: formatNumber(repo.watchers) },
+    { icon: GitBranch, label: 'rd.stat.issues', value: formatNumber(repo.openIssues) },
+    { icon: HardDrive, label: 'rd.stat.size', value: formatSize(repo.size) },
+    { icon: Package, label: 'rd.stat.license', value: repo.license ?? '—' },
   ];
 
   return (
@@ -123,7 +125,7 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
           href="/repositories"
           className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-cream/50 transition-colors hover:text-ember"
         >
-          <ArrowLeft className="size-3.5" /> semua repositori
+          <ArrowLeft className="size-3.5" /> <T k="rd.back" />
         </Link>
 
         <header className="mt-5 flex flex-wrap items-start justify-between gap-6">
@@ -141,7 +143,7 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
               )}
               {repo.archived && (
                 <span className="rounded-full border border-danger/30 px-2.5 py-1 font-mono text-[9px] uppercase tracking-wider text-danger">
-                  diarsipkan
+                  <T k="rc.archived" />
                 </span>
               )}
               {repo.language && (
@@ -152,7 +154,7 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
               )}
             </div>
             <p className="mt-3 text-[14.5px] leading-relaxed text-cream/70">
-              {repo.description ?? '— repositori ini belum punya deskripsi.'}
+              <RepoDescription repo={repo} />
             </p>
             {repo.topics.length > 0 && (
               <div className="mt-4 flex flex-wrap gap-2">
@@ -160,7 +162,7 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
                   <Link
                     key={t}
                     href={`/repositories?q=${encodeURIComponent(t)}`}
-                    title={`Cari repositori bertopik “${t}”`}
+                    title={`topic: ${t}`}
                     className="rounded-full bg-white/[0.05] px-3 py-1 font-mono text-[10px] text-cream/55 transition-colors hover:bg-ember/15 hover:text-cream"
                   >
                     #{t}
@@ -177,7 +179,7 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
                 rel="noreferrer"
                 className="flex h-11 items-center gap-2 rounded-full bg-ember px-6 font-mono text-[11px] uppercase tracking-wider text-ink transition hover:bg-ember-soft hover:shadow-glow"
               >
-                <Play className="size-4" /> Demo Langsung
+                <Play className="size-4" /> <T k="rd.demo" />
               </a>
             )}
             <a
@@ -186,7 +188,7 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
               rel="noreferrer"
               className="flex h-11 items-center gap-2 rounded-full border border-white/15 px-6 font-mono text-[11px] uppercase tracking-wider text-cream/80 transition hover:border-spotlight/50 hover:text-spotlight"
             >
-              <ExternalLink className="size-4" /> Sumber GitHub
+              <ExternalLink className="size-4" /> <T k="rd.source" />
             </a>
           </div>
         </header>
@@ -199,15 +201,17 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
             <div key={st.label} className="rounded-2xl border border-white/[0.08] bg-white/[0.03] px-4 py-3.5">
               <div className="flex items-center gap-2 text-cream/45">
                 <st.icon className="size-3.5 text-ember" />
-                <span className="micro text-[8.5px]">{st.label}</span>
+                <span className="micro text-[8.5px]">
+                  {st.label.startsWith('rd.') ? <T k={st.label} /> : st.label}
+                </span>
               </div>
               <div className="mt-2 truncate font-display text-[20px] tabular-nums text-cream">{st.value}</div>
             </div>
           ))}
         </div>
         <div className="mt-3 flex flex-wrap gap-x-6 gap-y-1 font-mono text-[10px] text-cream/35">
-          <span>dibuat {formatDate(repo.createdAt)}</span>
-          <span>push terakhir {timeAgo(repo.pushedAt)}</span>
+          <span><T k="rd.created" vars={{ date: formatDate(repo.createdAt) }} /></span>
+          <span><T k="rd.pushed" vars={{ ago: timeAgo(repo.pushedAt) }} /></span>
         </div>
 
         {/* README */}
@@ -220,7 +224,7 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
             </span>
             <span className="ml-2 font-mono text-[10.5px] text-cream/50">README.md</span>
             <span className="ml-auto font-mono text-[9.5px] uppercase tracking-wider text-cream/30">
-              {readme ? `${readme.length.toLocaleString('id-ID')} karakter` : 'tidak tersedia'}
+              {readme ? <T k="rd.readme.chars" vars={{ n: readme.length.toLocaleString('id-ID') }} /> : <T k="rd.readme.none" />}
             </span>
           </div>
           {readme ? (
@@ -228,9 +232,7 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
           ) : (
             <div className="grid place-items-center px-6 py-16 text-center">
               <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-cream/40">
-                {isStaticExport
-                  ? 'README tidak ikut pada ekspor statis — buka sumber GitHub.'
-                  : 'README tidak ditemukan di repositori ini.'}
+                {isStaticExport ? <T k="rd.readme.static" /> : <T k="rd.readme.missing" />}
               </p>
             </div>
           )}
@@ -240,7 +242,10 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
         {related.length > 0 && (
           <section className="mt-10">
             <div className="micro text-cream/45">
-              terkait // juga dibuat dalam {repo.language ?? 'stack serupa'}
+              <T
+                k={repo.language ? 'rd.related' : 'rd.related.none'}
+                vars={repo.language ? { lang: repo.language } : undefined}
+              />
             </div>
             <div className="mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
               {related.map((r, i) => (

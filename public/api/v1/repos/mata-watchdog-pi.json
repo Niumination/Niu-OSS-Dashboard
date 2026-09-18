@@ -1,9 +1,10 @@
 {
- "generatedAt": "2026-09-18T16:57:54.564Z",
+ "generatedAt": "2026-09-18T19:23:14.931Z",
  "repo": {
   "name": "mata-watchdog-pi",
   "fullName": "Niumination/mata-watchdog-pi",
   "description": "MATA Watchdog — Pi App Studio dashboard for public procurement transparency in Central Aceh",
+  "descriptionEn": null,
   "url": "https://github.com/Niumination/mata-watchdog-pi",
   "homepage": null,
   "language": "JavaScript",

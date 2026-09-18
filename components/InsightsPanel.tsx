@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { BarChart3, CalendarDays, Flame, Info } from 'lucide-react';
 import type { Contributions } from '@/lib/insights';
 import { formatNumber } from '@/lib/utils';
+import { useLocale } from './LocaleProvider';
 
 /*
  * InsightsPanel — kontribusi ala OSS Insight:
@@ -11,9 +12,10 @@ import { formatNumber } from '@/lib/utils';
  * dan repo paling aktif. Data: lib/insights.ts (GraphQL / fallback events).
  */
 
-const DOW = ['Min', 'Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab'];
 
 export default function InsightsPanel({ data }: { data: Contributions }) {
+  const { t } = useLocale();
+  const DOW = [t('dow.0'), t('dow.1'), t('dow.2'), t('dow.3'), t('dow.4'), t('dow.5'), t('dow.6')];
   const maxMonth = Math.max(1, ...data.months.map((m) => m.count));
   const maxDow = Math.max(1, ...data.byDayOfWeek);
   const maxRepo = Math.max(1, ...data.topRepos.map((r) => r.count));
@@ -26,11 +28,11 @@ export default function InsightsPanel({ data }: { data: Contributions }) {
         <div className="flex flex-wrap items-center justify-between gap-2">
           <div className="micro flex items-center gap-2 text-cream/50">
             <BarChart3 className="size-3.5 text-ember" />
-            kontribusi · 12 bulan
+            {t('ip.micro')}
           </div>
           <span className="font-mono text-[9.5px] uppercase tracking-wider text-cream/35">
-            {formatNumber(data.total)} total
-            {data.source === 'graphql' ? ' · setahun penuh' : ' · ±90 hari (events)'}
+            {t('ip.total', { n: formatNumber(data.total) })}
+            {data.source === 'graphql' ? t('ip.year') : t('ip.partial')}
           </span>
         </div>
 
@@ -41,7 +43,7 @@ export default function InsightsPanel({ data }: { data: Contributions }) {
                 initial={{ height: 0 }}
                 animate={{ height: `${Math.max(2, (m.count / maxMonth) * 100)}%` }}
                 transition={{ delay: 0.1 + i * 0.04, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                title={`${m.label}: ${m.count} kontribusi`}
+                title={t('ip.cell', { label: m.label, n: m.count })}
                 className="w-full rounded-t-md"
                 style={{
                   background:
@@ -62,7 +64,7 @@ export default function InsightsPanel({ data }: { data: Contributions }) {
         <section className="rounded-3xl border border-white/[0.08] bg-white/[0.02] p-5">
           <div className="micro flex items-center gap-2 text-cream/50">
             <CalendarDays className="size-3.5 text-ember" />
-            ritme mingguan
+            {t('ip.dow')}
           </div>
           <div className="mt-4 flex h-24 items-end gap-2">
             {data.byDayOfWeek.map((n, i) => (
@@ -83,7 +85,7 @@ export default function InsightsPanel({ data }: { data: Contributions }) {
             ))}
           </div>
           <p className="mt-3 font-mono text-[9.5px] text-cream/35">
-            hari tersibuk: <span className="text-spotlight">{DOW[bestDow]}</span>
+            {t('ip.busy')} <span className="text-spotlight">{DOW[bestDow]}</span>
           </p>
         </section>
 
@@ -91,7 +93,7 @@ export default function InsightsPanel({ data }: { data: Contributions }) {
         <section className="rounded-3xl border border-white/[0.08] bg-white/[0.02] p-5">
           <div className="micro flex items-center gap-2 text-cream/50">
             <Flame className="size-3.5 text-ember" />
-            repo paling aktif
+            {t('ip.top')}
           </div>
           <ul className="mt-4 space-y-2.5">
             {data.topRepos.map((r) => (
@@ -119,8 +121,7 @@ export default function InsightsPanel({ data }: { data: Contributions }) {
       {data.source === 'events' && (
         <p className="flex items-start gap-2 rounded-2xl border border-white/[0.07] bg-white/[0.02] px-4 py-3 font-mono text-[9.5px] leading-relaxed text-cream/35 lg:col-span-12">
           <Info className="mt-0.5 size-3.5 shrink-0 text-warn/70" />
-          Insight dihitung dari Events API publik (±90 hari terakhir). Pasang GITHUB_TOKEN untuk
-          kalender kontribusi penuh 12 bulan via GraphQL.
+          {t('ip.note')}
         </p>
       )}
     </div>

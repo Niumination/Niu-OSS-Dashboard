@@ -1,0 +1,15 @@
+{
+  "_comment": "Overlay terjemahan EN untuk deskripsi repositori yang berbahasa Indonesia. Key = nama repo. Repo dengan deskripsi yang sudah EN tidak perlu entri (pass-through). Dipakai lib/repo-i18n.ts & scripts/gen-api.mjs (field descriptionEn).",
+  "PemdiAcehTengah": "Digital Government Portal for Central Aceh Regency — not the official portal",
+  "mata-aihackfest-2026": "MATA — Procurement Accountability Watchdog. AI HackFest 2026 Batch 3 (Productivity & Personal AI).",
+  "ai-file-organizer-android": "AI File Organizer for Android — tidies SD Card / internal storage files using Google Gemini AI. Kotlin, Jetpack Compose, SAF Scoped Storage.",
+  "niu-gayo-agroclimate": "Precision weather system for Gayo Arabica coffee farming & Central Aceh disaster mitigation (WeatherNext Pipeline)",
+  "Niu-LKH": "Daily Activity Report — Afrizal Munthe",
+  "niu-journal": "Phase two app — Gen AI Academy, APAC edition",
+  "niu-journal-reflection-assistant": "Early prototype app of the Gen AI Academy program, APAC Edition — Cohort 3",
+  "pabrik-aplikasi-gas": "App Factory — IT Asset Inventory (GAS pilot project)",
+  "pdf-inspector": "Local PDF inspection without an LLM (no-agent) — pypdf. Extracts PDF contents into text/summaries for agents.",
+  "didong-code": "Didong-Code — an Agentic Development Environment with the soul of Gayo-Aceh tradition. Electron + React + TypeScript AI coding agent desktop.",
+  "AI-First-OS": "Arch Linux ISO builder — AI First OS. An operating system with Hermes Agent as a first-class citizen.",
+  "Smart-ASN-Gayo-Mengaji": "Gayo-Mengaji — Quran memorization community app for the Gayo highlands"
+}

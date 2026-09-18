@@ -12,6 +12,7 @@ import ServicesCtas from '@/components/ServicesCtas';
 import { getGithubSnapshot } from '@/lib/github';
 import { SERVICE_PACKAGES, SITE } from '@/lib/site.config';
 import { formatIDR } from '@/lib/utils';
+import T from '@/components/T';
 
 export const revalidate = 300;
 
@@ -29,26 +30,10 @@ const PKG_ICON = {
 } as const;
 
 const PROCESS = [
-  {
-    step: '01',
-    title: 'Brief & Diskusi',
-    desc: 'Isi form (atau chat WA) — ceritakan tujuan, fitur, timeline, dan teknologi yang sudah ada.',
-  },
-  {
-    step: '02',
-    title: 'Proposal & Quote',
-    desc: 'Dapat rincian scope, harga final, dan estimasi waktu dalam 1–24 jam kerja.',
-  },
-  {
-    step: '03',
-    title: 'Build & Review',
-    desc: 'Pembangunan bertahap dengan checkpoint review. Kode di-review bersama, commit terlihat.',
-  },
-  {
-    step: '04',
-    title: 'Deploy & Support',
-    desc: 'Go-live di Vercel (atau infrastruktur Anda) + masa support pasca-launch.',
-  },
+  { step: '01', tKey: '1t', dKey: '1d' },
+  { step: '02', tKey: '2t', dKey: '2d' },
+  { step: '03', tKey: '3t', dKey: '3d' },
+  { step: '04', tKey: '4t', dKey: '4d' },
 ];
 
 export default async function ServicesPage() {
@@ -60,14 +45,13 @@ export default async function ServicesPage() {
         <header className="max-w-2xl">
           <div className="micro flex items-center gap-2 text-cream/45">
             <span className="size-1.5 rounded-full bg-ember" />
-            03 // jasa & komisi
+            <T k="svc.micro" />
           </div>
           <h1 className="mt-3 font-display text-[40px] leading-[1.0] tracking-tight md:text-[54px]">
-            Sewa Jasa & Konsultasi
+            <T k="svc.title" />
           </h1>
           <p className="mt-3 text-[13.5px] leading-relaxed text-cream/60">
-            Tiga paket jelas, tanpa jargon. Mulai dari sesi konsultasi 60 menit sampai aplikasi web
-            full-stack — semuanya dikerjakan oleh satu orang yang juga menjaga 90+ repositori publik.
+            <T k="svc.desc" />
           </p>
         </header>
 
@@ -86,7 +70,7 @@ export default async function ServicesPage() {
               >
                 {p.highlight && (
                   <span className="absolute -top-3 left-6 rounded-full bg-ember px-3 py-1 font-mono text-[9px] uppercase tracking-wider text-ink">
-                    terpopuler
+                    <T k="svc.popular" />
                   </span>
                 )}
                 <span
@@ -96,17 +80,17 @@ export default async function ServicesPage() {
                 >
                   <Icon className="size-5" />
                 </span>
-                <h2 className="mt-5 text-[17px] font-semibold text-cream">{p.name}</h2>
-                <p className="mt-2 text-[12.5px] leading-relaxed text-cream/55">{p.blurb}</p>
+                <h2 className="mt-5 text-[17px] font-semibold text-cream"><T k={`pkg.${p.id}.name`} /></h2>
+                <p className="mt-2 text-[12.5px] leading-relaxed text-cream/55"><T k={`pkg.${p.id}.blurb`} /></p>
                 <div className="mt-4 font-display text-[28px] tabular-nums text-cream">
                   {formatIDR(p.price)}
-                  <span className="ml-2 font-mono text-[10px] tracking-wider text-cream/45">{p.unit}</span>
+                  <span className="ml-2 font-mono text-[10px] tracking-wider text-cream/45"><T k={`pkg.${p.id}.unit`} /></span>
                 </div>
                 <ul className="mt-5 flex-1 space-y-2.5">
-                  {p.features.map((f) => (
+                  {p.features.map((f, fi) => (
                     <li key={f} className="flex items-start gap-2.5 text-[12.5px] leading-snug text-cream/70">
                       <Check className="mt-0.5 size-3.5 shrink-0 text-ember" />
-                      {f}
+                      <T k={`svc.f.${p.id}.${fi + 1}`} />
                     </li>
                   ))}
                 </ul>
@@ -120,9 +104,9 @@ export default async function ServicesPage() {
 
         {/* Proses kerja */}
         <section className="mt-16">
-          <div className="micro text-cream/45">proses // alur kerja</div>
+          <div className="micro text-cream/45"><T k="svc.proc.micro" /></div>
           <h2 className="mt-2 font-display text-[30px] tracking-tight md:text-[38px]">
-            Empat langkah, jelas.
+            <T k="svc.proc.title" />
           </h2>
           <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {PROCESS.map((p, i) => (
@@ -131,8 +115,8 @@ export default async function ServicesPage() {
                 className="relative rounded-3xl border border-white/[0.08] bg-white/[0.025] p-5"
               >
                 <div className="font-mono text-[11px] text-ember">{p.step}</div>
-                <h3 className="mt-2 text-[14.5px] font-semibold text-cream">{p.title}</h3>
-                <p className="mt-2 text-[12px] leading-relaxed text-cream/55">{p.desc}</p>
+                <h3 className="mt-2 text-[14.5px] font-semibold text-cream"><T k={`svc.proc.${p.tKey}`} /></h3>
+                <p className="mt-2 text-[12px] leading-relaxed text-cream/55"><T k={`svc.proc.${p.dKey}`} /></p>
                 {i < PROCESS.length - 1 && (
                   <span className="absolute top-1/2 -right-[7px] hidden h-px w-3 bg-gradient-to-r from-ember/50 to-transparent lg:block" />
                 )}
@@ -143,35 +127,35 @@ export default async function ServicesPage() {
 
         {/* Metode pembayaran */}
         <section className="mt-16">
-          <div className="micro text-cream/45">pembayaran // metode</div>
+          <div className="micro text-cream/45"><T k="svc.pay.micro" /></div>
           <h2 className="mt-2 font-display text-[30px] tracking-tight md:text-[38px]">
-            Bayar dengan cara yang paling mudah.
+            <T k="svc.pay.title" />
           </h2>
           <div className="mt-6 grid gap-3 sm:grid-cols-3">
             <div className="rounded-3xl border border-white/[0.08] bg-white/[0.025] p-5">
               <QrCode className="size-5 text-ember" />
-              <h3 className="mt-3 text-[14px] font-semibold text-cream">Midtrans SNAP</h3>
+              <h3 className="mt-3 text-[14px] font-semibold text-cream"><T k="svc.pay.m1.t" /></h3>
               <p className="mt-1.5 text-[12px] leading-relaxed text-cream/55">
-                QRIS, GoPay, OVO, ShopeePay, DANA, VA bank. Aktif otomatis saat{' '}
+                <T k="svc.pay.m1a" />{' '}
                 <code className="font-mono text-[10.5px] text-ember-soft">MIDTRANS_CLIENT_KEY</code>{' '}
-                terkonfigurasi.
+                <T k="svc.pay.m1b" />
               </p>
             </div>
             <div className="rounded-3xl border border-white/[0.08] bg-white/[0.025] p-5">
               <CreditCard className="size-5 text-ember" />
-              <h3 className="mt-3 text-[14px] font-semibold text-cream">Stripe (internasional)</h3>
+              <h3 className="mt-3 text-[14px] font-semibold text-cream"><T k="svc.pay.m2.t" /></h3>
               <p className="mt-1.5 text-[12px] leading-relaxed text-cream/55">
-                Hosted payment link untuk klien luar negeri (USD). Aktif saat{' '}
+                <T k="svc.pay.m2a" />{' '}
                 <code className="font-mono text-[10.5px] text-ember-soft">STRIPE_PAYMENT_LINK</code>{' '}
-                terisi.
+                <T k="svc.pay.m2b" />
               </p>
             </div>
             <div className="rounded-3xl border border-white/[0.08] bg-white/[0.025] p-5">
               <MessagesSquare className="size-5 text-ember" />
-              <h3 className="mt-3 text-[14px] font-semibold text-cream">Transfer & Sponsor</h3>
+              <h3 className="mt-3 text-[14px] font-semibold text-cream"><T k="svc.pay.m3.t" /></h3>
               <p className="mt-1.5 text-[12px] leading-relaxed text-cream/55">
-                Transfer bank manual setelah penawaran final. Untuk donasi: GitHub Sponsors / Buy Me
-                a Coffee — <a href={SITE.buyMeACoffee} className="text-ember-soft hover:underline" target="_blank" rel="noreferrer">buka</a>.
+                <T k="svc.pay.m3a" />{' '}
+                <a href={SITE.buyMeACoffee} className="text-ember-soft hover:underline" target="_blank" rel="noreferrer"><T k="svc.pay.open" /></a>.
               </p>
             </div>
           </div>

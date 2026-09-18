@@ -4,6 +4,7 @@ import RepoGrid from '@/components/RepoGrid';
 import { getGithubSnapshot } from '@/lib/github';
 import { computeSummary } from '@/lib/summary';
 import { formatNumber } from '@/lib/utils';
+import T from '@/components/T';
 
 export const revalidate = 300;
 
@@ -24,15 +25,20 @@ export default async function RepositoriesPage() {
         <header>
           <div className="micro flex items-center gap-2 text-cream/45">
             <span className="size-1.5 rounded-full bg-ember" />
-            02 // aggregator dinamis
+            <T k="rep.micro" />
           </div>
           <h1 className="mt-3 font-display text-[40px] leading-[1.0] tracking-tight md:text-[54px]">
-            Semua Repositori
+            <T k="rep.title" />
           </h1>
           <p className="mt-3 max-w-2xl text-[13.5px] leading-relaxed text-cream/60">
-            {formatNumber(s.totalRepos)} repositori publik ({s.originalRepos} original,{' '}
-            {s.totalRepos - s.originalRepos} forks), dikategorikan otomatis dari language, topik &
-            nama. Pencarian berjalan real-time tanpa server round-trip.
+            <T
+              k="rep.desc"
+              vars={{
+                total: formatNumber(s.totalRepos),
+                original: s.originalRepos,
+                forks: s.totalRepos - s.originalRepos,
+              }}
+            />
           </p>
         </header>
 

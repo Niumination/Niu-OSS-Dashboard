@@ -1,9 +1,10 @@
 {
- "generatedAt": "2026-09-18T16:57:54.564Z",
+ "generatedAt": "2026-09-18T19:23:14.931Z",
  "repo": {
   "name": "Hyde-cli",
   "fullName": "Niumination/Hyde-cli",
   "description": "A HyDE CLI, wrapper, tweaks , workarounds, and more!",
+  "descriptionEn": null,
   "url": "https://github.com/Niumination/Hyde-cli",
   "homepage": "https://github.com/prasanthrangan/hyprdots",
   "language": null,

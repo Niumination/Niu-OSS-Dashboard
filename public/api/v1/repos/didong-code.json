@@ -1,9 +1,10 @@
 {
- "generatedAt": "2026-09-18T16:57:54.564Z",
+ "generatedAt": "2026-09-18T19:23:14.931Z",
  "repo": {
   "name": "didong-code",
   "fullName": "Niumination/didong-code",
   "description": "Didong-Code — Agentic Development Environment dengan jiwa tradisi Gayo Aceh. Electron + React + TypeScript AI coding agent desktop.",
+  "descriptionEn": "Didong-Code — an Agentic Development Environment with the soul of Gayo-Aceh tradition. Electron + React + TypeScript AI coding agent desktop.",
   "url": "https://github.com/Niumination/didong-code",
   "homepage": "https://github.com/Niumination/didong-code",
   "language": "TypeScript",

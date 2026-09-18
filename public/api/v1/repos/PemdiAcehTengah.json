@@ -1,9 +1,10 @@
 {
- "generatedAt": "2026-09-18T16:57:54.564Z",
+ "generatedAt": "2026-09-18T19:23:14.931Z",
  "repo": {
   "name": "PemdiAcehTengah",
   "fullName": "Niumination/PemdiAcehTengah",
   "description": "Portal Pemerintah Digital Kabupaten Aceh Tengah - Bukan Portal Resmi",
+  "descriptionEn": "Digital Government Portal for Central Aceh Regency — not the official portal",
   "url": "https://github.com/Niumination/PemdiAcehTengah",
   "homepage": "https://pemdi-aceh-tengah.vercel.app",
   "language": "JavaScript",
