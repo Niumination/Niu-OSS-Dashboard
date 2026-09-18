@@ -75,7 +75,7 @@ export default function RepoCard({ repo, index = 0, instant = false }: Props) {
       </div>
 
       <div className="micro mt-2.5 text-[8.5px]" style={{ color: cat.color }}>
-        {cat.label}
+        {t(`cat.${cat.id}.label`)}
         {repo.language ? ` · ${repo.language}` : ''}
       </div>
 

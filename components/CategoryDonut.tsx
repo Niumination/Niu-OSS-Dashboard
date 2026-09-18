@@ -65,7 +65,7 @@ export default function CategoryDonut({ counts, total }: Props) {
               strokeLinecap="butt"
               opacity={0.85}
             >
-              <title>{`${s.label}: ${s.value} (${Math.round(s.frac * 100)}%)`}</title>
+              <title>{`${t(`cat.${s.id}.label`)}: ${s.value} (${Math.round(s.frac * 100)}%)`}</title>
             </circle>
           ))}
         </g>
@@ -93,7 +93,7 @@ export default function CategoryDonut({ counts, total }: Props) {
         {segments.map((s) => (
           <li key={s.id} className="flex items-center gap-2.5">
             <span className="size-2.5 shrink-0 rounded-sm" style={{ background: s.color }} />
-            <span className="min-w-0 flex-1 truncate text-[12px] text-cream/70">{s.label}</span>
+            <span className="min-w-0 flex-1 truncate text-[12px] text-cream/70">{t(`cat.${s.id}.label`)}</span>
             <span className="font-mono text-[11px] tabular-nums text-cream/45">
               {s.value}
               <span className="ml-1 text-cream/25">{Math.round(s.frac * 100)}%</span>

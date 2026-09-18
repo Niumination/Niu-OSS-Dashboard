@@ -28,12 +28,12 @@ const mono = JetBrains_Mono({
   display: 'swap',
 });
 
-const base = process.env.SITE_URL ?? 'https://niumination.github.io';
+const base = process.env.SITE_URL ?? 'https://niumination.web.id';
 
 export const metadata: Metadata = {
   metadataBase: new URL(base),
   title: {
-    default: 'Niumination — OSS Dashboard',
+    default: 'Niumination — Dasbor OSS',
     template: '%s — Niumination',
   },
   description: SITE.description,
@@ -54,12 +54,12 @@ export const metadata: Metadata = {
     locale: 'id_ID',
     url: base,
     siteName: 'Niumination',
-    title: 'Niumination — OSS Dashboard',
+    title: 'Niumination — Dasbor OSS',
     description: SITE.description,
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Niumination — OSS Dashboard',
+    title: 'Niumination — Dasbor OSS',
     description: SITE.description,
   },
   alternates: {

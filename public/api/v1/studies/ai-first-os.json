@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-18T19:34:42.982Z",
+ "generatedAt": "2026-09-18T19:57:59.177Z",
  "study": {
   "slug": "ai-first-os",
   "title": "AI First OS",
@@ -19,7 +19,7 @@
     "value": "Arch"
    },
    {
-    "label": "agent",
+    "label": "agen",
     "value": "Hermes"
    },
    {

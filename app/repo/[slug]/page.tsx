@@ -48,7 +48,7 @@ export async function generateMetadata({
   if (!repo) {
     return { title: 'Repositori tidak ditemukan' };
   }
-  const base = process.env.SITE_URL ?? 'https://niumination.github.io';
+  const base = process.env.SITE_URL ?? 'https://niumination.web.id';
   return {
     title: repo.name,
     description: repo.description ?? `Repositori ${repo.fullName} oleh Niumination.`,
@@ -256,7 +256,7 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
         )}
         {/* QR share */}
         <QrCard
-          url={`${process.env.SITE_URL ?? 'https://niumination.github.io'}/repo/${repo.name}`}
+          url={`${process.env.SITE_URL ?? 'https://niumination.web.id'}/repo/${repo.name}`}
           filename={`qr-repo-${repo.name}.svg`}
         />
 

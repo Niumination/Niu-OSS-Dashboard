@@ -7,6 +7,8 @@ Landing page + dashboard interaktif untuk <a href="https://github.com/niuminatio
 
 Bahasa: **ID** (default) / **EN** — toggle di navbar · PWA-ready · API publik v1
 
+Produksi: **[niumination.web.id](https://niumination.web.id)** — Vercel + domain idwebhost
+
 </div>
 
 ---
@@ -29,6 +31,7 @@ Bahasa: **ID** (default) / **EN** — toggle di navbar · PWA-ready · API publi
 14. [Deployment](#-deployment)
 15. [Audit & hardening](#-audit--hardening)
 16. [Kontribusi / kustomisasi cepat](#-kontribusi--kustomisasi-cepat)
+17. [Rencana pengembangan](#-rencana-pengembangan)
 
 ---
 
@@ -61,6 +64,7 @@ Setiap fase punya entri [CHANGELOG.md](./CHANGELOG.md) + commit yang bisa diaudi
 | Fase 2 | Status GitOps (/status), pola kontribusi, studi kasus, observabilitas | `3159eed` | ✅ |
 | Fase 3 | i18n id/en, PWA, API publik v1, QR share | `ab0737f` | ✅ |
 | Fase 3.1 | i18n dashboard penuh, /developers, deskripsi repo EN | `48727b1` | ✅ |
+| Fase 3.2 | Persiapan produksi Vercel + domain web.id, ID penuh, ROADMAP | lihat CHANGELOG | ✅ |
 | PPR | Partial Prerendering | — | ⏸ ditunda (target deploy statis; ukur p50/p95 dari `/api/vitals` dulu bila pindah ke Vercel) |
 
 ## ✦ Fitur
@@ -177,7 +181,7 @@ npm run dev                  # http://localhost:3000
 
 | Var | Wajib | Fungsi |
 |-----|:---:|--------|
-| `SITE_URL` | ✓ | URL publik — metadataBase, sitemap, OG image, QR. |
+| `SITE_URL` | ✓ | URL publik — metadataBase, sitemap, OG image, QR. Produksi: `https://niumination.web.id`. |
 | `GITHUB_OWNER` | – | Default `Niumination`. |
 | `GITHUB_TOKEN` | – | Token GitHub; limit 60 → **5000 req/jam**; mengaktifkan feed rilis GraphQL + kalender kontribusi 12 bulan. |
 | `NEXT_PUBLIC_MIDTRANS_CLIENT_KEY` | – | Client key Midtrans SNAP (public) → tombol checkout Midtrans aktif. |
@@ -238,7 +242,7 @@ Seluruh data situs tersedia sebagai JSON read-only — gratis, tanpa kunci, CORS
 - Contoh:
 
 ```bash
-curl https://niumination.github.io/api/v1/summary.json
+curl https://niumination.web.id/api/v1/summary.json
 ```
 
 ## ✦ i18n (id/en)
@@ -298,15 +302,32 @@ npm test           # 41 test, < 2 dtk
 
 ## ✦ Deployment
 
-### A. Vercel (rekomendasi — fitur penuh)
+### A. Vercel (utama — domain niumination.web.id)
 
 1. Push repo ke `niumination/niumination`.
 2. [vercel.com/new](https://vercel.com/new) → import repo. Framework: **Next.js**.
-3. Environment variables: `SITE_URL`, `GITHUB_TOKEN`, kunci Midtrans/Stripe, kontak.
-4. **Deploy.**
+3. Environment variables: `SITE_URL=https://niumination.web.id`, `GITHUB_TOKEN`,
+   kunci Midtrans/Stripe, kontak.
+4. **Deploy** (dapat URL `*.vercel.app`).
+5. **Pasang domain dari idwebhost**:
+   - Vercel → Project → **Settings → Domains → Add** → `niumination.web.id`
+     (tambahkan juga `www.niumination.web.id`).
+   - Vercel menampilkan record DNS yang diminta. Buka **member area idwebhost →
+     Domain → DNS Management**, lalu arahkan:
+     | Tipe | Host | Nilai |
+     |------|------|-------|
+     | `A` | `@` | `76.76.21.21` |
+     | `CNAME` | `www` | `cname.vercel-dns.com` |
+   - Hapus/abaikan record lama yang bertabrakan (parking A record idwebhost).
+   - SSL (Let's Encrypt) diterbitkan Vercel otomatis setelah DNS propagasi
+     (menit–24 jam). Pastikan nameserver domain tetap milik idwebhost
+     (mis. `ns1/ns2.idwebhost...`) — tidak perlu pindah NS ke Vercel.
+6. Verifikasi pasca-live: `https://niumination.web.id/sitemap.xml`, `/robots.txt`,
+   `/feed.xml`, `/status`, OG image, dan `/api/v1/index.json`.
 
 Keuntungan: ISR terkelola (data segar tiap 5 menit), dynamic OG di Node runtime,
-`/api/pay/*` + `/api/v1/*` live, `/api/vitals` aktif.
+`/api/pay/*` + `/api/v1/*` live (route mem-bundle JSON saat build — aman di
+lambda), `/api/vitals` aktif.
 
 ```bash
 npm i -g vercel && vercel && vercel prod   # alternatif CLI
@@ -362,8 +383,9 @@ jobs:
 
 Catatan mode static:
 - Data dibekukan saat build; update = push + redeploy (atau lewat cron uptime/refresh yang men-commit data baru).
-- `SITE_URL` = `https://niumination.github.io`; bila **project pages** (subpath),
-  tambahkan `basePath: '/niumination'` pada varian config di `scripts/export-static.mjs`.
+- `SITE_URL` = URL host statis yang dipakai (mis. `https://niumination.github.io`
+  bila memakai Pages); bila **project pages** (subpath), tambahkan
+  `basePath: '/niumination'` pada varian config di `scripts/export-static.mjs`.
 
 ### C. Self-host (Docker / VPS)
 
@@ -417,4 +439,18 @@ git push -u origin main      # -f hanya jika riwayat lama tidak perlu dijaga
 
 ---
 
-Riwayat lengkap per fase: **[CHANGELOG.md](./CHANGELOG.md)**.
+Riwayat lengkap per fase: **[CHANGELOG.md](./CHANGELOG.md)** · Rencana lanjutan:
+**[docs/ROADMAP.md](./docs/ROADMAP.md)**.
+
+## ✦ Rencana pengembangan
+
+Ringkasan — versi lengkap (tujuan, lingkup, kriteria terima, estimasi, risiko)
+ada di **[docs/ROADMAP.md](./docs/ROADMAP.md)**:
+
+| Fase | Fokus | Estimasi |
+|------|-------|----------|
+| 4 — Go-live | Vercel + domain niumination.web.id, env produksi, baseline vitals | ~1 hari |
+| 5 — Konten & data | Studi kasus MDX, kalender kontribusi live (token), overlay EN lengkap | 1–2 minggu |
+| 6 — Distribusi | Widget embed repo, badge SVG ala shields, QR kartu nama | 2–3 minggu |
+| 7 — Kualitas | E2E Playwright, Sentry penuh, Lighthouse per-PR | paralel |
+| 8 — Monetisasi+ | Produk digital, portal klien, invoice otomatis | setelah trafik |

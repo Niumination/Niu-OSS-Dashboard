@@ -71,9 +71,10 @@ if (FRESH) {
 }
 
 function eventSummary(type, payload) {
-  if (type === 'PushEvent') return `${payload?.size?.total ?? 0} commits`;
+  if (type === 'PushEvent') return `${payload?.size?.total ?? 0} commit`;
   if (type === 'CreateEvent') return `membuat ${payload?.ref_type ?? 'repo'} “${payload?.ref ?? ''}”`;
-  if (type === 'ReleaseEvent') return `release ${payload?.release?.tag_name ?? payload?.release?.name ?? 'baru'}`;
+  if (type === 'ReleaseEvent') return `rilis ${payload?.release?.tag_name ?? payload?.release?.name ?? 'baru'}`;
+  if (type === 'DeleteEvent') return `menghapus ${payload?.ref ?? 'referensi'}`;
   if (type === 'ForkEvent') return 'difork';
   if (type === 'WatchEvent') return 'dipantau (watch)';
   if (type === 'IssuesEvent') return 'aktivitas issue';

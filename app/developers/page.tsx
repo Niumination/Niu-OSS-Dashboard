@@ -119,7 +119,7 @@ export default async function DevelopersPage() {
               <span className="font-mono text-[10.5px] text-cream/50">fetch — summary.json</span>
             </div>
             <pre className="overflow-x-auto px-5 py-4 font-mono text-[11.5px] leading-relaxed text-cream/75">
-{`const res = await fetch('https://niumination.github.io/api/v1/summary.json');
+{`const res = await fetch('https://niumination.web.id/api/v1/summary.json');
 const data = await res.json();
 
 data.totals.repos   // ${String(snap.repos.length)} — jumlah repositori

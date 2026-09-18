@@ -26,7 +26,7 @@ jobs:
       - name: Build statis
         run: npm run export:static
         env:
-          SITE_URL: https://niumination.github.io
+          SITE_URL: https://niumination.web.id
 
       - name: Jalankan Lighthouse CI
         run: npx --yes @lhci/cli@0.14.x autorun

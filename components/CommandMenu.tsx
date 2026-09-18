@@ -183,7 +183,7 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
                         <FolderGit2 className="size-4 shrink-0 text-spotlight" />
                         <span className="min-w-0 flex-1 truncate font-mono text-[12.5px]">{r.name}</span>
                         <span className="micro hidden text-[8px] sm:block" style={{ color: cat.color }}>
-                          {cat.label}
+                          {t(`cat.${cat.id}.label`)}
                         </span>
                         {r.homepage && <ExternalLink className="size-3 shrink-0 text-cream/35" />}
                       </Command.Item>

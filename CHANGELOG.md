@@ -5,6 +5,29 @@ per fase pengerjaan, lengkap dengan commit yang bisa dilacak.
 Format mengikuti [Keep a Changelog](https://keepachangelog.com/id/1.1/);
 proyek ini tidak memakai versioning semver ketat (satu repo, satu situs).
 
+## [Fase 3.2] — persiapan produksi Vercel + domain, ID penuh, roadmap — 2026-09-19
+
+### Diubah
+- **Target produksi: Vercel + domain `niumination.web.id` (idwebhost)** —
+  semua fallback URL beralih dari github.io; README Deployment A kini berisi
+  langkah lengkap pemasangan domain (record A/CNAME idwebhost → Vercel).
+- **Route `/api/v1/[...resource]` Vercel-safe**: file JSON di-import saat
+  build (ter-bundle & ter-trace) — tidak lagi membaca `public/` via `fs`
+  saat runtime (filesystem lambda Vercel tidak memuat public/).
+
+### Diperbaiki (cakupan bahasa ID)
+- Label kategori kini Indonesia: Aplikasi Web, Konfigurasi Sistem, Utilitas,
+  Dokumentasi & Lainnya (kamus `cat.*.label` untuk EN tersedia).
+- Judul metadata default: "Niumination — Dasbor OSS" (sebelumnya "OSS
+  Dashboard").
+- Ringkasan event feed kini ID penuh: "3 commit", "rilis v1", "menghapus
+  gh-pages" (sebelumnya "3 commits", "release v1", "delete").
+- Metrik studi AI-First-OS: "agen" (konsisten dengan isi studi).
+
+### Ditambahkan
+- `docs/ROADMAP.md` — rencana pengembangan fase 4–8 (go-live, konten,
+  distribusi, kualitas, monetisasi) + backlog riset.
+
 ## [Fase 3.1] — i18n penuh, dokumentasi API, deskripsi repo EN — 2026-09-19
 
 Commit: `48727b1`

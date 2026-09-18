@@ -1,4 +1,4 @@
-// AUTO-GENERATED oleh scripts/gen-mock.mjs pada 2026-09-18T19:31:04.808Z
+// AUTO-GENERATED oleh scripts/gen-mock.mjs pada 2026-09-18T19:57:59.114Z
 // Sumber: data/*.json lokal
 // Snapshot nyata akun GitHub — dipakai OTOMATIS saat GitHub API rate-limit
 // atau saat build static export (GitHub Pages). Regenerasi: npm run gen:mock
@@ -1784,7 +1784,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-17T17:02:46Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21409163851",
@@ -1792,7 +1792,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-17T16:31:47Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21406552453",
@@ -1800,7 +1800,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-17T15:53:44Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "15226169156",
@@ -1816,7 +1816,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-16T07:55:58Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21381967072",
@@ -1824,7 +1824,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-16T04:30:49Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21381856723",
@@ -1832,7 +1832,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-16T04:28:43Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21379710257",
@@ -1840,7 +1840,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-17T08:59:52Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21379064387",
@@ -1848,7 +1848,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-17T05:44:59Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21377783995",
@@ -1856,7 +1856,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-17T05:20:33Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21377236649",
@@ -1864,7 +1864,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-17T05:10:02Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "15201149800",
@@ -1880,7 +1880,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-15T18:41:03Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21365553454",
@@ -1888,7 +1888,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-17T05:32:39Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21365496743",
@@ -1896,7 +1896,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-17T05:31:42Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21364417648",
@@ -1904,7 +1904,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-17T05:13:38Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "15190878206",
@@ -1920,7 +1920,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-16T19:23:52Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21348421779",
@@ -1928,7 +1928,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-16T19:11:58Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21346225778",
@@ -1936,7 +1936,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-15T17:27:16Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21333074349",
@@ -1944,7 +1944,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-16T19:12:54Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21331757507",
@@ -1952,7 +1952,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-16T19:18:03Z",
-      "summary": "delete"
+      "summary": "menghapus v0-uji"
     },
     {
       "id": "21325073409",
@@ -1960,7 +1960,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-16T15:43:11Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21324888146",
@@ -1968,7 +1968,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-16T19:11:57Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21324858027",
@@ -1976,7 +1976,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-15T03:43:49Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21324767888",
@@ -1984,7 +1984,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-15T03:42:34Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21323662675",
@@ -1992,7 +1992,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-16T18:56:26Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21313746225",
@@ -2000,7 +2000,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-16T16:46:01Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21312838599",
@@ -2008,7 +2008,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-watchdog-pi",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-watchdog-pi",
       "createdAt": "2026-09-16T16:33:42Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21308556699",
@@ -2016,7 +2016,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-watchdog-pi",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-watchdog-pi",
       "createdAt": "2026-09-16T11:51:52Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21296519370",
@@ -2024,7 +2024,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-16T12:13:47Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21293739803",
@@ -2032,7 +2032,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-15T03:00:20Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21293361885",
@@ -2040,7 +2040,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-16T12:13:29Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21282946120",
@@ -2048,7 +2048,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-16T09:03:24Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21282134811",
@@ -2056,7 +2056,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-16T09:20:44Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21279721880",
@@ -2064,7 +2064,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-16T07:34:20Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21277878151",
@@ -2072,7 +2072,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-16T08:42:00Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21277771928",
@@ -2080,7 +2080,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-16T08:40:30Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21277373652",
@@ -2088,7 +2088,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-16T08:32:17Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21277248619",
@@ -2096,7 +2096,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-16T08:33:05Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21275736699",
@@ -2104,7 +2104,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-16T04:35:49Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21269127553",
@@ -2112,7 +2112,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-16T04:34:00Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21262947308",
@@ -2120,7 +2120,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-14T15:08:13Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21261193222",
@@ -2128,7 +2128,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-16T04:29:06Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21260783822",
@@ -2136,7 +2136,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-16T04:22:15Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21244442449",
@@ -2144,7 +2144,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-15T18:12:28Z",
-      "summary": "delete"
+      "summary": "menghapus gh-pages"
     },
     {
       "id": "21237309561",
@@ -2160,7 +2160,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-15T16:25:49Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21232471867",
@@ -2168,7 +2168,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-14T16:02:13Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21230374122",
@@ -2176,7 +2176,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-15T18:12:38Z",
-      "summary": "delete"
+      "summary": "menghapus gh-pages"
     },
     {
       "id": "21229764542",
@@ -2184,7 +2184,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-15T16:02:32Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21227060656",
@@ -2200,7 +2200,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/PemdiAcehTengah",
       "repoUrl": "https://api.github.com/repos/Niumination/PemdiAcehTengah",
       "createdAt": "2026-09-15T15:26:18Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21223442835",
@@ -2208,7 +2208,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-15T16:46:34Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21222514808",
@@ -2216,7 +2216,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-14T14:25:58Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21221169610",
@@ -2224,7 +2224,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-15T18:58:00Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21218485971",
@@ -2232,7 +2232,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-15T18:19:24Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21218014215",
@@ -2248,7 +2248,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-15T17:54:59Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21210461480",
@@ -2256,7 +2256,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-15T16:24:37Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21206326392",
@@ -2264,7 +2264,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/PemdiAcehTengah",
       "repoUrl": "https://api.github.com/repos/Niumination/PemdiAcehTengah",
       "createdAt": "2026-09-15T15:27:26Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21200037671",
@@ -2272,7 +2272,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-15T14:01:34Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21190797343",
@@ -2280,7 +2280,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-15T10:54:04Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21184208301",
@@ -2288,7 +2288,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-15T10:28:37Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21159257909",
@@ -2296,7 +2296,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-13T18:04:50Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21158895212",
@@ -2304,7 +2304,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/PemdiAcehTengah",
       "repoUrl": "https://api.github.com/repos/Niumination/PemdiAcehTengah",
       "createdAt": "2026-09-15T04:37:40Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21153923776",
@@ -2312,7 +2312,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-15T03:21:51Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21153710260",
@@ -2320,7 +2320,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-15T03:18:31Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21153574024",
@@ -2328,7 +2328,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-15T03:16:24Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21150266015",
@@ -2336,7 +2336,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-13T15:26:32Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21148997312",
@@ -2344,7 +2344,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-15T02:03:14Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21148754122",
@@ -2360,7 +2360,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-13T17:19:55Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21142939203",
@@ -2368,7 +2368,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-13T16:38:57Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21137933308",
@@ -2376,7 +2376,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-13T14:57:34Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21108774631",
@@ -2384,7 +2384,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-14T15:54:03Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21108263702",
@@ -2392,7 +2392,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-14T15:48:19Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21107510612",
@@ -2400,7 +2400,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-13T11:27:21Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21104053797",
@@ -2408,7 +2408,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-14T15:07:41Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21100874642",
@@ -2416,7 +2416,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-14T14:54:32Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21100216178",
@@ -2424,7 +2424,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-14T14:36:23Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21099687665",
@@ -2432,7 +2432,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-14T14:42:26Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21092481926",
@@ -2440,7 +2440,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-12T15:59:30Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21089225273",
@@ -2448,7 +2448,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/Mobile-Harness",
       "repoUrl": "https://api.github.com/repos/Niumination/Mobile-Harness",
       "createdAt": "2026-09-12T15:07:31Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21086921289",
@@ -2456,7 +2456,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-12T19:06:29Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21084350619",
@@ -2464,7 +2464,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-12T13:43:26Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21076838158",
@@ -2472,7 +2472,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-14T10:28:31Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21076044913",
@@ -2480,7 +2480,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-12T15:46:11Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21075379783",
@@ -2488,7 +2488,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/Mobile-Harness",
       "repoUrl": "https://api.github.com/repos/Niumination/Mobile-Harness",
       "createdAt": "2026-09-12T15:34:23Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21072296759",
@@ -2496,7 +2496,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/Mobile-Harness",
       "repoUrl": "https://api.github.com/repos/Niumination/Mobile-Harness",
       "createdAt": "2026-09-12T14:41:51Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21068643381",
@@ -2504,7 +2504,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-12T13:31:26Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21066029490",
@@ -2512,7 +2512,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-12T19:22:39Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21065480082",
@@ -2520,7 +2520,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-12T07:01:23Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21063517179",
@@ -2528,7 +2528,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-14T07:40:57Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21063505873",
@@ -2536,7 +2536,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-14T07:29:41Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21063032890",
@@ -2544,7 +2544,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-14T07:34:42Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21062699791",
@@ -2552,7 +2552,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-14T07:22:01Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     },
     {
       "id": "21062337715",
@@ -2560,11 +2560,11 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repo": "Niumination/mata-aihackfest-2026",
       "repoUrl": "https://api.github.com/repos/Niumination/mata-aihackfest-2026",
       "createdAt": "2026-09-14T07:25:54Z",
-      "summary": "0 commits"
+      "summary": "0 commit"
     }
   ],
   "live": false,
   "rateLimited": false,
-  "updatedAt": "2026-09-18T19:31:04.808Z",
+  "updatedAt": "2026-09-18T19:57:59.114Z",
   "source": "fallback-cache"
 };

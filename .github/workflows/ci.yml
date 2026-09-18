@@ -29,4 +29,4 @@ jobs:
       - name: Build produksi
         run: npm run build
         env:
-          SITE_URL: https://niumination.github.io
+          SITE_URL: https://niumination.web.id

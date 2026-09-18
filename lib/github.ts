@@ -168,7 +168,7 @@ interface RawEvent {
 function eventSummary(type: string, payload: Record<string, unknown> | undefined): string {
   if (type === 'PushEvent') {
     const size = (payload?.size as { total?: number } | undefined)?.total ?? 0;
-    return `${size} commit${size === 1 ? '' : 's'}`;
+    return `${size} commit`;
   }
   if (type === 'CreateEvent') {
     const ref = payload?.ref ?? '';
@@ -177,7 +177,11 @@ function eventSummary(type: string, payload: Record<string, unknown> | undefined
   }
   if (type === 'ReleaseEvent') {
     const name = (payload?.release as { name?: string; tag_name?: string } | undefined);
-    return `release ${name?.tag_name ?? name?.name ?? 'baru'}`;
+    return `rilis ${name?.tag_name ?? name?.name ?? 'baru'}`;
+  }
+  if (type === 'DeleteEvent') {
+    const ref = (payload?.ref as string) ?? '';
+    return `menghapus ${ref || 'referensi'}`;
   }
   if (type === 'ForkEvent') return 'difork';
   if (type === 'WatchEvent') return 'dipantau (watch)';

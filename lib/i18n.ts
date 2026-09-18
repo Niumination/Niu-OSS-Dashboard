@@ -271,6 +271,13 @@ const id: Dict = {
   'rg.sorted': 'urut: {label}',
   'rg.empty': 'Tidak ada repositori yang cocok dengan "{q}".',
   'rg.reset': 'Atur ulang filter',
+  'cat.all.label': 'Semua',
+  'cat.web.label': 'Aplikasi Web',
+  'cat.dotfiles.label': 'Konfigurasi Sistem',
+  'cat.cli.label': 'CLI & Terminal',
+  'cat.mobile.label': 'Mobile',
+  'cat.utility.label': 'Utilitas',
+  'cat.docs.label': 'Dokumentasi & Lainnya',
   'cat.hint.all': 'Semua repositori',
   'cat.hint.web': 'Aplikasi web, dashboard, portal',
   'cat.hint.dotfiles': 'Dotfiles, desktop, sistem',
@@ -370,7 +377,7 @@ const id: Dict = {
   'dev.ep.uptime': 'Uptime deployment per situs (7 & 30 hari).',
   'dev.ep.studies': 'Indeks studi kasus.',
   'dev.ep.study': 'Detail studi kasus (id + en).',
-  'dev.foot': 'Basis URL produksi: https://niumination.github.io — jalur yang sama juga dilayani npm start / Docker.',
+  'dev.foot': 'Basis URL produksi: https://niumination.web.id — jalur yang sama juga dilayani npm start / Docker / GitHub Pages.',
 };
 
 const en: Dict = {
@@ -618,6 +625,13 @@ const en: Dict = {
   'rg.sorted': 'sort: {label}',
   'rg.empty': 'No repositories match "{q}".',
   'rg.reset': 'Reset filters',
+  'cat.all.label': 'All',
+  'cat.web.label': 'Web Apps',
+  'cat.dotfiles.label': 'System Configs',
+  'cat.cli.label': 'CLI & Terminal',
+  'cat.mobile.label': 'Mobile',
+  'cat.utility.label': 'Utilities',
+  'cat.docs.label': 'Docs & Misc',
   'cat.hint.all': 'All repositories',
   'cat.hint.web': 'Web apps, dashboards, portals',
   'cat.hint.dotfiles': 'Dotfiles, desktop, system',
@@ -717,7 +731,7 @@ const en: Dict = {
   'dev.ep.uptime': 'Per-site deployment uptime (7 & 30 days).',
   'dev.ep.studies': 'Case studies index.',
   'dev.ep.study': 'Case study detail (id + en).',
-  'dev.foot': 'Production base URL: https://niumination.github.io — the same paths are served by npm start / Docker.',
+  'dev.foot': 'Production base URL: https://niumination.web.id — the same paths are served by npm start / Docker / GitHub Pages.',
 };
 
 export const dictionaries: Record<Locale, Dict> = { id, en };

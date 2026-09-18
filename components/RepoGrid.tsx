@@ -164,7 +164,7 @@ export default function RepoGrid({ repos, offline = false, offlineDate }: Props)
               )}
             >
               <span className="size-1.5 rounded-full" style={{ background: c.color }} />
-              {c.label}
+              {t(`cat.${c.id}.label`)}
               <span className={active ? 'text-cream/70' : 'text-cream/30'}>{counts[c.id] ?? 0}</span>
             </button>
           );

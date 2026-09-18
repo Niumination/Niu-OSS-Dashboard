@@ -53,7 +53,7 @@ export default async function StudyPage({ params }: { params: Promise<{ slug: st
       }
     : null;
 
-  const base = process.env.SITE_URL ?? 'https://niumination.github.io';
+  const base = process.env.SITE_URL ?? 'https://niumination.web.id';
 
   return (
     <AppShell snapshot={snap}>

@@ -9,12 +9,12 @@ export interface CategoryDef {
 
 export const CATEGORIES: CategoryDef[] = [
   { id: 'all', label: 'Semua', hint: 'Semua repositori', color: '#f2ecdf' },
-  { id: 'web', label: 'Web Apps', hint: 'Aplikasi web, dashboard, portal', color: '#00e5ff' },
-  { id: 'dotfiles', label: 'System Configs', hint: 'Dotfiles, desktop, sistem', color: '#e05a1e' },
+  { id: 'web', label: 'Aplikasi Web', hint: 'Aplikasi web, dashboard, portal', color: '#00e5ff' },
+  { id: 'dotfiles', label: 'Konfigurasi Sistem', hint: 'Dotfiles, desktop, sistem', color: '#e05a1e' },
   { id: 'cli', label: 'CLI & Terminal', hint: 'CLI, TUI, emulator, terminal', color: '#a78bfa' },
   { id: 'mobile', label: 'Mobile', hint: 'Aplikasi Android / mobile', color: '#3ddc97' },
-  { id: 'utility', label: 'Utilities', hint: 'Script, tooling, automation', color: '#f5c518' },
-  { id: 'docs', label: 'Docs & Misc', hint: 'Dokumentasi & lainnya', color: '#8b949e' },
+  { id: 'utility', label: 'Utilitas', hint: 'Script, tooling, automation', color: '#f5c518' },
+  { id: 'docs', label: 'Dokumentasi & Lainnya', hint: 'Dokumentasi & lainnya', color: '#8b949e' },
 ];
 
 export const CATEGORY_MAP: Record<string, CategoryDef> = Object.fromEntries(

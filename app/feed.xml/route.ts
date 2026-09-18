@@ -19,7 +19,7 @@ function esc(s: string): string {
 
 export async function GET() {
   const snap = await getGithubSnapshot();
-  const base = process.env.SITE_URL ?? 'https://niumination.github.io';
+  const base = process.env.SITE_URL ?? 'https://niumination.web.id';
 
   const items = snap.events
     .slice(0, 30)

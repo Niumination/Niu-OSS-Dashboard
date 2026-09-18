@@ -120,7 +120,7 @@
     "stack": ["Shell", "Arch Linux", "AI-First", "Hermes Agent"],
     "metrics": [
       { "label": "basis", "value": "Arch" },
-      { "label": "agent", "value": "Hermes" },
+      { "label": "agen", "value": "Hermes" },
       { "label": "build", "value": "ISO otomatis" }
     ],
     "problem": "Distribusi Linux umum memperlakukan AI sebagai aplikasi tambahan yang dipasang belakangan. Bagaimana jika OS dibangun dari ISO dengan agen AI sebagai \"warga negara kelas satu\" — tersedia sejak boot pertama, bukan setelah setup manual berjam-jam?",
