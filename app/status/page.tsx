@@ -72,10 +72,10 @@ export default async function StatusPage() {
             value={`${ov.uptime30d.toFixed(2)}%`}
             icon={Globe}
           />
-          <StatCard label="situs dipantau" value={String(ov.sites)} icon={Activity} />
+          <StatCard label={<T k="status.card.sites" />} value={String(ov.sites)} icon={Activity} />
           <StatCard
             label={<T k="status.card.interval" />}
-            value={`${UPTIME_DATA.intervalMinutes} ${'mnt'}`}
+            value={<T k="status.interval" vars={{ n: UPTIME_DATA.intervalMinutes }} />}
             icon={Timer}
           />
           <StatCard
@@ -174,7 +174,7 @@ function StatCard({
   icon: Icon,
 }: {
   label: React.ReactNode;
-  value: string;
+  value: React.ReactNode;
   icon: React.ComponentType<{ className?: string }>;
 }) {
   return (

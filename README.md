@@ -3,9 +3,32 @@
 **niumination** — OSS Dashboard
 Landing page + dashboard interaktif untuk <a href="https://github.com/niumination">github.com/niumination</a>
 
-`Next.js 15` · `React 19` · `TypeScript` · `React Three Fiber` · `Tailwind` · `Framer Motion` · `cmdk` · `@vercel/og`
+`Next.js 15` · `React 19` · `TypeScript` · `React Three Fiber` · `Tailwind` · `Framer Motion` · `cmdk` · `@vercel/og` · `qrcode`
+
+Bahasa: **ID** (default) / **EN** — toggle di navbar · PWA-ready · API publik v1
 
 </div>
+
+---
+
+## Daftar isi
+
+1. [Apa ini?](#-apa-ini)
+2. [Status & jejak fase](#-status--jejak-fase)
+3. [Fitur](#-fitur)
+4. [Struktur direktori](#-struktur-direktori)
+5. [Persiapan & jalankan lokal](#-persiapan--jalankan-lokal)
+6. [Environment variables](#-environment-variables)
+7. [Arsitektur data & alur GitOps](#-arsitektur-data--alur-gitops)
+8. [API publik v1](#-api-publik-v1)
+9. [i18n (id/en)](#-i18n-iden)
+10. [PWA](#-pwa)
+11. [Observabilitas](#-observabilitas)
+12. [Pengujian](#-pengujian)
+13. [CI/CD (GitHub Actions)](#-cicd-github-actions)
+14. [Deployment](#-deployment)
+15. [Audit & hardening](#-audit--hardening)
+16. [Kontribusi / kustomisasi cepat](#-kontribusi--kustomisasi-cepat)
 
 ---
 
@@ -17,151 +40,289 @@ Satu situs, dua wajah:
    *frame-rate monitor*: perangkat low-end otomatis jatuh ke visual CSS/Canvas ringan (60 fps).
 2. **Dashboard** — agregator 91 repositori publik (pencarian real-time, kategori otomatis,
    filter, sortir), metrik aktivitas GitHub (heatmap commit, bahasa, grafik 30 hari),
-   monitor status deployment live, command palette `Ctrl+K`, dan sistem monetisasi
+   pola kontribusi ala OSS Insight, monitor status deployment live, halaman status
+   GitOps, studi kasus, command palette `Ctrl+K`, dan sistem monetisasi
    (donasi OSS + booking jasa).
 
 Tema visual mengadaptasi template *ink / cream / ember + spotlight cyan* dengan
 aesthetic dark-mode glassmorphism: tipografi **Instrument Serif** (display), **Inter** (UI),
 **JetBrains Mono** (micro-label & angka).
 
+## ✦ Status & jejak fase
+
+Setiap fase punya entri [CHANGELOG.md](./CHANGELOG.md) + commit yang bisa diaudit.
+
+| Fase | Cakupan | Commit | Status |
+|------|---------|--------|:------:|
+| Rilis awal | Landing + dashboard + SEO/OG (91 halaman) | `c7f6dfd` | ✅ |
+| Audit & hardening | Header keamanan, timeout, a11y | `a1468a5` | ✅ |
+| Lokalisasi & polesan | Bahasa Indonesia penuh, detail repo | `5aa0d6d` | ✅ |
+| Fase 1 | Pembayaran Midtrans/Stripe + webhook, feed & RSS, Fuse.js, CI/test/Docker | `81a91b5` | ✅ |
+| Fase 2 | Status GitOps (/status), pola kontribusi, studi kasus, observabilitas | `3159eed` | ✅ |
+| Fase 3 | i18n id/en, PWA, API publik v1, QR share | `ab0737f` | ✅ |
+| Fase 3.1 | i18n dashboard penuh, /developers, deskripsi repo EN | `48727b1` | ✅ |
+| PPR | Partial Prerendering | — | ⏸ ditunda (target deploy statis; ukur p50/p95 dari `/api/vitals` dulu bila pindah ke Vercel) |
+
 ## ✦ Fitur
 
 | # | Fitur | Detail |
 |---|-------|--------|
-| 1 | **Agregator repositori dinamis** | GitHub REST API via `fetch` + Next ISR (`revalidate: 300`). Pencarian real-time, kategori otomatis (Web Apps, System Configs, CLI, Mobile, Utilities, Docs) berbasis language/topik/nama, badge tech stack, stars/forks, sortir (Terbaru / Stars / Nama), filter fork. |
-| 2 | **Hero 3D performance-aware** | `@react-three/fiber` + `@react-three/drei` (Three.js). Deteksi device saat mount + FPS monitor in-scene (<45 fps 2× pascatan 3 dtk → **auto-degrade** ke SceneLite: CSS glow orbs + jaringan partikel canvas 2D). |
-| 3 | **Command Palette (Ctrl+K / Cmd+K)** | `cmdk`: cari repo, lompat antar seksi, buka tautan sosial, salin email, atau langsung buka modal pembayaran — full keyboard. |
-| 4 | **Master dashboard** | 6 stat cards, commit heatmap 26 minggu, distribusi bahasa, grafik aktivitas 30 hari, top repositori, feed event, **StatusMonitor** deployment live (no-cors reachability check + timeout). |
-| 5 | **Monetisasi** | Modal 2 tab: *Dukung OSS* (Sekali/Bulanan, nominal cepat + custom, GitHub Sponsors, BuyMeACoffee, **Midtrans SNAP** QRIS/VA, **Stripe** hosted link) dan *Sewa Jasa* (Konsultasi Teknis, Audit & Optimasi, Custom Web App → form brief → **mailto + WhatsApp** checkout flow). |
-| 6 | **UI/UX** | Dark-mode glassmorphism, glow accents, Framer Motion micro-animations, skeleton loading, error boundaries (komponen + route), responsif mobile→desktop. |
-| 7 | **SEO & OG image** | Metadata + JSON-LD Person, `sitemap.ts`, `robots.ts`, **Dynamic OG Image** (`@vercel/og`/satori): `app/opengraph-image.tsx` (home, force-static) + `app/api/og/[...slug]` (per repo, ISR 1 jam) + `app/repo/[slug]/opengraph-image.tsx` (file convention, pre-render per slug). |
+| 1 | **Agregator repositori dinamis** | GitHub REST API via `fetch` + Next ISR (`revalidate: 300`). Pencarian fuzzy real-time (Fuse.js), kategori otomatis berbasis language/topik/nama, badge tech stack, stars/forks, sortir, filter fork. |
+| 2 | **Hero 3D performance-aware** | `@react-three/fiber` + `drei`. Deteksi device saat mount + FPS monitor in-scene (<45 fps 2 dtk pasca warm-up → **auto-degrade** ke SceneLite: CSS glow orbs + canvas 2D). |
+| 3 | **Command Palette (Ctrl+K)** | `cmdk`: cari repo, lompat antar seksi, buka tautan sosial, salin email, picu modal pembayaran — full keyboard. |
+| 4 | **Master dashboard** (`/system`) | 6 stat cards, commit heatmap 26 minggu, distribusi bahasa, grafik aktivitas 30 hari, **pola kontribusi 12 bulan** (GraphQL/fallback), donat kategori, feed event, StatusMonitor live. |
+| 5 | **Status publik GitOps** (`/status`) | Riwayat uptime 30 hari ala Upptime — diperiksa tiap 15 menit oleh Actions, di-commit ke repo (auditabel), tanpa server monitoring. |
+| 6 | **Studi kasus** (`/studies`) | 3 proyek unggulan: masalah → pendekatan → hasil + metrik; bilingual (id/en) via `data/studies.json`. |
+| 7 | **Monetisasi** | Modal 2 tab: *Dukung OSS* (Midtrans SNAP QRIS/VA, Stripe, Sponsors, BMAC) dan *Sewa Jasa* (3 paket, deposit 50%, mailto + WhatsApp checkout). Kunci rahasia hanya di server; webhook SHA-512. |
+| 8 | **i18n id/en** | Toggle **ID \| EN** di navbar (localStorage). Kerangka situs, beranda, dashboard internal, status, studi kasus, command palette — semua bilingual. |
+| 9 | **PWA** | Manifest + service worker (network-first navigasi, stale-while-revalidate aset) + halaman `/offline`. |
+| 10 | **API publik v1** | 101 file JSON statis ala GitOps (`public/api/v1/`), CORS terbuka — lihat [/developers](#-api-publik-v1). |
+| 11 | **QR share** | QR SVG di detail repo & studi kasus + unduh SVG (tanpa JS tambahan). |
+| 12 | **SEO & OG image** | Metadata + JSON-LD Person/WebSite, `sitemap.ts`, `robots.ts`, dynamic OG satori (home + per repo). |
 
 ## ✦ Struktur direktori
 
 ```
 niumination/
 ├── app/
-│   ├── layout.tsx                  # Fonts (Instrument Serif/Inter/JetBrains Mono), metadata, JSON-LD
-│   ├── globals.css                 # Tailwind + token ink/cream/ember, dot-grid, glass, cmdk styling
-│   ├── page.tsx                    # TAB 1 — Overview / Landing (hero3D + featured + services + activity)
-│   ├── repositories/page.tsx       # TAB 2 — All Repositories (aggregator)
-│   ├── services/page.tsx           # TAB 3 — Services & Commissions
-│   ├── system/page.tsx             # TAB 4 — System & Metrics (+ StatusMonitor)
-│   ├── repo/[slug]/
-│   │   ├── page.tsx                # Detail repo: stats, topics, README, related, generateStaticParams
-│   │   ├── opengraph-image.tsx     # Dynamic OG image per repo (file convention)
-│   │   └── loading.tsx
+│   ├── layout.tsx                  # Fonts, metadata, JSON-LD, LocaleProvider, SW register, WebVitals
+│   ├── page.tsx                    # Beranda — hero3D + featured + studi kasus + rilisan + jasa + aktivitas
+│   ├── repositories/page.tsx       # Agregator semua repo (RepoGrid)
+│   ├── services/page.tsx           # Jasa & komisi (3 paket + proses + metode bayar)
+│   ├── system/page.tsx             # Sistem & metrik (DashboardMetrics + InsightsPanel + StatusMonitor)
+│   ├── status/page.tsx             # Halaman status publik (GitOps ala Upptime)
+│   ├── studies/                    # Studi kasus — index + [slug] (bilingual)
+│   ├── developers/page.tsx         # Dokumentasi API publik v1
+│   ├── repo/[slug]/                # Detail repo: stats, README, QR, related (+opengraph-image)
+│   ├── offline/page.tsx            # Fallback PWA offline
+│   ├── manifest.ts                 # PWA manifest (force-static)
 │   ├── api/
-│   │   ├── github/user/route.ts    # GET  profil + status live/fallback
-│   │   ├── github/repos/route.ts   # GET  seluruh repo + kategori
-│   │   ├── github/summary/route.ts # GET  metrik agregat
-│   │   └── og/[...slug]/route.ts   # GET  /api/og/home · /api/og/repo/<nama> → PNG (satori)
-│   ├── opengraph-image.tsx         # OG home (force-static)
-│   ├── sitemap.ts · robots.ts
-│   ├── loading.tsx · error.tsx · not-found.tsx · icon.svg
+│   │   ├── github/*                # Proxy GitHub (user/repos/summary)
+│   │   ├── og/[...slug]/           # Dynamic OG image (satori)
+│   │   ├── pay/*                   # Midtrans Snap + Stripe + webhook + config
+│   │   ├── v1/[...resource]/       # Mirror server API publik v1
+│   │   └── vitals/                 # Penerima laporan Core Web Vitals
+│   ├── feed.xml/route.ts           # RSS 2.0
+│   └── sitemap.ts · robots.ts · error.tsx · not-found.tsx · loadings
 ├── components/
-│   ├── AppShell.tsx                # Nav + CommandMenu + PaymentModal + Footer (client shell)
-│   ├── ui-context.ts               # useUi(): openPayment(tab), openCommand()
-│   ├── NavBar.tsx · Footer.tsx · SectionHead.tsx · Skeletons.tsx · ErrorBoundary.tsx
-│   ├── Hero3D.tsx                  # Hero: device check + FPS badge + CTA
-│   ├── hero/Scene3D.tsx            # R3F scene: icosahedron core, 56-node graph, 350 partikel, FPS monitor
-│   ├── hero/SceneLite.tsx          # Fallback ringan: CSS orbs + canvas 2D interaktif
-│   ├── RepoGrid.tsx                # Pencarian real-time + kategori + sortir + filter fork
-│   ├── RepoCard.tsx                # Kartu: deskripsi, badge bahasa, topics, stars, Live Demo, Source
-│   ├── CommandMenu.tsx             # cmdk palette (Ctrl+K)
-│   ├── DashboardMetrics.tsx        # Stats + CommitHeatmap + LanguageBars + ActivityBars
-│   ├── StatusMonitor.tsx           # Health-check deployment live
-│   ├── PaymentModal.tsx            # Donasi OSS + booking jasa (Midtrans/Stripe/Sponsors/BMAC)
-│   └── ServicesCtas.tsx
+│   ├── AppShell.tsx · ui-context.ts          # Shell + useUi()
+│   ├── LocaleProvider.tsx · T.tsx            # i18n context + <T k> (server pattern)
+│   ├── NavBar.tsx (toggle ID|EN) · Footer.tsx · SectionHead.tsx
+│   ├── Hero3D.tsx · hero/Scene3D · hero/SceneLite
+│   ├── RepoGrid.tsx · RepoCard.tsx · RepoDescription.tsx · CloneBox.tsx · Readme.tsx
+│   ├── DashboardMetrics.tsx · StatusMonitor.tsx · InsightsPanel.tsx · CategoryDonut.tsx
+│   ├── studies-ui.tsx             # Teaser + grid + detail studi (sadar-locale)
+│   ├── CommandMenu.tsx · PaymentModal.tsx · ServicesCtas.tsx
+│   ├── QrCard.tsx · WebVitals.tsx · ServiceWorkerRegister.tsx
+│   └── Skeletons · ErrorBoundary
 ├── lib/
-│   ├── github.ts                   # API fetcher: headers/token, ISR revalidate, GithubError, FALLBACK
-│   ├── mock-data.ts                # (generated) snapshot nyata — fallback rate-limit & static export
-│   ├── gen via scripts/gen-mock.mjs
-│   ├── categories.ts               # Klasifikasi otomatis repo → 6 kategori
-│   ├── summary.ts                  # Metrik agregat (computeSummary)
-│   ├── site.config.ts              # ⚙️ SATU-satunya file yang perlu Anda sentuh (link, harga, kontak)
-│   ├── env.ts · types.ts · utils.ts · og-html.tsx
+│   ├── i18n.ts                    # Kamus id/en (SINGLE SOURCE — paritas ditegakkan test)
+│   ├── repo-i18n.ts               # Overlay deskripsi repo EN
+│   ├── case-studies.ts            # Akses data/studies.json (+ localizedStudy)
+│   ├── github.ts · summary.ts · categories.ts · insights.ts
+│   ├── uptime.ts · uptime-data.ts # Helper + data (AUTO-GENERATED — jangan edit manual)
+│   ├── site.config.ts             # ⚙️ Identitas, link, harga, repo unggulan
+│   ├── env.ts · types.ts · utils.ts · mock-data.ts (generated)
+├── data/                           # Snapshot GitOps (di-commit)
+│   ├── repos.json · events.json · user.json     # Snapshot GitHub (mingguan)
+│   ├── uptime.json                              # Riwayat uptime (tiap 15 menit)
+│   ├── studies.json                             # Konten studi kasus (id + en)
+│   └── repo-descriptions.en.json                # Overlay deskripsi EN
+├── public/
+│   ├── api/v1/                    # API publik (AUTO-GENERATED oleh gen-api.mjs)
+│   ├── sw.js · icons/             # Service worker + ikon PWA
 ├── scripts/
-│   ├── gen-mock.mjs                # Regenerasi snapshot fallback (npm run gen:mock)
-│   └── export-static.mjs           # Build static export untuk GitHub Pages (npm run export:static)
-├── tailwind.config.ts · next.config.ts · tsconfig.json · postcss.config.mjs
-├── .env.example
-└── data/                           # (opsional, local-only) repos.json/events.json/user.json
+│   ├── gen-mock.mjs               # Snapshot fallback (--fresh = paksa API)
+│   ├── gen-api.mjs                # API publik v1 → public/api/v1/
+│   ├── gen-icons.mjs              # apple-icon + ikon PWA (PNG manual, tanpa deps)
+│   ├── uptime-check.mjs           # Pemeriksa uptime (dipanggil uptime.yml)
+│   └── export-static.mjs          # Build output:'export' untuk GitHub Pages
+├── tests/                         # 41 unit test (vitest)
+├── .github/workflows/             # ci · refresh-data · uptime · lighthouse
+├── CHANGELOG.md                   # Kronologi per fase + commit
+├── lighthouserc.json · Dockerfile · .env.example
+└── next.config.ts · tailwind.config.ts · tsconfig.json
 ```
 
-## ✦ Persiapan & Jalankan Lokal
+> File bertanda **(generated)** jangan diedit manual — jalankan ulang scriptnya.
+
+## ✦ Persiapan & jalankan lokal
 
 ```bash
 git clone https://github.com/niumination/niumination.git
 cd niumination
 
 npm install
-cp .env.example .env.local   # lalu isi sesuai bagian "Environment"
+cp .env.example .env.local   # isi sesuai kebutuhan (lihat bagian Environment)
 
 npm run dev                  # http://localhost:3000
 ```
+
+| Skrip | Fungsi |
+|-------|--------|
+| `npm run dev` | Dev server |
+| `npm run build` / `npm start` | Build produksi + serve (mode server penuh) |
+| `npm run export:static` | Build statis → `out/` (GitHub Pages) |
+| `npm test` / `test:watch` | Vitest (41 test) |
+| `npm run typecheck` | `tsc --noEmit` |
+| `npm run gen:mock` / `gen:mock:fresh` | Regenerasi snapshot fallback |
+| `npm run gen:api` | Regenerasi API publik v1 |
+| `npm run gen:icons` | Regenerasi semua ikon PNG |
 
 > Tanpa `GITHUB_TOKEN` pun situs berfungsi (limit 60 req/jam per IP).
 > Saat limit habis → **fallback snapshot otomatis** + banner peringatan;
 > halaman tidak pernah blank.
 
-## ✦ Environment Variables
+## ✦ Environment variables
 
 | Var | Wajib | Fungsi |
 |-----|:---:|--------|
-| `SITE_URL` | ✓ | URL publik — dipakai metadataBase, sitemap, OG image. |
+| `SITE_URL` | ✓ | URL publik — metadataBase, sitemap, OG image, QR. |
 | `GITHUB_OWNER` | – | Default `Niumination`. |
-| `GITHUB_TOKEN` | – | Token GitHub (scope apa pun). Naikkan limit 60 → **5000 req/jam**. |
-| `NEXT_PUBLIC_MIDTRANS_CLIENT_KEY` | – | Client key Midtrans SNAP → tombol "Checkout" Midtrans aktif. |
-| `NEXT_PUBLIC_STRIPE_PAYMENT_LINK` | – | Stripe hosted payment link → tombol Stripe aktif. |
-| `CONTACT_EMAIL` | – | Tujuan form booking jasa (default `halo@niumination.dev`). |
-| `WHATSAPP_NUMBER` | – | Nomor WA `62…` untuk tombol Chat WhatsApp. |
+| `GITHUB_TOKEN` | – | Token GitHub; limit 60 → **5000 req/jam**; mengaktifkan feed rilis GraphQL + kalender kontribusi 12 bulan. |
+| `NEXT_PUBLIC_MIDTRANS_CLIENT_KEY` | – | Client key Midtrans SNAP (public) → tombol checkout Midtrans aktif. |
+| `MIDTRANS_SERVER_KEY` | – | **Rahasia** — Snap API + verifikasi webhook SHA-512. |
+| `STRIPE_SECRET_KEY` | – | **Rahasia** — Checkout Session (IDR zero-decimal). |
+| `NEXT_PUBLIC_STRIPE_PAYMENT_LINK` | – | Stripe hosted link (alternatif tanpa server). |
+| `CONTACT_EMAIL` | – | Tujuan form booking jasa. |
+| `WHATSAPP_NUMBER` | – | Nomor WA `62…` untuk tombol chat. |
+| `SENTRY_DSN` | – | Opsional — catatan Sentry untuk error tracking. |
 
 ⚠️ **Sebelum publish:** ganti `email` & `whatsapp` placeholder di `lib/site.config.ts`
 (fallback) dan/atau set `CONTACT_EMAIL` + `WHATSAPP_NUMBER` di environment.
+
+## ✦ Arsitektur data & alur GitOps
+
+```
+                    ┌─ runtime (Vercel / npm start) ─┐
+GitHub API ──fetch──▶ lib/github.ts (ISR 300 dtk)    │
+   │                 │  403/429/error → FALLBACK     │
+   │                 └──▶ halaman + /api/github/*    │
+   │
+   │  ┌─ build time / terjadwal (GitOps) ───────────────────────┐
+   ├──▶ scripts/gen-mock.mjs      → data/*.json + lib/mock-data.ts (mingguan, refresh-data.yml)
+   ├──▶ scripts/uptime-check.mjs  → data/uptime.json + lib/uptime-data.ts (15 mnt, uptime.yml)
+   ├──▶ scripts/gen-api.mjs       → public/api/v1/*.json (101 file; ikut refresh & export)
+   └──▶ scripts/export-static.mjs → out/ (semua halaman + OG + API dibekukan)
+```
+
+- **Fallback = snapshot nyata** (bukan dummy) — situs tetap utuh saat rate-limit.
+- Setiap artefak generated membawa stempel waktu → usia data selalu bisa diaudit.
+- `data/` dan `public/api/v1/` **di-commit** — inilah yang membuat semuanya
+  traceable: `git log data/uptime.json` = riwayat insiden, `git log public/api/v1/`
+  = riwayat data API.
+
+## ✦ API publik v1
+
+> Dokumentasi interaktif: **`/developers`** di situs. Discovery: `/api/v1/index.json`.
+
+Seluruh data situs tersedia sebagai JSON read-only — gratis, tanpa kunci, CORS terbuka
+(`Access-Control-Allow-Origin: *`):
+
+| Endpoint | Isi |
+|----------|-----|
+| `/api/v1/index.json` | Dokumen discovery (daftar endpoint) |
+| `/api/v1/user.json` | Profil GitHub publik |
+| `/api/v1/repos.json` | Semua repo (urut push terbaru) + `descriptionEn` |
+| `/api/v1/repos/{name}.json` | Detail satu repo |
+| `/api/v1/events.json` | 100 event publik terakhir |
+| `/api/v1/summary.json` | Agregat + bahasa/topik teratas |
+| `/api/v1/uptime.json` | Uptime per situs (7 & 30 hari) |
+| `/api/v1/studies.json` · `/studies/{slug}.json` | Studi kasus (id + en) |
+
+- **Statis ala GitOps**: `npm run gen:api` menulis file dari `data/*.json`;
+  diperbarui mingguan (refresh-data), endpoint uptime tiap 15 menit, dan setiap
+  `export:static`.
+- **Server mode**: route `app/api/v1/[...resource]` menyajikan file yang sama
+  (fallback 503 informatif bila belum digenerate).
+- Contoh:
+
+```bash
+curl https://niumination.github.io/api/v1/summary.json
+```
+
+## ✦ i18n (id/en)
+
+- Kamus tunggal: `lib/i18n.ts` — `id` sumber, `en` lengkap.
+  **Paritas kunci ditegakkan otomatis** `tests/i18n.test.ts` (tidak mungkin bolong).
+- Pola pemakaian:
+  - Komponen server → `<T k="nav.home" vars={{ n: 3 }} />`
+  - Komponen client → `const { t, locale, setLocale } = useLocale()`
+- Preferensi bahasa: localStorage `niu-locale`; `<html lang>` ikut berubah.
+  SSR selalu bahasa default (`id`) — aman dari hydration mismatch.
+- Konten bilingual per-data:
+  - Studi kasus: field `en` di `data/studies.json`.
+  - Deskripsi repo: overlay `data/repo-descriptions.en.json`
+    (repo ber-deskripsi Indonesia) → `lib/repo-i18n.ts` + field `descriptionEn` di API.
+- **Cakupan saat ini**: seluruh UI kecuali `PaymentModal` (alur pembayaran lokal:
+  QRIS/VA/denominasi IDR; klien internasional dilayani Stripe link berbahasa Inggris).
+
+## ✦ PWA
+
+- `app/manifest.ts` → `/manifest.webmanifest` (force-static, valid di export).
+- `public/sw.js`: precache shell (`/`, `/offline`, manifest, ikon) — navigasi
+  *network-first* dengan fallback `/offline`, aset *stale-while-revalidate*.
+- Ikon 192/512/maskable digenerate tanpa dependensi: `npm run gen:icons`.
+- Registrasi hanya di production (`ServiceWorkerRegister`).
+- Catatan Pages: situs dilayani dari root → scope `/` valid.
+
+## ✦ Observabilitas
+
+- **Core Web Vitals**: `<WebVitals/>` melaporkan LCP/INP/CLS/TTFB/FCP ke
+  `POST /api/vitals` (log Functions / `npm start` log — contoh nyata terlihat
+  di log server preview).
+- **Lighthouse CI** mingguan: `lighthouse.yml` + `lighthouserc.json`
+  (perf ≥ 0.75, a11y/best-practices/SEO ≥ 0.9, CLS < 0.15).
+- **Sentry** opsional via `SENTRY_DSN`.
+
+## ✦ Pengujian
+
+```bash
+npm test           # 41 test, < 2 dtk
+```
+
+| Berkas | Cakupan |
+|--------|---------|
+| `tests/i18n.test.ts` | Paritas kamus id↔en, interpolasi `{var}`, fallback, overlay studi & deskripsi repo EN |
+| `tests/categories.test.ts` | Kategorisasi otomatis 91 repo |
+| `tests/*.test.ts` (lain) | Pembayaran (order id, webhook sha512, IDR), uptime helpers, feed |
+
+## ✦ CI/CD (GitHub Actions)
+
+| Workflow | Jadwal | Tugas |
+|----------|--------|-------|
+| `ci.yml` | push/PR | vitest → typecheck → build |
+| `refresh-data.yml` | Senin 03:00 UTC | `gen:mock --fresh` + `gen:api` → commit snapshot & API |
+| `uptime.yml` | tiap 15 menit | `uptime-check.mjs` + segarkan API uptime → commit |
+| `lighthouse.yml` | Senin 05:00 UTC | Audit build statis dengan budget di `lighthouserc.json` |
 
 ## ✦ Deployment
 
 ### A. Vercel (rekomendasi — fitur penuh)
 
-1. Push repo ke `niumination/niumination` (lihat bagian *Push* di bawah).
-2. [vercel.com/new](https://vercel.com/new) → import repo `niumination/niumination`.
-   Framework auto-terdeteksi: **Next.js**. Build & output dianggap default.
-3. Isi Environment Variables:
-   - `SITE_URL` = URL final (mis. `https://niumination.vercel.app`)
-   - `GITHUB_TOKEN` (sangat disarankan)
-   - `NEXT_PUBLIC_MIDTRANS_CLIENT_KEY`, `NEXT_PUBLIC_STRIPE_PAYMENT_LINK`, `CONTACT_EMAIL`, `WHATSAPP_NUMBER`
-4. **Deploy.** Selesai.
+1. Push repo ke `niumination/niumination`.
+2. [vercel.com/new](https://vercel.com/new) → import repo. Framework: **Next.js**.
+3. Environment variables: `SITE_URL`, `GITHUB_TOKEN`, kunci Midtrans/Stripe, kontak.
+4. **Deploy.**
 
-Keuntungan Vercel di sini:
-- ISR (`revalidate`) terkelola — data GitHub segar tiap 5 menit tanpa CDN cold-call.
-- `app/api/og/[...slug]` (dynamic OG) berjalan di Node runtime, cache 1 jam.
-- `generateStaticParams` pre-render 91 halaman detail repo saat build.
-
-CLI alternatif:
+Keuntungan: ISR terkelola (data segar tiap 5 menit), dynamic OG di Node runtime,
+`/api/pay/*` + `/api/v1/*` live, `/api/vitals` aktif.
 
 ```bash
-npm i -g vercel
-vercel          # preview
-vercel prod     # produksi
+npm i -g vercel && vercel && vercel prod   # alternatif CLI
 ```
 
 ### B. GitHub Pages (tanpa server)
 
-Static export: semua halaman + OG image dirender **saat build** dari snapshot
-(OG route handler otomatis dinonaktifkan oleh script — memang tidak didukung
-`output: 'export'`).
-
 ```bash
-npm run export:static
+npm run export:static    # hasil di out/
 ```
 
-Script melakukan: regenerasi `lib/mock-data.ts` (fetch API atau `data/*.json` lokal)
-→ tulis `next.config.ts` varian `output:'export'` → pindahkan `app/api` → `next build`
-→ **memulihkan semua file**. Hasil di folder `out/`.
+Script: regenerasi snapshot → `gen:api` → tulis config `output:'export'` →
+pindahkan `app/api` → `next build` → **memulihkan semua file**. Semua halaman +
+OG image + API JSON dibekukan saat build.
 
-Lalu deploy `out/` ke Pages — contoh pakai GitHub Actions (buat file
-`.github/workflows/pages.yml`):
+Contoh workflow deploy (`.github/workflows/pages.yml`):
 
 ```yaml
 name: Deploy to GitHub Pages
@@ -200,45 +361,19 @@ jobs:
 ```
 
 Catatan mode static:
-- Data dibekukan saat build (snapshot fallback). Update = push + redeploy.
-- `SITE_URL` harus `https://niumination.github.io` (atau subpath bila project pages).
-- Bila pakai **project pages** (`/repo-name/`), tambahkan `basePath: '/niumination'`
-  ke varian config di `scripts/export-static.mjs`.
+- Data dibekukan saat build; update = push + redeploy (atau lewat cron uptime/refresh yang men-commit data baru).
+- `SITE_URL` = `https://niumination.github.io`; bila **project pages** (subpath),
+  tambahkan `basePath: '/niumination'` pada varian config di `scripts/export-static.mjs`.
 
 ### C. Self-host (Docker / VPS)
 
 ```bash
-npm run build && npm start
+npm run build && npm start   # atau: docker build -t niumination . && docker run -p 3000:3000 niumination
 ```
 
-Atau Dockerfile minimalis:
-
-```dockerfile
-FROM node:20-alpine AS deps
-WORKDIR /app
-COPY package*.json ./
-RUN npm ci
-
-FROM node:20-alpine AS build
-WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
-COPY . .
-ARG SITE_URL
-ENV SITE_URL=$SITE_URL
-RUN npm run build
-
-FROM node:20-alpine AS run
-WORKDIR /app
-ENV NODE_ENV=production
-COPY --from=build /app ./
-EXPOSE 3000
-CMD ["npm", "start"]
-```
+`Dockerfile` multi-stage sudah tersedia di repo.
 
 ## ✦ Push ke `niumination/niumination`
-
-Repo `Niumination` saat ini berisi profile README. Folder ini **menggantinya** —
-README di atas sengaja dibuat ramah profil (baca sebagai profil GitHub juga).
 
 ```bash
 # di folder niumination/
@@ -250,138 +385,36 @@ git remote add origin https://github.com/niumination/niumination.git
 git push -u origin main      # -f hanya jika riwayat lama tidak perlu dijaga
 ```
 
-## ✦ Strategi caching & fallback (ringkas)
+## ✦ Audit & hardening
 
-```
-Request → [ISR cache 300 dtk] → hit?  ✅ kirim cache
-                              → miss? → GET api.github.com
-                                         │ 200  → simpan cache → kirim
-                                         │ 403/429 (rate-limit) → 🛟 MOCK_SNAPSHOT + banner
-                                         └ error jaringan      → 🛟 MOCK_SNAPSHOT + banner
-```
-
-- `lib/mock-data.ts` = **snapshot nyata** (bukan data dummy) hasil `npm run gen:mock`.
-- Regenerasi berkala (mis. lewat cron/Actions mingguan) agar fallback tetap segar.
-- Tag cache: `['github']` — siap untuk `revalidateTag('github')` bila nanti ada
-  trigger manual (route webhook, dsb.).
-
-## ✦ Audit & hardening (2026-09)
-
-Situs diaudit dan di-hardening sebelum deploy:
-
-- **Keamanan** — `X-Content-Type-Options: nosniff`, `Referrer-Policy`,
-  `Permissions-Policy`, `Cross-Origin-Opener-Policy`, `X-Powered-By` dinonaktifkan.
-  (`X-Frame-Options` sengaja tidak diset agar situs tetap bisa di-embed.)
-- **Robustness API** — timeout 10 dtk per-request ke GitHub (AbortController);
-  hang/network error diperlakukan seperti rate-limit → fallback snapshot.
-  Semua timer `StatusMonitor` dibersihkan saat unmount.
-- **Performa** — pencarian 90+ kartu memakai `useDeferredValue` (input tetap
-  60fps); Scene3D `dpr` dibatasi 1.5; animasi Framer Motion dinonaktifkan saat
-  `prefers-reduced-motion`.
-- **Aksesibilitas** — skip-link, `:focus-visible` global, dialog dengan fokus
-  masuk/keluar yang dikelola, `aria-live` pada hasil pencarian, trigger
-  command palette tersedia di mobile.
-- **SEO** — JSON-LD `Person` + `WebSite` dengan `SearchAction`
-  (`/repositories?q=…`), canonical URL per halaman, `apple-icon`.
-- **Konten** — marquee tech stack agregat di beranda; 404 dengan quick-links.
-
-### Fase 1 — pembayaran sungguhan, feed & GitOps (2026-09)
-
-- **Pembayaran server-side**: `POST /api/pay/midtrans` (Snap API v1, kunci
-  `MIDTRANS_SERVER_KEY` tidak pernah terekspos) → `snap.pay(token)`;
-  `POST /api/pay/stripe` (Checkout Session, IDR zero-decimal) → redirect.
-  Webhook Midtrans di `/api/pay/midtrans/webhook` dengan verifikasi tanda
-  tangan SHA-512. Tab *Sewa Jasa* kini punya **bayar deposit 50%**.
-  `/api/pay/config` memberi tahu UI metode mana yang aktif (boolean saja).
-- **`.github/FUNDING.yml`** — tombol Sponsor GitHub + Buy Me a Coffee
-  otomatis tampil di semua repo.
-- **Feed rilis** — seksi "Rilisan Terbaru" di beranda via **satu request
-  GraphQL** (`GITHUB_TOKEN` dibutuhkan; fallback ke event ReleaseEvent).
-- **RSS `/feed.xml`** — RSS 2.0 dari snapshot (aktif juga di static export),
-  didaftarkan di metadata `alternates.types`.
-- **Pencarian fuzzy Fuse.js** — salah ketik tetap menemukan ("pemdi" ≈
-  "PemdiAcehTengah"), skor + limit 60 hasil, defer agar tetap 60fps.
-- **CI + test + cron data**: GitHub Actions `ci.yml` (vitest → tsc → build),
-  `refresh-data.yml` regenerasi snapshot mingguan otomatis (mode `--fresh`
-  pada `gen-mock`, pola GitOps ala Upptime), `Dockerfile` multi-stage,
-  28 unit test vitest (`tests/`).
-- Perbaikan dari test: `computeSummary().categoryCounts` kini konsisten
-  menyertakan `all` (sama seperti `countByCategory`).
-
-### Lokalisasi & polesan (2026-09)
-
-- **Bahasa Indonesia sebagai default** di seluruh UI, metadata, JSON-LD, dan
-  OpenGraph image (satori).
-- **Detail repo**: README dirender sebagai markdown tersanitasi
-  (`marked` + `DOMPurify`, client-side) — diambil dari
-  `raw.githubusercontent.com` (CDN, tanpa rate limit) dengan fallback
-  nama `README.md/readme.md/Readme.md/README.rst/README`; kotak clone
-  interaktif (salin perintah / salin tautan); topik bisa diklik →
-  pencarian `/repositories?q=topik`; ukuran KB/MB manusiawi.
-- **Dashboard**: donat distribusi kategori otomatis (SVG), feed event
-  ber-ikon per jenis (push/create/release/fork/watch/issue/PR),
-  StatusMonitor menampilkan waktu periksa terakhir + auto-refresh 5 menit.
-
-### Fase 2 — status publik, insight, studi kasus, observabilitas (2026-09)
-
-- **Halaman status GitOps ala Upptime** (`/status`): GitHub Actions
-  (`uptime.yml`, tiap 15 menit) menjalankan `scripts/uptime-check.mjs`
-  yang memeriksa 10 deployment publik teratas, lalu hasilnya di-commit
-  ke `data/uptime.json` + `lib/uptime-data.ts` (regenerasi otomatis,
-  tidak pernah diedit manual). Tanpa server — history 30 hari, uptime %,
-  dan latensi rata-rata per situs bisa diaudit publik lewat git.
-- **Pola kontribusi ala OSS Insight** (`/system`): grafik aktivitas
-  12 bulan, distribusi per hari-dalam-minggu, dan 5 repo teratas.
-  Pakai GraphQL `contributionsCalendar` bila `GITHUB_TOKEN` tersedia;
-  tanpa token otomatis fallback ke data events (±90 hari) dengan
-  catatan sumber yang jujur.
-- **Studi kasus** (`/studies`): 3 proyek unggulan dengan narasi
-  masalah → pendekatan → hasil + metrik (Pemdi Aceh Tengah, Flame Ade,
-  AI-First OS). Konten di-repo (`lib/case-studies.ts`), navigasi
-  prev/next, fakta repo live dari snapshot, tercantum di sitemap.
-- **Observabilitas**: komponen `<WebVitals/>` melaporkan LCP/INP/CLS/
-  TTFB/FCP ke `POST /api/vitals` (log Functions — siap disambungkan ke
-  penyimpanan metrik); **Lighthouse CI** (`lighthouse.yml` +
-  `lighthouserc.json`) mengaudit build statis mingguan dengan budget
-  performa ≥ 0.75, aksesibilitas/best-practices/SEO ≥ 0.9, CLS < 0.15.
-  Sentry opsional via `SENTRY_DSN`.
-
-### Fase 3 — i18n, PWA, API publik, QR share (2026-09)
-
-- **i18n id/en**: kamus tunggal `lib/i18n.ts` (id = sumber, en lengkap),
-  `LocaleProvider` + tombol **ID | EN** di navbar (preferensi tersimpan di
-  localStorage, `<html lang>` ikut berubah). Pola terjemahan: `<T k="...">`
-  untuk komponen server, `useLocale()` untuk komponen client. Cakupan saat
-  ini: seluruh kerangka situs (nav, footer, command palette), beranda,
-  halaman status, 404/error, offline — **plus isi studi kasus** (field `en`
-  di `data/studies.json`). Dashboard internal (/system, /repositories,
-  /services) masih ID — tinggal tambah kunci kamus bila ingin diterjemahkan.
-  Paritas kunci id↔en ditegakkan otomatis oleh `tests/i18n.test.ts`.
-- **PWA**: `app/manifest.ts` (+`force-static`), ikon 192/512/maskable
-  digenerate tanpa dependensi (`npm run gen:icons` → `public/icons/`),
-  service worker `public/sw.js` (precache shell, navigasi network-first,
-  aset stale-while-revalidate, fallback `/offline`), halaman `/offline`
-  bergaya situs. Terpasang otomatis di production.
-- **API publik v1** (`npm run gen:api` → `public/api/v1/`): JSON statis ala
-  GitOps — `index` (discovery), `user`, `repos`, `repos/{name}` (91 repo),
-  `events` (100 terakhir), `summary`, `uptime` (uptime% per situs),
-  `studies`, `studies/{slug}` (id+en). Di GitHub Pages dilayani sebagai file
-  statis (CORS-open); di server mode mirror via
-  `app/api/v1/[...resource]/route.ts` + header CORS di `next.config.ts`.
-  Regenerasi terjadwal: `refresh-data.yml` (mingguan), `uptime.yml`
-  (endpoint uptime, tiap 15 menit), dan setiap `export:static`.
-- **QR share**: `components/QrCard.tsx` — QR SVG (paket `qrcode`) di halaman
-  detail repo dan detail studi kasus, dengan tautan unduh SVG (tanpa JS
-  tambahan).
-- **PPR: sengaja ditunda.** Target deploy utama adalah GitHub Pages (statis)
-  sehingga Partial Prerendering tidak memberi nilai; pola "shell statis +
-  lubang dinamis client-side" sudah dipakai. Revisi bila pindah ke Vercel —
-  ukur p50/p95 dari log `/api/vitals` dulu.
+- **Keamanan** — `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`,
+  `Cross-Origin-Opener-Policy`, `X-Powered-By` dinonaktifkan; kunci rahasia hanya
+  di server (`MIDTRANS_SERVER_KEY`, `STRIPE_SECRET_KEY`); verifikasi webhook SHA-512.
+  (`X-Frame-Options` sengaja tidak diset agar situs bisa di-embed.)
+- **Robustness** — timeout 10 dtk per request GitHub (AbortController); error
+  jaringan = fallback snapshot; semua timer dibersihkan saat unmount; WebVitals
+  & SW register gagal-senyap.
+- **Performa** — `useDeferredValue` pada pencarian; Scene3D `dpr` ≤ 1.5;
+  animasi dinonaktifkan saat `prefers-reduced-motion`; SVG/chart tanpa pustaka chart.
+- **Aksesibilitas** — skip-link bilingual, `:focus-visible`, dialog dengan
+  pengelolaan fokus, `aria-live` hasil pencarian, `aria-pressed` pada filter.
+- **SEO** — JSON-LD Person + WebSite (SearchAction), canonical per halaman,
+  sitemap lengkap (termasuk `/studies/*`, `/status`, `/developers`), RSS.
 
 ## ✦ Kontribusi / kustomisasi cepat
 
 - **Ganti warna tema** → `tailwind.config.ts` (blok `colors`) + `app/globals.css`.
 - **Ubah harga paket / repo unggulan / link sosial** → `lib/site.config.ts`.
 - **Tambah kategori** → `CATEGORIES` di `lib/categories.ts` (+ heuristik `categorize`).
-- **Tambah deployment ke monitor** → otomatis (repo original + homepage, 10 terbaru).
-  Bisa di-pin manual lewat `SITE` bila perlu.
+- **Tambah terjemahan** → tambah kunci di `lib/i18n.ts` (**id dan en** — test
+  paritas akan menolak bila bolong), lalu pakai `<T k>` / `t()`.
+- **Tambah studi kasus** → tambah objek di `data/studies.json` (field `en`
+  opsional), halaman & API mengikuti otomatis.
+- **Tambah repo ke monitor uptime** → otomatis (repo original + homepage,
+  10 terbaru by push).
+- **Tambah endpoint API** → `scripts/gen-api.mjs` + (opsional) whitelist di
+  `app/api/v1/[...resource]/route.ts`, lalu `npm run gen:api`.
+
+---
+
+Riwayat lengkap per fase: **[CHANGELOG.md](./CHANGELOG.md)**.

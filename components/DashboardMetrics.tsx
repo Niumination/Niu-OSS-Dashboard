@@ -128,7 +128,7 @@ export default function DashboardMetrics({ snapshot }: { snapshot: Snapshot }) {
         </Panel>
 
         {/* Donat kategori */}
-        <Panel className="lg:col-span-7" icon={Trophy} micro="repo teratas & aktivitas terbaru" aside="langsung dari github">
+        <Panel className="lg:col-span-7" icon={Trophy} micro={t('dash.top')} aside={t('dash.top.aside')}>
           <div className="grid gap-4 md:grid-cols-2">
             <div className="space-y-1.5">
               {topRepos.map((r, i) => (
