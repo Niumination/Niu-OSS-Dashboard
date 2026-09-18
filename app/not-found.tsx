@@ -1,5 +1,12 @@
 import Link from 'next/link';
 
+const LINKS = [
+  { href: '/', label: 'Overview' },
+  { href: '/repositories', label: 'All Repositories' },
+  { href: '/services', label: 'Services' },
+  { href: '/system', label: 'System & Metrics' },
+];
+
 export default function NotFound() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-5 p-6 text-center">
@@ -8,22 +15,18 @@ export default function NotFound() {
         Halaman tidak ada.
       </h1>
       <p className="max-w-md text-[14px] leading-relaxed text-cream/60">
-        Repo-nya mungkin di-rename, dihapus, atau tautannya salah. Cek daftar lengkap di
-        Repositories.
+        Repo-nya mungkin di-rename, dihapus, atau tautannya salah. Coba salah satu tujuan di bawah.
       </p>
-      <div className="flex gap-3">
-        <Link
-          href="/repositories"
-          className="h-11 rounded-full bg-ember px-6 font-mono text-[11px] uppercase tracking-wider text-ink transition hover:bg-ember-soft"
-        >
-          All Repositories
-        </Link>
-        <Link
-          href="/"
-          className="flex h-11 items-center rounded-full border border-white/15 px-6 font-mono text-[11px] uppercase tracking-wider text-cream/75 transition hover:border-ember/50 hover:text-cream"
-        >
-          Ke beranda
-        </Link>
+      <div className="flex flex-wrap justify-center gap-2.5">
+        {LINKS.map((l) => (
+          <Link
+            key={l.href}
+            href={l.href}
+            className="h-10 rounded-full border border-white/15 px-5 font-mono text-[10.5px] uppercase tracking-wider text-cream/70 transition hover:border-ember/50 hover:text-cream"
+          >
+            {l.label}
+          </Link>
+        ))}
       </div>
     </div>
   );

@@ -44,7 +44,7 @@ export default function AppShell({ snapshot, children }: Props) {
           initialTab={pay.tab}
           onClose={() => setPay((p) => ({ ...p, open: false }))}
         />
-        <main className="flex-1">{children}</main>
+        <main id="konten" className="flex-1 focus:outline-none">{children}</main>
         <Footer snapshot={snapshot} />
       </div>
     </UiContext.Provider>

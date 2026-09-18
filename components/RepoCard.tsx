@@ -17,6 +17,8 @@ import { formatDate, formatNumber, langColor, timeAgo } from '@/lib/utils';
 interface Props {
   repo: RepoLite;
   index?: number;
+  /** true saat prefers-reduced-motion — lewati animasi masuk. */
+  instant?: boolean;
 }
 
 /**
@@ -24,16 +26,16 @@ interface Props {
  * tech stack (topics), stars/forks, tombol Live Demo (jika ada homepage)
  * dan tautan ke kode sumber.
  */
-export default function RepoCard({ repo, index = 0 }: Props) {
+export default function RepoCard({ repo, index = 0, instant = false }: Props) {
   const cat = CATEGORY_MAP[categorize(repo)];
 
   return (
     <motion.article
-      layout
-      initial={{ opacity: 0, y: 16 }}
+      layout={!instant}
+      initial={instant ? false : { opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 0.97 }}
-      transition={{ duration: 0.35, delay: Math.min(index, 11) * 0.03, ease: [0.16, 1, 0.3, 1] }}
+      exit={instant ? { opacity: 0 } : { opacity: 0, scale: 0.97 }}
+      transition={instant ? undefined : { duration: 0.35, delay: Math.min(index, 11) * 0.03, ease: [0.16, 1, 0.3, 1] }}
       className="card-glow group relative flex flex-col rounded-3xl border border-white/[0.08] bg-white/[0.03] p-5 backdrop-blur-sm transition-colors duration-300 hover:border-ember/35"
     >
       <div className="flex items-center gap-2">
@@ -100,7 +102,11 @@ export default function RepoCard({ repo, index = 0 }: Props) {
         <span className="flex items-center gap-1" title="Forks">
           <GitFork className="size-3" /> {formatNumber(repo.forks)}
         </span>
-        <span className="ml-auto flex items-center gap-1" title={`Push terakhir: ${formatDate(repo.pushedAt)}`}>
+        <span
+          suppressHydrationWarning
+          className="ml-auto flex items-center gap-1"
+          title={`Push terakhir: ${formatDate(repo.pushedAt)}`}
+        >
           <Clock className="size-3" /> {timeAgo(repo.pushedAt)}
         </span>
       </div>

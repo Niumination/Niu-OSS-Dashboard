@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: 'All Repositories',
   description:
     'Agregator dinamis seluruh repositori publik Niumination — pencarian real-time, kategori otomatis, dan filter tech stack.',
+  alternates: { canonical: '/repositories' },
 };
 
 export default async function RepositoriesPage() {

@@ -1,7 +1,7 @@
 'use client';
 
-import { useMemo, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { useDeferredValue, useEffect, useMemo, useState } from 'react';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { AlertTriangle, SearchX } from 'lucide-react';
 import RepoCard from './RepoCard';
 import { CATEGORIES, categorize, countByCategory } from '@/lib/categories';
@@ -33,11 +33,22 @@ export default function RepoGrid({ repos, offline = false, offlineDate }: Props)
   const [cat, setCat] = useState('all');
   const [sort, setSort] = useState<SortKey>('pushed');
   const [forkF, setForkF] = useState<ForkFilter>('all');
+  // Deferral: input tetap 60fps meski 90+ kartu harus difilter ulang.
+  const dq = useDeferredValue(q);
+  const reduceMotion = useReducedMotion() === true;
+
+  // Query dari URL (?q=… — dipakai SearchAction SEO & tautan eksternal)
+  // dibaca saat hydration agar halaman tetap bisa dirender statis.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const fromUrl = params.get('q');
+    if (fromUrl) setQ(fromUrl);
+  }, []);
 
   const counts = useMemo(() => countByCategory(repos), [repos]);
 
   const filtered = useMemo(() => {
-    const needle = q.trim().toLowerCase();
+    const needle = dq.trim().toLowerCase();
     const list = repos.filter((r) => {
       if (forkF === 'original' && r.fork) return false;
       if (forkF === 'fork' && !r.fork) return false;
@@ -52,7 +63,7 @@ export default function RepoGrid({ repos, offline = false, offlineDate }: Props)
       return +new Date(b.pushedAt) - +new Date(a.pushedAt);
     });
     return list;
-  }, [repos, q, cat, sort, forkF]);
+  }, [repos, dq, cat, sort, forkF]);
 
   return (
     <div>
@@ -142,7 +153,10 @@ export default function RepoGrid({ repos, offline = false, offlineDate }: Props)
         })}
       </div>
 
-      <div className="mt-5 mb-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-cream/40">
+      <div
+        aria-live="polite"
+        className="mt-5 mb-3 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.2em] text-cream/40"
+      >
         <span>{filtered.length} repositori</span>
         <span>urut: {SORT_LABEL[sort]}</span>
       </div>
@@ -166,10 +180,10 @@ export default function RepoGrid({ repos, offline = false, offlineDate }: Props)
           </button>
         </div>
       ) : (
-        <motion.div layout className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-          <AnimatePresence mode="popLayout">
+        <motion.div layout={!reduceMotion} className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          <AnimatePresence mode="popLayout" initial={false}>
             {filtered.map((r, i) => (
-              <RepoCard key={r.name} repo={r} index={i} />
+              <RepoCard key={r.name} repo={r} index={i} instant={reduceMotion} />
             ))}
           </AnimatePresence>
         </motion.div>

@@ -21,6 +21,8 @@ import type { Ghevent, RepoLite, Snapshot, UserLite } from './types';
 const OWNER = process.env.GITHUB_OWNER ?? 'Niumination';
 const API = 'https://api.github.com';
 const REVALIDATE = 300; // 5 menit (ISR)
+/** Timeout per-request —防止 ISR rebuild menggantung saat jaringan lambat. */
+const FETCH_TIMEOUT_MS = 10_000;
 
 export class GithubError extends Error {
   status: number;
@@ -48,10 +50,21 @@ function headers(): Record<string, string> {
 }
 
 async function gh<T>(path: string, revalidate: number = REVALIDATE): Promise<T> {
-  const res = await fetch(`${API}${path}`, {
-    headers: headers(),
-    next: { revalidate, tags: ['github'] },
-  });
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), FETCH_TIMEOUT_MS);
+  let res: Response;
+  try {
+    res = await fetch(`${API}${path}`, {
+      headers: headers(),
+      signal: ctrl.signal,
+      next: { revalidate, tags: ['github'] },
+    });
+  } catch {
+    // AbortError (timeout) atau network failure -> fallback snapshot.
+    throw new GithubError(`Timeout/network error saat memanggil ${path}`, 0, false, null);
+  } finally {
+    clearTimeout(timer);
+  }
 
   if (!res.ok) {
     const remaining = res.headers.get('x-ratelimit-remaining');

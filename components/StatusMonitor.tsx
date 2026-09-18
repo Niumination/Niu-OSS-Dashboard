@@ -22,28 +22,38 @@ export default function StatusMonitor({ deployments }: { deployments: Deployment
 
   const runChecks = useCallback(() => {
     let cancelled = false;
+    const timers: ReturnType<typeof setTimeout>[] = [];
     const initial: Record<string, Status> = {};
     for (const d of deployments) initial[d.repo] = 'checking';
     setStatuses(initial);
 
     deployments.forEach((d, i) => {
-      setTimeout(async () => {
-        const ctrl = new AbortController();
-        const timer = setTimeout(() => ctrl.abort(), 6000);
-        let st: Status = 'down';
-        try {
-          await fetch(d.url, { mode: 'no-cors', cache: 'no-store', redirect: 'follow', signal: ctrl.signal });
-          st = 'online';
-        } catch {
-          st = 'down';
-        }
-        clearTimeout(timer);
-        if (!cancelled) setStatuses((prev) => ({ ...prev, [d.repo]: st }));
-      }, i * 260);
+      timers.push(
+        setTimeout(async () => {
+          const ctrl = new AbortController();
+          const timer = setTimeout(() => ctrl.abort(), 6000);
+          timers.push(timer);
+          let st: Status = 'down';
+          try {
+            await fetch(d.url, {
+              mode: 'no-cors',
+              cache: 'no-store',
+              redirect: 'follow',
+              signal: ctrl.signal,
+            });
+            st = 'online';
+          } catch {
+            st = 'down';
+          }
+          clearTimeout(timer);
+          if (!cancelled) setStatuses((prev) => ({ ...prev, [d.repo]: st }));
+        }, i * 260),
+      );
     });
 
     return () => {
       cancelled = true;
+      for (const t of timers) clearTimeout(t);
     };
   }, [deployments]);
 

@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   title: 'System & Metrics',
   description:
     'Metrik aktivitas GitHub Niumination — commit heatmap, distribusi bahasa, aktivitas 30 hari, dan monitor status deployment live.',
+  alternates: { canonical: '/system' },
 };
 
 export default async function SystemPage() {

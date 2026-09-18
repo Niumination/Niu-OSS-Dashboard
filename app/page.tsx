@@ -19,7 +19,7 @@ import { getGithubSnapshot } from '@/lib/github';
 import { computeSummary } from '@/lib/summary';
 import { SERVICE_PACKAGES, SITE } from '@/lib/site.config';
 import type { RepoLite } from '@/lib/types';
-import { formatIDR, timeAgo } from '@/lib/utils';
+import { formatIDR, langColor, timeAgo } from '@/lib/utils';
 
 export const revalidate = 300;
 
@@ -32,6 +32,19 @@ const PKG_ICON = {
 export default async function Home() {
   const snap = await getGithubSnapshot();
   const s = computeSummary(snap);
+
+  // Tech stack agregat untuk marquee: top bahasa + top topik.
+  const langCount = new Map<string, number>();
+  const topicCount = new Map<string, number>();
+  for (const r of snap.repos) {
+    if (r.language) langCount.set(r.language, (langCount.get(r.language) ?? 0) + 1);
+    for (const t of r.topics) topicCount.set(t, (topicCount.get(t) ?? 0) + 1);
+  }
+  const topLanguages = [...langCount.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8);
+  const topTopics = [...topicCount.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 12)
+    .map(([t]) => t);
 
   const byName = new Map(snap.repos.map((r) => [r.name, r]));
   const featured = (
@@ -59,6 +72,37 @@ export default async function Home() {
             }}
           />
         </ErrorBoundary>
+
+        {/* Marquee tech stack — agregat bahasa & topik dari seluruh repo */}
+        <div
+          className="mt-8 overflow-hidden border-y border-white/[0.06] py-3"
+          aria-label="Teknologi yang sering dipakai"
+        >
+          <div className="flex w-max animate-marquee gap-8 whitespace-nowrap">
+            {[0, 1].map((dup) => (
+              <div key={dup} className="flex items-center gap-8" aria-hidden={dup === 1}>
+                {topLanguages.map(([lang, n]) => (
+                  <span
+                    key={`l-${dup}-${lang}`}
+                    className="flex items-center gap-2 font-mono text-[10.5px] uppercase tracking-[0.18em] text-cream/55"
+                  >
+                    <span className="size-2 rounded-full" style={{ background: langColor(lang) }} />
+                    {lang}
+                    <span className="text-cream/25">×{n}</span>
+                  </span>
+                ))}
+                {topTopics.map((t) => (
+                  <span
+                    key={`t-${dup}-${t}`}
+                    className="font-mono text-[10.5px] uppercase tracking-[0.18em] text-cream/35"
+                  >
+                    #{t}
+                  </span>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
 
         {/* Featured work */}
         <section className="mt-14">

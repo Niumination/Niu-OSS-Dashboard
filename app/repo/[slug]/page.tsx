@@ -49,6 +49,7 @@ export async function generateMetadata({
   return {
     title: repo.name,
     description: repo.description ?? `Repositori ${repo.fullName} oleh Niumination.`,
+    alternates: { canonical: `/repo/${repo.name}` },
     openGraph: {
       title: `${repo.name} — Niumination`,
       description: repo.description ?? undefined,

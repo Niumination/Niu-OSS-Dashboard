@@ -83,7 +83,7 @@ export default function DashboardMetrics({ snapshot }: { snapshot: Snapshot }) {
         <Panel
           className="lg:col-span-5"
           icon={Languages}
-          micro="bahaya paling sering digunakan"
+          micro="bahasa paling sering digunakan"
           aside={s.mostUsedLanguage ?? '—'}
         >
           <LanguageBars counts={s.languageCounts} />
@@ -164,10 +164,7 @@ function Panel({
           {micro}
         </div>
         {aside && (
-          <span className="flex items-center gap-1.5 font-mono text-[9.5px] uppercase tracking-wider text-cream/35">
-            {aside}
-            <ExternalLink className="hidden size-2.5 opacity-0" />
-          </span>
+          <span className="font-mono text-[9.5px] uppercase tracking-wider text-cream/35">{aside}</span>
         )}
       </div>
       <div className="mt-4">{children}</div>
@@ -322,25 +319,26 @@ function ActivityBars({ events }: { events: Ghevent[] }) {
     return { bars: perDay, peak: { count: max, label: peakDate.toLocaleDateString('id-ID', { day: 'numeric', month: 'short' }) } };
   }, [events]);
 
+  const max = Math.max(1, ...bars);
+
   return (
     <div>
       <svg viewBox={`0 0 ${DAYS * 10} 64`} className="w-full" role="img" aria-label="Grafik aktivitas 30 hari">
         {bars.map((b, i) => {
-          const h = Math.max(2, (b / Math.max(1, ...bars)) * 54);
+          const h = Math.max(2, (b / max) * 54);
           return (
-            <g key={i}>
-              <rect
-                x={i * 10 + 2}
-                y={60 - h}
-                width={6}
-                height={h}
-                rx={2}
-                fill={b === 0 ? 'rgba(242,236,223,0.08)' : b === Math.max(1, ...bars) ? '#e05a1e' : '#f07f45'}
-                opacity={b === 0 ? 1 : 0.4 + 0.6 * (b / Math.max(1, ...bars))}
-              >
-                <title>{`${b} aktivitas`}</title>
-              </rect>
-            </g>
+            <rect
+              key={i}
+              x={i * 10 + 2}
+              y={60 - h}
+              width={6}
+              height={h}
+              rx={2}
+              fill={b === 0 ? 'rgba(242,236,223,0.08)' : b === max ? '#e05a1e' : '#f07f45'}
+              opacity={b === 0 ? 1 : 0.4 + 0.6 * (b / max)}
+            >
+              <title>{`${b} aktivitas`}</title>
+            </rect>
           );
         })}
       </svg>

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Command } from 'cmdk';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -40,6 +40,8 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
   const router = useRouter();
   const [copied, setCopied] = useState(false);
 
+  const lastFocused = useRef<HTMLElement | null>(null);
+
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
@@ -50,6 +52,23 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [open, onOpenChange]);
+
+  // Pantau fokus saat terbuka (cmdk memindahkannya antar-item); kembalikan
+  // ke elemen pemicu saat ditutup.
+  useEffect(() => {
+    if (!open) {
+      lastFocused.current?.focus?.();
+      lastFocused.current = null;
+      return;
+    }
+    const onOpenKey = () => {
+      lastFocused.current = (document.activeElement as HTMLElement) ?? null;
+    };
+    // Jendela singkat: activeElement saat listener dipasang = elemen pemicu.
+    lastFocused.current = (document.activeElement as HTMLElement) ?? null;
+    window.addEventListener('focusin', onOpenKey, true);
+    return () => window.removeEventListener('focusin', onOpenKey, true);
+  }, [open]);
 
   const close = () => onOpenChange(false);
 
@@ -78,8 +97,10 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
       setCopied(true);
       setTimeout(() => setCopied(false), 1600);
     } catch {
+      // Clipboard ditolak (mis. konteks non-secure) -> fallback membuka
+      // client email di tab baru tanpa menavigasikan aplikasi.
       close();
-      window.location.href = `mailto:${SITE.email}`;
+      window.open(`mailto:${SITE.email}`, '_self', 'noopener');
     }
   };
 

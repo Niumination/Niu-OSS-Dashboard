@@ -39,6 +39,19 @@
     color: #14110d;
   }
 
+  /* Fokus keyboard yang jelas (a11y) */
+  :focus-visible {
+    outline: 2px solid rgba(224, 90, 30, 0.9);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  .focus-ring-soft:focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 2px rgba(20, 17, 13, 1),
+      0 0 0 4px rgba(224, 90, 30, 0.7);
+  }
+
   ::-webkit-scrollbar {
     width: 9px;
     height: 9px;

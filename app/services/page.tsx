@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   title: 'Services & Commissions',
   description:
     'Konsultasi Teknis, Audit & Optimasi, dan Custom Web App oleh Niumination — mulai dari brief langsung ke email/WhatsApp.',
+  alternates: { canonical: '/services' },
 };
 
 const PKG_ICON = {

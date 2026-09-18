@@ -62,11 +62,13 @@ export default function NavBar({ user }: { user: UserLite }) {
           <button
             type="button"
             onClick={openCommand}
-            className="hidden h-9 items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 font-mono text-[10px] uppercase tracking-wider text-cream/60 transition-colors hover:border-ember/40 hover:text-cream md:flex"
+            className="flex h-9 items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 font-mono text-[10px] uppercase tracking-wider text-cream/60 transition-colors hover:border-ember/40 hover:text-cream"
             title="Buka command palette (Ctrl+K)"
+            aria-label="Buka command palette (Ctrl+K)"
           >
             <Command className="size-3" />
-            <span>Ctrl K</span>
+            <span className="hidden md:inline">Ctrl K</span>
+            <kbd className="font-mono text-[9px] md:hidden">⌘K</kbd>
           </button>
           <a
             href={SITE.github}

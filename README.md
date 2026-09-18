@@ -265,6 +265,26 @@ Request → [ISR cache 300 dtk] → hit?  ✅ kirim cache
 - Tag cache: `['github']` — siap untuk `revalidateTag('github')` bila nanti ada
   trigger manual (route webhook, dsb.).
 
+## ✦ Audit & hardening (2026-09)
+
+Situs diaudit dan di-hardening sebelum deploy:
+
+- **Keamanan** — `X-Content-Type-Options: nosniff`, `Referrer-Policy`,
+  `Permissions-Policy`, `Cross-Origin-Opener-Policy`, `X-Powered-By` dinonaktifkan.
+  (`X-Frame-Options` sengaja tidak diset agar situs tetap bisa di-embed.)
+- **Robustness API** — timeout 10 dtk per-request ke GitHub (AbortController);
+  hang/network error diperlakukan seperti rate-limit → fallback snapshot.
+  Semua timer `StatusMonitor` dibersihkan saat unmount.
+- **Performa** — pencarian 90+ kartu memakai `useDeferredValue` (input tetap
+  60fps); Scene3D `dpr` dibatasi 1.5; animasi Framer Motion dinonaktifkan saat
+  `prefers-reduced-motion`.
+- **Aksesibilitas** — skip-link, `:focus-visible` global, dialog dengan fokus
+  masuk/keluar yang dikelola, `aria-live` pada hasil pencarian, trigger
+  command palette tersedia di mobile.
+- **SEO** — JSON-LD `Person` + `WebSite` dengan `SearchAction`
+  (`/repositories?q=…`), canonical URL per halaman, `apple-icon`.
+- **Konten** — marquee tech stack agregat di beranda; 404 dengan quick-links.
+
 ## ✦ Kontribusi / kustomisasi cepat
 
 - **Ganti warna tema** → `tailwind.config.ts` (blok `colors`) + `app/globals.css`.

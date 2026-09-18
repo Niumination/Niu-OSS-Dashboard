@@ -67,7 +67,7 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-const jsonLd = {
+const jsonLdPerson = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Niumination',
@@ -82,13 +82,37 @@ const jsonLd = {
   },
 };
 
+const jsonLdWebSite = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Niumination — OSS Dashboard',
+  url: base,
+  inLanguage: 'id',
+  publisher: { '@type': 'Person', name: 'Niumination', url: SITE.github },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${base}/repositories?q={search_term_string}`,
+    'query-input': 'required name=search_term_string',
+  },
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="id" className={`${display.variable} ${sans.variable} ${mono.variable}`}>
       <body className="font-sans antialiased">
+        <a
+          href="#konten"
+          className="fixed top-2 left-2 z-[100] -translate-y-24 rounded-full bg-ember px-4 py-2 font-mono text-[11px] uppercase tracking-wider text-ink transition-transform focus:translate-y-0"
+        >
+          Lewati ke konten
+        </a>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdPerson) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebSite) }}
         />
         {children}
       </body>

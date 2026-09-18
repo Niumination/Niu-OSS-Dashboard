@@ -34,6 +34,10 @@ export default function SceneLite() {
     }));
     const mouse = { x: 0.5, y: 0.5, active: false };
 
+    // Deklarasi sebelum `resize` agar bisa dipanggil ulang saat ukuran berubah
+    // (mode reduced-motion hanya menggambar frame statis).
+    let draw: () => void = () => {};
+
     const resize = () => {
       const r = canvas.getBoundingClientRect();
       w = r.width;
@@ -41,12 +45,13 @@ export default function SceneLite() {
       canvas.width = Math.max(1, Math.floor(w * dpr));
       canvas.height = Math.max(1, Math.floor(h * dpr));
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      if (reduced) draw();
     };
     resize();
     const ro = new ResizeObserver(resize);
     ro.observe(canvas);
 
-    const draw = () => {
+    draw = () => {
       ctx.clearRect(0, 0, w, h);
       const mx = mouse.active ? mouse.x * w : -9999;
       const my = mouse.active ? mouse.y * h : -9999;

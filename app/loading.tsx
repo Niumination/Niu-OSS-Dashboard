@@ -1,7 +1,5 @@
 import Link from 'next/link';
-import { RepoGridSkeleton } from '@/components/Skeletons';
-import { MetricsSkeleton } from '@/components/Skeletons';
-import { Sk } from '@/components/Skeletons';
+import { MetricsSkeleton, RepoGridSkeleton, Sk } from '@/components/Skeletons';
 
 /**
  * Loading UI (skeleton) — tampil selama server component mengambil

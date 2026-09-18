@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
   Check,
@@ -57,6 +57,7 @@ function loadScript(src: string): Promise<void> {
 
 export default function PaymentModal({ open, initialTab, onClose }: Props) {
   const [tab, setTab] = useState<PaymentTab>(initialTab);
+  const panelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (open) setTab(initialTab);
@@ -64,6 +65,10 @@ export default function PaymentModal({ open, initialTab, onClose }: Props) {
 
   useEffect(() => {
     if (!open) return;
+    // Fokus masuk ke panel dialog; saat ditutup, fokus dikembalikan ke
+    // elemen pemicu (standar aksesibilitas dialog).
+    const previous = document.activeElement as HTMLElement | null;
+    panelRef.current?.focus();
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
     };
@@ -72,6 +77,7 @@ export default function PaymentModal({ open, initialTab, onClose }: Props) {
     return () => {
       document.removeEventListener('keydown', onKey);
       document.body.style.overflow = '';
+      previous?.focus?.();
     };
   }, [open, onClose]);
 
@@ -93,11 +99,13 @@ export default function PaymentModal({ open, initialTab, onClose }: Props) {
           />
           <div className="relative flex min-h-full items-start justify-center p-4 md:p-8">
             <motion.section
+              ref={panelRef}
+              tabIndex={-1}
               initial={{ opacity: 0, y: 18, scale: 0.985 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 12, scale: 0.985 }}
               transition={{ duration: 0.24, ease: [0.16, 1, 0.3, 1] }}
-              className="relative my-2 w-full max-w-3xl overflow-hidden rounded-4xl border border-white/10 bg-ink-2 p-6 shadow-card md:my-6 md:p-9"
+              className="relative my-2 w-full max-w-3xl overflow-hidden rounded-4xl border border-white/10 bg-ink-2 p-6 shadow-card focus:outline-none md:my-6 md:p-9"
             >
               <div className="pointer-events-none absolute -top-24 -right-24 size-[340px] rounded-full bg-ember/25 blur-3xl animate-float-orb" />
               <div className="dotgrid pointer-events-none absolute inset-0 text-cream opacity-[0.05]" />
@@ -372,7 +380,7 @@ function MethodRow({
       )}
     >
       <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-ember/10 text-ember">
-        <Icon className="size-4.5 size-[18px]" />
+        <Icon className="size-[18px]" />
       </span>
       <div className="min-w-0 flex-1">
         <div className="text-[13.5px] font-medium text-cream/90">{name}</div>
