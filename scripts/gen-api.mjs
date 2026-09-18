@@ -20,6 +20,14 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
+/**
+ * --only <resource> : tulis HANYA file tersebut (dipakai uptime.yml agar
+ * cron 15 menit tidak menimpa timestamp 101 file lain → riwayat git bersih).
+ * Contoh: node scripts/gen-api.mjs --only uptime
+ */
+const onlyIdx = process.argv.indexOf('--only');
+const ONLY = onlyIdx > -1 ? process.argv[onlyIdx + 1] : null;
+
 const root = process.cwd();
 const outDir = join(root, 'public', 'api', 'v1');
 const generatedAt = new Date().toISOString();
@@ -165,7 +173,7 @@ const index = {
   generatedAt,
   description:
     'API publik read-only untuk repositori, aktivitas, uptime, dan studi kasus Niumination. Statis (GitOps) — di-regenerasi bersama snapshot data; tanpa rate limit.',
-  docs: 'https://github.com/Niumination/niumination#api-publik-v1',
+  docs: 'https://github.com/Niumination/niumination#-api-publik-v1',
   license: 'CC-BY-4.0 (data), kode MIT',
   endpoints: [
     { path: `${API_BASE}/index.json`, description: 'Dokumen discovery API / API discovery document' },
@@ -185,6 +193,7 @@ mkdirSync(join(outDir, 'repos'), { recursive: true });
 mkdirSync(join(outDir, 'studies'), { recursive: true });
 
 const write = (rel, data) => {
+  if (ONLY && rel !== `${ONLY}.json`) return; // mode --only: lewati file lain
   writeFileSync(join(outDir, rel), JSON.stringify(data, null, 1) + '\n');
   console.log(`✔ public/api/v1/${rel}`);
 };
@@ -196,7 +205,11 @@ write('events.json', eventsApi);
 write('summary.json', summary);
 write('uptime.json', uptimeApi);
 write('studies.json', { generatedAt, count: studyIndex.length, studies: studyIndex });
-for (const r of repos) write(join('repos', `${r.name}.json`), { generatedAt, repo: r });
-for (const c of studies) write(join('studies', `${c.slug}.json`), { generatedAt, study: c });
+for (const r of repos) {
+  if (!ONLY || ONLY === 'repos') write(join('repos', `${r.name}.json`), { generatedAt, repo: r });
+}
+for (const c of studies) {
+  if (!ONLY || ONLY === 'studies') write(join('studies', `${c.slug}.json`), { generatedAt, study: c });
+}
 
 console.log(`\nSelesai: ${repos.length + studies.length + 7} file JSON di public/api/v1/`);

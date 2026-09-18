@@ -26,7 +26,7 @@ jobs:
         run: node scripts/uptime-check.mjs
 
       - name: Segarkan endpoint uptime API publik
-        run: node scripts/gen-api.mjs
+        run: node scripts/gen-api.mjs --only uptime
 
       - name: Commit & push bila ada perubahan
         run: |
