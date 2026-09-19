@@ -6,6 +6,7 @@ import { LocaleProvider } from '@/components/LocaleProvider';
 import ServiceWorkerRegister from '@/components/ServiceWorkerRegister';
 import T from '@/components/T';
 import { SITE } from '@/lib/site.config';
+import { siteUrl } from '@/lib/env';
 
 /* Tipografi (referensi template):
    - Instrument Serif  -> display headings
@@ -28,7 +29,7 @@ const mono = JetBrains_Mono({
   display: 'swap',
 });
 
-const base = process.env.SITE_URL ?? 'https://niumination.web.id';
+const base = siteUrl;
 
 export const metadata: Metadata = {
   metadataBase: new URL(base),

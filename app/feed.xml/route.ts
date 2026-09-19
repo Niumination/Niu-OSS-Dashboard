@@ -1,4 +1,5 @@
 import { getGithubSnapshot } from '@/lib/github';
+import { siteUrl } from '@/lib/env';
 
 /*
  * GET /feed.xml — RSS 2.0 aktivitas publik Niumination.
@@ -19,7 +20,7 @@ function esc(s: string): string {
 
 export async function GET() {
   const snap = await getGithubSnapshot();
-  const base = process.env.SITE_URL ?? 'https://niumination.web.id';
+  const base = siteUrl;
 
   const items = snap.events
     .slice(0, 30)

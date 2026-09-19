@@ -19,7 +19,7 @@ import QrCard from '@/components/QrCard';
 import Readme from '@/components/Readme';
 import RepoCard from '@/components/RepoCard';
 import { getGithubSnapshot, getRepoDetail } from '@/lib/github';
-import { isStaticExport } from '@/lib/env';
+import { isStaticExport, siteUrl } from '@/lib/env';
 import type { RepoLite } from '@/lib/types';
 import { formatDate, formatNumber, langColor, timeAgo } from '@/lib/utils';
 import T from '@/components/T';
@@ -48,7 +48,7 @@ export async function generateMetadata({
   if (!repo) {
     return { title: 'Repositori tidak ditemukan' };
   }
-  const base = process.env.SITE_URL ?? 'https://niumination.web.id';
+  const base = siteUrl;
   return {
     title: repo.name,
     description: repo.description ?? `Repositori ${repo.fullName} oleh Niumination.`,
@@ -256,7 +256,7 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
         )}
         {/* QR share */}
         <QrCard
-          url={`${process.env.SITE_URL ?? 'https://niumination.web.id'}/repo/${repo.name}`}
+          url={`${siteUrl}/repo/${repo.name}`}
           filename={`qr-repo-${repo.name}.svg`}
         />
 

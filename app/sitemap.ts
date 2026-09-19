@@ -1,11 +1,12 @@
 import type { MetadataRoute } from 'next';
 import { getGithubSnapshot } from '@/lib/github';
 import { CASE_STUDIES } from '@/lib/case-studies';
+import { siteUrl } from '@/lib/env';
 
 // Diperlukan agar route ini tetap statis pada `output: 'export'` (GitHub Pages).
 export const dynamic = 'force-static';
 
-const base = process.env.SITE_URL ?? 'https://niumination.web.id';
+const base = siteUrl;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const snap = await getGithubSnapshot();

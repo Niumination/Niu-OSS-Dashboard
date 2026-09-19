@@ -67,6 +67,13 @@ npm run export:static   # varian GitHub Pages (out/)
 - `next@15.3.3` ditandai rentan oleh npm (CVE-2025-66478) — upgrade menunggu keputusan pemilik (tercatat di `BACKLOG.md`).
 - `data/` + `lib/mock-data.ts` masih snapshot statis; kalender kontribusi 12 bulan butuh `GITHUB_TOKEN` di Vercel (Fase 5).
 
+## Deploy (Vercel)
+
+- Proyek Vercel: `niu-oss` (team `archk4lis-projects`), produksi `https://niu-oss-archk4lis-projects.vercel.app`, terhubung ke repo GitHub `Niumination/Niu-OSS-Dashboard` (auto-deploy tiap push `main`).
+- **Pitfall `SITE_URL`:** env var yang **ada tapi kosong** membuat `new URL('')` gagal saat build (`Failed to collect page data for /_not-found`) — pernah mematikan deploy 19 Sep 2026. Selalu lewat `siteUrl` dari `lib/env.ts`, jangan pakai `process.env.SITE_URL ?? '...'`.
+- Env produksi terpasang: `SITE_URL`, `GITHUB_OWNER`, `GITHUB_TOKEN`, Midtrans/Stripe, kontak.
+- Reproduksi lokal perilaku Vercel: `SITE_URL= npm run build`.
+
 ## Tasks
 
 Lihat `BACKLOG.md`. Master: `~/Desktop/Niumination/BACKLOG.md` (tag `@niu-oss-dashboard`).

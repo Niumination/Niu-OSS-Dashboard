@@ -32,7 +32,8 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'Nominal harus antara Rp 10.000 – Rp 100.000.000.' }, { status: 400 });
   }
 
-  const base = process.env.SITE_URL ?? new URL(req.url).origin;
+  // SITE_URL kosong/spasi harus jatuh ke origin request, bukan '' — lihat lib/env.ts.
+  const base = process.env.SITE_URL?.trim() || new URL(req.url).origin;
   const params = new URLSearchParams({
     mode: 'payment',
     success_url: `${base}/services?bayar=sukses`,

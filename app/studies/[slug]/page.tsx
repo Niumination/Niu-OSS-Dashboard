@@ -8,6 +8,7 @@ import T from '@/components/T';
 import { StudyView, type StudyFacts } from '@/components/studies-ui';
 import { getGithubSnapshot } from '@/lib/github';
 import { CASE_STUDIES, getAdjacent, getStudy } from '@/lib/case-studies';
+import { siteUrl } from '@/lib/env';
 
 export const revalidate = 300;
 export const dynamicParams = false;
@@ -53,7 +54,7 @@ export default async function StudyPage({ params }: { params: Promise<{ slug: st
       }
     : null;
 
-  const base = process.env.SITE_URL ?? 'https://niumination.web.id';
+  const base = siteUrl;
 
   return (
     <AppShell snapshot={snap}>

@@ -5,6 +5,28 @@ per fase pengerjaan, lengkap dengan commit yang bisa dilacak.
 Format mengikuti [Keep a Changelog](https://keepachangelog.com/id/1.1/);
 proyek ini tidak memakai versioning semver ketat (satu repo, satu situs).
 
+## [Fix deploy] — build Vercel gagal karena `SITE_URL` kosong — 2026-09-19
+
+### Diperbaiki
+- **`ERR_INVALID_URL` saat build Vercel** (`Failed to collect page data for
+  /_not-found`): env var `SITE_URL` yang **ada tapi kosong** lolos dari
+  `process.env.SITE_URL ?? 'https://niumination.web.id'` (operator `??` hanya
+  menangkap `undefined`/`null`), sehingga `new URL('')` di `app/layout.tsx`
+  melempar error dan build gagal. Di mesin lokal gejalanya tidak muncul karena
+  variabelnya tidak diset sama sekali.
+- Sumber tunggal baru: `siteUrl` di `lib/env.ts` — `process.env.SITE_URL?.trim()
+  || 'https://niumination.web.id'` (menutup kasus kosong **dan** spasi).
+  Dipakai di `app/layout.tsx`, `app/robots.ts`, `app/sitemap.ts`,
+  `app/feed.xml/route.ts`, `app/studies/[slug]/page.tsx`, `app/repo/[slug]/page.tsx`.
+- `app/api/pay/stripe/route.ts`: fallback ke `new URL(req.url).origin` kini juga
+  menangani `SITE_URL` kosong.
+
+### Catatan
+- Verifikasi: `SITE_URL= npm run build` (kondisi Vercel direplikasi lokal) exit 0;
+  `npm run typecheck` exit 0; `npm test` 41/41.
+- Set `SITE_URL` di Vercel ke `https://niumination.web.id` saat domain aktif;
+  nilai kosong kini aman (jatuh ke default), tapi canonical/OG akan memakai default.
+
 ## [Fase 3.2] — persiapan produksi Vercel + domain, ID penuh, roadmap — 2026-09-19
 
 Commit: `36a8847`
