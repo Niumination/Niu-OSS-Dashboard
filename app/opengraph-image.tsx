@@ -1,4 +1,4 @@
-import { ImageResponse } from '@vercel/og';
+import { ImageResponse } from 'next/og';
 import { MOCK_SNAPSHOT } from '@/lib/mock-data';
 import { HomeOg } from '@/lib/og-html';
 
@@ -9,7 +9,7 @@ export const dynamic = 'force-static';
 
 /**
  * OG image statis untuk halaman utama (file convention Next.js) —
- * dirender dengan satori (@vercel/og) pada build time.
+ * dirender dengan satori (next/og) pada build time.
  */
 export default function OpengraphImage() {
   const element = (

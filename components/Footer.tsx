@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Coffee, Github, Heart, Mail } from 'lucide-react';
+import { Coffee, Heart, Mail } from 'lucide-react';
+import { GithubMark } from './GithubMark';
 import { SITE } from '@/lib/site.config';
 import type { Snapshot } from '@/lib/types';
 import { formatDate } from '@/lib/utils';
@@ -55,7 +56,7 @@ export default function Footer({ snapshot }: { snapshot: Snapshot }) {
           <ul className="mt-4 space-y-2.5">
             <li>
               <a href={SITE.github} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-[13px] text-cream/65 transition-colors hover:text-ember">
-                <Github className="size-3.5" /> github.com/{SITE.handle}
+                <GithubMark className="size-3.5" /> github.com/{SITE.handle}
               </a>
             </li>
             <li>

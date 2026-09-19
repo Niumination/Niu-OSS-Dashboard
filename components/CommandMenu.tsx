@@ -11,7 +11,6 @@ import {
   Coffee,
   ExternalLink,
   FolderGit2,
-  Github,
   Heart,
   LayoutDashboard,
   Mail,
@@ -20,6 +19,7 @@ import {
   Stethoscope,
   Wrench,
 } from 'lucide-react';
+import { GithubMark } from './GithubMark';
 import { SITE } from '@/lib/site.config';
 import { categorize, CATEGORY_MAP } from '@/lib/categories';
 import type { Snapshot } from '@/lib/types';
@@ -86,7 +86,7 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
   ];
 
   const linkItems = [
-    { value: 'link-github', label: t('cm.link.github'), icon: Github, href: SITE.github },
+    { value: 'link-github', label: t('cm.link.github'), icon: GithubMark, href: SITE.github },
     { value: 'link-sponsors', label: 'GitHub Sponsors', icon: Heart, href: SITE.sponsors },
     { value: 'link-bmac', label: 'Buy Me a Coffee', icon: Coffee, href: SITE.buyMeACoffee },
     { value: 'link-email', label: t('cm.link.email', { email: SITE.email }), icon: Mail, href: `mailto:${SITE.email}` },

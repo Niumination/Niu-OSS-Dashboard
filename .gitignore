@@ -16,3 +16,4 @@ next-env.d.ts
 
 # Catatan: data/ (snapshot GitHub) & lib/mock-data.ts DIKOMIT —
 # menjadi sumber regenerasi fallback saat tidak ada GITHUB_TOKEN.
+.env*

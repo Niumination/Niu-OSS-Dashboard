@@ -3,7 +3,7 @@
 **niumination** — OSS Dashboard
 Landing page + dashboard interaktif untuk <a href="https://github.com/niumination">github.com/niumination</a>
 
-`Next.js 15` · `React 19` · `TypeScript` · `React Three Fiber` · `Tailwind` · `Framer Motion` · `cmdk` · `@vercel/og` · `qrcode`
+`Next.js 16` · `React 19` · `TypeScript` · `React Three Fiber` · `Tailwind` · `Framer Motion` · `cmdk` · `next/og` · `qrcode`
 
 Bahasa: **ID** (default) / **EN** — toggle di navbar · PWA-ready · API publik v1
 
@@ -329,6 +329,10 @@ Keuntungan: ISR terkelola (data segar tiap 5 menit), dynamic OG di Node runtime,
 `/api/pay/*` + `/api/v1/*` live (route mem-bundle JSON saat build — aman di
 lambda), `/api/vitals` aktif.
 
+Syarat runtime: **Node.js ≥ 20.9** (Next 16; default Vercel = Node 22 ✓).
+Build Vercel memakai **Turbopack** (default Next 16). Untuk lingkungan RAM
+kecil tersedia jalur webpack: `npm run build:webpack`.
+
 ```bash
 npm i -g vercel && vercel && vercel prod   # alternatif CLI
 ```
@@ -340,8 +344,8 @@ npm run export:static    # hasil di out/
 ```
 
 Script: regenerasi snapshot → `gen:api` → tulis config `output:'export'` →
-pindahkan `app/api` → `next build` → **memulihkan semua file**. Semua halaman +
-OG image + API JSON dibekukan saat build.
+pindahkan `app/api` → `next build --webpack` (hemat memori) → **memulihkan
+semua file**. Semua halaman + OG image + API JSON dibekukan saat build.
 
 Contoh workflow deploy (`.github/workflows/pages.yml`):
 
@@ -363,7 +367,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: 20 }
+        with: { node-version: 22 }
       - run: npm ci
       - run: npm run export:static
         env:

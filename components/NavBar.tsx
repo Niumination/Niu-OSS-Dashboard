@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { Command, Github } from 'lucide-react';
+import { Command } from 'lucide-react';
+import { GithubMark } from './GithubMark';
 import { SITE } from '@/lib/site.config';
 import type { UserLite } from '@/lib/types';
 import { useUi } from './ui-context';
@@ -99,7 +100,7 @@ export default function NavBar({ user }: { user: UserLite }) {
             aria-label={t('nav.aria.github')}
             className="grid size-9 place-items-center rounded-full border border-white/10 bg-white/[0.03] text-cream/70 transition-colors hover:border-ember/40 hover:text-cream"
           >
-            <Github className="size-4" />
+            <GithubMark className="size-4" />
           </a>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img

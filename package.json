@@ -1,14 +1,15 @@
 {
-  "name": "niumination",
+  "name": "niu-oss-dashboard",
   "version": "1.0.0",
   "private": true,
-  "description": "Landing page + portfolio dashboard interaktif untuk github.com/niumination — Next.js App Router, R3F hero, command palette, GitHub aggregator, payment modal.",
+  "description": "Dasbor OSS & portofolio untuk github.com/niumination — Next.js App Router (Turbopack), R3F hero, command palette, aggregator GitHub, API publik v1, payment modal.",
   "engines": {
-    "node": ">=20"
+    "node": ">=20.9"
   },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:webpack": "next build --webpack",
     "start": "next start",
     "gen:mock": "node scripts/gen-mock.mjs",
     "gen:mock:fresh": "node scripts/gen-mock.mjs --fresh",
@@ -20,32 +21,30 @@
     "gen:api": "node scripts/gen-api.mjs"
   },
   "dependencies": {
-    "@react-three/drei": "^10.0.6",
-    "@react-three/fiber": "^9.1.2",
-    "@vercel/og": "^0.6.4",
+    "@react-three/drei": "^10.7.8",
+    "@react-three/fiber": "^9.7.0",
     "cmdk": "^1.1.1",
     "dompurify": "^3.4.15",
-    "framer-motion": "^12.12.1",
+    "framer-motion": "^13.4.0",
     "fuse.js": "^7.5.0",
-    "lucide-react": "^0.518.0",
+    "lucide-react": "^1.47.0",
     "marked": "^18.0.13",
-    "next": "15.3.3",
+    "next": "16.3.5",
     "qrcode": "^1.5.4",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "three": "^0.178.0"
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "three": "^0.186.0"
   },
   "devDependencies": {
-    "@types/dompurify": "^3.0.5",
-    "@types/node": "^20.19.0",
+    "@types/node": "^22.0.0",
     "@types/qrcode": "^1.5.6",
-    "@types/react": "^19.1.0",
-    "@types/react-dom": "^19.1.0",
-    "@types/three": "^0.178.0",
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.18",
+    "@types/three": "^0.186.0",
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.28",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5.8.3",
-    "vitest": "^4.1.11"
+    "typescript": "7.0.2",
+    "vitest": "^5.0.1"
   }
 }

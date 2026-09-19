@@ -2,7 +2,7 @@
 
 **Lokasi:** `sites/niu-oss-dashboard/` (ekosistem: `~/Desktop/Niumination/sites/niu-oss-dashboard/`)
 **GitHub:** `github.com/Niumination/Niu-OSS-Dashboard`
-**Stack:** Next.js 15.3 (App Router) · React 19 · TypeScript 5.8 · Tailwind 3.4 · React Three Fiber/drei · Framer Motion · cmdk · Fuse.js · @vercel/og · qrcode · Vitest 4
+**Stack:** Next.js 16.3 (App Router, Turbopack) · React 19.2 · TypeScript 7 · Tailwind 3.4 · React Three Fiber/drei · Framer Motion 13 · cmdk · Fuse.js · next/og · qrcode · Vitest 5
 **Domain target:** `niumination.web.id` (Vercel + DNS idwebhost) — **belum live per 19 Sep 2026** (DNS belum resolve)
 **Status:** 🟢 Aktif — Fase 3.2 selesai (akumulasi 11 commit); Fase 4 go-live pending
 
@@ -64,8 +64,9 @@ npm run export:static   # varian GitHub Pages (out/)
 
 ## Temuan terbuka
 
-- `next@15.3.3` ditandai rentan oleh npm (CVE-2025-66478) — upgrade menunggu keputusan pemilik (tercatat di `BACKLOG.md`).
+- ~~`next@15.3.3` ditandai rentan oleh npm (CVE-2025-66478)~~ — **SELESAI 19 Sep 2026**: di-upgrade ke `next@16.3.5` (lihat CHANGELOG "[Stack 2026]"); `npm audit` kini 0 temuan.
 - `data/` + `lib/mock-data.ts` masih snapshot statis; kalender kontribusi 12 bulan butuh `GITHUB_TOKEN` di Vercel (Fase 5).
+- Tailwind masih 3.4 (maintenance) — migrasi ke v4 (CSS-first config) kandidat modernisasi berikutnya, tunggu verifikasi visual.
 
 ## Deploy (Vercel)
 
@@ -73,6 +74,7 @@ npm run export:static   # varian GitHub Pages (out/)
 - **Pitfall `SITE_URL`:** env var yang **ada tapi kosong** membuat `new URL('')` gagal saat build (`Failed to collect page data for /_not-found`) — pernah mematikan deploy 19 Sep 2026. Selalu lewat `siteUrl` dari `lib/env.ts`, jangan pakai `process.env.SITE_URL ?? '...'`.
 - Env produksi terpasang: `SITE_URL`, `GITHUB_OWNER`, `GITHUB_TOKEN`, Midtrans/Stripe, kontak.
 - Reproduksi lokal perilaku Vercel: `SITE_URL= npm run build`.
+- Next 16: build Vercel = **Turbopack default** (Node ≥ 20.9; Vercel pakai Node 22). Di mesin RAM kecil (< ~4 GB) Turbopack bisa OOM — verifikasi lokal pakai `npm run build:webpack`; `export:static` sudah memakai `--webpack` untuk alasan yang sama.
 
 ## Tasks
 

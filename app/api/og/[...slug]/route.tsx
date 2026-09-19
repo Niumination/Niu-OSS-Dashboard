@@ -1,15 +1,15 @@
-import { ImageResponse } from '@vercel/og';
+import { ImageResponse } from 'next/og';
 import { getGithubSnapshot } from '@/lib/github';
 import { HomeOg, RepoOg } from '@/lib/og-html';
 import { MOCK_SNAPSHOT } from '@/lib/mock-data';
 
 /*
- * Dynamic OG Image (per halaman / detail repo) — @vercel/og (satori).
+ * Dynamic OG Image (per halaman / detail repo) — next/og (satori).
  *
  *   GET /api/og/home               -> OG halaman utama
  *   GET /api/og/repo/<repo-name>   -> OG detail repositori
  *
- * Node runtime (Vercel maupun self-host Node 18+): `ImageResponse` tersedia
+ * Node runtime (Vercel maupun self-host Node 20.9+): `ImageResponse` tersedia
  * karena global Response/ReadableStream ada. Gambar di-cache 1 jam.
  */
 

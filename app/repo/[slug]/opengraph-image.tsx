@@ -1,4 +1,4 @@
-import { ImageResponse } from '@vercel/og';
+import { ImageResponse } from 'next/og';
 import { getGithubSnapshot } from '@/lib/github';
 import { RepoOg } from '@/lib/og-html';
 

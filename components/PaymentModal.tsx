@@ -8,7 +8,6 @@ import {
   ChevronRight,
   Coffee,
   CreditCard,
-  Github,
   Heart,
   Loader2,
   Mail,
@@ -20,6 +19,7 @@ import {
   ShieldCheck,
   X,
 } from 'lucide-react';
+import { GithubMark } from './GithubMark';
 import { SERVICE_PACKAGES, SITE, type ServicePackage } from '@/lib/site.config';
 import { cx, formatIDR } from '@/lib/utils';
 import type { PaymentTab } from './ui-context';
@@ -371,7 +371,7 @@ function OssTab({
 
       <div className="space-y-2.5">
         <MethodRow
-          icon={Github}
+          icon={GithubMark}
           name="GitHub Sponsors"
           desc={freq === 'monthly' ? 'Recurring bulanan — cara paling resmi & rendah biaya.' : 'Donasi sekali / bulanan langsung via GitHub.'}
           href={SITE.sponsors}

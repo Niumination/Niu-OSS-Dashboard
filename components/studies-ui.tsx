@@ -13,11 +13,11 @@ import {
   BookOpen,
   CheckCircle2,
   ExternalLink,
-  Github,
   Play,
   Target,
   Wrench,
 } from 'lucide-react';
+import { GithubMark } from './GithubMark';
 import type { CaseStudy } from '@/lib/case-studies';
 import { localizedStudy } from '@/lib/case-studies';
 import { useLocale } from './LocaleProvider';
@@ -185,7 +185,7 @@ export function StudyView({
               href={`/repo/${c.repo}`}
               className="flex h-11 items-center gap-2 rounded-full border border-white/15 px-6 font-mono text-[11px] uppercase tracking-wider text-cream/80 transition hover:border-spotlight/50 hover:text-spotlight"
             >
-              <Github className="size-4" /> <T k="studies.repoBtn" />
+              <GithubMark className="size-4" /> <T k="studies.repoBtn" />
             </Link>
           </div>
         </div>

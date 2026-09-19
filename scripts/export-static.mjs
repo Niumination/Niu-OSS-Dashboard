@@ -65,7 +65,6 @@ try {
     `import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  eslint: { ignoreDuringBuilds: true },
   output: 'export',
   images: { unoptimized: true },
 };
@@ -96,7 +95,10 @@ export default nextConfig;
 
   const env = { ...process.env, NEXT_PUBLIC_STATIC_EXPORT: '1' };
   try {
-    execSync('next build', { cwd: root, stdio: 'inherit', env });
+    // --webpack: build statis via jalur webpack — lebih hemat memori daripada
+    // Turbopack default Next 16, sehingga export juga bisa dijalankan di
+    // lingkungan RAM terbatas (CI kecil / mesin dev). Hasil setara.
+    execSync('next build --webpack', { cwd: root, stdio: 'inherit', env });
   } catch (e) {
     // Build gagal: hapus artefak partial agar tidak keliru di-deploy.
     rmSync(join(root, 'out'), { recursive: true, force: true });

@@ -5,6 +5,44 @@ per fase pengerjaan, lengkap dengan commit yang bisa dilacak.
 Format mengikuti [Keep a Changelog](https://keepachangelog.com/id/1.1/);
 proyek ini tidak memakai versioning semver ketat (satu repo, satu situs).
 
+## [Stack 2026] — upgrade mayor ke stack terkini: Next.js 16, React 19.2, TypeScript 7 — 2026-09-19
+
+### Diubah (akar masalah deploy Vercel)
+- **`next` 15.3.3 → 16.3.5** — 15.3.3 ditandai **deprecated + rentan** oleh npm
+  (CVE-2025-66478, "This version has a security vulnerability"); setelah upgrade:
+  `npm audit` **0 temuan**. Build Vercel kini Turbopack default (Node ≥ 20.9 —
+  default Vercel Node 22 memenuhi).
+- **`react`/`react-dom` 19.1.0 → 19.2.8** (versi integrasi Next 16; 19.3.0
+  ditolak peer `@react-three/fiber` `>=19 <19.3`).
+- **`typescript` 5.8.3 → 7.0.2** · **`vitest` 4.1.11 → 5.0.1** (41/41 lulus) ·
+  `framer-motion` 13.4 · `lucide-react` 1.47 · `three` 0.186 ·
+  `@react-three/fiber` 9.7 · `@react-three/drei` 10.7 · `@types/node` 22.
+- **`engines.node` `>=20` → `>=20.9`** (syarat Next 16); CI & snippet README
+  naik ke Node 22.
+
+### Diperbaiki / disesuaikan
+- **`@vercel/og` dihapus** — 3 file OG (`app/opengraph-image.tsx`,
+  `app/repo/[slug]/opengraph-image.tsx`, `app/api/og/[...slug]/route.tsx`)
+  bermigrasi ke **`next/og`** bawaan. Header cache OG terverifikasi utuh.
+- **Ikon `Github` lucide-react dihapus upstream (1.x)** — diganti komponen
+  `components/GithubMark.tsx` (SVG octicon resmi, API `className` serupa) di
+  5 komponen (CommandMenu, Footer, NavBar, PaymentModal, studies-ui).
+- `next.config.ts`: kunci `eslint` dibuang (next lint dihapus di Next 16);
+  idem pada config yang ditulis `scripts/export-static.mjs`.
+- `scripts/export-static.mjs`: build memakai `next build --webpack`
+  (Turbopack OOM di lingkungan RAM < ~4 GB; hasil setara). Script baru
+  `npm run build:webpack` untuk verifikasi lokal/CI kecil.
+- `package.json` `name`: `niumination` → `niu-oss-dashboard` (selaras repo);
+  deskripsi diperbarui. Lockfile di-regenerate (npm 11; `npm ci` diverifikasi
+  kompatibel npm 10 bawaan Node 22 di CI/Vercel).
+
+### Catatan
+- Verifikasi: vitest 41/41 · `tsc --noEmit` bersih (TS 7) · build 205 halaman
+  webpack (SITE_URL kosong **dan** web.id — pitfall Vercel tertutup) ·
+  export:static OK · smoke 14 rute + API v1 + OG image PNG 1200×630 · SSR ID.
+- Tailwind sengaja **tetap 3.4.17** (maintenance, stabil): migrasi v4
+  (CSS-first) menunggu verifikasi visual — dicatat di BACKLOG/AGENTS.
+
 ## [Fix deploy] — build Vercel gagal karena `SITE_URL` kosong — 2026-09-19
 
 ### Diperbaiki

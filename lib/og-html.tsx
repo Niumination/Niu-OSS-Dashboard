@@ -1,9 +1,9 @@
 import React from 'react';
 
 /**
- * Builder OpenGraph image (JSX untuk satori / @vercel/og).
+ * Builder OpenGraph image (JSX untuk satori / next/og).
  *
- * Font yang tersedia di runtime satori bawaan @vercel/og hanya "sans serif"
+ * Font yang tersedia di runtime satori bawaan next/og hanya "sans serif"
  * (700) — jadi semua elemen memakainya; aksen tipografis dibuat lewat
  * letterSpacing / weight / warna. SVG inline (path/circle) didukung satori.
  */
