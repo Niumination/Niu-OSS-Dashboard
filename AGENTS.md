@@ -75,6 +75,8 @@ npm run export:static   # varian GitHub Pages (out/)
 - Env produksi terpasang: `SITE_URL`, `GITHUB_OWNER`, `GITHUB_TOKEN`, Midtrans/Stripe, kontak.
 - Reproduksi lokal perilaku Vercel: `SITE_URL= npm run build`.
 - Next 16: build Vercel = **Turbopack default** (Node ≥ 20.9; Vercel pakai Node 22). Di mesin RAM kecil (< ~4 GB) Turbopack bisa OOM — verifikasi lokal pakai `npm run build:webpack`; `export:static` sudah memakai `--webpack` untuk alasan yang sama.
+- **Pitfall ISR + hydration (#418, 19 Sep 2026):** `revalidate` (level halaman MAUPUN level `fetch`) membuat halaman diregenerasi di Vercel; artefak ter-cache pernah menyajikan DOM generasi baru + payload flight RSC generasi lama dalam SATU dokumen → hydration gagal (React #418) di semua halaman → seluruh pohon diregenerasi klien (hero 3D ikut tampak glitch). Solusi: SEMUA halaman statis murni — tanpa `export const revalidate`, fetch halaman pakai `cache: 'force-cache'` (lihat `getGithubSnapshot`); hanya route API `/api/github/*` yang boleh ISR (`{ live: true }`). Label waktu relatif di komponen klien WAJIB `suppressHydrationWarning` (pola `<TimeAgo>`). Halaman tanpa ISR terbukti hidrasi bersih (uji: `/offline` OK vs `/` gagal, pra-fix).
+- Data halaman kini dibekukan per deploy; penyegaran = push data baru (cron `refresh-data` mingguan) → auto-redeploy Vercel.
 
 ## Tasks
 

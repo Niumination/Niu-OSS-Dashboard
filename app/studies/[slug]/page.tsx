@@ -10,7 +10,10 @@ import { getGithubSnapshot } from '@/lib/github';
 import { CASE_STUDIES, getAdjacent, getStudy } from '@/lib/case-studies';
 import { siteUrl } from '@/lib/env';
 
-export const revalidate = 300;
+// Statik murni tanpa ISR: regenerasi ISR di Vercel pernah mencampur generasi
+// render (DOM segar vs payload flight RSC basi) sehingga hydration gagal
+// (React #418) di semua halaman. Data diperbarui per deploy — cron mingguan
+// refresh-data push data baru -> auto-redeploy. Lihat CHANGELOG [Stack 2026.1].
 export const dynamicParams = false;
 
 export function generateStaticParams() {

@@ -5,7 +5,10 @@ import { RepoOg } from '@/lib/og-html';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 // Nilai statis (persyaratan parser config Next); diabaikan pada static export.
-export const revalidate = 3600;
+// Statik murni tanpa ISR: regenerasi ISR di Vercel pernah mencampur generasi
+// render (DOM segar vs payload flight RSC basi) sehingga hydration gagal
+// (React #418) di semua halaman. Data diperbarui per deploy — cron mingguan
+// refresh-data push data baru -> auto-redeploy. Lihat CHANGELOG [Stack 2026.1].
 
 /** Diperlukan agar route ini ikut di-pre-render pada `output: 'export'`. */
 export async function generateStaticParams(): Promise<Array<{ slug: string }>> {

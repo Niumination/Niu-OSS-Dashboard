@@ -23,10 +23,14 @@ import { StudiesTeaser } from '@/components/studies-ui';
 import { computeSummary } from '@/lib/summary';
 import { SERVICE_PACKAGES, SITE } from '@/lib/site.config';
 import type { RepoLite } from '@/lib/types';
-import { formatIDR, langColor, timeAgo } from '@/lib/utils';
+import { formatIDR, langColor } from '@/lib/utils';
 import T from '@/components/T';
+import TimeAgo from '@/components/TimeAgo';
 
-export const revalidate = 300;
+// Statik murni tanpa ISR: regenerasi ISR di Vercel pernah mencampur generasi
+// render (DOM segar vs payload flight RSC basi) sehingga hydration gagal
+// (React #418) di semua halaman. Data diperbarui per deploy — cron mingguan
+// refresh-data push data baru -> auto-redeploy. Lihat CHANGELOG [Stack 2026.1].
 
 const PKG_ICON = {
   consult: MessagesSquare,
@@ -167,7 +171,7 @@ export default async function Home() {
                     <div className="truncate font-mono text-[10px] text-cream/40">{rel.name}</div>
                   </div>
                   <span className="shrink-0 font-mono text-[10px] text-cream/35">
-                    {timeAgo(rel.createdAt)}
+                    <TimeAgo iso={rel.createdAt} />
                   </span>
                 </a>
               ))}
@@ -279,7 +283,7 @@ export default async function Home() {
                     <div className="truncate font-mono text-[10px] text-cream/40">{e.repo}</div>
                   </div>
                   <span className="shrink-0 font-mono text-[10px] text-cream/35">
-                    {timeAgo(e.createdAt)}
+                    <TimeAgo iso={e.createdAt} />
                   </span>
                 </Link>
               );

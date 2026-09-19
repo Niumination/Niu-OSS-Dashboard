@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import TimeAgo from './TimeAgo';
 import { motion } from 'framer-motion';
 import {
   Clock,
@@ -12,7 +13,7 @@ import {
 } from 'lucide-react';
 import { categorize, CATEGORY_MAP } from '@/lib/categories';
 import type { RepoLite } from '@/lib/types';
-import { formatDate, formatNumber, langColor, timeAgo } from '@/lib/utils';
+import { formatDate, formatNumber, langColor } from '@/lib/utils';
 import { useLocale } from './LocaleProvider';
 import { localizedDescription } from '@/lib/repo-i18n';
 
@@ -111,7 +112,7 @@ export default function RepoCard({ repo, index = 0, instant = false }: Props) {
           className="ml-auto flex items-center gap-1"
           title={t('rc.pushed', { date: formatDate(repo.pushedAt) })}
         >
-          <Clock className="size-3" /> {timeAgo(repo.pushedAt)}
+          <Clock className="size-3" /> <TimeAgo iso={repo.pushedAt} />
         </span>
       </div>
 

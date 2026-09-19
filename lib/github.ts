@@ -49,7 +49,7 @@ function headers(): Record<string, string> {
   return h;
 }
 
-async function gh<T>(path: string, revalidate: number = REVALIDATE): Promise<T> {
+async function gh<T>(path: string, opts: { live?: boolean } = {}): Promise<T> {
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), FETCH_TIMEOUT_MS);
   let res: Response;
@@ -57,7 +57,13 @@ async function gh<T>(path: string, revalidate: number = REVALIDATE): Promise<T> 
     res = await fetch(`${API}${path}`, {
       headers: headers(),
       signal: ctrl.signal,
-      next: { revalidate, tags: ['github'] },
+      // live (route API): ISR revalidate. Statis (render halaman): force-cache
+      // supaya halaman statik murni — revalidate level fetch akan diwarisi
+      // halaman sebagai ISR dan memicu hydration mismatch (lihat CHANGELOG
+      // [Stack 2026.1]).
+      ...(opts.live
+        ? { next: { revalidate: REVALIDATE, tags: ['github'] } }
+        : { cache: 'force-cache' as RequestCache }),
     });
   } catch {
     // AbortError (timeout) atau network failure -> fallback snapshot.
@@ -264,7 +270,8 @@ export async function getRecentReleases(snap: Snapshot): Promise<ReleaseItem[]> 
         'User-Agent': 'niumination-dashboard',
       },
       body: JSON.stringify({ query: RELEASES_QUERY, variables: { owner: OWNER } }),
-      next: { revalidate: 3600, tags: ['github'] },
+      // Halaman statik murni: beku saat build (lihat getGithubSnapshot).
+      cache: 'force-cache',
     });
     if (!res.ok) return fromEvents();
     const json = (await res.json()) as {
@@ -303,8 +310,19 @@ export interface SnapshotResult {
   error: string | null;
 }
 
-/** Ambil snapshot lengkap (user + repos + events) dengan fallback otomatis. */
-export async function getGithubSnapshot(): Promise<Snapshot> {
+/**
+ * Ambil snapshot lengkap (user + repos + events) dengan fallback otomatis.
+ *
+ * `live: true`  — dipakai route API `/api/github/*`: fetch ISR (revalidate
+ *                 5 mnt), data selalu bergerak; tidak dihidrasi, aman.
+ * `live: false` — default untuk RENDER HALAMAN: fetch sekali saat build
+ *                 (force-cache) sehingga setiap halaman statik murni dan
+ *                 dokumen HTML + flight RSC selalu dari satu render —
+ *                 mencegah hydration mismatch React #418 di Vercel
+ *                 (ISR pernah mencampur DOM generasi baru dengan payload
+ *                 flight generasi lama). Data halaman diperbarui per deploy.
+ */
+export async function getGithubSnapshot(opts: { live?: boolean } = {}): Promise<Snapshot> {
   // Mode static export (GitHub Pages): snapshot build, tanpa fetch apa pun.
   if (isStaticExport) {
     return { ...MOCK_SNAPSHOT, source: 'static-build' };
@@ -312,18 +330,18 @@ export async function getGithubSnapshot(): Promise<Snapshot> {
 
   try {
     const [user, repos, events] = await Promise.all([
-      gh<RawUser>(`/users/${OWNER}`),
-      gh<RawRepo[]>(`/users/${OWNER}/repos?per_page=100&sort=pushed`),
-      gh<RawEvent[]>(`/users/${OWNER}/events/public?per_page=100`).catch(() => []),
+      gh<RawUser>(`/users/${OWNER}`, opts),
+      gh<RawRepo[]>(`/users/${OWNER}/repos?per_page=100&sort=pushed`, opts),
+      gh<RawEvent[]>(`/users/${OWNER}/events/public?per_page=100`, opts).catch(() => []),
     ]);
     return {
       user: mapUser(user),
       repos: (repos ?? []).map(mapRepo),
       events: (events ?? []).map(mapEvent).filter((e): e is Ghevent => e !== null),
-      live: true,
+      live: Boolean(opts.live),
       rateLimited: false,
       updatedAt: new Date().toISOString(),
-      source: 'github-api',
+      source: opts.live ? 'github-api' : 'build-snapshot',
     };
   } catch (err) {
     const ghErr = err instanceof GithubError ? err : null;
@@ -352,7 +370,8 @@ async function fetchRawReadme(slug: string): Promise<string | null> {
       // Ref `HEAD` bekerja untuk branch default apa pun (main/master/…).
       const res = await fetch(`https://raw.githubusercontent.com/${OWNER}/${slug}/HEAD/${name}`, {
         signal: ctrl.signal,
-        next: { revalidate: 600, tags: ['github'] },
+        // Halaman statik murni: beku saat build (lihat getGithubSnapshot).
+        cache: 'force-cache',
       });
       if (res.ok) {
         const text = await res.text();

@@ -6,7 +6,7 @@ export const revalidate = 300;
 
 /** GET /api/github/summary — metrik agregat (stats, bahasa, kategori, deployments). */
 export async function GET() {
-  const snap = await getGithubSnapshot();
+  const snap = await getGithubSnapshot({ live: true });
   return NextResponse.json({
     ...computeSummary(snap),
     live: snap.live,

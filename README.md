@@ -71,7 +71,7 @@ Setiap fase punya entri [CHANGELOG.md](./CHANGELOG.md) + commit yang bisa diaudi
 
 | # | Fitur | Detail |
 |---|-------|--------|
-| 1 | **Agregator repositori dinamis** | GitHub REST API via `fetch` + Next ISR (`revalidate: 300`). Pencarian fuzzy real-time (Fuse.js), kategori otomatis berbasis language/topik/nama, badge tech stack, stars/forks, sortir, filter fork. |
+| 1 | **Agregator repositori dinamis** | GitHub REST API via `fetch` — diambil saat build (halaman statis per deploy; API live `/api/github/*` tetap ISR `revalidate: 300`). Pencarian fuzzy real-time (Fuse.js), kategori otomatis berbasis language/topik/nama, badge tech stack, stars/forks, sortir, filter fork. |
 | 2 | **Hero 3D performance-aware** | `@react-three/fiber` + `drei`. Deteksi device saat mount + FPS monitor in-scene (<45 fps 2 dtk pasca warm-up → **auto-degrade** ke SceneLite: CSS glow orbs + canvas 2D). |
 | 3 | **Command Palette (Ctrl+K)** | `cmdk`: cari repo, lompat antar seksi, buka tautan sosial, salin email, picu modal pembayaran — full keyboard. |
 | 4 | **Master dashboard** (`/system`) | 6 stat cards, commit heatmap 26 minggu, distribusi bahasa, grafik aktivitas 30 hari, **pola kontribusi 12 bulan** (GraphQL/fallback), donat kategori, feed event, StatusMonitor live. |
@@ -198,10 +198,12 @@ npm run dev                  # http://localhost:3000
 ## ✦ Arsitektur data & alur GitOps
 
 ```
-                    ┌─ runtime (Vercel / npm start) ─┐
-GitHub API ──fetch──▶ lib/github.ts (ISR 300 dtk)    │
+                    ┌─ build time (render halaman) ──┐
+GitHub API ──fetch──▶ lib/github.ts (force-cache)    │
    │                 │  403/429/error → FALLBACK     │
-   │                 └──▶ halaman + /api/github/*    │
+   │                 └──▶ halaman statis per deploy  │
+   │                 ┌─ runtime (route API live) ────┐
+   │                 └──▶ /api/github/* (ISR 300)    │
    │
    │  ┌─ build time / terjadwal (GitOps) ───────────────────────┐
    ├──▶ scripts/gen-mock.mjs      → data/*.json + lib/mock-data.ts (mingguan, refresh-data.yml)
@@ -325,7 +327,8 @@ npm test           # 41 test, < 2 dtk
 6. Verifikasi pasca-live: `https://niumination.web.id/sitemap.xml`, `/robots.txt`,
    `/feed.xml`, `/status`, OG image, dan `/api/v1/index.json`.
 
-Keuntungan: ISR terkelola (data segar tiap 5 menit), dynamic OG di Node runtime,
+Keuntungan: halaman statis murni per deploy (data GitHub diambil saat build —
+satu dokumen HTML+flight atomik, hidrasi konsisten), dynamic OG di Node runtime,
 `/api/pay/*` + `/api/v1/*` live (route mem-bundle JSON saat build — aman di
 lambda), `/api/vitals` aktif.
 
