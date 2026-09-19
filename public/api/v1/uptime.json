@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-19T19:01:02.532Z",
+ "generatedAt": "2026-09-19T21:27:11.604Z",
  "source": "data/uptime.json (GitHub Actions, tiap 15 menit)",
  "intervalMinutes": 15,
  "sites": [
@@ -8,7 +8,7 @@
    "url": "https://pemdi-aceh-tengah.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 564,
+   "avgMs30d": 562,
    "days": 2,
    "lastOk": true,
    "lastCheck": {
@@ -22,7 +22,7 @@
    "url": "https://watchdog-mata.niumination.web.id",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 209,
+   "avgMs30d": 202,
    "days": 2,
    "lastOk": true,
    "lastCheck": {
@@ -36,7 +36,7 @@
    "url": "https://niumination.github.io/Niu-LKH/",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 215,
+   "avgMs30d": 199,
    "days": 2,
    "lastOk": true,
    "lastCheck": {
@@ -50,7 +50,7 @@
    "url": "https://sapa-ai-indol.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 175,
+   "avgMs30d": 151,
    "days": 2,
    "lastOk": true,
    "lastCheck": {
@@ -62,9 +62,9 @@
   {
    "repo": "cc-acehtengah",
    "url": "https://cc-acehtengah.vercel.app",
-   "uptime7d": 25,
-   "uptime30d": 25,
-   "avgMs30d": 627,
+   "uptime7d": 20,
+   "uptime30d": 20,
+   "avgMs30d": 616,
    "days": 2,
    "lastOk": true,
    "lastCheck": {
@@ -78,7 +78,7 @@
    "url": "https://niumination.github.io/niu-dash/",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 265,
+   "avgMs30d": 249,
    "days": 2,
    "lastOk": true,
    "lastCheck": {
@@ -90,9 +90,9 @@
   {
    "repo": "kune-ya.com",
    "url": "https://kune-ya-com.vercel.app",
-   "uptime7d": 25,
-   "uptime30d": 25,
-   "avgMs30d": 830,
+   "uptime7d": 20,
+   "uptime30d": 20,
+   "avgMs30d": 803,
    "days": 2,
    "lastOk": true,
    "lastCheck": {
@@ -106,7 +106,7 @@
    "url": "https://github.com/Niumination/didong-code",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 618,
+   "avgMs30d": 599,
    "days": 2,
    "lastOk": true,
    "lastCheck": {
@@ -120,7 +120,7 @@
    "url": "https://niumination.github.io/niu-private/",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 250,
+   "avgMs30d": 232,
    "days": 2,
    "lastOk": true,
    "lastCheck": {
@@ -132,9 +132,9 @@
   {
    "repo": "VirtualAssistance",
    "url": "https://virtual-assistance-pi.vercel.app",
-   "uptime7d": 25,
-   "uptime30d": 25,
-   "avgMs30d": 529,
+   "uptime7d": 20,
+   "uptime30d": 20,
+   "avgMs30d": 511,
    "days": 2,
    "lastOk": true,
    "lastCheck": {
