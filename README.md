@@ -153,8 +153,8 @@ niumination/
 ## ✦ Persiapan & jalankan lokal
 
 ```bash
-git clone https://github.com/niumination/niumination.git
-cd niumination
+git clone git@github.com:Niumination/Niu-OSS-Dashboard.git
+cd Niu-OSS-Dashboard
 
 npm install
 cp .env.example .env.local   # isi sesuai kebutuhan (lihat bagian Environment)
@@ -304,7 +304,7 @@ npm test           # 41 test, < 2 dtk
 
 ### A. Vercel (utama — domain niumination.web.id)
 
-1. Push repo ke `niumination/niumination`.
+1. Push repo ke `Niumination/Niu-OSS-Dashboard` (repo sudah ada — riwayat 11 commit terjaga).
 2. [vercel.com/new](https://vercel.com/new) → import repo. Framework: **Next.js**.
 3. Environment variables: `SITE_URL=https://niumination.web.id`, `GITHUB_TOKEN`,
    kunci Midtrans/Stripe, kontak.
@@ -395,16 +395,15 @@ npm run build && npm start   # atau: docker build -t niumination . && docker run
 
 `Dockerfile` multi-stage sudah tersedia di repo.
 
-## ✦ Push ke `niumination/niumination`
+## ✦ Push ke `Niumination/Niu-OSS-Dashboard`
+
+Repo sudah ada dan riwayatnya terjaga (11 commit). Untuk mengirim perubahan:
 
 ```bash
-# di folder niumination/
-git init
-git add -A
-git commit -m "feat: OSS dashboard — landing + dashboard interaktif"
-git branch -M main
-git remote add origin https://github.com/niumination/niumination.git
-git push -u origin main      # -f hanya jika riwayat lama tidak perlu dijaga
+# di folder Niu-OSS-Dashboard/
+git add <berkas>
+git commit -m "<tipe>: <ringkasan>"
+git push origin main
 ```
 
 ## ✦ Audit & hardening
