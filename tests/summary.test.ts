@@ -74,6 +74,22 @@ function snapshotFixture(): Snapshot {
   };
 }
 
+describe('computeSummary(snap, now) — determinisme', () => {
+  it('now eksplisit menghasilkan metrik identik berapa pun jam klien', () => {
+    const snap = snapshotFixture();
+    const a = computeSummary(snap, 1_800_000_000_000); // jam fiksi A
+    const b = computeSummary(snap, 1_800_000_000_000); // panggil ulang
+    expect(a).toEqual(b);
+  });
+
+  it('now berbeda jauh mengubah window 30 hari (bukti parameter dipakai)', () => {
+    const snap = snapshotFixture();
+    const a = computeSummary(snap, Date.UTC(2026, 8, 20));
+    const b = computeSummary(snap, Date.UTC(2020, 0, 1));
+    expect(a.eventsLast30d).not.toBe(b.eventsLast30d);
+  });
+});
+
 describe('computeSummary()', () => {
   const s = computeSummary(snapshotFixture());
 

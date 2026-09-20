@@ -2,16 +2,20 @@
  * Service worker PWA — Niumination.
  *
  * Strategi:
- *  - Precache shell inti (/, /offline, manifest, ikon).
- *  - Navigasi  : network-first -> cache -> fallback /offline.
- *  - Aset lain : stale-while-revalidate (cache-first + pembaruan diam-diam).
+ *  - Precache shell inti (/, /offline, manifest, ikon) — tahan gagal: aset
+ *    di-precached satu per satu; satu gagal tidak membatalkan instalasi.
+ *  - Navigasi  : network-first -> cache navigasi (RUNTIME, dibatasi N entri
+ *    LRU-ish) -> fallback /offline.
+ *  - Aset lain : stale-while-revalidate (cache-first + pembaruan diam-diam),
+ *    masuk cache RUNTIME yang sama (dibatasi).
  *
  * Catatan deploy:
  *  - GitHub Pages melayani situs dari root -> scope '/' valid.
- *  - Versi cache di-bump (NIU_SW_VERSION) saat strategi/aset berubah.
+ *  - Bump VERSION saat strategi/aset inti berubah.
  */
 
-const VERSION = 'niu-sw-v1';
+const VERSION = 'niu-sw-v2';
+const RUNTIME_MAX = 60;
 const CORE = [
   '/',
   '/offline',
@@ -20,12 +24,45 @@ const CORE = [
   '/icons/icon-512.png',
 ];
 
+/** Simpan satu permintaan; gagal direkam tapi tidak melempar. */
+async function putQuiet(cacheName, req, res) {
+  try {
+    const cache = await caches.open(cacheName);
+    await cache.put(req, res);
+  } catch {
+    // Kuota penuh / disk gagal — abaikan; entri berikutnya tetap dicoba.
+  }
+}
+
+/** Pangkas cache ke N entri terbaru (approx-LRU: Cache API urutkan insert). */
+async function trim(cacheName, max) {
+  try {
+    const cache = await caches.open(cacheName);
+    const keys = await cache.keys();
+    if (keys.length <= max) return;
+    for (const key of keys.slice(0, keys.length - max)) {
+      await cache.delete(key);
+    }
+  } catch {
+    // abaikan
+  }
+}
+
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches
-      .open(VERSION)
-      .then((cache) => cache.addAll(CORE))
-      .then(() => self.skipWaiting()),
+    (async () => {
+      const cache = await caches.open(VERSION);
+      // addAll bersifat all-or-nothing; jaringan goyang saat instalasi tidak
+      // boleh membatalkan service worker selamanya -> precache per item.
+      await Promise.all(
+        CORE.map((url) =>
+          fetch(new Request(url, { cache: 'reload' }))
+            .then((res) => (res.ok ? putQuiet(VERSION, url, res) : null))
+            .catch(() => null),
+        ),
+      );
+      await self.skipWaiting();
+    })(),
   );
 });
 
@@ -45,20 +82,21 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return; // hanya same-origin
 
-  // Navigasi halaman: network-first.
+  // Navigasi halaman: network-first, salin ke cache runtime (dibatasi).
   if (req.mode === 'navigate') {
     event.respondWith(
       fetch(req)
         .then((res) => {
-          const copy = res.clone();
-          caches.open(VERSION).then((c) => c.put(req, copy));
+          if (res.ok) {
+            const copy = res.clone();
+            putQuiet(VERSION, req, copy).then(() => trim(VERSION, RUNTIME_MAX));
+          }
           return res;
         })
         .catch(() =>
           caches
             .match(req)
             .then((hit) => hit || caches.match('/offline'))
-            .then((hit) => hit || caches.match('/offline.html'))
             .then(
               (hit) =>
                 hit ||
@@ -72,14 +110,14 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Aset: stale-while-revalidate.
+  // Aset: stale-while-revalidate (dibatasi jumlah entri).
   event.respondWith(
     caches.match(req).then((hit) => {
       const fetching = fetch(req)
         .then((res) => {
           if (res.ok) {
             const copy = res.clone();
-            caches.open(VERSION).then((c) => c.put(req, copy));
+            putQuiet(VERSION, req, copy).then(() => trim(VERSION, RUNTIME_MAX));
           }
           return res;
         })

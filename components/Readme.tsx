@@ -29,7 +29,17 @@ export default function Readme({ source }: { source: string }) {
       });
       if (live) setHtml(clean);
     } catch {
-      if (live) setHtml(`<p>${source.slice(0, 2000)}</p>`);
+      // Jalur error: escape entitas HTML — JANGAN menyuntik markdown mentah
+      // (bisa berisi HTML) tanpa sanitasi ke dangerouslySetInnerHTML.
+      if (live) {
+        const esc = source
+          .slice(0, 2000)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;');
+        setHtml(`<p>${esc}</p>`);
+      }
     }
     return () => {
       live = false;

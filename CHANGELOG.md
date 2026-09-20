@@ -5,6 +5,32 @@ per fase pengerjaan, lengkap dengan commit yang bisa dilacak.
 Format mengikuti [Keep a Changelog](https://keepachangelog.com/id/1.1/);
 proyek ini tidak memakai versioning semver ketat (satu repo, satu situs).
  
+## [Stack 2026.3] — audit #3: keamanan/SW/test, roadmap tingkat lanjut — 2026-09-20
+
+### Audit #3 (area yang belum diperdalam) — temuan & perbaikan
+- **Readme.tsx (XSS jalur error)**: fallback saat `marked` melempar menyuntik
+  potongan markdown MENTAH ke `dangeringlySetInnerHTML` tanpa sanitasi —
+  kini di-escape entitas HTML terlebih dulu.
+- **sw.js v2**: instalasi precache tidak lagi all-or-nothing (`addAll` →
+  per-item, tahan jaringan goyang); cache runtime DIBATASI 60 entri
+  (approx-LRU) — tidak lagi membengkak tanpa batas dari navigasi.
+- **Skeleton a11y**: `role="status"` + label pada skeleton grid (pembaca
+  layar kini tahu sedang memuat).
+- **+11 unit test** (52 total): `tests/uptime.test.ts` baru (uptimePct,
+  avgMs, lastCheck, lastIncident, overall) + determinisme `now` pada
+  `computeSummary` (regresi #418 lintas-hari).
+
+### Rencana pengembangan tingkat lanjut
+- **`docs/ROADMAP.md` disusun ulang** jadi fase 0–5 (rumah tangga → konten →
+  a11y → API/data → observabilitas → komunitas) dengan KPI, risiko-mitigasi,
+  antrian quick-win, dan pemetaan riwayat fase lama; README ikut diselaraskan.
+
+### Diverifikasi
+tsc 0 · vitest 52/52 · build 205 halaman statis · hidrasi 5 rute utama 0
+error (termasuk /repo dengan README render) · sw.js lolos `node --check`.
+Operasional: browser u dipindah ke path disk (`.cache/pw`) — tmpfs /tmp
+membuat sandbox RAM-2GB thrash saat build (tercatat di AGENTS.md).
+
 ## [Stack 2026.2] — audit pasca-fix #418, hardening 3D & UX ramah pengguna — 2026-09-20
 
 ### Audit mendalam pasca-fix (4 bug laten ditemukan & diperbaiki)

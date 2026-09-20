@@ -451,12 +451,14 @@ Riwayat lengkap per fase: **[CHANGELOG.md](./CHANGELOG.md)** · Rencana lanjutan
 ## ✦ Rencana pengembangan
 
 Ringkasan — versi lengkap (tujuan, lingkup, kriteria terima, estimasi, risiko)
-ada di **[docs/ROADMAP.md](./docs/ROADMAP.md)**:
+ada di **[docs/ROADMAP.md](./docs/ROADMAP.md)** (disusun ulang 2026-09-20
+menjadi fase 0–5 + riwayat fase lama):
 
 | Fase | Fokus | Estimasi |
 |------|-------|----------|
-| 4 — Go-live | Vercel + domain niumination.web.id, env produksi, baseline vitals | ~1 hari |
-| 5 — Konten & data | Studi kasus MDX, kalender kontribusi live (token), overlay EN lengkap | 1–2 minggu |
-| 6 — Distribusi | Widget embed repo, badge SVG ala shields, QR kartu nama | 2–3 minggu |
-| 7 — Kualitas | E2E Playwright, Sentry penuh, Lighthouse per-PR | paralel |
-| 8 — Monetisasi+ | Produk digital, portal klien, invoice otomatis | setelah trafik |
+| 0 — Rumah tangga | E2E hidrasi di CI, guard #418, budget Lighthouse ketat | paralel |
+| 1 — Konten & narasi | Studi kasus kaya, /now, /changelog, galeri demo | 1–2 bulan |
+| 2 — Pengalaman & a11y | Audit WCAG 2.2 AA, onboarding, PWA offline penuh | 1 bulan |
+| 3 — Data & API | Dokumentasi API v1, dataset historis, feed per repo | 2 bulan |
+| 4 — Observabilitas | Dasbor vitals, SLA data, canary pasca-deploy | paralel |
+| 5 — Komunitas | Reaksi, kontributor tamu, peta ekosistem | setelah trafik |

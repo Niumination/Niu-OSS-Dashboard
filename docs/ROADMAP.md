@@ -1,151 +1,168 @@
-# Roadmap Pengembangan — Niumination OSS Dashboard
+# ROADMAP — Rencana Pengembangan Tingkat Lanjut
 
-> Dokumen hidup — diperbarui tiap fase. Riwayat yang sudah selesai ada di
-> [CHANGELOG.md](../CHANGELOG.md). Prinsip: **kirim kecil-kecil, terukur, dan
-> terlacak** — setiap fase punya kriteria terima yang bisa diverifikasi.
+> Dokumen hidup: revisi tiap fase selesai. Tanggal status: **2026-09-20**.
+> Prinsip urutan: **stabil → bermakna → menawan**. Tidak ada fitur baru di atas
+> fondasi yang merah.
 
-## Kondisi saat ini (baseline)
+## Prinsip yang tidak berubah
 
-- Situs production-ready: landing + dashboard, i18n ID/EN penuh (kecuali
-  PaymentModal yang memang lokal), PWA, API publik v1, QR share, observabilitas
-  (Web Vitals + Lighthouse mingguan), 41 unit test, CI 4 workflow.
-- Target deploy: **Vercel + domain `niumination.web.id`** (idwebhost).
-- Data: snapshot GitOps (mingguan) + uptime (15 menit) + API statis (101 file).
+1. **GitOps per-deploy**: halaman statis murni; data beku per deploy,
+   disegarkan cron mingguan (`refresh-data` → push → redeploy). Hanya
+   `/api/github/*` yang live (ISR 5 mnt).
+2. **Bahasa Indonesia 100%** untuk konten; Inggris hanya istilah teknis &
+   tautan eksternal.
+3. **Tanpa ISR pada halaman** (pelajaran #418 — dokumen campur generasi).
+4. **Performa adalah fitur**: 3D adaptif (3d/lite), degrade otomatis, RAM
+   sandbox kecil = uji ketat gratis.
+5. **Aksesibilitas bukan bonus**: keyboard-first, `aria-*`, reduced-motion.
 
----
+## Baseline hijau (jaga, jangan regresi)
 
-## Fase 4 — Go-live produksi ⏭ prioritas berikutnya
-
-**Tujuan**: situs live di `https://niumination.web.id`, terpantau, terukur.
-
-**Lingkup**
-1. Deploy Vercel (lihat README → *Deployment A*) + pasang domain idwebhost
-   (A `@` → `76.76.21.21`, CNAME `www` → `cname.vercel-dns.com`).
-2. Set env produksi: `SITE_URL`, `GITHUB_TOKEN`, kunci Midtrans/Stripe, kontak.
-3. Tambah `niumination.web.id` ke daftar pemeriksaan uptime
-   (`scripts/uptime-check.mjs` — daftar situs selain repo homepage).
-4. Baseline observabilitas: catat p50/p95 dari `/api/vitals` (1 minggu) dan
-   skor Lighthouse pertama di domain produksi.
-
-**Kriteria terima**
-- [ ] Semua rute utama 200 di domain (+ SSL A-grade, redirect www→apex atau sebaliknya).
-- [ ] `sitemap.xml`, `robots.txt`, `feed.xml`, OG image, `/api/v1/*` valid di domain.
-- [ ] Uptime 11/11 situs terpantau (10 repo + domain utama).
-- [ ] Web Vitals & Lighthouse tercatat minimal 1 siklus penuh.
-
-**Estimasi**: ~1 hari kerja (+ menunggu propagasi DNS).
-**Risiko & mitigasi**: record DNS lama idwebhost bertabrakan → hapus parking
-record; .web.id butuh verifikasi identitas → pastikan domain aktif ≥ 1 tahun.
+vitest 52/52 · tsc 0 · build 205 halaman statis · hidrasi 0 error (11 rute,
+termasuk uji lintas-midnight & WebGL-gagal) · smoke 14 rute · SSR ID ·
+`export:static` OK · `npm audit` 0 · API live ISR 5 mnt.
 
 ---
 
-## Fase 5 — Konten & data (1–2 minggu)
+## FASE 0 — Rumah Tangga Berkelanjutan (mingguan, jalan terus)
 
-**Tujuan**: konten makin dalam, data makin live.
+Tujuan: kualitas tidak terkikis oleh waktu. *(CI dasar sudah ada:
+`ci.yml` = vitest+tsc+build; `lighthouse.yml` mingguan — item di bawah
+adalah PENGUATAN, bukan dari nol.)*
 
-**Lingkup**
-1. **Studi kasus MDX**: migrasi `data/studies.json` → konten MDX berkomponen
-   (callout, snippet kode, tabel metrik, screenshot). Tetap tanpa CMS — MDX
-   in-repo, fallback JSON dipertahankan untuk API.
-2. **Kalender kontribusi live**: `GITHUB_TOKEN` di Vercel mengaktifkan GraphQL
-   `contributionsCalendar` 12 bulan (sudah tersedia; tinggal set env + verifikasi).
-3. **Overlay EN deskripsi repo tuntas**: audit 67 deskripsi ber-bahasa, tambah
-   padanan EN yang belum ada (saat ini 12).
-4. **Halaman "Uses"** (opsional): setup perkakas — bernilai SEO & relatable.
+- [ ] **E2E hidrasi di CI** (`ci.yml`, job baru): `next start` + Playwright
+      — 11 rute = 0 error, uji WebGL-gagal → degrade, pintasan `/`.
+      Simpan skrip di `tests/e2e/` (adaptasi `/home/user/.pwtest` lokal).
+- [ ] **Guard route-table #418**: langkah CI yang gagal bila build output
+      menampilkan kolom Revalidate pada rute halaman (bukan `/api/*`).
+- [ ] **Ketatkan anggaran Lighthouse** (`lighthouserc.json`): LCP ≤ 2.500
+      (error, kini 4.000 warn), CLS ≤ 0,05 (kini 0,15), a11y ≥ 0,95.
+- [ ] **Keterbaruan data**: badge "snapshot per-deploy" menautkan ke
+      `/api/github/summary` — pengunjung selalu tahu umur data.
+- [ ] Kunci dependensi mingguan (`npm outdated` → PR terjadwal, renovate-style).
 
-**Kriteria terima**
-- [ ] 3 studi kasus dirender dari MDX dengan minimal 1 snippet + 1 visual per studi.
-- [ ] Panel /system menampilkan kalender 12 bulan dari GraphQL (bukan fallback).
-- [ ] Semua deskripsi repo berbahasa Indonesia punya `descriptionEn`.
+## FASE 1 — Konten & Narasi (bulan 1–2) — *prioritas pengguna*
 
-**Estimasi**: 1–2 minggu (dominan penulisan konten).
-**Risiko**: MDX menambah dependensi & waktu build → ukur delta build; batasi
-komponen MDX pada whitelist kecil.
+Tujuan: pengunjung datang untuk **cerita**, bukan sekadar daftar repo.
 
----
+- [ ] **Katalog studi kasus kaya** (perluas `/studies`): tiap studi punya
+      masalah → keputusan → hasil terukur → cuplikan arsitektur (SVG inline).
+      Target: 8–12 studi, semuanya dari proyek nyata yang ada.
+- [ ] **Halaman "Tentang/Sekarang"** (`/now`): apa yang sedang dikerjakan —
+      diperbarui otomatis dari event GitHub terbaru (sudah ada datanya).
+- [ ] **Catatan rilis** (`/changelog` situs): render `CHANGELOG.md` repo
+      sebagai halaman (markdown → sanitasi DOMPurify, pola `Readme.tsx`).
+- [ ] **Galeri demo live**: kartu repo dengan pratinjau screenshot (diambil
+      cron `refresh-data` via Playwright, disimpan `public/shots/`) —
+      "lihat dulu, klik kemudian".
+- [ ] SEO konten: `feed.xml` kategori studi, JSON-LD `Article` per studi,
+      sitemap prioritas konten > dasbor.
 
-## Fase 6 — Distribusi & interaktivitas (2–3 minggu)
+## FASE 2 — Pengalaman & Aksesibilitas (bulan 2–3)
 
-**Tujuan**: konten situs bisa hidup di luar situs.
+Tujuan: situs terasa *mudah* untuk siapa pun, termasuk penyandang disabilitas
+& perangkat lemah.
 
-**Lingkup**
-1. **Widget embed repo**: rute `/embed/repo/[slug]` (iframe-friendly, tanpa
-   chrome) + cuplikan `<iframe>` di halaman repo — kartu repo bisa dipasang di
-   blog/situs orang lain.
-2. **Badge SVG ala shields.io**: `/api/badge/stars/{repo}.svg`,
-   `/api/badge/uptime/{repo}.svg` — cache 1 jam; dipakai README repo GitHub.
-3. **QR kartu nama digital**: `/share` — vCard (.vcf) + QR besar + tautan
-   kontak; QR halaman utama di footer.
-4. **OG dinamis per studi kasus** (file convention, seperti repo).
+- [ ] **Audit WCAG 2.2 AA** penuh (axe-core di CI + manual): kontras label
+      mikro (`text-cream/30` → naikkan ke /40+ di elemen informatif), fokus
+      terlihat di semua interaktif, target sentuh ≥ 44 px.
+- [ ] **Onboarding halus**: hint pertama-kunjung (localStorage) — "Tekan
+      `/` untuk mencari, Ctrl+K untuk semua aksi" — 1 kartu kecil, bisa
+      ditutup permanen.
+- [ ] **PWA offline penuh**: precache shell + halaman populer, halaman
+      offline kaya ("yang bisa dibaca offline: …"), `share_target` untuk
+      berbagi tautan repo.
+- [ ] **Mode densitas data**: toggle "ringkas/padat" di grid repo (pembaca
+      cepat vs penjelajah) — disimpan di localStorage.
+- [ ] **Terjemahan EN penuh** (toggle sudah ada — lengkapi halaman konten)
+      tanpa melanggar prinsip ID-first (EN opt-in, default id).
 
-**Kriteria terima**
-- [ ] Widget embed tervalidasi di 1 halaman eksternal (mis. profil README).
-- [ ] Badge terpasang di minimal 3 README repo GitHub (terverifikasi render).
-- [ ] `/share` menghasilkan unduhan .vcf yang dikenali iOS/Android.
+## FASE 3 — Data & API (bulan 3–5)
 
-**Estimasi**: 2–3 minggu.
-**Risiko**: abuse hotlinking badge → rate-limit ringan via cache header +
-`s-maxage`; embed dibatasi `X-Frame-Options` TIDAK di-set (memang sengaja).
+Tujuan: situs menjadi **sumber data OSS** yang bisa dipakai orang lain.
 
----
+- [ ] **API v1 stabil + dokumentasi** (`/api/docs`): halaman interaktif
+      (coba endpoint langsung, contoh cURL/JS) untuk `/api/v1/*` yang sudah
+      ada (repos, events, uptime, index).
+- [ ] **Dataset historis**: cron harian menyimpan ringkasan (jumlah repo,
+      stars, kontribusi) ke `data/history/*.json` → grafik pertumbuhan
+      di `/system` ("perjalanan 12 bulan").
+- [ ] **RSS/JSON feed per kategori & per repo** (berlangganan rilis repo
+      tertentu).
+- [ ] **Webhook/org sync**: sinkron otomatis kegemaran (stars/watch) —
+      tampilkan "diapresiasi oleh" di halaman repo.
+- [ ] Evaluasi GraphQL gateway tipis (bukan sebelum API v1 dipakai orang).
 
-## Fase 7 — Kualitas & otomasi (paralel, berkelanjutan)
+## FASE 4 — Observabilitas & Otomasi (bulan 4–6)
 
-**Tujuan**: perubahan dijamin tidak merusak; insiden terdeteksi cepat.
+Tujuan: situs memantau dirinya sendiri; Anda tahu masalah sebelum pengunjung.
 
-**Lingkup**
-1. **E2E Playwright**: alur kritis — toggle bahasa, cari repo → detail → QR,
-   /status render, donate-flow (mode sandbox Midtrans/Stripe), offline PWA.
-2. **Lighthouse per-PR** (naikkan dari mingguan): gagal = blok merge.
-3. **Sentry penuh**: `SENTRY_DSN` + sourcemap upload; alert ke email/Telegram.
-4. **Baseline performa**: anggaran bundel di CI (size-limit) untuk JS route utama.
+- [ ] **Dasbor Web Vitals** di `/system`: `/api/vitals` sudah menerima
+      laporan — kumpulkan ke `data/vitals.json` (cron agregat), tampilkan
+      p75 LCP/INP/CLS per rute + tren.
+- [ ] **SLA data**: indikator "umur snapshot" di semua halaman data;
+      peringatan otomatis (issue GitHub) bila cron gagal 2× berturut.
+- [ ] **Canary pasca-deploy**: workflow Actions menendang URL produksi
+      setelah deploy (status 200 + judul SSR ID + tanpa `revalidate` di
+      route table build log).
+- [ ] **Laporan kesehatan mingguan**: issue otomatis ringkas — vitals, uptime,
+      umur data, dependensi usang.
 
-**Kriteria terima**
-- [ ] CI (test → typecheck → e2e → lighthouse) hijau/merah < 10 menit.
-- [ ] Insiden simulasi (error route) tercatat di Sentry + notifikasi masuk.
+## FASE 5 — Interaktivitas & Komunitas (bulan 6+, opsional)
 
-**Estimasi**: 3–4 hari setup awal, lalu pemeliharaan.
-**Risiko**: runtime e2e di CI bikin lambat → jalankan hanya pada path kritis +
-paralelisasi matrix.
+Tujuan: dari "dasbor pribadi" menjadi **etalase komunitas**.
 
----
-
-## Fase 8 — Monetisasi lanjutan (setelah ada trafik/permintaan)
-
-**Tujuan**: pendapatan berulang dari aset yang sudah ada.
-
-**Lingkup**
-1. **Produk digital**: dotfiles pack premium (instalasi terpandu), e-book
-   "AI tooling untuk tim kecil" — checkout Midtrans + kirim otomatis via email.
-2. **Portal klien ringan**: halaman status proyek per-klien
-   (`/klien/{token}`) — progres, deliverable, invoice (read-only, tanpa auth berat).
-3. **Invoice otomatis**: PDF + pembayaran + pengingat (Xendit/Midtrans).
-
-**Kriteria terima**
-- [ ] 1 transaksi produk digital end-to-end (bayar → terima file).
-- [ ] 1 klien nyata memakai portal proyek selama 1 sprint.
-
-**Estimasi**: 3–4 minggu.
-**Risiko**: beban support → batasi SKU awal; jangan bangun portal penuh sebelum
-ada 2 klien.
-
----
-
-## Backlog riset (tidak terjadwal)
-
-| Ide | Catatan |
-|-----|---------|
-| **PPR** | Aktifkan hanya setelah p50/p95 `/api/vitals` di Vercel terukur; pola shell-statis sudah ada. |
-| **Gamifikasi** | Streak kontribusi + badge pencapaian di profil publik. |
-| **i18n PaymentModal** | Hanya bila ada permintaan klien EN nyata (alur saat ini memang lokal). |
-| **Komentar studi kasus** | Giscus (GitHub Discussions) — tanpa server. |
-| **Analitik privasi-first** | Plausible/Umami self-host bila butuh data trafik. |
+- [ ] **Reaksi & ucapan** (tanpa backend berat: GitHub Discussions sebagai
+      penyimpan — atau sekadar "salin pesan dukungan").
+- [ ] **Halaman kontributor tamu**: studi kasus komunitas (PR ke repo
+      manapun milik pemilik) dengan kurasi manual (file MD).
+- [ ] **Newsletter tipis** (sekali sebulan, render dari feed — penyedia
+      berbasis GitOps: listmonk/buttondown via API).
+- [ ] **Peta ekosistem**: visualisasi graf relasi antar repo (shared topics,
+      fork) — data sudah ada, hanya perlu layout (d3-force di canvas 2D —
+      pola SceneLite, bukan 3D berat).
 
 ---
 
-## Cara kerja per fase
+## Metrik keberhasilan (tinjau bulanan)
 
-1. Ambil satu fase → pecah jadi issue/checkbox di dokumen ini.
-2. Kerjakan di branch `fase-N` → PR → CI hijau → merge.
-3. Perbarui CHANGELOG (entri + hash commit) dan tabel status di README.
-4. Tandai kriteria terima ✅ di dokumen ini (jejak keputusan tetap terbaca).
+| Metrik | Target 3 bln | Target 6 bln |
+|---|---|---|
+| Lighthouse aksesibilitas | ≥ 95 | 100 (AA lulus audit manual) |
+| LCP p75 (medan, data vitals) | < 2,5 dtk | < 2,0 dtk |
+| Hidrasi error (CI harian) | 0 | 0 |
+| Studi kasus publik | 8 | 12+ |
+| Konsumen API v1 eksternal | — | ≥ 3 proyek |
+| Umur data maksimum | ≤ 7 hari (cron SLA) | ≤ 3 hari |
+
+## Risiko & mitigasi
+
+| Risiko | Mitigasi |
+|---|---|
+| Fitur menarik goda ISR kembali | Guard CI: route table wajib statis; komentar #418 di AGENTS.md |
+| Konten menumpuk tak terkurasi | Batas: 12 studi terbaik, arsip sisanya di repo |
+| API v1 dipakai berlebihan (biaya Vercel) | Cache header sudah ada; tambah rate-limit sederhana bila perlu |
+| PWA cache basah pasca-deploy | sw.js versi bump otomatis dari `BUILD_ID` hash (Fase 2) |
+| Sandbox/CI RAM kecil | Build Turbopack; export/webpack hanya di mesin ≥ 2 GB lega |
+
+## Riwayat fase sebelumnya (roadmap 2026.1 — selesai/diserap)
+
+Fase 1–3 (fondasi, dashboard, distribusi) dan sebagian 4–8 dari roadmap lama
+(lihat `git log 36a8847 -- docs/ROADMAP.md`) telah selesai:
+
+| Fase lama | Status | Nasib di roadmap baru |
+|---|---|---|
+| 4 — Go-live produksi | ✅ selesai (live di `niumination.web.id`) | — |
+| 5 — Konten & data | ⏳ sebagian (studi kasus ada, kalender kontribusi ada) | diserap FASE 1 |
+| 6 — Distribusi (widget embed, badge SVG) | belum | kandidat FASE 3 (API publik) |
+| 7 — Kualitas (E2E, observabilitas) | ⏳ sebagian (CI, vitals ada) | diserap FASE 0 & 4 |
+| 8 — Monetisasi+ | belum, tunggu trafik | di luar roadmap ini |
+
+## Antrian cepat (quick wins, ≤ 1 jam per item)
+
+1. `not-found`: tombol "kembali" (history.back) + saran pencarian.
+2. `RepoCard`: tautan "topik" → pencarian ter-filter (`/repositories?q=`).
+3. `/status`: legenda warna hari (hijau/merah/kuning) untuk pengunjung baru.
+4. CommandMenu: aksi "salin tautan halaman ini".
+5. `sw.js`: precache `/_next/static` hashed otomatis via event `install`
+   fetch manifest (atau biarkan SWR — sudah aman).
