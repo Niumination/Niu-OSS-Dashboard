@@ -121,8 +121,23 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
     { icon: Package, label: 'rd.stat.license', value: repo.license ?? '—' },
   ];
 
+  // BreadcrumbList: membantu mesin pencari memahami hierarki Home → Repositori → repo.
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Beranda', item: siteUrl },
+      { '@type': 'ListItem', position: 2, name: 'Repositori', item: `${siteUrl}/repositories` },
+      { '@type': 'ListItem', position: 3, name: repo.fullName, item: `${siteUrl}/repo/${repo.name}` },
+    ],
+  };
+
   return (
     <AppShell snapshot={snap}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
       <div className="mx-auto max-w-[1440px] px-4 pb-20 pt-8 md:px-6 lg:px-8">
         <Link
           href="/repositories"

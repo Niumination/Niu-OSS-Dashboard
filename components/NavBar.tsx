@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Command } from 'lucide-react';
@@ -102,8 +103,9 @@ export default function NavBar({ user }: { user: UserLite }) {
           >
             <GithubMark className="size-4" />
           </a>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          {/* Avatar GitHub via next/image: AVIF/WebP + ukuran presisi (CLS aman).
+              Di mode export statis otomatis jatuh ke <img> unoptimized. */}
+          <Image
             src={user.avatar}
             alt={user.login}
             width={36}

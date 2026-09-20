@@ -5,6 +5,33 @@ per fase pengerjaan, lengkap dengan commit yang bisa dilacak.
 Format mengikuti [Keep a Changelog](https://keepachangelog.com/id/1.1/);
 proyek ini tidak memakai versioning semver ketat (satu repo, satu situs).
  
+## [Stack 2026.5] — Audit kualitas 2026 + SEO & polish — 2026-09-21
+
+### Konteks
+Pasca-fix #418 (terverifikasi E2E live 12/12 di vercel.app). Audit internal
+× referensi praktik produksi Next.js 2026 — hasil lengkap + antrian
+penyempurnaan berikutnya di `docs/AUDIT-2026.5.md`.
+
+### SEO
+- **`BreadcrumbList` JSON-LD** di `/repo/[slug]` dan `/studies/[slug]`
+  (hierarki Beranda → daftar → detail) — memperkaya rich result Google.
+- **Avatar NavBar → `next/image`**: satu-satunya `<img>` manual tersisa
+  kini ikut optimasi otomatis (AVIF/WebP, dimensi presisi → CLS aman).
+  Mode export statis tetap aman (`images.unoptimized` sudah ditangani
+  `scripts/export-static.mjs`).
+
+### Keputusan dependensi (disengaja, bukan ketinggalan)
+- **react/react-dom tetap 19.2.8**: React 19.3 (9 Sep 2026) sudah rilis,
+  tetapi `@react-three/fiber@9.7.0` (terbaru) masih peer `>=19 <19.3` —
+  hero 3D lebih penting daripada fitur baru. Dijadwalkan ulang saat
+  fiber mendukung (lihat AUDIT-2026.5 §T3: View Transitions menggantikan
+  sebagian framer-motion).
+- next 16.3.5 = versi stabil terbaru; `npm audit` 0 temuan.
+
+### Verifikasi
+tsc 0 · vitest 52/52 · build 206 halaman statik · guard ✓ · E2E hidrasi
+12/12 (lokal, build normal).
+
 ## [Stack 2026.4] — FASE 0 roadmap: CI hidrasi E2E, guard #418, budget, dependabot — 2026-09-20
 
 ### E2E hidrasi masuk CI (otomatis, bukan manual lagi)

@@ -59,8 +59,23 @@ export default async function StudyPage({ params }: { params: Promise<{ slug: st
 
   const base = siteUrl;
 
+  // BreadcrumbList: hierarki Home → Studi → judul studi untuk mesin pencari.
+  const jsonLdBreadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Beranda', item: base },
+      { '@type': 'ListItem', position: 2, name: 'Studi Kasus', item: `${base}/studies` },
+      { '@type': 'ListItem', position: 3, name: c.title, item: `${base}/studies/${c.slug}` },
+    ],
+  };
+
   return (
     <AppShell snapshot={snap}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
       <div className="mx-auto max-w-[900px] px-4 pb-20 pt-8 md:px-6">
         <Link
           href="/studies"
