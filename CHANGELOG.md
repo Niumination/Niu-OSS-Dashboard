@@ -5,6 +5,49 @@ per fase pengerjaan, lengkap dengan commit yang bisa dilacak.
 Format mengikuti [Keep a Changelog](https://keepachangelog.com/id/1.1/);
 proyek ini tidak memakai versioning semver ketat (satu repo, satu situs).
  
+## [Stack 2026.2] — audit pasca-fix #418, hardening 3D & UX ramah pengguna — 2026-09-20
+
+### Audit mendalam pasca-fix (4 bug laten ditemukan & diperbaiki)
+- **`lib/insights.ts`**: fetch GraphQL kontribusi masih `revalidate: 3600` → di
+  Vercel (dengan `GITHUB_TOKEN`) halaman `/system` mewarisi ISR lagi (kambuh
+  #418). Kini `cache: 'force-cache'`. (Lokal tak terdeteksi: tanpa token, fetch
+  tak pernah jalan.)
+- **`lib/summary.ts` + `DashboardMetrics`**: `Date.now()`/`new Date()` di
+  render komponen klien → heatmap & bar aktivitas bergeser sehari setelah
+  deploy → hydration mismatch pasti kambuh di `/system`. Kini "sekarang"
+  deterministik = `snapshot.updatedAt` (dibuktikan: Playwright Clock maju 3
+  hari → 0 error; pra-fix pasti gagal).
+- **`RepoGrid`**: fallback `new Date()` pada tanggal banner dihapus.
+
+### Hardening rantai 3D adaptif (task tertunda)
+- **`ErrorBoundary` v2**: `resetKeys` (penyembuhan otomatis saat kunci
+  berubah), `onError` (hook strategi degrade), fallback default aksesibel
+  (`role="alert"`) + tombol "Coba lagi" tanpa reload.
+- **Hero3D**: error scene → degrade permanen ke SceneLite via `onError` +
+  `resetKeys={[mode]}` (bukan spinner selamanya).
+- **Scene3D**: `webglcontextlost` dicegah default-nya → degrade ke lite;
+  `fallback` Canvas kini memicu degrade (dibuktikan uji: WebGL di-stub gagal
+  → badge `lite · css/canvas`, canvas 2D aktif, 0 error).
+- Canvas dekoratif `aria-hidden` (pembaca layar).
+
+### UX ramah pengguna (riset referensi: GitHub, Linear, pola filter/microcopy)
+- **Pintasan `/`** memfokuskan pencarian repositori (ala GitHub) + hint kbd
+  di input; `Esc` mengosongkan.
+- **Chip "Reset"** di toolbar saat ada filter/pencarian aktif (pola
+  "Clear all"); empty state kini bermakna: pesan + saran + aksi.
+- **Banner data jujur**: "snapshot data per-deploy ({tanggal})" menggantikan
+  bahasa "mode offline / ISR 5 menit" yang sudah tidak akurat — pengunjung
+  paham kapan data dibekukan & di mana data termutakhir (API).
+- **`ScrollTop`** — tombol kembali-ke-atas untuk halaman panjang (muncul
+  setelah ±1,5 layar, hormati reduced-motion).
+- `sys.snap` label sistem menyelaraskan: "snapshot per-deploy · {date}".
+
+### Diverifikasi
+- Hidrasi Playwright 11 rute = 0 error; uji lintas-midnight (+3 hari) = 0
+  error; uji WebGL-gagal = degrade lite, 0 error; jalur 3D sehat (3d → lite);
+  smoke 14 rute 200; OG PNG 1200×630; SSR ID; vitest 41/41; tsc 0;
+  export:static OK (RAM 2 GB: server wajib dimatikan dulu); npm audit 0.
+
 ## [Stack 2026.1] — fix hydration #418 produksi: halaman statis murni (audit mendalam 3D adaptif) — 2026-09-19
  
 ### Diagnosis (audit mendalam, direproduksi 100%)

@@ -17,10 +17,18 @@ export interface Summary {
   mostUsedLanguage: string | null;
 }
 
-/** Hitung metrik agregat dari snapshot — dipakai Overview & System & Metrics. */
-export function computeSummary(snap: Snapshot): Summary {
+/**
+ * Hitung metrik agregat dari snapshot — dipakai Overview & System & Metrics.
+ *
+ * `now` (ms) opsional: WAJIB dilewatkan dengan nilai deterministik (mis.
+ * `snapshot.updatedAt`) saat dipanggil dari komponen klien yang menerima
+ * snapshot penuh — jika default `Date.now()` yang dipakai, nilai SSR (build)
+ * dan hidrasi (klien) bisa berbeda setelah berganti hari → hydration mismatch
+ * (React #418). Komponen server aman memakai default (dihitung sekali saat
+ * build, payload flight tidak dihitung ulang klien).
+ */
+export function computeSummary(snap: Snapshot, now: number = Date.now()): Summary {
   const repos = snap.repos;
-  const now = Date.now();
   const DAY = 86_400_000;
 
   const langMap = new Map<string, number>();

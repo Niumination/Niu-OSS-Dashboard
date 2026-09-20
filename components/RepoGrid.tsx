@@ -1,9 +1,9 @@
 'use client';
 
-import { useDeferredValue, useEffect, useMemo, useState } from 'react';
+import { useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import Fuse from 'fuse.js';
-import { AlertTriangle, SearchX } from 'lucide-react';
+import { AlertTriangle, RotateCcw, SearchX } from 'lucide-react';
 import RepoCard from './RepoCard';
 import { CATEGORIES, categorize, countByCategory } from '@/lib/categories';
 import type { RepoLite } from '@/lib/types';
@@ -32,6 +32,7 @@ export default function RepoGrid({ repos, offline = false, offlineDate }: Props)
   const [cat, setCat] = useState('all');
   const [sort, setSort] = useState<SortKey>('pushed');
   const [forkF, setForkF] = useState<ForkFilter>('all');
+  const searchRef = useRef<HTMLInputElement>(null);
   // Deferral: input tetap 60fps meski 90+ kartu harus difilter ulang.
   const dq = useDeferredValue(q);
   const reduceMotion = useReducedMotion() === true;
@@ -42,6 +43,25 @@ export default function RepoGrid({ repos, offline = false, offlineDate }: Props)
     const params = new URLSearchParams(window.location.search);
     const fromUrl = params.get('q');
     if (fromUrl) setQ(fromUrl);
+  }, []);
+
+  // Pintasan keyboard ala GitHub/Linear: "/" memfokuskan pencarian dari
+  // mana pun di halaman (kecuali sedang mengetik di elemen formulir).
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== '/' || e.metaKey || e.ctrlKey || e.altKey) return;
+      const el = e.target as HTMLElement | null;
+      const typing =
+        el instanceof HTMLInputElement ||
+        el instanceof HTMLTextAreaElement ||
+        el instanceof HTMLSelectElement ||
+        el?.isContentEditable;
+      if (typing) return;
+      e.preventDefault();
+      searchRef.current?.focus();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
   }, []);
 
   const counts = useMemo(() => countByCategory(repos), [repos]);
@@ -91,7 +111,7 @@ export default function RepoGrid({ repos, offline = false, offlineDate }: Props)
           <p className="text-[12.5px] leading-relaxed text-warn/90">
             {t('rg.offline.a')}{' '}
             <strong>{t('rg.offline.b')}</strong>{' '}
-            {t('rg.offline.c', { date: formatDate(offlineDate ?? new Date().toISOString()) })}
+            {t('rg.offline.c', { date: formatDate(offlineDate) })}
           </p>
         </div>
       )}
@@ -101,13 +121,23 @@ export default function RepoGrid({ repos, offline = false, offlineDate }: Props)
         <div className="relative min-w-0 flex-1">
           <SearchPlaceholder />
           <input
+            ref={searchRef}
             type="search"
             value={q}
             onChange={(e) => setQ(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Escape' && q) {
+                setQ('');
+                searchRef.current?.focus();
+              }
+            }}
             placeholder={t('rg.search.ph')}
             aria-label={t('rg.search.aria')}
-            className="h-11 w-full rounded-full border border-white/10 bg-ink/60 pl-11 pr-4 font-sans text-[13.5px] text-cream outline-none transition-colors placeholder:text-cream/30 focus:border-ember/50"
+            className="h-11 w-full rounded-full border border-white/10 bg-ink/60 pl-11 pr-12 font-sans text-[13.5px] text-cream outline-none transition-colors placeholder:text-cream/30 focus:border-ember/50"
           />
+          <kbd className="pointer-events-none absolute right-4 top-1/2 hidden -translate-y-1/2 rounded-md border border-white/10 bg-white/[0.05] px-1.5 py-0.5 font-mono text-[10px] text-cream/40 sm:block">
+            /
+          </kbd>
         </div>
         <div className="flex flex-wrap items-center gap-2">
           <div className="flex rounded-full border border-white/10 bg-ink/60 p-0.5" role="group" aria-label={t('rg.fork.aria')}>
@@ -142,6 +172,21 @@ export default function RepoGrid({ repos, offline = false, offlineDate }: Props)
             <option value="stars">{t('rg.sort.stars.opt')}</option>
             <option value="name">{t('rg.sort.name.opt')}</option>
           </select>
+          {(q !== '' || cat !== 'all' || forkF !== 'all') && (
+            <button
+              type="button"
+              onClick={() => {
+                setQ('');
+                setCat('all');
+                setForkF('all');
+              }}
+              className="inline-flex items-center gap-1.5 rounded-full border border-ember/40 bg-ember/10 px-3.5 py-2 font-mono text-[10px] uppercase tracking-wider text-ember transition hover:bg-ember/20"
+              title={t('rg.reset')}
+            >
+              <RotateCcw className="size-3" />
+              {t('rg.resetFilters')}
+            </button>
+          )}
         </div>
       </div>
 
@@ -185,6 +230,7 @@ export default function RepoGrid({ repos, offline = false, offlineDate }: Props)
           <p className="mt-4 text-[14px] text-cream/60">
             {t('rg.empty', { q })}
           </p>
+          <p className="mt-1.5 text-[12px] text-cream/40">{t('rg.empty.hint')}</p>
           <button
             type="button"
             onClick={() => {

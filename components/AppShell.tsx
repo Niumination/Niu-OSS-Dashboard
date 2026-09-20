@@ -7,6 +7,7 @@ import NavBar from './NavBar';
 import Footer from './Footer';
 import CommandMenu from './CommandMenu';
 import PaymentModal from './PaymentModal';
+import ScrollTop from './ScrollTop';
 
 interface Props {
   snapshot: Snapshot;
@@ -46,6 +47,7 @@ export default function AppShell({ snapshot, children }: Props) {
         />
         <main id="konten" className="flex-1 focus:outline-none">{children}</main>
         <Footer snapshot={snapshot} />
+        <ScrollTop />
       </div>
     </UiContext.Provider>
   );

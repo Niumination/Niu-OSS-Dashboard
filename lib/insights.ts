@@ -112,7 +112,10 @@ export async function getContributions(snap: Snapshot): Promise<Contributions> {
         query: QUERY,
         variables: { owner: process.env.GITHUB_OWNER ?? 'Niumination', from: from.toISOString(), to: now.toISOString() },
       }),
-      next: { revalidate: 3600, tags: ['github'] },
+    // Halaman statis murni: fetch insight ikut force-cache (per-deploy) agar
+    // halaman /system TIDAK mewarisi ISR dari fetch ini (pelajaran #418 —
+    // revalidate level-fetch diwarisi halaman yang merendernya).
+    cache: 'force-cache' as RequestCache,
     });
     if (!res.ok) return fromEvents(snap);
     const json = (await res.json()) as {

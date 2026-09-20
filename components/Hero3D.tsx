@@ -75,6 +75,10 @@ export default function Hero3D({ stats }: { stats: HeroStats }) {
       setMode('lite');
     }
   }, []);
+  // Error/kegagalan WebGL pada Scene3D → degrade permanen ke lite (bukan
+  // spinner selamanya). resetKeys={[mode]} menyembuhkan boundary → SceneLite
+  // langsung merender menggantikan scene yang gagal.
+  const handleSceneError = useCallback(() => handleDegrade(), [handleDegrade]);
 
   const chips: Array<[string, number]> = [
     [t('hero.chip.repos'), stats.repos],
@@ -165,7 +169,7 @@ export default function Hero3D({ stats }: { stats: HeroStats }) {
 
         <div className="lg:col-span-5">
           <div className="relative min-h-[320px] overflow-hidden rounded-3xl border border-white/10 bg-ink/70 md:min-h-[430px]">
-            <ErrorBoundary label="hero-3d" fallback={<ScenePlaceholder />}>
+            <ErrorBoundary label="hero-3d" resetKeys={[mode]} onError={handleSceneError}>
               {mode === '3d' ? (
                 <Scene3D onFps={handleFps} onDegrade={handleDegrade} />
               ) : mode === 'lite' ? (

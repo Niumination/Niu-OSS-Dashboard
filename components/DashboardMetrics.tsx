@@ -54,7 +54,16 @@ const EVENT_COLOR: Record<string, string> = {
  */
 
 export default function DashboardMetrics({ snapshot }: { snapshot: Snapshot }) {
-  const s = useMemo(() => computeSummary(snapshot), [snapshot]);
+  // "Sekarang" deterministik = tanggal snapshot data (bukan jam klien!).
+  // Komponen ini menerima snapshot penuh dan menghitung ulang di klien —
+  // memakai Date.now() membuat nilai SSR (build) vs hidrasi berbeda setelah
+  // berganti hari → hydration mismatch (#418). Dengan tanggal snapshot,
+  // heatmap/bar/metrik beku konsisten dan maknanya jujur: "per snapshot data".
+  const dataNow = useMemo(() => {
+    const t = new Date(snapshot.updatedAt).getTime();
+    return Number.isNaN(t) ? 0 : t;
+  }, [snapshot.updatedAt]);
+  const s = useMemo(() => computeSummary(snapshot, dataNow), [snapshot, dataNow]);
   const { t, locale } = useLocale();
 
   const stats: Array<{ icon: React.ComponentType<{ className?: string }>; label: string; value: number; hint?: string }> = [
@@ -104,7 +113,7 @@ export default function DashboardMetrics({ snapshot }: { snapshot: Snapshot }) {
           micro={t('dash.heatmap')}
           aside={t('dash.heatmap.aside', { n: s.commitsLast4Weeks })}
         >
-          <CommitHeatmap events={snapshot.events} />
+          <CommitHeatmap events={snapshot.events} now={dataNow} />
         </Panel>
 
         {/* Bahasa */}
@@ -124,7 +133,7 @@ export default function DashboardMetrics({ snapshot }: { snapshot: Snapshot }) {
           micro={t('dash.activity')}
           aside={t('dash.activity.aside', { n: s.eventsLast30d })}
         >
-          <ActivityBars events={snapshot.events} />
+          <ActivityBars events={snapshot.events} now={dataNow} />
         </Panel>
 
         {/* Donat kategori */}
@@ -211,7 +220,7 @@ function Panel({
 
 /* --------------------------- Commit heatmap ------------------------------ */
 
-function CommitHeatmap({ events }: { events: Ghevent[] }) {
+function CommitHeatmap({ events, now }: { events: Ghevent[]; now: number }) {
   const { t, locale } = useLocale();
   const WEEKS = 26;
 
@@ -221,7 +230,8 @@ function CommitHeatmap({ events }: { events: Ghevent[] }) {
       const key = e.createdAt.slice(0, 10);
       perDay.set(key, (perDay.get(key) ?? 0) + 1);
     }
-    const today = new Date();
+    // `now` = tanggal snapshot (deterministik) — bukan tanggal klien.
+    const today = new Date(now);
     today.setHours(0, 0, 0, 0);
     const thisSunday = new Date(today);
     thisSunday.setDate(today.getDate() - today.getDay());
@@ -248,7 +258,7 @@ function CommitHeatmap({ events }: { events: Ghevent[] }) {
       cols.push(col);
     }
     return { columns: cols, monthLabels: labels };
-  }, [events, locale]);
+  }, [events, locale, now]);
 
   const levelColor = (count: number, future: boolean) => {
     if (future) return 'rgba(242,236,223,0.02)';
@@ -338,12 +348,12 @@ function LanguageBars({ counts }: { counts: { lang: string; count: number }[] })
 
 /* ----------------------------- Activity bars ----------------------------- */
 
-function ActivityBars({ events }: { events: Ghevent[] }) {
+function ActivityBars({ events, now: nowMs }: { events: Ghevent[]; now: number }) {
   const { t, locale } = useLocale();
   const DAYS = 30;
   const { bars, peak } = useMemo(() => {
     const perDay = new Array<number>(DAYS).fill(0);
-    const now = new Date();
+    const now = new Date(nowMs);
     now.setHours(0, 0, 0, 0);
     for (const e of events) {
       const d = new Date(e.createdAt);
@@ -356,7 +366,7 @@ function ActivityBars({ events }: { events: Ghevent[] }) {
     const peakDate = new Date(now);
     peakDate.setDate(now.getDate() - (DAYS - 1 - peakIdx));
     return { bars: perDay, peak: { count: max, label: peakDate.toLocaleDateString(locale === 'en' ? 'en-US' : 'id-ID', { day: 'numeric', month: 'short' }) } };
-  }, [events, locale]);
+  }, [events, locale, nowMs]);
 
   const max = Math.max(1, ...bars);
 

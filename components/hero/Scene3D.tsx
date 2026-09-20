@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useRef } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import * as THREE from 'three';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Float } from '@react-three/drei';
@@ -214,6 +214,14 @@ function Rig({ children, onFps, onDegrade }: SceneProps & { children: React.Reac
   return <group ref={ref}>{children}</group>;
 }
 
+/** Dipakai saat Canvas tidak bisa membuat konteks WebGL: picu degrade ke lite. */
+function GlFallback({ onDegrade }: { onDegrade: () => void }) {
+  useEffect(() => {
+    onDegrade();
+  }, [onDegrade]);
+  return null;
+}
+
 export default function Scene3D(props: SceneProps) {
   return (
     <Canvas
@@ -221,6 +229,16 @@ export default function Scene3D(props: SceneProps) {
       camera={{ position: [0, 0, 7.4], fov: 42 }}
       gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }}
       className="!absolute inset-0"
+      aria-hidden
+      fallback={<GlFallback onDegrade={props.onDegrade} />}
+      onCreated={({ gl }) => {
+        // WebGL context loss (driver reset / tab background lama / GPU lemah):
+        // cegah default browser + degrade ke SceneLite — bukan layar mati.
+        gl.domElement.addEventListener('webglcontextlost', (e) => {
+          e.preventDefault();
+          props.onDegrade();
+        });
+      }}
     >
       <Rig onFps={props.onFps} onDegrade={props.onDegrade}>
         <Float speed={1.3} rotationIntensity={0.45} floatIntensity={0.65}>
