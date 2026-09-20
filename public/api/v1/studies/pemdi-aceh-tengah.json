@@ -1,9 +1,9 @@
 {
- "generatedAt": "2026-09-19T17:48:43.919Z",
+ "generatedAt": "2026-09-20T16:05:54.302Z",
  "study": {
   "slug": "pemdi-aceh-tengah",
   "title": "Pemdi Aceh Tengah",
-  "tagline": "Portal pemerintah digital untuk kabupaten di dataran tinggi Gayo.",
+  "tagline": "Kokpit pemdi & dasbor transparansi untuk kabupaten di dataran tinggi Gayo.",
   "kind": "Civic Tech",
   "year": "2024–2026",
   "repo": "PemdiAcehTengah",
@@ -15,19 +15,19 @@
   ],
   "metrics": [
    {
-    "label": "halaman layanan",
-    "value": "lengkap"
+    "label": "bukti dukung terkelola",
+    "value": "250 butir"
    },
    {
     "label": "biaya hosting",
     "value": "Rp 0"
    },
    {
-    "label": "pembaruan",
-    "value": "aktif"
+    "label": "status",
+    "value": "reposisi · opsi B"
    }
   ],
-  "problem": "Informasi layanan publik kabupaten tersebar di banyak tempat dan sulit dijangkau warga. Portal resmi membutuhkan infrastruktur berbayar dan alur konten yang berat untuk dioperasikan satu orang — sementara kebutuhan sebenarnya: cepat, ringan, dan bisa dirawat dari mana saja.",
+  "problem": "Informasi layanan publik kabupaten tersebar di banyak tempat dan sulit dijangkau warga — portal resmi membutuhkan infrastruktur berbayar dan alur konten yang berat untuk dioperasikan satu orang. September 2026, kebutuhan berubah lagi: pengelolaan 250 butir bukti dukung SPBE menjadi prioritas, sementara transparansi publik tetap harus terlayani.",
   "approach": [
    {
     "title": "Static-first, deploy gratis",
@@ -35,47 +35,47 @@
    },
    {
     "title": "Konten terstruktur in-repo",
-    "text": "Konten layanan hidup sebagai berkas dalam repositori — perubahan lewat git, terlacak siapa mengubah apa, bisa dikoreksi siapa saja lewat pull request."
+    "text": "Konten hidup sebagai berkas dalam repositori — perubahan lewat git, terlacak siapa mengubah apa, bisa dikoreksi siapa saja lewat pull request."
    },
    {
-    "title": "Aksesibilitas daratan tinggi",
-    "text": "Desain hemat kuota: tanpa pustaka berat, gambar terkompresi, dan tetap terbaca di koneksi lambat — khas jaringan dataran tinggi Gayo."
+    "title": "Reposisi Opsi B (Sep 2026)",
+    "text": "Arah produk digeser terbuka: kokpit pemdi internal untuk mengelola 250 butir bukti dukung, dasbor transparansi publik, dan komponen yang siap terintegrasi ke Alpukat Gayo — infrastruktur lama dipertahankan, bukan dibangun ulang."
    }
   ],
-  "outcome": "Portal non-resmi yang menjadi rujukan praktis layanan digital kabupaten, dirawat berkala, dan membuktikan pola \"pemerintahan digital tanpa anggaran besar\" yang bisa direplikasi kabupaten lain.",
+  "outcome": "Pivot yang terdokumentasi di depan umum: kebutuhan nyata pemda didahulukan tanpa membuang fondasi yang sudah terbukti — pola \"reposisi tanpa membangun ulang dari nol\" yang bisa direplikasi pemerintah daerah lain.",
   "accent": "#00e5ff",
   "en": {
-   "tagline": "A digital government portal for a highland Gayo regency.",
+   "tagline": "A government cockpit & transparency dashboard for a highland Gayo regency.",
    "metrics": [
     {
-     "label": "service pages",
-     "value": "complete"
+     "label": "supporting evidence managed",
+     "value": "250 items"
     },
     {
      "label": "hosting cost",
      "value": "Rp 0"
     },
     {
-     "label": "updates",
-     "value": "active"
+     "label": "status",
+     "value": "repositioned · option B"
     }
    ],
-   "problem": "Public service information for the regency was scattered and hard for residents to reach. An official portal would require paid infrastructure and a heavy publishing workflow for a one-person team — while the real need was: fast, light, and maintainable from anywhere.",
+   "problem": "Public service information was scattered and hard for residents to reach, and an official portal would require paid infrastructure and a heavy workflow for a one-person team. By September 2026 the need shifted again: managing 250 SPBE supporting-evidence items became the priority, while public transparency still had to be served.",
    "approach": [
     {
      "title": "Static-first, free deploys",
-     "text": "Every page is rendered statically and hosted on Vercel — zero cost, fast loads, and resilient to traffic spikes during busy service seasons (enrollment, joint holidays)."
+     "text": "Every page is rendered statically and hosted on Vercel — zero cost, fast loads, and resilient to traffic spikes during busy service seasons."
     },
     {
      "title": "Structured content in-repo",
-     "text": "Service content lives as files in the repository — changes flow through git, who-changed-what is tracked, and anyone can submit corrections via pull request."
+     "text": "Content lives as files in the repository — changes go through git, tracked and correctable by anyone via pull request."
     },
     {
-     "title": "Highland accessibility",
-     "text": "Data-frugal design: no heavy libraries, compressed images, and still readable on slow connections — typical of Gayo highland networks."
+     "title": "Repositioning, option B (Sep 2026)",
+     "text": "The product direction shifted in the open: an internal government cockpit managing 250 supporting-evidence items, a public transparency dashboard, and components ready to integrate into Alpukat Gayo — the existing foundation is kept, not rebuilt."
     }
    ],
-   "outcome": "An unofficial portal that became a practical reference for the regency's digital services, maintained regularly, and proof of the \"digital government without a big budget\" pattern other regencies can replicate."
+   "outcome": "A pivot documented in public: real government needs come first without throwing away a proven foundation — a \"reposition without rebuilding from scratch\" pattern other regions can replicate."
   }
  }
 }

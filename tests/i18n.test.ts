@@ -43,9 +43,9 @@ describe('i18n — kamus', () => {
 });
 
 describe('studi kasus — data & lokalizasi', () => {
-  it('ada 3 studi dengan slug unik', () => {
-    expect(CASE_STUDIES).toHaveLength(3);
-    expect(new Set(CASE_STUDIES.map((c) => c.slug)).size).toBe(3);
+  it('ada 4 studi dengan slug unik', () => {
+    expect(CASE_STUDIES).toHaveLength(4);
+    expect(new Set(CASE_STUDIES.map((c) => c.slug)).size).toBe(4);
   });
 
   it('semua studi punya terjemahan en lengkap', () => {
@@ -63,7 +63,8 @@ describe('studi kasus — data & lokalizasi', () => {
     const first = getAdjacent('pemdi-aceh-tengah');
     expect(first.prev).toBeUndefined();
     expect(first.next?.slug).toBe('flame-ade');
-    const last = getAdjacent('ai-first-os');
+    expect(getAdjacent('ai-first-os').next?.slug).toBe('niu-gayo-agroclimate');
+    const last = getAdjacent('niu-gayo-agroclimate');
     expect(last.next).toBeUndefined();
   });
 

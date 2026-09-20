@@ -1,11 +1,11 @@
 {
- "generatedAt": "2026-09-19T17:48:43.919Z",
- "count": 3,
+ "generatedAt": "2026-09-20T16:05:54.302Z",
+ "count": 4,
  "studies": [
   {
    "slug": "pemdi-aceh-tengah",
    "title": "Pemdi Aceh Tengah",
-   "tagline": "Portal pemerintah digital untuk kabupaten di dataran tinggi Gayo.",
+   "tagline": "Kokpit pemdi & dasbor transparansi untuk kabupaten di dataran tinggi Gayo.",
    "kind": "Civic Tech",
    "year": "2024–2026",
    "repo": "PemdiAcehTengah",
@@ -57,6 +57,26 @@
     "Hermes Agent"
    ],
    "accent": "#a78bfa",
+   "availableLocales": [
+    "id",
+    "en"
+   ]
+  },
+  {
+   "slug": "niu-gayo-agroclimate",
+   "title": "Niu Gayo Agro-Climate",
+   "tagline": "Cuaca presisi untuk kopi Arabika Gayo & mitigasi bencana Aceh Tengah.",
+   "kind": "Data & Iklim",
+   "year": "2026",
+   "repo": "niu-gayo-agroclimate",
+   "demo": null,
+   "stack": [
+    "React 19",
+    "Vite 6",
+    "Tailwind CSS",
+    "WeatherNext 3"
+   ],
+   "accent": "#34d399",
    "availableLocales": [
     "id",
     "en"

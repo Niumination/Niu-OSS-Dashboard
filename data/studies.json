@@ -2,18 +2,31 @@
   {
     "slug": "pemdi-aceh-tengah",
     "title": "Pemdi Aceh Tengah",
-    "tagline": "Portal pemerintah digital untuk kabupaten di dataran tinggi Gayo.",
+    "tagline": "Kokpit pemdi & dasbor transparansi untuk kabupaten di dataran tinggi Gayo.",
     "kind": "Civic Tech",
     "year": "2024–2026",
     "repo": "PemdiAcehTengah",
     "demo": "https://pemdi-aceh-tengah.vercel.app",
-    "stack": ["JavaScript", "Vercel", "Static-first"],
-    "metrics": [
-      { "label": "halaman layanan", "value": "lengkap" },
-      { "label": "biaya hosting", "value": "Rp 0" },
-      { "label": "pembaruan", "value": "aktif" }
+    "stack": [
+      "JavaScript",
+      "Vercel",
+      "Static-first"
     ],
-    "problem": "Informasi layanan publik kabupaten tersebar di banyak tempat dan sulit dijangkau warga. Portal resmi membutuhkan infrastruktur berbayar dan alur konten yang berat untuk dioperasikan satu orang — sementara kebutuhan sebenarnya: cepat, ringan, dan bisa dirawat dari mana saja.",
+    "metrics": [
+      {
+        "label": "bukti dukung terkelola",
+        "value": "250 butir"
+      },
+      {
+        "label": "biaya hosting",
+        "value": "Rp 0"
+      },
+      {
+        "label": "status",
+        "value": "reposisi · opsi B"
+      }
+    ],
+    "problem": "Informasi layanan publik kabupaten tersebar di banyak tempat dan sulit dijangkau warga — portal resmi membutuhkan infrastruktur berbayar dan alur konten yang berat untuk dioperasikan satu orang. September 2026, kebutuhan berubah lagi: pengelolaan 250 butir bukti dukung SPBE menjadi prioritas, sementara transparansi publik tetap harus terlayani.",
     "approach": [
       {
         "title": "Static-first, deploy gratis",
@@ -21,38 +34,47 @@
       },
       {
         "title": "Konten terstruktur in-repo",
-        "text": "Konten layanan hidup sebagai berkas dalam repositori — perubahan lewat git, terlacak siapa mengubah apa, bisa dikoreksi siapa saja lewat pull request."
+        "text": "Konten hidup sebagai berkas dalam repositori — perubahan lewat git, terlacak siapa mengubah apa, bisa dikoreksi siapa saja lewat pull request."
       },
       {
-        "title": "Aksesibilitas daratan tinggi",
-        "text": "Desain hemat kuota: tanpa pustaka berat, gambar terkompresi, dan tetap terbaca di koneksi lambat — khas jaringan dataran tinggi Gayo."
+        "title": "Reposisi Opsi B (Sep 2026)",
+        "text": "Arah produk digeser terbuka: kokpit pemdi internal untuk mengelola 250 butir bukti dukung, dasbor transparansi publik, dan komponen yang siap terintegrasi ke Alpukat Gayo — infrastruktur lama dipertahankan, bukan dibangun ulang."
       }
     ],
-    "outcome": "Portal non-resmi yang menjadi rujukan praktis layanan digital kabupaten, dirawat berkala, dan membuktikan pola \"pemerintahan digital tanpa anggaran besar\" yang bisa direplikasi kabupaten lain.",
+    "outcome": "Pivot yang terdokumentasi di depan umum: kebutuhan nyata pemda didahulukan tanpa membuang fondasi yang sudah terbukti — pola \"reposisi tanpa membangun ulang dari nol\" yang bisa direplikasi pemerintah daerah lain.",
     "accent": "#00e5ff",
     "en": {
-      "tagline": "A digital government portal for a highland Gayo regency.",
+      "tagline": "A government cockpit & transparency dashboard for a highland Gayo regency.",
       "metrics": [
-        { "label": "service pages", "value": "complete" },
-        { "label": "hosting cost", "value": "Rp 0" },
-        { "label": "updates", "value": "active" }
+        {
+          "label": "supporting evidence managed",
+          "value": "250 items"
+        },
+        {
+          "label": "hosting cost",
+          "value": "Rp 0"
+        },
+        {
+          "label": "status",
+          "value": "repositioned · option B"
+        }
       ],
-      "problem": "Public service information for the regency was scattered and hard for residents to reach. An official portal would require paid infrastructure and a heavy publishing workflow for a one-person team — while the real need was: fast, light, and maintainable from anywhere.",
+      "problem": "Public service information was scattered and hard for residents to reach, and an official portal would require paid infrastructure and a heavy workflow for a one-person team. By September 2026 the need shifted again: managing 250 SPBE supporting-evidence items became the priority, while public transparency still had to be served.",
       "approach": [
         {
           "title": "Static-first, free deploys",
-          "text": "Every page is rendered statically and hosted on Vercel — zero cost, fast loads, and resilient to traffic spikes during busy service seasons (enrollment, joint holidays)."
+          "text": "Every page is rendered statically and hosted on Vercel — zero cost, fast loads, and resilient to traffic spikes during busy service seasons."
         },
         {
           "title": "Structured content in-repo",
-          "text": "Service content lives as files in the repository — changes flow through git, who-changed-what is tracked, and anyone can submit corrections via pull request."
+          "text": "Content lives as files in the repository — changes go through git, tracked and correctable by anyone via pull request."
         },
         {
-          "title": "Highland accessibility",
-          "text": "Data-frugal design: no heavy libraries, compressed images, and still readable on slow connections — typical of Gayo highland networks."
+          "title": "Repositioning, option B (Sep 2026)",
+          "text": "The product direction shifted in the open: an internal government cockpit managing 250 supporting-evidence items, a public transparency dashboard, and components ready to integrate into Alpukat Gayo — the existing foundation is kept, not rebuilt."
         }
       ],
-      "outcome": "An unofficial portal that became a practical reference for the regency's digital services, maintained regularly, and proof of the \"digital government without a big budget\" pattern other regencies can replicate."
+      "outcome": "A pivot documented in public: real government needs come first without throwing away a proven foundation — a \"reposition without rebuilding from scratch\" pattern other regions can replicate."
     }
   },
   {
@@ -62,11 +84,26 @@
     "kind": "Desktop / AI Tooling",
     "year": "2025–2026",
     "repo": "Flame-ADE",
-    "stack": ["Tauri 2", "Rust", "React 19", "TypeScript", "BYOK AI"],
+    "stack": [
+      "Tauri 2",
+      "Rust",
+      "React 19",
+      "TypeScript",
+      "BYOK AI"
+    ],
     "metrics": [
-      { "label": "ukuran binary", "value": "±7 MB" },
-      { "label": "runtime", "value": "native" },
-      { "label": "model AI", "value": "BYOK" }
+      {
+        "label": "ukuran binary",
+        "value": "±7 MB"
+      },
+      {
+        "label": "runtime",
+        "value": "native"
+      },
+      {
+        "label": "model AI",
+        "value": "BYOK"
+      }
     ],
     "problem": "Terminal modern dengan AI biasanya membawa Electron (ratusan MB) dan mengunci pengguna ke satu penyedia model. Pengguna menginginkan terminal yang punya \"otak\" tapi tetap ringan, cepat, dan tidak memaksa langganan.",
     "approach": [
@@ -88,9 +125,18 @@
     "en": {
       "tagline": "An AI-native terminal emulator ~7 MB — Tauri 2 + Rust + React 19.",
       "metrics": [
-        { "label": "binary size", "value": "±7 MB" },
-        { "label": "runtime", "value": "native" },
-        { "label": "AI model", "value": "BYOK" }
+        {
+          "label": "binary size",
+          "value": "±7 MB"
+        },
+        {
+          "label": "runtime",
+          "value": "native"
+        },
+        {
+          "label": "AI model",
+          "value": "BYOK"
+        }
       ],
       "problem": "Modern AI terminals usually ship Electron (hundreds of MB) and lock users to a single model provider. People want a terminal with a \"brain\" that stays light, fast, and free of forced subscriptions.",
       "approach": [
@@ -117,11 +163,25 @@
     "kind": "Sistem Operasi / Dotfiles",
     "year": "2025–2026",
     "repo": "AI-First-OS",
-    "stack": ["Shell", "Arch Linux", "AI-First", "Hermes Agent"],
+    "stack": [
+      "Shell",
+      "Arch Linux",
+      "AI-First",
+      "Hermes Agent"
+    ],
     "metrics": [
-      { "label": "basis", "value": "Arch" },
-      { "label": "agen", "value": "Hermes" },
-      { "label": "build", "value": "ISO otomatis" }
+      {
+        "label": "basis",
+        "value": "Arch"
+      },
+      {
+        "label": "agen",
+        "value": "Hermes"
+      },
+      {
+        "label": "build",
+        "value": "ISO otomatis"
+      }
     ],
     "problem": "Distribusi Linux umum memperlakukan AI sebagai aplikasi tambahan yang dipasang belakangan. Bagaimana jika OS dibangun dari ISO dengan agen AI sebagai \"warga negara kelas satu\" — tersedia sejak boot pertama, bukan setelah setup manual berjam-jam?",
     "approach": [
@@ -143,9 +203,18 @@
     "en": {
       "tagline": "An Arch Linux ISO builder with Hermes Agent as a first-class citizen.",
       "metrics": [
-        { "label": "base", "value": "Arch" },
-        { "label": "agent", "value": "Hermes" },
-        { "label": "build", "value": "automated ISO" }
+        {
+          "label": "base",
+          "value": "Arch"
+        },
+        {
+          "label": "agent",
+          "value": "Hermes"
+        },
+        {
+          "label": "build",
+          "value": "automated ISO"
+        }
       ],
       "problem": "Mainstream Linux distributions treat AI as an afterthought app installed later. What if an OS were built from the ISO up with an AI agent as a \"first-class citizen\" — available from first boot, not after hours of manual setup?",
       "approach": [
@@ -163,6 +232,84 @@
         }
       ],
       "outcome": "A reproducible AI-first OS experiment: one command builds the ISO, the agent is active from boot, and every architectural decision is documented in the open for anyone to trace."
+    }
+  },
+  {
+    "slug": "niu-gayo-agroclimate",
+    "title": "Niu Gayo Agro-Climate",
+    "tagline": "Cuaca presisi untuk kopi Arabika Gayo & mitigasi bencana Aceh Tengah.",
+    "kind": "Data & Iklim",
+    "year": "2026",
+    "repo": "niu-gayo-agroclimate",
+    "stack": [
+      "React 19",
+      "Vite 6",
+      "Tailwind CSS",
+      "WeatherNext 3"
+    ],
+    "metrics": [
+      {
+        "label": "sumber data",
+        "value": "ECMWF · WeatherNext 3"
+      },
+      {
+        "label": "domain panduan",
+        "value": "produksi · pascapanen · mitigasi"
+      },
+      {
+        "label": "wilayah fokus",
+        "value": "Dataran Tinggi Gayo"
+      }
+    ],
+    "problem": "Dataran Tinggi Gayo adalah produsen kopi Arabika organik terbesar di Indonesia, tetapi variabilitas iklim mikro dan topografi pegunungan terjal membuat prakiraan cuaca umum tidak cukup: petani perlu panduan melawan karat daun (Hemileia vastatrix), menjemur gabah/green bean dengan presisi radiasi matahari, dan warga perlu peringatan dini longsor lereng perkebunan serta luapan Danau Lut Tawar.",
+    "approach": [
+      {
+        "title": "Data engine meteorologi resolusi tinggi",
+        "text": "Integrasi stream meteorologi resolusi tinggi ECMWF / WeatherNext 3 — bukan prakiraan generik, melainkan resolusi spasial yang menangkap iklim mikro pegunungan Gayo."
+      },
+      {
+        "title": "Tiga domain panduan nyata",
+        "text": "Dari kebun (produktivitas & kualitas specialty coffee) ke pascapanen (penjemuran presisi) hingga keselamatan warga (mitigasi hidrometeorologi) — satu sistem, tiga keputusan yang dibantu."
+      },
+      {
+        "title": "Ringan & teruji",
+        "text": "React 19 + Vite 6 + Tailwind dengan pengujian native Node runner — proyek cepat dirilis tetap terkawal kualitasnya."
+      }
+    ],
+    "outcome": "Sistem informasi cuaca presisi yang menyasar rantai nilai kopi Gayo dari kebun sampai penjemuran, plus lapisan mitigasi bencana untuk warga dataran tinggi — civic tech yang berangkat dari kebutuhan lokal yang sangat spesifik.",
+    "accent": "#34d399",
+    "en": {
+      "tagline": "Precision weather for Gayo Arabica coffee & disaster mitigation in Aceh Tengah.",
+      "metrics": [
+        {
+          "label": "data source",
+          "value": "ECMWF · WeatherNext 3"
+        },
+        {
+          "label": "guidance domains",
+          "value": "production · post-harvest · mitigation"
+        },
+        {
+          "label": "focus area",
+          "value": "Gayo Highlands"
+        }
+      ],
+      "problem": "The Gayo Highlands are Indonesia’s largest organic Arabica coffee producer, yet micro-climate variability and steep mountain terrain make generic forecasts insufficient: farmers need guidance against leaf rust (Hemileia vastatrix), precise solar-radiation timing for drying green beans, and residents need early warning for landslides on plantation slopes and Lake Lut Tawar flooding.",
+      "approach": [
+        {
+          "title": "High-resolution meteorological data engine",
+          "text": "Integrates high-resolution ECMWF / WeatherNext 3 streams — not generic forecasts, but spatial resolution that captures the Gayo highlands’ micro-climate."
+        },
+        {
+          "title": "Three real guidance domains",
+          "text": "From the farm (specialty-coffee productivity and quality) to post-harvest (precision drying) to public safety (hydrometeorological mitigation) — one system supporting three decisions."
+        },
+        {
+          "title": "Light & tested",
+          "text": "React 19 + Vite 6 + Tailwind with the native Node test runner — fast to ship, still quality-controlled."
+        }
+      ],
+      "outcome": "A precision weather information system covering the Gayo coffee value chain from farm to drying, plus a disaster-mitigation layer for highland residents — civic tech born from very specific local needs."
     }
   }
 ]

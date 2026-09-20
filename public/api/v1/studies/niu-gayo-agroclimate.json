@@ -1,0 +1,81 @@
+{
+ "generatedAt": "2026-09-20T16:05:54.302Z",
+ "study": {
+  "slug": "niu-gayo-agroclimate",
+  "title": "Niu Gayo Agro-Climate",
+  "tagline": "Cuaca presisi untuk kopi Arabika Gayo & mitigasi bencana Aceh Tengah.",
+  "kind": "Data & Iklim",
+  "year": "2026",
+  "repo": "niu-gayo-agroclimate",
+  "stack": [
+   "React 19",
+   "Vite 6",
+   "Tailwind CSS",
+   "WeatherNext 3"
+  ],
+  "metrics": [
+   {
+    "label": "sumber data",
+    "value": "ECMWF · WeatherNext 3"
+   },
+   {
+    "label": "domain panduan",
+    "value": "produksi · pascapanen · mitigasi"
+   },
+   {
+    "label": "wilayah fokus",
+    "value": "Dataran Tinggi Gayo"
+   }
+  ],
+  "problem": "Dataran Tinggi Gayo adalah produsen kopi Arabika organik terbesar di Indonesia, tetapi variabilitas iklim mikro dan topografi pegunungan terjal membuat prakiraan cuaca umum tidak cukup: petani perlu panduan melawan karat daun (Hemileia vastatrix), menjemur gabah/green bean dengan presisi radiasi matahari, dan warga perlu peringatan dini longsor lereng perkebunan serta luapan Danau Lut Tawar.",
+  "approach": [
+   {
+    "title": "Data engine meteorologi resolusi tinggi",
+    "text": "Integrasi stream meteorologi resolusi tinggi ECMWF / WeatherNext 3 — bukan prakiraan generik, melainkan resolusi spasial yang menangkap iklim mikro pegunungan Gayo."
+   },
+   {
+    "title": "Tiga domain panduan nyata",
+    "text": "Dari kebun (produktivitas & kualitas specialty coffee) ke pascapanen (penjemuran presisi) hingga keselamatan warga (mitigasi hidrometeorologi) — satu sistem, tiga keputusan yang dibantu."
+   },
+   {
+    "title": "Ringan & teruji",
+    "text": "React 19 + Vite 6 + Tailwind dengan pengujian native Node runner — proyek cepat dirilis tetap terkawal kualitasnya."
+   }
+  ],
+  "outcome": "Sistem informasi cuaca presisi yang menyasar rantai nilai kopi Gayo dari kebun sampai penjemuran, plus lapisan mitigasi bencana untuk warga dataran tinggi — civic tech yang berangkat dari kebutuhan lokal yang sangat spesifik.",
+  "accent": "#34d399",
+  "en": {
+   "tagline": "Precision weather for Gayo Arabica coffee & disaster mitigation in Aceh Tengah.",
+   "metrics": [
+    {
+     "label": "data source",
+     "value": "ECMWF · WeatherNext 3"
+    },
+    {
+     "label": "guidance domains",
+     "value": "production · post-harvest · mitigation"
+    },
+    {
+     "label": "focus area",
+     "value": "Gayo Highlands"
+    }
+   ],
+   "problem": "The Gayo Highlands are Indonesia’s largest organic Arabica coffee producer, yet micro-climate variability and steep mountain terrain make generic forecasts insufficient: farmers need guidance against leaf rust (Hemileia vastatrix), precise solar-radiation timing for drying green beans, and residents need early warning for landslides on plantation slopes and Lake Lut Tawar flooding.",
+   "approach": [
+    {
+     "title": "High-resolution meteorological data engine",
+     "text": "Integrates high-resolution ECMWF / WeatherNext 3 streams — not generic forecasts, but spatial resolution that captures the Gayo highlands’ micro-climate."
+    },
+    {
+     "title": "Three real guidance domains",
+     "text": "From the farm (specialty-coffee productivity and quality) to post-harvest (precision drying) to public safety (hydrometeorological mitigation) — one system supporting three decisions."
+    },
+    {
+     "title": "Light & tested",
+     "text": "React 19 + Vite 6 + Tailwind with the native Node test runner — fast to ship, still quality-controlled."
+    }
+   ],
+   "outcome": "A precision weather information system covering the Gayo coffee value chain from farm to drying, plus a disaster-mitigation layer for highland residents — civic tech born from very specific local needs."
+  }
+ }
+}

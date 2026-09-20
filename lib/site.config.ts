@@ -12,9 +12,14 @@ export const SITE = {
   description:
     'Full-stack developer & AI tooling engineer dari Aceh Tengah — civic tech, terminal-native AI, dan dotfiles yang benar-benar boot. 91 repositori publik, kerja dalam public.',
   location: 'Aceh Tengah, Indonesia',
-  // ⚠️ Ganti dengan kontak asli Anda sebelum publish.
-  email: process.env.CONTACT_EMAIL ?? 'halo@niumination.dev',
-  whatsapp: process.env.WHATSAPP_NUMBER ?? '6281200000000',
+  // Kontak & WhatsApp WAJIB memakai NEXT_PUBLIC_* dengan fallback `||`:
+  // SITE diimpor AppShell/CommandMenu/PaymentModal (client) DAN komponen server.
+  // Env tanpa prefix NEXT_PUBLIC_ di-inline sebagai `undefined` di bundel klien,
+  // sehingga `CONTACT_EMAIL=""` di Vercel membuat server merender `mailto:` kosong
+  // sementara klien memakai fallback → hydration mismatch React #418 (seluruh
+  // halaman diregenerasi klien). `?.trim() ||` juga menutup nilai string kosong.
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || 'halo@niumination.dev',
+  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.trim() || '6281200000000',
 
   sponsors: 'https://github.com/sponsors/Niumination',
   buyMeACoffee: 'https://buymeacoffee.com/niumination',
@@ -22,12 +27,14 @@ export const SITE = {
   midtransClientKey: process.env.NEXT_PUBLIC_MIDTRANS_CLIENT_KEY ?? '',
   stripePaymentLink: process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK ?? '',
 
-  /** Repo yang ditampilkan di bagian Featured (Overview). */
+  /** Repo yang ditampilkan di bagian Featured (Overview).
+   *  Disinkronkan dengan daftar proyek hero di repo profil
+   *  (niumination/niumination, "sinkronisasi kondisi ekosistem 20 Sep 2026"). */
   featuredRepos: [
     'PemdiAcehTengah',
-    'Flame-ADE',
-    'mata-aihackfest-2026',
     'niu-dash',
+    'Flame-ADE',
+    'Niu-LKH',
   ],
 
   /** Nominal donasi cepat (IDR). */
