@@ -17,6 +17,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
+    "check:static": "node scripts/check-static.mjs",
+    "test:e2e": "node tests/e2e/hydration.mjs",
     "gen:icons": "node scripts/gen-icons.mjs",
     "gen:api": "node scripts/gen-api.mjs"
   },
@@ -42,6 +44,7 @@
     "@types/react-dom": "^19.2.18",
     "@types/three": "^0.186.0",
     "autoprefixer": "^10.6.1",
+    "playwright": "^1.63.0",
     "postcss": "^8.5.28",
     "tailwindcss": "^3.4.17",
     "typescript": "7.0.2",

@@ -1,0 +1,49 @@
+# Dependabot — pembaruan dependensi terjadwal (F0 roadmap).
+# npm: mingguan (grup minor+patch agar tak banjir PR; major dievaluasi manual).
+# github-actions: mingguan (actions/checkout, setup-node, dsb).
+version: 2
+
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      timezone: Asia/Jakarta
+    open-pull-requests-limit: 5
+    groups:
+      minor-patch:
+        update-types:
+          - minor
+          - patch
+    commit-message:
+      prefix: chore(deps)
+    labels:
+      - dependencies
+    # Next.js major & React major: dievaluasi manual (risiko arsitektur besar —
+    # lihat AGENTS.md; upgrade stack = task tersendiri dengan verifikasi penuh)
+    ignore:
+      - dependency-name: next
+        update-types:
+          - version-update:major
+      - dependency-name: react
+        update-types:
+          - version-update:major
+      - dependency-name: react-dom
+        update-types:
+          - version-update:major
+      - dependency-name: three
+        update-types:
+          - version-update:major
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      timezone: Asia/Jakarta
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: chore(actions)
+    labels:
+      - dependencies

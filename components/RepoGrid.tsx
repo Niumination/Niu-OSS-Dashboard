@@ -110,7 +110,15 @@ export default function RepoGrid({ repos, offline = false, offlineDate }: Props)
           <AlertTriangle className="mt-0.5 size-4 shrink-0 text-warn" />
           <p className="text-[12.5px] leading-relaxed text-warn/90">
             {t('rg.offline.a')}{' '}
-            <strong>{t('rg.offline.b')}</strong>{' '}
+            <strong>
+              <a
+                href="/api/github/summary"
+                className="underline decoration-warn/40 underline-offset-4 transition-colors hover:decoration-warn"
+                title="Data GitHub termutakhir (API live, ISR 5 menit)"
+              >
+                {t('rg.offline.b')}
+              </a>
+            </strong>{' '}
             {t('rg.offline.c', { date: formatDate(offlineDate) })}
           </p>
         </div>

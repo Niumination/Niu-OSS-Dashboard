@@ -30,3 +30,49 @@ jobs:
         run: npm run build
         env:
           SITE_URL: https://niumination.web.id
+
+      # Guard #418: SEMUA halaman wajib statis murni (tanpa ISR) — revalidate
+      # pada rute halaman = risiko dokumen campur generasi di Vercel.
+      - name: Guard route-table (#418)
+        run: node scripts/check-static.mjs
+
+  e2e:
+    name: E2E hidrasi (Playwright)
+    runs-on: ubuntu-latest
+    needs: ci
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Pasang dependensi
+        run: npm ci
+
+      - name: Build produksi
+        run: npm run build
+        env:
+          SITE_URL: https://niumination.web.id
+
+      - name: Guard route-table (#418)
+        run: node scripts/check-static.mjs
+
+      - name: Pasang Chromium Playwright
+        run: npx playwright install chromium --with-deps
+
+      - name: Jalankan server produksi
+        run: |
+          npx next start --port 3000 &
+          echo $! > server.pid
+
+      - name: E2E — hidrasi semua rute + jalur 3D adaptif
+        run: node tests/e2e/hydration.mjs
+        env:
+          E2E_BASE_URL: http://localhost:3000
+
+      - name: Hentikan server
+        if: always()
+        run: |
+          [ -f server.pid ] && kill "$(cat server.pid)" 2>/dev/null || true

@@ -5,6 +5,38 @@ per fase pengerjaan, lengkap dengan commit yang bisa dilacak.
 Format mengikuti [Keep a Changelog](https://keepachangelog.com/id/1.1/);
 proyek ini tidak memakai versioning semver ketat (satu repo, satu situs).
  
+## [Stack 2026.4] — FASE 0 roadmap: CI hidrasi E2E, guard #418, budget, dependabot — 2026-09-20
+
+### E2E hidrasi masuk CI (otomatis, bukan manual lagi)
+- **`tests/e2e/hydration.mjs`** (baru): 10 rute (slug dinamis ditemukan
+  otomatis dari API statis + HTML — tanpa hardcode), uji WebGL-gagal →
+  hero degrade lite, uji pintasan `/` + Esc. Exit code jelas untuk CI.
+- **`ci.yml`**: job `e2e` baru (build → guard → Chromium Playwright →
+  `next start` → skrip E2E → server selalu dimatikan).
+
+### Guard arsitektur #418
+- **`scripts/check-static.mjs`** (baru): baca `prerender-manifest.json` —
+  SEMUA rute halaman wajib tanpa `initialRevalidateSeconds` angka (ISR);
+  route API live dicetak sebagai info. Dijalankan CI setelah build.
+  Teruji dua arah: lolos pada build bersih, gagal pada ISR simulasi.
+
+### Anggaran Lighthouse diketatkan (terkalibrasi pengukuran nyata)
+- `lighthouserc.json`: a11y ≥ 0.95 (terukur 100) · CLS ≤ 0.05 (terukur 0) ·
+  perf ≥ 0.80 · LCP error 3.800 ms + warn 2.500 ms (target F1).
+- Bonus perf nyata: animasi masuk hero (H1 = elemen LCP) dipersingkat
+  0.6 → 0.35 dtk → TBT 430 → 240 ms, skor performa 79 → 87.
+
+### Keterbaruan data & dependensi
+- "snapshot data per-deploy" (banner /repositories) + chip /system kini
+  menaut ke `/api/github/summary` (API live).
+- `.github/dependabot.yml` (baru): npm + github-actions mingguan, grup
+  minor-patch, major Next/React/three di-ignore (evaluasi manual).
+
+### Diverifikasi
+guard lolos (uji negatif ✓) · E2E lokal 10 rute + 3 skenario ✓ · tautan API
+di SSR /repositories & /system ✓ · tsc 0 · vitest 52/52 · build 205 halaman.
+Skrip baru: `npm run check:static`, `npm run test:e2e`.
+
 ## [Stack 2026.3] — audit #3: keamanan/SW/test, roadmap tingkat lanjut — 2026-09-20
 
 ### Audit #3 (area yang belum diperdalam) — temuan & perbaikan

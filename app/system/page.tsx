@@ -61,6 +61,13 @@ export default async function SystemPage() {
               <>
                 <T k="sys.snap" vars={{ date: formatDate(snap.updatedAt) }} />
                 {snap.rateLimited && <T k="sys.snapLimited" />}
+                <a
+                  href="/api/github/summary"
+                  className="ml-1 underline decoration-warn/40 underline-offset-4 transition-colors hover:decoration-warn"
+                  title="Data GitHub termutakhir (API live, ISR 5 menit)"
+                >
+                  live ↗
+                </a>
               </>
             )}
           </div>

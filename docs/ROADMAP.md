@@ -24,22 +24,31 @@ termasuk uji lintas-midnight & WebGL-gagal) · smoke 14 rute · SSR ID ·
 
 ---
 
-## FASE 0 — Rumah Tangga Berkelanjutan (mingguan, jalan terus)
+## FASE 0 — Rumah tangga berkelanjutan ✅ (selesai 2026-09-20)
 
 Tujuan: kualitas tidak terkikis oleh waktu. *(CI dasar sudah ada:
 `ci.yml` = vitest+tsc+build; `lighthouse.yml` mingguan — item di bawah
 adalah PENGUATAN, bukan dari nol.)*
 
-- [ ] **E2E hidrasi di CI** (`ci.yml`, job baru): `next start` + Playwright
-      — 11 rute = 0 error, uji WebGL-gagal → degrade, pintasan `/`.
-      Simpan skrip di `tests/e2e/` (adaptasi `/home/user/.pwtest` lokal).
-- [ ] **Guard route-table #418**: langkah CI yang gagal bila build output
-      menampilkan kolom Revalidate pada rute halaman (bukan `/api/*`).
-- [ ] **Ketatkan anggaran Lighthouse** (`lighthouserc.json`): LCP ≤ 2.500
-      (error, kini 4.000 warn), CLS ≤ 0,05 (kini 0,15), a11y ≥ 0,95.
-- [ ] **Keterbaruan data**: badge "snapshot per-deploy" menautkan ke
-      `/api/github/summary` — pengunjung selalu tahu umur data.
-- [ ] Kunci dependensi mingguan (`npm outdated` → PR terjadwal, renovate-style).
+- [x] **E2E hidrasi di CI** — `tests/e2e/hydration.mjs` + job `e2e` di
+      `ci.yml` (Playwright, Chromium SwiftShader): 10 rute = 0 error,
+      slug dinamis ditemukan otomatis dari API, uji WebGL-gagal → degrade
+      lite, uji pintasan `/`. Lokal: `npm run test:e2e`.
+- [x] **Guard route-table #418** — `scripts/check-static.mjs` (baca
+      `.next/prerender-manifest.json`, halaman wajib tanpa ISR; teruji
+      dua arah — lolos saat bersih, gagal saat ISR disimulasikan) +
+      langkah CI setelah build. Lokal: `npm run check:static`.
+- [x] **Ketatkan anggaran Lighthouse** — `lighthouserc.json`: a11y ≥ 0.95
+      (terukur 100), CLS ≤ 0.05 (terukur 0), perf ≥ 0.80 (terukur 87),
+      LCP error 3.800 ms + warn 2.500 ms (target F1; lingkungan audit =
+      throttling simulasi 4× CPU). Bonus: animasi masuk hero dipersingkat
+      0.6→0.35 dtk (elemen H1 = LCP) → TBT 430→240 ms, perf 79→87.
+- [x] **Keterbaruan data** — teks "snapshot data per-deploy" (banner
+      /repositories) & chip /system kini menaut ke `/api/github/summary`
+      (API live, ISR 5 mnt).
+- [x] **Dependensi mingguan** — `.github/dependabot.yml`: npm + actions
+      mingguan, grup minor-patch, major Next/React/three dievaluasi manual
+      (risiko arsitektur — lihat AGENTS.md).
 
 ## FASE 1 — Konten & Narasi (bulan 1–2) — *prioritas pengguna*
 

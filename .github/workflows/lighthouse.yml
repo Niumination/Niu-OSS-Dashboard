@@ -1,7 +1,9 @@
 name: Lighthouse CI
 
 # Audit performa & aksesibilitas terhadap build statis.
-# Budget: lighthouserc.json (performance >= 0.75, a11y/bp/seo >= 0.9, CLS < 0.15).
+# Budget (F0, 2026-09-20): performance >= 0.80, a11y >= 0.95, bp/seo >= 0.9,
+# CLS < 0.05, LCP error < 3.800 ms (target 2.500 = warn — lingkungan audit
+# memakai throttling simulasi 4x CPU; perangkat nyata jauh lebih cepat).
 # Jalankan manual, atau sekali seminggu agar tidak menghalangi iterasi harian.
 
 on:

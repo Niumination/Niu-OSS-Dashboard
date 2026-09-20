@@ -98,11 +98,13 @@ export default function Hero3D({ stats }: { stats: HeroStats }) {
 
       <div className="relative grid gap-8 p-6 md:p-10 lg:grid-cols-12 lg:gap-10">
         <div className="flex flex-col justify-center lg:col-span-7">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          >
+            {/* Animasi masuk cepat (0,35 dtk): elemen ini adalah LCP — animasi
+                panjang menunda paint terbesar halaman (audit Lighthouse). */}
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+            >
             <div className="micro flex items-center gap-2.5 text-cream/60">
               <span className="relative flex size-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-ember opacity-60" />
