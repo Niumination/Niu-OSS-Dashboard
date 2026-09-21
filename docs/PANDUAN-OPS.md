@@ -52,11 +52,20 @@ setiap deploy**.
 4. Sekalian bersihkan env lama yang sudah tidak dibaca kode:
    hapus `CONTACT_EMAIL` & `WHATSAPP_NUMBER` (jika ada).
 5. **Deployments** → latest → ⋯ → **Redeploy** (tanpa cache juga boleh).
-6. Verifikasi (2 menit): buka `https://niumination.web.id/`, cari badge
-   sumber data di footer — teks "snapshot" atau cek
-   `view-source:` cari `"source":"build-snapshot"` (bukan
-   `fallback-cache`). Atau: `curl -s https://niumination.web.id/ | grep -o
-   '"source[^,]*' | head -1`.
+6. Verifikasi (2 menit): `curl -s https://niumination.web.id/api/github/summary`
+   → harus "live": true, "source": "github-api".
+
+> **⚠️ Pitfall GITHUB_OWNER kosong (22 Sep 2026, `9c820d3`):** jika env
+> `GITHUB_OWNER` di Vercel di-set ke **string kosong** (bukan dihapus),
+> operator `??` tidak menggantikannya (hanya null/undefined yang
+> digantikan) → `OWNER = ''` → semua fetch `/users//repos` 404 →
+> **fallback-cache permanen, terlepas dari token**. Pola aman:
+> `process.env.GITHUB_OWNER?.trim() || 'Niumination'` (sama seperti
+> `NEXT_PUBLIC_CONTACT_*` di `lib/site.config.ts`).
+>
+> **Diagnosa cepat:** bikin route debug sementara yang panggil
+> `getGithubSnapshot({ live: true })` dan cetak `process.env.GITHUB_OWNER`
+> + `process.env.GITHUB_TOKEN`. Kalau `owner: ""` → ini masalahnya.
 
 ## B. Varian `www` (opsional, ±5 menit)
 
@@ -120,7 +129,7 @@ E2E_BASE_URL=https://niumination.web.id node tests/e2e/hydration.mjs
 
 | Item | Status |
 |---|---|
-| T1 GITHUB_TOKEN | ✅ SELESAI (22 Sep 2026) — token baru github_pat_11A5P sudah di Vercel Production + Preview |
+| T1 GITHUB_TOKEN | ✅ SELESAI (22 Sep 2026) — live: true, source: github-api. Token fine-grained github_pat_11A5P + fix GITHUB_OWNER kosong (9c820d3) |
 | T2 CSP | ✅ fase 1 report-only terpasang (2026.7) · enforce = panduan C |
 | T3 React 19.3 + View Transitions | ⏳ menunggu `@react-three/fiber` rilis dukungan `react 19.3` (cek: `npm view @react-three/fiber peerDependencies.react`) |
 | T4 Bundle audit | ✅ selesai 2026.7: initial `/` 915 KB · three.js 882 KB lazy ✓ · kandidat pangkas terbesar = framer-motion+cmdk 248 KB (via T3) |

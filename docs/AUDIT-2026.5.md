@@ -114,7 +114,7 @@ monitoring pasca-domain (F4). Lihat `BACKLOG.md` + `docs/ROADMAP.md`.
 | **T4: audit bundel** (angka dasar) | initial `/` 915 KB · three.js 882 KB lazy ✓ · framer+cmdk 248 KB (kandidat T3) · DOMPurify 73 KB rute repo saja | `1ad946c` |
 | Workspace & artefak debug dibersihkan | patch lama, mirror, `.next` 206 MB | — |
 
-**Status antrian (21 Sep 2026):** T1 ⏳ menunggu pemilik (PANDUAN §A) ·
+**Status antrian (22 Sep 2026):** ~~T1 ⏳ menunggu pemilik (PANDUAN §A)~~ → **T1 ✅ SELESAI** — live: true, source: github-api (token fine-grained + fix GITHUB_OWNER kosong, `9c820d3`) ·
 T2 ✅ fase 1 / enforce menunggu data laporan · T3 ⏳ menunggu rilis fiber
 (`npm view @react-three/fiber peerDependencies.react`) · T4 ✅ ·
 T5 ⏸ proyek terpisah · T6 ✅ (SoftwareSourceCode terpasang) ·

@@ -5,6 +5,37 @@ per fase pengerjaan, lengkap dengan commit yang bisa dilacak.
 Format mengikuti [Keep a Changelog](https://keepachangelog.com/id/1.1/);
 proyek ini tidak memakai versioning semver ketat (satu repo, satu situs).
  
+## [Produksi 2026.9] — T1 GITHUB_TOKEN live: perbaikan GITHUB_OWNER kosong — 2026-09-22
+
+### T1 — data live GitHub API aktif untuk pertama kalinya
+- **Gejala:** `/api/github/summary` selalu `live: false`,
+  `source: fallback-cache` di semua deployment sejak go-live —
+  meski `GITHUB_TOKEN` sudah terpasang (dua token berbeda dicoba,
+  keduanya lolos verifikasi API 200 OK lewat debug route).
+- **Akar masalah (terbukti via route debug `/api/github/snap`):**
+  env `GITHUB_OWNER` di Vercel berisi **string kosong** (`""`),
+  bukan `undefined`. Kode lama memakai
+  `process.env.GITHUB_OWNER ?? 'Niumination'` — operator `??` hanya
+  menggantikan `null`/`undefined`, sehingga `OWNER = ''` → fetch
+  `/users//repos` → **404** → seluruh `getGithubSnapshot` jatuh ke
+  fallback. Token tidak pernah bermasalah.
+- **Fix (`9c820d3`):** `process.env.GITHUB_OWNER?.trim() || 'Niumination'`
+  — pola yang sama dengan `NEXT_PUBLIC_CONTACT_*` di `lib/site.config.ts`
+  (patch arena `c60387f`).
+- **Token:** fine-grained PAT (`github_pat_11A5P…`, read-only, public
+  repositories) — terpasang di Production + Preview (`1336ee7`).
+- **Verifikasi (22 Sep 2026):**
+  `curl -s https://niumination.web.id/api/github/summary` →
+  `live: true`, `source: github-api`, `totalRepos: 90`,
+  `updatedAt` = waktu nyata.
+
+### Lainnya
+- `www.niumination.web.id` ditambahkan ke project (`vercel domains add`)
+  + CNAME `cname.vercel-dns.com` di zona Vercel DNS — verified
+  `configured-correctly`.
+- Insiden kecil `47e1ac4` (`data/repos.json` tertimpa error 404 API)
+  dipulihkan sendiri lewat revert `65a352d` dalam <1 menit.
+
 ## [Produksi 2026.8] — Pemulihan uptime + aturan emas Git — 2026-09-21
 
 ### Insiden: data uptime beku ±26 jam (post-mortem singkat)
