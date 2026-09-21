@@ -3,8 +3,8 @@
 **Lokasi:** `sites/niu-oss-dashboard/` (ekosistem: `~/Desktop/Niumination/sites/niu-oss-dashboard/`)
 **GitHub:** `github.com/Niumination/Niu-OSS-Dashboard`
 **Stack:** Next.js 16.3 (App Router, Turbopack) · React 19.2 · TypeScript 7 · Tailwind 3.4 · React Three Fiber/drei · Framer Motion 13 · cmdk · Fuse.js · next/og · qrcode · Vitest 5
-**Domain target:** `niumination.web.id` (Vercel + DNS idwebhost) — **belum live per 19 Sep 2026** (DNS belum resolve)
-**Status:** 🟢 Aktif — Fase 3.2 selesai (akumulasi 11 commit); Fase 4 go-live pending
+**Domain target:** `niumination.web.id` (Vercel + DNS idwebhost) — **✅ LIVE per 21 Sep 2026** (DNS resolve via Cloudflare → Vercel IP; domain verified, HTTP 200, title "Niumination — Dasbor OSS")
+**Status:** 🟢 Aktif — **Fase 4 go-live DONE** (21 Sep 2026); Fase 5 pending
 
 ## Overview
 
@@ -58,15 +58,24 @@ npm run export:static   # varian GitHub Pages (out/)
 | `npm ci` | ✅ 294 paket, exit 0 |
 | `npm test` | ✅ 41/41 lulus (4 berkas, 5.5 dtk) |
 | `npm run typecheck` | ✅ exit 0 |
-| `npm run build` | ✅ exit 0 — 91 halaman repo + 3 studi ter-prerender |
-| Pemindaian rahasia (`git grep` pola key/token) | ✅ 0 temuan |
+| `npm run build` | ✅ exit 0 — 206 halaman statis + studi |
+| `SITE_URL= npm run build` | ✅ exit 0 (pitfall env kosong tertutup) |
+| Pemindaian rahasia (`secret-scan-staged.py`) | ✅ 0 temuan |
 | Cakupan data | 91 repo publik, 0 entri `private: true` |
+| Domain `niumination.web.id` | ✅ DNS resolve → Vercel IP, HTTP 200, title "Niumination — Dasbor OSS" |
+| Deploy Vercel | ✅ Ready (`https://niu-az30x6c63-archk4lis-projects.vercel.app`) |
 
 ## Temuan terbuka
 
 - ~~`next@15.3.3` ditandai rentan oleh npm (CVE-2025-66478)~~ — **SELESAI 19 Sep 2026**: di-upgrade ke `next@16.3.5` (lihat CHANGELOG "[Stack 2026]"); `npm audit` kini 0 temuan.
 - `data/` + `lib/mock-data.ts` masih snapshot statis; kalender kontribusi 12 bulan butuh `GITHUB_TOKEN` di Vercel (Fase 5).
 - Tailwind masih 3.4 (maintenance) — migrasi ke v4 (CSS-first config) kandidat modernisasi berikutnya, tunggu verifikasi visual.
+- **GITHUB_TOKEN belum di-set di Vercel** → data repo/feed terkunci di snapshot 19 Sep (lihat `docs/AUDIT-2026.5.md` §T1). Prioritas Fase 4–5.
+- Domain `niumination.web.id` sudah live (21 Sep 2026) — DNS via Cloudflare → A record ke Vercel IP (`216.198.79.65`, `64.29.17.65`). Nameserver sudah `ns1.vercel-dns.com` / `ns2.vercel-dns.com`.
+- Audit `docs/AUDIT-2026.5.md` dibuat (20–21 Sep 2026) — posisi kualitas × antrian penyempurnaan T1–T8.
+- react tetap 19.2.8 (sengaja — fiber peer `<19.3`; hero 3D prioritas). Perubahan di `docs/AUDIT-2026.5.md` §T3.
+- `package.json` react diganti ke `^19.2.8` (caret) untuk membolehkan minor patch.
+- BreadcrumbList JSON-LD + avatar `next/image` (commit `c60387f`, audit 2026.5).
 
 ## Deploy (Vercel)
 
@@ -78,7 +87,13 @@ npm run export:static   # varian GitHub Pages (out/)
 - **Pitfall ISR + hydration (#418, 19 Sep 2026):** `revalidate` (level halaman MAUPUN level `fetch`) membuat halaman diregenerasi di Vercel; artefak ter-cache pernah menyajikan DOM generasi baru + payload flight RSC generasi lama dalam SATU dokumen → hydration gagal (React #418) di semua halaman → seluruh pohon diregenerasi klien (hero 3D ikut tampak glitch). Solusi: SEMUA halaman statis murni — tanpa `export const revalidate`, fetch halaman pakai `cache: 'force-cache'` (lihat `getGithubSnapshot` + `lib/insights.ts`); hanya route API `/api/github/*` yang boleh ISR (`{ live: true }`). Label waktu relatif di komponen klien WAJIB `suppressHydrationWarning` (pola `<TimeAgo>`).
 - **Pitfall waktu-nyata di komponen klien (20 Sep 2026):** komponen `'use client'` yang menerima snapshot penuh dan menghitung `Date.now()`/`new Date()` saat render akan mismatch sehari setelah build (nilai SSR vs hidrasi bergeser). Aturan: turunkan "sekarang" dari `snapshot.updatedAt` (lihat `DashboardMetrics`/`computeSummary(snap, now)`).
 - **Sandbox RAM 2 GB (20 Sep 2026):** `npm run export:static` (webpack) bisa thrash/OOM bila server preview masih jalan — MATIKAN dulu semua `next start`, boleh tambah `NODE_OPTIONS=--max-old-space-size=1280`. Turbopack (`npx next build`) jauh lebih ringan. **/tmp adalah tmpfs (993 MB): JANGAN taruh browser Playwright/cache npm besar di sana** (bikin build OOM) — pakai `PLAYWRIGHT_BROWSERS_PATH=/home/user/.cache/pw` (disk, dikecualikan snapshot).
-- Data halaman kini dibekukan per deploy; penyegaran = push data baru (cron `refresh-data` mingguan) → auto-redeploy Vercel.
+- **Data halaman dibekukan per deploy**; penyegaran = push data baru (cron `refresh-data` mingguan) → auto-redeploy Vercel.
+- **Domain pointing `niumination.web.id`** (21 Sep 2026): DNS via Cloudflare (nameserver `dimitris.ns.cloudflare.com` / `rosemary.ns.cloudflare.com` + idwebhost) → A record `@` dan `www` → `76.76.21.21` (legacy) / Vercel IP (`216.198.79.65`, `64.29.17.65`). Domain sudah Verified di Vercel. Catatan: proses ini butuh 24 jam propagasi nameserver dari idwebhost.
+- **Pitfall env `NEXT_PUBLIC_CONTACT_*` (20 Sep 2026):** `lib/site.config.ts` menggunakan `process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim()` dan `process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.trim()` — env tanpa prefix `NEXT_PUBLIC_` tidak tersedia di bundel klien. Patch arena `c60387f` menegaskan pola ini.
+- **E2E 12/12 live** (build normal, bukan 52 unit test — lihat `tests/e2e/hydration.mjs`).
+- Unit test 52/52 (bukan 41 — sudah diperbarui di `tests/i18n.test.ts` oleh arena `c60387f`).
+- Build menghasilkan **206 halaman statis** (bukan 91 — studi baru `niu-gayo-agroclimate` + `pemdi-aceh-tengah` dan sebagainya sudah diperbarui oleh arena `c902d1b`/`c60387f`).
+- **`docs/AUDIT-2026.5.md`**: audit kualitas 2026.5 — posisi saat ini, antrian penyempurnaan T1–T8, referensi riset (20–21 Sep 2026).
 
 ## Tasks
 
