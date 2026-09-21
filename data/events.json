@@ -1,5 +1,110 @@
 [
   {
+    "id": "21734157122",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1376988611,
+      "name": "Niumination/Niu-OSS-Dashboard",
+      "url": "https://api.github.com/repos/Niumination/Niu-OSS-Dashboard"
+    },
+    "payload": {
+      "repository_id": 1376988611,
+      "push_id": 44137228383,
+      "ref": "refs/heads/main",
+      "head": "5f57cc62877ae9501052d0f6f6e5f434e1ae966c",
+      "before": "c60387ffc54a8d9012f2ad6074f0e854e85eeee5"
+    },
+    "public": true,
+    "created_at": "2026-09-21T07:48:46Z"
+  },
+  {
+    "id": "21733894126",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1258561446,
+      "name": "Niumination/PemdiAcehTengah",
+      "url": "https://api.github.com/repos/Niumination/PemdiAcehTengah"
+    },
+    "payload": {
+      "ref": "backup/dual-persona-2026-09-21",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/backup/dual-persona-2026-09-21",
+      "master_branch": "main",
+      "description": "Portal Digital Pemerintah Kabupaten Aceh Tengah — 52 perangkat daerah, peta proses bisnis (PermenPANRB 19/2018), dan evaluasi indeks Pemdi (PermenPANRB 8/2026). Next.js + Supabase, MIT.",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-09-21T07:45:20Z"
+  },
+  {
+    "id": "21733489110",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1376988611,
+      "name": "Niumination/Niu-OSS-Dashboard",
+      "url": "https://api.github.com/repos/Niumination/Niu-OSS-Dashboard"
+    },
+    "payload": {
+      "repository_id": 1376988611,
+      "push_id": 44136601153,
+      "ref": "refs/heads/main",
+      "head": "c60387ffc54a8d9012f2ad6074f0e854e85eeee5",
+      "before": "6481626527dec72a671ba14342dd73b202abba12"
+    },
+    "public": true,
+    "created_at": "2026-09-21T07:39:55Z"
+  },
+  {
+    "id": "21731003468",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1258561446,
+      "name": "Niumination/PemdiAcehTengah",
+      "url": "https://api.github.com/repos/Niumination/PemdiAcehTengah"
+    },
+    "payload": {
+      "repository_id": 1258561446,
+      "push_id": 44147999066,
+      "ref": "refs/heads/main",
+      "head": "25b056b0fa6768dd359ef4a7ca1a91b32a411c9c",
+      "before": "b80b8afcd4ed996f6cce0212e5278a74f5938451"
+    },
+    "public": true,
+    "created_at": "2026-09-21T10:10:53Z"
+  },
+  {
     "id": "21719327232",
     "type": "PushEvent",
     "actor": {
@@ -2491,109 +2596,5 @@
     },
     "public": true,
     "created_at": "2026-09-19T08:10:37Z"
-  },
-  {
-    "id": "21568588598",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1258561446,
-      "name": "Niumination/PemdiAcehTengah",
-      "url": "https://api.github.com/repos/Niumination/PemdiAcehTengah"
-    },
-    "payload": {
-      "repository_id": 1258561446,
-      "push_id": 44001376829,
-      "ref": "refs/heads/main",
-      "head": "48e9d5f66d129fb63c49f05ba2b74e4093158829",
-      "before": "4726e9ee8f7686c99fd3444348161cea6a70457d"
-    },
-    "public": true,
-    "created_at": "2026-09-19T08:00:23Z"
-  },
-  {
-    "id": "21568389400",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1258561446,
-      "name": "Niumination/PemdiAcehTengah",
-      "url": "https://api.github.com/repos/Niumination/PemdiAcehTengah"
-    },
-    "payload": {
-      "repository_id": 1258561446,
-      "push_id": 44001208212,
-      "ref": "refs/heads/main",
-      "head": "4726e9ee8f7686c99fd3444348161cea6a70457d",
-      "before": "c8d5aa20f7a83d7106adf428c4849becf2128615"
-    },
-    "public": true,
-    "created_at": "2026-09-19T07:56:13Z"
-  },
-  {
-    "id": "21568214816",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1353844262,
-      "name": "Niumination/sapa-ai",
-      "url": "https://api.github.com/repos/Niumination/sapa-ai"
-    },
-    "payload": {
-      "repository_id": 1353844262,
-      "push_id": 44001060553,
-      "ref": "refs/heads/main",
-      "head": "72630449fff7c344a248071620ac7731c80c7344",
-      "before": "7d0ac456c0da2ff316c7af5af4ca949173d57202"
-    },
-    "public": true,
-    "created_at": "2026-09-19T07:52:30Z"
-  },
-  {
-    "id": "21545328873",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1303073415,
-      "name": "Niumination/ecosystem-config",
-      "url": "https://api.github.com/repos/Niumination/ecosystem-config"
-    },
-    "payload": {
-      "repository_id": 1303073415,
-      "push_id": 43864573260,
-      "ref": "refs/heads/main",
-      "head": "455776dd0175a2b342a45553441cddcb18eafb13",
-      "before": "6e41a18bd8dd07370f3487aaeb20e617170144b3"
-    },
-    "public": true,
-    "created_at": "2026-09-17T16:24:04Z"
   }
 ]

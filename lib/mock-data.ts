@@ -1,4 +1,4 @@
-// AUTO-GENERATED oleh scripts/gen-mock.mjs pada 2026-09-21T08:25:11.603Z
+// AUTO-GENERATED oleh scripts/gen-mock.mjs pada 2026-09-21T18:31:06.509Z
 // Sumber: GitHub API (fetch langsung)
 // Snapshot nyata akun GitHub — dipakai OTOMATIS saat GitHub API rate-limit
 // atau saat build static export (GitHub Pages). Regenerasi: npm run gen:mock
@@ -16,29 +16,10 @@ export const MOCK_SNAPSHOT: Snapshot = {
     "twitter": null,
     "followers": 2,
     "following": 19,
-    "publicRepos": 91,
+    "publicRepos": 90,
     "joinedAt": "2023-01-26T08:06:49Z"
   },
   "repos": [
-    {
-      "name": "PemdiAcehTengah",
-      "fullName": "Niumination/PemdiAcehTengah",
-      "url": "https://github.com/Niumination/PemdiAcehTengah",
-      "description": "Portal Digital Pemerintah Kabupaten Aceh Tengah — 52 perangkat daerah, peta proses bisnis (PermenPANRB 19/2018), dan evaluasi indeks Pemdi (PermenPANRB 8/2026). Next.js + Supabase, MIT.",
-      "language": "JavaScript",
-      "stars": 1,
-      "forks": 0,
-      "watchers": 1,
-      "openIssues": 0,
-      "topics": [],
-      "homepage": "https://pemdi-aceh-tengah.vercel.app",
-      "fork": false,
-      "archived": false,
-      "license": "MIT",
-      "size": 758266,
-      "createdAt": "2026-06-03T17:41:18Z",
-      "pushedAt": "2026-09-21T07:50:08Z"
-    },
     {
       "name": "ecosystem-config",
       "fullName": "Niumination/ecosystem-config",
@@ -54,9 +35,9 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "fork": false,
       "archived": false,
       "license": null,
-      "size": 45671,
+      "size": 45748,
       "createdAt": "2026-07-16T17:39:24Z",
-      "pushedAt": "2026-09-21T07:48:59Z"
+      "pushedAt": "2026-09-21T18:22:15Z"
     },
     {
       "name": "Niu-OSS-Dashboard",
@@ -73,9 +54,9 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "fork": false,
       "archived": false,
       "license": null,
-      "size": 514,
+      "size": 609,
       "createdAt": "2026-09-19T09:44:20Z",
-      "pushedAt": "2026-09-21T07:48:45Z"
+      "pushedAt": "2026-09-21T18:08:58Z"
     },
     {
       "name": "Niumination",
@@ -98,9 +79,28 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "fork": false,
       "archived": false,
       "license": null,
-      "size": 86,
+      "size": 90,
       "createdAt": "2026-07-15T10:38:11Z",
-      "pushedAt": "2026-09-20T15:09:05Z"
+      "pushedAt": "2026-09-21T15:48:50Z"
+    },
+    {
+      "name": "PemdiAcehTengah",
+      "fullName": "Niumination/PemdiAcehTengah",
+      "url": "https://github.com/Niumination/PemdiAcehTengah",
+      "description": "Portal Digital Pemerintah Kabupaten Aceh Tengah — 52 perangkat daerah, peta proses bisnis (PermenPANRB 19/2018), dan evaluasi indeks Pemdi (PermenPANRB 8/2026). Next.js + Supabase, MIT.",
+      "language": "JavaScript",
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "openIssues": 0,
+      "topics": [],
+      "homepage": "https://pemdi-aceh-tengah.vercel.app",
+      "fork": false,
+      "archived": false,
+      "license": "MIT",
+      "size": 758422,
+      "createdAt": "2026-06-03T17:41:18Z",
+      "pushedAt": "2026-09-21T10:10:52Z"
     },
     {
       "name": "sapa-ai",
@@ -424,25 +424,6 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "size": 156,
       "createdAt": "2026-09-05T08:06:40Z",
       "pushedAt": "2026-09-05T08:07:31Z"
-    },
-    {
-      "name": "cc-acehtengah",
-      "fullName": "Niumination/cc-acehtengah",
-      "url": "https://github.com/Niumination/cc-acehtengah",
-      "description": null,
-      "language": "TypeScript",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "openIssues": 0,
-      "topics": [],
-      "homepage": "https://cc-acehtengah.vercel.app",
-      "fork": false,
-      "archived": false,
-      "license": null,
-      "size": 1372,
-      "createdAt": "2026-07-13T15:35:34Z",
-      "pushedAt": "2026-09-01T16:50:27Z"
     },
     {
       "name": "jcode-eco",
@@ -1779,6 +1760,38 @@ export const MOCK_SNAPSHOT: Snapshot = {
   ],
   "events": [
     {
+      "id": "21734157122",
+      "type": "PushEvent",
+      "repo": "Niumination/Niu-OSS-Dashboard",
+      "repoUrl": "https://api.github.com/repos/Niumination/Niu-OSS-Dashboard",
+      "createdAt": "2026-09-21T07:48:46Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "21733894126",
+      "type": "CreateEvent",
+      "repo": "Niumination/PemdiAcehTengah",
+      "repoUrl": "https://api.github.com/repos/Niumination/PemdiAcehTengah",
+      "createdAt": "2026-09-21T07:45:20Z",
+      "summary": "membuat branch “backup/dual-persona-2026-09-21”"
+    },
+    {
+      "id": "21733489110",
+      "type": "PushEvent",
+      "repo": "Niumination/Niu-OSS-Dashboard",
+      "repoUrl": "https://api.github.com/repos/Niumination/Niu-OSS-Dashboard",
+      "createdAt": "2026-09-21T07:39:55Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "21731003468",
+      "type": "PushEvent",
+      "repo": "Niumination/PemdiAcehTengah",
+      "repoUrl": "https://api.github.com/repos/Niumination/PemdiAcehTengah",
+      "createdAt": "2026-09-21T10:10:53Z",
+      "summary": "0 commit"
+    },
+    {
       "id": "21719327232",
       "type": "PushEvent",
       "repo": "Niumination/PemdiAcehTengah",
@@ -2545,42 +2558,10 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
       "createdAt": "2026-09-19T08:10:37Z",
       "summary": "0 commit"
-    },
-    {
-      "id": "21568588598",
-      "type": "PushEvent",
-      "repo": "Niumination/PemdiAcehTengah",
-      "repoUrl": "https://api.github.com/repos/Niumination/PemdiAcehTengah",
-      "createdAt": "2026-09-19T08:00:23Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "21568389400",
-      "type": "PushEvent",
-      "repo": "Niumination/PemdiAcehTengah",
-      "repoUrl": "https://api.github.com/repos/Niumination/PemdiAcehTengah",
-      "createdAt": "2026-09-19T07:56:13Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "21568214816",
-      "type": "PushEvent",
-      "repo": "Niumination/sapa-ai",
-      "repoUrl": "https://api.github.com/repos/Niumination/sapa-ai",
-      "createdAt": "2026-09-19T07:52:30Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "21545328873",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-09-17T16:24:04Z",
-      "summary": "0 commit"
     }
   ],
   "live": false,
   "rateLimited": false,
-  "updatedAt": "2026-09-21T08:25:11.603Z",
+  "updatedAt": "2026-09-21T18:31:06.508Z",
   "source": "fallback-cache"
 };

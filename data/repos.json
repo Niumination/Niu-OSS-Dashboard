@@ -1,121 +1,5 @@
 [
   {
-    "id": 1258561446,
-    "node_id": "R_kgDOSwQfpg",
-    "name": "PemdiAcehTengah",
-    "full_name": "Niumination/PemdiAcehTengah",
-    "private": false,
-    "owner": {
-      "login": "Niumination",
-      "id": 123625275,
-      "node_id": "U_kgDOB15fOw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "html_url": "https://github.com/Niumination",
-      "followers_url": "https://api.github.com/users/Niumination/followers",
-      "following_url": "https://api.github.com/users/Niumination/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Niumination/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Niumination/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Niumination/subscriptions",
-      "organizations_url": "https://api.github.com/users/Niumination/orgs",
-      "repos_url": "https://api.github.com/users/Niumination/repos",
-      "events_url": "https://api.github.com/users/Niumination/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Niumination/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "html_url": "https://github.com/Niumination/PemdiAcehTengah",
-    "description": "Portal Digital Pemerintah Kabupaten Aceh Tengah — 52 perangkat daerah, peta proses bisnis (PermenPANRB 19/2018), dan evaluasi indeks Pemdi (PermenPANRB 8/2026). Next.js + Supabase, MIT.",
-    "fork": false,
-    "url": "https://api.github.com/repos/Niumination/PemdiAcehTengah",
-    "forks_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/forks",
-    "keys_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/keys{/key_id}",
-    "collaborators_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/collaborators{/collaborator}",
-    "teams_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/teams",
-    "hooks_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/hooks",
-    "issue_events_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/issues/events{/number}",
-    "events_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/events",
-    "assignees_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/assignees{/user}",
-    "branches_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/branches{/branch}",
-    "tags_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/tags",
-    "blobs_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/git/blobs{/sha}",
-    "git_tags_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/git/tags{/sha}",
-    "git_refs_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/git/refs{/sha}",
-    "trees_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/git/trees{/sha}",
-    "statuses_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/statuses/{sha}",
-    "languages_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/languages",
-    "stargazers_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/stargazers",
-    "contributors_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/contributors",
-    "subscribers_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/subscribers",
-    "subscription_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/subscription",
-    "commits_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/commits{/sha}",
-    "git_commits_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/git/commits{/sha}",
-    "comments_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/comments{/number}",
-    "issue_comment_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/issues/comments{/number}",
-    "contents_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/contents/{+path}",
-    "compare_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/compare/{base}...{head}",
-    "merges_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/merges",
-    "archive_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/{archive_format}{/ref}",
-    "downloads_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/downloads",
-    "issues_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/issues{/number}",
-    "pulls_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/pulls{/number}",
-    "milestones_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/milestones{/number}",
-    "notifications_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/notifications{?since,all,participating}",
-    "labels_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/labels{/name}",
-    "releases_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/releases{/id}",
-    "deployments_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/deployments",
-    "created_at": "2026-06-03T17:41:18Z",
-    "updated_at": "2026-09-21T07:50:12Z",
-    "pushed_at": "2026-09-21T07:50:08Z",
-    "git_url": "git://github.com/Niumination/PemdiAcehTengah.git",
-    "ssh_url": "git@github.com:Niumination/PemdiAcehTengah.git",
-    "clone_url": "https://github.com/Niumination/PemdiAcehTengah.git",
-    "svn_url": "https://github.com/Niumination/PemdiAcehTengah",
-    "homepage": "https://pemdi-aceh-tengah.vercel.app",
-    "size": 758266,
-    "stargazers_count": 1,
-    "watchers_count": 1,
-    "language": "JavaScript",
-    "has_issues": true,
-    "has_projects": true,
-    "has_downloads": false,
-    "has_wiki": true,
-    "has_pages": false,
-    "has_discussions": false,
-    "forks_count": 0,
-    "mirror_url": null,
-    "archived": false,
-    "disabled": false,
-    "open_issues_count": 0,
-    "license": {
-      "key": "mit",
-      "name": "MIT License",
-      "spdx_id": "MIT",
-      "url": "https://api.github.com/licenses/mit",
-      "node_id": "MDc6TGljZW5zZTEz"
-    },
-    "allow_forking": true,
-    "is_template": false,
-    "web_commit_signoff_required": false,
-    "has_pull_requests": true,
-    "pull_request_creation_policy": "all",
-    "topics": [],
-    "visibility": "public",
-    "forks": 0,
-    "open_issues": 0,
-    "watchers": 1,
-    "default_branch": "main",
-    "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
-    }
-  },
-  {
     "id": 1303073415,
     "node_id": "R_kgDOTatShw",
     "name": "ecosystem-config",
@@ -183,14 +67,14 @@
     "releases_url": "https://api.github.com/repos/Niumination/ecosystem-config/releases{/id}",
     "deployments_url": "https://api.github.com/repos/Niumination/ecosystem-config/deployments",
     "created_at": "2026-07-16T17:39:24Z",
-    "updated_at": "2026-09-21T07:49:03Z",
-    "pushed_at": "2026-09-21T07:48:59Z",
+    "updated_at": "2026-09-21T18:22:20Z",
+    "pushed_at": "2026-09-21T18:22:15Z",
     "git_url": "git://github.com/Niumination/ecosystem-config.git",
     "ssh_url": "git@github.com:Niumination/ecosystem-config.git",
     "clone_url": "https://github.com/Niumination/ecosystem-config.git",
     "svn_url": "https://github.com/Niumination/ecosystem-config",
     "homepage": null,
-    "size": 45671,
+    "size": 45748,
     "stargazers_count": 0,
     "watchers_count": 0,
     "language": "JavaScript",
@@ -218,11 +102,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -293,14 +177,14 @@
     "releases_url": "https://api.github.com/repos/Niumination/Niu-OSS-Dashboard/releases{/id}",
     "deployments_url": "https://api.github.com/repos/Niumination/Niu-OSS-Dashboard/deployments",
     "created_at": "2026-09-19T09:44:20Z",
-    "updated_at": "2026-09-21T07:48:49Z",
-    "pushed_at": "2026-09-21T07:48:45Z",
+    "updated_at": "2026-09-21T18:09:01Z",
+    "pushed_at": "2026-09-21T18:08:58Z",
     "git_url": "git://github.com/Niumination/Niu-OSS-Dashboard.git",
     "ssh_url": "git@github.com:Niumination/Niu-OSS-Dashboard.git",
     "clone_url": "https://github.com/Niumination/Niu-OSS-Dashboard.git",
     "svn_url": "https://github.com/Niumination/Niu-OSS-Dashboard",
     "homepage": "https://niu-oss.vercel.app",
-    "size": 514,
+    "size": 609,
     "stargazers_count": 0,
     "watchers_count": 0,
     "language": "TypeScript",
@@ -328,11 +212,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -403,14 +287,14 @@
     "releases_url": "https://api.github.com/repos/Niumination/Niumination/releases{/id}",
     "deployments_url": "https://api.github.com/repos/Niumination/Niumination/deployments",
     "created_at": "2026-07-15T10:38:11Z",
-    "updated_at": "2026-09-20T15:09:09Z",
-    "pushed_at": "2026-09-20T15:09:05Z",
+    "updated_at": "2026-09-21T15:48:54Z",
+    "pushed_at": "2026-09-21T15:48:50Z",
     "git_url": "git://github.com/Niumination/Niumination.git",
     "ssh_url": "git@github.com:Niumination/Niumination.git",
     "clone_url": "https://github.com/Niumination/Niumination.git",
     "svn_url": "https://github.com/Niumination/Niumination",
     "homepage": null,
-    "size": 86,
+    "size": 90,
     "stargazers_count": 1,
     "watchers_count": 1,
     "language": "JavaScript",
@@ -444,11 +328,127 @@
     "watchers": 1,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
+    }
+  },
+  {
+    "id": 1258561446,
+    "node_id": "R_kgDOSwQfpg",
+    "name": "PemdiAcehTengah",
+    "full_name": "Niumination/PemdiAcehTengah",
+    "private": false,
+    "owner": {
+      "login": "Niumination",
+      "id": 123625275,
+      "node_id": "U_kgDOB15fOw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "html_url": "https://github.com/Niumination",
+      "followers_url": "https://api.github.com/users/Niumination/followers",
+      "following_url": "https://api.github.com/users/Niumination/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Niumination/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Niumination/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Niumination/subscriptions",
+      "organizations_url": "https://api.github.com/users/Niumination/orgs",
+      "repos_url": "https://api.github.com/users/Niumination/repos",
+      "events_url": "https://api.github.com/users/Niumination/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Niumination/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "html_url": "https://github.com/Niumination/PemdiAcehTengah",
+    "description": "Portal Digital Pemerintah Kabupaten Aceh Tengah — 52 perangkat daerah, peta proses bisnis (PermenPANRB 19/2018), dan evaluasi indeks Pemdi (PermenPANRB 8/2026). Next.js + Supabase, MIT.",
+    "fork": false,
+    "url": "https://api.github.com/repos/Niumination/PemdiAcehTengah",
+    "forks_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/forks",
+    "keys_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/teams",
+    "hooks_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/hooks",
+    "issue_events_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/events",
+    "assignees_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/tags",
+    "blobs_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/git/blobs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/git/tags{/sha}",
+    "git_refs_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/git/trees{/sha}",
+    "statuses_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/languages",
+    "stargazers_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/stargazers",
+    "contributors_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/contributors",
+    "subscribers_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/subscribers",
+    "subscription_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/subscription",
+    "commits_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/commits{/sha}",
+    "git_commits_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/git/commits{/sha}",
+    "comments_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/comments{/number}",
+    "issue_comment_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/issues/comments{/number}",
+    "contents_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/merges",
+    "archive_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/downloads",
+    "issues_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/pulls{/number}",
+    "milestones_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/milestones{/number}",
+    "notifications_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/labels{/name}",
+    "releases_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/releases{/id}",
+    "deployments_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/deployments",
+    "created_at": "2026-06-03T17:41:18Z",
+    "updated_at": "2026-09-21T10:10:57Z",
+    "pushed_at": "2026-09-21T10:10:52Z",
+    "git_url": "git://github.com/Niumination/PemdiAcehTengah.git",
+    "ssh_url": "git@github.com:Niumination/PemdiAcehTengah.git",
+    "clone_url": "https://github.com/Niumination/PemdiAcehTengah.git",
+    "svn_url": "https://github.com/Niumination/PemdiAcehTengah",
+    "homepage": "https://pemdi-aceh-tengah.vercel.app",
+    "size": 758422,
+    "stargazers_count": 1,
+    "watchers_count": 1,
+    "language": "JavaScript",
+    "has_issues": true,
+    "has_projects": true,
+    "has_downloads": false,
+    "has_wiki": true,
+    "has_pages": false,
+    "has_discussions": false,
+    "forks_count": 0,
+    "mirror_url": null,
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 0,
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "allow_forking": true,
+    "is_template": false,
+    "web_commit_signoff_required": false,
+    "has_pull_requests": true,
+    "pull_request_creation_policy": "all",
+    "topics": [],
+    "visibility": "public",
+    "forks": 0,
+    "open_issues": 0,
+    "watchers": 1,
+    "default_branch": "main",
+    "permissions": {
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -560,11 +560,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -676,11 +676,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -786,11 +786,11 @@
     "watchers": 0,
     "default_branch": "master",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -896,11 +896,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -1006,11 +1006,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -1122,11 +1122,11 @@
     "watchers": 2,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -1232,11 +1232,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -1342,11 +1342,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -1452,11 +1452,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -1562,11 +1562,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -1672,11 +1672,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -1782,11 +1782,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -1898,11 +1898,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -2008,11 +2008,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -2118,11 +2118,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -2228,11 +2228,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -2338,121 +2338,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
-    }
-  },
-  {
-    "id": 1299451488,
-    "node_id": "R_kgDOTXQOYA",
-    "name": "cc-acehtengah",
-    "full_name": "Niumination/cc-acehtengah",
-    "private": false,
-    "owner": {
-      "login": "Niumination",
-      "id": 123625275,
-      "node_id": "U_kgDOB15fOw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "html_url": "https://github.com/Niumination",
-      "followers_url": "https://api.github.com/users/Niumination/followers",
-      "following_url": "https://api.github.com/users/Niumination/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Niumination/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Niumination/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Niumination/subscriptions",
-      "organizations_url": "https://api.github.com/users/Niumination/orgs",
-      "repos_url": "https://api.github.com/users/Niumination/repos",
-      "events_url": "https://api.github.com/users/Niumination/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Niumination/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "html_url": "https://github.com/Niumination/cc-acehtengah",
-    "description": null,
-    "fork": false,
-    "url": "https://api.github.com/repos/Niumination/cc-acehtengah",
-    "forks_url": "https://api.github.com/repos/Niumination/cc-acehtengah/forks",
-    "keys_url": "https://api.github.com/repos/Niumination/cc-acehtengah/keys{/key_id}",
-    "collaborators_url": "https://api.github.com/repos/Niumination/cc-acehtengah/collaborators{/collaborator}",
-    "teams_url": "https://api.github.com/repos/Niumination/cc-acehtengah/teams",
-    "hooks_url": "https://api.github.com/repos/Niumination/cc-acehtengah/hooks",
-    "issue_events_url": "https://api.github.com/repos/Niumination/cc-acehtengah/issues/events{/number}",
-    "events_url": "https://api.github.com/repos/Niumination/cc-acehtengah/events",
-    "assignees_url": "https://api.github.com/repos/Niumination/cc-acehtengah/assignees{/user}",
-    "branches_url": "https://api.github.com/repos/Niumination/cc-acehtengah/branches{/branch}",
-    "tags_url": "https://api.github.com/repos/Niumination/cc-acehtengah/tags",
-    "blobs_url": "https://api.github.com/repos/Niumination/cc-acehtengah/git/blobs{/sha}",
-    "git_tags_url": "https://api.github.com/repos/Niumination/cc-acehtengah/git/tags{/sha}",
-    "git_refs_url": "https://api.github.com/repos/Niumination/cc-acehtengah/git/refs{/sha}",
-    "trees_url": "https://api.github.com/repos/Niumination/cc-acehtengah/git/trees{/sha}",
-    "statuses_url": "https://api.github.com/repos/Niumination/cc-acehtengah/statuses/{sha}",
-    "languages_url": "https://api.github.com/repos/Niumination/cc-acehtengah/languages",
-    "stargazers_url": "https://api.github.com/repos/Niumination/cc-acehtengah/stargazers",
-    "contributors_url": "https://api.github.com/repos/Niumination/cc-acehtengah/contributors",
-    "subscribers_url": "https://api.github.com/repos/Niumination/cc-acehtengah/subscribers",
-    "subscription_url": "https://api.github.com/repos/Niumination/cc-acehtengah/subscription",
-    "commits_url": "https://api.github.com/repos/Niumination/cc-acehtengah/commits{/sha}",
-    "git_commits_url": "https://api.github.com/repos/Niumination/cc-acehtengah/git/commits{/sha}",
-    "comments_url": "https://api.github.com/repos/Niumination/cc-acehtengah/comments{/number}",
-    "issue_comment_url": "https://api.github.com/repos/Niumination/cc-acehtengah/issues/comments{/number}",
-    "contents_url": "https://api.github.com/repos/Niumination/cc-acehtengah/contents/{+path}",
-    "compare_url": "https://api.github.com/repos/Niumination/cc-acehtengah/compare/{base}...{head}",
-    "merges_url": "https://api.github.com/repos/Niumination/cc-acehtengah/merges",
-    "archive_url": "https://api.github.com/repos/Niumination/cc-acehtengah/{archive_format}{/ref}",
-    "downloads_url": "https://api.github.com/repos/Niumination/cc-acehtengah/downloads",
-    "issues_url": "https://api.github.com/repos/Niumination/cc-acehtengah/issues{/number}",
-    "pulls_url": "https://api.github.com/repos/Niumination/cc-acehtengah/pulls{/number}",
-    "milestones_url": "https://api.github.com/repos/Niumination/cc-acehtengah/milestones{/number}",
-    "notifications_url": "https://api.github.com/repos/Niumination/cc-acehtengah/notifications{?since,all,participating}",
-    "labels_url": "https://api.github.com/repos/Niumination/cc-acehtengah/labels{/name}",
-    "releases_url": "https://api.github.com/repos/Niumination/cc-acehtengah/releases{/id}",
-    "deployments_url": "https://api.github.com/repos/Niumination/cc-acehtengah/deployments",
-    "created_at": "2026-07-13T15:35:34Z",
-    "updated_at": "2026-09-01T16:16:05Z",
-    "pushed_at": "2026-09-01T16:50:27Z",
-    "git_url": "git://github.com/Niumination/cc-acehtengah.git",
-    "ssh_url": "git@github.com:Niumination/cc-acehtengah.git",
-    "clone_url": "https://github.com/Niumination/cc-acehtengah.git",
-    "svn_url": "https://github.com/Niumination/cc-acehtengah",
-    "homepage": "https://cc-acehtengah.vercel.app",
-    "size": 1372,
-    "stargazers_count": 0,
-    "watchers_count": 0,
-    "language": "TypeScript",
-    "has_issues": true,
-    "has_projects": true,
-    "has_downloads": false,
-    "has_wiki": false,
-    "has_pages": false,
-    "has_discussions": false,
-    "forks_count": 0,
-    "mirror_url": null,
-    "archived": false,
-    "disabled": false,
-    "open_issues_count": 0,
-    "license": null,
-    "allow_forking": true,
-    "is_template": false,
-    "web_commit_signoff_required": false,
-    "has_pull_requests": true,
-    "pull_request_creation_policy": "all",
-    "topics": [],
-    "visibility": "public",
-    "forks": 0,
-    "open_issues": 0,
-    "watchers": 0,
-    "default_branch": "main",
-    "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -2558,11 +2448,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -2695,11 +2585,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -2805,11 +2695,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -2921,11 +2811,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -3031,11 +2921,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -3141,11 +3031,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -3257,11 +3147,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -3367,11 +3257,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -3477,11 +3367,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -3593,11 +3483,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -3709,11 +3599,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -3819,11 +3709,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -3929,11 +3819,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -4045,11 +3935,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -4161,11 +4051,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -4277,11 +4167,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -4393,11 +4283,11 @@
     "watchers": 0,
     "default_branch": "dev",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -4509,11 +4399,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -4619,11 +4509,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -4729,11 +4619,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -4839,11 +4729,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -4949,11 +4839,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -5059,11 +4949,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -5169,11 +5059,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -5285,11 +5175,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -5395,11 +5285,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -5511,11 +5401,11 @@
     "watchers": 0,
     "default_branch": "master",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -5627,11 +5517,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -5737,11 +5627,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -5853,11 +5743,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -5969,11 +5859,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -6079,11 +5969,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -6189,11 +6079,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -6305,11 +6195,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -6415,11 +6305,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -6531,11 +6421,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -6641,11 +6531,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -6751,11 +6641,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -6867,11 +6757,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -6977,11 +6867,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -7087,11 +6977,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -7203,11 +7093,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -7319,11 +7209,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -7435,11 +7325,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -7551,11 +7441,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -7667,11 +7557,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -7777,11 +7667,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -7893,11 +7783,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -8009,11 +7899,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -8125,11 +8015,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -8241,11 +8131,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -8357,11 +8247,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -8473,11 +8363,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -8589,11 +8479,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -8705,11 +8595,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -8821,11 +8711,11 @@
     "watchers": 0,
     "default_branch": "master",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -8931,11 +8821,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -9041,11 +8931,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -9151,11 +9041,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -9261,11 +9151,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -9377,11 +9267,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -9487,11 +9377,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -9603,11 +9493,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -9713,11 +9603,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -9829,11 +9719,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -9939,11 +9829,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -10055,11 +9945,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -10171,11 +10061,11 @@
     "watchers": 0,
     "default_branch": "master",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   },
   {
@@ -10281,11 +10171,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": false,
-      "maintain": false,
-      "push": false,
-      "triage": false,
-      "pull": false
+      "admin": true,
+      "maintain": true,
+      "push": true,
+      "triage": true,
+      "pull": true
     }
   }
 ]

@@ -16,7 +16,7 @@
   "events_url": "https://api.github.com/users/Niumination/events{/privacy}",
   "received_events_url": "https://api.github.com/users/Niumination/received_events",
   "type": "User",
-  "user_view_type": "public",
+  "user_view_type": "private",
   "site_admin": false,
   "name": "Niumination",
   "company": null,
@@ -26,10 +26,22 @@
   "hireable": null,
   "bio": null,
   "twitter_username": null,
-  "public_repos": 91,
+  "public_repos": 90,
   "public_gists": 0,
   "followers": 2,
   "following": 19,
   "created_at": "2023-01-26T08:06:49Z",
-  "updated_at": "2026-09-06T04:23:19Z"
+  "updated_at": "2026-09-06T04:23:19Z",
+  "private_gists": 0,
+  "total_private_repos": 37,
+  "owned_private_repos": 37,
+  "disk_usage": 3912786,
+  "collaborators": 0,
+  "two_factor_authentication": true,
+  "plan": {
+    "name": "free",
+    "space": 976562499,
+    "collaborators": 0,
+    "private_repos": 10000
+  }
 }
