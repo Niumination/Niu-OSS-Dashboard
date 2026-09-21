@@ -18,7 +18,7 @@ import type { Ghevent, RepoLite, Snapshot, UserLite } from './types';
  * ============================================================================
  */
 
-const OWNER = process.env.GITHUB_OWNER ?? 'Niumination';
+const OWNER = process.env.GITHUB_OWNER?.trim() || 'Niumination';
 const API = 'https://api.github.com';
 const REVALIDATE = 300; // 5 menit (ISR)
 /** Timeout per-request —防止 ISR rebuild menggantung saat jaringan lambat. */
