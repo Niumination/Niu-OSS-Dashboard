@@ -101,14 +101,24 @@ monitoring pasca-domain (F4). Lihat `BACKLOG.md` + `docs/ROADMAP.md`.
 
 ---
 
-## 3. Yang SUDAH dikerjakan di audit ini (commit terkait)
+## 3. Yang SUDAH dikerjakan (audit ini + lanjutan 2026.6–2026.7)
 
-| Perubahan | Nilai |
-|---|---|
-| Avatar NavBar → `next/image` | AVIF/WebP otomatis, dimensi presisi (CLS), lazy-consolidation; satu-satunya `<img>` manual tersisa |
-| `BreadcrumbList` JSON-LD di repo & studi | Rich result breadcrumb di Google |
-| `react`/`react-dom` dipertahankan 19.2.8 sengaja | 19.3 di luar peer range fiber — risiko 3D hero; diputuskan stabil > baru (dicatat di T3) |
-| Workspace & artefak debug dibersihkan | patch lama, mirror, `.next` 206 MB |
+| Perubahan | Nilai | Commit |
+|---|---|---|
+| Avatar NavBar → `next/image` | AVIF/WebP otomatis, dimensi presisi (CLS), lazy-consolidation; satu-satunya `<img>` manual tersisa | `c60387f` |
+| `BreadcrumbList` JSON-LD di repo & studi | Rich result breadcrumb di Google | `c60387f` |
+| `react`/`react-dom` dipertahankan 19.2.8 sengaja | 19.3 di luar peer range fiber — risiko 3D hero; diputuskan stabil > baru (dicatat di T3) | `c60387f` |
+| **Uptime `niumination.web.id` permanen** | Situs utama baris pertama pemantauan cron 15 mnt (domain live 21 Sep) | `628f77a` |
+| **T2 fase 1: CSP report-only** + `/api/csp-report` | Pengumpulan pelanggaran ke log Vercel — jalur menuju enforcement (PANDUAN-OPS §C) | `1ad946c` |
+| **T6 lanjut: `SoftwareSourceCode`** di `/repo/[slug]` | Lisensi SPDX, InteractionCounter star/fork — rich result repo | `1ad946c` |
+| **T4: audit bundel** (angka dasar) | initial `/` 915 KB · three.js 882 KB lazy ✓ · framer+cmdk 248 KB (kandidat T3) · DOMPurify 73 KB rute repo saja | `1ad946c` |
+| Workspace & artefak debug dibersihkan | patch lama, mirror, `.next` 206 MB | — |
+
+**Status antrian (21 Sep 2026):** T1 ⏳ menunggu pemilik (PANDUAN §A) ·
+T2 ✅ fase 1 / enforce menunggu data laporan · T3 ⏳ menunggu rilis fiber
+(`npm view @react-three/fiber peerDependencies.react`) · T4 ✅ ·
+T5 ⏸ proyek terpisah · T6 ✅ (SoftwareSourceCode terpasang) ·
+T7 sebagian (uptime+vitals ✓; Analytics/Sentry = PANDUAN §D) · T8 mengikuti BACKLOG.
 
 ---
 

@@ -52,12 +52,19 @@ domain produksi: **12/12 ✓** (10 rute + degrade WebGL + pintasan).
   jadi 9 agar total tetap 10. Melengkapi item BACKLOG Fase 4.
 
 ### Catatan ops pasca-pointing
-- `www.niumination.web.id` belum diatur (tidak ter-resolve) — opsional:
-  tambahkan CNAME `www` → `cname.vercel-dns.com` bila ingin varian www
-  (Vercel akan redirect ke apex).
+- `www.niumination.web.id`: A record ada di zona DNS Vercel tapi sertifikat
+  belum mencakup www — aktifkan via Vercel → Domains (langkah: PANDUAN-OPS §B).
 - Data build masih jalur `fallback-cache` — snapshot mingguan (cron 21 Sep
   08:25 WIB) membuat data tetap segar; `GITHUB_TOKEN` (AUDIT-2026.5 §T1)
   tetap disarankan agar data segar per-deploy tanpa menunggu cron.
+
+### Koreksi dokumentasi DNS (21 Sep 2026, malam)
+Entri-entri awal (AGENTS/BACKLOG/README patch sebelumnya) menyebut "DNS via
+Cloudflare (nameserver dimitris/rosemary.ns.cloudflare.com)" — **keliru**.
+Verifikasi empiris (Google DoH + Cloudflare DoH + header respons): registrar
+**idwebhost**, nameserver **`ns1/ns2.vercel-dns.com`** → zona DNS dikelola
+**Vercel** (SOA nsone.net; trafik langsung ke Vercel, tanpa `cf-ray`).
+Tidak ada Cloudflare dalam arsitektur domain ini.
 
 ## [Stack 2026.5] — Audit kualitas 2026 + SEO & polish — 2026-09-21
 

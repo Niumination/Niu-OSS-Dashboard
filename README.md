@@ -7,7 +7,7 @@ Landing page + dashboard interaktif untuk <a href="https://github.com/niuminatio
 
 Bahasa: **ID** (default) / **EN** — toggle di navbar · PWA-ready · API publik v1
 
-Produksi: **[niumination.web.id](https://niumination.web.id)** — Vercel + domain idwebhost
+Produksi: **[niumination.web.id](https://niumination.web.id)** — Vercel · domain .web.id (idwebhost), NS → Vercel DNS · **live 21 Sep 2026**
 
 </div>
 
@@ -65,6 +65,14 @@ Setiap fase punya entri [CHANGELOG.md](./CHANGELOG.md) + commit yang bisa diaudi
 | Fase 3 | i18n id/en, PWA, API publik v1, QR share | `ab0737f` | ✅ |
 | Fase 3.1 | i18n dashboard penuh, /developers, deskripsi repo EN | `48727b1` | ✅ |
 | Fase 3.2 | Persiapan produksi Vercel + domain web.id, ID penuh, ROADMAP | `36a8847` | ✅ |
+| Fix #418 (ISR) | Halaman statis murni, force-cache fetch, TimeAgo aman-hidrasi | `a601112` | ✅ |
+| Audit 2026.2–3 | 4 bug laten hidrasi, hardening 3D, keamanan jalur-error, sw.js v2 | `578e2b8`·`e326695` | ✅ |
+| Stack 2026 | Next 16.3.5 · React 19.2.8 · TS 7 · Vitest 5 (CVE tertutup) | `513c468` | ✅ |
+| Fase 0 | E2E hidrasi di CI, guard #418, budget Lighthouse, dependabot | `2c0b572` | ✅ |
+| Fix #418 final | Akar: env non-`NEXT_PUBLIC_` di SITE → mismatch klien/server | `c902d1b` | ✅ |
+| Audit 2026.5 | BreadcrumbList, avatar `next/image`, peta penyempurnaan T1–T8 | `c60387f` | ✅ |
+| Produksi 2026.6 | **Domain live** + uptime `niumination.web.id` permanen | `628f77a` | ✅ |
+| Stack 2026.7 | CSP report-only + `SoftwareSourceCode` + audit bundel | `1ad946c` | ✅ |
 | PPR | Partial Prerendering | — | ⏸ ditunda (target deploy statis; ukur p50/p95 dari `/api/vitals` dulu bila pindah ke Vercel) |
 
 ## ✦ Fitur
@@ -76,7 +84,7 @@ Setiap fase punya entri [CHANGELOG.md](./CHANGELOG.md) + commit yang bisa diaudi
 | 3 | **Command Palette (Ctrl+K)** | `cmdk`: cari repo, lompat antar seksi, buka tautan sosial, salin email, picu modal pembayaran — full keyboard. |
 | 4 | **Master dashboard** (`/system`) | 6 stat cards, commit heatmap 26 minggu, distribusi bahasa, grafik aktivitas 30 hari, **pola kontribusi 12 bulan** (GraphQL/fallback), donat kategori, feed event, StatusMonitor live. |
 | 5 | **Status publik GitOps** (`/status`) | Riwayat uptime 30 hari ala Upptime — diperiksa tiap 15 menit oleh Actions, di-commit ke repo (auditabel), tanpa server monitoring. |
-| 6 | **Studi kasus** (`/studies`) | 3 proyek unggulan: masalah → pendekatan → hasil + metrik; bilingual (id/en) via `data/studies.json`. |
+| 6 | **Studi kasus** (`/studies`) | 4 proyek unggulan: masalah → pendekatan → hasil + metrik; bilingual (id/en) via `data/studies.json`. |
 | 7 | **Monetisasi** | Modal 2 tab: *Dukung OSS* (Midtrans SNAP QRIS/VA, Stripe, Sponsors, BMAC) dan *Sewa Jasa* (3 paket, deposit 50%, mailto + WhatsApp checkout). Kunci rahasia hanya di server; webhook SHA-512. |
 | 8 | **i18n id/en** | Toggle **ID \| EN** di navbar (localStorage). Kerangka situs, beranda, dashboard internal, status, studi kasus, command palette — semua bilingual. |
 | 9 | **PWA** | Manifest + service worker (network-first navigasi, stale-while-revalidate aset) + halaman `/offline`. |
@@ -188,12 +196,17 @@ npm run dev                  # http://localhost:3000
 | `MIDTRANS_SERVER_KEY` | – | **Rahasia** — Snap API + verifikasi webhook SHA-512. |
 | `STRIPE_SECRET_KEY` | – | **Rahasia** — Checkout Session (IDR zero-decimal). |
 | `NEXT_PUBLIC_STRIPE_PAYMENT_LINK` | – | Stripe hosted link (alternatif tanpa server). |
-| `CONTACT_EMAIL` | – | Tujuan form booking jasa. |
-| `WHATSAPP_NUMBER` | – | Nomor WA `62…` untuk tombol chat. |
+| `NEXT_PUBLIC_CONTACT_EMAIL` | – | Tujuan form booking jasa — **wajib prefix `NEXT_PUBLIC_`** (dibaca komponen klien; string kosong → fallback default). |
+| `NEXT_PUBLIC_WHATSAPP_NUMBER` | – | Nomor WA `62…` untuk tombol chat — **wajib prefix `NEXT_PUBLIC_`**. |
 | `SENTRY_DSN` | – | Opsional — catatan Sentry untuk error tracking. |
 
-⚠️ **Sebelum publish:** ganti `email` & `whatsapp` placeholder di `lib/site.config.ts`
-(fallback) dan/atau set `CONTACT_EMAIL` + `WHATSAPP_NUMBER` di environment.
+⚠️ **Pitfall #418 (20 Sep 2026):** env kontak tanpa prefix `NEXT_PUBLIC_`
+di-inline sebagai `undefined` di bundel klien — server (mis.
+`CONTACT_EMAIL=""` di Vercel) merender nilai kosong sementara klien memakai
+fallback → hydration mismatch React #418 → seluruh halaman diregenerasi
+klien. Pola aman: `NEXT_PUBLIC_*` + `?.trim() || fallback` (lihat
+`lib/site.config.ts`). Var lama `CONTACT_EMAIL`/`WHATSAPP_NUMBER` sudah
+**tidak dibaca** kode — hapus dari Vercel bila masih ada.
 
 ## ✦ Arsitektur data & alur GitOps
 
@@ -277,55 +290,66 @@ curl https://niumination.web.id/api/v1/summary.json
 - **Core Web Vitals**: `<WebVitals/>` melaporkan LCP/INP/CLS/TTFB/FCP ke
   `POST /api/vitals` (log Functions / `npm start` log — contoh nyata terlihat
   di log server preview).
+- **Uptime**: cron 15 menit (`uptime.yml`) — `niumination.web.id` selalu
+  baris pertama yang dipantau (sejak 2026.6) + 9 situs repo turunan;
+  riwayat 30 hari dipublikasikan di `/status`.
+- **CSP (fase report-only)**: header `Content-Security-Policy-Report-Only`
+  + `POST /api/csp-report` → pelanggaran terekam di log Vercel. Prosedur
+  menuju enforcement: `docs/PANDUAN-OPS.md` §C.
 - **Lighthouse CI** mingguan: `lighthouse.yml` + `lighthouserc.json`
-  (perf ≥ 0.75, a11y/best-practices/SEO ≥ 0.9, CLS < 0.15).
+  (perf ≥ 0.8, a11y ≥ 0.95, best-practices/SEO ≥ 0.9, LCP < 3,8 s —
+  warn < 2,5 s, CLS < 0.05).
 - **Sentry** opsional via `SENTRY_DSN`.
 
 ## ✦ Pengujian
 
 ```bash
-npm test           # 41 test, < 2 dtk
+npm test           # 52 unit test, < 2 dtk
+
+# E2E hidrasi (Playwright) — 10 rute + degrade WebGL + pintasan keyboard:
+E2E_BASE_URL=https://niumination.web.id node tests/e2e/hydration.mjs
 ```
 
 | Berkas | Cakupan |
 |--------|---------|
 | `tests/i18n.test.ts` | Paritas kamus id↔en, interpolasi `{var}`, fallback, overlay studi & deskripsi repo EN |
-| `tests/categories.test.ts` | Kategorisasi otomatis 91 repo |
-| `tests/*.test.ts` (lain) | Pembayaran (order id, webhook sha512, IDR), uptime helpers, feed |
+| `tests/categories.test.ts` | Kategorisasi otomatis repo |
+| `tests/utils.test.ts` | `langColor`, `timeAgo`, `formatNumber`, dll |
+| `tests/summary.test.ts` + `tests/uptime.test.ts` | Ringkasan snapshot, uptime helpers |
+| `tests/e2e/hydration.mjs` | E2E hidrasi 10 rute + WebGL + pintasan (dipakai CI & verifikasi live) |
 
 ## ✦ CI/CD (GitHub Actions)
 
 | Workflow | Jadwal | Tugas |
 |----------|--------|-------|
-| `ci.yml` | push/PR | vitest → typecheck → build |
+| `ci.yml` | push/PR | job 1: vitest → typecheck → build → guard route-table (#418); job 2: **E2E hidrasi Playwright** (build → Chromium → `next start` → skrip E2E) |
 | `refresh-data.yml` | Senin 03:00 UTC | `gen:mock --fresh` + `gen:api` → commit snapshot & API |
 | `uptime.yml` | tiap 15 menit | `uptime-check.mjs` + segarkan API uptime → commit |
 | `lighthouse.yml` | Senin 05:00 UTC | Audit build statis dengan budget di `lighthouserc.json` |
 
 ## ✦ Deployment
 
-### A. Vercel (utama — domain niumination.web.id)
+### A. Vercel (utama — domain niumination.web.id) — ✅ LIVE 21 Sep 2026
 
-1. Push repo ke `Niumination/Niu-OSS-Dashboard` (repo sudah ada — riwayat 11 commit terjaga).
-2. [vercel.com/new](https://vercel.com/new) → import repo. Framework: **Next.js**.
-3. Environment variables: `SITE_URL=https://niumination.web.id`, `GITHUB_TOKEN`,
-   kunci Midtrans/Stripe, kontak.
-4. **Deploy** (dapat URL `*.vercel.app`).
-5. **Pasang domain dari idwebhost**:
-   - Vercel → Project → **Settings → Domains → Add** → `niumination.web.id`
-     (tambahkan juga `www.niumination.web.id`).
-   - Vercel menampilkan record DNS yang diminta. Buka **member area idwebhost →
-     Domain → DNS Management**, lalu arahkan:
-     | Tipe | Host | Nilai |
-     |------|------|-------|
-     | `A` | `@` | `76.76.21.21` |
-     | `CNAME` | `www` | `cname.vercel-dns.com` |
-   - Hapus/abaikan record lama yang bertabrakan (parking A record idwebhost).
-   - SSL (Let's Encrypt) diterbitkan Vercel otomatis setelah DNS propagasi
-     (menit–24 jam). Pastikan nameserver domain tetap milik idwebhost
-     (mis. `ns1/ns2.idwebhost...`) — tidak perlu pindah NS ke Vercel.
-6. Verifikasi pasca-live: `https://niumination.web.id/sitemap.xml`, `/robots.txt`,
-   `/feed.xml`, `/status`, OG image, dan `/api/v1/index.json`.
+Status: **sudah berjalan produksi**. Project Vercel `niu-oss` terhubung ke
+repo GitHub `Niumination/Niu-OSS-Dashboard` (auto-deploy tiap push `main`).
+
+1. Environment produksi: `SITE_URL=https://niumination.web.id`, kunci
+   Midtrans/Stripe sesuai kebutuhan. `GITHUB_TOKEN` disarankan agar data
+   segar per deploy — panduan langkah-demi-langkah: **`docs/PANDUAN-OPS.md` §A**.
+2. DNS: domain dibeli di **idwebhost**, nameserver dialihkan ke **Vercel DNS**
+   (`ns1/ns2.vercel-dns.com`, diverifikasi 2 resolver 21 Sep 2026) — zona DNS
+   dikelola penuh dari dashboard Vercel (A apex `216.198.79.1` +
+   `64.29.17.1`, dikelola otomatis Vercel). Domain Verified; HTTP→HTTPS 308
+   otomatis + HSTS. Varian `www`: record ada tapi sertifikat belum mencakup —
+   aktifkan via dashboard (PANDUAN-OPS §B). *Catatan koreksi: catatan lama
+   yang menyebut "DNS via Cloudflare" keliru — tidak ada Cloudflare di
+   arsitektur ini.*
+3. Verifikasi pasca-deploy (ritual):
+   ```bash
+   E2E_BASE_URL=https://niumination.web.id node tests/e2e/hydration.mjs
+   # ekspektasi 12/12 ✓ — lalu cek /sitemap.xml, /robots.txt, /status, /api/v1/index.json
+   ```
 
 Keuntungan: halaman statis murni per deploy (data GitHub diambil saat build —
 satu dokumen HTML+flight atomik, hidrasi konsisten), dynamic OG di Node runtime,
@@ -452,7 +476,11 @@ Riwayat lengkap per fase: **[CHANGELOG.md](./CHANGELOG.md)** · Rencana lanjutan
 
 Ringkasan — versi lengkap (tujuan, lingkup, kriteria terima, estimasi, risiko)
 ada di **[docs/ROADMAP.md](./docs/ROADMAP.md)** (disusun ulang 2026-09-20
-menjadi fase 0–5 + riwayat fase lama):
+menjadi fase 0–5 + riwayat fase lama). Antrian penyempurnaan terkini hasil
+riset (prioritas T1–T8: CSP, GITHUB_TOKEN, React 19.3+View Transitions,
+Tailwind 4, observabilitas) ada di **[docs/AUDIT-2026.5.md](./docs/AUDIT-2026.5.md)**,
+dan tugas ops di sisi pemilik (token, domain www, CSP enforce, Analytics)
+dipandu langkah-demi-langkah di **[docs/PANDUAN-OPS.md](./docs/PANDUAN-OPS.md)**.
 
 | Fase | Fokus | Estimasi |
 |------|-------|----------|

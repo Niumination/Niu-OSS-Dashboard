@@ -106,6 +106,12 @@ Tujuan: situs menjadi **sumber data OSS** yang bisa dipakai orang lain.
 
 Tujuan: situs memantau dirinya sendiri; Anda tahu masalah sebelum pengunjung.
 
+**Sudah jalan sebelum fase ini (posisi Sep 2026):** `/api/vitals` aktif (log
+Functions) · uptime cron 15 mnt dengan `niumination.web.id` permanen (2026.6)
+· Lighthouse CI mingguan ber-budget · CSP report-only + `/api/csp-report`
+(2026.7) · ritual E2E pasca-deploy terdokumentasi (`docs/PANDUAN-OPS.md` §E).
+Sisa pekerjaan fase ini memperkaya yang sudah ada:
+
 - [ ] **Dasbor Web Vitals** di `/system`: `/api/vitals` sudah menerima
       laporan — kumpulkan ke `data/vitals.json` (cron agregat), tampilkan
       p75 LCP/INP/CLS per rute + tren.
@@ -116,6 +122,8 @@ Tujuan: situs memantau dirinya sendiri; Anda tahu masalah sebelum pengunjung.
       route table build log).
 - [ ] **Laporan kesehatan mingguan**: issue otomatis ringkas — vitals, uptime,
       umur data, dependensi usang.
+- [ ] **CSP → enforcement** (naikkan `Content-Security-Policy-Report-Only`
+      setelah 2–4 minggu laporan bersih — prosedur PANDUAN-OPS §C).
 
 ## FASE 5 — Interaktivitas & Komunitas (bulan 6+, opsional)
 

@@ -1,7 +1,7 @@
 # Panduan Ops — Bagian Anda (pasca-audit 2026.5)
 
 **Untuk:** pemilik proyek · **Dari:** agen Arena (patch 2026.7)
-Semua tugas di bawah ini butuh akses dashboard (GitHub/Vercel/Cloudflare)
+Semua tugas di bawah ini butuh akses dashboard (GitHub/Vercel)
 yang hanya Anda pegang. Perkiraan waktu total: ±30 menit.
 
 ---
@@ -35,14 +35,18 @@ setiap deploy**.
 
 ## B. Varian `www` (opsional, ±5 menit)
 
-`www.niumination.web.id` saat ini tidak ter-resolve. Jika ingin aktif:
+Kondisi terverifikasi (21 Sep 2026): `www.niumination.web.id` punya A record
+di zona DNS (Vercel DNS), tetapi **sertifikat SSL hanya CN apex** — akses
+`https://www…` gagal cert-mismatch. Karena zona DNS sudah dikelola Vercel,
+pengaturannya cukup dari dashboard (tanpa menyentuh panel domain mana pun):
 
-1. **Cloudflare** (DNS zona `niumination.web.id`) → tambah record:
-   `CNAME` · Name `www` · Target `cname.vercel-dns.com` · Proxy: DNS only.
-2. **Vercel** → Project → Settings → **Domains** → Add `www.niumination.web.id`
-   → pilih opsi *redirect ke* `niumination.web.id`.
-3. Tunggu propagasi (menit) → `curl -sI https://www.niumination.web.id`
-   harus `308 → https://niumination.web.id`.
+1. **Vercel** → Project `niu-oss` → Settings → **Domains** →
+   Add `www.niumination.web.id`.
+2. Pilih opsi **redirect ke** `niumination.web.id` (disarankan — satu
+   kanonik, tidak dobel konten).
+3. Vercel otomatis menerbitkan sertifikat untuk `www` (menit–jam).
+4. Verifikasi: `curl -sI https://www.niumination.web.id` →
+   `308 → https://niumination.web.id`.
 
 Tidak wajib — apex saja sudah sah untuk SEO (canonical sudah apex).
 
