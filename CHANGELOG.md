@@ -5,6 +5,42 @@ per fase pengerjaan, lengkap dengan commit yang bisa dilacak.
 Format mengikuti [Keep a Changelog](https://keepachangelog.com/id/1.1/);
 proyek ini tidak memakai versioning semver ketat (satu repo, satu situs).
  
+## [Produksi 2026.8] — Pemulihan uptime + aturan emas Git — 2026-09-21
+
+### Insiden: data uptime beku ±26 jam (post-mortem singkat)
+- **Gejala:** `data/uptime.json` beku di 20 Sep 14:51 UTC; domain
+  produksi belum masuk pantauan; run cron #11–16 (20–21 Sep) semua
+  `success` TANPA komit baru — terlihat misterius.
+- **Akar masalah (terbukti):** run #12–#15 berjalan di `head_sha`
+  `0ee958b0` / `2f3f37e2` / `ac672e7a` / `a916430d` — SHA yang
+  **tidak ada di silsilah `main`**. Artinya komit uptime *memang*
+  dibuat & dipush saat itu, lalu **ter-orphan** karena patch agen
+  diterapkan dari snapshot basi dan dipush menimpa `main` (efek
+  force-push). Cron tidak bersalah; alur sinkronisasi manual-lah
+  yang memotong komitnya.
+- Faktor kedua (platform): cron `*/15` aktual berjalan 2–7 jam
+  sekali (delay antrian GitHub Actions) — 16 run dalam ±2 hari.
+
+### Perbaikan
+- **Refresh uptime manual** (workaround cron): `uptime-check.mjs`
+  dijalankan lokal — **domain `niumination.web.id` kini terpantau**
+  (OK, 176 ms) + 10 situs ekosistem; 3 terdeteksi down:
+  `kune-ya.com` (status ≥500), `mata-aihackfest-2026` (timeout),
+  `cc-acehtengah` (status ≥500). `data/uptime.json` +
+  `lib/uptime-data.ts` + `public/api/v1/uptime.json` diperbarui →
+  `/status` dan API segar lagi setelah deploy.
+- **Harden `.github/workflows/uptime.yml`:** `concurrency: uptime`
+  (anti run tumpang-tindih) + `git pull --rebase origin main`
+  sebelum push (komit cron selalu naik ke `main` terbaru, tidak
+  pernah butuh force).
+- **Aturan emas anti-force-push** didokumentasikan di
+  docs/PANDUAN-OPS.md (cara aman menerapkan patch) + pitfall
+  AGENTS.md (bukti `head_sha`) — mencegah repeat.
+
+### Verifikasi
+tsc 0 · vitest 52/52 · YAML workflow valid · uptime lokal 10/10
+situs dicek ulang.
+
 ## [Stack 2026.7] — T2 CSP report-only + T6 schema repo + T4 audit bundel — 2026-09-21
 
 ### Keamanan (T2 fase 1)

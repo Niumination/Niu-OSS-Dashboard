@@ -6,6 +6,31 @@ yang hanya Anda pegang. Perkiraan waktu total: ±30 menit.
 
 ---
 
+## ⚠️ Aturan emas sinkronisasi Git (WAJIB, dibaca dulu)
+
+**Jangan pernah force-push ke `main`. Selalu `git pull --rebase` sebelum push.**
+
+Insiden 20–21 Sep 2026: 5 run cron uptime **berhasil commit & push**,
+tetapi komitnya ter-"orphan" (terpotong dari silsilah) karena patch
+diterapkan dari snapshot lama lalu di-push menimpa `main`. Akibatnya
+data uptime beku ±26 jam dan domain produksi sempat tak terpantau.
+Kronologi lengkap + bukti `head_sha`: lihat CHANGELOG [2026.8].
+
+Saat menerapkan patch dari agen (Hermes/di lokalan):
+
+```bash
+git fetch origin
+git rebase origin/main        # atau: git pull --rebase
+git am 0001-*.patch           # kalau konflik → fetch ulang, minta patch baru
+git push                      # BUKAN --force
+```
+
+Kalau push ditolak (non-fast-forward): **jangan paksa** — `git pull
+--rebase` dulu, selesaikan, baru push. Kebiasaan ini menjaga komit
+cron (uptime + snapshot mingguan) tetap hidup di `main`.
+
+---
+
 ## A. T1 — Set `GITHUB_TOKEN` di Vercel (±10 menit, efek terbesar)
 
 **Masalah:** build Vercel memanggil GitHub API tanpa token → kuota 60

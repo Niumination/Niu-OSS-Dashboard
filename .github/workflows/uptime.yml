@@ -11,6 +11,11 @@ on:
 permissions:
   contents: write
 
+# Anti tumpang-tindih: dua run paralel akan saling menolak push.
+concurrency:
+  group: uptime
+  cancel-in-progress: false
+
 jobs:
   check:
     name: Periksa deployment
@@ -37,5 +42,8 @@ jobs:
             echo "Tidak ada perubahan uptime."
           else
             git commit -m "chore(uptime): periksa berkala [skip ci]"
+            # Rebasing sebelum push: jika main berpindah sejak checkout,
+            # commit ini naik ke atas main terbaru — tidak pernah force-push.
+            git pull --rebase origin main
             git push
           fi
