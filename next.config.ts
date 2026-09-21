@@ -36,6 +36,31 @@ const nextConfig: NextConfig = {
             value: 'camera=(), microphone=(), geolocation=(), payment=(self)',
           },
           { key: 'Cross-Origin-Opener-Policy', value: 'same-origin' },
+          // ── CSP fase 1: REPORT-ONLY (AUDIT-2026.5 §T2) ──────────────────
+          // Halaman situs ini statik murni (prerender) sehingga nonce
+          // per-request tidak mungkin — jalur bertahap: pantau pelanggaran
+          // 2–4 minggu via /api/csp-report (log Vercel), lalu naikkan ke
+          // enforcement dengan menyalin nilai ini ke key
+          // 'Content-Security-Policy' setelah bersih.
+          // - script-src 'unsafe-inline': payload flight Next inline
+          // - 'unsafe-eval': Snap.js Midtrans (modus pembayaran)
+          // - frame-ancestors terbuka: kebijakan embed (lihat catatan di atas)
+          {
+            key: 'Content-Security-Policy-Report-Only',
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://app.midtrans.com",
+              "style-src 'self' 'unsafe-inline'",
+              "img-src 'self' data: blob: https:",
+              "font-src 'self' data:",
+              "connect-src 'self' https://api.github.com https://vitals.vercel-insights.com https://*.insights.vercel.com",
+              "object-src 'none'",
+              "base-uri 'self'",
+              "form-action 'self'",
+              "frame-ancestors *",
+              'report-uri /api/csp-report',
+            ].join('; '),
+          },
         ],
       },
     ];

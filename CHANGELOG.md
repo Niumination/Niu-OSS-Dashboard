@@ -5,6 +5,40 @@ per fase pengerjaan, lengkap dengan commit yang bisa dilacak.
 Format mengikuti [Keep a Changelog](https://keepachangelog.com/id/1.1/);
 proyek ini tidak memakai versioning semver ketat (satu repo, satu situs).
  
+## [Stack 2026.7] — T2 CSP report-only + T6 schema repo + T4 audit bundel — 2026-09-21
+
+### Keamanan (T2 fase 1)
+- **`Content-Security-Policy-Report-Only`** di `next.config.ts` (catch-all):
+  `default-src 'self'`, script/style dengan inline (flight Next + Snap.js
+  Midtrans di-allowlist), `object-src 'none'`, `base-uri`/`form-action`
+  `'self'`, `frame-ancestors *` (kebijakan embed dipertahankan).
+  Halaman statik murni → nonce per-request tak memungkinkan; jalur
+  bertahap report-only → enforcement (panduan: docs/PANDUAN-OPS.md §C).
+- **`app/api/csp-report/route.ts`** (baru): titik kumpul laporan browser
+  (format lama `csp-report` + baru `Report-To`) → log Functions Vercel,
+  field dipotong anti-banjir. Teruji: POST → 204 + log `[csp] …`.
+
+### SEO (T6)
+- **`SoftwareSourceCode` JSON-LD** di `/repo/[slug]` (bahasa, lisensi
+  SPDX, statistik star/fork via InteractionCounter, dateModified).
+  Halaman repo kini membawa Person + WebSite + BreadcrumbList +
+  SoftwareSourceCode.
+
+### Audit bundel (T4 — angka dasar untuk pemantauan)
+- Initial JS `/` = **915 KB** (13 chunk, pra-gzip); framework react +
+  react-dom 386 KB; framer-motion+cmdk 248 KB (kandidat pangkas via T3);
+  **three.js 882 KB terkonfirmasi lazy** (tidak dimuat di initial `/`).
+  DOMPurify 73 KB hanya di rute repo; `qrcode` server-side.
+
+### Dokumentasi
+- **docs/PANDUAN-OPS.md** (baru): panduan langkah-demi-langkah bagian
+  pemilik — T1 GITHUB_TOKEN, varian www, prosedur CSP → enforce,
+  Analytics, ritual verifikasi deploy, status antrian audit.
+
+### Verifikasi
+tsc 0 · vitest 52/52 · build 206 statis · guard ✓ · E2E hidrasi 12/12 ·
+header CSP terkonfirmasi di `next start` · schema valid JSON-LD.
+
 ## [Produksi 2026.6] — Domain live + observabilitas uptime — 2026-09-21
 
 ### Konteks

@@ -20,6 +20,7 @@ import Readme from '@/components/Readme';
 import RepoCard from '@/components/RepoCard';
 import { getGithubSnapshot, getRepoDetail } from '@/lib/github';
 import { isStaticExport, siteUrl } from '@/lib/env';
+import { SITE } from '@/lib/site.config';
 import type { RepoLite } from '@/lib/types';
 import { formatDate, formatNumber, langColor, timeAgo } from '@/lib/utils';
 import T from '@/components/T';
@@ -132,11 +133,42 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
     ],
   };
 
+  // SoftwareSourceCode (AUDIT-2026.5 §T6): kaya hasil pencarian untuk repo
+  // publik — nama, bahasa, lisensi, statistik, dan tautan sumber.
+  const jsonLdSoftware = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareSourceCode',
+    name: repo.name,
+    url: `${siteUrl}/repo/${repo.name}`,
+    codeRepository: repo.url,
+    description: repo.description ?? undefined,
+    programmingLanguage: repo.language ?? undefined,
+    license: repo.license ? `https://spdx.org/licenses/${repo.license}.html` : undefined,
+    dateModified: repo.pushedAt,
+    author: { '@type': 'Person', name: 'Niumination', url: SITE.github },
+    interactionStatistic: [
+      {
+        '@type': 'InteractionCounter',
+        interactionType: 'https://schema.org/StarAction',
+        userInteractionCount: repo.stars,
+      },
+      {
+        '@type': 'InteractionCounter',
+        interactionType: 'https://schema.org/ForkAction',
+        userInteractionCount: repo.forks,
+      },
+    ],
+  };
+
   return (
     <AppShell snapshot={snap}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSoftware) }}
       />
       <div className="mx-auto max-w-[1440px] px-4 pb-20 pt-8 md:px-6 lg:px-8">
         <Link
