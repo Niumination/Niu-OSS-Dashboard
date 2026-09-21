@@ -62,7 +62,7 @@ async function gh<T>(path: string, opts: { live?: boolean } = {}): Promise<T> {
       // halaman sebagai ISR dan memicu hydration mismatch (lihat CHANGELOG
       // [Stack 2026.1]).
       ...(opts.live
-        ? { next: { revalidate: REVALIDATE, tags: ['github'] } }
+        ? { next: { revalidate: REVALIDATE, tags: ['github-live'] } }
         : { cache: 'force-cache' as RequestCache }),
     });
   } catch {
