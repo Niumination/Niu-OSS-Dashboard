@@ -5,6 +5,26 @@ per fase pengerjaan, lengkap dengan commit yang bisa dilacak.
 Format mengikuti [Keep a Changelog](https://keepachangelog.com/id/1.1/);
 proyek ini tidak memakai versioning semver ketat (satu repo, satu situs).
  
+## [Produksi 2026.6] — Domain live + observabilitas uptime — 2026-09-21
+
+### Konteks
+`niumination.web.id` di-pointing ke Vercel (apex, HTTP→HTTPS 308 otomatis,
+canonical/sitemap/robots sudah memakai domain produksi). E2E hidrasi di
+domain produksi: **12/12 ✓** (10 rute + degrade WebGL + pintasan).
+
+### Observabilitas
+- **`scripts/uptime-check.mjs`**: `niumination.web.id` kini situs pertama
+  yang dipantau permanen (cron tiap 15 menit); situs turunan repo dikurangi
+  jadi 9 agar total tetap 10. Melengkapi item BACKLOG Fase 4.
+
+### Catatan ops pasca-pointing
+- `www.niumination.web.id` belum diatur (tidak ter-resolve) — opsional:
+  tambahkan CNAME `www` → `cname.vercel-dns.com` bila ingin varian www
+  (Vercel akan redirect ke apex).
+- Data build masih jalur `fallback-cache` — snapshot mingguan (cron 21 Sep
+  08:25 WIB) membuat data tetap segar; `GITHUB_TOKEN` (AUDIT-2026.5 §T1)
+  tetap disarankan agar data segar per-deploy tanpa menunggu cron.
+
 ## [Stack 2026.5] — Audit kualitas 2026 + SEO & polish — 2026-09-21
 
 ### Konteks

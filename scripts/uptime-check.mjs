@@ -24,11 +24,16 @@ const MAX_SITES = 10;
 
 /* --- daftar situs dari snapshot repositori ------------------------------- */
 const repos = JSON.parse(readFileSync(join(process.cwd(), 'data', 'repos.json'), 'utf8'));
-const sites = repos
-  .filter((r) => r.homepage && !r.fork)
-  .sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at))
-  .slice(0, MAX_SITES)
-  .map((r) => ({ repo: r.name, url: r.homepage }));
+const sites = [
+  // Situs utama (domain produksi) — dipantau permanen, tidak ikut seleksi.
+  // Lihat BACKLOG "Fase 4 — baseline observabilitas" & AUDIT-2026.5 §T1/T7.
+  { repo: 'niumination.web.id', url: 'https://niumination.web.id' },
+  ...repos
+    .filter((r) => r.homepage && !r.fork)
+    .sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at))
+    .slice(0, MAX_SITES - 1)
+    .map((r) => ({ repo: r.name, url: r.homepage })),
+];
 
 /* --- muat riwayat lama ---------------------------------------------------- */
 const uptimePath = join(process.cwd(), 'data', 'uptime.json');
