@@ -1,0 +1,23 @@
+{
+ "generatedAt": "2026-09-21T08:25:11.654Z",
+ "repo": {
+  "name": "Niu-OSS-Dashboard",
+  "fullName": "Niumination/Niu-OSS-Dashboard",
+  "description": "Landing page + dashboard OSS interaktif untuk github.com/niumination — Next.js 15, agregator 91 repo, API publik v1, PWA, i18n id/en",
+  "descriptionEn": null,
+  "url": "https://github.com/Niumination/Niu-OSS-Dashboard",
+  "homepage": "https://niu-oss.vercel.app",
+  "language": "TypeScript",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": null,
+  "sizeKb": 514,
+  "createdAt": "2026-09-19T09:44:20Z",
+  "pushedAt": "2026-09-21T07:48:45Z"
+ }
+}

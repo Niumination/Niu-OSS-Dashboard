@@ -1,9 +1,9 @@
 {
- "generatedAt": "2026-09-20T16:05:54.302Z",
+ "generatedAt": "2026-09-21T08:25:11.654Z",
  "repo": {
   "name": "PemdiAcehTengah",
   "fullName": "Niumination/PemdiAcehTengah",
-  "description": "Portal Pemerintah Digital Kabupaten Aceh Tengah - Bukan Portal Resmi",
+  "description": "Portal Digital Pemerintah Kabupaten Aceh Tengah — 52 perangkat daerah, peta proses bisnis (PermenPANRB 19/2018), dan evaluasi indeks Pemdi (PermenPANRB 8/2026). Next.js + Supabase, MIT.",
   "descriptionEn": "Digital Government Portal for Central Aceh Regency — not the official portal",
   "url": "https://github.com/Niumination/PemdiAcehTengah",
   "homepage": "https://pemdi-aceh-tengah.vercel.app",
@@ -16,8 +16,8 @@
   "fork": false,
   "archived": false,
   "license": "MIT",
-  "sizeKb": 898343,
+  "sizeKb": 758266,
   "createdAt": "2026-06-03T17:41:18Z",
-  "pushedAt": "2026-09-17T17:03:28Z"
+  "pushedAt": "2026-09-21T07:50:08Z"
  }
 }
