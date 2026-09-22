@@ -1,0 +1,80 @@
+{
+ "generatedAt": "2026-09-22T17:32:06.696Z",
+ "study": {
+  "slug": "didong-code",
+  "title": "Didong-Code",
+  "tagline": "Lingkungan pengembangan agentic di desktop — dengan jiwa seni Didong Gayo.",
+  "kind": "Desktop / AI Tooling",
+  "year": "2026",
+  "repo": "didong-code",
+  "stack": [
+   "Electron",
+   "React",
+   "TypeScript"
+  ],
+  "metrics": [
+   {
+    "label": "platform",
+    "value": "Win · macOS · Linux"
+   },
+   {
+    "label": "jenis",
+    "value": "AI coding agent"
+   },
+   {
+    "label": "asal nama",
+    "value": "seni Didong Gayo"
+   }
+  ],
+  "problem": "AI coding agent hampir selalu hidup di terminal — cepat bagi engineer, tapi tinggi tembok masuknya bagi orang lain. Dan nyaris semuanya berpenampilan seragam: gelap, dingin, tanpa akar.",
+  "approach": [
+   {
+    "title": "Desktop, bukan terminal",
+    "text": "Electron + React: agen AI coding dengan antarmuka desktop yang familiar — jendela, menu, dan alur yang bisa dipelajari tanpa hafal command."
+   },
+   {
+    "title": "Agentic end-to-end",
+    "text": "Dibangun sebagai agentic development environment: agen yang mengerti konteks proyek, bukan sekadar autocomplete."
+   },
+   {
+    "title": "Identitas dari Gayo",
+    "text": "Nama dan semangat Didong — seni sastra lisan Gayo Aceh — menjadi bagian dari produk, bukan tempelan marketing."
+   }
+  ],
+  "outcome": "Aplikasi desktop lintas platform (Windows/macOS/Linux) yang membawa budaya Gayo ke tooling developer global — eksperimen serius soal identitas lokal di perangkat lunak internasional.",
+  "accent": "#fb7185",
+  "en": {
+   "tagline": "An agentic development environment for the desktop — with the soul of Gayo Didong art.",
+   "metrics": [
+    {
+     "label": "platform",
+     "value": "Win · macOS · Linux"
+    },
+    {
+     "label": "type",
+     "value": "AI coding agent"
+    },
+    {
+     "label": "name origin",
+     "value": "Gayo Didong art"
+    }
+   ],
+   "problem": "AI coding agents almost always live in the terminal — fast for engineers, but a steep wall for everyone else. And nearly all of them look identical: dark, cold, rootless.",
+   "approach": [
+    {
+     "title": "Desktop, not terminal",
+     "text": "Electron + React: an AI coding agent with a familiar desktop interface — windows, menus, and flows you can learn without memorizing commands."
+    },
+    {
+     "title": "Agentic end-to-end",
+     "text": "Built as a full agentic development environment: an agent that understands project context, not just autocomplete."
+    },
+    {
+     "title": "Identity from Gayo",
+     "text": "The name and spirit of Didong — the oral literary art of the Gayo people of Aceh — is part of the product, not a marketing sticker."
+    }
+   ],
+   "outcome": "A cross-platform desktop app (Windows/macOS/Linux) carrying Gayo culture into global developer tooling — a serious experiment in local identity for international software."
+  }
+ }
+}

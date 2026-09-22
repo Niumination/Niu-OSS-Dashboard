@@ -8,7 +8,7 @@
 
 ## Overview
 
-Situs publik ekosistem Niumination: landing page (hero 3D performance-aware) + dashboard agregator 91 repo publik `github.com/niumination` (pencarian real-time, metrik aktivitas, monitor status GitOps, studi kasus, API publik v1, PWA, i18n id/en, monetisasi Midtrans/Stripe server-side).
+Situs publik ekosistem Niumination: landing page (hero 3D performance-aware) + dashboard agregator 90 repo publik `github.com/niumination` (pencarian real-time, metrik aktivitas, monitor status GitOps, studi kasus, API publik v1, PWA, i18n id/en, monetisasi Midtrans/Stripe server-side).
 
 Asal: arsip `~/Downloads/Niu-OSS-Dashboard.zip` — diimpor ke ekosistem 19 Sep 2026 dengan **riwayat git asli terjaga** (11 commit, 17–18 Sep 2026).
 
@@ -61,7 +61,7 @@ npm run export:static   # varian GitHub Pages (out/)
 | `npm run build` | ✅ exit 0 — 206 halaman statis + studi |
 | `SITE_URL= npm run build` | ✅ exit 0 (pitfall env kosong tertutup) |
 | Pemindaian rahasia (`secret-scan-staged.py`) | ✅ 0 temuan |
-| Cakupan data | 91 repo publik, 0 entri `private: true` |
+| Cakupan data | 90 repo publik, 0 entri `private: true` |
 | Domain `niumination.web.id` | ✅ DNS resolve → Vercel IP, HTTP 200, title "Niumination — Dasbor OSS" |
 | Deploy Vercel | ✅ Ready (`https://niu-az30x6c63-archk4lis-projects.vercel.app`) |
 
@@ -100,10 +100,11 @@ npm run export:static   # varian GitHub Pages (out/)
 - **Pitfall env `NEXT_PUBLIC_CONTACT_*` (20 Sep 2026):** `lib/site.config.ts` menggunakan `process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim()` dan `process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.trim()` — env tanpa prefix `NEXT_PUBLIC_` tidak tersedia di bundel klien. Patch arena `c60387f` menegaskan pola ini.
 - **E2E 12/12 live** (build normal, bukan 52 unit test — lihat `tests/e2e/hydration.mjs`).
 - Unit test 52/52 (bukan 41 — sudah diperbarui di `tests/i18n.test.ts` oleh arena `c60387f`).
-- Build menghasilkan **206 halaman statis** (bukan 91 — studi baru `niu-gayo-agroclimate` + `pemdi-aceh-tengah` dan sebagainya sudah diperbarui oleh arena `c902d1b`/`c60387f`).
+- Build menghasilkan **214 halaman statis** (21 Sep 2026, verifikasi ulang audit 2026.15 — bertambah dari 206 setelah fitur 2026.11–2026.14).
 - **`docs/AUDIT-2026.5.md`**: audit kualitas 2026.5 — posisi saat ini, antrian penyempurnaan T1–T8, referensi riset (20–21 Sep 2026).
+- **`docs/AUDIT-2026.15.md`** (22 Sep 2026): audit menyeluruh repo × live — 22 rute 200, header CSP-RO+HSTS, JSON-LD valid, ekspor statis sehat; menemukan & memperbaiki API per-studi 404 (file tak ter-commit), endpoint yatim `dotfiles`, metric studi basi (102→107, 208→214), pin react `~19.2.8` (guard fiber).
 - **`docs/PANDUAN-OPS.md`** (2026.7): panduan ops sisi pemilik — T1 GITHUB_TOKEN (langkah PAT fine-grained), varian www (aktif via Vercel Domains), prosedur CSP → enforce, Vercel Analytics, ritual verifikasi deploy, status antrian.
-- **Jejak patch Arena**: `c902d1b` (fix #418 final + sinkron konten) → `c60387f` (audit 2026.5) → `628f77a` (uptime domain, 2026.6) → `1ad946c` (CSP report-only + schema + audit bundel, 2026.7) → `45e96c4` (pulihkan uptime + harden cron, 2026.8) → `2026.10` (redaksi token + humanisasi salinan UI 37 kunci i18n) → `2026.11` (/now + /changelog + fix kalender GraphQL + 4 quick wins) → `2026.12` (katalog studi 4→10 berbasis riset README) → `2026.13` (SEO Article+feed studi; a11y kontras; onboarding HintCard + pintasan /) → `2026.14` (mode densitas repo; PWA offline kaya + share target /share). Semua tercatat di CHANGELOG.
+- **Jejak patch Arena**: `c902d1b` (fix #418 final + sinkron konten) → `c60387f` (audit 2026.5) → `628f77a` (uptime domain, 2026.6) → `1ad946c` (CSP report-only + schema + audit bundel, 2026.7) → `45e96c4` (pulihkan uptime + harden cron, 2026.8) → `2026.10` (redaksi token + humanisasi salinan UI 37 kunci i18n) → `2026.11` (/now + /changelog + fix kalender GraphQL + 4 quick wins) → `2026.12` (katalog studi 4→10 berbasis riset README) → `2026.13` (SEO Article+feed studi; a11y kontras; onboarding HintCard + pintasan /) → `2026.14` (mode densitas repo; PWA offline kaya + share target /share) → `2026.15` (audit menyeluruh: fix API studi 404 + yatim, metric 107/214, pin react, docs 90 repo). Semua tercatat di CHANGELOG.
 - **E2E live domain produksi 12/12** (21 Sep 2026, `https://niumination.web.id`): 10 rute + degrade WebGL + pintasan keyboard — semua hijau pasca-fix #418.
 
 ## Tasks

@@ -1,0 +1,81 @@
+{
+ "generatedAt": "2026-09-22T17:32:06.696Z",
+ "study": {
+  "slug": "niu-lkh",
+  "title": "Niu-LKH",
+  "tagline": "Laporan kegiatan harian yang nggak bikin malas — foto bukti terkompresi otomatis, PDF tinggal klik.",
+  "kind": "Produktivitas",
+  "year": "2026",
+  "repo": "Niu-LKH",
+  "demo": "https://niumination.github.io/Niu-LKH/",
+  "stack": [
+   "React 19",
+   "Vite",
+   "Tailwind 4"
+  ],
+  "metrics": [
+   {
+    "label": "format ekspor",
+    "value": "PDF · Excel · CSV"
+   },
+   {
+    "label": "server",
+    "value": "tanpa · localStorage"
+   },
+   {
+    "label": "sinkronisasi",
+    "value": "Google Sheets"
+   }
+  ],
+  "problem": "Pencatatan laporan kegiatan harian pegawai biasanya manual: kumpul foto, ketik ulang, rekap ulang tiap minggu. Berulang, rawan hilang, dan bukti dukung tersebar di galeri ponsel.",
+  "approach": [
+   {
+    "title": "Satu form, satu layar",
+    "text": "Tanggal, uraian, tempat, penjab, dasar surat, output — plus upload bukti dukung yang dikompresi otomatis di browser, biar hemat dan tetap terbaca."
+   },
+   {
+    "title": "Data di tangan sendiri",
+    "text": "Penyimpanan lokal (localStorage) tanpa server dan tanpa akun — dengan sinkronisasi otomatis opsional ke Google Sheets untuk rekap bersama."
+   },
+   {
+    "title": "Ekspor siap tanda tangan",
+    "text": "PDF lengkap dengan foto bukti, atau Excel/CSV untuk diolah lagi. Dashboard, kalender, dan statistik harian menyusul dari data yang sama."
+   }
+  ],
+  "outcome": "Aplikasi ringan bertema HUD gaming yang dipakai harian: satu sumber data, tiga format ekspor, nol server. Di hosting GitHub Pages dengan React 19 + Vite + Tailwind 4.",
+  "accent": "#a3e635",
+  "en": {
+   "tagline": "Daily activity reports that don't drain you — evidence photos auto-compressed, PDFs one click away.",
+   "metrics": [
+    {
+     "label": "export formats",
+     "value": "PDF · Excel · CSV"
+    },
+    {
+     "label": "server",
+     "value": "none · localStorage"
+    },
+    {
+     "label": "sync",
+     "value": "Google Sheets"
+    }
+   ],
+   "problem": "Daily staff activity reporting is usually manual: collect photos, retype everything, redo the recap weekly. Repetitive, loss-prone, and evidence scattered across phone galleries.",
+   "approach": [
+    {
+     "title": "One form, one screen",
+     "text": "Date, description, place, official, decree, output — plus evidence uploads auto-compressed in the browser to stay light and readable."
+    },
+    {
+     "title": "Data in your own hands",
+     "text": "Local storage (localStorage) with no server and no accounts — plus optional automatic sync to Google Sheets for shared recaps."
+    },
+    {
+     "title": "Signature-ready exports",
+     "text": "PDF with evidence photos embedded, or Excel/CSV for further processing. Dashboard, calendar, and daily stats flow from the same data."
+    }
+   ],
+   "outcome": "A lightweight gaming-HUD-themed app used daily: one data source, three export formats, zero servers. Hosted on GitHub Pages with React 19 + Vite + Tailwind 4."
+  }
+ }
+}

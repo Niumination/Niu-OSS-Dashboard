@@ -41,7 +41,7 @@ Satu situs, dua wajah:
 
 1. **Landing page** — hero 3D interaktif (tech-core + network node graph) dengan
    *frame-rate monitor*: perangkat low-end otomatis jatuh ke visual CSS/Canvas ringan (60 fps).
-2. **Dashboard** — agregator 91 repositori publik (pencarian real-time, kategori otomatis,
+2. **Dashboard** — agregator 90 repositori publik (pencarian real-time, kategori otomatis,
    filter, sortir), metrik aktivitas GitHub (heatmap commit, bahasa, grafik 30 hari),
    pola kontribusi ala OSS Insight, monitor status deployment live, halaman status
    GitOps, studi kasus, command palette `Ctrl+K`, dan sistem monetisasi

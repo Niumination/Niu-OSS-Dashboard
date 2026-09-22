@@ -1,0 +1,81 @@
+{
+ "generatedAt": "2026-09-22T17:32:06.696Z",
+ "study": {
+  "slug": "sapa-ai",
+  "title": "SAPA Smart AI",
+  "tagline": "Asisten data statistik Aceh Tengah — tanya dalam bahasa Indonesia, dijawab lengkap dengan buktinya.",
+  "kind": "Civic Tech / AI",
+  "year": "2026",
+  "repo": "sapa-ai",
+  "demo": "https://sapa-smart-ai.vercel.app",
+  "stack": [
+   "TypeScript",
+   "Vercel",
+   "LLM"
+  ],
+  "metrics": [
+   {
+    "label": "sumber data",
+    "value": "1 (API SPLP)"
+   },
+   {
+    "label": "basis data",
+    "value": "tanpa · cache 10 mnt"
+   },
+   {
+    "label": "dokumen serah terima",
+    "value": "10+"
+   }
+  ],
+  "problem": "Data statistik kabupaten terkunci di tabel-tabel SPLP yang harus dibaca manual. Warga dan pimpinan bertanya dalam bahasa sehari-hari — jawabannya tersebar di banyak tabel, dan tak ada cara memastikan angka yang keluar bisa dipertanggungjawabkan.",
+  "approach": [
+   {
+    "title": "Satu sumber kebenaran",
+    "text": "Semua jawaban ditarik langsung dari satu sumber: API SPLP. Tanpa basis data tiruan, tanpa angka karangan model."
+   },
+   {
+    "title": "Jawaban berbukti",
+    "text": "Setiap jawaban menyertakan indikator, nilai, satuan, tahun, dan OPD asalnya — pengguna bisa menelusuri dari mana angka itu datang."
+   },
+   {
+    "title": "Arsitektur minimal, serah terima maksimal",
+    "text": "Tanpa akun pengguna, tanpa cron, tanpa gudang data — cache 10 menit lalu buang. Disertai 10+ dokumen serah terima: berita acara, arsitektur, runbook, hingga rencana pemeliharaan."
+   }
+  ],
+  "outcome": "Berjalan di tahap awal produksi untuk Dinas Kominfo Kabupaten Aceh Tengah. Saat langganan model bahasa tertunda, layanan tanya-jawab sengaja dimatikan lewat panel admin — dashboard, GIS, dan laporan tetap hidup. Degradasi yang jujur dan terdokumentasi.",
+  "accent": "#f472b6",
+  "en": {
+   "tagline": "An Aceh Tengah statistics assistant — ask in Indonesian, get answers with the receipts attached.",
+   "metrics": [
+    {
+     "label": "data source",
+     "value": "1 (SPLP API)"
+    },
+    {
+     "label": "database",
+     "value": "none · 10-min cache"
+    },
+    {
+     "label": "handover documents",
+     "value": "10+"
+    }
+   ],
+   "problem": "Regency statistics were locked inside SPLP tables that had to be read manually. Citizens and leadership ask questions in everyday language — answers were scattered across tables, with no way to verify where a number came from.",
+   "approach": [
+    {
+     "title": "One source of truth",
+     "text": "Every answer is pulled live from a single source: the SPLP API. No shadow database, no numbers the model invented."
+    },
+    {
+     "title": "Answers with evidence",
+     "text": "Each answer carries the indicator, value, unit, year, and originating agency — users can trace exactly where the number came from."
+    },
+    {
+     "title": "Minimal architecture, maximal handover",
+     "text": "No user accounts, no cron, no data warehouse — a 10-minute cache and nothing else. Shipped with 10+ handover documents: minutes, architecture, runbooks, and a maintenance plan."
+    }
+   ],
+   "outcome": "Running in early production for the Aceh Tengah Regency ICT Office. When the language-model subscription lapsed, the Q&A service was deliberately switched off from the admin panel — dashboard, GIS, and reports stayed up. Honest, documented degradation."
+  }
+ }
+}

@@ -1,0 +1,81 @@
+{
+ "generatedAt": "2026-09-22T17:32:06.696Z",
+ "study": {
+  "slug": "niu-dash",
+  "title": "NIU-DASH",
+  "tagline": "Kakak dari situs ini — dasbor dark cyber untuk 112 proyek, vanilla JS tanpa framework.",
+  "kind": "Dashboard",
+  "year": "2025–2026",
+  "repo": "niu-dash",
+  "demo": "https://niumination.github.io/niu-dash/",
+  "stack": [
+   "HTML",
+   "CSS",
+   "JavaScript"
+  ],
+  "metrics": [
+   {
+    "label": "proyek terlacak",
+    "value": "112"
+   },
+   {
+    "label": "framework",
+    "value": "0 · vanilla"
+   },
+   {
+    "label": "versi",
+    "value": "v2.17"
+   }
+  ],
+  "problem": "100+ proyek lintas domain — web, AI tools, dotfiles, GovTech — tersebar tanpa satu layar pemantauan. Portofolio butuh peta, bukan daftar panjang yang tak ada yang membaca.",
+  "approach": [
+   {
+    "title": "Tiga panel, satu pandangan",
+    "text": "Sidebar navigasi, feed kartu proyek, dan panel detail — pola dasbor productivity klasik yang terbukti enak dipakai."
+   },
+   {
+    "title": "Vanilla sampai tulang",
+    "text": "HTML/CSS/JS murni, 100% client-side, di-hosting GitHub Pages. Tanpa build step, tanpa framework — bukti bahwa 'ringan' masih mungkin di 2026."
+   },
+   {
+    "title": "Hidup dari data GitHub",
+    "text": "Statistik GitHub real-time plus halaman ekosistem — dasbor yang selalu segar tanpa backend."
+   }
+  ],
+  "outcome": "v2.17 dengan 112 proyek terlacak — dan, tidak kalah penting: menjadi peta konsep yang kelak memicu penerusnya, dasbor yang sedang Anda baca ini.",
+  "accent": "#94a3b8",
+  "en": {
+   "tagline": "This site's older sibling — a dark cyber dashboard for 112 projects, vanilla JS, zero frameworks.",
+   "metrics": [
+    {
+     "label": "projects tracked",
+     "value": "112"
+    },
+    {
+     "label": "frameworks",
+     "value": "0 · vanilla"
+    },
+    {
+     "label": "version",
+     "value": "v2.17"
+    }
+   ],
+   "problem": "100+ projects across domains — web, AI tools, dotfiles, GovTech — scattered without a single monitoring screen. A portfolio needs a map, not a long list nobody reads.",
+   "approach": [
+    {
+     "title": "Three panels, one view",
+     "text": "Navigation sidebar, project card feed, and detail panel — the classic productivity-dashboard layout that just works."
+    },
+    {
+     "title": "Vanilla to the bone",
+     "text": "Pure HTML/CSS/JS, 100% client-side, hosted on GitHub Pages. No build step, no framework — proof that 'lightweight' is still possible in 2026."
+    },
+    {
+     "title": "Alive from GitHub data",
+     "text": "Real-time GitHub stats plus an ecosystem page — a dashboard that stays fresh with no backend."
+    }
+   ],
+   "outcome": "v2.17 tracking 112 projects — and, just as importantly: the concept map that later inspired its successor, the site you are reading right now."
+  }
+ }
+}

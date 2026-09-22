@@ -1,0 +1,81 @@
+{
+ "generatedAt": "2026-09-22T17:32:06.696Z",
+ "study": {
+  "slug": "kms-spbe",
+  "title": "KMS SPBE",
+  "tagline": "Rumah pengetahuan instansi — dokumen pemerintah yang akhirnya bisa dicari, bukan ditumpuk.",
+  "kind": "Civic Tech",
+  "year": "2026",
+  "repo": "kms-spbe",
+  "demo": "https://kms-spbe.vercel.app",
+  "stack": [
+   "Next.js",
+   "Supabase",
+   "TypeScript"
+  ],
+  "metrics": [
+   {
+    "label": "modul inti",
+    "value": "5"
+   },
+   {
+    "label": "server dikelola sendiri",
+    "value": "0"
+   },
+   {
+    "label": "lisensi",
+    "value": "MIT"
+   }
+  ],
+  "problem": "Pengetahuan instansi — kebijakan, SOP, dokumen teknis — biasanya hidup di drive personal dan lampiran email: sulit dicari, versinya tak jelas, dan ikut hilang saat pegawai rotasi. Implementasi SPBE menuntut pengetahuan yang terkelola, bukan sekadar terkumpul.",
+  "approach": [
+   {
+    "title": "Dokumen yang punya riwayat",
+    "text": "Manajemen dokumen dengan version control bawaan — siapa mengubah apa selalu kelihatan, bukan 'final_final_v3.xlsx'."
+   },
+   {
+    "title": "Cari cepat, akses berjenjang",
+    "text": "Smart search lintas dokumen plus role-based access control: setiap peran hanya melihat apa yang seharusnya."
+   },
+   {
+    "title": "Tanpa beban server",
+    "text": "Next.js + Supabase + Vercel — instansi tidak perlu merawat VM atau basis data fisik apa pun untuk mulai."
+   }
+  ],
+  "outcome": "Platform KM siap pakai untuk mendukung implementasi SPBE di instansi pemerintah: 5 modul inti (dokumen, pencarian, akses, versi, kolaborasi tim), lisensi MIT, dan demo yang bisa dicoba langsung.",
+  "accent": "#f59e0b",
+  "en": {
+   "tagline": "An institution's knowledge home — government documents that can finally be searched, not stacked.",
+   "metrics": [
+    {
+     "label": "core modules",
+     "value": "5"
+    },
+    {
+     "label": "self-managed servers",
+     "value": "0"
+    },
+    {
+     "label": "license",
+     "value": "MIT"
+    }
+   ],
+   "problem": "Institutional knowledge — policies, SOPs, technical docs — usually lives in personal drives and email attachments: hard to search, versioned by chaos, and lost with every staff rotation. SPBE implementation demands managed knowledge, not just collected knowledge.",
+   "approach": [
+    {
+     "title": "Documents with a history",
+     "text": "Document management with built-in version control — who changed what is always visible, no more 'final_final_v3.xlsx'."
+    },
+    {
+     "title": "Fast search, tiered access",
+     "text": "Smart search across documents plus role-based access control: each role sees exactly what it should."
+    },
+    {
+     "title": "Zero server burden",
+     "text": "Next.js + Supabase + Vercel — no VMs or physical databases for an agency to maintain."
+    }
+   ],
+   "outcome": "A production-ready KM platform for Indonesian government SPBE programs: 5 core modules (documents, search, access, versioning, team collaboration), MIT-licensed, with a live demo."
+  }
+ }
+}

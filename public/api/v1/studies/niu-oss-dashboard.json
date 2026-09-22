@@ -1,0 +1,81 @@
+{
+ "generatedAt": "2026-09-22T17:32:06.696Z",
+ "study": {
+  "slug": "niu-oss-dashboard",
+  "title": "Niu-OSS-Dashboard",
+  "tagline": "Situs yang sedang Anda baca — dasbor yang mengaudit dirinya sendiri.",
+  "kind": "Web / Observabilitas",
+  "year": "2026",
+  "repo": "Niu-OSS-Dashboard",
+  "demo": "https://niumination.web.id",
+  "stack": [
+   "Next.js 16",
+   "React 19",
+   "TypeScript"
+  ],
+  "metrics": [
+   {
+    "label": "halaman statis",
+    "value": "214"
+   },
+   {
+    "label": "uptime",
+    "value": "tiap 15 menit"
+   },
+   {
+    "label": "endpoint API publik",
+    "value": "107"
+   }
+  ],
+  "problem": "Portofolio developer biasanya berhenti di 'daftar proyek' — tidak ada bukti hidup bahwa sistemnya cepat, jujur soal datanya, dan benar-benar berjalan. Klaim performa tak bisa diverifikasi pengunjung.",
+  "approach": [
+   {
+    "title": "Statis murni + 3D yang sopan",
+    "text": "214 halaman statis tanpa ISR, hero 3D performance-aware yang degrade rapi saat WebGL lemah — pelajaran pahit dari bug hydration #418 yang pernah melumpuhkan produksi."
+   },
+   {
+    "title": "GitOps ala Upptime",
+    "text": "GitHub Actions mengecek 10 situs ekosistem tiap 15 menit dan meng-commit hasilnya — /status membaca data ter-commit, bisa diaudit siapa saja."
+   },
+   {
+    "title": "Mengaudit dirinya sendiri",
+    "text": "CSP report-only dengan endpoint laporan, E2E hidrasi 12/12 di CI, API publik v1 (107 endpoint), dan CHANGELOG yang di-render jadi halaman — situs ini membukukan bukti-buktinya sendiri."
+   }
+  ],
+  "outcome": "niumination.web.id live: 90 repo teragregasi live dari API GitHub (bukan angka ketikan), kalender kontribusi 12 bulan via GraphQL, uptime yang bisa dicek publik, dan seluruh perjalanan perbaikannya tercatat di CHANGELOG.",
+  "accent": "#60a5fa",
+  "en": {
+   "tagline": "The site you are reading right now — a dashboard that audits itself.",
+   "metrics": [
+    {
+     "label": "static pages",
+     "value": "214"
+    },
+    {
+     "label": "uptime checks",
+     "value": "every 15 min"
+    },
+    {
+     "label": "public API endpoints",
+     "value": "107"
+    }
+   ],
+   "problem": "A developer portfolio usually stops at 'a list of projects' — no living proof that the system is fast, honest about its data, and actually running. Performance claims the visitor cannot verify.",
+   "approach": [
+    {
+     "title": "Purely static + polite 3D",
+     "text": "214 static pages with no ISR, and a performance-aware 3D hero that degrades gracefully on weak WebGL — a hard lesson from the hydration bug #418 that once crippled production."
+    },
+    {
+     "title": "Upptime-style GitOps",
+     "text": "GitHub Actions checks 10 ecosystem sites every 15 minutes and commits the results — /status reads committed data anyone can audit."
+    },
+    {
+     "title": "Auditing itself",
+     "text": "Report-only CSP with a reporting endpoint, 12/12 hydration E2E in CI, a public v1 API (107 endpoints), and a CHANGELOG rendered as a page — this site documents its own evidence."
+    }
+   ],
+   "outcome": "niumination.web.id live: 90 repos aggregated live from the GitHub API (not typed numbers), a full 12-month GraphQL contribution calendar, publicly auditable uptime, and its entire repair journey recorded in the CHANGELOG."
+  }
+ }
+}

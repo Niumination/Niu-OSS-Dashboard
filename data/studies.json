@@ -717,7 +717,7 @@
     "metrics": [
       {
         "label": "halaman statis",
-        "value": "208"
+        "value": "214"
       },
       {
         "label": "uptime",
@@ -725,14 +725,14 @@
       },
       {
         "label": "endpoint API publik",
-        "value": "102"
+        "value": "107"
       }
     ],
     "problem": "Portofolio developer biasanya berhenti di 'daftar proyek' — tidak ada bukti hidup bahwa sistemnya cepat, jujur soal datanya, dan benar-benar berjalan. Klaim performa tak bisa diverifikasi pengunjung.",
     "approach": [
       {
         "title": "Statis murni + 3D yang sopan",
-        "text": "208 halaman statis tanpa ISR, hero 3D performance-aware yang degrade rapi saat WebGL lemah — pelajaran pahit dari bug hydration #418 yang pernah melumpuhkan produksi."
+        "text": "214 halaman statis tanpa ISR, hero 3D performance-aware yang degrade rapi saat WebGL lemah — pelajaran pahit dari bug hydration #418 yang pernah melumpuhkan produksi."
       },
       {
         "title": "GitOps ala Upptime",
@@ -740,7 +740,7 @@
       },
       {
         "title": "Mengaudit dirinya sendiri",
-        "text": "CSP report-only dengan endpoint laporan, E2E hidrasi 12/12 di CI, API publik v1 (102 endpoint), dan CHANGELOG yang di-render jadi halaman — situs ini membukukan bukti-buktinya sendiri."
+        "text": "CSP report-only dengan endpoint laporan, E2E hidrasi 12/12 di CI, API publik v1 (107 endpoint), dan CHANGELOG yang di-render jadi halaman — situs ini membukukan bukti-buktinya sendiri."
       }
     ],
     "outcome": "niumination.web.id live: 90 repo teragregasi live dari API GitHub (bukan angka ketikan), kalender kontribusi 12 bulan via GraphQL, uptime yang bisa dicek publik, dan seluruh perjalanan perbaikannya tercatat di CHANGELOG.",
@@ -750,7 +750,7 @@
       "metrics": [
         {
           "label": "static pages",
-          "value": "208"
+          "value": "214"
         },
         {
           "label": "uptime checks",
@@ -758,14 +758,14 @@
         },
         {
           "label": "public API endpoints",
-          "value": "102"
+          "value": "107"
         }
       ],
       "problem": "A developer portfolio usually stops at 'a list of projects' — no living proof that the system is fast, honest about its data, and actually running. Performance claims the visitor cannot verify.",
       "approach": [
         {
           "title": "Purely static + polite 3D",
-          "text": "208 static pages with no ISR, and a performance-aware 3D hero that degrades gracefully on weak WebGL — a hard lesson from the hydration bug #418 that once crippled production."
+          "text": "214 static pages with no ISR, and a performance-aware 3D hero that degrades gracefully on weak WebGL — a hard lesson from the hydration bug #418 that once crippled production."
         },
         {
           "title": "Upptime-style GitOps",
@@ -773,7 +773,7 @@
         },
         {
           "title": "Auditing itself",
-          "text": "Report-only CSP with a reporting endpoint, 12/12 hydration E2E in CI, a public v1 API (102 endpoints), and a CHANGELOG rendered as a page — this site documents its own evidence."
+          "text": "Report-only CSP with a reporting endpoint, 12/12 hydration E2E in CI, a public v1 API (107 endpoints), and a CHANGELOG rendered as a page — this site documents its own evidence."
         }
       ],
       "outcome": "niumination.web.id live: 90 repos aggregated live from the GitHub API (not typed numbers), a full 12-month GraphQL contribution calendar, publicly auditable uptime, and its entire repair journey recorded in the CHANGELOG."

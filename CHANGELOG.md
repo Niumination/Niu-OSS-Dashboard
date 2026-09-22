@@ -2,8 +2,36 @@
  
 Semua perubahan penting proyek ini didokumentasikan di sini — satu entri
 per fase pengerjaan, lengkap dengan commit yang bisa dilacak.
-Format mengikuti [Keep a Changelog](https://keepachangelog.com/id/1.1/);
+Format mengikuti [Keep a Changelog](https://keepachangelog.com/id/1.1.);
 proyek ini tidak memakai versioning semver ketat (satu repo, satu situs).
+ 
+## [Produksi 2026.15] — Audit menyeluruh: perbaikan API v1 + metric + guard dependensi — 2026-09-22
+
+### Bug API publik v1 (ditemukan audit live)
+- **6 dari 10 detail studi 404 di live**: file `public/api/v1/studies/*.json`
+  untuk studi baru 2026.12 (didong-code, kms-spbe, niu-dash, niu-lkh,
+  niu-oss-dashboard, sapa-ai) dihasilkan `gen-api.mjs` tetapi terlewat commit,
+  padahal `index.json` mengiklankan endpoint-nya. Kini dilacak — kontrak API utuh kembali
+  (90 repo + 10 studi + 7 indeks = **107 endpoint**, angka generator).
+- **Endpoint yatim dihapus**: `repos/dotfiles.json` (repo lama 2024, tidak ada
+  di indeks) selama ini masih dilayani live dengan data basi.
+
+### Metric studi niu-oss-dashboard disegarkan
+- "endpoint API publik" **102 → 107**; "halaman statis" **208 → 214**
+  (value + prosa id+en, API diregenerasi). Metric publik kini cocok
+  dengan bukti build/generator saat ini.
+
+### Guard rantai dependensi
+- `react`/`react-dom` dipin `^19.2.8` → `~19.2.8` — react 19.3.0 sudah
+  rilis dan akan melanggar peer fiber 9.7.0 (`>=19 <19.3`) bila dependabot
+  menaikkannya. Kembalikan ke `^` saat fiber mendukung (T3).
+
+### Docs
+- "91 repo" → 90 di AGENTS.md + README.md (fakta repos.json/GitHub).
+- **`docs/AUDIT-2026.15.md`**: hasil audit dua sisi lengkap — 22 rute live,
+  header, JSON-LD, sitemap, bobot, ekspor statis, temuan & rekomendasi.
+- Rekomendasi ops: trigger Lighthouse CI manual (gagal 21 Sep sebelum
+  fix kontras 2026.13; jadwal mingguan berikutnya baru 28 Sep).
  
 ## [Produksi 2026.14] — Fase 2: mode densitas + PWA offline penuh + share target — 2026-09-22
 
