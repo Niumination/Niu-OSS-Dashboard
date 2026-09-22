@@ -311,5 +311,472 @@
       ],
       "outcome": "A precision weather information system covering the Gayo coffee value chain from farm to drying, plus a disaster-mitigation layer for highland residents — civic tech born from very specific local needs."
     }
+  },
+  {
+    "slug": "kms-spbe",
+    "title": "KMS SPBE",
+    "tagline": "Rumah pengetahuan instansi — dokumen pemerintah yang akhirnya bisa dicari, bukan ditumpuk.",
+    "kind": "Civic Tech",
+    "year": "2026",
+    "repo": "kms-spbe",
+    "demo": "https://kms-spbe.vercel.app",
+    "stack": [
+      "Next.js",
+      "Supabase",
+      "TypeScript"
+    ],
+    "metrics": [
+      {
+        "label": "modul inti",
+        "value": "5"
+      },
+      {
+        "label": "server dikelola sendiri",
+        "value": "0"
+      },
+      {
+        "label": "lisensi",
+        "value": "MIT"
+      }
+    ],
+    "problem": "Pengetahuan instansi — kebijakan, SOP, dokumen teknis — biasanya hidup di drive personal dan lampiran email: sulit dicari, versinya tak jelas, dan ikut hilang saat pegawai rotasi. Implementasi SPBE menuntut pengetahuan yang terkelola, bukan sekadar terkumpul.",
+    "approach": [
+      {
+        "title": "Dokumen yang punya riwayat",
+        "text": "Manajemen dokumen dengan version control bawaan — siapa mengubah apa selalu kelihatan, bukan 'final_final_v3.xlsx'."
+      },
+      {
+        "title": "Cari cepat, akses berjenjang",
+        "text": "Smart search lintas dokumen plus role-based access control: setiap peran hanya melihat apa yang seharusnya."
+      },
+      {
+        "title": "Tanpa beban server",
+        "text": "Next.js + Supabase + Vercel — instansi tidak perlu merawat VM atau basis data fisik apa pun untuk mulai."
+      }
+    ],
+    "outcome": "Platform KM siap pakai untuk mendukung implementasi SPBE di instansi pemerintah: 5 modul inti (dokumen, pencarian, akses, versi, kolaborasi tim), lisensi MIT, dan demo yang bisa dicoba langsung.",
+    "accent": "#f59e0b",
+    "en": {
+      "tagline": "An institution's knowledge home — government documents that can finally be searched, not stacked.",
+      "metrics": [
+        {
+          "label": "core modules",
+          "value": "5"
+        },
+        {
+          "label": "self-managed servers",
+          "value": "0"
+        },
+        {
+          "label": "license",
+          "value": "MIT"
+        }
+      ],
+      "problem": "Institutional knowledge — policies, SOPs, technical docs — usually lives in personal drives and email attachments: hard to search, versioned by chaos, and lost with every staff rotation. SPBE implementation demands managed knowledge, not just collected knowledge.",
+      "approach": [
+        {
+          "title": "Documents with a history",
+          "text": "Document management with built-in version control — who changed what is always visible, no more 'final_final_v3.xlsx'."
+        },
+        {
+          "title": "Fast search, tiered access",
+          "text": "Smart search across documents plus role-based access control: each role sees exactly what it should."
+        },
+        {
+          "title": "Zero server burden",
+          "text": "Next.js + Supabase + Vercel — no VMs or physical databases for an agency to maintain."
+        }
+      ],
+      "outcome": "A production-ready KM platform for Indonesian government SPBE programs: 5 core modules (documents, search, access, versioning, team collaboration), MIT-licensed, with a live demo."
+    }
+  },
+  {
+    "slug": "sapa-ai",
+    "title": "SAPA Smart AI",
+    "tagline": "Asisten data statistik Aceh Tengah — tanya dalam bahasa Indonesia, dijawab lengkap dengan buktinya.",
+    "kind": "Civic Tech / AI",
+    "year": "2026",
+    "repo": "sapa-ai",
+    "demo": "https://sapa-smart-ai.vercel.app",
+    "stack": [
+      "TypeScript",
+      "Vercel",
+      "LLM"
+    ],
+    "metrics": [
+      {
+        "label": "sumber data",
+        "value": "1 (API SPLP)"
+      },
+      {
+        "label": "basis data",
+        "value": "tanpa · cache 10 mnt"
+      },
+      {
+        "label": "dokumen serah terima",
+        "value": "10+"
+      }
+    ],
+    "problem": "Data statistik kabupaten terkunci di tabel-tabel SPLP yang harus dibaca manual. Warga dan pimpinan bertanya dalam bahasa sehari-hari — jawabannya tersebar di banyak tabel, dan tak ada cara memastikan angka yang keluar bisa dipertanggungjawabkan.",
+    "approach": [
+      {
+        "title": "Satu sumber kebenaran",
+        "text": "Semua jawaban ditarik langsung dari satu sumber: API SPLP. Tanpa basis data tiruan, tanpa angka karangan model."
+      },
+      {
+        "title": "Jawaban berbukti",
+        "text": "Setiap jawaban menyertakan indikator, nilai, satuan, tahun, dan OPD asalnya — pengguna bisa menelusuri dari mana angka itu datang."
+      },
+      {
+        "title": "Arsitektur minimal, serah terima maksimal",
+        "text": "Tanpa akun pengguna, tanpa cron, tanpa gudang data — cache 10 menit lalu buang. Disertai 10+ dokumen serah terima: berita acara, arsitektur, runbook, hingga rencana pemeliharaan."
+      }
+    ],
+    "outcome": "Berjalan di tahap awal produksi untuk Dinas Kominfo Kabupaten Aceh Tengah. Saat langganan model bahasa tertunda, layanan tanya-jawab sengaja dimatikan lewat panel admin — dashboard, GIS, dan laporan tetap hidup. Degradasi yang jujur dan terdokumentasi.",
+    "accent": "#f472b6",
+    "en": {
+      "tagline": "An Aceh Tengah statistics assistant — ask in Indonesian, get answers with the receipts attached.",
+      "metrics": [
+        {
+          "label": "data source",
+          "value": "1 (SPLP API)"
+        },
+        {
+          "label": "database",
+          "value": "none · 10-min cache"
+        },
+        {
+          "label": "handover documents",
+          "value": "10+"
+        }
+      ],
+      "problem": "Regency statistics were locked inside SPLP tables that had to be read manually. Citizens and leadership ask questions in everyday language — answers were scattered across tables, with no way to verify where a number came from.",
+      "approach": [
+        {
+          "title": "One source of truth",
+          "text": "Every answer is pulled live from a single source: the SPLP API. No shadow database, no numbers the model invented."
+        },
+        {
+          "title": "Answers with evidence",
+          "text": "Each answer carries the indicator, value, unit, year, and originating agency — users can trace exactly where the number came from."
+        },
+        {
+          "title": "Minimal architecture, maximal handover",
+          "text": "No user accounts, no cron, no data warehouse — a 10-minute cache and nothing else. Shipped with 10+ handover documents: minutes, architecture, runbooks, and a maintenance plan."
+        }
+      ],
+      "outcome": "Running in early production for the Aceh Tengah Regency ICT Office. When the language-model subscription lapsed, the Q&A service was deliberately switched off from the admin panel — dashboard, GIS, and reports stayed up. Honest, documented degradation."
+    }
+  },
+  {
+    "slug": "didong-code",
+    "title": "Didong-Code",
+    "tagline": "Lingkungan pengembangan agentic di desktop — dengan jiwa seni Didong Gayo.",
+    "kind": "Desktop / AI Tooling",
+    "year": "2026",
+    "repo": "didong-code",
+    "stack": [
+      "Electron",
+      "React",
+      "TypeScript"
+    ],
+    "metrics": [
+      {
+        "label": "platform",
+        "value": "Win · macOS · Linux"
+      },
+      {
+        "label": "jenis",
+        "value": "AI coding agent"
+      },
+      {
+        "label": "asal nama",
+        "value": "seni Didong Gayo"
+      }
+    ],
+    "problem": "AI coding agent hampir selalu hidup di terminal — cepat bagi engineer, tapi tinggi tembok masuknya bagi orang lain. Dan nyaris semuanya berpenampilan seragam: gelap, dingin, tanpa akar.",
+    "approach": [
+      {
+        "title": "Desktop, bukan terminal",
+        "text": "Electron + React: agen AI coding dengan antarmuka desktop yang familiar — jendela, menu, dan alur yang bisa dipelajari tanpa hafal command."
+      },
+      {
+        "title": "Agentic end-to-end",
+        "text": "Dibangun sebagai agentic development environment: agen yang mengerti konteks proyek, bukan sekadar autocomplete."
+      },
+      {
+        "title": "Identitas dari Gayo",
+        "text": "Nama dan semangat Didong — seni sastra lisan Gayo Aceh — menjadi bagian dari produk, bukan tempelan marketing."
+      }
+    ],
+    "outcome": "Aplikasi desktop lintas platform (Windows/macOS/Linux) yang membawa budaya Gayo ke tooling developer global — eksperimen serius soal identitas lokal di perangkat lunak internasional.",
+    "accent": "#fb7185",
+    "en": {
+      "tagline": "An agentic development environment for the desktop — with the soul of Gayo Didong art.",
+      "metrics": [
+        {
+          "label": "platform",
+          "value": "Win · macOS · Linux"
+        },
+        {
+          "label": "type",
+          "value": "AI coding agent"
+        },
+        {
+          "label": "name origin",
+          "value": "Gayo Didong art"
+        }
+      ],
+      "problem": "AI coding agents almost always live in the terminal — fast for engineers, but a steep wall for everyone else. And nearly all of them look identical: dark, cold, rootless.",
+      "approach": [
+        {
+          "title": "Desktop, not terminal",
+          "text": "Electron + React: an AI coding agent with a familiar desktop interface — windows, menus, and flows you can learn without memorizing commands."
+        },
+        {
+          "title": "Agentic end-to-end",
+          "text": "Built as a full agentic development environment: an agent that understands project context, not just autocomplete."
+        },
+        {
+          "title": "Identity from Gayo",
+          "text": "The name and spirit of Didong — the oral literary art of the Gayo people of Aceh — is part of the product, not a marketing sticker."
+        }
+      ],
+      "outcome": "A cross-platform desktop app (Windows/macOS/Linux) carrying Gayo culture into global developer tooling — a serious experiment in local identity for international software."
+    }
+  },
+  {
+    "slug": "niu-lkh",
+    "title": "Niu-LKH",
+    "tagline": "Laporan kegiatan harian yang nggak bikin malas — foto bukti terkompresi otomatis, PDF tinggal klik.",
+    "kind": "Produktivitas",
+    "year": "2026",
+    "repo": "Niu-LKH",
+    "demo": "https://niumination.github.io/Niu-LKH/",
+    "stack": [
+      "React 19",
+      "Vite",
+      "Tailwind 4"
+    ],
+    "metrics": [
+      {
+        "label": "format ekspor",
+        "value": "PDF · Excel · CSV"
+      },
+      {
+        "label": "server",
+        "value": "tanpa · localStorage"
+      },
+      {
+        "label": "sinkronisasi",
+        "value": "Google Sheets"
+      }
+    ],
+    "problem": "Pencatatan laporan kegiatan harian pegawai biasanya manual: kumpul foto, ketik ulang, rekap ulang tiap minggu. Berulang, rawan hilang, dan bukti dukung tersebar di galeri ponsel.",
+    "approach": [
+      {
+        "title": "Satu form, satu layar",
+        "text": "Tanggal, uraian, tempat, penjab, dasar surat, output — plus upload bukti dukung yang dikompresi otomatis di browser, biar hemat dan tetap terbaca."
+      },
+      {
+        "title": "Data di tangan sendiri",
+        "text": "Penyimpanan lokal (localStorage) tanpa server dan tanpa akun — dengan sinkronisasi otomatis opsional ke Google Sheets untuk rekap bersama."
+      },
+      {
+        "title": "Ekspor siap tanda tangan",
+        "text": "PDF lengkap dengan foto bukti, atau Excel/CSV untuk diolah lagi. Dashboard, kalender, dan statistik harian menyusul dari data yang sama."
+      }
+    ],
+    "outcome": "Aplikasi ringan bertema HUD gaming yang dipakai harian: satu sumber data, tiga format ekspor, nol server. Di hosting GitHub Pages dengan React 19 + Vite + Tailwind 4.",
+    "accent": "#a3e635",
+    "en": {
+      "tagline": "Daily activity reports that don't drain you — evidence photos auto-compressed, PDFs one click away.",
+      "metrics": [
+        {
+          "label": "export formats",
+          "value": "PDF · Excel · CSV"
+        },
+        {
+          "label": "server",
+          "value": "none · localStorage"
+        },
+        {
+          "label": "sync",
+          "value": "Google Sheets"
+        }
+      ],
+      "problem": "Daily staff activity reporting is usually manual: collect photos, retype everything, redo the recap weekly. Repetitive, loss-prone, and evidence scattered across phone galleries.",
+      "approach": [
+        {
+          "title": "One form, one screen",
+          "text": "Date, description, place, official, decree, output — plus evidence uploads auto-compressed in the browser to stay light and readable."
+        },
+        {
+          "title": "Data in your own hands",
+          "text": "Local storage (localStorage) with no server and no accounts — plus optional automatic sync to Google Sheets for shared recaps."
+        },
+        {
+          "title": "Signature-ready exports",
+          "text": "PDF with evidence photos embedded, or Excel/CSV for further processing. Dashboard, calendar, and daily stats flow from the same data."
+        }
+      ],
+      "outcome": "A lightweight gaming-HUD-themed app used daily: one data source, three export formats, zero servers. Hosted on GitHub Pages with React 19 + Vite + Tailwind 4."
+    }
+  },
+  {
+    "slug": "niu-dash",
+    "title": "NIU-DASH",
+    "tagline": "Kakak dari situs ini — dasbor dark cyber untuk 112 proyek, vanilla JS tanpa framework.",
+    "kind": "Dashboard",
+    "year": "2025–2026",
+    "repo": "niu-dash",
+    "demo": "https://niumination.github.io/niu-dash/",
+    "stack": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "metrics": [
+      {
+        "label": "proyek terlacak",
+        "value": "112"
+      },
+      {
+        "label": "framework",
+        "value": "0 · vanilla"
+      },
+      {
+        "label": "versi",
+        "value": "v2.17"
+      }
+    ],
+    "problem": "100+ proyek lintas domain — web, AI tools, dotfiles, GovTech — tersebar tanpa satu layar pemantauan. Portofolio butuh peta, bukan daftar panjang yang tak ada yang membaca.",
+    "approach": [
+      {
+        "title": "Tiga panel, satu pandangan",
+        "text": "Sidebar navigasi, feed kartu proyek, dan panel detail — pola dasbor productivity klasik yang terbukti enak dipakai."
+      },
+      {
+        "title": "Vanilla sampai tulang",
+        "text": "HTML/CSS/JS murni, 100% client-side, di-hosting GitHub Pages. Tanpa build step, tanpa framework — bukti bahwa 'ringan' masih mungkin di 2026."
+      },
+      {
+        "title": "Hidup dari data GitHub",
+        "text": "Statistik GitHub real-time plus halaman ekosistem — dasbor yang selalu segar tanpa backend."
+      }
+    ],
+    "outcome": "v2.17 dengan 112 proyek terlacak — dan, tidak kalah penting: menjadi peta konsep yang kelak memicu penerusnya, dasbor yang sedang Anda baca ini.",
+    "accent": "#94a3b8",
+    "en": {
+      "tagline": "This site's older sibling — a dark cyber dashboard for 112 projects, vanilla JS, zero frameworks.",
+      "metrics": [
+        {
+          "label": "projects tracked",
+          "value": "112"
+        },
+        {
+          "label": "frameworks",
+          "value": "0 · vanilla"
+        },
+        {
+          "label": "version",
+          "value": "v2.17"
+        }
+      ],
+      "problem": "100+ projects across domains — web, AI tools, dotfiles, GovTech — scattered without a single monitoring screen. A portfolio needs a map, not a long list nobody reads.",
+      "approach": [
+        {
+          "title": "Three panels, one view",
+          "text": "Navigation sidebar, project card feed, and detail panel — the classic productivity-dashboard layout that just works."
+        },
+        {
+          "title": "Vanilla to the bone",
+          "text": "Pure HTML/CSS/JS, 100% client-side, hosted on GitHub Pages. No build step, no framework — proof that 'lightweight' is still possible in 2026."
+        },
+        {
+          "title": "Alive from GitHub data",
+          "text": "Real-time GitHub stats plus an ecosystem page — a dashboard that stays fresh with no backend."
+        }
+      ],
+      "outcome": "v2.17 tracking 112 projects — and, just as importantly: the concept map that later inspired its successor, the site you are reading right now."
+    }
+  },
+  {
+    "slug": "niu-oss-dashboard",
+    "title": "Niu-OSS-Dashboard",
+    "tagline": "Situs yang sedang Anda baca — dasbor yang mengaudit dirinya sendiri.",
+    "kind": "Web / Observabilitas",
+    "year": "2026",
+    "repo": "Niu-OSS-Dashboard",
+    "demo": "https://niumination.web.id",
+    "stack": [
+      "Next.js 16",
+      "React 19",
+      "TypeScript"
+    ],
+    "metrics": [
+      {
+        "label": "halaman statis",
+        "value": "208"
+      },
+      {
+        "label": "uptime",
+        "value": "tiap 15 menit"
+      },
+      {
+        "label": "endpoint API publik",
+        "value": "102"
+      }
+    ],
+    "problem": "Portofolio developer biasanya berhenti di 'daftar proyek' — tidak ada bukti hidup bahwa sistemnya cepat, jujur soal datanya, dan benar-benar berjalan. Klaim performa tak bisa diverifikasi pengunjung.",
+    "approach": [
+      {
+        "title": "Statis murni + 3D yang sopan",
+        "text": "208 halaman statis tanpa ISR, hero 3D performance-aware yang degrade rapi saat WebGL lemah — pelajaran pahit dari bug hydration #418 yang pernah melumpuhkan produksi."
+      },
+      {
+        "title": "GitOps ala Upptime",
+        "text": "GitHub Actions mengecek 10 situs ekosistem tiap 15 menit dan meng-commit hasilnya — /status membaca data ter-commit, bisa diaudit siapa saja."
+      },
+      {
+        "title": "Mengaudit dirinya sendiri",
+        "text": "CSP report-only dengan endpoint laporan, E2E hidrasi 12/12 di CI, API publik v1 (102 endpoint), dan CHANGELOG yang di-render jadi halaman — situs ini membukukan bukti-buktinya sendiri."
+      }
+    ],
+    "outcome": "niumination.web.id live: 90 repo teragregasi live dari API GitHub (bukan angka ketikan), kalender kontribusi 12 bulan via GraphQL, uptime yang bisa dicek publik, dan seluruh perjalanan perbaikannya tercatat di CHANGELOG.",
+    "accent": "#60a5fa",
+    "en": {
+      "tagline": "The site you are reading right now — a dashboard that audits itself.",
+      "metrics": [
+        {
+          "label": "static pages",
+          "value": "208"
+        },
+        {
+          "label": "uptime checks",
+          "value": "every 15 min"
+        },
+        {
+          "label": "public API endpoints",
+          "value": "102"
+        }
+      ],
+      "problem": "A developer portfolio usually stops at 'a list of projects' — no living proof that the system is fast, honest about its data, and actually running. Performance claims the visitor cannot verify.",
+      "approach": [
+        {
+          "title": "Purely static + polite 3D",
+          "text": "208 static pages with no ISR, and a performance-aware 3D hero that degrades gracefully on weak WebGL — a hard lesson from the hydration bug #418 that once crippled production."
+        },
+        {
+          "title": "Upptime-style GitOps",
+          "text": "GitHub Actions checks 10 ecosystem sites every 15 minutes and commits the results — /status reads committed data anyone can audit."
+        },
+        {
+          "title": "Auditing itself",
+          "text": "Report-only CSP with a reporting endpoint, 12/12 hydration E2E in CI, a public v1 API (102 endpoints), and a CHANGELOG rendered as a page — this site documents its own evidence."
+        }
+      ],
+      "outcome": "niumination.web.id live: 90 repos aggregated live from the GitHub API (not typed numbers), a full 12-month GraphQL contribution calendar, publicly auditable uptime, and its entire repair journey recorded in the CHANGELOG."
+    }
   }
 ]

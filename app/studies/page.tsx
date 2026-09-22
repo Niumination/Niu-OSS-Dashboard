@@ -15,7 +15,7 @@ import T from '@/components/T';
 export const metadata: Metadata = {
   title: 'Studi Kasus',
   description:
-    'Empat proyek dibedah apa adanya: masalah, keputusan, hasil — dari civic tech sampai OS AI-first. Klaimnya bisa dicek di kode.',
+    'Studi kasus dibedah apa adanya: masalah, keputusan, hasil — dari civic tech sampai OS AI-first. Klaimnya bisa dicek di kodenya.',
   alternates: { canonical: '/studies' },
 };
 
@@ -34,7 +34,7 @@ export default async function StudiesPage() {
             <T k="studies.title" />
           </h1>
           <p className="mt-3 max-w-2xl text-[13.5px] leading-relaxed text-cream/60">
-            <T k="studies.desc" />
+            <T k="studies.desc" vars={{ n: CASE_STUDIES.length }} />
           </p>
         </header>
 

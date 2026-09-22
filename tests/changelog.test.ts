@@ -39,8 +39,8 @@ describe('lib/changelog — parser', () => {
     for (let i = 1; i < out.length; i++) {
       expect(out[i - 1].date >= out[i].date).toBe(true);
     }
-    // entri terbaru yang dikenal
-    expect(out[0].version).toContain('2026.11');
+    // entri terbaru valid (JANGAN pin versi — akan rusak tiap entri baru)
+    expect(out[0].version).toBeTruthy();
     // setiap entri punya minimal satu seksi dengan isi
     for (const e of out) {
       expect(e.sections.length).toBeGreaterThanOrEqual(1);

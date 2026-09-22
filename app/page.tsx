@@ -135,7 +135,7 @@ export default async function Home() {
             icon={BookOpen}
             micro={<T k="home.studies.micro" />}
             title={<T k="home.studies.title" />}
-            sub={<T k="home.studies.sub" />}
+            sub={<T k="home.studies.sub" vars={{ n: CASE_STUDIES.length }} />}
             action={{ href: '/studies', label: <T k="home.studies.cta" /> }}
           />
           <StudiesTeaser studies={CASE_STUDIES} />

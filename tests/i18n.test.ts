@@ -43,9 +43,9 @@ describe('i18n — kamus', () => {
 });
 
 describe('studi kasus — data & lokalizasi', () => {
-  it('ada 4 studi dengan slug unik', () => {
-    expect(CASE_STUDIES).toHaveLength(4);
-    expect(new Set(CASE_STUDIES.map((c) => c.slug)).size).toBe(4);
+  it('ada 10 studi dengan slug unik', () => {
+    expect(CASE_STUDIES).toHaveLength(10);
+    expect(new Set(CASE_STUDIES.map((c) => c.slug)).size).toBe(10);
   });
 
   it('semua studi punya terjemahan en lengkap', () => {
@@ -64,8 +64,11 @@ describe('studi kasus — data & lokalizasi', () => {
     expect(first.prev).toBeUndefined();
     expect(first.next?.slug).toBe('flame-ade');
     expect(getAdjacent('ai-first-os').next?.slug).toBe('niu-gayo-agroclimate');
-    const last = getAdjacent('niu-gayo-agroclimate');
+    const last = getAdjacent('niu-oss-dashboard');
     expect(last.next).toBeUndefined();
+    // studi baru (2026.12): terangkai setelah empat studi lama
+    expect(getAdjacent('niu-gayo-agroclimate').next?.slug).toBe('kms-spbe');
+    expect(getAdjacent('niu-dash').next?.slug).toBe('niu-oss-dashboard');
   });
 
   it('localizedStudy: en overlay, id apa adanya', () => {

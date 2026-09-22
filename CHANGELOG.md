@@ -5,6 +5,35 @@ per fase pengerjaan, lengkap dengan commit yang bisa dilacak.
 Format mengikuti [Keep a Changelog](https://keepachangelog.com/id/1.1/);
 proyek ini tidak memakai versioning semver ketat (satu repo, satu situs).
  
+## [Produksi 2026.12] — Katalog studi kasus 4 → 10 (ROADMAP Fase 1) — 2026-09-22
+
+### Studi baru (6) — semua berbasis riset README repositori publik
+- **KMS SPBE** — rumah pengetahuan instansi (Next.js + Supabase,
+  5 modul inti, tanpa server dikelola sendiri).
+- **SAPA Smart AI** — asisten data statistik Aceh Tengah: satu sumber
+  (API SPLP), jawaban berbukti (indikator/nilai/satuan/tahun/OPD),
+  arsitektur minimal, 10+ dokumen serah terima — termasuk catatan
+  jujur layanan tanya-jawab yang sengaja dimatikan.
+- **Didong-Code** — agentic dev environment desktop (Electron +
+  React) dengan identitas seni Didong Gayo.
+- **Niu-LKH** — laporan kegiatan harian: bukti terkompresi otomatis,
+  localStorage + sinkronisasi Google Sheets, ekspor PDF/Excel/CSV.
+- **NIU-DASH** — kakak dari situs ini: dasbor 112 proyek, vanilla JS,
+  GitHub Pages — peta konsep yang memicu penerusnya.
+- **Niu-OSS-Dashboard** — studi meta: situs yang mengaudit dirinya
+  (208→212 halaman statis, uptime GitOps, CSP, E2E, API v1).
+
+### Perbaikan ikutan
+- Jumlah studi kini **dinamis** `{n}` (home + /studies) — tak akan
+  basi lagi saat katalog bertambah.
+- Sentinel test changelog dibuat tahan-masa-depan (hapus pin versi —
+  terima kasih Hermes atas bump 8be031f, kini tak perlu lagi).
+- API publik v1 di-regenerasi (107 file JSON; +6 detail studi).
+
+### Verifikasi
+tsc 0 · vitest 62/62 · build 212 halaman statis (+6 studi) ·
+10 slug unik + en lengkap · jumlah dinamis terkonfirmasi di HTML.
+
 ## [Produksi 2026.11] — Fase 1 konten: /now + /changelog, kalender GraphQL, quick wins — 2026-09-22
 
 ### Fix: kalender kontribusi 12 bulan akhirnya menyala
@@ -35,7 +64,7 @@ proyek ini tidak memakai versioning semver ketat (satu repo, satu situs).
 - Command palette: aksi "salin tautan halaman ini".
 
 ### Verifikasi
-tsc 0 · vitest 62/62 (+10 baru) · build 206→208 halaman statis ·
+tsc 0 · vitest 62/62 (+10 baru) · build statis +2 halaman baru (/now, /changelog) ·
 /now, /changelog, legenda, 404 terkonfirmasi di HTML hasil build.
 
 ## [Produksi 2026.10] — Kebersihan docs + humanisasi salinan UI — 2026-09-22
