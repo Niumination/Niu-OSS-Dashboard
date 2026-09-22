@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ExternalLink } from 'lucide-react';
 import AppShell from '@/components/AppShell';
+import TitleSync from '@/components/TitleSync';
 import { getGithubSnapshot } from '@/lib/github';
 import { CASE_STUDIES } from '@/lib/case-studies';
 import { StudiesGrid } from '@/components/studies-ui';
@@ -24,6 +25,7 @@ export default async function StudiesPage() {
 
   return (
     <AppShell snapshot={snap}>
+      <TitleSync k="title.studies" />
       <div className="mx-auto max-w-[1440px] px-4 pb-20 pt-8 md:px-6 lg:px-8">
         <header>
           <div className="micro flex items-center gap-2 text-cream/45">

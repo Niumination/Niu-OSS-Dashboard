@@ -72,6 +72,11 @@ jobs:
         env:
           E2E_BASE_URL: http://localhost:3000
 
+      - name: A11y — axe-core semua rute (serious/critical = gagal)
+        run: node tests/e2e/a11y.mjs
+        env:
+          E2E_BASE_URL: http://localhost:3000
+
       - name: Hentikan server
         if: always()
         run: |

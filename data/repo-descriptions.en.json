@@ -11,5 +11,6 @@
   "pdf-inspector": "Local PDF inspection without an LLM (no-agent) — pypdf. Extracts PDF contents into text/summaries for agents.",
   "didong-code": "Didong-Code — an Agentic Development Environment with the soul of Gayo-Aceh tradition. Electron + React + TypeScript AI coding agent desktop.",
   "AI-First-OS": "Arch Linux ISO builder — AI First OS. An operating system with Hermes Agent as a first-class citizen.",
-  "Smart-ASN-Gayo-Mengaji": "Gayo-Mengaji — Quran memorization community app for the Gayo highlands"
+  "Smart-ASN-Gayo-Mengaji": "Gayo-Mengaji — Quran memorization community app for the Gayo highlands",
+  "Niu-OSS-Dashboard": "Interactive OSS landing page + dashboard for github.com/niumination — Next.js 16, aggregator of 90 repos, public API v1, PWA, i18n id/en"
 }

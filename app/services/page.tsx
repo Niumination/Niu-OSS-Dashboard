@@ -8,6 +8,7 @@ import {
   Stethoscope,
 } from 'lucide-react';
 import AppShell from '@/components/AppShell';
+import TitleSync from '@/components/TitleSync';
 import ServicesCtas from '@/components/ServicesCtas';
 import { getGithubSnapshot } from '@/lib/github';
 import { SERVICE_PACKAGES, SITE } from '@/lib/site.config';
@@ -44,6 +45,7 @@ export default async function ServicesPage() {
 
   return (
     <AppShell snapshot={snap}>
+      <TitleSync k="title.services" />
       <div className="mx-auto max-w-[1440px] px-4 pb-20 pt-8 md:px-6 lg:px-8">
         <header className="max-w-2xl">
           <div className="micro flex items-center gap-2 text-cream/45">

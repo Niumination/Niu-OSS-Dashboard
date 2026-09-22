@@ -13,6 +13,7 @@ import {
   Wrench,
 } from 'lucide-react';
 import AppShell from '@/components/AppShell';
+import TitleSync from '@/components/TitleSync';
 import Hero3D from '@/components/Hero3D';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import RepoCard from '@/components/RepoCard';
@@ -71,6 +72,7 @@ export default async function Home() {
 
   return (
     <AppShell snapshot={snap}>
+      <TitleSync k="title.home" />
       <div className="mx-auto max-w-[1440px] px-4 pt-5 pb-16 md:px-6 md:pt-6 lg:px-8">
         <ErrorBoundary label="hero">
           <Hero3D

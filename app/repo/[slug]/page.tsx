@@ -14,6 +14,7 @@ import {
   Users,
 } from 'lucide-react';
 import AppShell from '@/components/AppShell';
+import TitleSync from '@/components/TitleSync';
 import CloneBox from '@/components/CloneBox';
 import QrCard from '@/components/QrCard';
 import Readme from '@/components/Readme';
@@ -162,6 +163,7 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
 
   return (
     <AppShell snapshot={snap}>
+      <TitleSync k="title.repo" vars={{ name: repo.name }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}

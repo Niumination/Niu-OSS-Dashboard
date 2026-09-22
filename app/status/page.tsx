@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Activity, ArrowLeft, Globe, Timer } from 'lucide-react';
 import AppShell from '@/components/AppShell';
+import TitleSync from '@/components/TitleSync';
 import { getGithubSnapshot } from '@/lib/github';
 import { UPTIME_DATA } from '@/lib/uptime-data';
 import { avgMs, dayColor, lastCheck, lastIncident, overall, uptimePct } from '@/lib/uptime';
@@ -30,6 +31,7 @@ export default async function StatusPage() {
 
   return (
     <AppShell snapshot={snap}>
+      <TitleSync k="title.status" />
       <div className="mx-auto max-w-[1440px] px-4 pb-20 pt-8 md:px-6 lg:px-8">
         <Link
           href="/system"

@@ -72,19 +72,20 @@ Tujuan: pengunjung datang untuk **cerita**, bukan sekadar daftar repo.
 Tujuan: situs terasa *mudah* untuk siapa pun, termasuk penyandang disabilitas
 & perangkat lemah.
 
-- [ ] **Audit WCAG 2.2 AA** penuh (axe-core di CI + manual): kontras label
-      mikro (`text-cream/30` → naikkan ke /40+ di elemen informatif), fokus
-      terlihat di semua interaktif, target sentuh ≥ 44 px.
-- [ ] **Onboarding halus**: hint pertama-kunjung (localStorage) — "Tekan
-      `/` untuk mencari, Ctrl+K untuk semua aksi" — 1 kartu kecil, bisa
-      ditutup permanen.
-- [ ] **PWA offline penuh**: precache shell + halaman populer, halaman
-      offline kaya ("yang bisa dibaca offline: …"), `share_target` untuk
-      berbagi tautan repo.
-- [ ] **Mode densitas data**: toggle "ringkas/padat" di grid repo (pembaca
-      cepat vs penjelajah) — disimpan di localStorage.
-- [ ] **Terjemahan EN penuh** (toggle sudah ada — lengkapi halaman konten)
-      tanpa melanggar prinsip ID-first (EN opt-in, default id).
+- [x] **Audit WCAG 2.2 AA** penuh — axe-core di CI (`tests/e2e/a11y.mjs`,
+      11 rute + 2 rute audit-EN, serious/critical = gagal; wcag2x + 2.2 AA,
+      termasuk target-size 24px): **13/13 lolos, 0 pelanggaran** (22 Sep).
+      Kontras label mikro dinaikkan 2026.13; target sentuh memenuhi AA —
+      aspirasi 44px (AAA) dicapai alami di tombol utama (h-11).
+- [x] **Onboarding halus** (2026.13): HintCard pertama-kunjung + pintasan `/`.
+- [x] **PWA offline penuh** (2026.14): sw.js v3 + halaman offline kaya +
+      `share_target` /share.
+- [x] **Mode densitas data** (2026.14): toggle kartu/ringkas, localStorage.
+- [x] **Terjemahan dwibahasa penuh ID+EN** (2026.16): kamus 474 kunci
+      seimbang, semua copy UI keras di-i18n-kan (PaymentModal, ErrorBoundary,
+      offline list, donut, skeleton, tooltip), `document.title` ikut locale
+      (TitleSync), overlay deskripsi EN lengkap. Metadata HTML/JSON-LD/feed
+      tetap ID (default SEO) — butuh locale-routing bila ingin berubah.
 
 ## FASE 3 — Data & API (bulan 3–5)
 

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import AppShell from '@/components/AppShell';
+import TitleSync from '@/components/TitleSync';
 import RepoGrid from '@/components/RepoGrid';
 import { getGithubSnapshot } from '@/lib/github';
 import { computeSummary } from '@/lib/summary';
@@ -24,6 +25,7 @@ export default async function RepositoriesPage() {
 
   return (
     <AppShell snapshot={snap}>
+      <TitleSync k="title.repositories" />
       <div className="mx-auto max-w-[1440px] px-4 pb-20 pt-8 md:px-6 lg:px-8">
         <header>
           <div className="micro flex items-center gap-2 text-cream/45">

@@ -12,24 +12,27 @@ import { useLocale } from './LocaleProvider';
  * Fallback: daftar halaman inti yang selalu di-precache service worker.
  */
 
-const LABELS: Record<string, string> = {
-  '/': 'Beranda',
-  '/repositories': 'Repositori',
-  '/studies': 'Studi Kasus',
-  '/now': 'Sekarang',
-  '/changelog': 'Catatan Rilis',
-  '/status': 'Halaman Status',
-  '/system': 'Sistem & Metrik',
-  '/services': 'Jasa',
-  '/developers': 'API Publik',
+/* Kunci i18n per path — label mengikuti locale aktif (2026.16). */
+const LABEL_KEYS: Record<string, string> = {
+  '/': 'nav.home',
+  '/repositories': 'nav.repos',
+  '/studies': 'off.label.studies',
+  '/now': 'off.label.now',
+  '/changelog': 'off.label.changelog',
+  '/status': 'off.label.status',
+  '/system': 'off.label.system',
+  '/services': 'nav.services',
+  '/developers': 'off.label.developers',
 };
 
 const CORE_FALLBACK = ['/', '/repositories', '/studies', '/now', '/changelog', '/status'];
 
-function labelFor(path: string): string {
-  if (LABELS[path]) return LABELS[path];
+type TFn = (key: string, vars?: Record<string, string | number>) => string;
+
+function labelFor(path: string, t: TFn): string {
+  if (LABEL_KEYS[path]) return t(LABEL_KEYS[path]);
   const m = /^\/(repo|studies)\/([^/]+)/.exec(path);
-  if (m) return `${m[2]} (${m[1] === 'repo' ? 'repo' : 'studi'})`;
+  if (m) return `${m[2]} (${m[1] === 'repo' ? t('off.suffix.repo') : t('off.suffix.study')})`;
   return path;
 }
 
@@ -85,7 +88,7 @@ export default function OfflineCacheList() {
                 className="group flex items-center gap-2 rounded-lg px-2 py-1.5 text-[13px] text-cream/70 transition hover:bg-white/[0.05] hover:text-cream"
               >
                 <CheckCircle2 className="size-3.5 shrink-0 text-success/70" aria-hidden />
-                <span className="truncate group-hover:text-cream">{labelFor(p)}</span>
+                <span className="truncate group-hover:text-cream">{labelFor(p, t)}</span>
               </Link>
             </li>
           ))}

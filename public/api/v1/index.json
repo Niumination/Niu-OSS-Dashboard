@@ -1,7 +1,7 @@
 {
  "name": "Niumination OSS API",
  "version": "1.0.0",
- "generatedAt": "2026-09-22T17:32:06.696Z",
+ "generatedAt": "2026-09-22T18:19:50.828Z",
  "description": "API publik read-only untuk repositori, aktivitas, uptime, dan studi kasus Niumination. Statis (GitOps) — di-regenerasi bersama snapshot data; tanpa rate limit.",
  "docs": "https://github.com/Niumination/niumination#-api-publik-v1",
  "license": "CC-BY-4.0 (data), kode MIT",

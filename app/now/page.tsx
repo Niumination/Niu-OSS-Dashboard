@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowUpRight, GitBranch, History } from 'lucide-react';
 import AppShell from '@/components/AppShell';
+import TitleSync from '@/components/TitleSync';
 import T from '@/components/T';
 import { getGithubSnapshot } from '@/lib/github';
 import { computeNow, shortDay } from '@/lib/now';
@@ -22,6 +23,7 @@ export default async function NowPage() {
 
   return (
     <AppShell snapshot={snap}>
+      <TitleSync k="title.now" />
       <div className="mx-auto max-w-[1440px] px-4 pb-20 pt-8 md:px-6 lg:px-8">
         <header>
           <div className="micro flex items-center gap-2 text-cream/45">

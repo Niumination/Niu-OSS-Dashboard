@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { ExternalLink } from 'lucide-react';
 import AppShell from '@/components/AppShell';
+import TitleSync from '@/components/TitleSync';
 import T from '@/components/T';
 import { getGithubSnapshot } from '@/lib/github';
 import { getChangelog } from '@/lib/changelog';
@@ -41,6 +42,7 @@ export default async function ChangelogPage() {
 
   return (
     <AppShell snapshot={snap}>
+      <TitleSync k="title.changelog" />
       <div className="mx-auto max-w-[1440px] px-4 pb-20 pt-8 md:px-6 lg:px-8">
         <header>
           <div className="micro flex items-center gap-2 text-cream/45">

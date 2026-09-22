@@ -2,6 +2,7 @@
 
 import { Component, type ErrorInfo, type ReactNode } from 'react';
 import { RotateCcw } from 'lucide-react';
+import { useLocale } from './LocaleProvider';
 
 interface Props {
   children: ReactNode;
@@ -55,25 +56,31 @@ export default class ErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       if (this.props.fallback !== undefined) return this.props.fallback;
-      return (
-        <div
-          role="alert"
-          className="flex h-full min-h-40 flex-col items-center justify-center gap-3 px-6 text-center"
-        >
-          <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-cream/40">
-            {this.props.label ? `${this.props.label} gagal dirender` : 'komponen gagal dirender'} — halaman tetap aman
-          </p>
-          <button
-            type="button"
-            onClick={this.reset}
-            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 font-mono text-[10px] uppercase tracking-wider text-cream/70 transition hover:border-ember/50 hover:text-cream"
-          >
-            <RotateCcw className="size-3" />
-            Coba lagi
-          </button>
-        </div>
-      );
+      return <ErrorFallback label={this.props.label} onRetry={this.reset} />;
     }
     return this.props.children;
   }
+}
+
+/** Fallback default — sadar-locale (id/en) lewat konteks bahasa. */
+function ErrorFallback({ label, onRetry }: { label?: string; onRetry: () => void }) {
+  const { t } = useLocale();
+  return (
+    <div
+      role="alert"
+      className="flex h-full min-h-40 flex-col items-center justify-center gap-3 px-6 text-center"
+    >
+      <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-cream/40">
+        {label ? t('eb.fail.labelled', { label }) : t('eb.fail.generic')}
+      </p>
+      <button
+        type="button"
+        onClick={onRetry}
+        className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 font-mono text-[10px] uppercase tracking-wider text-cream/70 transition hover:border-ember/50 hover:text-cream"
+      >
+        <RotateCcw className="size-3" />
+        {t('eb.retry')}
+      </button>
+    </div>
+  );
 }

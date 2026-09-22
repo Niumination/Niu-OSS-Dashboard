@@ -23,6 +23,7 @@ import { GithubMark } from './GithubMark';
 import { SERVICE_PACKAGES, SITE, type ServicePackage } from '@/lib/site.config';
 import { cx, formatIDR } from '@/lib/utils';
 import type { PaymentTab } from './ui-context';
+import { useLocale } from './LocaleProvider';
 
 /*
  * ============================================================================
@@ -68,6 +69,7 @@ function loadScript(src: string): Promise<void> {
 }
 
 export default function PaymentModal({ open, initialTab, onClose }: Props) {
+  const { t } = useLocale();
   const [tab, setTab] = useState<PaymentTab>(initialTab);
   const [cfg, setCfg] = useState<PayCfg | null>(null);
   const [cfgError, setCfgError] = useState<string | null>(null);
@@ -89,7 +91,7 @@ export default function PaymentModal({ open, initialTab, onClose }: Props) {
       .catch(() => {
         if (!live) return;
         setCfg({ midtrans: false, stripe: false });
-        setCfgError('Mode statis / server pembayaran tidak aktif — pembayaran penuh tersedia pada deployment Vercel.');
+        setCfgError('pm.err.cfg');
       });
     return () => {
       live = false;
@@ -128,7 +130,7 @@ export default function PaymentModal({ open, initialTab, onClose }: Props) {
             body: JSON.stringify({ amount, name }),
           });
           const data = await res.json();
-          if (!res.ok) throw new Error(data.error ?? 'Gagal membuat transaksi Midtrans.');
+          if (!res.ok) throw new Error('pm.err.midtrans');
           await loadScript('https://app.midtrans.com/snap/snap.js');
           const w = window as unknown as { snap: { pay: (token: string, opts?: Record<string, unknown>) => void } };
           w.snap.pay(data.token, {
@@ -136,7 +138,7 @@ export default function PaymentModal({ open, initialTab, onClose }: Props) {
             onPending: () => setBusy(null),
             onError: () => {
               setBusy(null);
-              setPayError('Pembayaran Midtrans gagal — coba lagi atau gunakan metode lain.');
+              setPayError('pm.err.midtransPay');
             },
             onClose: () => setBusy(null),
           });
@@ -147,12 +149,12 @@ export default function PaymentModal({ open, initialTab, onClose }: Props) {
             body: JSON.stringify({ amount, name }),
           });
           const data = await res.json();
-          if (!res.ok) throw new Error(data.error ?? 'Gagal membuat sesi Stripe.');
+          if (!res.ok) throw new Error('pm.err.stripe');
           window.location.assign(data.url as string);
         }
       } catch (e) {
         setBusy(null);
-        setPayError(e instanceof Error ? e.message : 'Terjadi kesalahan tak terduga.');
+        setPayError('pm.err.unexpected');
       }
     },
     [busy],
@@ -165,7 +167,7 @@ export default function PaymentModal({ open, initialTab, onClose }: Props) {
           className="fixed inset-0 z-[85] overflow-y-auto"
           role="dialog"
           aria-modal="true"
-          aria-label="Donasi & layanan"
+          aria-label={t('pm.aria.dialog')}
         >
           <motion.div
             className="fixed inset-0 bg-ink/80 backdrop-blur-sm"
@@ -190,7 +192,7 @@ export default function PaymentModal({ open, initialTab, onClose }: Props) {
               <button
                 type="button"
                 onClick={onClose}
-                aria-label="Tutup"
+                aria-label={t('pm.aria.close')}
                 className="absolute top-4 right-4 z-10 grid size-9 place-items-center rounded-full border border-white/15 bg-white/[0.06] text-cream/70 transition hover:bg-white/[0.12] hover:text-cream"
               >
                 <X className="size-4" />
@@ -199,29 +201,27 @@ export default function PaymentModal({ open, initialTab, onClose }: Props) {
               <div className="relative">
                 <div className="micro flex items-center gap-2 text-cream/55">
                   <span className="size-1.5 rounded-full bg-ember" />
-                  {tab === 'oss' ? 'monetisasi // dukungan' : 'monetisasi // jasa'}
+                  {tab === 'oss' ? t('pm.micro.oss') : t('pm.micro.services')}
                 </div>
                 <h2 className="mt-2 font-display text-[30px] leading-[1.02] tracking-tight text-cream md:text-[38px]">
-                  {tab === 'oss' ? 'Dukung Open Source.' : 'Sewa Jasa & Konsultasi.'}
+                  {tab === 'oss' ? t('pm.head.oss') : t('pm.head.services')}
                 </h2>
                 <p className="mt-2 max-w-lg text-[13px] leading-relaxed text-cream/60">
-                  {tab === 'oss'
-                    ? 'Semua repo di sini dibangun dan dirawat gratis. Donasi Anda menjaga server, domain, dan waktu membangunnya.'
-                    : 'Pilih paket, kirim brief, dan kita mulai. Pembayaran (Midtrans/transfer/Stripe) dikonfirmasi setelah penawaran final.'}
+                  {tab === 'oss' ? t('pm.sub.oss') : t('pm.sub.services')}
                 </p>
 
                 <div className="mt-5 flex gap-2">
                   <TabButton active={tab === 'oss'} onClick={() => setTab('oss')} icon={Heart}>
-                    Dukung OSS
+                    {t('pm.tab.oss')}
                   </TabButton>
                   <TabButton active={tab === 'services'} onClick={() => setTab('services')} icon={Stethoscope}>
-                    Sewa Jasa
+                    {t('pm.tab.services')}
                   </TabButton>
                 </div>
 
                 {payError && (
                   <p className="mt-4 rounded-2xl border border-danger/30 bg-danger/[0.08] px-4 py-2.5 text-[12px] leading-relaxed text-danger">
-                    {payError}
+                    {t(payError)}
                   </p>
                 )}
 
@@ -283,6 +283,7 @@ function OssTab({
   busy: PayMethod | null;
   onPay: (m: PayMethod, amount: number, name: string) => void;
 }) {
+  const { t } = useLocale();
   const [freq, setFreq] = useState<'once' | 'monthly'>('once');
   const [amount, setAmount] = useState<number>(50000);
   const [custom, setCustom] = useState('');
@@ -301,8 +302,8 @@ function OssTab({
         <div className="flex rounded-full border border-white/10 bg-white/[0.03] p-0.5" role="group">
           {(
             [
-              ['once', 'Sekali'],
-              ['monthly', 'Bulanan'],
+              ['once', t('pm.freq.once')],
+              ['monthly', t('pm.freq.monthly')],
             ] as const
           ).map(([k, label]) => (
             <button
@@ -320,12 +321,12 @@ function OssTab({
           ))}
         </div>
         <span className="font-mono text-[11px] text-cream/45">
-          {freq === 'monthly' ? 'berulang — via GitHub Sponsors' : 'sekali bayar'}
+          {freq === 'monthly' ? t('pm.freq.hint.monthly') : t('pm.freq.hint.once')}
         </span>
       </div>
 
       <div>
-        <div className="micro mb-2.5 text-cream/45">nominal donasi</div>
+        <div className="micro mb-2.5 text-cream/45">{t('pm.amount.label')}</div>
         <div className="flex flex-wrap gap-2">
           {SITE.donationAmounts.map((a) => (
             <button
@@ -358,14 +359,14 @@ function OssTab({
               value={custom}
               onChange={(e) => setCustom(e.target.value.replace(/[^\d]/g, '').slice(0, 9))}
               placeholder="custom"
-              aria-label="Nominal donasi custom"
+              aria-label={t('pm.amount.custom')}
               className="w-24 bg-transparent font-mono text-[12px] tabular-nums text-cream outline-none placeholder:text-cream/40"
             />
           </div>
         </div>
         <div className="mt-2 font-mono text-[10.5px] text-cream/40">
-          Total: <span className="text-cream/80">{formatIDR(finalAmount)}</span>
-          {freq === 'monthly' ? ' /bulan' : ''}
+          {t('pm.total')} <span className="text-cream/80">{formatIDR(finalAmount)}</span>
+          {freq === 'monthly' ? t('pm.perMonth') : ''}
         </div>
       </div>
 
@@ -373,46 +374,46 @@ function OssTab({
         <MethodRow
           icon={GithubMark}
           name="GitHub Sponsors"
-          desc={freq === 'monthly' ? 'Recurring bulanan — cara paling resmi & rendah biaya.' : 'Donasi sekali / bulanan langsung via GitHub.'}
+          desc={freq === 'monthly' ? t('pm.gh.m.desc') : t('pm.gh.o.desc')}
           href={SITE.sponsors}
-          cta="Donasi"
+          cta={t('pm.gh.cta')}
         />
         <MethodRow
           icon={Coffee}
           name="Buy Me a Coffee"
-          desc="Satu klik, tanpa rekening. Cocok untuk dukungan kecil yang cepat."
+          desc={t('pm.bmc.desc')}
           href={SITE.buyMeACoffee}
-          cta="Traktir ☕"
+          cta={t('pm.bmc.cta')}
         />
         <MethodRow
           icon={QrCode}
-          name="Midtrans — QRIS / VA / E-Wallet"
+          name={t('pm.mid.name')}
           desc={
             midtransReady
-              ? 'Bayar via Snap: QRIS, GoPay, OVO, ShopeePay, DANA, VA bank.'
+              ? t('pm.mid.desc')
               : freq === 'monthly'
-                ? 'Langganan bulanan Midtrans belum tersedia — gunakan GitHub Sponsors.'
+                ? t('pm.mid.monthly')
                 : cfg === null
-                  ? 'Memeriksa konfigurasi server…'
-                  : 'Aktif setelah MIDTRANS_SERVER_KEY & CLIENT_KEY diisi di environment.'
+                  ? t('pm.cfg.checking')
+                  : t('pm.mid.off')
           }
-          cta="Bayar"
-          onClick={() => onPay('midtrans', finalAmount, 'Donasi Open Source')}
+          cta={t('pm.cta.pay')}
+          onClick={() => onPay('midtrans', finalAmount, t('pm.pay.item'))}
           disabled={!midtransReady}
           state={busy === 'midtrans' ? 'loading' : 'idle'}
         />
         <MethodRow
           icon={CreditCard}
-          name="Stripe — kartu internasional"
+          name={t('pm.stripe.name')}
           desc={
             stripeReady
-              ? 'Stripe Checkout (IDR) — kartu kredit/debit, ideal untuk donor luar negeri.'
+              ? t('pm.stripe.desc')
               : cfg === null
-                ? 'Memeriksa konfigurasi server…'
-                : 'Aktif setelah STRIPE_SECRET_KEY diisi di environment.'
+                ? t('pm.cfg.checking')
+                : t('pm.stripe.off')
           }
-          cta="Bayar"
-          onClick={() => onPay('stripe', finalAmount, 'Donasi Open Source')}
+          cta={t('pm.cta.pay')}
+          onClick={() => onPay('stripe', finalAmount, t('pm.pay.item'))}
           disabled={!stripeReady}
           state={busy === 'stripe' ? 'loading' : 'idle'}
         />
@@ -420,13 +421,12 @@ function OssTab({
 
       {cfgError && (
         <p className="rounded-2xl border border-warn/25 bg-warn/[0.06] px-4 py-2.5 text-[11px] leading-relaxed text-warn/80">
-          {cfgError}
+          {t(cfgError)}
         </p>
       )}
 
       <p className="rounded-2xl border border-white/[0.07] bg-white/[0.02] px-4 py-3 text-[11.5px] leading-relaxed text-cream/45">
-        Dana digunakan untuk: server & domain proyek civic (Pemdi Aceh Tengah), biaya riset tooling
-        AI, dan operasional menjaga 90+ repositori publik tetap hidup.
+        {t('pm.note.funds')}
       </p>
     </div>
   );
@@ -451,6 +451,7 @@ function MethodRow({
   disabled?: boolean;
   state?: 'idle' | 'loading' | 'error';
 }) {
+  const { t } = useLocale();
   return (
     <div
       className={cx(
@@ -488,7 +489,7 @@ function MethodRow({
         >
           {state === 'loading' ? (
             <>
-              <Loader2 className="size-3.5 animate-spin" /> memproses…
+              <Loader2 className="size-3.5 animate-spin" /> {t('pm.processing')}
             </>
           ) : (
             <>
@@ -514,6 +515,7 @@ function ServicesTab({
   busy: PayMethod | null;
   onPay: (m: PayMethod, amount: number, name: string) => void;
 }) {
+  const { t } = useLocale();
   const [sel, setSel] = useState<ServicePackage | null>(null);
   const [form, setForm] = useState({ name: '', email: '', wa: '', brief: '' });
   const [sent, setSent] = useState(false);
@@ -522,44 +524,45 @@ function ServicesTab({
 
   const mailtoHref = useMemo(() => {
     if (!sel) return '#';
-    const subject = `Permintaan ${sel.name} — via dasbor niumination`;
+    const pkgName = t(`pkg.${sel.id}.name`);
+    const subject = t('pm.mail.subject', { name: pkgName });
     const body = [
-      'Halo Niumination,',
+      t('pm.mail.greet'),
       '',
-      `Saya tertarik dengan paket: ${sel.name} (${formatIDR(sel.price)}${sel.unit})`,
-      `Nama: ${form.name}`,
-      `Email: ${form.email}`,
-      `WhatsApp: ${form.wa}`,
+      t('pm.mail.line', { name: pkgName, price: `${formatIDR(sel.price)}${t(`pkg.${sel.id}.unit`)}` }),
+      t('pm.mail.name', { name: form.name }),
+      t('pm.mail.email', { email: form.email }),
+      t('pm.mail.wa', { wa: form.wa }),
       '',
-      'Detail kebutuhan:',
+      t('pm.mail.details'),
       form.brief || '-',
       '',
-      '— dikirim dari dasbor niumination',
+      t('pm.mail.sign'),
     ].join('\n');
     return `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  }, [sel, form]);
+  }, [sel, form, t]);
 
   const waHref = useMemo(() => {
     if (!sel) return '#';
+    const pkgName = t(`pkg.${sel.id}.name`);
     const text = [
-      `Halo! Saya tertarik dengan paket ${sel.name} (${formatIDR(sel.price)}${sel.unit}).`,
-      form.name ? `Nama: ${form.name}` : '',
-      form.wa ? `WhatsApp: ${form.wa}` : '',
-      form.brief ? `Detail: ${form.brief}` : '',
+      t('pm.wa.line', { name: pkgName, price: `${formatIDR(sel.price)}${t(`pkg.${sel.id}.unit`)}` }),
+      form.name ? t('pm.mail.name', { name: form.name }) : '',
+      form.wa ? t('pm.mail.wa', { wa: form.wa }) : '',
+      form.brief ? t('pm.wa.details', { brief: form.brief }) : '',
     ]
       .filter(Boolean)
       .join('\n');
     return `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(text)}`;
-  }, [sel, form]);
+  }, [sel, form, t]);
 
   if (sent) {
     return (
       <div className="grid place-items-center rounded-3xl border border-success/25 bg-success/[0.06] px-6 py-12 text-center">
         <CheckCircle2 className="size-10 text-success" />
-        <h3 className="mt-4 font-display text-2xl text-cream">Permintaan terkirim!</h3>
+        <h3 className="mt-4 font-display text-2xl text-cream">{t('pm.sent.title')}</h3>
         <p className="mt-2 max-w-sm text-[13px] leading-relaxed text-cream/60">
-          Balasan diproses dalam 1–24 jam kerja. Cek email/{` `}WhatsApp Anda — berikutnya tinggal
-          konfirmasi penawaran & pembayaran.
+          {t('pm.sent.desc')}
         </p>
         <button
           type="button"
@@ -570,7 +573,7 @@ function ServicesTab({
           }}
           className="mt-5 h-10 rounded-full border border-white/15 px-5 font-mono text-[10.5px] uppercase tracking-wider text-cream/75 transition hover:border-ember/50 hover:text-cream"
         >
-          Kirim permintaan lain
+          {t('pm.sent.again')}
         </button>
       </div>
     );
@@ -598,9 +601,9 @@ function ServicesTab({
               )}
             </span>
             <div className="flex-1">
-              <div className="text-[14px] font-medium text-cream">{sel.name}</div>
+              <div className="text-[14px] font-medium text-cream">{t(`pkg.${sel.id}.name`)}</div>
               <div className="font-mono text-[11px] text-ember-soft">
-                {formatIDR(sel.price)} <span className="text-cream/40">{sel.unit}</span>
+                {formatIDR(sel.price)} <span className="text-cream/40">{t(`pkg.${sel.id}.unit`)}</span>
               </div>
             </div>
             <button
@@ -608,21 +611,21 @@ function ServicesTab({
               onClick={() => setSel(null)}
               className="font-mono text-[10px] uppercase tracking-wider text-cream/45 underline-offset-4 transition hover:text-cream hover:underline"
             >
-              ganti paket
+              {t('pm.form.changePkg')}
             </button>
           </div>
 
           <div className="mt-5 grid gap-3 sm:grid-cols-2">
-            <Field label="Nama" value={form.name} onChange={(v) => setForm((f) => ({ ...f, name: v }))} placeholder="Nama lengkap" />
-            <Field label="Email" type="email" value={form.email} onChange={(v) => setForm((f) => ({ ...f, email: v }))} placeholder="nama@email.com" />
+            <Field label={t('pm.form.name')} value={form.name} onChange={(v) => setForm((f) => ({ ...f, name: v }))} placeholder={t('pm.form.namePh')} />
+            <Field label="Email" type="email" value={form.email} onChange={(v) => setForm((f) => ({ ...f, email: v }))} placeholder={t('pm.form.emailPh')} />
             <Field label="WhatsApp" value={form.wa} onChange={(v) => setForm((f) => ({ ...f, wa: v }))} placeholder="62812…" />
             <div className="sm:col-span-2">
-              <label className="micro text-cream/45">detail kebutuhan</label>
+              <label className="micro text-cream/45">{t('pm.form.brief')}</label>
               <textarea
                 value={form.brief}
                 onChange={(e) => setForm((f) => ({ ...f, brief: e.target.value }))}
                 rows={4}
-                placeholder="Ceritakan proyek/aplikasi Anda: fitur yang diharapkan, timeline, teknologi saat ini…"
+                placeholder={t('pm.form.briefPh')}
                 className="mt-1.5 w-full resize-none rounded-2xl border border-white/10 bg-ink/60 px-4 py-3 text-[13px] leading-relaxed text-cream outline-none transition-colors placeholder:text-cream/40 focus:border-ember/50"
               />
             </div>
@@ -634,7 +637,7 @@ function ServicesTab({
               onClick={() => setSent(true)}
               className="flex h-11 flex-1 items-center justify-center gap-2 rounded-full bg-ember px-5 font-mono text-[10.5px] uppercase tracking-wider text-ink transition hover:bg-ember-soft hover:shadow-glow"
             >
-              <Mail className="size-3.5" /> Kirim via Email
+              <Mail className="size-3.5" /> {t('pm.form.sendEmail')}
             </a>
             <a
               href={waHref}
@@ -643,7 +646,7 @@ function ServicesTab({
               onClick={() => setSent(true)}
               className="flex h-11 flex-1 items-center justify-center gap-2 rounded-full border border-success/40 bg-success/10 px-5 font-mono text-[10.5px] uppercase tracking-wider text-success transition hover:bg-success/20"
             >
-              <MessageCircle className="size-3.5" /> Chat WhatsApp
+              <MessageCircle className="size-3.5" /> {t('pm.form.sendWa')}
             </a>
           </div>
 
@@ -654,10 +657,10 @@ function ServicesTab({
                 <ShieldCheck className="size-4 shrink-0 text-spotlight" />
                 <div>
                   <div className="text-[12.5px] font-medium text-cream/85">
-                    Bayar deposit 50% sekarang — <span className="font-mono text-ember-soft">{formatIDR(depositAmount)}</span>
+                    {t('pm.deposit.title')} — <span className="font-mono text-ember-soft">{formatIDR(depositAmount)}</span>
                   </div>
                   <div className="mt-0.5 text-[11px] text-cream/45">
-                    Sisa dibayar setelah penawaran final. Kuitansi otomatis dari Midtrans/Stripe.
+                    {t('pm.deposit.sub')}
                   </div>
                 </div>
               </div>
@@ -665,7 +668,7 @@ function ServicesTab({
                 <button
                   type="button"
                   disabled={!cfg?.midtrans}
-                  onClick={() => onPay('midtrans', depositAmount, `Deposit 50% — ${sel.name}`)}
+                  onClick={() => onPay('midtrans', depositAmount, t('pm.deposit.item', { name: t(`pkg.${sel.id}.name`) }))}
                   className={cx(
                     'flex h-9 items-center gap-1.5 rounded-full px-4 font-mono text-[10px] uppercase tracking-wider transition',
                     cfg?.midtrans
@@ -678,7 +681,7 @@ function ServicesTab({
                 <button
                   type="button"
                   disabled={!cfg?.stripe}
-                  onClick={() => onPay('stripe', depositAmount, `Deposit 50% — ${sel.name}`)}
+                  onClick={() => onPay('stripe', depositAmount, t('pm.deposit.item', { name: t(`pkg.${sel.id}.name`) }))}
                   className={cx(
                     'flex h-9 items-center gap-1.5 rounded-full px-4 font-mono text-[10px] uppercase tracking-wider transition',
                     cfg?.stripe
@@ -692,14 +695,13 @@ function ServicesTab({
             </div>
             {cfg && !cfg.midtrans && !cfg.stripe && (
               <p className="mt-2.5 font-mono text-[9.5px] leading-relaxed text-cream/35">
-                {cfgError ?? 'Pembayaran deposit aktif setelah kunci Midtrans/Stripe dikonfigurasi di server.'}
+                {cfgError ? t(cfgError) : t('pm.deposit.off')}
               </p>
             )}
           </div>
 
           <p className="mt-3 text-[11px] leading-relaxed text-cream/40">
-            Tidak ada biaya di tahap ini — pembayaran baru dikonfirmasi setelah penawaran final
-            (Midtrans / transfer bank / Stripe).
+            {t('pm.feeNote')}
           </p>
         </motion.div>
       ) : (
@@ -742,26 +744,26 @@ function ServicesTab({
                 </span>
                 {p.highlight && (
                   <span className="rounded-full bg-ember px-2.5 py-1 font-mono text-[8.5px] uppercase tracking-wider text-ink">
-                    terpopuler
+                    {t('pm.popular')}
                   </span>
                 )}
               </div>
-              <h3 className="mt-4 text-[15px] font-semibold text-cream">{p.name}</h3>
-              <p className="mt-1.5 text-[11.5px] leading-relaxed text-cream/55">{p.blurb}</p>
+              <h3 className="mt-4 text-[15px] font-semibold text-cream">{t(`pkg.${p.id}.name`)}</h3>
+              <p className="mt-1.5 text-[11.5px] leading-relaxed text-cream/55">{t(`pkg.${p.id}.blurb`)}</p>
               <div className="mt-3 font-display text-[22px] tabular-nums text-cream">
                 {formatIDR(p.price)}
-                <span className="ml-1.5 font-mono text-[10px] tracking-wider text-cream/45">{p.unit}</span>
+                <span className="ml-1.5 font-mono text-[10px] tracking-wider text-cream/45">{t(`pkg.${p.id}.unit`)}</span>
               </div>
               <ul className="mt-4 flex-1 space-y-2">
-                {p.features.map((f) => (
+                {p.features.map((f, fi) => (
                   <li key={f} className="flex items-start gap-2 text-[11.5px] leading-snug text-cream/65">
                     <Check className="mt-0.5 size-3 shrink-0 text-ember" />
-                    {f}
+                    {t(`svc.f.${p.id}.${fi + 1}`)}
                   </li>
                 ))}
               </ul>
               <span className="mt-4 flex h-10 items-center justify-center gap-1.5 rounded-full border border-white/15 font-mono text-[10px] uppercase tracking-wider text-cream/75 transition group-hover:border-ember/60 group-hover:bg-ember/10 group-hover:text-cream">
-                Pilih paket <ChevronRight className="size-3.5" />
+                {t('pm.pick')} <ChevronRight className="size-3.5" />
               </span>
             </motion.button>
           ))}

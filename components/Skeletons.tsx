@@ -1,4 +1,7 @@
+'use client';
+
 import { cx } from '@/lib/utils';
+import { useLocale } from './LocaleProvider';
 
 /** Blok skeleton dasar (shimmer). */
 export function Sk({ className }: { className?: string }) {
@@ -33,8 +36,9 @@ export function RepoCardSkeleton() {
 }
 
 export function RepoGridSkeleton() {
+  const { t } = useLocale();
   return (
-    <div role="status" aria-label="Memuat daftar repositori">
+    <div role="status" aria-label={t('sk.repos')}>
       <Sk className="h-14 w-full rounded-3xl" />
       <div className="mt-4 flex gap-2">
         {Array.from({ length: 5 }).map((_, i) => (

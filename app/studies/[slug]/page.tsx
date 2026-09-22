@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
 import AppShell from '@/components/AppShell';
+import TitleSync from '@/components/TitleSync';
 import QrCard from '@/components/QrCard';
 import T from '@/components/T';
 import { StudyView, type StudyFacts } from '@/components/studies-ui';
@@ -90,6 +91,7 @@ export default async function StudyPage({ params }: { params: Promise<{ slug: st
 
   return (
     <AppShell snapshot={snap}>
+      <TitleSync k="title.study" vars={{ name: c.title }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}

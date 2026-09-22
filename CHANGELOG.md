@@ -5,6 +5,45 @@ per fase pengerjaan, lengkap dengan commit yang bisa dilacak.
 Format mengikuti [Keep a Changelog](https://keepachangelog.com/id/1.1.);
 proyek ini tidak memakai versioning semver ketat (satu repo, satu situs).
  
+## [Produksi 2026.16] — Fase 2 tuntas: dwibahasa penuh ID+EN + axe-core di CI — 2026-09-22
+
+### Dwibahasa penuh — ID dan EN sama lengkapnya
+- Audit menyeluruh i18n: kamus **474 kunci id = 474 en** (paritas 0 selisih),
+  semua kunci terpakai terdefinisi — tapi puluhan **copy UI masih keras
+  ID-saja** dan tak terlihat oleh CI. Kini semua di-i18n-kan:
+  - **PaymentModal** (~60 string): tab, metode pembayaran, error (disimpan
+    sebagai kunci, bukan teks), form brief, template pesan email/WhatsApp —
+    nama & fitur paket memakai kunci `pkg.*` yang sama dengan halaman /services.
+  - **ErrorBoundary** (fallback kini sadar-locale via sub-komponen hook),
+    **OfflineCacheList** (label halaman cache), **CategoryDonut** (label
+    pusat), **Skeletons** (aria), **tooltip data GitHub** di RepoGrid.
+  - Istilah universal ("fork", "live", "demo", "Ctrl K") tetap keras —
+    keputusan terdokumentasi.
+- **TitleSync (baru)**: `document.title` mengikuti locale aktif di 13 rute —
+  judul tab EN tidak lagi menampilkan Indonesia (metadata prerender tetap ID:
+  default SEO, arsitektur statis).
+- **Overlay deskripsi EN** lengkap: +`Niu-OSS-Dashboard` (satu-satunya
+  deskripsi ID tanpa padanan; sisanya memang pass-through by design).
+- E2E hidrasi 12/12 tetap hijau pasca-perubahan.
+
+### Aksesibilitas terkunci di CI
+- **`tests/e2e/a11y.mjs` (baru)**: axe-core (Playwright) memindai 11 rute +
+  2 rute dalam EN (perpindahan bahasa diverifikasi via `<html lang>`,
+  gagal senyap = gagal keras) — tag wcag2a/2aa/21a/21aa/**22aa**
+  (termasuk target-size). Kebijakan: serious/critical = gagal CI,
+  moderate/minor = peringatan.
+- Hasil audit pertama: **13/13 lolos — 0 pelanggaran** (dalam dua bahasa,
+  viewport ponsel pun bersih untuk WCAG 2.2 AA).
+- CI (`ci.yml` job e2e) menjalankan a11y setelah hidrasi, server yang sama.
+
+### Catatan ops (dari bukti audit)
+- Laporan CSP report-only membukti**kan ping demo /system** terblokir
+  `connect-src` — saat enforce (~5–19 Okt), connect-src WAJIB memuat URL
+  demo atau pemeriksaan live di /system patah.
+- Deskripsi repo GitHub `Niu-OSS-Dashboard` masih basi ("Next.js 15,
+  91 repo") — update di GitHub agar sinkron dengan fakta (Next 16, 90 repo);
+  overlay EN situs sudah memakai fakta terkini.
+
 ## [Produksi 2026.15] — Audit menyeluruh: perbaikan API v1 + metric + guard dependensi — 2026-09-22
 
 ### Bug API publik v1 (ditemukan audit live)

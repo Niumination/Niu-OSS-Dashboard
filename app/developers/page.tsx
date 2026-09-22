@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Boxes, ExternalLink, RefreshCw, ShieldCheck, Terminal } from 'lucide-react';
 import AppShell from '@/components/AppShell';
+import TitleSync from '@/components/TitleSync';
 import T from '@/components/T';
 import { getGithubSnapshot } from '@/lib/github';
 
@@ -37,6 +38,7 @@ export default async function DevelopersPage() {
 
   return (
     <AppShell snapshot={snap}>
+      <TitleSync k="title.developers" />
       <div className="mx-auto max-w-[900px] px-4 pb-20 pt-8 md:px-6">
         <header>
           <div className="micro flex items-center gap-2 text-cream/45">

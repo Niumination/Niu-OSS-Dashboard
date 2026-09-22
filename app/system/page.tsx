@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Activity, Radio } from 'lucide-react';
 import AppShell from '@/components/AppShell';
+import TitleSync from '@/components/TitleSync';
 import DashboardMetrics from '@/components/DashboardMetrics';
 import StatusMonitor from '@/components/StatusMonitor';
 import { getGithubSnapshot } from '@/lib/github';
@@ -32,6 +33,7 @@ export default async function SystemPage() {
 
   return (
     <AppShell snapshot={snap}>
+      <TitleSync k="title.system" />
       <div className="mx-auto max-w-[1440px] px-4 pb-20 pt-8 md:px-6 lg:px-8">
         <header className="flex flex-wrap items-end justify-between gap-4">
           <div>

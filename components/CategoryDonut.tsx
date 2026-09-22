@@ -85,7 +85,7 @@ export default function CategoryDonut({ counts, total }: Props) {
           fill="rgba(242,236,223,0.45)"
           style={{ font: '500 9px var(--font-mono)', letterSpacing: '2px', textTransform: 'uppercase' }}
         >
-          repositori
+          {t('cd.center')}
         </text>
       </svg>
 

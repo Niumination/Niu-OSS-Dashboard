@@ -131,7 +131,7 @@ export default function RepoGrid({ repos, offline = false, offlineDate }: Props)
               <a
                 href="/api/github/summary"
                 className="underline decoration-warn/40 underline-offset-4 transition-colors hover:decoration-warn"
-                title="Data GitHub termutakhir (API live, ISR 5 menit)"
+                title={t('rg.offline.api')}
               >
                 {t('rg.offline.b')}
               </a>
