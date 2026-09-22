@@ -8,8 +8,8 @@ proyek ini tidak memakai versioning semver ketat (satu repo, satu situs).
 ## [Produksi 2026.10] — Kebersihan docs + humanisasi salinan UI — 2026-09-22
 
 ### Kebersihan docs
-- **Hapus fragmen token** (`github_pat_11A5P…`) dari 3 docs publik
-  (PANDUAN-OPS, AGENTS.md, CHANGELOG 2026.9) — fragmen tidak bisa
+- **Hapus fragmen token** dari 4 berkas publik (PANDUAN-OPS,
+  AGENTS.md, CHANGELOG 2026.9, BACKLOG) — fragmen tidak bisa
   dipakai masuk, tapi kebiasaan menulis bagian rahasia apa pun di
   repo publik wajib dihilangkan.
 - **Catat kebijakan pause**: sejumlah deployment tampil DOWN di
