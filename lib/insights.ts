@@ -110,7 +110,7 @@ export async function getContributions(snap: Snapshot): Promise<Contributions> {
       },
       body: JSON.stringify({
         query: QUERY,
-        variables: { owner: process.env.GITHUB_OWNER ?? 'Niumination', from: from.toISOString(), to: now.toISOString() },
+        variables: { owner: process.env.GITHUB_OWNER?.trim() || 'Niumination', from: from.toISOString(), to: now.toISOString() },
       }),
     // Halaman statis murni: fetch insight ikut force-cache (per-deploy) agar
     // halaman /system TIDAK mewarisi ISR dari fetch ini (pelajaran #418 —

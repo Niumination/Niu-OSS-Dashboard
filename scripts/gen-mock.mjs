@@ -15,7 +15,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 
-const OWNER = process.env.GITHUB_OWNER ?? 'Niumination';
+const OWNER = process.env.GITHUB_OWNER?.trim() || 'Niumination';
 const FRESH = process.argv.includes('--fresh');
 
 function readLocal(name) {
