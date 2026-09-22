@@ -43,6 +43,7 @@ const id: Dict = {
   'footer.nav.changelog': 'Catatan Rilis',
   'footer.nav.status': 'Halaman Status',
   'footer.nav.rss': 'RSS Aktivitas',
+  'footer.nav.rssStudies': 'RSS Studi Kasus',
   'footer.nav.dev': 'API Publik',
   'footer.data': 'data: api github · snapshot {date}',
 
@@ -438,6 +439,7 @@ const en: Dict = {
   'footer.nav.changelog': 'Release Notes',
   'footer.nav.status': 'Status Page',
   'footer.nav.rss': 'Activity RSS',
+  'footer.nav.rssStudies': 'Case Studies RSS',
   'footer.nav.dev': 'Public API',
   'footer.data': 'data: github api · snapshot {date}',
 

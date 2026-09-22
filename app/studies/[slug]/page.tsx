@@ -9,6 +9,7 @@ import { StudyView, type StudyFacts } from '@/components/studies-ui';
 import { getGithubSnapshot } from '@/lib/github';
 import { CASE_STUDIES, getAdjacent, getStudy } from '@/lib/case-studies';
 import { siteUrl } from '@/lib/env';
+import { SITE } from '@/lib/site.config';
 
 // Statik murni tanpa ISR: regenerasi ISR di Vercel pernah mencampur generasi
 // render (DOM segar vs payload flight RSC basi) sehingga hydration gagal
@@ -70,11 +71,32 @@ export default async function StudyPage({ params }: { params: Promise<{ slug: st
     ],
   };
 
+  // Article (ROADMAP Fase 1 — SEO konten): studi kasus = konten editorial,
+  // bukan sekadar data — tanggal publikasi dari createdAt repo sumbernya.
+  const jsonLdArticle = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: c.title,
+    description: c.tagline,
+    inLanguage: 'id',
+    articleSection: c.kind,
+    mainEntityOfPage: `${base}/studies/${c.slug}`,
+    author: { '@type': 'Person', name: 'Niumination', url: SITE.github },
+    publisher: { '@type': 'Person', name: 'Niumination', url: SITE.github },
+    ...(repoRecord
+      ? { datePublished: repoRecord.createdAt, dateModified: repoRecord.pushedAt }
+      : {}),
+  };
+
   return (
     <AppShell snapshot={snap}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdArticle) }}
       />
       <div className="mx-auto max-w-[900px] px-4 pb-20 pt-8 md:px-6">
         <Link

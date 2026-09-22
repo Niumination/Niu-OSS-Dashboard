@@ -16,6 +16,7 @@ const NAV = [
   { href: '/changelog', key: 'footer.nav.changelog' },
   { href: '/status', key: 'footer.nav.status' },
   { href: '/feed.xml', key: 'footer.nav.rss' },
+  { href: '/feed-studies.xml', key: 'footer.nav.rssStudies' },
   { href: '/developers', key: 'footer.nav.dev' },
 ];
 

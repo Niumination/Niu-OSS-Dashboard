@@ -66,7 +66,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
     types: {
-      'application/rss+xml': '/feed.xml',
+      'application/rss+xml': [
+        { url: '/feed.xml', title: 'Aktivitas Niumination' },
+        { url: '/feed-studies.xml', title: 'Studi Kasus Niumination' },
+      ],
     },
   },
 };
