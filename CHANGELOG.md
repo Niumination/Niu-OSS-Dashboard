@@ -5,6 +5,39 @@ per fase pengerjaan, lengkap dengan commit yang bisa dilacak.
 Format mengikuti [Keep a Changelog](https://keepachangelog.com/id/1.1/);
 proyek ini tidak memakai versioning semver ketat (satu repo, satu situs).
  
+## [Produksi 2026.11] — Fase 1 konten: /now + /changelog, kalender GraphQL, quick wins — 2026-09-22
+
+### Fix: kalender kontribusi 12 bulan akhirnya menyala
+- **Bug kembar `9c820d3` terlewat di `lib/insights.ts`**: env
+  `GITHUB_OWNER` string kosong + operator `??` → GraphQL
+  `user(login:"")` → null → diam-diam fallback events (±90 hari)
+  meski token T1 sudah hidup. Live 22 Sep masih menampilkan
+  "±90 hari (events)". Fix: pola `?.trim() ||` + `scripts/gen-mock.mjs`.
+  Setelah deploy, `/system` menampilkan kalender penuh 12 bulan.
+
+### Halaman baru (ROADMAP Fase 1)
+- **`/now`** — papan kerja: repo dengan push terbanyak 30 hari
+  terakhir + linimasa aktivitas per hari, dari events publik
+  snapshot. `lib/now.ts` murni + 5 unit test; tanggal diformat saat
+  build (deterministik, aman hydration).
+- **`/changelog`** — CHANGELOG.md di-render sebagai timeline.
+  Parser khusus ke struktur React murni: TANPA
+  `dangerouslySetInnerHTML` (permukaan XSS nol — berbeda dari README
+  repo pihak ketiga yang tetap lewat sanitasi browser). 5 unit test
+  termasuk validasi 21 entri asli.
+
+### Quick wins (antrian cepat ROADMAP)
+- `not-found`: tombol "Kembali" (history.back, fallback beranda) +
+  saran "cari di repositori".
+- `RepoCard`: chip topik kini tautan ke pencarian ter-filter
+  (`/repositories?q=…`).
+- `/status`: legenda warna strip 30 hari untuk pengunjung baru.
+- Command palette: aksi "salin tautan halaman ini".
+
+### Verifikasi
+tsc 0 · vitest 62/62 (+10 baru) · build 206→208 halaman statis ·
+/now, /changelog, legenda, 404 terkonfirmasi di HTML hasil build.
+
 ## [Produksi 2026.10] — Kebersihan docs + humanisasi salinan UI — 2026-09-22
 
 ### Kebersihan docs

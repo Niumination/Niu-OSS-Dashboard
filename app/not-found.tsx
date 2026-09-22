@@ -1,5 +1,7 @@
 import Link from 'next/link';
+import { Search } from 'lucide-react';
 import T from '@/components/T';
+import BackButton from '@/components/BackButton';
 
 
 const LINKS = [
@@ -19,7 +21,8 @@ export default function NotFound() {
       <p className="max-w-md text-[14px] leading-relaxed text-cream/60">
         <T k="nf.desc" />
       </p>
-      <div className="flex flex-wrap justify-center gap-2.5">
+      <div className="flex flex-wrap items-center justify-center gap-2.5">
+        <BackButton />
         {LINKS.map((l) => (
           <Link
             key={l.href}
@@ -30,6 +33,13 @@ export default function NotFound() {
           </Link>
         ))}
       </div>
+      <Link
+        href="/repositories"
+        className="mt-1 flex items-center gap-2 font-mono text-[10.5px] text-cream/40 underline-offset-4 transition hover:text-ember hover:underline"
+      >
+        <Search className="size-3" />
+        <T k="nf.search" />
+      </Link>
     </div>
   );
 }

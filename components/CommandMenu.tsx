@@ -13,6 +13,7 @@ import {
   FolderGit2,
   Clock,
   Heart,
+  Link as LinkIcon,
   ScrollText,
   LayoutDashboard,
   Mail,
@@ -43,6 +44,7 @@ interface Props {
 export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }: Props) {
   const router = useRouter();
   const [copied, setCopied] = useState(false);
+  const [copiedLink, setCopiedLink] = useState(false);
   const { t } = useLocale();
 
   const lastFocused = useRef<HTMLElement | null>(null);
@@ -111,6 +113,17 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
       // client email di tab baru tanpa menavigasikan aplikasi.
       close();
       window.open(`mailto:${SITE.email}`, '_self', 'noopener');
+    }
+  };
+
+  const copyPageLink = async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      setCopiedLink(true);
+      setTimeout(() => setCopiedLink(false), 1600);
+    } catch {
+      // Clipboard tak tersedia -> tutup palette saja (URL ada di address bar).
+      close();
     }
   };
 
@@ -239,6 +252,18 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
                       <MessageSquare className="size-4 shrink-0 text-cream/50" />
                     )}
                     {copied ? t('cm.copied') : t('cm.copy')}
+                  </Command.Item>
+                  <Command.Item
+                    value="copy-link"
+                    onSelect={() => copyPageLink()}
+                    className="flex cursor-pointer items-center gap-3 rounded-xl px-3 py-2.5 text-[13.5px] text-cream/85"
+                  >
+                    {copiedLink ? (
+                      <Check className="size-4 shrink-0 text-success" />
+                    ) : (
+                      <LinkIcon className="size-4 shrink-0 text-cream/50" />
+                    )}
+                    {copiedLink ? t('cm.linkCopied') : t('cm.copyLink')}
                   </Command.Item>
                 </Command.Group>
 

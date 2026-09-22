@@ -92,10 +92,15 @@ export default function RepoCard({ repo, index = 0, instant = false }: Props) {
               {repo.language}
             </span>
           )}
-          {repo.topics.slice(0, 3).map((t) => (
-            <span key={t} className="rounded-full bg-white/[0.04] px-2 py-0.5 font-mono text-[9.5px] text-cream/45">
-              #{t}
-            </span>
+          {repo.topics.slice(0, 3).map((topic) => (
+            <Link
+              key={topic}
+              href={`/repositories?q=${encodeURIComponent(topic)}`}
+              aria-label={`#${topic}`}
+              className="rounded-full bg-white/[0.04] px-2 py-0.5 font-mono text-[9.5px] text-cream/45 transition hover:bg-ember/15 hover:text-ember"
+            >
+              #{topic}
+            </Link>
           ))}
         </div>
       )}

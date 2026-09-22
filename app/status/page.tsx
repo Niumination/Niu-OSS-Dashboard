@@ -68,6 +68,26 @@ export default async function StatusPage() {
           </div>
         </header>
 
+        {/* Legenda cara baca strip 30 hari */}
+        <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-1.5 font-mono text-[9.5px] text-cream/40">
+          <span className="flex items-center gap-1.5">
+            <span className="size-2.5 rounded-[3px]" style={{ background: '#3ddc97' }} />
+            <T k="status.legend.full" />
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="size-2.5 rounded-[3px]" style={{ background: 'rgba(61,220,151,0.55)' }} />
+            <T k="status.legend.part" />
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="size-2.5 rounded-[3px]" style={{ background: '#f5c518' }} />
+            <T k="status.legend.wobbly" />
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="size-2.5 rounded-[3px]" style={{ background: '#ff5d5d' }} />
+            <T k="status.legend.down" />
+          </span>
+        </div>
+
         {/* Ringkasan */}
         <div className="mt-8 grid grid-cols-2 gap-3 lg:grid-cols-4">
           <StatCard
