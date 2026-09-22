@@ -16,7 +16,7 @@ import T from '@/components/T';
 export const metadata: Metadata = {
   title: 'Halaman Status',
   description:
-    'Status & riwayat uptime deployment live Niumination — diperbarui otomatis tiap 15 menit via GitHub Actions (GitOps ala Upptime).',
+    'Berapa situs ekosistem Niumination yang sedang hidup — dicek otomatis tiap 15 menit via GitHub Actions, riwayatnya bisa diaudit publik.',
   alternates: { canonical: '/status' },
 };
 

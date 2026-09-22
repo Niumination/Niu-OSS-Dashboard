@@ -22,7 +22,7 @@ import T from '@/components/T';
 export const metadata: Metadata = {
   title: 'Jasa & Komisi',
   description:
-    'Konsultasi Teknis, Audit & Optimasi, dan Custom Web App oleh Niumination — mulai dari brief langsung ke email/WhatsApp.',
+    'Konsultasi, audit, sampai aplikasi web custom — tiga paket jelas dari developer yang kodenya bisa Anda periksa dulu. Hubungi via email/WhatsApp.',
   alternates: { canonical: '/services' },
 };
 

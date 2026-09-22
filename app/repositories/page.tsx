@@ -14,7 +14,7 @@ import T from '@/components/T';
 export const metadata: Metadata = {
   title: 'Semua Repositori',
   description:
-    'Agregator dinamis seluruh repositori publik Niumination — pencarian real-time, kategori otomatis, dan filter tech stack.',
+    'Seluruh repo publik Niumination dalam satu halaman — ketik untuk mencari, hasilnya keluar seketika, kategorinya tersusun otomatis.',
   alternates: { canonical: '/repositories' },
 };
 

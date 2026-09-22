@@ -10,7 +10,7 @@ export const SITE = {
   avatar: 'https://avatars.githubusercontent.com/u/123625275?v=4',
   tagline: 'Sistem terbuka, dibangun di depan umum.',
   description:
-    'Full-stack developer & AI tooling engineer dari Aceh Tengah — civic tech, terminal-native AI, dan dotfiles yang benar-benar boot. 91 repositori publik, kerja dalam public.',
+    'Full-stack developer & AI tooling engineer dari Aceh Tengah — civic tech, terminal-native AI, dan dotfiles yang benar-benar boot. Semua repo publik, kerja dalam public.',
   location: 'Aceh Tengah, Indonesia',
   // Kontak & WhatsApp WAJIB memakai NEXT_PUBLIC_* dengan fallback `||`:
   // SITE diimpor AppShell/CommandMenu/PaymentModal (client) DAN komponen server.

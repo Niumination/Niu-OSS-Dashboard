@@ -15,7 +15,7 @@ import T from '@/components/T';
 export const metadata: Metadata = {
   title: 'Studi Kasus',
   description:
-    'Tiga proyek pilihan dibedah: masalah, pendekatan, dan hasil — civic tech, terminal AI 7 MB, dan OS AI-first.',
+    'Empat proyek dibedah apa adanya: masalah, keputusan, hasil — dari civic tech sampai OS AI-first. Klaimnya bisa dicek di kode.',
   alternates: { canonical: '/studies' },
 };
 

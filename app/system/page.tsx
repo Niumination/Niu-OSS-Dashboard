@@ -21,7 +21,7 @@ import T from '@/components/T';
 export const metadata: Metadata = {
   title: 'Sistem & Metrik',
   description:
-    'Metrik aktivitas GitHub Niumination — peta commit, distribusi bahasa, aktivitas 30 hari, dan monitor status deployment live.',
+    'Denyut nadi ekosistem Niumination: peta commit 26 minggu, bahasa favorit, aktivitas 30 hari, dan situs yang sedang hidup.',
   alternates: { canonical: '/system' },
 };
 

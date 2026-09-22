@@ -12,7 +12,7 @@ import { getGithubSnapshot } from '@/lib/github';
 export const metadata: Metadata = {
   title: 'API Publik',
   description:
-    'Dokumentasi API publik v1 Niumination — repositori, event, uptime, dan studi kasus sebagai JSON statis ala GitOps. Gratis, tanpa kunci, CORS terbuka.',
+    'API publik v1 Niumination — repositori, event, uptime, dan studi kasus sebagai JSON ala GitOps. Gratis, tanpa kunci API, CORS terbuka.',
   alternates: { canonical: '/developers' },
 };
 

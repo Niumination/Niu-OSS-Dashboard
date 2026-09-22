@@ -103,7 +103,7 @@ npm run export:static   # varian GitHub Pages (out/)
 - Build menghasilkan **206 halaman statis** (bukan 91 — studi baru `niu-gayo-agroclimate` + `pemdi-aceh-tengah` dan sebagainya sudah diperbarui oleh arena `c902d1b`/`c60387f`).
 - **`docs/AUDIT-2026.5.md`**: audit kualitas 2026.5 — posisi saat ini, antrian penyempurnaan T1–T8, referensi riset (20–21 Sep 2026).
 - **`docs/PANDUAN-OPS.md`** (2026.7): panduan ops sisi pemilik — T1 GITHUB_TOKEN (langkah PAT fine-grained), varian www (aktif via Vercel Domains), prosedur CSP → enforce, Vercel Analytics, ritual verifikasi deploy, status antrian.
-- **Jejak patch Arena**: `c902d1b` (fix #418 final + sinkron konten) → `c60387f` (audit 2026.5) → `628f77a` (uptime domain, 2026.6) → `1ad946c` (CSP report-only + schema + audit bundel, 2026.7) → `2026.8` (refresh uptime manual + harden cron + aturan emas anti-force-push). Semua tercatat di CHANGELOG.
+- **Jejak patch Arena**: `c902d1b` (fix #418 final + sinkron konten) → `c60387f` (audit 2026.5) → `628f77a` (uptime domain, 2026.6) → `1ad946c` (CSP report-only + schema + audit bundel, 2026.7) → `45e96c4` (pulihkan uptime + harden cron, 2026.8) → `2026.10` (redaksi token + humanisasi salinan UI 37 kunci i18n). Semua tercatat di CHANGELOG.
 - **E2E live domain produksi 12/12** (21 Sep 2026, `https://niumination.web.id`): 10 rute + degrade WebGL + pintasan keyboard — semua hijau pasca-fix #418.
 
 ## Tasks

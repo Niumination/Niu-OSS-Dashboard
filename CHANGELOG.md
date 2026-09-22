@@ -17,6 +17,30 @@ proyek ini tidak memakai versioning semver ketat (satu repo, satu situs).
   (bukan insiden) — didokumentasikan di AGENTS.md agar audit
   berikutnya tidak salah menandai.
 
+### Humanisasi salinan UI (37 kunci i18n × 2 bahasa)
+- **Arah suara:** dari bahasa dashboard yang kaku menjadi suara
+  pembuatnya — konkret, hangat, sedikit jenaka; formal "Anda" di
+  halaman jasa, "kamu" di momen santai (404/offline/empty state).
+  Tagline "Sistem terbuka, dibangun di depan umum" dipertahankan
+  (identitas brand).
+- Contoh perubahan (id):
+  - hero: "Pengembang full-stack & engineer AI tooling…" →
+    "Saya bikin sistem untuk dipakai, bukan dipamerkan… angkanya
+    dihitung live dari API GitHub, bukan hasil ketikan."
+  - audit: "…plus peta perbaikannya" → "…daftar temuan berurutan
+    prioritas yang benar-benar dikerjakan, bukan PDF yang
+    disimpan lupa."
+  - proses jasa: "Kode di-review bersama, commit terlihat" →
+    "progresnya kelihatan, bukan menghilang dua minggu."
+- **Fix faktual ikut:** "tiga studi kasus" → empat (test: 4 studi);
+  meta description "91 repositori" basi → dihapus (hero menghitung
+  dinamis dari API).
+- 6 metadata halaman + `SITE.description` ikut disegarkan.
+- Nilai terkunci test dipertahankan (`nav.home`, `status.badge`,
+  interpolasi `{var}` semua kunci — dijaga script pengganti).
+- Verifikasi: tsc 0 · vitest 52/52 · build 206 halaman statis ·
+  copy baru terkonfirmasi di HTML hasil build.
+
 ## [Produksi 2026.9] — T1 GITHUB_TOKEN live: perbaikan GITHUB_OWNER kosong — 2026-09-22
 
 ### T1 — data live GitHub API aktif untuk pertama kalinya
