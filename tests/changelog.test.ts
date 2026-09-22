@@ -40,7 +40,7 @@ describe('lib/changelog — parser', () => {
       expect(out[i - 1].date >= out[i].date).toBe(true);
     }
     // entri terbaru yang dikenal
-    expect(out[0].version).toContain('2026.10');
+    expect(out[0].version).toContain('2026.11');
     // setiap entri punya minimal satu seksi dengan isi
     for (const e of out) {
       expect(e.sections.length).toBeGreaterThanOrEqual(1);
