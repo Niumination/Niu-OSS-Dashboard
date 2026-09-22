@@ -141,7 +141,7 @@ export default function RepoGrid({ repos, offline = false, offlineDate }: Props)
             }}
             placeholder={t('rg.search.ph')}
             aria-label={t('rg.search.aria')}
-            className="h-11 w-full rounded-full border border-white/10 bg-ink/60 pl-11 pr-12 font-sans text-[13.5px] text-cream outline-none transition-colors placeholder:text-cream/30 focus:border-ember/50"
+            className="h-11 w-full rounded-full border border-white/10 bg-ink/60 pl-11 pr-12 font-sans text-[13.5px] text-cream outline-none transition-colors placeholder:text-cream/40 focus:border-ember/50"
           />
           <kbd className="pointer-events-none absolute right-4 top-1/2 hidden -translate-y-1/2 rounded-md border border-white/10 bg-white/[0.05] px-1.5 py-0.5 font-mono text-[10px] text-cream/40 sm:block">
             /
@@ -218,7 +218,7 @@ export default function RepoGrid({ repos, offline = false, offlineDate }: Props)
             >
               <span className="size-1.5 rounded-full" style={{ background: c.color }} />
               {t(`cat.${c.id}.label`)}
-              <span className={active ? 'text-cream/70' : 'text-cream/30'}>{counts[c.id] ?? 0}</span>
+              <span className={active ? 'text-cream/70' : 'text-cream/40'}>{counts[c.id] ?? 0}</span>
             </button>
           );
         })}
@@ -234,7 +234,7 @@ export default function RepoGrid({ repos, offline = false, offlineDate }: Props)
 
       {filtered.length === 0 ? (
         <div className="grid place-items-center rounded-3xl border border-dashed border-white/10 bg-white/[0.02] px-6 py-16 text-center">
-          <SearchX className="size-8 text-cream/30" />
+          <SearchX className="size-8 text-cream/40" />
           <p className="mt-4 text-[14px] text-cream/60">
             {t('rg.empty', { q })}
           </p>

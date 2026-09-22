@@ -106,7 +106,7 @@ export default function StatusMonitor({
             {t('sm.history')}
           </Link>
           {lastCheck && (
-            <span suppressHydrationWarning className="hidden text-cream/30 sm:inline">
+            <span suppressHydrationWarning className="hidden text-cream/40 sm:inline">
               {t('sm.checked', { ago: timeAgo(lastCheck) })}
             </span>
           )}
@@ -184,7 +184,7 @@ export default function StatusMonitor({
         })}
       </div>
 
-      <p className="mt-4 font-mono text-[9.5px] leading-relaxed text-cream/30">
+      <p className="mt-4 font-mono text-[9.5px] leading-relaxed text-cream/40">
         <T k="sm.note" />
       </p>
     </section>

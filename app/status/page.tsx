@@ -183,7 +183,7 @@ export default async function StatusPage() {
           })}
         </div>
 
-        <p className="mt-6 font-mono text-[9.5px] leading-relaxed text-cream/30">
+        <p className="mt-6 font-mono text-[9.5px] leading-relaxed text-cream/40">
           <T k="status.note" />
         </p>
       </div>

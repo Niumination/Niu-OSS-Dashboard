@@ -177,7 +177,7 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
                     >
                       <item.icon className="size-4 shrink-0 text-ember" />
                       {item.label}
-                      <kbd className="ml-auto font-mono text-[9px] uppercase tracking-wider text-cream/30">
+                      <kbd className="ml-auto font-mono text-[9px] uppercase tracking-wider text-cream/40">
                         {item.href}
                       </kbd>
                     </Command.Item>
@@ -221,7 +221,7 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
                     >
                       <item.icon className="size-4 shrink-0 text-cream/50" />
                       {item.label}
-                      <ExternalLink className="ml-auto size-3 shrink-0 text-cream/30" />
+                      <ExternalLink className="ml-auto size-3 shrink-0 text-cream/40" />
                     </Command.Item>
                   ))}
                 </Command.Group>
@@ -277,7 +277,7 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
               <span>{t('cm.hint.up')}</span>
               <span>{t('cm.hint.enter')}</span>
               <span>{t('cm.hint.esc')}</span>
-              <span className="ml-auto text-cream/25">⌘K / Ctrl+K</span>
+              <span className="ml-auto text-cream/35">⌘K / Ctrl+K</span>
             </div>
           </motion.div>
         </div>

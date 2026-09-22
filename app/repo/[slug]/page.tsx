@@ -273,7 +273,7 @@ export default async function RepoPage({ params }: { params: Promise<{ slug: str
               <span className="size-2.5 rounded-full bg-success/70" />
             </span>
             <span className="ml-2 font-mono text-[10.5px] text-cream/50">README.md</span>
-            <span className="ml-auto font-mono text-[9.5px] uppercase tracking-wider text-cream/30">
+            <span className="ml-auto font-mono text-[9.5px] uppercase tracking-wider text-cream/40">
               {readme ? <T k="rd.readme.chars" vars={{ n: readme.length.toLocaleString('id-ID') }} /> : <T k="rd.readme.none" />}
             </span>
           </div>

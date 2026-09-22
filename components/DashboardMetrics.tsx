@@ -146,7 +146,7 @@ export default function DashboardMetrics({ snapshot }: { snapshot: Snapshot }) {
                   href={`/repo/${r.name}`}
                   className="group flex items-center gap-3 rounded-2xl border border-white/[0.06] bg-white/[0.02] px-3.5 py-2.5 transition-colors hover:border-ember/30"
                 >
-                  <span className="w-5 font-mono text-[11px] text-cream/30">{String(i + 1).padStart(2, '0')}</span>
+                  <span className="w-5 font-mono text-[11px] text-cream/40">{String(i + 1).padStart(2, '0')}</span>
                   <span className="min-w-0 flex-1 truncate font-mono text-[12px] text-cream/85 group-hover:text-cream">
                     {r.name}
                   </span>
@@ -274,7 +274,7 @@ function CommitHeatmap({ events, now }: { events: Ghevent[]; now: number }) {
       <div className="flex gap-2">
         <div className="flex flex-col gap-[3px] pt-[18px]">
           {[t('dow.0'), '', t('dow.1'), '', t('dow.3'), '', t('dow.5'), ''].map((d, i) => (
-            <span key={i} className="grid h-[11px] font-mono text-[8px] leading-[11px] text-cream/30">
+            <span key={i} className="grid h-[11px] font-mono text-[8px] leading-[11px] text-cream/40">
               {d}
             </span>
           ))}
@@ -296,7 +296,7 @@ function CommitHeatmap({ events, now }: { events: Ghevent[]; now: number }) {
               ))}
             </div>
           </div>
-          <div className="relative mt-1.5 h-3 font-mono text-[8px] text-cream/30">
+          <div className="relative mt-1.5 h-3 font-mono text-[8px] text-cream/40">
             {monthLabels.map((l) => (
               <span
                 key={`${l.col}-${l.label}`}

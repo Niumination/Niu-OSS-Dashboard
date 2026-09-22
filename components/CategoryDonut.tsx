@@ -96,7 +96,7 @@ export default function CategoryDonut({ counts, total }: Props) {
             <span className="min-w-0 flex-1 truncate text-[12px] text-cream/70">{t(`cat.${s.id}.label`)}</span>
             <span className="font-mono text-[11px] tabular-nums text-cream/45">
               {s.value}
-              <span className="ml-1 text-cream/25">{Math.round(s.frac * 100)}%</span>
+              <span className="ml-1 text-cream/35">{Math.round(s.frac * 100)}%</span>
             </span>
           </li>
         ))}

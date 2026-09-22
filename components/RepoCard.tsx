@@ -132,7 +132,7 @@ export default function RepoCard({ repo, index = 0, instant = false }: Props) {
             <Play className="size-3" /> {t('rc.demo')}
           </a>
         ) : (
-          <span className="flex h-9 flex-1 items-center justify-center rounded-full border border-white/5 font-mono text-[10px] uppercase tracking-wider text-cream/25">
+          <span className="flex h-9 flex-1 items-center justify-center rounded-full border border-white/5 font-mono text-[10px] uppercase tracking-wider text-cream/35">
             {t('rc.demoNone')}
           </span>
         )}

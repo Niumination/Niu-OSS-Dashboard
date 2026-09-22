@@ -102,7 +102,7 @@ export default async function DevelopersPage() {
                 <span className="flex-1 text-[12px] text-cream/50">
                   <T k={ep.key} />
                 </span>
-                <span className="flex shrink-0 items-center gap-1 font-mono text-[9.5px] uppercase tracking-wider text-cream/30 transition-colors group-hover:text-ember">
+                <span className="flex shrink-0 items-center gap-1 font-mono text-[9.5px] uppercase tracking-wider text-cream/40 transition-colors group-hover:text-ember">
                   <T k="dev.try" />
                   <ExternalLink className="size-3" />
                 </span>

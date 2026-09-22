@@ -87,7 +87,7 @@ export function StudiesGrid({ studies }: { studies: CaseStudy[] }) {
               <span className="micro" style={{ color: c.accent }}>
                 {String(i + 1).padStart(2, '0')} · {c.kind}
               </span>
-              <BookOpen className="size-4 text-cream/30" />
+              <BookOpen className="size-4 text-cream/40" />
             </div>
             <h2 className="relative mt-4 font-display text-[28px] leading-tight tracking-tight text-cream">
               {c.title}

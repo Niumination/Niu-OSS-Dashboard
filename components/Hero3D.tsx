@@ -187,7 +187,7 @@ export default function Hero3D({ stats }: { stats: HeroStats }) {
             <div className="pointer-events-none absolute top-3 right-4 rounded-full border border-white/10 bg-ink/70 px-2.5 py-1 font-mono text-[9px] uppercase tracking-[0.18em] text-cream/70 backdrop-blur">
               {mode === '3d' ? `3d · ${fps ?? '—'} fps` : mode === 'lite' ? t('hero.scene.lite') : t('hero.scene.boot')}
             </div>
-            <div className="pointer-events-none absolute bottom-3 left-4 font-mono text-[9px] uppercase tracking-[0.2em] text-cream/30">
+            <div className="pointer-events-none absolute bottom-3 left-4 font-mono text-[9px] uppercase tracking-[0.2em] text-cream/40">
               {t('hero.scene.hint')}
             </div>
           </div>

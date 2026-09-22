@@ -96,7 +96,7 @@ export default async function SystemPage() {
 
         <StatusMonitor deployments={s.deployments} history={UPTIME_DATA} />
 
-        <div className="mt-6 flex items-center gap-2 font-mono text-[9.5px] uppercase tracking-[0.18em] text-cream/30">
+        <div className="mt-6 flex items-center gap-2 font-mono text-[9.5px] uppercase tracking-[0.18em] text-cream/40">
           <Activity className="size-3 text-ember" />
           <T k="sys.foot" />
         </div>

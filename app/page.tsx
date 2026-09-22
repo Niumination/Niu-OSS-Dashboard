@@ -97,7 +97,7 @@ export default async function Home() {
                   >
                     <span className="size-2 rounded-full" style={{ background: langColor(lang) }} />
                     {lang}
-                    <span className="text-cream/25">×{n}</span>
+                    <span className="text-cream/35">×{n}</span>
                   </span>
                 ))}
                 {topTopics.map((t) => (

@@ -359,7 +359,7 @@ function OssTab({
               onChange={(e) => setCustom(e.target.value.replace(/[^\d]/g, '').slice(0, 9))}
               placeholder="custom"
               aria-label="Nominal donasi custom"
-              className="w-24 bg-transparent font-mono text-[12px] tabular-nums text-cream outline-none placeholder:text-cream/30"
+              className="w-24 bg-transparent font-mono text-[12px] tabular-nums text-cream outline-none placeholder:text-cream/40"
             />
           </div>
         </div>
@@ -623,7 +623,7 @@ function ServicesTab({
                 onChange={(e) => setForm((f) => ({ ...f, brief: e.target.value }))}
                 rows={4}
                 placeholder="Ceritakan proyek/aplikasi Anda: fitur yang diharapkan, timeline, teknologi saat ini…"
-                className="mt-1.5 w-full resize-none rounded-2xl border border-white/10 bg-ink/60 px-4 py-3 text-[13px] leading-relaxed text-cream outline-none transition-colors placeholder:text-cream/30 focus:border-ember/50"
+                className="mt-1.5 w-full resize-none rounded-2xl border border-white/10 bg-ink/60 px-4 py-3 text-[13px] leading-relaxed text-cream outline-none transition-colors placeholder:text-cream/40 focus:border-ember/50"
               />
             </div>
           </div>
@@ -670,7 +670,7 @@ function ServicesTab({
                     'flex h-9 items-center gap-1.5 rounded-full px-4 font-mono text-[10px] uppercase tracking-wider transition',
                     cfg?.midtrans
                       ? 'border border-ember/50 bg-ember/10 text-cream hover:bg-ember/20'
-                      : 'cursor-not-allowed border border-white/10 text-cream/30',
+                      : 'cursor-not-allowed border border-white/10 text-cream/40',
                   )}
                 >
                   {busy === 'midtrans' ? <Loader2 className="size-3 animate-spin" /> : <QrCode className="size-3" />} Midtrans
@@ -683,7 +683,7 @@ function ServicesTab({
                     'flex h-9 items-center gap-1.5 rounded-full px-4 font-mono text-[10px] uppercase tracking-wider transition',
                     cfg?.stripe
                       ? 'border border-spotlight/50 bg-spotlight/10 text-cream hover:bg-spotlight/20'
-                      : 'cursor-not-allowed border border-white/10 text-cream/30',
+                      : 'cursor-not-allowed border border-white/10 text-cream/40',
                   )}
                 >
                   {busy === 'stripe' ? <Loader2 className="size-3 animate-spin" /> : <CreditCard className="size-3" />} Stripe
@@ -792,7 +792,7 @@ function Field({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="mt-1.5 h-11 w-full rounded-2xl border border-white/10 bg-ink/60 px-4 text-[13px] text-cream outline-none transition-colors placeholder:text-cream/30 focus:border-ember/50"
+        className="mt-1.5 h-11 w-full rounded-2xl border border-white/10 bg-ink/60 px-4 text-[13px] text-cream outline-none transition-colors placeholder:text-cream/40 focus:border-ember/50"
       />
     </div>
   );

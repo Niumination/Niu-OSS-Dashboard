@@ -62,7 +62,7 @@ export default async function NowPage() {
                       <span className="truncate font-mono text-[12.5px] text-cream/85 group-hover:text-cream">
                         {r.repo.split('/')[1] ?? r.repo}
                       </span>
-                      <ArrowUpRight className="size-3.5 shrink-0 text-cream/30 transition group-hover:text-ember" />
+                      <ArrowUpRight className="size-3.5 shrink-0 text-cream/40 transition group-hover:text-ember" />
                     </div>
                     <div className="mt-auto flex items-baseline justify-between font-mono text-[10px] text-cream/40">
                       <span>
