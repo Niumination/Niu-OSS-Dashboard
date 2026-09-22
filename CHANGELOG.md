@@ -5,6 +5,32 @@ per fase pengerjaan, lengkap dengan commit yang bisa dilacak.
 Format mengikuti [Keep a Changelog](https://keepachangelog.com/id/1.1/);
 proyek ini tidak memakai versioning semver ketat (satu repo, satu situs).
  
+## [Produksi 2026.13] — Fase 1 tuntas (SEO) + Fase 2 mulai (a11y & onboarding) — 2026-09-22
+
+### SEO konten (menuntaskan Fase 1)
+- **JSON-LD `Article`** per studi: headline, seksi kind,
+  datePublished/dateModified dari createdAt/pushedAt repo sumber —
+  melengkapi BreadcrumbList; terkonfirmasi di HTML build.
+- **`/feed-studies.xml`** — RSS katalog studi (pubDate faktual:
+  tanggal repo dibuat); terdaftar di layout alternates + footer.
+
+### Aksesibilitas (Fase 2 — pas pertama)
+- **Kontras label mikro naik**: text-cream/25→/35, /30→/40 di 15
+  berkas (~26 titik) — persentase, nomor statistik, hint keyboard,
+  hitungan filter kini berkontras memadai (WCAG 2.2 AA).
+- Fokus keyboard: sudah terjangkau `:focus-visible` global — diverifikasi.
+
+### Onboarding halus (Fase 2)
+- **HintCard** pertama-kunjung: kartu kecil pintasan '/' dan Ctrl+K;
+  ditutup permanen via localStorage; pengguna yang menekan pintasan
+  dianggap paham (auto-tutup). Aman hydration (render null di server).
+- **Pintasan `/`** baru: buka command palette dari halaman mana pun
+  (dikecualikan saat sedang mengetik di form).
+
+### Verifikasi
+tsc 0 · vitest 62/62 · build 213 halaman statis (+1 feed) ·
+feed-studies.xml + Article JSON-LD terkonfirmasi di build.
+
 ## [Produksi 2026.12] — Katalog studi kasus 4 → 10 (ROADMAP Fase 1) — 2026-09-22
 
 ### Studi baru (6) — semua berbasis riset README repositori publik

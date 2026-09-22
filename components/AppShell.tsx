@@ -6,6 +6,7 @@ import { UiContext, type PaymentTab, type UiApi } from './ui-context';
 import NavBar from './NavBar';
 import Footer from './Footer';
 import CommandMenu from './CommandMenu';
+import HintCard from './HintCard';
 import PaymentModal from './PaymentModal';
 import ScrollTop from './ScrollTop';
 
@@ -46,6 +47,7 @@ export default function AppShell({ snapshot, children }: Props) {
           onClose={() => setPay((p) => ({ ...p, open: false }))}
         />
         <main id="konten" className="flex-1 focus:outline-none">{children}</main>
+        <HintCard />
         <Footer snapshot={snapshot} />
         <ScrollTop />
       </div>

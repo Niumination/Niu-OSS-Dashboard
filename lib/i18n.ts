@@ -18,6 +18,12 @@ const id: Dict = {
   // ── a11y & kerangka ─────────────────────────────────────────────
   'a11y.skip': 'Lewati ke konten',
 
+  // ── onboarding (hint pertama-kunjung) ───────────────────────────
+  'hint.title': 'pintasan cepat',
+  'hint.search': 'cari repo',
+  'hint.all': 'semua aksi',
+  'hint.dismiss': 'Tutup — tak akan muncul lagi',
+
   // ── navigasi ────────────────────────────────────────────────────
   'nav.home': 'Beranda',
   'nav.repos': 'Repositori',
@@ -415,6 +421,12 @@ const id: Dict = {
 
 const en: Dict = {
   'a11y.skip': 'Skip to content',
+
+  // ── onboarding (first-visit hint) ───────────────────────────────
+  'hint.title': 'quick shortcuts',
+  'hint.search': 'search repos',
+  'hint.all': 'all actions',
+  'hint.dismiss': 'Close — will not show again',
 
   'nav.home': 'Home',
   'nav.repos': 'Repositories',

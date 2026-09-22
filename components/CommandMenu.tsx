@@ -54,6 +54,21 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
         e.preventDefault();
         onOpenChange(!open);
+        return;
+      }
+      // '/' = pintasan cepat buka pencarian (onboarding Fase 2):
+      // diabaikan saat pengguna sedang mengetik di kolom form apa pun.
+      if (e.key === '/' && !open) {
+        const el = e.target as HTMLElement | null;
+        const mengetik =
+          el?.tagName === 'INPUT' ||
+          el?.tagName === 'TEXTAREA' ||
+          el?.tagName === 'SELECT' ||
+          el?.isContentEditable;
+        if (!mengetik) {
+          e.preventDefault();
+          onOpenChange(true);
+        }
       }
     };
     window.addEventListener('keydown', onKey);
