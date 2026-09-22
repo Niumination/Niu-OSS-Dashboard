@@ -1,9 +1,10 @@
 'use client';
 
+import Link from 'next/link';
 import { useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import Fuse from 'fuse.js';
-import { AlertTriangle, RotateCcw, SearchX } from 'lucide-react';
+import { AlertTriangle, ExternalLink, LayoutGrid, RotateCcw, Rows3, SearchX, Star } from 'lucide-react';
 import RepoCard from './RepoCard';
 import { CATEGORIES, categorize, countByCategory } from '@/lib/categories';
 import type { RepoLite } from '@/lib/types';
@@ -32,6 +33,8 @@ export default function RepoGrid({ repos, offline = false, offlineDate }: Props)
   const [cat, setCat] = useState('all');
   const [sort, setSort] = useState<SortKey>('pushed');
   const [forkF, setForkF] = useState<ForkFilter>('all');
+  // Mode densitas (Fase 2): 'ringkas' = baris padat, 'kartu' = default.
+  const [dense, setDense] = useState(false);
   const searchRef = useRef<HTMLInputElement>(null);
   // Deferral: input tetap 60fps meski 90+ kartu harus difilter ulang.
   const dq = useDeferredValue(q);
@@ -43,7 +46,21 @@ export default function RepoGrid({ repos, offline = false, offlineDate }: Props)
     const params = new URLSearchParams(window.location.search);
     const fromUrl = params.get('q');
     if (fromUrl) setQ(fromUrl);
+    try {
+      if (localStorage.getItem('niu-density') === 'ringkas') setDense(true);
+    } catch {
+      /* abaikan */
+    }
   }, []);
+
+  const setDensity = (v: boolean) => {
+    setDense(v);
+    try {
+      localStorage.setItem('niu-density', v ? 'ringkas' : 'kartu');
+    } catch {
+      /* abaikan */
+    }
+  };
 
   // Pintasan keyboard ala GitHub/Linear: "/" memfokuskan pencarian dari
   // mana pun di halaman (kecuali sedang mengetik di elemen formulir).
@@ -180,6 +197,32 @@ export default function RepoGrid({ repos, offline = false, offlineDate }: Props)
             <option value="stars">{t('rg.sort.stars.opt')}</option>
             <option value="name">{t('rg.sort.name.opt')}</option>
           </select>
+          <div
+            className="flex rounded-full border border-white/10 bg-ink/60 p-0.5"
+            role="group"
+            aria-label={t('rg.density.aria')}
+          >
+            <button
+              type="button"
+              onClick={() => setDensity(false)}
+              aria-pressed={!dense}
+              title={t('rg.density.cards')}
+              className="flex size-10 items-center justify-center rounded-full transition-colors"
+            >
+              <LayoutGrid className={cx('size-4', dense ? 'text-cream/50' : 'text-ember')} aria-hidden />
+              <span className="sr-only">{t('rg.density.cards')}</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => setDensity(true)}
+              aria-pressed={dense}
+              title={t('rg.density.rows')}
+              className="flex size-10 items-center justify-center rounded-full transition-colors"
+            >
+              <Rows3 className={cx('size-4', dense ? 'text-ember' : 'text-cream/50')} aria-hidden />
+              <span className="sr-only">{t('rg.density.rows')}</span>
+            </button>
+          </div>
           {(q !== '' || cat !== 'all' || forkF !== 'all') && (
             <button
               type="button"
@@ -251,6 +294,53 @@ export default function RepoGrid({ repos, offline = false, offlineDate }: Props)
             {t('rg.reset')}
           </button>
         </div>
+      ) : dense ? (
+        <ul className="divide-y divide-white/[0.06] overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.02]">
+          {filtered.map((r) => (
+            <li key={r.name}>
+              <Link
+                href={`/repo/${r.name}`}
+                className="group flex items-baseline gap-x-4 gap-y-1 px-4 py-3 transition-colors hover:bg-white/[0.04] md:px-5"
+              >
+                <span className="min-w-0 flex-1">
+                  <span className="flex flex-wrap items-baseline gap-x-2">
+                    <span className="truncate font-mono text-[13px] text-cream/90 group-hover:text-cream">
+                      {r.name}
+                    </span>
+                    {r.language && (
+                      <span className="font-mono text-[10px] text-cream/45">{r.language}</span>
+                    )}
+                    {r.archived && (
+                      <span className="rounded-full bg-warn/15 px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider text-warn">
+                        {t('rc.archived')}
+                      </span>
+                    )}
+                  </span>
+                  {r.description && (
+                    <span className="mt-0.5 line-clamp-1 block text-[12px] text-cream/50">
+                      {r.description}
+                    </span>
+                  )}
+                </span>
+                <span className="flex shrink-0 items-center gap-3 font-mono text-[10px] text-cream/45">
+                  {r.stars > 0 && (
+                    <span className="flex items-center gap-1">
+                      <Star className="size-3 text-ember/70" aria-hidden />
+                      {r.stars}
+                    </span>
+                  )}
+                  {r.homepage && (
+                    <span className="flex items-center gap-1">
+                      <ExternalLink className="size-3" aria-hidden />
+                      demo
+                    </span>
+                  )}
+                  <span className="hidden sm:inline">{formatDate(r.pushedAt)}</span>
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
       ) : (
         <motion.div layout={!reduceMotion} className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           <AnimatePresence mode="popLayout" initial={false}>
