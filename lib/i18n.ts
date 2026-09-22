@@ -40,6 +40,7 @@ const id: Dict = {
   'footer.nav.services': 'Jasa & Komisi',
   'footer.nav.system': 'Sistem & Metrik',
   'footer.nav.now': 'Sekarang',
+  'footer.nav.changelog': 'Catatan Rilis',
   'footer.nav.status': 'Halaman Status',
   'footer.nav.rss': 'RSS Aktivitas',
   'footer.nav.dev': 'API Publik',
@@ -114,6 +115,7 @@ const id: Dict = {
   'cm.nav.studies': 'Studi Kasus',
   'cm.nav.dev': 'API Publik',
   'cm.nav.now': 'Sekarang (/now)',
+  'cm.nav.changelog': 'Catatan Rilis (/changelog)',
   'cm.link.github': 'Profil GitHub',
   'cm.link.email': 'Email — {email}',
   'cm.act.donate': 'Dukung Open Source',
@@ -370,6 +372,13 @@ const id: Dict = {
   'now.empty': 'Belum ada push 30 hari terakhir — sedang merenung, bukan mati.',
   'now.updated': 'snapshot per-deploy · sumber: events publik github',
 
+  // ── /changelog — catatan rilis ──────────────────────────────────
+  'changelog.micro': '09 // catatan rilis',
+  'changelog.title': 'Catatan Rilis',
+  'changelog.desc': 'Semua yang berubah di situs ini — satu entri per pengerjaan, ditulis apa adanya. Kalau tidak tertulis di sini, berarti belum dikerjakan.',
+  'changelog.empty': 'Belum ada catatan.',
+  'changelog.source': 'di-render saat build dari CHANGELOG.md — berkas yang sama dengan repo',
+
   // ── /developers (API publik) ────────────────────────────────────
   'dev.micro': '07 // api publik',
   'dev.title': 'API Publik',
@@ -418,6 +427,7 @@ const en: Dict = {
   'footer.nav.services': 'Services & Commissions',
   'footer.nav.system': 'System & Metrics',
   'footer.nav.now': 'Now',
+  'footer.nav.changelog': 'Release Notes',
   'footer.nav.status': 'Status Page',
   'footer.nav.rss': 'Activity RSS',
   'footer.nav.dev': 'Public API',
@@ -488,6 +498,7 @@ const en: Dict = {
   'cm.nav.studies': 'Case Studies',
   'cm.nav.dev': 'Public API',
   'cm.nav.now': 'Now (/now)',
+  'cm.nav.changelog': 'Release Notes (/changelog)',
   'cm.link.github': 'GitHub Profile',
   'cm.link.email': 'Email — {email}',
   'cm.act.donate': 'Support Open Source',
@@ -738,6 +749,13 @@ const en: Dict = {
   'now.activity.title': 'recent timeline',
   'now.empty': 'No pushes in the last 30 days — pondering, not dead.',
   'now.updated': 'per-deploy snapshot · source: public github events',
+
+  // ── /changelog — release notes ──────────────────────────────────
+  'changelog.micro': '09 // release notes',
+  'changelog.title': 'Release Notes',
+  'changelog.desc': 'Everything that changed on this site — one entry per batch, written as it happened. If it is not written here, it has not shipped.',
+  'changelog.empty': 'No notes yet.',
+  'changelog.source': 'rendered at build from CHANGELOG.md — the same file as the repo',
 
   // ── /developers (public API) ────────────────────────────────────
   'dev.micro': '07 // public api',

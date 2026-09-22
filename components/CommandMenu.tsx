@@ -13,6 +13,7 @@ import {
   FolderGit2,
   Clock,
   Heart,
+  ScrollText,
   LayoutDashboard,
   Mail,
   MessageSquare,
@@ -83,6 +84,7 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
     { value: 'nav-system', label: t('cm.nav.system'), icon: Activity, href: '/system' },
     { value: 'nav-status', label: t('cm.nav.status'), icon: Activity, href: '/status' },
     { value: 'nav-now', label: t('cm.nav.now'), icon: Clock, href: '/now' },
+    { value: 'nav-changelog', label: t('cm.nav.changelog'), icon: ScrollText, href: '/changelog' },
     { value: 'nav-studies', label: t('cm.nav.studies'), icon: FolderGit2, href: '/studies' },
     { value: 'nav-developers', label: t('cm.nav.dev'), icon: Boxes, href: '/developers' },
   ];
