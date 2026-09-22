@@ -12,6 +12,7 @@ const NAV = [
   { href: '/studies', key: 'footer.nav.studies' },
   { href: '/services', key: 'footer.nav.services' },
   { href: '/system', key: 'footer.nav.system' },
+  { href: '/now', key: 'footer.nav.now' },
   { href: '/status', key: 'footer.nav.status' },
   { href: '/feed.xml', key: 'footer.nav.rss' },
   { href: '/developers', key: 'footer.nav.dev' },

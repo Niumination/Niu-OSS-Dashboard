@@ -39,6 +39,7 @@ const id: Dict = {
   'footer.nav.studies': 'Studi Kasus',
   'footer.nav.services': 'Jasa & Komisi',
   'footer.nav.system': 'Sistem & Metrik',
+  'footer.nav.now': 'Sekarang',
   'footer.nav.status': 'Halaman Status',
   'footer.nav.rss': 'RSS Aktivitas',
   'footer.nav.dev': 'API Publik',
@@ -112,6 +113,7 @@ const id: Dict = {
   'cm.nav.status': 'Halaman Status',
   'cm.nav.studies': 'Studi Kasus',
   'cm.nav.dev': 'API Publik',
+  'cm.nav.now': 'Sekarang (/now)',
   'cm.link.github': 'Profil GitHub',
   'cm.link.email': 'Email — {email}',
   'cm.act.donate': 'Dukung Open Source',
@@ -357,6 +359,17 @@ const id: Dict = {
   'rd.related': 'terkait // juga dibuat dalam {lang}',
   'rd.related.none': 'terkait // stack serupa',
 
+  // ── /now — sedang dikerjakan ────────────────────────────────────
+  'now.micro': '08 // sekarang',
+  'now.title': 'Sekarang.',
+  'now.desc': 'Bukan resume — ini papan kerja. Repo yang paling sering saya dorong sebulan terakhir dan aktivitas terbaru, semuanya dari event publik GitHub.',
+  'now.focus.title': 'fokus 30 hari',
+  'now.focus.sub': 'Repositori dengan push terbanyak sebulan terakhir — kalau namanya ada di sini, di situlah waktu saya habis.',
+  'now.repo.pushes': 'push',
+  'now.activity.title': 'linimasa terbaru',
+  'now.empty': 'Belum ada push 30 hari terakhir — sedang merenung, bukan mati.',
+  'now.updated': 'snapshot per-deploy · sumber: events publik github',
+
   // ── /developers (API publik) ────────────────────────────────────
   'dev.micro': '07 // api publik',
   'dev.title': 'API Publik',
@@ -404,6 +417,7 @@ const en: Dict = {
   'footer.nav.studies': 'Case Studies',
   'footer.nav.services': 'Services & Commissions',
   'footer.nav.system': 'System & Metrics',
+  'footer.nav.now': 'Now',
   'footer.nav.status': 'Status Page',
   'footer.nav.rss': 'Activity RSS',
   'footer.nav.dev': 'Public API',
@@ -473,6 +487,7 @@ const en: Dict = {
   'cm.nav.status': 'Status Page',
   'cm.nav.studies': 'Case Studies',
   'cm.nav.dev': 'Public API',
+  'cm.nav.now': 'Now (/now)',
   'cm.link.github': 'GitHub Profile',
   'cm.link.email': 'Email — {email}',
   'cm.act.donate': 'Support Open Source',
@@ -712,6 +727,17 @@ const en: Dict = {
   'rd.readme.missing': 'No README found in this repository.',
   'rd.related': 'related // also built in {lang}',
   'rd.related.none': 'related // similar stack',
+
+  // ── /now — currently working on ─────────────────────────────────
+  'now.micro': '08 // now',
+  'now.title': 'Right Now.',
+  'now.desc': 'Not a resume — a workbench. The repos I push to most this month and the latest activity, all from public GitHub events.',
+  'now.focus.title': '30-day focus',
+  'now.focus.sub': 'Repositories with the most pushes in the last 30 days — if it is listed here, that is where my hours go.',
+  'now.repo.pushes': 'pushes',
+  'now.activity.title': 'recent timeline',
+  'now.empty': 'No pushes in the last 30 days — pondering, not dead.',
+  'now.updated': 'per-deploy snapshot · source: public github events',
 
   // ── /developers (public API) ────────────────────────────────────
   'dev.micro': '07 // public api',

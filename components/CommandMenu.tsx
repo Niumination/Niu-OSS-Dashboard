@@ -11,6 +11,7 @@ import {
   Coffee,
   ExternalLink,
   FolderGit2,
+  Clock,
   Heart,
   LayoutDashboard,
   Mail,
@@ -81,6 +82,7 @@ export default function CommandMenu({ open, onOpenChange, snapshot, onPayment }:
     { value: 'nav-services', label: t('cm.nav.services'), icon: Wrench, href: '/services' },
     { value: 'nav-system', label: t('cm.nav.system'), icon: Activity, href: '/system' },
     { value: 'nav-status', label: t('cm.nav.status'), icon: Activity, href: '/status' },
+    { value: 'nav-now', label: t('cm.nav.now'), icon: Clock, href: '/now' },
     { value: 'nav-studies', label: t('cm.nav.studies'), icon: FolderGit2, href: '/studies' },
     { value: 'nav-developers', label: t('cm.nav.dev'), icon: Boxes, href: '/developers' },
   ];
