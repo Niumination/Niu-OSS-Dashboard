@@ -5,6 +5,18 @@ per fase pengerjaan, lengkap dengan commit yang bisa dilacak.
 Format mengikuti [Keep a Changelog](https://keepachangelog.com/id/1.1/);
 proyek ini tidak memakai versioning semver ketat (satu repo, satu situs).
  
+## [Produksi 2026.10] — Kebersihan docs + humanisasi salinan UI — 2026-09-22
+
+### Kebersihan docs
+- **Hapus fragmen token** (`github_pat_11A5P…`) dari 3 docs publik
+  (PANDUAN-OPS, AGENTS.md, CHANGELOG 2026.9) — fragmen tidak bisa
+  dipakai masuk, tapi kebiasaan menulis bagian rahasia apa pun di
+  repo publik wajib dihilangkan.
+- **Catat kebijakan pause**: sejumlah deployment tampil DOWN di
+  /status karena pemiliknya sengaja me-pause proyek di Vercel
+  (bukan insiden) — didokumentasikan di AGENTS.md agar audit
+  berikutnya tidak salah menandai.
+
 ## [Produksi 2026.9] — T1 GITHUB_TOKEN live: perbaikan GITHUB_OWNER kosong — 2026-09-22
 
 ### T1 — data live GitHub API aktif untuk pertama kalinya
@@ -22,7 +34,7 @@ proyek ini tidak memakai versioning semver ketat (satu repo, satu situs).
 - **Fix (`9c820d3`):** `process.env.GITHUB_OWNER?.trim() || 'Niumination'`
   — pola yang sama dengan `NEXT_PUBLIC_CONTACT_*` di `lib/site.config.ts`
   (patch arena `c60387f`).
-- **Token:** fine-grained PAT (`github_pat_11A5P…`, read-only, public
+- **Token:** fine-grained PAT (read-only, public
   repositories) — terpasang di Production + Preview (`1336ee7`).
 - **Verifikasi (22 Sep 2026):**
   `curl -s https://niumination.web.id/api/github/summary` →

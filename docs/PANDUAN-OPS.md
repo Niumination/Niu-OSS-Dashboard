@@ -129,7 +129,7 @@ E2E_BASE_URL=https://niumination.web.id node tests/e2e/hydration.mjs
 
 | Item | Status |
 |---|---|
-| T1 GITHUB_TOKEN | ✅ SELESAI (22 Sep 2026) — live: true, source: github-api. Token fine-grained github_pat_11A5P + fix GITHUB_OWNER kosong (9c820d3) |
+| T1 GITHUB_TOKEN | ✅ SELESAI (22 Sep 2026) — live: true, source: github-api. Token fine-grained (nilai dirahasiakan) + fix GITHUB_OWNER kosong (9c820d3) |
 | T2 CSP | ✅ fase 1 report-only terpasang (2026.7) · enforce = panduan C |
 | T3 React 19.3 + View Transitions | ⏳ menunggu `@react-three/fiber` rilis dukungan `react 19.3` (cek: `npm view @react-three/fiber peerDependencies.react`) |
 | T4 Bundle audit | ✅ selesai 2026.7: initial `/` 915 KB · three.js 882 KB lazy ✓ · kandidat pangkas terbesar = framer-motion+cmdk 248 KB (via T3) |
