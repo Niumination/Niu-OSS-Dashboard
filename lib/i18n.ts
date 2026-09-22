@@ -199,12 +199,23 @@ const id: Dict = {
   'offline.title': 'Kamu sedang offline.',
   'offline.desc': 'Tenang — halaman yang tadi kamu buka masih tersimpan di cache. Sambungkan lagi internet untuk data terbaru.',
   'offline.retry': 'Muat ulang halaman',
+  'offline.list.title': 'yang bisa dibaca offline',
+  'offline.list.checking': 'memeriksa cache…',
+  'offline.list.more': '+{n} lainnya',
   'offline.home': 'Kembali ke beranda',
 
   // ── QR ──────────────────────────────────────────────────────────
   'qr.title': 'Bagikan via QR',
   'qr.desc': 'Pindai untuk membuka halaman ini di perangkat lain.',
   'qr.download': 'Unduh SVG',
+
+  // ── /share — share target PWA ────────────────────────────────────
+  'share.title': 'Tautan diterima.',
+  'share.desc': 'Ini titik terima berbagi PWA — buka tautannya di dasbor atau langsung.',
+  'share.openRepo': 'buka repo ini di dasbor',
+  'share.copy': 'Salin tautan/teks',
+  'share.copied': 'Tersalin!',
+  'share.none': 'Tidak ada tautan atau teks yang ikut terbagi.',
 
   // ── dashboard: /system ──────────────────────────────────────────
   'sys.micro': '04 // sistem & metrik',
@@ -596,11 +607,22 @@ const en: Dict = {
   'offline.title': 'You are offline.',
   'offline.desc': 'Relax — pages you already visited are still cached. Reconnect to load fresh data.',
   'offline.retry': 'Reload page',
+  'offline.list.title': 'readable offline',
+  'offline.list.checking': 'checking cache…',
+  'offline.list.more': '+{n} more',
   'offline.home': 'Back to home',
 
   'qr.title': 'Share via QR',
   'qr.desc': 'Scan to open this page on another device.',
   'qr.download': 'Download SVG',
+
+  // ── /share — PWA share target ────────────────────────────────────
+  'share.title': 'Link received.',
+  'share.desc': 'This is the PWA share target — open the link in the dashboard or directly.',
+  'share.openRepo': 'open this repo in the dashboard',
+  'share.copy': 'Copy link/text',
+  'share.copied': 'Copied!',
+  'share.none': 'No link or text came through the share.',
 
   // ── dashboard: /system ──────────────────────────────────────────
   'sys.micro': '04 // system & metrics',

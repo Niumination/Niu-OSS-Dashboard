@@ -14,7 +14,7 @@
  *  - Bump VERSION saat strategi/aset inti berubah.
  */
 
-const VERSION = 'niu-sw-v2';
+const VERSION = 'niu-sw-v3';
 const RUNTIME_MAX = 60;
 const CORE = [
   '/',
@@ -22,6 +22,13 @@ const CORE = [
   '/manifest.webmanifest',
   '/icons/icon-192.png',
   '/icons/icon-512.png',
+  // Halaman populer (Fase 2 — PWA offline penuh): konten inti siap
+  // dibaca tanpa jaringan sejak service worker terpasang.
+  '/repositories',
+  '/studies',
+  '/now',
+  '/changelog',
+  '/status',
 ];
 
 /** Simpan satu permintaan; gagal direkam tapi tidak melempar. */

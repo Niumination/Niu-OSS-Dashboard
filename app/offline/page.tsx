@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { RotateCcw, WifiOff } from 'lucide-react';
 import T from '@/components/T';
+import OfflineCacheList from '@/components/OfflineCacheList';
 
 export const metadata: Metadata = {
   title: 'Offline',
@@ -28,6 +29,7 @@ export default function OfflinePage() {
       <p className="max-w-md text-[14px] leading-relaxed text-cream/60">
         <T k="offline.desc" />
       </p>
+      <OfflineCacheList />
       <div className="flex flex-wrap justify-center gap-3">
         <button
           type="button"

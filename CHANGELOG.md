@@ -5,6 +5,34 @@ per fase pengerjaan, lengkap dengan commit yang bisa dilacak.
 Format mengikuti [Keep a Changelog](https://keepachangelog.com/id/1.1/);
 proyek ini tidak memakai versioning semver ketat (satu repo, satu situs).
  
+## [Produksi 2026.14] — Fase 2: mode densitas + PWA offline penuh + share target — 2026-09-22
+
+### Mode densitas (/repositories)
+- Toggle tampilan **ringkas vs kartu** di toolbar (Rows3/LayoutGrid,
+  aria-pressed, sr-only) — preferensi di localStorage `niu-density`,
+  dimuat di useEffect (default kartu, aman hydration).
+- Ringkas: baris padat — nama, bahasa, deskripsi 1 baris, badge arsip,
+  stars/demo, tanggal push. Pembaca cepat vs penjelajah.
+
+### PWA offline penuh
+- **sw.js v3**: precache diperluas ke halaman populer —
+  /repositories, /studies, /now, /changelog, /status — siap dibaca
+  tanpa jaringan sejak SW terpasang.
+- **Halaman offline kaya**: `OfflineCacheList` membaca Cache API
+  langsung dari browser — menampilkan halaman yang BENAR-BENAR
+  tersimpan (bukan daftar statis), dengan fallback halaman inti.
+
+### Share target PWA
+- `manifest.share_target` (GET, ramah ekspor statis) → halaman
+  `/share`: tautan repo GitHub Niumination ditawarkan dibuka sebagai
+  halaman /repo/<nama>; tautan lain bisa dibuka/disalin; tanpa
+  tautan → pesan ramah. Suspense + useSearchParams sesuai pola statis.
+
+### Verifikasi
+tsc 0 · vitest 62/62 · build 214 halaman statis (+/share) ·
+share_target terkonfirmasi di manifest build · sw.js valid (node
+--check).
+
 ## [Produksi 2026.13] — Fase 1 tuntas (SEO) + Fase 2 mulai (a11y & onboarding) — 2026-09-22
 
 ### SEO konten (menuntaskan Fase 1)
