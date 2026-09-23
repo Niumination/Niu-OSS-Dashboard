@@ -5,6 +5,19 @@ per fase pengerjaan, lengkap dengan commit yang bisa dilacak.
 Format mengikuti [Keep a Changelog](https://keepachangelog.com/id/1.1.);
 proyek ini tidak memakai versioning semver ketat (satu repo, satu situs).
  
+## [Produksi 2026.17] — Audit menyeluruh & peta jalan pasca-Fase 2 — 2026-09-23
+
+- **`docs/AUDIT-2026.17.md`**: dokumen khusus — posisi terverifikasi, inventaris
+  lengkap yang tertunda (4 kategori: aksi pemilik / jendela waktu / upstream /
+  antrian kode), dan urutan kerja Langkah 1–6 lengkap dengan kebutuhan,
+  risiko, dan rollback per item.
+- Temuan kunci audit: **T3 terbuka** (fiber 9.8.0 peer react `<19.4` —
+  react 19.3 kini mungkin); pembayaran belum dikonfigurasi di Vercel
+  (`midtrans:false, stripe:false` — keputusan bisnis + 3 env var);
+  sw.js versi manual (auto-bump BUILD_ID belum ada); JS initial 965 KB
+  (tren 915→952→965).
+- Docs: runbook AGENTS.md disegarkan (41/41→62/62, 206→214 halaman).
+
 ## [Produksi 2026.16] — Fase 2 tuntas: dwibahasa penuh ID+EN + axe-core di CI — 2026-09-22
 
 ### Dwibahasa penuh — ID dan EN sama lengkapnya
