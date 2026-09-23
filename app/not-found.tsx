@@ -8,7 +8,6 @@ import { siteUrl } from '@/lib/env';
 export const metadata: Metadata = {
   title: 'Halaman tidak ditemukan',
   description: 'Halaman yang kamu cari tidak ada. Kembali ke beranda atau jelajahi repositori, studi kasus, dan layanan Niumination.',
-  robots: { index: true, follow: true },
   alternates: { canonical: `${siteUrl}/404` },
 };
 
