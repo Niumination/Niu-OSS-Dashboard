@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-28T09:11:27.585Z",
+ "generatedAt": "2026-09-28T15:55:46.383Z",
  "source": "data/uptime.json (GitHub Actions, tiap 15 menit)",
  "intervalMinutes": 15,
  "sites": [
@@ -8,7 +8,7 @@
    "url": "https://niumination.web.id",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 568,
+   "avgMs30d": 595,
    "days": 8,
    "lastOk": true,
    "lastCheck": {
@@ -22,7 +22,7 @@
    "url": "https://niu-oss.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 403,
+   "avgMs30d": 419,
    "days": 8,
    "lastOk": true,
    "lastCheck": {
@@ -32,25 +32,11 @@
    }
   },
   {
-   "repo": "sapa-ai",
-   "url": "https://sapa-ai-indol.vercel.app",
-   "uptime7d": 100,
-   "uptime30d": 100,
-   "avgMs30d": 148,
-   "days": 11,
-   "lastOk": true,
-   "lastCheck": {
-    "t": "2026-09-18T16:25:39.237Z",
-    "ms": 100,
-    "ok": true
-   }
-  },
-  {
    "repo": "PemdiAcehTengah",
    "url": "https://pemdi-aceh-tengah.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 1061,
+   "avgMs30d": 1075,
    "days": 11,
    "lastOk": true,
    "lastCheck": {
@@ -60,11 +46,25 @@
    }
   },
   {
+   "repo": "sapa-ai",
+   "url": "https://sapa-ai-indol.vercel.app",
+   "uptime7d": 100,
+   "uptime30d": 100,
+   "avgMs30d": 155,
+   "days": 11,
+   "lastOk": true,
+   "lastCheck": {
+    "t": "2026-09-18T16:25:39.237Z",
+    "ms": 100,
+    "ok": true
+   }
+  },
+  {
    "repo": "niu-dash",
    "url": "https://niumination.github.io/niu-dash/",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 252,
+   "avgMs30d": 264,
    "days": 11,
    "lastOk": true,
    "lastCheck": {
@@ -78,7 +78,7 @@
    "url": "https://kms-spbe.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 361,
+   "avgMs30d": 372,
    "days": 8,
    "lastOk": true,
    "lastCheck": {
@@ -91,8 +91,8 @@
    "repo": "kune-ya.com",
    "url": "https://kune-ya-com.vercel.app",
    "uptime7d": 0,
-   "uptime30d": 1.92,
-   "avgMs30d": 352,
+   "uptime30d": 1.89,
+   "avgMs30d": 358,
    "days": 11,
    "lastOk": true,
    "lastCheck": {
@@ -105,7 +105,7 @@
    "repo": "mata-aihackfest-2026",
    "url": "https://watchdog-mata.niumination.web.id",
    "uptime7d": 0,
-   "uptime30d": 17.31,
+   "uptime30d": 16.98,
    "avgMs30d": 215,
    "days": 11,
    "lastOk": true,
@@ -120,7 +120,7 @@
    "url": "https://niumination.github.io/Niu-LKH/",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 299,
+   "avgMs30d": 303,
    "days": 11,
    "lastOk": true,
    "lastCheck": {
@@ -134,7 +134,7 @@
    "url": "https://github.com/Niumination/didong-code",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 781,
+   "avgMs30d": 793,
    "days": 8,
    "lastOk": true,
    "lastCheck": {
