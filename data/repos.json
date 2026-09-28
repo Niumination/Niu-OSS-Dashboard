@@ -1,121 +1,5 @@
 [
   {
-    "id": 1301497480,
-    "node_id": "R_kgDOTZNGiA",
-    "name": "Niumination",
-    "full_name": "Niumination/Niumination",
-    "private": false,
-    "owner": {
-      "login": "Niumination",
-      "id": 123625275,
-      "node_id": "U_kgDOB15fOw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "html_url": "https://github.com/Niumination",
-      "followers_url": "https://api.github.com/users/Niumination/followers",
-      "following_url": "https://api.github.com/users/Niumination/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Niumination/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Niumination/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Niumination/subscriptions",
-      "organizations_url": "https://api.github.com/users/Niumination/orgs",
-      "repos_url": "https://api.github.com/users/Niumination/repos",
-      "events_url": "https://api.github.com/users/Niumination/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Niumination/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "html_url": "https://github.com/Niumination/Niumination",
-    "description": "Niumination GitHub Profile README — animated terminal hero. Deployed from agents/profile/.",
-    "fork": false,
-    "url": "https://api.github.com/repos/Niumination/Niumination",
-    "forks_url": "https://api.github.com/repos/Niumination/Niumination/forks",
-    "keys_url": "https://api.github.com/repos/Niumination/Niumination/keys{/key_id}",
-    "collaborators_url": "https://api.github.com/repos/Niumination/Niumination/collaborators{/collaborator}",
-    "teams_url": "https://api.github.com/repos/Niumination/Niumination/teams",
-    "hooks_url": "https://api.github.com/repos/Niumination/Niumination/hooks",
-    "issue_events_url": "https://api.github.com/repos/Niumination/Niumination/issues/events{/number}",
-    "events_url": "https://api.github.com/repos/Niumination/Niumination/events",
-    "assignees_url": "https://api.github.com/repos/Niumination/Niumination/assignees{/user}",
-    "branches_url": "https://api.github.com/repos/Niumination/Niumination/branches{/branch}",
-    "tags_url": "https://api.github.com/repos/Niumination/Niumination/tags",
-    "blobs_url": "https://api.github.com/repos/Niumination/Niumination/git/blobs{/sha}",
-    "git_tags_url": "https://api.github.com/repos/Niumination/Niumination/git/tags{/sha}",
-    "git_refs_url": "https://api.github.com/repos/Niumination/Niumination/git/refs{/sha}",
-    "trees_url": "https://api.github.com/repos/Niumination/Niumination/git/trees{/sha}",
-    "statuses_url": "https://api.github.com/repos/Niumination/Niumination/statuses/{sha}",
-    "languages_url": "https://api.github.com/repos/Niumination/Niumination/languages",
-    "stargazers_url": "https://api.github.com/repos/Niumination/Niumination/stargazers",
-    "contributors_url": "https://api.github.com/repos/Niumination/Niumination/contributors",
-    "subscribers_url": "https://api.github.com/repos/Niumination/Niumination/subscribers",
-    "subscription_url": "https://api.github.com/repos/Niumination/Niumination/subscription",
-    "commits_url": "https://api.github.com/repos/Niumination/Niumination/commits{/sha}",
-    "git_commits_url": "https://api.github.com/repos/Niumination/Niumination/git/commits{/sha}",
-    "comments_url": "https://api.github.com/repos/Niumination/Niumination/comments{/number}",
-    "issue_comment_url": "https://api.github.com/repos/Niumination/Niumination/issues/comments{/number}",
-    "contents_url": "https://api.github.com/repos/Niumination/Niumination/contents/{+path}",
-    "compare_url": "https://api.github.com/repos/Niumination/Niumination/compare/{base}...{head}",
-    "merges_url": "https://api.github.com/repos/Niumination/Niumination/merges",
-    "archive_url": "https://api.github.com/repos/Niumination/Niumination/{archive_format}{/ref}",
-    "downloads_url": "https://api.github.com/repos/Niumination/Niumination/downloads",
-    "issues_url": "https://api.github.com/repos/Niumination/Niumination/issues{/number}",
-    "pulls_url": "https://api.github.com/repos/Niumination/Niumination/pulls{/number}",
-    "milestones_url": "https://api.github.com/repos/Niumination/Niumination/milestones{/number}",
-    "notifications_url": "https://api.github.com/repos/Niumination/Niumination/notifications{?since,all,participating}",
-    "labels_url": "https://api.github.com/repos/Niumination/Niumination/labels{/name}",
-    "releases_url": "https://api.github.com/repos/Niumination/Niumination/releases{/id}",
-    "deployments_url": "https://api.github.com/repos/Niumination/Niumination/deployments",
-    "created_at": "2026-07-15T10:38:11Z",
-    "updated_at": "2026-09-24T13:20:53Z",
-    "pushed_at": "2026-09-24T13:20:49Z",
-    "git_url": "git://github.com/Niumination/Niumination.git",
-    "ssh_url": "git@github.com:Niumination/Niumination.git",
-    "clone_url": "https://github.com/Niumination/Niumination.git",
-    "svn_url": "https://github.com/Niumination/Niumination",
-    "homepage": null,
-    "size": 96,
-    "stargazers_count": 1,
-    "watchers_count": 1,
-    "language": "JavaScript",
-    "has_issues": true,
-    "has_projects": true,
-    "has_downloads": false,
-    "has_wiki": true,
-    "has_pages": false,
-    "has_discussions": false,
-    "forks_count": 0,
-    "mirror_url": null,
-    "archived": false,
-    "disabled": false,
-    "open_issues_count": 0,
-    "license": null,
-    "allow_forking": true,
-    "is_template": false,
-    "web_commit_signoff_required": false,
-    "has_pull_requests": true,
-    "pull_request_creation_policy": "all",
-    "topics": [
-      "aceh-tengah",
-      "github-profile",
-      "niumination",
-      "readme",
-      "spbe"
-    ],
-    "visibility": "public",
-    "forks": 0,
-    "open_issues": 0,
-    "watchers": 1,
-    "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    }
-  },
-  {
     "id": 1376988611,
     "node_id": "R_kgDOUhMtww",
     "name": "Niu-OSS-Dashboard",
@@ -183,14 +67,14 @@
     "releases_url": "https://api.github.com/repos/Niumination/Niu-OSS-Dashboard/releases{/id}",
     "deployments_url": "https://api.github.com/repos/Niumination/Niu-OSS-Dashboard/deployments",
     "created_at": "2026-09-19T09:44:20Z",
-    "updated_at": "2026-09-24T12:53:19Z",
-    "pushed_at": "2026-09-24T12:53:15Z",
+    "updated_at": "2026-09-28T07:36:18Z",
+    "pushed_at": "2026-09-28T07:36:14Z",
     "git_url": "git://github.com/Niumination/Niu-OSS-Dashboard.git",
     "ssh_url": "git@github.com:Niumination/Niu-OSS-Dashboard.git",
     "clone_url": "https://github.com/Niumination/Niu-OSS-Dashboard.git",
     "svn_url": "https://github.com/Niumination/Niu-OSS-Dashboard",
     "homepage": "https://niu-oss.vercel.app",
-    "size": 967,
+    "size": 1244,
     "stargazers_count": 0,
     "watchers_count": 0,
     "language": "TypeScript",
@@ -218,11 +102,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -293,14 +177,14 @@
     "releases_url": "https://api.github.com/repos/Niumination/ecosystem-config/releases{/id}",
     "deployments_url": "https://api.github.com/repos/Niumination/ecosystem-config/deployments",
     "created_at": "2026-07-16T17:39:24Z",
-    "updated_at": "2026-09-24T12:31:52Z",
-    "pushed_at": "2026-09-24T12:31:47Z",
+    "updated_at": "2026-09-28T04:48:07Z",
+    "pushed_at": "2026-09-28T04:48:03Z",
     "git_url": "git://github.com/Niumination/ecosystem-config.git",
     "ssh_url": "git@github.com:Niumination/ecosystem-config.git",
     "clone_url": "https://github.com/Niumination/ecosystem-config.git",
     "svn_url": "https://github.com/Niumination/ecosystem-config",
     "homepage": null,
-    "size": 44939,
+    "size": 45114,
     "stargazers_count": 0,
     "watchers_count": 0,
     "language": "JavaScript",
@@ -328,11 +212,579 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
+    }
+  },
+  {
+    "id": 1345251317,
+    "node_id": "R_kgDOUC7n9Q",
+    "name": "hermes-agent",
+    "full_name": "Niumination/hermes-agent",
+    "private": false,
+    "owner": {
+      "login": "Niumination",
+      "id": 123625275,
+      "node_id": "U_kgDOB15fOw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "html_url": "https://github.com/Niumination",
+      "followers_url": "https://api.github.com/users/Niumination/followers",
+      "following_url": "https://api.github.com/users/Niumination/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Niumination/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Niumination/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Niumination/subscriptions",
+      "organizations_url": "https://api.github.com/users/Niumination/orgs",
+      "repos_url": "https://api.github.com/users/Niumination/repos",
+      "events_url": "https://api.github.com/users/Niumination/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Niumination/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "html_url": "https://github.com/Niumination/hermes-agent",
+    "description": "The agent that grows with you",
+    "fork": true,
+    "url": "https://api.github.com/repos/Niumination/hermes-agent",
+    "forks_url": "https://api.github.com/repos/Niumination/hermes-agent/forks",
+    "keys_url": "https://api.github.com/repos/Niumination/hermes-agent/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/Niumination/hermes-agent/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/Niumination/hermes-agent/teams",
+    "hooks_url": "https://api.github.com/repos/Niumination/hermes-agent/hooks",
+    "issue_events_url": "https://api.github.com/repos/Niumination/hermes-agent/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/Niumination/hermes-agent/events",
+    "assignees_url": "https://api.github.com/repos/Niumination/hermes-agent/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/Niumination/hermes-agent/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/Niumination/hermes-agent/tags",
+    "blobs_url": "https://api.github.com/repos/Niumination/hermes-agent/git/blobs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/Niumination/hermes-agent/git/tags{/sha}",
+    "git_refs_url": "https://api.github.com/repos/Niumination/hermes-agent/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/Niumination/hermes-agent/git/trees{/sha}",
+    "statuses_url": "https://api.github.com/repos/Niumination/hermes-agent/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/Niumination/hermes-agent/languages",
+    "stargazers_url": "https://api.github.com/repos/Niumination/hermes-agent/stargazers",
+    "contributors_url": "https://api.github.com/repos/Niumination/hermes-agent/contributors",
+    "subscribers_url": "https://api.github.com/repos/Niumination/hermes-agent/subscribers",
+    "subscription_url": "https://api.github.com/repos/Niumination/hermes-agent/subscription",
+    "commits_url": "https://api.github.com/repos/Niumination/hermes-agent/commits{/sha}",
+    "git_commits_url": "https://api.github.com/repos/Niumination/hermes-agent/git/commits{/sha}",
+    "comments_url": "https://api.github.com/repos/Niumination/hermes-agent/comments{/number}",
+    "issue_comment_url": "https://api.github.com/repos/Niumination/hermes-agent/issues/comments{/number}",
+    "contents_url": "https://api.github.com/repos/Niumination/hermes-agent/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/Niumination/hermes-agent/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/Niumination/hermes-agent/merges",
+    "archive_url": "https://api.github.com/repos/Niumination/hermes-agent/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/Niumination/hermes-agent/downloads",
+    "issues_url": "https://api.github.com/repos/Niumination/hermes-agent/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/Niumination/hermes-agent/pulls{/number}",
+    "milestones_url": "https://api.github.com/repos/Niumination/hermes-agent/milestones{/number}",
+    "notifications_url": "https://api.github.com/repos/Niumination/hermes-agent/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/Niumination/hermes-agent/labels{/name}",
+    "releases_url": "https://api.github.com/repos/Niumination/hermes-agent/releases{/id}",
+    "deployments_url": "https://api.github.com/repos/Niumination/hermes-agent/deployments",
+    "created_at": "2026-08-24T17:55:30Z",
+    "updated_at": "2026-08-24T18:24:07Z",
+    "pushed_at": "2026-09-28T04:07:30Z",
+    "git_url": "git://github.com/Niumination/hermes-agent.git",
+    "ssh_url": "git@github.com:Niumination/hermes-agent.git",
+    "clone_url": "https://github.com/Niumination/hermes-agent.git",
+    "svn_url": "https://github.com/Niumination/hermes-agent",
+    "homepage": "https://hermes-agent.nousresearch.com",
+    "size": 888484,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "language": "Python",
+    "has_issues": false,
+    "has_projects": true,
+    "has_downloads": false,
+    "has_wiki": true,
+    "has_pages": false,
+    "has_discussions": false,
+    "forks_count": 0,
+    "mirror_url": null,
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 0,
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "allow_forking": true,
+    "is_template": false,
+    "web_commit_signoff_required": false,
+    "has_pull_requests": true,
+    "pull_request_creation_policy": "all",
+    "topics": [],
+    "visibility": "public",
+    "forks": 0,
+    "open_issues": 0,
+    "watchers": 0,
+    "default_branch": "main",
+    "permissions": {
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
+    }
+  },
+  {
+    "id": 1301497480,
+    "node_id": "R_kgDOTZNGiA",
+    "name": "Niumination",
+    "full_name": "Niumination/Niumination",
+    "private": false,
+    "owner": {
+      "login": "Niumination",
+      "id": 123625275,
+      "node_id": "U_kgDOB15fOw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "html_url": "https://github.com/Niumination",
+      "followers_url": "https://api.github.com/users/Niumination/followers",
+      "following_url": "https://api.github.com/users/Niumination/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Niumination/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Niumination/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Niumination/subscriptions",
+      "organizations_url": "https://api.github.com/users/Niumination/orgs",
+      "repos_url": "https://api.github.com/users/Niumination/repos",
+      "events_url": "https://api.github.com/users/Niumination/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Niumination/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "html_url": "https://github.com/Niumination/Niumination",
+    "description": "Niumination GitHub Profile README — animated terminal hero. Deployed from agents/profile/.",
+    "fork": false,
+    "url": "https://api.github.com/repos/Niumination/Niumination",
+    "forks_url": "https://api.github.com/repos/Niumination/Niumination/forks",
+    "keys_url": "https://api.github.com/repos/Niumination/Niumination/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/Niumination/Niumination/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/Niumination/Niumination/teams",
+    "hooks_url": "https://api.github.com/repos/Niumination/Niumination/hooks",
+    "issue_events_url": "https://api.github.com/repos/Niumination/Niumination/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/Niumination/Niumination/events",
+    "assignees_url": "https://api.github.com/repos/Niumination/Niumination/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/Niumination/Niumination/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/Niumination/Niumination/tags",
+    "blobs_url": "https://api.github.com/repos/Niumination/Niumination/git/blobs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/Niumination/Niumination/git/tags{/sha}",
+    "git_refs_url": "https://api.github.com/repos/Niumination/Niumination/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/Niumination/Niumination/git/trees{/sha}",
+    "statuses_url": "https://api.github.com/repos/Niumination/Niumination/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/Niumination/Niumination/languages",
+    "stargazers_url": "https://api.github.com/repos/Niumination/Niumination/stargazers",
+    "contributors_url": "https://api.github.com/repos/Niumination/Niumination/contributors",
+    "subscribers_url": "https://api.github.com/repos/Niumination/Niumination/subscribers",
+    "subscription_url": "https://api.github.com/repos/Niumination/Niumination/subscription",
+    "commits_url": "https://api.github.com/repos/Niumination/Niumination/commits{/sha}",
+    "git_commits_url": "https://api.github.com/repos/Niumination/Niumination/git/commits{/sha}",
+    "comments_url": "https://api.github.com/repos/Niumination/Niumination/comments{/number}",
+    "issue_comment_url": "https://api.github.com/repos/Niumination/Niumination/issues/comments{/number}",
+    "contents_url": "https://api.github.com/repos/Niumination/Niumination/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/Niumination/Niumination/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/Niumination/Niumination/merges",
+    "archive_url": "https://api.github.com/repos/Niumination/Niumination/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/Niumination/Niumination/downloads",
+    "issues_url": "https://api.github.com/repos/Niumination/Niumination/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/Niumination/Niumination/pulls{/number}",
+    "milestones_url": "https://api.github.com/repos/Niumination/Niumination/milestones{/number}",
+    "notifications_url": "https://api.github.com/repos/Niumination/Niumination/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/Niumination/Niumination/labels{/name}",
+    "releases_url": "https://api.github.com/repos/Niumination/Niumination/releases{/id}",
+    "deployments_url": "https://api.github.com/repos/Niumination/Niumination/deployments",
+    "created_at": "2026-07-15T10:38:11Z",
+    "updated_at": "2026-09-27T13:36:25Z",
+    "pushed_at": "2026-09-27T13:36:21Z",
+    "git_url": "git://github.com/Niumination/Niumination.git",
+    "ssh_url": "git@github.com:Niumination/Niumination.git",
+    "clone_url": "https://github.com/Niumination/Niumination.git",
+    "svn_url": "https://github.com/Niumination/Niumination",
+    "homepage": null,
+    "size": 104,
+    "stargazers_count": 1,
+    "watchers_count": 1,
+    "language": "JavaScript",
+    "has_issues": true,
+    "has_projects": true,
+    "has_downloads": false,
+    "has_wiki": true,
+    "has_pages": false,
+    "has_discussions": false,
+    "forks_count": 0,
+    "mirror_url": null,
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 0,
+    "license": null,
+    "allow_forking": true,
+    "is_template": false,
+    "web_commit_signoff_required": false,
+    "has_pull_requests": true,
+    "pull_request_creation_policy": "all",
+    "topics": [
+      "aceh-tengah",
+      "github-profile",
+      "niumination",
+      "readme",
+      "spbe"
+    ],
+    "visibility": "public",
+    "forks": 0,
+    "open_issues": 0,
+    "watchers": 1,
+    "default_branch": "main",
+    "permissions": {
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
+    }
+  },
+  {
+    "id": 1258561446,
+    "node_id": "R_kgDOSwQfpg",
+    "name": "PemdiAcehTengah",
+    "full_name": "Niumination/PemdiAcehTengah",
+    "private": false,
+    "owner": {
+      "login": "Niumination",
+      "id": 123625275,
+      "node_id": "U_kgDOB15fOw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "html_url": "https://github.com/Niumination",
+      "followers_url": "https://api.github.com/users/Niumination/followers",
+      "following_url": "https://api.github.com/users/Niumination/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Niumination/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Niumination/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Niumination/subscriptions",
+      "organizations_url": "https://api.github.com/users/Niumination/orgs",
+      "repos_url": "https://api.github.com/users/Niumination/repos",
+      "events_url": "https://api.github.com/users/Niumination/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Niumination/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "html_url": "https://github.com/Niumination/PemdiAcehTengah",
+    "description": "Portal Digital Pemerintah Kabupaten Aceh Tengah — 52 perangkat daerah, peta proses bisnis (PermenPANRB 19/2018), dan evaluasi indeks Pemdi (PermenPANRB 8/2026). Next.js + Supabase, MIT.",
+    "fork": false,
+    "url": "https://api.github.com/repos/Niumination/PemdiAcehTengah",
+    "forks_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/forks",
+    "keys_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/teams",
+    "hooks_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/hooks",
+    "issue_events_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/events",
+    "assignees_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/tags",
+    "blobs_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/git/blobs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/git/tags{/sha}",
+    "git_refs_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/git/trees{/sha}",
+    "statuses_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/languages",
+    "stargazers_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/stargazers",
+    "contributors_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/contributors",
+    "subscribers_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/subscribers",
+    "subscription_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/subscription",
+    "commits_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/commits{/sha}",
+    "git_commits_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/git/commits{/sha}",
+    "comments_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/comments{/number}",
+    "issue_comment_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/issues/comments{/number}",
+    "contents_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/merges",
+    "archive_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/downloads",
+    "issues_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/pulls{/number}",
+    "milestones_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/milestones{/number}",
+    "notifications_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/labels{/name}",
+    "releases_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/releases{/id}",
+    "deployments_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/deployments",
+    "created_at": "2026-06-03T17:41:18Z",
+    "updated_at": "2026-09-26T17:39:16Z",
+    "pushed_at": "2026-09-26T17:39:12Z",
+    "git_url": "git://github.com/Niumination/PemdiAcehTengah.git",
+    "ssh_url": "git@github.com:Niumination/PemdiAcehTengah.git",
+    "clone_url": "https://github.com/Niumination/PemdiAcehTengah.git",
+    "svn_url": "https://github.com/Niumination/PemdiAcehTengah",
+    "homepage": "https://pemdi-aceh-tengah.vercel.app",
+    "size": 758645,
+    "stargazers_count": 1,
+    "watchers_count": 1,
+    "language": "JavaScript",
+    "has_issues": true,
+    "has_projects": true,
+    "has_downloads": false,
+    "has_wiki": true,
+    "has_pages": false,
+    "has_discussions": false,
+    "forks_count": 0,
+    "mirror_url": null,
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 0,
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "allow_forking": true,
+    "is_template": false,
+    "web_commit_signoff_required": false,
+    "has_pull_requests": true,
+    "pull_request_creation_policy": "all",
+    "topics": [],
+    "visibility": "public",
+    "forks": 0,
+    "open_issues": 0,
+    "watchers": 1,
+    "default_branch": "main",
+    "permissions": {
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
+    }
+  },
+  {
+    "id": 1267583757,
+    "node_id": "R_kgDOS43LDQ",
+    "name": "niu-cast",
+    "full_name": "Niumination/niu-cast",
+    "private": false,
+    "owner": {
+      "login": "Niumination",
+      "id": 123625275,
+      "node_id": "U_kgDOB15fOw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "html_url": "https://github.com/Niumination",
+      "followers_url": "https://api.github.com/users/Niumination/followers",
+      "following_url": "https://api.github.com/users/Niumination/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Niumination/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Niumination/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Niumination/subscriptions",
+      "organizations_url": "https://api.github.com/users/Niumination/orgs",
+      "repos_url": "https://api.github.com/users/Niumination/repos",
+      "events_url": "https://api.github.com/users/Niumination/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Niumination/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "html_url": "https://github.com/Niumination/niu-cast",
+    "description": null,
+    "fork": false,
+    "url": "https://api.github.com/repos/Niumination/niu-cast",
+    "forks_url": "https://api.github.com/repos/Niumination/niu-cast/forks",
+    "keys_url": "https://api.github.com/repos/Niumination/niu-cast/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/Niumination/niu-cast/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/Niumination/niu-cast/teams",
+    "hooks_url": "https://api.github.com/repos/Niumination/niu-cast/hooks",
+    "issue_events_url": "https://api.github.com/repos/Niumination/niu-cast/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/Niumination/niu-cast/events",
+    "assignees_url": "https://api.github.com/repos/Niumination/niu-cast/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/Niumination/niu-cast/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/Niumination/niu-cast/tags",
+    "blobs_url": "https://api.github.com/repos/Niumination/niu-cast/git/blobs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/Niumination/niu-cast/git/tags{/sha}",
+    "git_refs_url": "https://api.github.com/repos/Niumination/niu-cast/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/Niumination/niu-cast/git/trees{/sha}",
+    "statuses_url": "https://api.github.com/repos/Niumination/niu-cast/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/Niumination/niu-cast/languages",
+    "stargazers_url": "https://api.github.com/repos/Niumination/niu-cast/stargazers",
+    "contributors_url": "https://api.github.com/repos/Niumination/niu-cast/contributors",
+    "subscribers_url": "https://api.github.com/repos/Niumination/niu-cast/subscribers",
+    "subscription_url": "https://api.github.com/repos/Niumination/niu-cast/subscription",
+    "commits_url": "https://api.github.com/repos/Niumination/niu-cast/commits{/sha}",
+    "git_commits_url": "https://api.github.com/repos/Niumination/niu-cast/git/commits{/sha}",
+    "comments_url": "https://api.github.com/repos/Niumination/niu-cast/comments{/number}",
+    "issue_comment_url": "https://api.github.com/repos/Niumination/niu-cast/issues/comments{/number}",
+    "contents_url": "https://api.github.com/repos/Niumination/niu-cast/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/Niumination/niu-cast/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/Niumination/niu-cast/merges",
+    "archive_url": "https://api.github.com/repos/Niumination/niu-cast/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/Niumination/niu-cast/downloads",
+    "issues_url": "https://api.github.com/repos/Niumination/niu-cast/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/Niumination/niu-cast/pulls{/number}",
+    "milestones_url": "https://api.github.com/repos/Niumination/niu-cast/milestones{/number}",
+    "notifications_url": "https://api.github.com/repos/Niumination/niu-cast/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/Niumination/niu-cast/labels{/name}",
+    "releases_url": "https://api.github.com/repos/Niumination/niu-cast/releases{/id}",
+    "deployments_url": "https://api.github.com/repos/Niumination/niu-cast/deployments",
+    "created_at": "2026-06-12T17:13:07Z",
+    "updated_at": "2026-09-26T17:35:53Z",
+    "pushed_at": "2026-09-26T17:35:47Z",
+    "git_url": "git://github.com/Niumination/niu-cast.git",
+    "ssh_url": "git@github.com:Niumination/niu-cast.git",
+    "clone_url": "https://github.com/Niumination/niu-cast.git",
+    "svn_url": "https://github.com/Niumination/niu-cast",
+    "homepage": null,
+    "size": 163919,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "language": "Java",
+    "has_issues": true,
+    "has_projects": true,
+    "has_downloads": false,
+    "has_wiki": true,
+    "has_pages": false,
+    "has_discussions": false,
+    "forks_count": 0,
+    "mirror_url": null,
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 1,
+    "license": null,
+    "allow_forking": true,
+    "is_template": false,
+    "web_commit_signoff_required": false,
+    "has_pull_requests": true,
+    "pull_request_creation_policy": "all",
+    "topics": [],
+    "visibility": "public",
+    "forks": 0,
+    "open_issues": 1,
+    "watchers": 0,
+    "default_branch": "master",
+    "permissions": {
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
+    }
+  },
+  {
+    "id": 1303123799,
+    "node_id": "R_kgDOTawXVw",
+    "name": "niu-mission-control",
+    "full_name": "Niumination/niu-mission-control",
+    "private": false,
+    "owner": {
+      "login": "Niumination",
+      "id": 123625275,
+      "node_id": "U_kgDOB15fOw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "html_url": "https://github.com/Niumination",
+      "followers_url": "https://api.github.com/users/Niumination/followers",
+      "following_url": "https://api.github.com/users/Niumination/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Niumination/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Niumination/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Niumination/subscriptions",
+      "organizations_url": "https://api.github.com/users/Niumination/orgs",
+      "repos_url": "https://api.github.com/users/Niumination/repos",
+      "events_url": "https://api.github.com/users/Niumination/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Niumination/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "html_url": "https://github.com/Niumination/niu-mission-control",
+    "description": null,
+    "fork": false,
+    "url": "https://api.github.com/repos/Niumination/niu-mission-control",
+    "forks_url": "https://api.github.com/repos/Niumination/niu-mission-control/forks",
+    "keys_url": "https://api.github.com/repos/Niumination/niu-mission-control/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/Niumination/niu-mission-control/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/Niumination/niu-mission-control/teams",
+    "hooks_url": "https://api.github.com/repos/Niumination/niu-mission-control/hooks",
+    "issue_events_url": "https://api.github.com/repos/Niumination/niu-mission-control/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/Niumination/niu-mission-control/events",
+    "assignees_url": "https://api.github.com/repos/Niumination/niu-mission-control/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/Niumination/niu-mission-control/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/Niumination/niu-mission-control/tags",
+    "blobs_url": "https://api.github.com/repos/Niumination/niu-mission-control/git/blobs{/sha}",
+    "git_tags_url": "https://api.github.com/repos/Niumination/niu-mission-control/git/tags{/sha}",
+    "git_refs_url": "https://api.github.com/repos/Niumination/niu-mission-control/git/refs{/sha}",
+    "trees_url": "https://api.github.com/repos/Niumination/niu-mission-control/git/trees{/sha}",
+    "statuses_url": "https://api.github.com/repos/Niumination/niu-mission-control/statuses/{sha}",
+    "languages_url": "https://api.github.com/repos/Niumination/niu-mission-control/languages",
+    "stargazers_url": "https://api.github.com/repos/Niumination/niu-mission-control/stargazers",
+    "contributors_url": "https://api.github.com/repos/Niumination/niu-mission-control/contributors",
+    "subscribers_url": "https://api.github.com/repos/Niumination/niu-mission-control/subscribers",
+    "subscription_url": "https://api.github.com/repos/Niumination/niu-mission-control/subscription",
+    "commits_url": "https://api.github.com/repos/Niumination/niu-mission-control/commits{/sha}",
+    "git_commits_url": "https://api.github.com/repos/Niumination/niu-mission-control/git/commits{/sha}",
+    "comments_url": "https://api.github.com/repos/Niumination/niu-mission-control/comments{/number}",
+    "issue_comment_url": "https://api.github.com/repos/Niumination/niu-mission-control/issues/comments{/number}",
+    "contents_url": "https://api.github.com/repos/Niumination/niu-mission-control/contents/{+path}",
+    "compare_url": "https://api.github.com/repos/Niumination/niu-mission-control/compare/{base}...{head}",
+    "merges_url": "https://api.github.com/repos/Niumination/niu-mission-control/merges",
+    "archive_url": "https://api.github.com/repos/Niumination/niu-mission-control/{archive_format}{/ref}",
+    "downloads_url": "https://api.github.com/repos/Niumination/niu-mission-control/downloads",
+    "issues_url": "https://api.github.com/repos/Niumination/niu-mission-control/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/Niumination/niu-mission-control/pulls{/number}",
+    "milestones_url": "https://api.github.com/repos/Niumination/niu-mission-control/milestones{/number}",
+    "notifications_url": "https://api.github.com/repos/Niumination/niu-mission-control/notifications{?since,all,participating}",
+    "labels_url": "https://api.github.com/repos/Niumination/niu-mission-control/labels{/name}",
+    "releases_url": "https://api.github.com/repos/Niumination/niu-mission-control/releases{/id}",
+    "deployments_url": "https://api.github.com/repos/Niumination/niu-mission-control/deployments",
+    "created_at": "2026-07-16T18:33:36Z",
+    "updated_at": "2026-09-25T20:35:29Z",
+    "pushed_at": "2026-09-25T20:35:24Z",
+    "git_url": "git://github.com/Niumination/niu-mission-control.git",
+    "ssh_url": "git@github.com:Niumination/niu-mission-control.git",
+    "clone_url": "https://github.com/Niumination/niu-mission-control.git",
+    "svn_url": "https://github.com/Niumination/niu-mission-control",
+    "homepage": null,
+    "size": 14383,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "language": "TypeScript",
+    "has_issues": true,
+    "has_projects": true,
+    "has_downloads": false,
+    "has_wiki": false,
+    "has_pages": false,
+    "has_discussions": false,
+    "forks_count": 0,
+    "mirror_url": null,
+    "archived": false,
+    "disabled": false,
+    "open_issues_count": 0,
+    "license": null,
+    "allow_forking": true,
+    "is_template": false,
+    "web_commit_signoff_required": false,
+    "has_pull_requests": true,
+    "pull_request_creation_policy": "all",
+    "topics": [],
+    "visibility": "public",
+    "forks": 0,
+    "open_issues": 0,
+    "watchers": 0,
+    "default_branch": "main",
+    "permissions": {
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -404,13 +856,13 @@
     "deployments_url": "https://api.github.com/repos/Niumination/sapa-ai/deployments",
     "created_at": "2026-09-01T17:26:26Z",
     "updated_at": "2026-09-20T14:49:35Z",
-    "pushed_at": "2026-09-23T18:39:44Z",
+    "pushed_at": "2026-09-25T06:54:00Z",
     "git_url": "git://github.com/Niumination/sapa-ai.git",
     "ssh_url": "git@github.com:Niumination/sapa-ai.git",
     "clone_url": "https://github.com/Niumination/sapa-ai.git",
     "svn_url": "https://github.com/Niumination/sapa-ai",
     "homepage": "https://sapa-ai-indol.vercel.app",
-    "size": 1972,
+    "size": 2391,
     "stargazers_count": 0,
     "watchers_count": 0,
     "language": "TypeScript",
@@ -444,127 +896,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    }
-  },
-  {
-    "id": 1258561446,
-    "node_id": "R_kgDOSwQfpg",
-    "name": "PemdiAcehTengah",
-    "full_name": "Niumination/PemdiAcehTengah",
-    "private": false,
-    "owner": {
-      "login": "Niumination",
-      "id": 123625275,
-      "node_id": "U_kgDOB15fOw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "html_url": "https://github.com/Niumination",
-      "followers_url": "https://api.github.com/users/Niumination/followers",
-      "following_url": "https://api.github.com/users/Niumination/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Niumination/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Niumination/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Niumination/subscriptions",
-      "organizations_url": "https://api.github.com/users/Niumination/orgs",
-      "repos_url": "https://api.github.com/users/Niumination/repos",
-      "events_url": "https://api.github.com/users/Niumination/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Niumination/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "html_url": "https://github.com/Niumination/PemdiAcehTengah",
-    "description": "Portal Digital Pemerintah Kabupaten Aceh Tengah — 52 perangkat daerah, peta proses bisnis (PermenPANRB 19/2018), dan evaluasi indeks Pemdi (PermenPANRB 8/2026). Next.js + Supabase, MIT.",
-    "fork": false,
-    "url": "https://api.github.com/repos/Niumination/PemdiAcehTengah",
-    "forks_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/forks",
-    "keys_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/keys{/key_id}",
-    "collaborators_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/collaborators{/collaborator}",
-    "teams_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/teams",
-    "hooks_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/hooks",
-    "issue_events_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/issues/events{/number}",
-    "events_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/events",
-    "assignees_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/assignees{/user}",
-    "branches_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/branches{/branch}",
-    "tags_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/tags",
-    "blobs_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/git/blobs{/sha}",
-    "git_tags_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/git/tags{/sha}",
-    "git_refs_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/git/refs{/sha}",
-    "trees_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/git/trees{/sha}",
-    "statuses_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/statuses/{sha}",
-    "languages_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/languages",
-    "stargazers_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/stargazers",
-    "contributors_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/contributors",
-    "subscribers_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/subscribers",
-    "subscription_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/subscription",
-    "commits_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/commits{/sha}",
-    "git_commits_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/git/commits{/sha}",
-    "comments_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/comments{/number}",
-    "issue_comment_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/issues/comments{/number}",
-    "contents_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/contents/{+path}",
-    "compare_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/compare/{base}...{head}",
-    "merges_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/merges",
-    "archive_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/{archive_format}{/ref}",
-    "downloads_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/downloads",
-    "issues_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/issues{/number}",
-    "pulls_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/pulls{/number}",
-    "milestones_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/milestones{/number}",
-    "notifications_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/notifications{?since,all,participating}",
-    "labels_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/labels{/name}",
-    "releases_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/releases{/id}",
-    "deployments_url": "https://api.github.com/repos/Niumination/PemdiAcehTengah/deployments",
-    "created_at": "2026-06-03T17:41:18Z",
-    "updated_at": "2026-09-23T15:04:21Z",
-    "pushed_at": "2026-09-23T15:04:16Z",
-    "git_url": "git://github.com/Niumination/PemdiAcehTengah.git",
-    "ssh_url": "git@github.com:Niumination/PemdiAcehTengah.git",
-    "clone_url": "https://github.com/Niumination/PemdiAcehTengah.git",
-    "svn_url": "https://github.com/Niumination/PemdiAcehTengah",
-    "homepage": "https://pemdi-aceh-tengah.vercel.app",
-    "size": 758177,
-    "stargazers_count": 1,
-    "watchers_count": 1,
-    "language": "JavaScript",
-    "has_issues": true,
-    "has_projects": true,
-    "has_downloads": false,
-    "has_wiki": true,
-    "has_pages": false,
-    "has_discussions": false,
-    "forks_count": 0,
-    "mirror_url": null,
-    "archived": false,
-    "disabled": false,
-    "open_issues_count": 0,
-    "license": {
-      "key": "mit",
-      "name": "MIT License",
-      "spdx_id": "MIT",
-      "url": "https://api.github.com/licenses/mit",
-      "node_id": "MDc6TGljZW5zZTEz"
-    },
-    "allow_forking": true,
-    "is_template": false,
-    "web_commit_signoff_required": false,
-    "has_pull_requests": true,
-    "pull_request_creation_policy": "all",
-    "topics": [],
-    "visibility": "public",
-    "forks": 0,
-    "open_issues": 0,
-    "watchers": 1,
-    "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -635,14 +971,14 @@
     "releases_url": "https://api.github.com/repos/Niumination/niu-dash/releases{/id}",
     "deployments_url": "https://api.github.com/repos/Niumination/niu-dash/deployments",
     "created_at": "2026-06-03T09:03:02Z",
-    "updated_at": "2026-09-23T07:22:16Z",
-    "pushed_at": "2026-09-23T07:22:12Z",
+    "updated_at": "2026-09-25T03:44:32Z",
+    "pushed_at": "2026-09-25T03:44:28Z",
     "git_url": "git://github.com/Niumination/niu-dash.git",
     "ssh_url": "git@github.com:Niumination/niu-dash.git",
     "clone_url": "https://github.com/Niumination/niu-dash.git",
     "svn_url": "https://github.com/Niumination/niu-dash",
     "homepage": "https://niumination.github.io/niu-dash/",
-    "size": 1930,
+    "size": 1995,
     "stargazers_count": 0,
     "watchers_count": 0,
     "language": "HTML",
@@ -676,231 +1012,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    }
-  },
-  {
-    "id": 1267583757,
-    "node_id": "R_kgDOS43LDQ",
-    "name": "niu-cast",
-    "full_name": "Niumination/niu-cast",
-    "private": false,
-    "owner": {
-      "login": "Niumination",
-      "id": 123625275,
-      "node_id": "U_kgDOB15fOw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "html_url": "https://github.com/Niumination",
-      "followers_url": "https://api.github.com/users/Niumination/followers",
-      "following_url": "https://api.github.com/users/Niumination/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Niumination/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Niumination/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Niumination/subscriptions",
-      "organizations_url": "https://api.github.com/users/Niumination/orgs",
-      "repos_url": "https://api.github.com/users/Niumination/repos",
-      "events_url": "https://api.github.com/users/Niumination/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Niumination/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "html_url": "https://github.com/Niumination/niu-cast",
-    "description": null,
-    "fork": false,
-    "url": "https://api.github.com/repos/Niumination/niu-cast",
-    "forks_url": "https://api.github.com/repos/Niumination/niu-cast/forks",
-    "keys_url": "https://api.github.com/repos/Niumination/niu-cast/keys{/key_id}",
-    "collaborators_url": "https://api.github.com/repos/Niumination/niu-cast/collaborators{/collaborator}",
-    "teams_url": "https://api.github.com/repos/Niumination/niu-cast/teams",
-    "hooks_url": "https://api.github.com/repos/Niumination/niu-cast/hooks",
-    "issue_events_url": "https://api.github.com/repos/Niumination/niu-cast/issues/events{/number}",
-    "events_url": "https://api.github.com/repos/Niumination/niu-cast/events",
-    "assignees_url": "https://api.github.com/repos/Niumination/niu-cast/assignees{/user}",
-    "branches_url": "https://api.github.com/repos/Niumination/niu-cast/branches{/branch}",
-    "tags_url": "https://api.github.com/repos/Niumination/niu-cast/tags",
-    "blobs_url": "https://api.github.com/repos/Niumination/niu-cast/git/blobs{/sha}",
-    "git_tags_url": "https://api.github.com/repos/Niumination/niu-cast/git/tags{/sha}",
-    "git_refs_url": "https://api.github.com/repos/Niumination/niu-cast/git/refs{/sha}",
-    "trees_url": "https://api.github.com/repos/Niumination/niu-cast/git/trees{/sha}",
-    "statuses_url": "https://api.github.com/repos/Niumination/niu-cast/statuses/{sha}",
-    "languages_url": "https://api.github.com/repos/Niumination/niu-cast/languages",
-    "stargazers_url": "https://api.github.com/repos/Niumination/niu-cast/stargazers",
-    "contributors_url": "https://api.github.com/repos/Niumination/niu-cast/contributors",
-    "subscribers_url": "https://api.github.com/repos/Niumination/niu-cast/subscribers",
-    "subscription_url": "https://api.github.com/repos/Niumination/niu-cast/subscription",
-    "commits_url": "https://api.github.com/repos/Niumination/niu-cast/commits{/sha}",
-    "git_commits_url": "https://api.github.com/repos/Niumination/niu-cast/git/commits{/sha}",
-    "comments_url": "https://api.github.com/repos/Niumination/niu-cast/comments{/number}",
-    "issue_comment_url": "https://api.github.com/repos/Niumination/niu-cast/issues/comments{/number}",
-    "contents_url": "https://api.github.com/repos/Niumination/niu-cast/contents/{+path}",
-    "compare_url": "https://api.github.com/repos/Niumination/niu-cast/compare/{base}...{head}",
-    "merges_url": "https://api.github.com/repos/Niumination/niu-cast/merges",
-    "archive_url": "https://api.github.com/repos/Niumination/niu-cast/{archive_format}{/ref}",
-    "downloads_url": "https://api.github.com/repos/Niumination/niu-cast/downloads",
-    "issues_url": "https://api.github.com/repos/Niumination/niu-cast/issues{/number}",
-    "pulls_url": "https://api.github.com/repos/Niumination/niu-cast/pulls{/number}",
-    "milestones_url": "https://api.github.com/repos/Niumination/niu-cast/milestones{/number}",
-    "notifications_url": "https://api.github.com/repos/Niumination/niu-cast/notifications{?since,all,participating}",
-    "labels_url": "https://api.github.com/repos/Niumination/niu-cast/labels{/name}",
-    "releases_url": "https://api.github.com/repos/Niumination/niu-cast/releases{/id}",
-    "deployments_url": "https://api.github.com/repos/Niumination/niu-cast/deployments",
-    "created_at": "2026-06-12T17:13:07Z",
-    "updated_at": "2026-09-19T17:08:31Z",
-    "pushed_at": "2026-09-19T17:08:19Z",
-    "git_url": "git://github.com/Niumination/niu-cast.git",
-    "ssh_url": "git@github.com:Niumination/niu-cast.git",
-    "clone_url": "https://github.com/Niumination/niu-cast.git",
-    "svn_url": "https://github.com/Niumination/niu-cast",
-    "homepage": null,
-    "size": 163918,
-    "stargazers_count": 0,
-    "watchers_count": 0,
-    "language": "Java",
-    "has_issues": true,
-    "has_projects": true,
-    "has_downloads": false,
-    "has_wiki": true,
-    "has_pages": false,
-    "has_discussions": false,
-    "forks_count": 0,
-    "mirror_url": null,
-    "archived": false,
-    "disabled": false,
-    "open_issues_count": 1,
-    "license": null,
-    "allow_forking": true,
-    "is_template": false,
-    "web_commit_signoff_required": false,
-    "has_pull_requests": true,
-    "pull_request_creation_policy": "all",
-    "topics": [],
-    "visibility": "public",
-    "forks": 0,
-    "open_issues": 1,
-    "watchers": 0,
-    "default_branch": "master",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    }
-  },
-  {
-    "id": 1303123799,
-    "node_id": "R_kgDOTawXVw",
-    "name": "niu-mission-control",
-    "full_name": "Niumination/niu-mission-control",
-    "private": false,
-    "owner": {
-      "login": "Niumination",
-      "id": 123625275,
-      "node_id": "U_kgDOB15fOw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "html_url": "https://github.com/Niumination",
-      "followers_url": "https://api.github.com/users/Niumination/followers",
-      "following_url": "https://api.github.com/users/Niumination/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Niumination/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Niumination/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Niumination/subscriptions",
-      "organizations_url": "https://api.github.com/users/Niumination/orgs",
-      "repos_url": "https://api.github.com/users/Niumination/repos",
-      "events_url": "https://api.github.com/users/Niumination/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Niumination/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "html_url": "https://github.com/Niumination/niu-mission-control",
-    "description": null,
-    "fork": false,
-    "url": "https://api.github.com/repos/Niumination/niu-mission-control",
-    "forks_url": "https://api.github.com/repos/Niumination/niu-mission-control/forks",
-    "keys_url": "https://api.github.com/repos/Niumination/niu-mission-control/keys{/key_id}",
-    "collaborators_url": "https://api.github.com/repos/Niumination/niu-mission-control/collaborators{/collaborator}",
-    "teams_url": "https://api.github.com/repos/Niumination/niu-mission-control/teams",
-    "hooks_url": "https://api.github.com/repos/Niumination/niu-mission-control/hooks",
-    "issue_events_url": "https://api.github.com/repos/Niumination/niu-mission-control/issues/events{/number}",
-    "events_url": "https://api.github.com/repos/Niumination/niu-mission-control/events",
-    "assignees_url": "https://api.github.com/repos/Niumination/niu-mission-control/assignees{/user}",
-    "branches_url": "https://api.github.com/repos/Niumination/niu-mission-control/branches{/branch}",
-    "tags_url": "https://api.github.com/repos/Niumination/niu-mission-control/tags",
-    "blobs_url": "https://api.github.com/repos/Niumination/niu-mission-control/git/blobs{/sha}",
-    "git_tags_url": "https://api.github.com/repos/Niumination/niu-mission-control/git/tags{/sha}",
-    "git_refs_url": "https://api.github.com/repos/Niumination/niu-mission-control/git/refs{/sha}",
-    "trees_url": "https://api.github.com/repos/Niumination/niu-mission-control/git/trees{/sha}",
-    "statuses_url": "https://api.github.com/repos/Niumination/niu-mission-control/statuses/{sha}",
-    "languages_url": "https://api.github.com/repos/Niumination/niu-mission-control/languages",
-    "stargazers_url": "https://api.github.com/repos/Niumination/niu-mission-control/stargazers",
-    "contributors_url": "https://api.github.com/repos/Niumination/niu-mission-control/contributors",
-    "subscribers_url": "https://api.github.com/repos/Niumination/niu-mission-control/subscribers",
-    "subscription_url": "https://api.github.com/repos/Niumination/niu-mission-control/subscription",
-    "commits_url": "https://api.github.com/repos/Niumination/niu-mission-control/commits{/sha}",
-    "git_commits_url": "https://api.github.com/repos/Niumination/niu-mission-control/git/commits{/sha}",
-    "comments_url": "https://api.github.com/repos/Niumination/niu-mission-control/comments{/number}",
-    "issue_comment_url": "https://api.github.com/repos/Niumination/niu-mission-control/issues/comments{/number}",
-    "contents_url": "https://api.github.com/repos/Niumination/niu-mission-control/contents/{+path}",
-    "compare_url": "https://api.github.com/repos/Niumination/niu-mission-control/compare/{base}...{head}",
-    "merges_url": "https://api.github.com/repos/Niumination/niu-mission-control/merges",
-    "archive_url": "https://api.github.com/repos/Niumination/niu-mission-control/{archive_format}{/ref}",
-    "downloads_url": "https://api.github.com/repos/Niumination/niu-mission-control/downloads",
-    "issues_url": "https://api.github.com/repos/Niumination/niu-mission-control/issues{/number}",
-    "pulls_url": "https://api.github.com/repos/Niumination/niu-mission-control/pulls{/number}",
-    "milestones_url": "https://api.github.com/repos/Niumination/niu-mission-control/milestones{/number}",
-    "notifications_url": "https://api.github.com/repos/Niumination/niu-mission-control/notifications{?since,all,participating}",
-    "labels_url": "https://api.github.com/repos/Niumination/niu-mission-control/labels{/name}",
-    "releases_url": "https://api.github.com/repos/Niumination/niu-mission-control/releases{/id}",
-    "deployments_url": "https://api.github.com/repos/Niumination/niu-mission-control/deployments",
-    "created_at": "2026-07-16T18:33:36Z",
-    "updated_at": "2026-09-19T17:07:25Z",
-    "pushed_at": "2026-09-19T17:07:22Z",
-    "git_url": "git://github.com/Niumination/niu-mission-control.git",
-    "ssh_url": "git@github.com:Niumination/niu-mission-control.git",
-    "clone_url": "https://github.com/Niumination/niu-mission-control.git",
-    "svn_url": "https://github.com/Niumination/niu-mission-control",
-    "homepage": null,
-    "size": 12139,
-    "stargazers_count": 0,
-    "watchers_count": 0,
-    "language": "JavaScript",
-    "has_issues": true,
-    "has_projects": true,
-    "has_downloads": false,
-    "has_wiki": false,
-    "has_pages": false,
-    "has_discussions": false,
-    "forks_count": 0,
-    "mirror_url": null,
-    "archived": false,
-    "disabled": false,
-    "open_issues_count": 0,
-    "license": null,
-    "allow_forking": true,
-    "is_template": false,
-    "web_commit_signoff_required": false,
-    "has_pull_requests": true,
-    "pull_request_creation_policy": "all",
-    "topics": [],
-    "visibility": "public",
-    "forks": 0,
-    "open_issues": 0,
-    "watchers": 0,
-    "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -1006,11 +1122,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -1116,11 +1232,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -1226,11 +1342,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -1336,11 +1452,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -1446,11 +1562,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -1556,11 +1672,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -1666,127 +1782,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    }
-  },
-  {
-    "id": 1345251317,
-    "node_id": "R_kgDOUC7n9Q",
-    "name": "hermes-agent",
-    "full_name": "Niumination/hermes-agent",
-    "private": false,
-    "owner": {
-      "login": "Niumination",
-      "id": 123625275,
-      "node_id": "U_kgDOB15fOw",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "html_url": "https://github.com/Niumination",
-      "followers_url": "https://api.github.com/users/Niumination/followers",
-      "following_url": "https://api.github.com/users/Niumination/following{/other_user}",
-      "gists_url": "https://api.github.com/users/Niumination/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/Niumination/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/Niumination/subscriptions",
-      "organizations_url": "https://api.github.com/users/Niumination/orgs",
-      "repos_url": "https://api.github.com/users/Niumination/repos",
-      "events_url": "https://api.github.com/users/Niumination/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/Niumination/received_events",
-      "type": "User",
-      "user_view_type": "public",
-      "site_admin": false
-    },
-    "html_url": "https://github.com/Niumination/hermes-agent",
-    "description": "The agent that grows with you",
-    "fork": true,
-    "url": "https://api.github.com/repos/Niumination/hermes-agent",
-    "forks_url": "https://api.github.com/repos/Niumination/hermes-agent/forks",
-    "keys_url": "https://api.github.com/repos/Niumination/hermes-agent/keys{/key_id}",
-    "collaborators_url": "https://api.github.com/repos/Niumination/hermes-agent/collaborators{/collaborator}",
-    "teams_url": "https://api.github.com/repos/Niumination/hermes-agent/teams",
-    "hooks_url": "https://api.github.com/repos/Niumination/hermes-agent/hooks",
-    "issue_events_url": "https://api.github.com/repos/Niumination/hermes-agent/issues/events{/number}",
-    "events_url": "https://api.github.com/repos/Niumination/hermes-agent/events",
-    "assignees_url": "https://api.github.com/repos/Niumination/hermes-agent/assignees{/user}",
-    "branches_url": "https://api.github.com/repos/Niumination/hermes-agent/branches{/branch}",
-    "tags_url": "https://api.github.com/repos/Niumination/hermes-agent/tags",
-    "blobs_url": "https://api.github.com/repos/Niumination/hermes-agent/git/blobs{/sha}",
-    "git_tags_url": "https://api.github.com/repos/Niumination/hermes-agent/git/tags{/sha}",
-    "git_refs_url": "https://api.github.com/repos/Niumination/hermes-agent/git/refs{/sha}",
-    "trees_url": "https://api.github.com/repos/Niumination/hermes-agent/git/trees{/sha}",
-    "statuses_url": "https://api.github.com/repos/Niumination/hermes-agent/statuses/{sha}",
-    "languages_url": "https://api.github.com/repos/Niumination/hermes-agent/languages",
-    "stargazers_url": "https://api.github.com/repos/Niumination/hermes-agent/stargazers",
-    "contributors_url": "https://api.github.com/repos/Niumination/hermes-agent/contributors",
-    "subscribers_url": "https://api.github.com/repos/Niumination/hermes-agent/subscribers",
-    "subscription_url": "https://api.github.com/repos/Niumination/hermes-agent/subscription",
-    "commits_url": "https://api.github.com/repos/Niumination/hermes-agent/commits{/sha}",
-    "git_commits_url": "https://api.github.com/repos/Niumination/hermes-agent/git/commits{/sha}",
-    "comments_url": "https://api.github.com/repos/Niumination/hermes-agent/comments{/number}",
-    "issue_comment_url": "https://api.github.com/repos/Niumination/hermes-agent/issues/comments{/number}",
-    "contents_url": "https://api.github.com/repos/Niumination/hermes-agent/contents/{+path}",
-    "compare_url": "https://api.github.com/repos/Niumination/hermes-agent/compare/{base}...{head}",
-    "merges_url": "https://api.github.com/repos/Niumination/hermes-agent/merges",
-    "archive_url": "https://api.github.com/repos/Niumination/hermes-agent/{archive_format}{/ref}",
-    "downloads_url": "https://api.github.com/repos/Niumination/hermes-agent/downloads",
-    "issues_url": "https://api.github.com/repos/Niumination/hermes-agent/issues{/number}",
-    "pulls_url": "https://api.github.com/repos/Niumination/hermes-agent/pulls{/number}",
-    "milestones_url": "https://api.github.com/repos/Niumination/hermes-agent/milestones{/number}",
-    "notifications_url": "https://api.github.com/repos/Niumination/hermes-agent/notifications{?since,all,participating}",
-    "labels_url": "https://api.github.com/repos/Niumination/hermes-agent/labels{/name}",
-    "releases_url": "https://api.github.com/repos/Niumination/hermes-agent/releases{/id}",
-    "deployments_url": "https://api.github.com/repos/Niumination/hermes-agent/deployments",
-    "created_at": "2026-08-24T17:55:30Z",
-    "updated_at": "2026-08-24T18:24:07Z",
-    "pushed_at": "2026-09-09T18:13:10Z",
-    "git_url": "git://github.com/Niumination/hermes-agent.git",
-    "ssh_url": "git@github.com:Niumination/hermes-agent.git",
-    "clone_url": "https://github.com/Niumination/hermes-agent.git",
-    "svn_url": "https://github.com/Niumination/hermes-agent",
-    "homepage": "https://hermes-agent.nousresearch.com",
-    "size": 774843,
-    "stargazers_count": 0,
-    "watchers_count": 0,
-    "language": "Python",
-    "has_issues": false,
-    "has_projects": true,
-    "has_downloads": false,
-    "has_wiki": true,
-    "has_pages": false,
-    "has_discussions": false,
-    "forks_count": 0,
-    "mirror_url": null,
-    "archived": false,
-    "disabled": false,
-    "open_issues_count": 0,
-    "license": {
-      "key": "mit",
-      "name": "MIT License",
-      "spdx_id": "MIT",
-      "url": "https://api.github.com/licenses/mit",
-      "node_id": "MDc6TGljZW5zZTEz"
-    },
-    "allow_forking": true,
-    "is_template": false,
-    "web_commit_signoff_required": false,
-    "has_pull_requests": true,
-    "pull_request_creation_policy": "all",
-    "topics": [],
-    "visibility": "public",
-    "forks": 0,
-    "open_issues": 0,
-    "watchers": 0,
-    "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -1892,11 +1892,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -2002,11 +2002,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -2112,11 +2112,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -2222,11 +2222,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -2332,11 +2332,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -2469,11 +2469,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -2579,11 +2579,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -2695,11 +2695,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -2805,11 +2805,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -2915,11 +2915,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -3031,11 +3031,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -3141,11 +3141,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -3251,11 +3251,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -3367,11 +3367,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -3483,11 +3483,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -3593,11 +3593,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -3703,11 +3703,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -3819,11 +3819,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -3935,11 +3935,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -4051,11 +4051,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -4167,11 +4167,11 @@
     "watchers": 0,
     "default_branch": "dev",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -4283,11 +4283,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -4393,11 +4393,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -4503,11 +4503,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -4613,11 +4613,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -4723,11 +4723,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -4833,11 +4833,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -4943,11 +4943,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -5059,11 +5059,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -5169,11 +5169,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -5285,11 +5285,11 @@
     "watchers": 0,
     "default_branch": "master",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -5401,11 +5401,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -5511,11 +5511,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -5627,11 +5627,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -5743,11 +5743,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -5853,11 +5853,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -5963,11 +5963,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -6079,11 +6079,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -6189,11 +6189,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -6305,11 +6305,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -6415,11 +6415,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -6525,11 +6525,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -6641,11 +6641,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -6751,11 +6751,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -6861,11 +6861,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -6977,11 +6977,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -7093,11 +7093,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -7209,11 +7209,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -7325,11 +7325,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -7441,11 +7441,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -7551,11 +7551,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -7667,11 +7667,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -7783,11 +7783,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -7899,11 +7899,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -8015,11 +8015,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -8131,11 +8131,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -8247,11 +8247,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -8363,11 +8363,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -8479,11 +8479,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -8595,11 +8595,11 @@
     "watchers": 0,
     "default_branch": "master",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -8705,11 +8705,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -8815,11 +8815,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -8925,11 +8925,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -9035,11 +9035,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -9151,11 +9151,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -9261,11 +9261,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -9377,11 +9377,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -9487,11 +9487,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -9603,11 +9603,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -9713,11 +9713,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -9829,11 +9829,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -9945,11 +9945,11 @@
     "watchers": 0,
     "default_branch": "master",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   },
   {
@@ -10055,11 +10055,11 @@
     "watchers": 0,
     "default_branch": "main",
     "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
+      "admin": false,
+      "maintain": false,
+      "push": false,
+      "triage": false,
+      "pull": false
     }
   }
 ]
