@@ -4,6 +4,7 @@ import './globals.css';
 import WebVitals from '@/components/WebVitals';
 import { LocaleProvider } from '@/components/LocaleProvider';
 import ServiceWorkerRegister from '@/components/ServiceWorkerRegister';
+import ChatWidget from '@/components/ChatWidget';
 import T from '@/components/T';
 import { SITE } from '@/lib/site.config';
 import { siteUrl } from '@/lib/env';
@@ -129,6 +130,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <LocaleProvider>
           {children}
+          {/* Bubble chat CS (TRTC) — render null tanpa konfigurasi & di /cs;
+              SDK chat di-lazy-load saat bubble pertama dibuka. */}
+          <ChatWidget />
         </LocaleProvider>
         <WebVitals />
         <ServiceWorkerRegister />

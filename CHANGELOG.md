@@ -4,7 +4,40 @@ Semua perubahan penting proyek ini didokumentasikan di sini — satu entri
 per fase pengerjaan, lengkap dengan commit yang bisa dilacak.
 Format mengikuti [Keep a Changelog](https://keepachangelog.com/id/1.1.);
 proyek ini tidak memakai versioning semver ketat (satu repo, satu situs).
- 
+
+## [Fitur 2026.18] — Chat CS: NIU-Bot (FAQ + AI BYOK) + eskalasi manusia — 2026-10-06
+
+> Branch `feat/trtc-cs-chat`. Backend Tencent RTC Chat (paket gratis 1.000
+> MAU/bulan selamanya). Fitur NONAKTIF total tanpa env `NEXT_PUBLIC_TRTC_SDK_APP_ID`
+> (widget render null) — aman digabung sebelum kredensial diisi.
+
+- **Widget pengunjung** (`components/ChatWidget.tsx`): bubble melayang di semua
+  halaman, dipasang di root layout; SDK `@tencentcloud/chat@^3.6.7` di-dynamic-import
+  saat bubble PERTAMA dibuka (JS initial tidak berubah — menjaga temuan budget
+  AUDIT-2026.17). Tamu login sebagai `guest_*` persisten (localStorage); riwayat
+  percakapan di-roam Tencent. Dwibahasa penuh (25 kunci `chat.*`/`cs.*` baru,
+  paritas id=en). Tersembunyi otomatis di `/cs`.
+- **NIU-Bot** (`lib/trtc/bot-brain.ts` + route `/api/chat/bot`): webhook callback
+  `C2C.CallbackAfterSendMsg`; jawaban dua lapis — aturan FAQ deterministik yang
+  membangun harga/kontak DARI `lib/site.config` (sinkron otomatis bila paket jasa
+  berubah), lalu LLM BYOK opsional (OpenAI-compatible, aktif bila `LLM_API_KEY`
+  terisi; gagal -> FAQ). ACK cepat + pemrosesan latar via `after()`; balasan via
+  Chat REST API (`adminapi.trtc.io`).
+- **Eskalasi ke manusia**: tombol "Sambungkan ke manusia" mengalihkan pesan tamu
+  ke akun `niu_owner`; pemilik membalas dari halaman inbox baru **`/cs`**
+  (`app/cs` + `components/CsInbox.tsx`, noindex, digerbang token `CS_ADMIN_TOKEN`
+  via `/api/chat/owner-sig` — timingSafeEqual, sig 12 jam).
+- **UserSig TLSSigAPIv2 murni Node** (`lib/trtc/signature.ts`): HMAC-SHA256 +
+  deflate + base64url, tanpa dependensi; route `/api/chat/usersig` hanya
+  menerbitkan sig `guest_*` (jalur penyamaran sebagai owner/bot tertutup).
+- **Rate limiting** (`lib/ratelimit.ts`): fixed-window in-memory + Upstash Redis
+  REST opsional; usersig 30/m/IP, owner-sig 10/10mnt/IP, bot 12 pesan/mnt/tamu
+  (notice sekali per 5 mnt) — menahan spam & biaya LLM.
+- **Infra**: CSP report-only `connect-src` + host `*.trtc.io`/`*.im.qcloud.com`
+  (pantau `/api/csp-report` sebelum enforcement); `sw.js` v4 — `/api/*` tidak
+  pernah di-cache (respons personal); `.env.example` + panduan lengkap
+  `docs/TRTC-CHAT.md`.
+
 ## [Produksi 2026.17] — Audit menyeluruh & peta jalan pasca-Fase 2 — 2026-09-23
 
 - **`docs/AUDIT-2026.17.md`**: dokumen khusus — posisi terverifikasi, inventaris

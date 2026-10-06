@@ -14,7 +14,7 @@
  *  - Bump VERSION saat strategi/aset inti berubah.
  */
 
-const VERSION = 'niu-sw-v3';
+const VERSION = 'niu-sw-v4';
 const RUNTIME_MAX = 60;
 const CORE = [
   '/',
@@ -88,6 +88,10 @@ self.addEventListener('fetch', (event) => {
 
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return; // hanya same-origin
+
+  // Endpoint /api/* (chat usersig, webhook, pay, dsb.) JANGAN pernah
+  // di-cache: responsnya personal/sensitif dan harus selalu segar (2026.18).
+  if (url.pathname.startsWith('/api/')) return;
 
   // Navigasi halaman: network-first, salin ke cache runtime (dibatasi).
   if (req.mode === 'navigate') {

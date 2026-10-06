@@ -53,7 +53,9 @@ const nextConfig: NextConfig = {
               "style-src 'self' 'unsafe-inline'",
               "img-src 'self' data: blob: https:",
               "font-src 'self' data:",
-              "connect-src 'self' https://api.github.com https://vitals.vercel-insights.com https://*.insights.vercel.com",
+              // Host Tencent RTC Chat (2026.18): SDK web IM ke endpoint
+              // trtc.io (international) & im.qcloud.com (fallback region).
+              "connect-src 'self' https://api.github.com https://vitals.vercel-insights.com https://*.insights.vercel.com https://*.trtc.io wss://*.trtc.io https://*.im.qcloud.com wss://*.im.qcloud.com",
               "object-src 'none'",
               "base-uri 'self'",
               "form-action 'self'",
