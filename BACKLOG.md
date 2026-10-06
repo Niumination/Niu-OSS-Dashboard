@@ -15,3 +15,12 @@
 - [ ] **Fase 6 — Distribusi** — widget embed `/embed/repo/[slug]`, badge SVG ala shields, `/share` vCard + QR — @niu-oss-dashboard
 - [ ] **Fase 7 — Kualitas** — E2E Playwright alur kritis, Lighthouse per-PR, Sentry penuh, budget bundel di CI — @niu-oss-dashboard
 - [ ] **Fase 8 — Monetisasi lanjutan** — produk digital + portal klien ringan (setelah ada trafik) — @niu-oss-dashboard
+
+## Recent Activity
+
+- [x] **Data regen pasca penghapusan Mobile-Harness** — 90→89 repo (`f8466b5`) — @niu-oss-dashboard
+- [x] **Uptime check berkala** — CI uptime monitor (`9145663`, `aee41a1`) — @niu-oss-dashboard
+
+---
+
+*Terakhir diperbarui: 6 Okt 2026 — Fase 4 done, Fase 5-8 pending*
