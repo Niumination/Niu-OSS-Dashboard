@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-11T16:45:40.468Z",
+ "generatedAt": "2026-10-11T20:38:45.109Z",
  "source": "data/uptime.json (GitHub Actions, tiap 15 menit)",
  "intervalMinutes": 15,
  "sites": [
@@ -8,12 +8,12 @@
    "url": "https://niumination.web.id",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 546,
+   "avgMs30d": 548,
    "days": 21,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-09-23T09:38:04.714Z",
-    "ms": 1062,
+    "t": "2026-09-23T14:24:51.124Z",
+    "ms": 774,
     "ok": true
    }
   },
@@ -22,12 +22,12 @@
    "url": "https://niu-oss.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 404,
+   "avgMs30d": 405,
    "days": 21,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-09-23T09:38:04.714Z",
-    "ms": 618,
+    "t": "2026-09-23T14:24:51.124Z",
+    "ms": 789,
     "ok": true
    }
   },
@@ -40,22 +40,22 @@
    "days": 24,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-09-23T09:38:04.714Z",
-    "ms": 214,
+    "t": "2026-09-23T14:24:51.124Z",
+    "ms": 130,
     "ok": true
    }
   },
   {
    "repo": "PemdiAcehTengah",
    "url": "https://pemdi-aceh-tengah.vercel.app",
-   "uptime7d": 96.77,
-   "uptime30d": 99.14,
-   "avgMs30d": 1154,
+   "uptime7d": 96.88,
+   "uptime30d": 99.15,
+   "avgMs30d": 1155,
    "days": 24,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-09-23T09:38:04.714Z",
-    "ms": 1427,
+    "t": "2026-09-23T14:24:51.124Z",
+    "ms": 1372,
     "ok": true
    }
   },
@@ -68,8 +68,8 @@
    "days": 24,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-09-23T09:38:04.714Z",
-    "ms": 246,
+    "t": "2026-09-23T14:24:51.124Z",
+    "ms": 268,
     "ok": true
    }
   },
@@ -78,12 +78,12 @@
    "url": "https://kms-spbe.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 378,
+   "avgMs30d": 380,
    "days": 21,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-09-23T09:38:04.714Z",
-    "ms": 278,
+    "t": "2026-09-23T14:24:51.124Z",
+    "ms": 420,
     "ok": true
    }
   },
@@ -91,13 +91,13 @@
    "repo": "kune-ya.com",
    "url": "https://kune-ya-com.vercel.app",
    "uptime7d": 0,
-   "uptime30d": 0.86,
-   "avgMs30d": 318,
+   "uptime30d": 0.85,
+   "avgMs30d": 319,
    "days": 24,
    "lastOk": null,
    "lastCheck": {
-    "t": "2026-09-23T09:38:04.714Z",
-    "ms": 212,
+    "t": "2026-09-23T14:24:51.124Z",
+    "ms": 339,
     "ok": false
    }
   },
@@ -105,12 +105,12 @@
    "repo": "mata-aihackfest-2026",
    "url": "https://watchdog-mata.niumination.web.id",
    "uptime7d": 0,
-   "uptime30d": 7.76,
+   "uptime30d": 7.69,
    "avgMs30d": 215,
    "days": 24,
    "lastOk": null,
    "lastCheck": {
-    "t": "2026-09-23T09:38:04.714Z",
+    "t": "2026-09-23T14:24:51.124Z",
     "ms": null,
     "ok": false
    }
@@ -120,12 +120,12 @@
    "url": "https://niumination.github.io/Niu-LKH/",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 291,
+   "avgMs30d": 292,
    "days": 24,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-09-23T09:38:04.714Z",
-    "ms": 228,
+    "t": "2026-09-23T14:24:51.124Z",
+    "ms": 421,
     "ok": true
    }
   },
@@ -138,8 +138,8 @@
    "days": 21,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-09-23T09:38:04.714Z",
-    "ms": 717,
+    "t": "2026-09-23T14:24:51.124Z",
+    "ms": 742,
     "ok": true
    }
   }
