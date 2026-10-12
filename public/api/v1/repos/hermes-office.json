@@ -1,0 +1,23 @@
+{
+ "generatedAt": "2026-10-12T10:02:27.267Z",
+ "repo": {
+  "name": "hermes-office",
+  "fullName": "Niumination/hermes-office",
+  "description": "Pixel-art real-time virtual office visualizing the Niumination Hermes Agent ecosystem (Cloud + Mac). Adapted from Claude-Office (MIT).",
+  "descriptionEn": null,
+  "url": "https://github.com/Niumination/hermes-office",
+  "homepage": null,
+  "language": "JavaScript",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": "NOASSERTION",
+  "sizeKb": 100181,
+  "createdAt": "2026-10-03T12:38:13Z",
+  "pushedAt": "2026-10-11T17:38:31Z"
+ }
+}

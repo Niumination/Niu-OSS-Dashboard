@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-05T09:51:18.146Z",
+ "generatedAt": "2026-10-12T10:02:27.267Z",
  "repo": {
   "name": "Niu-OSS-Dashboard",
   "fullName": "Niumination/Niu-OSS-Dashboard",
@@ -16,8 +16,8 @@
   "fork": false,
   "archived": false,
   "license": null,
-  "sizeKb": 1284,
+  "sizeKb": 1256,
   "createdAt": "2026-09-19T09:44:20Z",
-  "pushedAt": "2026-10-05T05:29:49Z"
+  "pushedAt": "2026-10-12T03:50:06Z"
  }
 }

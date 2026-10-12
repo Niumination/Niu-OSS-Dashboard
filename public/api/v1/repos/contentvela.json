@@ -1,0 +1,23 @@
+{
+ "generatedAt": "2026-10-12T10:02:27.267Z",
+ "repo": {
+  "name": "contentvela",
+  "fullName": "Niumination/contentvela",
+  "description": "Content Creator Workspace - workflow konten idea → draft → publish → analytics (static, client-side)",
+  "descriptionEn": null,
+  "url": "https://github.com/Niumination/contentvela",
+  "homepage": null,
+  "language": "TypeScript",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": null,
+  "sizeKb": 83,
+  "createdAt": "2026-10-07T03:07:23Z",
+  "pushedAt": "2026-10-07T03:24:25Z"
+ }
+}

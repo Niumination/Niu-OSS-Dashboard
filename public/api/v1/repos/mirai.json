@@ -1,0 +1,23 @@
+{
+ "generatedAt": "2026-10-12T10:02:27.267Z",
+ "repo": {
+  "name": "mirai",
+  "fullName": "Niumination/mirai",
+  "description": "MIRAI Mission Control — mission-control server + wiki memory + fleet (Niumination, macOS)",
+  "descriptionEn": null,
+  "url": "https://github.com/Niumination/mirai",
+  "homepage": null,
+  "language": "JavaScript",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": null,
+  "sizeKb": 10963,
+  "createdAt": "2026-10-10T13:46:03Z",
+  "pushedAt": "2026-10-11T18:08:08Z"
+ }
+}
