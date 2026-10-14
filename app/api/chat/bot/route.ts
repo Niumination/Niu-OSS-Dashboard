@@ -78,7 +78,10 @@ export async function POST(req: NextRequest) {
   return NextResponse.json(OK);
 }
 
-/** Kirim pesan teks dari akun bot via Chat REST API (internasional: adminapi.trtc.io). */
+/** Kirim pesan teks dari akun bot via Chat REST API (endpoint resmi per-region).
+ *  Catatan: domain `adminapi.trtc.io` tidak terdaftar di DNS publik. Endpoint
+ *  resmi per dokumentasi Tencent: Singapore `adminapisgp.im.qcloud.com`
+ *  (backup: `adminapisgp.my-imcloud.com`). Override via env `TRTC_REST_BASE`. */
 async function sendBotText(
   cfg: ReturnType<typeof trtcConfig>,
   toAccount: string,
@@ -91,8 +94,12 @@ async function sendBotText(
     expireSeconds: 3600,
   });
 
+  const restBase =
+    process.env.TRTC_REST_BASE?.replace(/\/+$/, '') ||
+    'https://adminapisgp.im.qcloud.com';
+
   const url =
-    `https://adminapi.trtc.io/v4/openim/sendmsg` +
+    `${restBase}/v4/openim/sendmsg` +
     `?sdkappid=${cfg.sdkAppId}` +
     `&identifier=${encodeURIComponent(cfg.adminId)}` +
     `&usersig=${encodeURIComponent(usersig)}` +
