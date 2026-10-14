@@ -25,7 +25,11 @@ const idr = new Intl.NumberFormat('id-ID');
 const SERVICES_URL = `${SITE.github.replace('github.com/Niumination', 'niumination.web.id')}/services`;
 
 function servicesText(l: Locale): string {
-  const lines = SERVICE_PACKAGES.map((p) => `• ${p.name} — Rp ${idr.format(p.price)} ${p.unit}`);
+  const lines = SERVICE_PACKAGES.map((p) => {
+    const name = l === 'id' ? p.name : p.name_en;
+    const unit = l === 'id' ? p.unit : p.unit_en;
+    return `• ${name} — Rp ${idr.format(p.price)} ${unit}`;
+  });
   return l === 'id'
     ? `Tiga layanan utama:\n${lines.join('\n')}\nDetail & tombol "Mulai proses": ${SERVICES_URL}`
     : `Three main services:\n${lines.join('\n')}\nDetails & kick-off button: ${SERVICES_URL}`;

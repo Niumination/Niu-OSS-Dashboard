@@ -82,11 +82,31 @@ export async function POST(req: NextRequest) {
  *  Catatan: domain `adminapi.trtc.io` tidak terdaftar di DNS publik. Endpoint
  *  resmi per dokumentasi Tencent: Singapore `adminapisgp.im.qcloud.com`
  *  (backup: `adminapisgp.my-imcloud.com`). Override via env `TRTC_REST_BASE`. */
+const TRTC_FLAKY_RETRIES = 2;
+const TRTC_RETRY_DELAY_MS = 1500;
+
 async function sendBotText(
   cfg: ReturnType<typeof trtcConfig>,
   toAccount: string,
   text: string,
 ) {
+  let lastError: Error | null = null;
+  for (let attempt = 0; attempt <= TRTC_FLAKY_RETRIES; attempt++) {
+    const result = await sendBotTextOnce(cfg, toAccount, text);
+    if (result.ok) return;
+    lastError = result.error;
+    // 70003 = UserSig ditolak padahal valid (flaky sisi Tencent). Retry.
+    if (result.errorCode !== 70003 || attempt === TRTC_FLAKY_RETRIES) break;
+    await new Promise((r) => setTimeout(r, TRTC_RETRY_DELAY_MS * (attempt + 1)));
+  }
+  throw lastError ?? new Error('sendmsg gagal: unknown error');
+}
+
+async function sendBotTextOnce(
+  cfg: ReturnType<typeof trtcConfig>,
+  toAccount: string,
+  text: string,
+): Promise<{ ok: true } | { ok: false; error: Error; errorCode?: number }> {
   const usersig = generateUserSig({
     sdkAppId: cfg.sdkAppId,
     secretKey: cfg.secretKey,
@@ -106,22 +126,29 @@ async function sendBotText(
     `&random=${Math.floor(Math.random() * 2 ** 32)}` +
     `&contenttype=json`;
 
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({
-      SyncOtherMachine: 1,
-      From_Account: cfg.botId,
-      To_Account: toAccount,
-      MsgRandom: Math.floor(Math.random() * 2 ** 31),
-      MsgTimeStamp: Math.floor(Date.now() / 1000),
-      MsgBody: [{ MsgType: 'TIMTextElem', MsgContent: { Text: text.slice(0, 1500) } }],
-    }),
-    signal: AbortSignal.timeout(10_000),
-  });
+  try {
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({
+        SyncOtherMachine: 1,
+        From_Account: cfg.botId,
+        To_Account: toAccount,
+        MsgRandom: Math.floor(Math.random() * 2 ** 31),
+        MsgTimeStamp: Math.floor(Date.now() / 1000),
+        MsgBody: [{ MsgType: 'TIMTextElem', MsgContent: { Text: text.slice(0, 1500) } }],
+      }),
+      signal: AbortSignal.timeout(10_000),
+    });
 
-  const json = (await res.json()) as { ActionStatus?: string; ErrorCode?: number };
-  if (json.ActionStatus !== 'OK' || json.ErrorCode !== 0) {
-    throw new Error(`sendmsg gagal: ${JSON.stringify(json)}`);
+    const json = (await res.json()) as { ActionStatus?: string; ErrorCode?: number };
+    if (json.ActionStatus === 'OK' && json.ErrorCode === 0) return { ok: true };
+    return {
+      ok: false,
+      error: new Error(`sendmsg gagal: ${JSON.stringify(json)}`),
+      errorCode: json.ErrorCode,
+    };
+  } catch (e) {
+    return { ok: false, error: e instanceof Error ? e : new Error(String(e)) };
   }
 }

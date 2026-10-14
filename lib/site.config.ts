@@ -44,9 +44,11 @@ export const SITE = {
 export interface ServicePackage {
   id: string;
   name: string;
+  name_en: string;
   icon: 'consult' | 'audit' | 'custom';
   price: number;
   unit: string;
+  unit_en: string;
   blurb: string;
   features: string[];
   highlight?: boolean;
@@ -56,9 +58,11 @@ export const SERVICE_PACKAGES: ServicePackage[] = [
   {
     id: 'konsultasi',
     name: 'Konsultasi Teknis',
+    name_en: 'Technical Consultation',
     icon: 'consult',
     price: 750_000,
     unit: '/ sesi 60 menit',
+    unit_en: '/ 60-minute session',
     blurb: 'Sesi fokus 1-on-1 untuk kode, arsitektur, atau setup AI tooling tim Anda.',
     features: [
       'Code review mendalam (PR / repo)',
@@ -70,9 +74,11 @@ export const SERVICE_PACKAGES: ServicePackage[] = [
   {
     id: 'audit',
     name: 'Audit & Optimasi',
+    name_en: 'Audit & Optimization',
     icon: 'audit',
     price: 2_500_000,
     unit: '/ proyek',
+    unit_en: '/ project',
     blurb: 'Pembedah total aplikasi Anda: performa, keamanan, SEO — plus peta perbaikannya.',
     features: [
       'Audit performance, security & SEO',
@@ -85,9 +91,11 @@ export const SERVICE_PACKAGES: ServicePackage[] = [
   {
     id: 'custom',
     name: 'Aplikasi Web Custom',
+    name_en: 'Custom Web App',
     icon: 'custom',
     price: 7_500_000,
     unit: '/ mulai dari',
+    unit_en: '/ starting at',
     blurb: 'Dari brief sampai live di Vercel — dashboard, portal, atau aplikasi web lengkap.',
     features: [
       'Dari brief sampai deploy (Vercel)',
