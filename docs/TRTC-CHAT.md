@@ -89,3 +89,17 @@ Pemilik  : /cs -> POST /api/chat/owner-sig (gerbang CS_ADMIN_TOKEN) -> inbox
   webhook bot → email/Telegram saat ada pesan manusia baru.
 - Moderasi konten Tencent (Text Moderation) bisa diaktifkan di console tanpa
   ubah kode.
+
+### TODO 2026-10-14 (verifikasi end-to-end 14 Okt 2026)
+
+- [ ] **B1 — Nama paket bilingual.** `SERVICE_PACKAGES` di `lib/site.config.ts`
+      hanya punya nama ID ("Konsultasi Teknis" dst). Jawaban EN jadi campur:
+      intro "Three main services:" tapi baris paket masih ID. Tambah field
+      `name_en`/`unit_en` dan pakai di `servicesText(l)` bot.
+- [ ] **B2 — Retry 70003 pada `sendBotText`.** API Tencent ~20% panggilan
+      menolak UserSig valid (flaky, sisi Tencent; retry 1–2x langsung OK).
+      `after()` di route bot hanya 1 percobaan — tamu tidak dapat balasan
+      saat terkena. Tambah retry backoff singkat (2x, jeda 1–2s).
+- [ ] **B3 — Akun test E2E** `guest_e2elive01/02` terdaftar di app TRTC
+      (dipakai verifikasi 14 Okt). Hapus via console → Chat → Users bila
+      ingin bersih; tidak menggangu produksi.
