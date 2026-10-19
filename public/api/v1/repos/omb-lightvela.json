@@ -1,0 +1,23 @@
+{
+ "generatedAt": "2026-10-19T08:19:32.847Z",
+ "repo": {
+  "name": "omb-lightvela",
+  "fullName": "Niumination/omb-lightvela",
+  "description": "OpenMausBot (OMB) LightVela deployment - Docker stack aktif di maus.abstract.biz.id",
+  "descriptionEn": null,
+  "url": "https://github.com/Niumination/omb-lightvela",
+  "homepage": null,
+  "language": "Shell",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": "NOASSERTION",
+  "sizeKb": 25,
+  "createdAt": "2026-10-18T16:59:53Z",
+  "pushedAt": "2026-10-19T04:07:31Z"
+ }
+}

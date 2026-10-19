@@ -1,0 +1,23 @@
+{
+ "generatedAt": "2026-10-19T08:19:32.847Z",
+ "repo": {
+  "name": "hypr-rust",
+  "fullName": "Niumination/hypr-rust",
+  "description": "Hypr-Rust — Rust tiling window manager/controller research for Windows 11 x64 & Intel macOS (docs + layout-core scaffold)",
+  "descriptionEn": null,
+  "url": "https://github.com/Niumination/hypr-rust",
+  "homepage": null,
+  "language": "Rust",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 3,
+  "fork": false,
+  "archived": false,
+  "license": null,
+  "sizeKb": 177,
+  "createdAt": "2026-10-16T18:06:36Z",
+  "pushedAt": "2026-10-19T08:01:30Z"
+ }
+}

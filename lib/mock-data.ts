@@ -1,4 +1,4 @@
-// AUTO-GENERATED oleh scripts/gen-mock.mjs pada 2026-10-12T10:02:27.211Z
+// AUTO-GENERATED oleh scripts/gen-mock.mjs pada 2026-10-19T08:19:32.794Z
 // Sumber: GitHub API (fetch langsung)
 // Snapshot nyata akun GitHub — dipakai OTOMATIS saat GitHub API rate-limit
 // atau saat build static export (GitHub Pages). Regenerasi: npm run gen:mock
@@ -16,10 +16,29 @@ export const MOCK_SNAPSHOT: Snapshot = {
     "twitter": null,
     "followers": 3,
     "following": 20,
-    "publicRepos": 93,
+    "publicRepos": 95,
     "joinedAt": "2023-01-26T08:06:49Z"
   },
   "repos": [
+    {
+      "name": "hermes-office",
+      "fullName": "Niumination/hermes-office",
+      "url": "https://github.com/Niumination/hermes-office",
+      "description": "Pixel-art real-time virtual office visualizing the Niumination Hermes Agent ecosystem (Cloud + Mac). Adapted from Claude-Office (MIT).",
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 4,
+      "topics": [],
+      "homepage": null,
+      "fork": false,
+      "archived": false,
+      "license": "NOASSERTION",
+      "size": 101867,
+      "createdAt": "2026-10-03T12:38:13Z",
+      "pushedAt": "2026-10-19T08:16:36Z"
+    },
     {
       "name": "ecosystem-config",
       "fullName": "Niumination/ecosystem-config",
@@ -35,28 +54,28 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "fork": false,
       "archived": false,
       "license": null,
-      "size": 46441,
+      "size": 46882,
       "createdAt": "2026-07-16T17:39:24Z",
-      "pushedAt": "2026-10-12T06:14:24Z"
+      "pushedAt": "2026-10-19T08:02:52Z"
     },
     {
-      "name": "niu-gayo-agroclimate",
-      "fullName": "Niumination/niu-gayo-agroclimate",
-      "url": "https://github.com/Niumination/niu-gayo-agroclimate",
-      "description": "Sistem Presisi Cuaca Pertanian Kopi Arabika Gayo & Mitigasi Bencana Aceh Tengah (WeatherNext Pipeline)",
-      "language": "JavaScript",
+      "name": "hypr-rust",
+      "fullName": "Niumination/hypr-rust",
+      "url": "https://github.com/Niumination/hypr-rust",
+      "description": "Hypr-Rust — Rust tiling window manager/controller research for Windows 11 x64 & Intel macOS (docs + layout-core scaffold)",
+      "language": "Rust",
       "stars": 0,
       "forks": 0,
       "watchers": 0,
-      "openIssues": 0,
+      "openIssues": 3,
       "topics": [],
       "homepage": null,
       "fork": false,
       "archived": false,
-      "license": "MIT",
-      "size": 236,
-      "createdAt": "2026-09-07T08:11:54Z",
-      "pushedAt": "2026-10-12T05:24:58Z"
+      "license": null,
+      "size": 177,
+      "createdAt": "2026-10-16T18:06:36Z",
+      "pushedAt": "2026-10-19T08:01:30Z"
     },
     {
       "name": "Niu-OSS-Dashboard",
@@ -73,54 +92,16 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "fork": false,
       "archived": false,
       "license": null,
-      "size": 1256,
+      "size": 1442,
       "createdAt": "2026-09-19T09:44:20Z",
-      "pushedAt": "2026-10-12T03:50:06Z"
+      "pushedAt": "2026-10-19T06:07:36Z"
     },
     {
-      "name": "mirai",
-      "fullName": "Niumination/mirai",
-      "url": "https://github.com/Niumination/mirai",
-      "description": "MIRAI Mission Control — mission-control server + wiki memory + fleet (Niumination, macOS)",
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "openIssues": 0,
-      "topics": [],
-      "homepage": null,
-      "fork": false,
-      "archived": false,
-      "license": null,
-      "size": 10963,
-      "createdAt": "2026-10-10T13:46:03Z",
-      "pushedAt": "2026-10-11T18:08:08Z"
-    },
-    {
-      "name": "kelas",
-      "fullName": "Niumination/kelas",
-      "url": "https://github.com/Niumination/kelas",
-      "description": null,
-      "language": "TypeScript",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "openIssues": 0,
-      "topics": [],
-      "homepage": "https://kelas-hazel.vercel.app",
-      "fork": false,
-      "archived": false,
-      "license": "NOASSERTION",
-      "size": 322,
-      "createdAt": "2026-10-10T08:14:37Z",
-      "pushedAt": "2026-10-11T17:41:45Z"
-    },
-    {
-      "name": "hermes-office",
-      "fullName": "Niumination/hermes-office",
-      "url": "https://github.com/Niumination/hermes-office",
-      "description": "Pixel-art real-time virtual office visualizing the Niumination Hermes Agent ecosystem (Cloud + Mac). Adapted from Claude-Office (MIT).",
-      "language": "JavaScript",
+      "name": "omb-lightvela",
+      "fullName": "Niumination/omb-lightvela",
+      "url": "https://github.com/Niumination/omb-lightvela",
+      "description": "OpenMausBot (OMB) LightVela deployment - Docker stack aktif di maus.abstract.biz.id",
+      "language": "Shell",
       "stars": 0,
       "forks": 0,
       "watchers": 0,
@@ -130,9 +111,28 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "fork": false,
       "archived": false,
       "license": "NOASSERTION",
-      "size": 100181,
-      "createdAt": "2026-10-03T12:38:13Z",
-      "pushedAt": "2026-10-11T17:38:31Z"
+      "size": 25,
+      "createdAt": "2026-10-18T16:59:53Z",
+      "pushedAt": "2026-10-19T04:07:31Z"
+    },
+    {
+      "name": "niu-gayo-agroclimate",
+      "fullName": "Niumination/niu-gayo-agroclimate",
+      "url": "https://github.com/Niumination/niu-gayo-agroclimate",
+      "description": "Sistem Presisi Cuaca Pertanian Kopi Arabika Gayo & Mitigasi Bencana Aceh Tengah (WeatherNext Pipeline)",
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 1,
+      "topics": [],
+      "homepage": null,
+      "fork": false,
+      "archived": false,
+      "license": "MIT",
+      "size": 1469,
+      "createdAt": "2026-09-07T08:11:54Z",
+      "pushedAt": "2026-10-18T18:16:09Z"
     },
     {
       "name": "Niumination",
@@ -155,9 +155,47 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "fork": false,
       "archived": false,
       "license": null,
-      "size": 72,
+      "size": 84,
       "createdAt": "2026-07-15T10:38:11Z",
-      "pushedAt": "2026-10-11T14:43:39Z"
+      "pushedAt": "2026-10-18T12:29:17Z"
+    },
+    {
+      "name": "mirai",
+      "fullName": "Niumination/mirai",
+      "url": "https://github.com/Niumination/mirai",
+      "description": "MIRAI Mission Control — mission-control server + wiki memory + fleet (Niumination, macOS)",
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "topics": [],
+      "homepage": null,
+      "fork": false,
+      "archived": false,
+      "license": null,
+      "size": 30019,
+      "createdAt": "2026-10-10T13:46:03Z",
+      "pushedAt": "2026-10-12T19:03:19Z"
+    },
+    {
+      "name": "kelas",
+      "fullName": "Niumination/kelas",
+      "url": "https://github.com/Niumination/kelas",
+      "description": null,
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "topics": [],
+      "homepage": "https://kelas-hazel.vercel.app",
+      "fork": false,
+      "archived": false,
+      "license": "NOASSERTION",
+      "size": 322,
+      "createdAt": "2026-10-10T08:14:37Z",
+      "pushedAt": "2026-10-11T17:41:45Z"
     },
     {
       "name": "hermes-agent",
@@ -453,7 +491,7 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "description": "AI File Organizer for Android — merapikan file SD Card / internal storage pakai Google Gemini AI. Kotlin, Jetpack Compose, SAF Scoped Storage.",
       "language": "Kotlin",
       "stars": 0,
-      "forks": 0,
+      "forks": 1,
       "watchers": 0,
       "openIssues": 0,
       "topics": [],
@@ -1817,808 +1855,808 @@ export const MOCK_SNAPSHOT: Snapshot = {
   ],
   "events": [
     {
-      "id": "23750002701",
+      "id": "24508466035",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-19T08:02:53Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24508053706",
+      "type": "PushEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-18T16:52:56Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24505715392",
+      "type": "PushEvent",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-18T16:03:47Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24500804336",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-18T14:14:32Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24496887065",
+      "type": "PushEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-18T14:09:37Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24496183611",
+      "type": "PushEvent",
+      "repo": "Niumination/omb-lightvela",
+      "repoUrl": "https://api.github.com/repos/Niumination/omb-lightvela",
+      "createdAt": "2026-10-18T18:03:20Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "17570462277",
+      "type": "IssueCommentEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-19T04:11:06Z",
+      "summary": "issuecomment"
+    },
+    {
+      "id": "24493096013",
       "type": "CreateEvent",
-      "repo": "Niumination/mirai",
-      "repoUrl": "https://api.github.com/repos/Niumination/mirai",
-      "createdAt": "2026-10-10T13:46:36Z",
+      "repo": "Niumination/omb-lightvela",
+      "repoUrl": "https://api.github.com/repos/Niumination/omb-lightvela",
+      "createdAt": "2026-10-18T17:02:41Z",
       "summary": "membuat branch “main”"
     },
     {
-      "id": "23745868712",
+      "id": "24493068407",
       "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-10T12:33:51Z",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-19T04:09:04Z",
       "summary": "0 commit"
     },
     {
-      "id": "23745375258",
+      "id": "24492798543",
       "type": "PushEvent",
-      "repo": "Niumination/niu-gayo-agroclimate",
-      "repoUrl": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate",
-      "createdAt": "2026-10-12T05:24:58Z",
+      "repo": "Niumination/omb-lightvela",
+      "repoUrl": "https://api.github.com/repos/Niumination/omb-lightvela",
+      "createdAt": "2026-10-19T04:04:52Z",
       "summary": "0 commit"
     },
     {
-      "id": "16981174674",
-      "type": "WatchEvent",
-      "repo": "Louis-CFM/coucou",
-      "repoUrl": "https://api.github.com/repos/Louis-CFM/coucou",
-      "createdAt": "2026-10-12T05:16:51Z",
-      "summary": "dipantau (watch)"
-    },
-    {
-      "id": "16980002575",
-      "type": "WatchEvent",
-      "repo": "ajsahni/agents-office",
-      "repoUrl": "https://api.github.com/repos/ajsahni/agents-office",
-      "createdAt": "2026-10-12T04:48:29Z",
-      "summary": "dipantau (watch)"
-    },
-    {
-      "id": "23740679678",
+      "id": "24492334413",
       "type": "PushEvent",
-      "repo": "Niumination/mirai",
-      "repoUrl": "https://api.github.com/repos/Niumination/mirai",
-      "createdAt": "2026-10-11T18:08:08Z",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-19T03:57:39Z",
       "summary": "0 commit"
     },
     {
-      "id": "23738227018",
+      "id": "17568571499",
+      "type": "IssueCommentEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-19T03:27:58Z",
+      "summary": "issuecomment"
+    },
+    {
+      "id": "24489693894",
       "type": "PushEvent",
       "repo": "Niumination/hermes-office",
       "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-11T17:35:24Z",
+      "createdAt": "2026-10-19T03:16:37Z",
       "summary": "0 commit"
     },
     {
-      "id": "23738000787",
+      "id": "24487756348",
       "type": "PushEvent",
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-11T17:30:21Z",
+      "createdAt": "2026-10-18T15:40:25Z",
       "summary": "0 commit"
     },
     {
-      "id": "23737475914",
+      "id": "24485831340",
       "type": "PushEvent",
-      "repo": "Niumination/kelas",
-      "repoUrl": "https://api.github.com/repos/Niumination/kelas",
-      "createdAt": "2026-10-11T17:25:23Z",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-18T15:25:46Z",
       "summary": "0 commit"
     },
     {
-      "id": "23705905054",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-11T18:11:52Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23704039177",
+      "id": "24481253980",
       "type": "PushEvent",
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-11T17:41:56Z",
+      "createdAt": "2026-10-18T13:56:40Z",
       "summary": "0 commit"
     },
     {
-      "id": "23704029848",
+      "id": "24474489167",
       "type": "PushEvent",
-      "repo": "Niumination/kelas",
-      "repoUrl": "https://api.github.com/repos/Niumination/kelas",
-      "createdAt": "2026-10-11T17:41:46Z",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-18T13:41:18Z",
       "summary": "0 commit"
     },
     {
-      "id": "23703641315",
+      "id": "24464390797",
+      "type": "PushEvent",
+      "repo": "Niumination/niu-gayo-agroclimate",
+      "repoUrl": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate",
+      "createdAt": "2026-10-18T18:16:10Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24463486181",
+      "type": "PushEvent",
+      "repo": "Niumination/omb-lightvela",
+      "repoUrl": "https://api.github.com/repos/Niumination/omb-lightvela",
+      "createdAt": "2026-10-18T17:53:11Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24445945521",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-18T14:53:30Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24439068028",
+      "type": "PushEvent",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-17T20:18:31Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24437796750",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-17T20:20:05Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24436359734",
+      "type": "PushEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-17T19:08:38Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "17534856133",
+      "type": "IssueCommentEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-18T14:15:37Z",
+      "summary": "issuecomment"
+    },
+    {
+      "id": "24433697566",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-17T19:20:44Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24429553436",
+      "type": "PushEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-17T17:33:19Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24426870643",
       "type": "CreateEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-11T17:35:22Z",
-      "summary": "membuat branch “arena/sect-ui-id”"
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-17T16:56:41Z",
+      "summary": "membuat branch “core/tiling-constraints”"
     },
     {
-      "id": "23701682094",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-11T17:03:43Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23698870819",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-11T16:19:37Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23698501379",
-      "type": "PushEvent",
-      "repo": "Niumination/mirai",
-      "repoUrl": "https://api.github.com/repos/Niumination/mirai",
-      "createdAt": "2026-10-11T16:13:42Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23694613110",
-      "type": "PushEvent",
-      "repo": "Niumination/kelas",
-      "repoUrl": "https://api.github.com/repos/Niumination/kelas",
-      "createdAt": "2026-10-11T15:11:33Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23673153008",
+      "id": "24423481852",
       "type": "PushEvent",
       "repo": "Niumination/hermes-office",
       "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T15:01:16Z",
+      "createdAt": "2026-10-17T20:41:50Z",
       "summary": "0 commit"
     },
     {
-      "id": "23671755411",
+      "id": "24418589352",
       "type": "PushEvent",
       "repo": "Niumination/hermes-office",
       "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T14:15:04Z",
+      "createdAt": "2026-10-17T20:35:53Z",
       "summary": "0 commit"
     },
     {
-      "id": "23670622233",
-      "type": "PushEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T14:31:18Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23667120545",
-      "type": "PushEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T13:21:55Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23664201927",
-      "type": "PushEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T13:21:53Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23652676670",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-10T19:18:48Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23649459208",
-      "type": "PushEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T10:00:30Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23645961381",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-10T19:15:23Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23641865774",
-      "type": "PushEvent",
-      "repo": "Niumination/mirai",
-      "repoUrl": "https://api.github.com/repos/Niumination/mirai",
-      "createdAt": "2026-10-10T17:26:29Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23639646031",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-10T16:29:24Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23637956415",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-10T15:07:15Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23637732780",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-10T17:57:58Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23637304359",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-10T17:45:39Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23634642900",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-10T14:18:58Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23634181294",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-10T16:20:35Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23629960951",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-10T14:25:03Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23623081578",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-10T14:00:44Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23622538561",
-      "type": "PushEvent",
-      "repo": "Niumination/hermes-agent",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-agent",
-      "createdAt": "2026-10-09T04:16:56Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23618637494",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-10T08:49:33Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "16910843447",
-      "type": "PublicEvent",
-      "repo": "Niumination/kelas",
-      "repoUrl": "https://api.github.com/repos/Niumination/kelas",
-      "createdAt": "2026-10-10T08:14:37Z",
-      "summary": "repo dibuat publik"
-    },
-    {
-      "id": "23613929562",
-      "type": "PushEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-10T18:46:07Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23613204024",
-      "type": "PushEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-10T18:36:33Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23611728635",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-10T18:16:59Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23608613628",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-10T17:35:24Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23605068599",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-10T16:47:33Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23602902853",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-10T16:18:34Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23602851208",
-      "type": "PushEvent",
-      "repo": "Niumination/mirai",
-      "repoUrl": "https://api.github.com/repos/Niumination/mirai",
-      "createdAt": "2026-10-10T16:17:52Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23593941855",
-      "type": "PushEvent",
-      "repo": "Niumination/mirai",
-      "repoUrl": "https://api.github.com/repos/Niumination/mirai",
-      "createdAt": "2026-10-10T14:18:07Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23579923526",
-      "type": "PushEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T14:46:41Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23577726262",
-      "type": "PushEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T14:46:39Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "16889241244",
-      "type": "WatchEvent",
-      "repo": "morluto/rea",
-      "repoUrl": "https://api.github.com/repos/morluto/rea",
-      "createdAt": "2026-10-10T09:18:06Z",
-      "summary": "dipantau (watch)"
-    },
-    {
-      "id": "16889212779",
-      "type": "WatchEvent",
-      "repo": "N0zoM1z0/dx-ball",
-      "repoUrl": "https://api.github.com/repos/N0zoM1z0/dx-ball",
-      "createdAt": "2026-10-10T09:17:15Z",
-      "summary": "dipantau (watch)"
-    },
-    {
-      "id": "16889210163",
-      "type": "WatchEvent",
-      "repo": "NationalSecurityAgency/ghidra",
-      "repoUrl": "https://api.github.com/repos/NationalSecurityAgency/ghidra",
-      "createdAt": "2026-10-10T09:17:09Z",
-      "summary": "dipantau (watch)"
-    },
-    {
-      "id": "16889164205",
-      "type": "WatchEvent",
-      "repo": "iamlukethedev/Hermes3D",
-      "repoUrl": "https://api.github.com/repos/iamlukethedev/Hermes3D",
-      "createdAt": "2026-10-10T09:15:46Z",
-      "summary": "dipantau (watch)"
-    },
-    {
-      "id": "23571018002",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-10T08:54:00Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23559925445",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-08T16:21:09Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23556591470",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-08T15:51:17Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "16867711031",
-      "type": "IssueCommentEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T14:32:26Z",
-      "summary": "issuecomment"
-    },
-    {
-      "id": "23506713154",
-      "type": "PushEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T15:01:18Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23504604207",
-      "type": "PushEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T14:31:16Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23503417884",
-      "type": "PushEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T14:15:01Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "16839704535",
-      "type": "IssueCommentEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T14:55:45Z",
-      "summary": "issuecomment"
-    },
-    {
-      "id": "16839464678",
-      "type": "IssueCommentEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T14:16:29Z",
-      "summary": "issuecomment"
-    },
-    {
-      "id": "16839147929",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T14:46:41Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "16839012377",
-      "type": "IssueCommentEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T14:32:29Z",
-      "summary": "issuecomment"
-    },
-    {
-      "id": "16839011360",
-      "type": "IssueCommentEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T15:01:18Z",
-      "summary": "issuecomment"
-    },
-    {
-      "id": "16828969047",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T14:26:46Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "16826186199",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T11:38:48Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "16826181132",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T11:38:43Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "23485219943",
-      "type": "PushEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T09:52:37Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "16825148390",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T11:39:12Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "23472155840",
-      "type": "PushEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T11:37:51Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23472124592",
-      "type": "PushEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T11:37:31Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "16813380503",
-      "type": "WatchEvent",
-      "repo": "Vincentwei1021/anything2explainer",
-      "repoUrl": "https://api.github.com/repos/Vincentwei1021/anything2explainer",
-      "createdAt": "2026-10-09T10:34:24Z",
-      "summary": "dipantau (watch)"
-    },
-    {
-      "id": "16813371114",
-      "type": "WatchEvent",
-      "repo": "Vincentwei1021/video-talkcraft",
-      "repoUrl": "https://api.github.com/repos/Vincentwei1021/video-talkcraft",
-      "createdAt": "2026-10-09T10:34:14Z",
-      "summary": "dipantau (watch)"
-    },
-    {
-      "id": "16813365854",
-      "type": "WatchEvent",
-      "repo": "Vincentwei1021/video-shotcraft",
-      "repoUrl": "https://api.github.com/repos/Vincentwei1021/video-shotcraft",
-      "createdAt": "2026-10-09T10:34:08Z",
-      "summary": "dipantau (watch)"
-    },
-    {
-      "id": "16813299845",
-      "type": "WatchEvent",
-      "repo": "Vincentwei1021/mg-styles-15",
-      "repoUrl": "https://api.github.com/repos/Vincentwei1021/mg-styles-15",
-      "createdAt": "2026-10-09T10:32:58Z",
-      "summary": "dipantau (watch)"
-    },
-    {
-      "id": "23461387476",
-      "type": "PushEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T09:08:57Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23460406460",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-09T08:54:52Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23453056867",
-      "type": "PushEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-09T07:06:50Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23442511908",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-07T19:11:18Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23403250250",
-      "type": "PushEvent",
-      "repo": "Niumination/hermes-agent",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-agent",
-      "createdAt": "2026-10-08T09:48:26Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23390980834",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-08T05:25:05Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23364637655",
-      "type": "PushEvent",
-      "repo": "Niumination/hermes-agent",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-agent",
-      "createdAt": "2026-10-08T10:40:29Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23358385890",
-      "type": "PushEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-07T18:02:45Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23357903881",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-07T05:39:30Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23357889333",
-      "type": "PushEvent",
-      "repo": "Niumination/PemdiAcehTengah",
-      "repoUrl": "https://api.github.com/repos/Niumination/PemdiAcehTengah",
-      "createdAt": "2026-10-07T05:39:18Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "16713508480",
-      "type": "WatchEvent",
-      "repo": "bobeff/open-source-games",
-      "repoUrl": "https://api.github.com/repos/bobeff/open-source-games",
-      "createdAt": "2026-10-08T08:32:08Z",
-      "summary": "dipantau (watch)"
-    },
-    {
-      "id": "23343167325",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-07T09:07:25Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23317275961",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-07T07:58:31Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23316815401",
+      "id": "24417885217",
       "type": "PushEvent",
       "repo": "Niumination/niu-gayo-agroclimate",
       "repoUrl": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate",
-      "createdAt": "2026-10-07T04:24:05Z",
+      "createdAt": "2026-10-17T20:18:37Z",
       "summary": "0 commit"
     },
     {
-      "id": "23315405499",
+      "id": "24417112412",
       "type": "PushEvent",
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-07T09:42:40Z",
+      "createdAt": "2026-10-17T19:10:14Z",
       "summary": "0 commit"
     },
     {
-      "id": "23312766878",
+      "id": "24416769495",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-17T19:53:15Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24415448239",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-17T19:22:29Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24414841744",
+      "type": "PushEvent",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-17T19:08:07Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24414159827",
+      "type": "PushEvent",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-17T18:30:13Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24413744295",
+      "type": "PushEvent",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-17T18:58:50Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24413533985",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-17T18:37:31Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24407802300",
+      "type": "PushEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-17T17:39:15Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24407615781",
+      "type": "PushEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-17T18:35:56Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24407594314",
+      "type": "PushEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-17T17:01:24Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24405068130",
+      "type": "PushEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-17T17:03:26Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24404552452",
       "type": "PushEvent",
       "repo": "Niumination/niu-gayo-agroclimate",
       "repoUrl": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate",
-      "createdAt": "2026-10-07T20:25:14Z",
+      "createdAt": "2026-10-17T19:33:20Z",
       "summary": "0 commit"
     },
     {
-      "id": "23300575436",
+      "id": "24403864119",
       "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-07T03:36:55Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23299934156",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-07T05:31:15Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23299751109",
-      "type": "PushEvent",
-      "repo": "Niumination/contentvela",
-      "repoUrl": "https://api.github.com/repos/Niumination/contentvela",
-      "createdAt": "2026-10-07T03:18:51Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "23262984972",
-      "type": "PushEvent",
-      "repo": "Niumination/PemdiAcehTengah",
-      "repoUrl": "https://api.github.com/repos/Niumination/PemdiAcehTengah",
-      "createdAt": "2026-10-07T09:41:47Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "16638753659",
-      "type": "PublicEvent",
       "repo": "Niumination/hermes-office",
       "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-03T12:38:13Z",
-      "summary": "repo dibuat publik"
-    },
-    {
-      "id": "23249969082",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-07T04:48:05Z",
+      "createdAt": "2026-10-17T19:18:04Z",
       "summary": "0 commit"
     },
     {
-      "id": "23246780060",
+      "id": "24401987360",
+      "type": "CreateEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-17T18:36:23Z",
+      "summary": "membuat branch “macos/tahoe-ax-adapter-m1”"
+    },
+    {
+      "id": "24400541633",
       "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-07T06:41:57Z",
+      "repo": "Niumination/niu-gayo-agroclimate",
+      "repoUrl": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate",
+      "createdAt": "2026-10-17T17:01:37Z",
       "summary": "0 commit"
     },
     {
-      "id": "16617927269",
-      "type": "WatchEvent",
-      "repo": "multica-ai/andrej-karpathy-skills",
-      "repoUrl": "https://api.github.com/repos/multica-ai/andrej-karpathy-skills",
-      "createdAt": "2026-10-07T07:50:18Z",
-      "summary": "dipantau (watch)"
+      "id": "24394530469",
+      "type": "CreateEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-17T14:07:41Z",
+      "summary": "membuat branch “spike/macos-spike-1”"
     },
     {
-      "id": "23243081643",
+      "id": "24388132870",
       "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-07T04:37:03Z",
+      "repo": "Niumination/niu-gayo-agroclimate",
+      "repoUrl": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate",
+      "createdAt": "2026-10-16T16:41:21Z",
       "summary": "0 commit"
     },
     {
-      "id": "23242695955",
+      "id": "24387541159",
+      "type": "PushEvent",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-16T14:55:56Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24387443454",
+      "type": "PushEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-17T14:07:41Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24387039613",
+      "type": "PushEvent",
+      "repo": "Niumination/niu-gayo-agroclimate",
+      "repoUrl": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate",
+      "createdAt": "2026-10-16T14:15:11Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24354202813",
       "type": "PushEvent",
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-07T03:26:21Z",
+      "createdAt": "2026-10-16T18:09:46Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "17496288191",
+      "type": "IssueCommentEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-17T19:51:44Z",
+      "summary": "issuecomment"
+    },
+    {
+      "id": "17493212050",
+      "type": "PullRequestEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-17T18:36:25Z",
+      "summary": "aktivitas PR"
+    },
+    {
+      "id": "17489392499",
+      "type": "PullRequestEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-17T17:04:01Z",
+      "summary": "aktivitas PR"
+    },
+    {
+      "id": "17489302321",
+      "type": "PullRequestEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-17T17:01:58Z",
+      "summary": "aktivitas PR"
+    },
+    {
+      "id": "24328872610",
+      "type": "CreateEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-16T18:06:43Z",
+      "summary": "membuat branch “main”"
+    },
+    {
+      "id": "24328719151",
+      "type": "PushEvent",
+      "repo": "Niumination/niu-gayo-agroclimate",
+      "repoUrl": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate",
+      "createdAt": "2026-10-16T14:19:03Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24318638545",
+      "type": "PushEvent",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-16T05:42:25Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24267447733",
+      "type": "PushEvent",
+      "repo": "Niumination/niu-gayo-agroclimate",
+      "repoUrl": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate",
+      "createdAt": "2026-10-16T08:19:56Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24236364098",
+      "type": "PushEvent",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-15T08:14:45Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24196435912",
+      "type": "PushEvent",
+      "repo": "Niumination/niu-gayo-agroclimate",
+      "repoUrl": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate",
+      "createdAt": "2026-10-15T08:23:47Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24193313712",
+      "type": "PushEvent",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-15T09:26:30Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24190844023",
+      "type": "PushEvent",
+      "repo": "Niumination/niu-gayo-agroclimate",
+      "repoUrl": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate",
+      "createdAt": "2026-10-15T07:01:35Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24188862908",
+      "type": "PushEvent",
+      "repo": "Niumination/niu-gayo-agroclimate",
+      "repoUrl": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate",
+      "createdAt": "2026-10-15T08:26:12Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24182281890",
+      "type": "PushEvent",
+      "repo": "Niumination/niu-gayo-agroclimate",
+      "repoUrl": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate",
+      "createdAt": "2026-10-15T08:30:20Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24174141458",
+      "type": "PushEvent",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-15T04:28:18Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24146671825",
+      "type": "PushEvent",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-14T13:28:28Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24142544529",
+      "type": "PushEvent",
+      "repo": "Niumination/niu-gayo-agroclimate",
+      "repoUrl": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate",
+      "createdAt": "2026-10-15T13:08:08Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24120777844",
+      "type": "PushEvent",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-14T13:12:30Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24119684773",
+      "type": "PushEvent",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-14T14:22:24Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24093932757",
+      "type": "PushEvent",
+      "repo": "Niumination/Niu-OSS-Dashboard",
+      "repoUrl": "https://api.github.com/repos/Niumination/Niu-OSS-Dashboard",
+      "createdAt": "2026-10-14T09:51:16Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24084688679",
+      "type": "PushEvent",
+      "repo": "Niumination/Niu-OSS-Dashboard",
+      "repoUrl": "https://api.github.com/repos/Niumination/Niu-OSS-Dashboard",
+      "createdAt": "2026-10-14T06:33:45Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24075428637",
+      "type": "PushEvent",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-15T05:38:31Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24073424702",
+      "type": "PushEvent",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-15T04:27:33Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24040967957",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-13T10:15:48Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24039726487",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-13T09:58:10Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "24019739416",
+      "type": "DeleteEvent",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-13T11:14:53Z",
+      "summary": "menghapus main"
+    },
+    {
+      "id": "24019345405",
+      "type": "PushEvent",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-13T11:08:32Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "23993328330",
+      "type": "PushEvent",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-13T09:53:55Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "23989188839",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-13T09:25:45Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "23978589163",
+      "type": "PushEvent",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-14T13:28:28Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "23978525028",
+      "type": "PushEvent",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-14T13:26:40Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "23955492705",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-13T04:39:05Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "23954687460",
+      "type": "PushEvent",
+      "repo": "Niumination/Niu-OSS-Dashboard",
+      "repoUrl": "https://api.github.com/repos/Niumination/Niu-OSS-Dashboard",
+      "createdAt": "2026-10-14T08:09:31Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "23951451021",
+      "type": "PushEvent",
+      "repo": "Niumination/Niu-OSS-Dashboard",
+      "repoUrl": "https://api.github.com/repos/Niumination/Niu-OSS-Dashboard",
+      "createdAt": "2026-10-14T07:23:46Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "23951295394",
+      "type": "PushEvent",
+      "repo": "Niumination/Niu-OSS-Dashboard",
+      "repoUrl": "https://api.github.com/repos/Niumination/Niu-OSS-Dashboard",
+      "createdAt": "2026-10-14T07:21:25Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "23947711058",
+      "type": "PushEvent",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-12T14:59:17Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "23947662481",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-12T13:43:57Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "23944926563",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-12T13:16:02Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "23931970257",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-12T16:39:58Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "23897816490",
+      "type": "PushEvent",
+      "repo": "Niumination/mirai",
+      "repoUrl": "https://api.github.com/repos/Niumination/mirai",
+      "createdAt": "2026-10-12T19:03:20Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "23878668485",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-13T13:48:53Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "23878261435",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-13T13:51:30Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "23878128710",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-13T13:42:46Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "23876945503",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-13T13:36:10Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "23875637547",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-13T13:16:45Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "23870461379",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-13T12:12:14Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "23867371677",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-13T11:30:48Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "23862058629",
+      "type": "PushEvent",
+      "repo": "Niumination/niu-gayo-agroclimate",
+      "repoUrl": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate",
+      "createdAt": "2026-10-12T14:59:52Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "23859534548",
+      "type": "PushEvent",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-13T09:40:05Z",
       "summary": "0 commit"
     }
   ],
   "live": false,
   "rateLimited": false,
-  "updatedAt": "2026-10-12T10:02:27.211Z",
+  "updatedAt": "2026-10-19T08:19:32.793Z",
   "source": "fallback-cache"
 };
