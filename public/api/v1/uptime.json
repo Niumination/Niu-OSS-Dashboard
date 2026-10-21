@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-20T22:37:55.596Z",
+ "generatedAt": "2026-10-21T00:53:42.121Z",
  "source": "data/uptime.json (GitHub Actions, tiap 15 menit)",
  "intervalMinutes": 15,
  "sites": [
@@ -8,12 +8,12 @@
    "url": "https://niumination.web.id",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 466,
+   "avgMs30d": 463,
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-03T08:20:01.762Z",
-    "ms": 323,
+    "t": "2026-10-03T13:32:43.029Z",
+    "ms": 333,
     "ok": true
    }
   },
@@ -22,12 +22,12 @@
    "url": "https://niu-oss.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 329,
+   "avgMs30d": 327,
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-03T08:20:01.762Z",
-    "ms": 252,
+    "t": "2026-10-03T13:32:43.029Z",
+    "ms": 221,
     "ok": true
    }
   },
@@ -36,8 +36,8 @@
    "url": "https://kelas-hazel.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 1804,
-   "days": 9,
+   "avgMs30d": 1800,
+   "days": 10,
    "lastOk": true,
    "lastCheck": {
     "t": "2026-10-12T11:22:05.575Z",
@@ -50,11 +50,11 @@
    "url": "https://pemdi-aceh-tengah.vercel.app",
    "uptime7d": 100,
    "uptime30d": 99.38,
-   "avgMs30d": 1266,
+   "avgMs30d": 1276,
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-03T08:20:01.762Z",
+    "t": "2026-10-03T13:32:43.029Z",
     "ms": 1155,
     "ok": true
    }
@@ -64,12 +64,12 @@
    "url": "https://niumination.github.io/niu-dash/",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 266,
+   "avgMs30d": 269,
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-03T08:20:01.762Z",
-    "ms": 265,
+    "t": "2026-10-03T13:32:43.029Z",
+    "ms": 240,
     "ok": true
    }
   },
@@ -82,8 +82,8 @@
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-03T08:20:01.762Z",
-    "ms": 247,
+    "t": "2026-10-03T13:32:43.029Z",
+    "ms": 315,
     "ok": true
    }
   },
@@ -92,12 +92,12 @@
    "url": "https://kune-ya-com.vercel.app",
    "uptime7d": 0,
    "uptime30d": 0,
-   "avgMs30d": 282,
+   "avgMs30d": 290,
    "days": 30,
    "lastOk": null,
    "lastCheck": {
-    "t": "2026-10-03T08:20:01.762Z",
-    "ms": 334,
+    "t": "2026-10-03T13:32:43.029Z",
+    "ms": 305,
     "ok": false
    }
   },
@@ -110,7 +110,7 @@
    "days": 30,
    "lastOk": null,
    "lastCheck": {
-    "t": "2026-10-03T08:20:01.762Z",
+    "t": "2026-10-03T13:32:43.029Z",
     "ms": null,
     "ok": false
    }
@@ -120,12 +120,12 @@
    "url": "https://sapa-ai-indol.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 185,
+   "avgMs30d": 192,
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-03T08:20:01.762Z",
-    "ms": 196,
+    "t": "2026-10-03T13:32:43.029Z",
+    "ms": 184,
     "ok": true
    }
   },
@@ -134,12 +134,12 @@
    "url": "https://kms-spbe.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 405,
+   "avgMs30d": 414,
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-03T08:20:01.762Z",
-    "ms": 521,
+    "t": "2026-10-03T13:32:43.029Z",
+    "ms": 404,
     "ok": true
    }
   }
