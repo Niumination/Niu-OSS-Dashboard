@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-19T08:19:32.847Z",
+ "generatedAt": "2026-10-26T08:19:52.334Z",
  "repo": {
   "name": "niu-dash-fullstack",
   "fullName": "Niumination/niu-dash-fullstack",
@@ -16,8 +16,8 @@
   "fork": false,
   "archived": false,
   "license": null,
-  "sizeKb": 317,
+  "sizeKb": 347,
   "createdAt": "2026-07-06T03:03:22Z",
-  "pushedAt": "2026-07-30T09:05:41Z"
+  "pushedAt": "2026-10-21T05:05:28Z"
  }
 }

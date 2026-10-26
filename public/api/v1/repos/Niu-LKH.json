@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-19T08:19:32.847Z",
+ "generatedAt": "2026-10-26T08:19:52.334Z",
  "repo": {
   "name": "Niu-LKH",
   "fullName": "Niumination/Niu-LKH",
@@ -12,12 +12,12 @@
   "stars": 0,
   "forks": 0,
   "watchers": 0,
-  "openIssues": 0,
+  "openIssues": 1,
   "fork": false,
   "archived": false,
   "license": null,
   "sizeKb": 4103,
   "createdAt": "2025-10-21T09:31:49Z",
-  "pushedAt": "2026-10-06T06:46:02Z"
+  "pushedAt": "2026-10-20T02:34:21Z"
  }
 }

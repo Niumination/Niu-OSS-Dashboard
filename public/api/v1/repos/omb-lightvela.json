@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-19T08:19:32.847Z",
+ "generatedAt": "2026-10-26T08:19:52.334Z",
  "repo": {
   "name": "omb-lightvela",
   "fullName": "Niumination/omb-lightvela",
@@ -16,8 +16,8 @@
   "fork": false,
   "archived": false,
   "license": "NOASSERTION",
-  "sizeKb": 25,
+  "sizeKb": 42,
   "createdAt": "2026-10-18T16:59:53Z",
-  "pushedAt": "2026-10-19T04:07:31Z"
+  "pushedAt": "2026-10-25T11:27:10Z"
  }
 }

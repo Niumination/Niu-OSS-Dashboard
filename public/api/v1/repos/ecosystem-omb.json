@@ -1,0 +1,23 @@
+{
+ "generatedAt": "2026-10-26T08:19:52.334Z",
+ "repo": {
+  "name": "ecosystem-omb",
+  "fullName": "Niumination/ecosystem-omb",
+  "description": "Niumination Works — ekosistem OpenMausBot (OMB): registry repo, struktur tim/bot, routine, kebijakan. Terpisah dari ecosystem-config (Hermes) dan omb-lightvela.",
+  "descriptionEn": null,
+  "url": "https://github.com/Niumination/ecosystem-omb",
+  "homepage": null,
+  "language": "JavaScript",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 1,
+  "fork": false,
+  "archived": false,
+  "license": null,
+  "sizeKb": 127,
+  "createdAt": "2026-10-19T13:40:19Z",
+  "pushedAt": "2026-10-24T23:03:12Z"
+ }
+}
