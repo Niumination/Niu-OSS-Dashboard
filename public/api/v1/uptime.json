@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-28T14:10:53.254Z",
+ "generatedAt": "2026-10-28T19:30:39.545Z",
  "source": "data/uptime.json (GitHub Actions, tiap 15 menit)",
  "intervalMinutes": 15,
  "sites": [
@@ -8,12 +8,12 @@
    "url": "https://niumination.web.id",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 382,
+   "avgMs30d": 381,
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-13T02:07:33.187Z",
-    "ms": 196,
+    "t": "2026-10-13T09:20:30.695Z",
+    "ms": 197,
     "ok": true
    }
   },
@@ -26,8 +26,8 @@
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-13T02:07:33.187Z",
-    "ms": 139,
+    "t": "2026-10-13T09:20:30.695Z",
+    "ms": 93,
     "ok": true
    }
   },
@@ -36,12 +36,12 @@
    "url": "https://kune-ya-com.vercel.app",
    "uptime7d": 0,
    "uptime30d": 0,
-   "avgMs30d": 276,
+   "avgMs30d": 275,
    "days": 30,
    "lastOk": null,
    "lastCheck": {
-    "t": "2026-10-13T02:07:33.187Z",
-    "ms": 137,
+    "t": "2026-10-13T09:20:30.695Z",
+    "ms": 189,
     "ok": false
    }
   },
@@ -54,8 +54,8 @@
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-13T02:07:33.187Z",
-    "ms": 183,
+    "t": "2026-10-13T09:20:30.695Z",
+    "ms": 182,
     "ok": true
    }
   },
@@ -68,8 +68,8 @@
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-13T02:07:33.187Z",
-    "ms": 623,
+    "t": "2026-10-13T09:20:30.695Z",
+    "ms": 200,
     "ok": true
    }
   },
@@ -78,12 +78,12 @@
    "url": "https://kelas-hazel.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 1790,
+   "avgMs30d": 1789,
    "days": 17,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-13T02:07:33.187Z",
-    "ms": 1941,
+    "t": "2026-10-13T09:20:30.695Z",
+    "ms": 1823,
     "ok": true
    }
   },
@@ -96,8 +96,8 @@
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-13T02:07:33.187Z",
-    "ms": 1234,
+    "t": "2026-10-13T09:20:30.695Z",
+    "ms": 1298,
     "ok": true
    }
   },
@@ -110,7 +110,7 @@
    "days": 30,
    "lastOk": null,
    "lastCheck": {
-    "t": "2026-10-13T02:07:33.187Z",
+    "t": "2026-10-13T09:20:30.695Z",
     "ms": null,
     "ok": false
    }
@@ -120,12 +120,12 @@
    "url": "https://sapa-ai-indol.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 209,
+   "avgMs30d": 210,
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-13T02:07:33.187Z",
-    "ms": 159,
+    "t": "2026-10-13T09:20:30.695Z",
+    "ms": 88,
     "ok": true
    }
   },
@@ -138,8 +138,8 @@
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-13T02:07:33.187Z",
-    "ms": 313,
+    "t": "2026-10-13T09:20:30.695Z",
+    "ms": 407,
     "ok": true
    }
   }
