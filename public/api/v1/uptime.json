@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-28T07:25:34.026Z",
+ "generatedAt": "2026-10-28T14:10:53.254Z",
  "source": "data/uptime.json (GitHub Actions, tiap 15 menit)",
  "intervalMinutes": 15,
  "sites": [
@@ -12,8 +12,8 @@
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-12T20:20:33.120Z",
-    "ms": 289,
+    "t": "2026-10-13T02:07:33.187Z",
+    "ms": 196,
     "ok": true
    }
   },
@@ -22,12 +22,12 @@
    "url": "https://niu-oss.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 255,
+   "avgMs30d": 256,
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-12T20:20:33.120Z",
-    "ms": 128,
+    "t": "2026-10-13T02:07:33.187Z",
+    "ms": 139,
     "ok": true
    }
   },
@@ -40,8 +40,8 @@
    "days": 30,
    "lastOk": null,
    "lastCheck": {
-    "t": "2026-10-12T20:20:33.120Z",
-    "ms": 444,
+    "t": "2026-10-13T02:07:33.187Z",
+    "ms": 137,
     "ok": false
    }
   },
@@ -54,8 +54,8 @@
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-12T20:20:33.120Z",
-    "ms": 323,
+    "t": "2026-10-13T02:07:33.187Z",
+    "ms": 183,
     "ok": true
    }
   },
@@ -68,8 +68,8 @@
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-12T20:20:33.120Z",
-    "ms": 285,
+    "t": "2026-10-13T02:07:33.187Z",
+    "ms": 623,
     "ok": true
    }
   },
@@ -78,12 +78,12 @@
    "url": "https://kelas-hazel.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 1788,
+   "avgMs30d": 1790,
    "days": 17,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-12T20:20:33.120Z",
-    "ms": 1846,
+    "t": "2026-10-13T02:07:33.187Z",
+    "ms": 1941,
     "ok": true
    }
   },
@@ -91,13 +91,13 @@
    "repo": "PemdiAcehTengah",
    "url": "https://pemdi-aceh-tengah.vercel.app",
    "uptime7d": 100,
-   "uptime30d": 99.38,
-   "avgMs30d": 1248,
+   "uptime30d": 99.39,
+   "avgMs30d": 1251,
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-12T20:20:33.120Z",
-    "ms": 1517,
+    "t": "2026-10-13T02:07:33.187Z",
+    "ms": 1234,
     "ok": true
    }
   },
@@ -110,7 +110,7 @@
    "days": 30,
    "lastOk": null,
    "lastCheck": {
-    "t": "2026-10-12T20:20:33.120Z",
+    "t": "2026-10-13T02:07:33.187Z",
     "ms": null,
     "ok": false
    }
@@ -124,8 +124,8 @@
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-12T20:20:33.120Z",
-    "ms": 353,
+    "t": "2026-10-13T02:07:33.187Z",
+    "ms": 159,
     "ok": true
    }
   },
@@ -134,12 +134,12 @@
    "url": "https://kms-spbe.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 422,
+   "avgMs30d": 423,
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-12T20:20:33.120Z",
-    "ms": 697,
+    "t": "2026-10-13T02:07:33.187Z",
+    "ms": 313,
     "ok": true
    }
   }
