@@ -84,9 +84,9 @@ npm run export:static   # varian GitHub Pages (out/)
 
 ## Deploy (Vercel)
 
-- Proyek Vercel: `niu-oss` (team `archk4lis-projects`), produksi `https://niu-oss-archk4lis-projects.vercel.app`, terhubung ke repo GitHub `Niumination/Niu-OSS-Dashboard` (auto-deploy tiap push `main`).
+- Proyek Vercel: `niu-oss-dashboard` (team `archk4lis-projects`), produksi `https://niu-oss-dashboard.vercel.app` + custom domain `https://niumination.web.id` (verified). Terhubung ke repo GitHub `Niumination/Niu-OSS-Dashboard` (auto-deploy tiap push `main`). **Dipulihkan 28 Okt 2026** setelah proyek lama `niu-oss` terhapus dari Vercel (→404).
 - **Pitfall `SITE_URL`:** env var yang **ada tapi kosong** membuat `new URL('')` gagal saat build (`Failed to collect page data for /_not-found`) — pernah mematikan deploy 19 Sep 2026. Selalu lewat `siteUrl` dari `lib/env.ts`, jangan pakai `process.env.SITE_URL ?? '...'`.
-- Env produksi terpasang: `SITE_URL`, `GITHUB_OWNER`, `GITHUB_TOKEN`, Midtrans/Stripe, kontak.
+- Env produksi terpasang: `SITE_URL`, `GITHUB_OWNER`, `GITHUB_TOKEN` (classic PAT shared dari `~/.hermes/.env`, `GH_TOKEN`). **Midtrans/Stripe/TRTC/CS belum dipasang** (secret hilang bersama proyek lama — butuh re-create dari dashboard provider).
 - Reproduksi lokal perilaku Vercel: `SITE_URL= npm run build`.
 - Next 16: build Vercel = **Turbopack default** (Node ≥ 20.9; Vercel pakai Node 22). Di mesin RAM kecil (< ~4 GB) Turbopack bisa OOM — verifikasi lokal pakai `npm run build:webpack`; `export:static` sudah memakai `--webpack` untuk alasan yang sama.
 - **Pitfall ISR + hydration (#418, 19 Sep 2026):** `revalidate` (level halaman MAUPUN level `fetch`) membuat halaman diregenerasi di Vercel; artefak ter-cache pernah menyajikan DOM generasi baru + payload flight RSC generasi lama dalam SATU dokumen → hydration gagal (React #418) di semua halaman → seluruh pohon diregenerasi klien (hero 3D ikut tampak glitch). Solusi: SEMUA halaman statis murni — tanpa `export const revalidate`, fetch halaman pakai `cache: 'force-cache'` (lihat `getGithubSnapshot` + `lib/insights.ts`); hanya route API `/api/github/*` yang boleh ISR (`{ live: true }`). Label waktu relatif di komponen klien WAJIB `suppressHydrationWarning` (pola `<TimeAgo>`).
