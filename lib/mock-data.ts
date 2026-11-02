@@ -1,4 +1,4 @@
-// AUTO-GENERATED oleh scripts/gen-mock.mjs pada 2026-10-26T08:19:52.282Z
+// AUTO-GENERATED oleh scripts/gen-mock.mjs pada 2026-11-02T10:22:28.601Z
 // Sumber: GitHub API (fetch langsung)
 // Snapshot nyata akun GitHub — dipakai OTOMATIS saat GitHub API rate-limit
 // atau saat build static export (GitHub Pages). Regenerasi: npm run gen:mock
@@ -15,11 +15,68 @@ export const MOCK_SNAPSHOT: Snapshot = {
     "blog": "https://github.com/niumination",
     "twitter": null,
     "followers": 3,
-    "following": 20,
-    "publicRepos": 97,
+    "following": 21,
+    "publicRepos": 100,
     "joinedAt": "2023-01-26T08:06:49Z"
   },
   "repos": [
+    {
+      "name": "zb-humanoid",
+      "fullName": "Niumination/zb-humanoid",
+      "url": "https://github.com/Niumination/zb-humanoid",
+      "description": "Humanoid interface project",
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "topics": [],
+      "homepage": "https://zb-humanoid.vercel.app",
+      "fork": false,
+      "archived": false,
+      "license": null,
+      "size": 1107,
+      "createdAt": "2026-10-30T13:22:07Z",
+      "pushedAt": "2026-11-02T07:29:56Z"
+    },
+    {
+      "name": "ecosystem-config",
+      "fullName": "Niumination/ecosystem-config",
+      "url": "https://github.com/Niumination/ecosystem-config",
+      "description": "Niumination Ecosystem — orchestration/index repo: AGENTS.md, BACKLOG.md, scripts, docs. v4.0 maturity pipeline.",
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "topics": [],
+      "homepage": null,
+      "fork": false,
+      "archived": false,
+      "license": null,
+      "size": 47330,
+      "createdAt": "2026-07-16T17:39:24Z",
+      "pushedAt": "2026-11-02T06:44:43Z"
+    },
+    {
+      "name": "mira-humanoid",
+      "fullName": "Niumination/mira-humanoid",
+      "url": "https://github.com/Niumination/mira-humanoid",
+      "description": "MIRA humanoid rebuild (Vite + React + TS) — satu konsep dengan Niu-Humanoid",
+      "language": "GLSL",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "topics": [],
+      "homepage": null,
+      "fork": false,
+      "archived": false,
+      "license": null,
+      "size": 20556,
+      "createdAt": "2026-10-30T14:20:38Z",
+      "pushedAt": "2026-11-02T06:20:17Z"
+    },
     {
       "name": "hypr-rust",
       "fullName": "Niumination/hypr-rust",
@@ -35,9 +92,28 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "fork": false,
       "archived": false,
       "license": null,
-      "size": 488,
+      "size": 611,
       "createdAt": "2026-10-16T18:06:36Z",
-      "pushedAt": "2026-10-26T06:42:48Z"
+      "pushedAt": "2026-11-02T05:58:29Z"
+    },
+    {
+      "name": "Niu-Humanoid",
+      "fullName": "Niumination/Niu-Humanoid",
+      "url": "https://github.com/Niumination/Niu-Humanoid",
+      "description": "APEX humanoid rebuild (Vite + React + TS) — satu konsep dengan mira-humanoid",
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "topics": [],
+      "homepage": "https://niu-humanoid.vercel.app",
+      "fork": false,
+      "archived": false,
+      "license": null,
+      "size": 152230,
+      "createdAt": "2026-10-29T18:48:05Z",
+      "pushedAt": "2026-11-02T05:10:55Z"
     },
     {
       "name": "Niu-OSS-Dashboard",
@@ -54,9 +130,9 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "fork": false,
       "archived": false,
       "license": null,
-      "size": 1324,
+      "size": 2171,
       "createdAt": "2026-09-19T09:44:20Z",
-      "pushedAt": "2026-10-26T06:28:08Z"
+      "pushedAt": "2026-11-02T04:06:19Z"
     },
     {
       "name": "niu-gayo-agroclimate",
@@ -67,15 +143,15 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "stars": 0,
       "forks": 0,
       "watchers": 0,
-      "openIssues": 2,
+      "openIssues": 1,
       "topics": [],
       "homepage": null,
       "fork": false,
       "archived": false,
       "license": "MIT",
-      "size": 1464,
+      "size": 1592,
       "createdAt": "2026-09-07T08:11:54Z",
-      "pushedAt": "2026-10-26T01:14:09Z"
+      "pushedAt": "2026-11-02T01:13:03Z"
     },
     {
       "name": "Niumination",
@@ -98,9 +174,123 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "fork": false,
       "archived": false,
       "license": null,
-      "size": 96,
+      "size": 108,
       "createdAt": "2026-07-15T10:38:11Z",
-      "pushedAt": "2026-10-25T13:00:26Z"
+      "pushedAt": "2026-11-01T14:48:28Z"
+    },
+    {
+      "name": "hermes-office",
+      "fullName": "Niumination/hermes-office",
+      "url": "https://github.com/Niumination/hermes-office",
+      "description": "Pixel-art real-time virtual office visualizing the Niumination Hermes Agent ecosystem (Cloud + Mac). Adapted from Claude-Office (MIT).",
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 1,
+      "topics": [],
+      "homepage": null,
+      "fork": false,
+      "archived": false,
+      "license": "NOASSERTION",
+      "size": 100904,
+      "createdAt": "2026-10-03T12:38:13Z",
+      "pushedAt": "2026-10-30T14:29:09Z"
+    },
+    {
+      "name": "mirai",
+      "fullName": "Niumination/mirai",
+      "url": "https://github.com/Niumination/mirai",
+      "description": "MIRAI Mission Control — mission-control server + wiki memory + fleet (Niumination, macOS)",
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "topics": [],
+      "homepage": null,
+      "fork": false,
+      "archived": false,
+      "license": null,
+      "size": 49698,
+      "createdAt": "2026-10-10T13:46:03Z",
+      "pushedAt": "2026-10-30T14:19:02Z"
+    },
+    {
+      "name": "pabrik-aplikasi-gas",
+      "fullName": "Niumination/pabrik-aplikasi-gas",
+      "url": "https://github.com/Niumination/pabrik-aplikasi-gas",
+      "description": "Pabrik Aplikasi - Inventaris Aset TI (GAS pilot project)",
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "topics": [],
+      "homepage": null,
+      "fork": false,
+      "archived": false,
+      "license": null,
+      "size": 123,
+      "createdAt": "2026-08-26T12:19:48Z",
+      "pushedAt": "2026-10-30T13:25:31Z"
+    },
+    {
+      "name": "kune-ya.com",
+      "fullName": "Niumination/kune-ya.com",
+      "url": "https://github.com/Niumination/kune-ya.com",
+      "description": null,
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "topics": [],
+      "homepage": "https://kune-ya-com.vercel.app",
+      "fork": false,
+      "archived": false,
+      "license": null,
+      "size": 199,
+      "createdAt": "2026-06-06T18:45:21Z",
+      "pushedAt": "2026-10-30T13:19:22Z"
+    },
+    {
+      "name": "ecosystem-omb",
+      "fullName": "Niumination/ecosystem-omb",
+      "url": "https://github.com/Niumination/ecosystem-omb",
+      "description": "Niumination Works — ekosistem OpenMausBot (OMB): registry repo, struktur tim/bot, routine, kebijakan. Terpisah dari ecosystem-config (Hermes) dan omb-lightvela.",
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "topics": [],
+      "homepage": null,
+      "fork": false,
+      "archived": false,
+      "license": null,
+      "size": 128,
+      "createdAt": "2026-10-19T13:40:19Z",
+      "pushedAt": "2026-10-30T12:58:03Z"
+    },
+    {
+      "name": "Niu-LKH",
+      "fullName": "Niumination/Niu-LKH",
+      "url": "https://github.com/Niumination/Niu-LKH",
+      "description": "Laporan Kegiatan Harian - Afrizal Munthe",
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "topics": [],
+      "homepage": "https://niumination.github.io/Niu-LKH/",
+      "fork": false,
+      "archived": false,
+      "license": null,
+      "size": 4103,
+      "createdAt": "2025-10-21T09:31:49Z",
+      "pushedAt": "2026-10-30T12:57:48Z"
     },
     {
       "name": "omb-lightvela",
@@ -117,66 +307,28 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "fork": false,
       "archived": false,
       "license": "NOASSERTION",
-      "size": 42,
+      "size": 50,
       "createdAt": "2026-10-18T16:59:53Z",
-      "pushedAt": "2026-10-25T11:27:10Z"
+      "pushedAt": "2026-10-28T18:10:35Z"
     },
     {
-      "name": "ecosystem-omb",
-      "fullName": "Niumination/ecosystem-omb",
-      "url": "https://github.com/Niumination/ecosystem-omb",
-      "description": "Niumination Works — ekosistem OpenMausBot (OMB): registry repo, struktur tim/bot, routine, kebijakan. Terpisah dari ecosystem-config (Hermes) dan omb-lightvela.",
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "openIssues": 1,
-      "topics": [],
-      "homepage": null,
-      "fork": false,
-      "archived": false,
-      "license": null,
-      "size": 127,
-      "createdAt": "2026-10-19T13:40:19Z",
-      "pushedAt": "2026-10-24T23:03:12Z"
-    },
-    {
-      "name": "ecosystem-config",
-      "fullName": "Niumination/ecosystem-config",
-      "url": "https://github.com/Niumination/ecosystem-config",
-      "description": "Niumination Ecosystem — orchestration/index repo: AGENTS.md, BACKLOG.md, scripts, docs. v4.0 maturity pipeline.",
-      "language": "JavaScript",
+      "name": "hermes-agent",
+      "fullName": "Niumination/hermes-agent",
+      "url": "https://github.com/Niumination/hermes-agent",
+      "description": "The agent that grows with you",
+      "language": "Python",
       "stars": 0,
       "forks": 0,
       "watchers": 0,
       "openIssues": 0,
       "topics": [],
-      "homepage": null,
-      "fork": false,
+      "homepage": "https://hermes-agent.nousresearch.com",
+      "fork": true,
       "archived": false,
-      "license": null,
-      "size": 47218,
-      "createdAt": "2026-07-16T17:39:24Z",
-      "pushedAt": "2026-10-24T17:34:27Z"
-    },
-    {
-      "name": "pabrik-aplikasi-gas",
-      "fullName": "Niumination/pabrik-aplikasi-gas",
-      "url": "https://github.com/Niumination/pabrik-aplikasi-gas",
-      "description": "Pabrik Aplikasi - Inventaris Aset TI (GAS pilot project)",
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "openIssues": 1,
-      "topics": [],
-      "homepage": null,
-      "fork": false,
-      "archived": false,
-      "license": null,
-      "size": 123,
-      "createdAt": "2026-08-26T12:19:48Z",
-      "pushedAt": "2026-10-24T17:22:04Z"
+      "license": "MIT",
+      "size": 1324178,
+      "createdAt": "2026-08-24T17:55:30Z",
+      "pushedAt": "2026-10-26T15:03:42Z"
     },
     {
       "name": "mata-watchdog-pi",
@@ -215,44 +367,6 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "size": 90,
       "createdAt": "2026-10-23T20:25:01Z",
       "pushedAt": "2026-10-23T20:25:51Z"
-    },
-    {
-      "name": "hermes-office",
-      "fullName": "Niumination/hermes-office",
-      "url": "https://github.com/Niumination/hermes-office",
-      "description": "Pixel-art real-time virtual office visualizing the Niumination Hermes Agent ecosystem (Cloud + Mac). Adapted from Claude-Office (MIT).",
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "openIssues": 5,
-      "topics": [],
-      "homepage": null,
-      "fork": false,
-      "archived": true,
-      "license": "NOASSERTION",
-      "size": 100865,
-      "createdAt": "2026-10-03T12:38:13Z",
-      "pushedAt": "2026-10-23T15:28:03Z"
-    },
-    {
-      "name": "mirai",
-      "fullName": "Niumination/mirai",
-      "url": "https://github.com/Niumination/mirai",
-      "description": "MIRAI Mission Control — mission-control server + wiki memory + fleet (Niumination, macOS)",
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "openIssues": 0,
-      "topics": [],
-      "homepage": null,
-      "fork": false,
-      "archived": false,
-      "license": null,
-      "size": 31674,
-      "createdAt": "2026-10-10T13:46:03Z",
-      "pushedAt": "2026-10-22T08:45:30Z"
     },
     {
       "name": "cc-switch",
@@ -312,44 +426,6 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "pushedAt": "2026-10-21T05:05:28Z"
     },
     {
-      "name": "kune-ya.com",
-      "fullName": "Niumination/kune-ya.com",
-      "url": "https://github.com/Niumination/kune-ya.com",
-      "description": null,
-      "language": "TypeScript",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "openIssues": 1,
-      "topics": [],
-      "homepage": "https://kune-ya-com.vercel.app",
-      "fork": false,
-      "archived": false,
-      "license": null,
-      "size": 198,
-      "createdAt": "2026-06-06T18:45:21Z",
-      "pushedAt": "2026-10-20T09:57:39Z"
-    },
-    {
-      "name": "Niu-LKH",
-      "fullName": "Niumination/Niu-LKH",
-      "url": "https://github.com/Niumination/Niu-LKH",
-      "description": "Laporan Kegiatan Harian - Afrizal Munthe",
-      "language": "JavaScript",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "openIssues": 1,
-      "topics": [],
-      "homepage": "https://niumination.github.io/Niu-LKH/",
-      "fork": false,
-      "archived": false,
-      "license": null,
-      "size": 4103,
-      "createdAt": "2025-10-21T09:31:49Z",
-      "pushedAt": "2026-10-20T02:34:21Z"
-    },
-    {
       "name": "niu-dash",
       "fullName": "Niumination/niu-dash",
       "url": "https://github.com/Niumination/niu-dash",
@@ -386,25 +462,6 @@ export const MOCK_SNAPSHOT: Snapshot = {
       "size": 322,
       "createdAt": "2026-10-10T08:14:37Z",
       "pushedAt": "2026-10-11T17:41:45Z"
-    },
-    {
-      "name": "hermes-agent",
-      "fullName": "Niumination/hermes-agent",
-      "url": "https://github.com/Niumination/hermes-agent",
-      "description": "The agent that grows with you",
-      "language": "Python",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "openIssues": 0,
-      "topics": [],
-      "homepage": "https://hermes-agent.nousresearch.com",
-      "fork": true,
-      "archived": false,
-      "license": "MIT",
-      "size": 1152089,
-      "createdAt": "2026-08-24T17:55:30Z",
-      "pushedAt": "2026-10-09T04:16:55Z"
     },
     {
       "name": "PemdiAcehTengah",
@@ -1893,808 +1950,808 @@ export const MOCK_SNAPSHOT: Snapshot = {
   ],
   "events": [
     {
-      "id": "18205838828",
+      "id": "18856306852",
       "type": "PullRequestEvent",
       "repo": "Niumination/hypr-rust",
       "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-26T06:42:44Z",
+      "createdAt": "2026-11-02T05:58:29Z",
       "summary": "aktivitas PR"
     },
     {
-      "id": "18205774253",
+      "id": "18856135044",
       "type": "PullRequestEvent",
       "repo": "Niumination/hypr-rust",
       "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-26T06:41:43Z",
+      "createdAt": "2026-11-02T05:55:25Z",
       "summary": "aktivitas PR"
     },
     {
-      "id": "25199758058",
-      "type": "DeleteEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-26T05:46:06Z",
-      "summary": "menghapus work/panel-click-proof"
-    },
-    {
-      "id": "25199617558",
+      "id": "25899723956",
       "type": "PushEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-26T05:46:04Z",
+      "repo": "Niumination/kune-ya.com",
+      "repoUrl": "https://api.github.com/repos/Niumination/kune-ya.com",
+      "createdAt": "2026-10-30T13:16:44Z",
       "summary": "0 commit"
     },
     {
-      "id": "18202532811",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-26T05:46:03Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "18202487402",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-26T05:45:14Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "25156760441",
-      "type": "DeleteEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-25T14:19:10Z",
-      "summary": "menghapus work/ci-lint-gate"
-    },
-    {
-      "id": "25154685483",
-      "type": "PushEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-25T13:51:50Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "25153095107",
-      "type": "PushEvent",
-      "repo": "Niumination/mata-watchdog-pi",
-      "repoUrl": "https://api.github.com/repos/Niumination/mata-watchdog-pi",
-      "createdAt": "2026-10-24T16:46:08Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "25152783008",
-      "type": "PushEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-25T14:19:04Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "25147683606",
-      "type": "PushEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T17:07:02Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "25147576954",
+      "id": "25899301684",
       "type": "PushEvent",
       "repo": "Niumination/ecosystem-config",
       "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-24T16:53:27Z",
+      "createdAt": "2026-10-30T13:39:32Z",
       "summary": "0 commit"
     },
     {
-      "id": "25145135316",
-      "type": "PushEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T14:58:02Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "25145041151",
+      "id": "25898154690",
       "type": "CreateEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T14:56:44Z",
-      "summary": "membuat branch “work/macos-settings-panel”"
-    },
-    {
-      "id": "18161132545",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-25T14:19:03Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "25133795424",
-      "type": "PushEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-25T14:17:12Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "18160253368",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-25T13:59:10Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "25131910865",
-      "type": "DeleteEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-25T13:51:53Z",
-      "summary": "menghapus work/self-test-symlink-classification"
-    },
-    {
-      "id": "18159931114",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-25T13:51:48Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "18159875208",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-25T13:50:33Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "25121795609",
-      "type": "PushEvent",
-      "repo": "Niumination/omb-lightvela",
-      "repoUrl": "https://api.github.com/repos/Niumination/omb-lightvela",
-      "createdAt": "2026-10-25T11:27:11Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "25084840959",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-omb",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-omb",
-      "createdAt": "2026-10-24T23:03:12Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "25084478218",
-      "type": "CreateEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T17:36:45Z",
-      "summary": "membuat branch “work/self-test-pre-run-safety”"
-    },
-    {
-      "id": "18134990140",
-      "type": "PullRequestReviewEvent",
-      "repo": "Niumination/ecosystem-omb",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-omb",
-      "createdAt": "2026-10-25T02:05:01Z",
-      "summary": "pullrequestreview"
-    },
-    {
-      "id": "18134989849",
-      "type": "PullRequestReviewEvent",
-      "repo": "Niumination/pabrik-aplikasi-gas",
-      "repoUrl": "https://api.github.com/repos/Niumination/pabrik-aplikasi-gas",
-      "createdAt": "2026-10-25T02:05:00Z",
-      "summary": "pullrequestreview"
-    },
-    {
-      "id": "25081644925",
-      "type": "PushEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T17:37:11Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "25078892072",
-      "type": "PushEvent",
-      "repo": "Niumination/niu-gayo-agroclimate",
-      "repoUrl": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate",
-      "createdAt": "2026-10-24T16:18:16Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "25076408619",
-      "type": "DeleteEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T15:41:50Z",
-      "summary": "menghapus work/macos-rules-and-shell-polish"
-    },
-    {
-      "id": "25073366900",
-      "type": "PushEvent",
-      "repo": "Niumination/niu-gayo-agroclimate",
-      "repoUrl": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate",
-      "createdAt": "2026-10-24T14:59:31Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "25070397013",
-      "type": "CreateEvent",
-      "repo": "Niumination/ecosystem-omb",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-omb",
-      "createdAt": "2026-10-24T23:03:10Z",
-      "summary": "membuat branch “omb/notaris/20261024-tambah-repo-baru”"
-    },
-    {
-      "id": "18128868034",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/ecosystem-omb",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-omb",
-      "createdAt": "2026-10-24T23:03:13Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "25065575258",
-      "type": "CreateEvent",
-      "repo": "Niumination/pabrik-aplikasi-gas",
-      "repoUrl": "https://api.github.com/repos/Niumination/pabrik-aplikasi-gas",
-      "createdAt": "2026-10-24T17:22:04Z",
-      "summary": "membuat branch “work/pabrik-audit-snapshot”"
-    },
-    {
-      "id": "25063951659",
-      "type": "CreateEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T17:06:39Z",
-      "summary": "membuat branch “work/macos-review-follow-up”"
-    },
-    {
-      "id": "25063042169",
-      "type": "CreateEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T12:58:37Z",
-      "summary": "membuat branch “work/macos-config-settings”"
-    },
-    {
-      "id": "25062650959",
-      "type": "DeleteEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T16:48:01Z",
-      "summary": "menghapus work/macos-rules-editor"
-    },
-    {
-      "id": "25060495250",
-      "type": "DeleteEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T17:37:14Z",
-      "summary": "menghapus work/self-test-pre-run-safety"
-    },
-    {
-      "id": "25060313702",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-24T17:34:28Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "25059863123",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-24T17:26:27Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "25059293888",
-      "type": "PushEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T15:41:48Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "25057758246",
-      "type": "CreateEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T16:51:12Z",
-      "summary": "membuat branch “rescue/tooling-0d62169”"
-    },
-    {
-      "id": "25050964135",
-      "type": "CreateEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-23T16:56:51Z",
-      "summary": "membuat branch “work/per-window-identity”"
-    },
-    {
-      "id": "25049758925",
-      "type": "CreateEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T15:41:12Z",
-      "summary": "membuat branch “work/macos-rules-and-shell-polish”"
-    },
-    {
-      "id": "25049690390",
-      "type": "PushEvent",
-      "repo": "Niumination/niu-gayo-agroclimate",
-      "repoUrl": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate",
-      "createdAt": "2026-10-24T18:20:13Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "25047962554",
-      "type": "PushEvent",
-      "repo": "Niumination/omb-lightvela",
-      "repoUrl": "https://api.github.com/repos/Niumination/omb-lightvela",
-      "createdAt": "2026-10-24T08:30:41Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "18115752206",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T17:37:10Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "18115736199",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T17:36:48Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "18115111616",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/pabrik-aplikasi-gas",
-      "repoUrl": "https://api.github.com/repos/Niumination/pabrik-aplikasi-gas",
-      "createdAt": "2026-10-24T17:22:06Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "25045339116",
-      "type": "PushEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T16:47:59Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "25045115661",
-      "type": "CreateEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T16:44:43Z",
-      "summary": "membuat branch “work/macos-rules-editor”"
-    },
-    {
-      "id": "25044245569",
-      "type": "DeleteEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T17:07:05Z",
-      "summary": "menghapus work/macos-review-follow-up"
-    },
-    {
-      "id": "18114470699",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T17:07:01Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "18114455952",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T17:06:41Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "25044021241",
-      "type": "PushEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-23T15:28:01Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "25043553533",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-24T07:48:46Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "18113672756",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T16:47:58Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "18113653755",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T16:47:32Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "25042744975",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-24T16:45:57Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "25039090645",
-      "type": "PushEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T12:59:24Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "18110801635",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T15:41:46Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "18110790255",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T15:41:31Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "18108922231",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T14:58:01Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "18108869356",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T14:56:48Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "25033382906",
-      "type": "PushEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T14:02:27Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "25033296396",
-      "type": "PushEvent",
-      "repo": "Niumination/Niu-OSS-Dashboard",
-      "repoUrl": "https://api.github.com/repos/Niumination/Niu-OSS-Dashboard",
-      "createdAt": "2026-10-24T08:25:59Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "18106583708",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T14:02:26Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "18106553496",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T14:01:41Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "25030581405",
-      "type": "CreateEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T14:01:37Z",
-      "summary": "membuat branch “work/macos-window-classification”"
-    },
-    {
-      "id": "25030080852",
-      "type": "PushEvent",
-      "repo": "Niumination/omb-lightvela",
-      "repoUrl": "https://api.github.com/repos/Niumination/omb-lightvela",
-      "createdAt": "2026-10-24T13:54:57Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "25027003375",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-config",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
-      "createdAt": "2026-10-24T07:52:10Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "18104023025",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T12:59:23Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "18103995369",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T12:58:42Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "25014933688",
-      "type": "CreateEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T09:18:29Z",
-      "summary": "membuat branch “work/macos-menubar-shell”"
-    },
-    {
-      "id": "25012758502",
-      "type": "PushEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T09:58:33Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "18097268978",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T09:58:31Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "18095864413",
-      "type": "PullRequestEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-24T09:19:30Z",
-      "summary": "aktivitas PR"
-    },
-    {
-      "id": "25006928008",
-      "type": "PushEvent",
-      "repo": "Niumination/niu-gayo-agroclimate",
-      "repoUrl": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate",
-      "createdAt": "2026-10-24T08:38:16Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "24999693423",
-      "type": "PushEvent",
-      "repo": "Niumination/apex-ui-mirror",
-      "repoUrl": "https://api.github.com/repos/Niumination/apex-ui-mirror",
-      "createdAt": "2026-10-23T20:25:51Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "24986807990",
-      "type": "PushEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-23T05:13:57Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "24984429433",
-      "type": "PushEvent",
-      "repo": "Niumination/hermes-office",
-      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-23T04:39:45Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "18078719588",
-      "type": "WatchEvent",
-      "repo": "hypit-ai/hypit",
-      "repoUrl": "https://api.github.com/repos/hypit-ai/hypit",
-      "createdAt": "2026-10-24T03:03:52Z",
-      "summary": "dipantau (watch)"
-    },
-    {
-      "id": "24978789415",
-      "type": "CreateEvent",
-      "repo": "Niumination/apex-ui-mirror",
-      "repoUrl": "https://api.github.com/repos/Niumination/apex-ui-mirror",
-      "createdAt": "2026-10-23T20:25:03Z",
+      "repo": "Niumination/zb-humanoid",
+      "repoUrl": "https://api.github.com/repos/Niumination/zb-humanoid",
+      "createdAt": "2026-10-30T13:29:57Z",
       "summary": "membuat branch “main”"
     },
     {
-      "id": "24977403459",
-      "type": "PushEvent",
-      "repo": "Niumination/ecosystem-omb",
-      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-omb",
-      "createdAt": "2026-10-23T03:04:09Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "24973659670",
+      "id": "25897672311",
       "type": "PushEvent",
       "repo": "Niumination/niu-gayo-agroclimate",
       "repoUrl": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate",
-      "createdAt": "2026-10-23T15:56:43Z",
+      "createdAt": "2026-10-30T12:58:29Z",
       "summary": "0 commit"
     },
     {
-      "id": "24970307677",
-      "type": "PushEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-23T18:48:08Z",
-      "summary": "0 commit"
-    },
-    {
-      "id": "24962637618",
+      "id": "25897487146",
       "type": "PushEvent",
       "repo": "Niumination/hermes-office",
       "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-23T14:20:35Z",
+      "createdAt": "2026-10-30T13:23:57Z",
       "summary": "0 commit"
     },
     {
-      "id": "24962415995",
+      "id": "25896942182",
       "type": "PushEvent",
-      "repo": "Niumination/niu-gayo-agroclimate",
-      "repoUrl": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate",
-      "createdAt": "2026-10-23T16:48:53Z",
+      "repo": "Niumination/kune-ya.com",
+      "repoUrl": "https://api.github.com/repos/Niumination/kune-ya.com",
+      "createdAt": "2026-10-30T13:19:22Z",
       "summary": "0 commit"
     },
     {
-      "id": "18051603395",
+      "id": "18846177925",
       "type": "WatchEvent",
-      "repo": "InukaAsith/TwinDesk",
-      "repoUrl": "https://api.github.com/repos/InukaAsith/TwinDesk",
-      "createdAt": "2026-10-23T20:07:59Z",
+      "repo": "vercel-labs/agent-desktop",
+      "repoUrl": "https://api.github.com/repos/vercel-labs/agent-desktop",
+      "createdAt": "2026-11-02T02:41:46Z",
       "summary": "dipantau (watch)"
     },
     {
-      "id": "18042845578",
-      "type": "PullRequestEvent",
+      "id": "25877560507",
+      "type": "DeleteEvent",
       "repo": "Niumination/hypr-rust",
       "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-23T18:48:06Z",
-      "summary": "aktivitas PR"
+      "createdAt": "2026-10-30T10:15:56Z",
+      "summary": "menghapus work/snap-min-window-height"
     },
     {
-      "id": "24947091862",
+      "id": "25859019442",
+      "type": "CreateEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-30T13:49:06Z",
+      "summary": "membuat branch “fix/host-clamp-retry”"
+    },
+    {
+      "id": "25856707491",
+      "type": "DeleteEvent",
+      "repo": "Niumination/pabrik-aplikasi-gas",
+      "repoUrl": "https://api.github.com/repos/Niumination/pabrik-aplikasi-gas",
+      "createdAt": "2026-10-30T13:25:31Z",
+      "summary": "menghapus work/pabrik-audit-snapshot"
+    },
+    {
+      "id": "25856513629",
       "type": "PushEvent",
       "repo": "Niumination/hermes-office",
       "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-23T14:48:41Z",
+      "createdAt": "2026-10-30T13:23:48Z",
       "summary": "0 commit"
     },
     {
-      "id": "24946311633",
+      "id": "25856465513",
       "type": "PushEvent",
       "repo": "Niumination/hermes-office",
       "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
-      "createdAt": "2026-10-23T14:40:44Z",
+      "createdAt": "2026-10-30T13:23:20Z",
       "summary": "0 commit"
     },
     {
-      "id": "18030126325",
+      "id": "18815723959",
       "type": "PullRequestEvent",
       "repo": "Niumination/hypr-rust",
       "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-23T16:57:18Z",
+      "createdAt": "2026-11-01T15:53:11Z",
       "summary": "aktivitas PR"
     },
     {
-      "id": "24940822291",
+      "id": "18815630225",
+      "type": "PullRequestEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-11-01T15:51:14Z",
+      "summary": "aktivitas PR"
+    },
+    {
+      "id": "25843915569",
+      "type": "CreateEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-30T11:15:20Z",
+      "summary": "membuat branch “fix/zero-partial-frame-write”"
+    },
+    {
+      "id": "18812224585",
+      "type": "PullRequestEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-11-01T14:39:25Z",
+      "summary": "aktivitas PR"
+    },
+    {
+      "id": "18812034375",
+      "type": "PullRequestEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-11-01T14:35:27Z",
+      "summary": "aktivitas PR"
+    },
+    {
+      "id": "18810133371",
+      "type": "PullRequestEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-11-01T13:56:00Z",
+      "summary": "aktivitas PR"
+    },
+    {
+      "id": "18810044409",
+      "type": "WatchEvent",
+      "repo": "Mr-Destroyer/ZimZilla",
+      "repoUrl": "https://api.github.com/repos/Mr-Destroyer/ZimZilla",
+      "createdAt": "2026-11-01T13:53:59Z",
+      "summary": "dipantau (watch)"
+    },
+    {
+      "id": "18810034150",
+      "type": "WatchEvent",
+      "repo": "google/elephant-goldfish-model",
+      "repoUrl": "https://api.github.com/repos/google/elephant-goldfish-model",
+      "createdAt": "2026-11-01T13:53:45Z",
+      "summary": "dipantau (watch)"
+    },
+    {
+      "id": "25822645556",
+      "type": "PushEvent",
+      "repo": "Niumination/Niu-Humanoid",
+      "repoUrl": "https://api.github.com/repos/Niumination/Niu-Humanoid",
+      "createdAt": "2026-10-30T16:49:59Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "25818451252",
+      "type": "CreateEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-30T17:22:00Z",
+      "summary": "membuat branch “docs/path-q-auto-tiling”"
+    },
+    {
+      "id": "25807505906",
+      "type": "PushEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-30T15:38:46Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "25801264997",
+      "type": "PushEvent",
+      "repo": "Niumination/pabrik-aplikasi-gas",
+      "repoUrl": "https://api.github.com/repos/Niumination/pabrik-aplikasi-gas",
+      "createdAt": "2026-10-30T13:25:30Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "25801044176",
+      "type": "PushEvent",
+      "repo": "Niumination/zb-humanoid",
+      "repoUrl": "https://api.github.com/repos/Niumination/zb-humanoid",
+      "createdAt": "2026-10-30T13:30:41Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "25800223356",
+      "type": "PushEvent",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-30T13:23:43Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "25797215702",
+      "type": "DeleteEvent",
+      "repo": "Niumination/Niu-LKH",
+      "repoUrl": "https://api.github.com/repos/Niumination/Niu-LKH",
+      "createdAt": "2026-10-30T12:57:48Z",
+      "summary": "menghapus omb/wira/20261020-ci"
+    },
+    {
+      "id": "25796766662",
+      "type": "PushEvent",
+      "repo": "Niumination/mira-humanoid",
+      "repoUrl": "https://api.github.com/repos/Niumination/mira-humanoid",
+      "createdAt": "2026-10-30T16:49:58Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "25793704471",
+      "type": "DeleteEvent",
+      "repo": "Niumination/kune-ya.com",
+      "repoUrl": "https://api.github.com/repos/Niumination/kune-ya.com",
+      "createdAt": "2026-10-30T13:19:23Z",
+      "summary": "menghapus omb/kirana/20261020-ci"
+    },
+    {
+      "id": "25791551189",
+      "type": "DeleteEvent",
+      "repo": "Niumination/niu-gayo-agroclimate",
+      "repoUrl": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate",
+      "createdAt": "2026-10-30T12:58:16Z",
+      "summary": "menghapus dependabot/github_actions/actions-6212fb2f78"
+    },
+    {
+      "id": "25791548723",
       "type": "PushEvent",
       "repo": "Niumination/niu-gayo-agroclimate",
       "repoUrl": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate",
-      "createdAt": "2026-10-23T16:26:50Z",
+      "createdAt": "2026-10-30T12:58:15Z",
       "summary": "0 commit"
     },
     {
-      "id": "24923378470",
+      "id": "25791526825",
+      "type": "DeleteEvent",
+      "repo": "Niumination/ecosystem-omb",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-omb",
+      "createdAt": "2026-10-30T12:58:04Z",
+      "summary": "menghapus omb/notaris/20261024-tambah-repo-baru"
+    },
+    {
+      "id": "25789541462",
       "type": "PushEvent",
       "repo": "Niumination/hypr-rust",
       "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-22T15:24:17Z",
+      "createdAt": "2026-10-30T15:40:56Z",
       "summary": "0 commit"
     },
     {
-      "id": "24919989819",
+      "id": "25788464357",
+      "type": "PushEvent",
+      "repo": "Niumination/mirai",
+      "repoUrl": "https://api.github.com/repos/Niumination/mirai",
+      "createdAt": "2026-10-30T14:19:03Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "25788382963",
+      "type": "DeleteEvent",
+      "repo": "Niumination/niu-gayo-agroclimate",
+      "repoUrl": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate",
+      "createdAt": "2026-10-30T12:58:31Z",
+      "summary": "menghapus dependabot/npm_and_yarn/minor-dan-patch-6b7a406798"
+    },
+    {
+      "id": "25787231045",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-30T11:02:01Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "25787131152",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-30T12:47:48Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "25787098831",
       "type": "PushEvent",
       "repo": "Niumination/hypr-rust",
       "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-23T06:41:55Z",
+      "createdAt": "2026-10-30T11:18:20Z",
       "summary": "0 commit"
     },
     {
-      "id": "24910765643",
+      "id": "25780695884",
       "type": "PushEvent",
       "repo": "Niumination/hypr-rust",
       "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-23T06:38:06Z",
+      "createdAt": "2026-10-30T10:15:54Z",
       "summary": "0 commit"
     },
     {
-      "id": "24910740326",
+      "id": "25779741732",
+      "type": "CreateEvent",
+      "repo": "Niumination/kune-ya.com",
+      "repoUrl": "https://api.github.com/repos/Niumination/kune-ya.com",
+      "createdAt": "2026-10-30T13:05:43Z",
+      "summary": "membuat branch “pr-3”"
+    },
+    {
+      "id": "25778512606",
+      "type": "PushEvent",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-30T13:23:53Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "25778163721",
+      "type": "PushEvent",
+      "repo": "Niumination/kune-ya.com",
+      "repoUrl": "https://api.github.com/repos/Niumination/kune-ya.com",
+      "createdAt": "2026-10-30T13:17:18Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "25775998075",
+      "type": "PushEvent",
+      "repo": "Niumination/Niu-Humanoid",
+      "repoUrl": "https://api.github.com/repos/Niumination/Niu-Humanoid",
+      "createdAt": "2026-10-30T14:25:16Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "25771389017",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-30T12:51:16Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "25770467100",
+      "type": "PushEvent",
+      "repo": "Niumination/Niu-OSS-Dashboard",
+      "repoUrl": "https://api.github.com/repos/Niumination/Niu-OSS-Dashboard",
+      "createdAt": "2026-10-30T12:40:04Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "25770289917",
+      "type": "PushEvent",
+      "repo": "Niumination/zb-humanoid",
+      "repoUrl": "https://api.github.com/repos/Niumination/zb-humanoid",
+      "createdAt": "2026-10-30T13:30:20Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "25769554678",
+      "type": "PushEvent",
+      "repo": "Niumination/hermes-office",
+      "repoUrl": "https://api.github.com/repos/Niumination/hermes-office",
+      "createdAt": "2026-10-30T13:23:38Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "25769031455",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-30T12:24:50Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "25766980396",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-omb",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-omb",
+      "createdAt": "2026-10-30T12:58:02Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "25766943735",
+      "type": "PushEvent",
+      "repo": "Niumination/Niu-LKH",
+      "repoUrl": "https://api.github.com/repos/Niumination/Niu-LKH",
+      "createdAt": "2026-10-30T12:57:47Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "25762953147",
+      "type": "DeleteEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-30T11:19:32Z",
+      "summary": "menghapus fix/zero-partial-frame-write"
+    },
+    {
+      "id": "25759066437",
+      "type": "CreateEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-30T10:13:21Z",
+      "summary": "membuat branch “work/snap-min-window-height”"
+    },
+    {
+      "id": "25757873202",
       "type": "PushEvent",
       "repo": "Niumination/hypr-rust",
       "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-23T06:37:38Z",
+      "createdAt": "2026-10-30T11:19:30Z",
       "summary": "0 commit"
     },
     {
-      "id": "18001392717",
+      "id": "25702697800",
+      "type": "CreateEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-29T17:58:28Z",
+      "summary": "membuat branch “work/auto-tiling-fix-tick”"
+    },
+    {
+      "id": "25698522136",
+      "type": "PushEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-29T18:04:29Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "25689667533",
+      "type": "CreateEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-29T06:43:07Z",
+      "summary": "membuat branch “work/auto-tiling-trace”"
+    },
+    {
+      "id": "25689437881",
+      "type": "PushEvent",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-29T06:39:28Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "25674213561",
+      "type": "DeleteEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-29T18:04:34Z",
+      "summary": "menghapus work/auto-tiling-fix-tick"
+    },
+    {
+      "id": "18689944852",
       "type": "PullRequestEvent",
       "repo": "Niumination/hypr-rust",
       "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-23T06:33:44Z",
+      "createdAt": "2026-10-30T17:22:03Z",
       "summary": "aktivitas PR"
     },
     {
-      "id": "24907713676",
+      "id": "25637822569",
       "type": "PushEvent",
-      "repo": "Niumination/spatial-vision",
-      "repoUrl": "https://api.github.com/repos/Niumination/spatial-vision",
-      "createdAt": "2026-10-21T05:22:59Z",
+      "repo": "Niumination/omb-lightvela",
+      "repoUrl": "https://api.github.com/repos/Niumination/omb-lightvela",
+      "createdAt": "2026-10-28T17:11:19Z",
       "summary": "0 commit"
     },
     {
-      "id": "24904346111",
+      "id": "25635444985",
       "type": "PushEvent",
-      "repo": "Niumination/hypr-rust",
-      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-23T04:57:38Z",
+      "repo": "Niumination/ecosystem-config",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-config",
+      "createdAt": "2026-10-28T16:20:03Z",
       "summary": "0 commit"
     },
     {
-      "id": "24902613565",
+      "id": "18680821051",
+      "type": "PullRequestEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-30T15:40:54Z",
+      "summary": "aktivitas PR"
+    },
+    {
+      "id": "18679282743",
+      "type": "PublicEvent",
+      "repo": "Niumination/mira-humanoid",
+      "repoUrl": "https://api.github.com/repos/Niumination/mira-humanoid",
+      "createdAt": "2026-10-30T14:20:38Z",
+      "summary": "repo dibuat publik"
+    },
+    {
+      "id": "18672472899",
+      "type": "PublicEvent",
+      "repo": "Niumination/Niu-Humanoid",
+      "repoUrl": "https://api.github.com/repos/Niumination/Niu-Humanoid",
+      "createdAt": "2026-10-29T18:48:05Z",
+      "summary": "repo dibuat publik"
+    },
+    {
+      "id": "18670982681",
+      "type": "PullRequestEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-30T13:49:08Z",
+      "summary": "aktivitas PR"
+    },
+    {
+      "id": "18669549600",
+      "type": "PullRequestEvent",
+      "repo": "Niumination/pabrik-aplikasi-gas",
+      "repoUrl": "https://api.github.com/repos/Niumination/pabrik-aplikasi-gas",
+      "createdAt": "2026-10-30T13:25:29Z",
+      "summary": "aktivitas PR"
+    },
+    {
+      "id": "18668600270",
+      "type": "PullRequestEvent",
+      "repo": "Niumination/kune-ya.com",
+      "repoUrl": "https://api.github.com/repos/Niumination/kune-ya.com",
+      "createdAt": "2026-10-30T13:19:20Z",
+      "summary": "aktivitas PR"
+    },
+    {
+      "id": "18667017917",
+      "type": "PullRequestEvent",
+      "repo": "Niumination/ecosystem-omb",
+      "repoUrl": "https://api.github.com/repos/Niumination/ecosystem-omb",
+      "createdAt": "2026-10-30T12:58:01Z",
+      "summary": "aktivitas PR"
+    },
+    {
+      "id": "18666995141",
+      "type": "PullRequestEvent",
+      "repo": "Niumination/Niu-LKH",
+      "repoUrl": "https://api.github.com/repos/Niumination/Niu-LKH",
+      "createdAt": "2026-10-30T12:57:46Z",
+      "summary": "aktivitas PR"
+    },
+    {
+      "id": "18664968895",
+      "type": "WatchEvent",
+      "repo": "iAmAjayTeli/devzonex-strata-kaggle",
+      "repoUrl": "https://api.github.com/repos/iAmAjayTeli/devzonex-strata-kaggle",
+      "createdAt": "2026-10-30T12:30:31Z",
+      "summary": "dipantau (watch)"
+    },
+    {
+      "id": "18659793527",
+      "type": "PullRequestEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-30T11:19:28Z",
+      "summary": "aktivitas PR"
+    },
+    {
+      "id": "18659536060",
+      "type": "PullRequestEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-30T11:15:52Z",
+      "summary": "aktivitas PR"
+    },
+    {
+      "id": "18655314232",
+      "type": "PullRequestEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-30T10:15:53Z",
+      "summary": "aktivitas PR"
+    },
+    {
+      "id": "18655250706",
+      "type": "PullRequestEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-30T10:14:59Z",
+      "summary": "aktivitas PR"
+    },
+    {
+      "id": "25609887608",
+      "type": "DeleteEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-29T06:43:59Z",
+      "summary": "menghapus work/auto-tiling-trace"
+    },
+    {
+      "id": "25604953519",
       "type": "PushEvent",
       "repo": "Niumination/hypr-rust",
       "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
-      "createdAt": "2026-10-23T04:36:13Z",
+      "createdAt": "2026-10-29T06:43:56Z",
       "summary": "0 commit"
+    },
+    {
+      "id": "25559173787",
+      "type": "PushEvent",
+      "repo": "Niumination/omb-lightvela",
+      "repoUrl": "https://api.github.com/repos/Niumination/omb-lightvela",
+      "createdAt": "2026-10-28T16:54:28Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "25558011526",
+      "type": "CreateEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-28T16:49:50Z",
+      "summary": "membuat branch “work/auto-tiling-pr-b”"
+    },
+    {
+      "id": "25555664358",
+      "type": "PushEvent",
+      "repo": "Niumination/omb-lightvela",
+      "repoUrl": "https://api.github.com/repos/Niumination/omb-lightvela",
+      "createdAt": "2026-10-28T16:30:54Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "25553692958",
+      "type": "PushEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-28T16:14:08Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "18586345368",
+      "type": "PullRequestEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-29T18:04:28Z",
+      "summary": "aktivitas PR"
+    },
+    {
+      "id": "18585712954",
+      "type": "PullRequestEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-29T17:58:30Z",
+      "summary": "aktivitas PR"
+    },
+    {
+      "id": "25543213225",
+      "type": "PushEvent",
+      "repo": "Niumination/omb-lightvela",
+      "repoUrl": "https://api.github.com/repos/Niumination/omb-lightvela",
+      "createdAt": "2026-10-28T18:10:36Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "25537438516",
+      "type": "DeleteEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-28T15:59:10Z",
+      "summary": "menghapus work/adr-0008-auto-tiling"
+    },
+    {
+      "id": "25536609434",
+      "type": "PushEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-28T16:51:13Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "25530955141",
+      "type": "DeleteEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-28T16:51:15Z",
+      "summary": "menghapus work/auto-tiling-pr-b"
+    },
+    {
+      "id": "25527657380",
+      "type": "CreateEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-28T15:53:11Z",
+      "summary": "membuat branch “work/adr-0008-auto-tiling”"
+    },
+    {
+      "id": "25527347344",
+      "type": "CreateEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-28T16:13:23Z",
+      "summary": "membuat branch “work/auto-tiling-pr-a”"
+    },
+    {
+      "id": "25526744487",
+      "type": "DeleteEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-28T16:14:10Z",
+      "summary": "menghapus work/auto-tiling-pr-a"
+    },
+    {
+      "id": "25525017660",
+      "type": "PushEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-28T15:59:06Z",
+      "summary": "0 commit"
+    },
+    {
+      "id": "18532105035",
+      "type": "PullRequestEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-29T06:43:55Z",
+      "summary": "aktivitas PR"
+    },
+    {
+      "id": "18532049075",
+      "type": "PullRequestEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-29T06:43:09Z",
+      "summary": "aktivitas PR"
+    },
+    {
+      "id": "25493008768",
+      "type": "CreateEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-27T15:48:07Z",
+      "summary": "membuat branch “work/hotkey-dispatch-trace”"
+    },
+    {
+      "id": "25492571147",
+      "type": "CreateEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-27T17:52:45Z",
+      "summary": "membuat branch “work/hotkey-chord-altcmd”"
+    },
+    {
+      "id": "25464693424",
+      "type": "DeleteEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-27T12:08:19Z",
+      "summary": "menghapus work/global-hotkey-reflow"
+    },
+    {
+      "id": "25454884547",
+      "type": "DeleteEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-27T10:16:56Z",
+      "summary": "menghapus work/reflow-success-host-run"
+    },
+    {
+      "id": "25453243004",
+      "type": "CreateEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-27T10:14:57Z",
+      "summary": "membuat branch “work/reflow-success-host-run”"
+    },
+    {
+      "id": "18478397262",
+      "type": "PullRequestEvent",
+      "repo": "Niumination/hypr-rust",
+      "repoUrl": "https://api.github.com/repos/Niumination/hypr-rust",
+      "createdAt": "2026-10-28T15:59:04Z",
+      "summary": "aktivitas PR"
     }
   ],
   "live": false,
   "rateLimited": false,
-  "updatedAt": "2026-10-26T08:19:52.282Z",
+  "updatedAt": "2026-11-02T10:22:28.601Z",
   "source": "fallback-cache"
 };

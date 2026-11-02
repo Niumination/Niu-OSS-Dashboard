@@ -1,0 +1,23 @@
+{
+ "generatedAt": "2026-11-02T10:22:28.649Z",
+ "repo": {
+  "name": "zb-humanoid",
+  "fullName": "Niumination/zb-humanoid",
+  "description": "Humanoid interface project",
+  "descriptionEn": null,
+  "url": "https://github.com/Niumination/zb-humanoid",
+  "homepage": "https://zb-humanoid.vercel.app",
+  "language": "JavaScript",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": null,
+  "sizeKb": 1107,
+  "createdAt": "2026-10-30T13:22:07Z",
+  "pushedAt": "2026-11-02T07:29:56Z"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "generatedAt": "2026-11-02T10:22:28.649Z",
+ "repo": {
+  "name": "mira-humanoid",
+  "fullName": "Niumination/mira-humanoid",
+  "description": "MIRA humanoid rebuild (Vite + React + TS) — satu konsep dengan Niu-Humanoid",
+  "descriptionEn": null,
+  "url": "https://github.com/Niumination/mira-humanoid",
+  "homepage": null,
+  "language": "GLSL",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": null,
+  "sizeKb": 20556,
+  "createdAt": "2026-10-30T14:20:38Z",
+  "pushedAt": "2026-11-02T06:20:17Z"
+ }
+}

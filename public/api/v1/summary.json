@@ -1,12 +1,12 @@
 {
- "generatedAt": "2026-10-26T08:19:52.334Z",
+ "generatedAt": "2026-11-02T10:22:28.649Z",
  "totals": {
-  "repos": 97,
-  "original": 57,
+  "repos": 100,
+  "original": 60,
   "stars": 3,
   "forks": 1,
   "followers": 3,
-  "withHomepage": 32
+  "withHomepage": 34
  },
  "topLanguages": [
   {
@@ -15,7 +15,7 @@
   },
   {
    "name": "JavaScript",
-   "count": 14
+   "count": 16
   },
   {
    "name": "HTML",
@@ -38,15 +38,15 @@
    "count": 2
   },
   {
+   "name": "GLSL",
+   "count": 1
+  },
+  {
    "name": "Java",
    "count": 1
   },
   {
    "name": "Kotlin",
-   "count": 1
-  },
-  {
-   "name": "C++",
    "count": 1
   }
  ],
