@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-03T10:44:59.831Z",
+ "generatedAt": "2026-11-03T18:03:55.661Z",
  "source": "data/uptime.json (GitHub Actions, tiap 15 menit)",
  "intervalMinutes": 15,
  "sites": [
@@ -12,8 +12,8 @@
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-17T15:55:05.378Z",
-    "ms": 203,
+    "t": "2026-10-17T17:59:06.904Z",
+    "ms": 228,
     "ok": true
    }
   },
@@ -22,7 +22,7 @@
    "url": "https://zb-humanoid.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 261,
+   "avgMs30d": 264,
    "days": 2,
    "lastOk": true,
    "lastCheck": {
@@ -36,7 +36,7 @@
    "url": "https://niu-humanoid.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 181,
+   "avgMs30d": 229,
    "days": 2,
    "lastOk": true,
    "lastCheck": {
@@ -50,12 +50,12 @@
    "url": "https://niu-oss.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 188,
+   "avgMs30d": 191,
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-17T15:55:05.378Z",
-    "ms": 184,
+    "t": "2026-10-17T17:59:06.904Z",
+    "ms": 192,
     "ok": true
    }
   },
@@ -64,12 +64,12 @@
    "url": "https://kune-ya-com.vercel.app",
    "uptime7d": 0,
    "uptime30d": 0,
-   "avgMs30d": 256,
+   "avgMs30d": 258,
    "days": 30,
    "lastOk": null,
    "lastCheck": {
-    "t": "2026-10-17T15:55:05.378Z",
-    "ms": 347,
+    "t": "2026-10-17T17:59:06.904Z",
+    "ms": 283,
     "ok": false
    }
   },
@@ -78,12 +78,12 @@
    "url": "https://niumination.github.io/Niu-LKH/",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 254,
+   "avgMs30d": 256,
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-17T15:55:05.378Z",
-    "ms": 406,
+    "t": "2026-10-17T17:59:06.904Z",
+    "ms": 200,
     "ok": true
    }
   },
@@ -92,12 +92,12 @@
    "url": "https://niumination.github.io/niu-dash/",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 270,
+   "avgMs30d": 272,
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-17T15:55:05.378Z",
-    "ms": 494,
+    "t": "2026-10-17T17:59:06.904Z",
+    "ms": 206,
     "ok": true
    }
   },
@@ -106,12 +106,12 @@
    "url": "https://kelas-hazel.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 1848,
+   "avgMs30d": 1856,
    "days": 23,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-17T15:55:05.378Z",
-    "ms": 1834,
+    "t": "2026-10-17T17:59:06.904Z",
+    "ms": 1876,
     "ok": true
    }
   },
@@ -119,13 +119,13 @@
    "repo": "PemdiAcehTengah",
    "url": "https://pemdi-aceh-tengah.vercel.app",
    "uptime7d": 100,
-   "uptime30d": 99.37,
-   "avgMs30d": 1261,
+   "uptime30d": 99.38,
+   "avgMs30d": 1265,
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-17T15:55:05.378Z",
-    "ms": 1416,
+    "t": "2026-10-17T17:59:06.904Z",
+    "ms": 1276,
     "ok": true
    }
   },
@@ -138,7 +138,7 @@
    "days": 30,
    "lastOk": null,
    "lastCheck": {
-    "t": "2026-10-17T15:55:05.378Z",
+    "t": "2026-10-17T17:59:06.904Z",
     "ms": null,
     "ok": false
    }
