@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-06T11:38:06.932Z",
+ "generatedAt": "2026-11-06T18:25:09.607Z",
  "source": "data/uptime.json (GitHub Actions, tiap 15 menit)",
  "intervalMinutes": 15,
  "sites": [
@@ -12,8 +12,8 @@
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-19T01:09:26.708Z",
-    "ms": 251,
+    "t": "2026-10-19T06:07:33.000Z",
+    "ms": 277,
     "ok": true
    }
   },
@@ -22,7 +22,7 @@
    "url": "https://zb-humanoid.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 285,
+   "avgMs30d": 280,
    "days": 5,
    "lastOk": true,
    "lastCheck": {
@@ -36,7 +36,7 @@
    "url": "https://niu-humanoid.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 268,
+   "avgMs30d": 281,
    "days": 5,
    "lastOk": true,
    "lastCheck": {
@@ -50,12 +50,12 @@
    "url": "https://niu-oss.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 164,
+   "avgMs30d": 163,
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-19T01:09:26.708Z",
-    "ms": 126,
+    "t": "2026-10-19T06:07:33.000Z",
+    "ms": 183,
     "ok": true
    }
   },
@@ -68,8 +68,8 @@
    "days": 30,
    "lastOk": null,
    "lastCheck": {
-    "t": "2026-10-19T01:09:26.708Z",
-    "ms": 366,
+    "t": "2026-10-19T06:07:33.000Z",
+    "ms": 289,
     "ok": false
    }
   },
@@ -82,8 +82,8 @@
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-19T01:09:26.708Z",
-    "ms": 251,
+    "t": "2026-10-19T06:07:33.000Z",
+    "ms": 257,
     "ok": true
    }
   },
@@ -92,12 +92,12 @@
    "url": "https://niumination.github.io/niu-dash/",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 275,
+   "avgMs30d": 276,
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-19T01:09:26.708Z",
-    "ms": 256,
+    "t": "2026-10-19T06:07:33.000Z",
+    "ms": 284,
     "ok": true
    }
   },
@@ -106,12 +106,12 @@
    "url": "https://kelas-hazel.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 1887,
+   "avgMs30d": 1888,
    "days": 26,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-19T01:09:26.708Z",
-    "ms": 1864,
+    "t": "2026-10-19T06:07:33.000Z",
+    "ms": 1895,
     "ok": true
    }
   },
@@ -120,12 +120,12 @@
    "url": "https://pemdi-aceh-tengah.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 1297,
+   "avgMs30d": 1294,
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-19T01:09:26.708Z",
-    "ms": 1288,
+    "t": "2026-10-19T06:07:33.000Z",
+    "ms": 1252,
     "ok": true
    }
   },
@@ -138,7 +138,7 @@
    "days": 30,
    "lastOk": null,
    "lastCheck": {
-    "t": "2026-10-19T01:09:26.708Z",
+    "t": "2026-10-19T06:07:33.000Z",
     "ms": null,
     "ok": false
    }
