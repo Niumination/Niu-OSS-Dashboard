@@ -1,0 +1,23 @@
+{
+ "generatedAt": "2026-11-09T10:42:42.943Z",
+ "repo": {
+  "name": "zbmaus-humanoid",
+  "fullName": "Niumination/zbmaus-humanoid",
+  "description": "zbmaus-humanoid: OMB-connected humanoid interface (fork of Niu-Humanoid APEX rebuild)",
+  "descriptionEn": null,
+  "url": "https://github.com/Niumination/zbmaus-humanoid",
+  "homepage": "https://zbmaus-humanoid.vercel.app",
+  "language": "JavaScript",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": null,
+  "sizeKb": 4554,
+  "createdAt": "2026-11-02T19:21:16Z",
+  "pushedAt": "2026-11-03T08:49:16Z"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "generatedAt": "2026-11-09T10:42:42.943Z",
+ "repo": {
+  "name": "AgenticTrade",
+  "fullName": "Niumination/AgenticTrade",
+  "description": "Sistem trading otomatis berbasis agent AI (SMC/ICT) dengan eksekusi MT5 dan track record yang dapat diaudit publik — bukan klaim sendiri.",
+  "descriptionEn": null,
+  "url": "https://github.com/Niumination/AgenticTrade",
+  "homepage": null,
+  "language": "Python",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": "MIT",
+  "sizeKb": 2569,
+  "createdAt": "2026-11-04T18:16:01Z",
+  "pushedAt": "2026-11-06T09:40:49Z"
+ }
+}

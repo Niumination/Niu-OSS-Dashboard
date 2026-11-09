@@ -1,32 +1,32 @@
 {
- "generatedAt": "2026-11-02T10:22:28.649Z",
+ "generatedAt": "2026-11-09T10:42:42.943Z",
  "totals": {
   "repos": 100,
-  "original": 60,
+  "original": 62,
   "stars": 3,
   "forks": 1,
   "followers": 3,
-  "withHomepage": 34
+  "withHomepage": 33
  },
  "topLanguages": [
   {
    "name": "TypeScript",
-   "count": 22
+   "count": 23
   },
   {
    "name": "JavaScript",
-   "count": 16
+   "count": 17
   },
   {
    "name": "HTML",
    "count": 6
   },
   {
-   "name": "Shell",
-   "count": 5
+   "name": "Python",
+   "count": 6
   },
   {
-   "name": "Python",
+   "name": "Shell",
    "count": 5
   },
   {
@@ -38,15 +38,15 @@
    "count": 2
   },
   {
-   "name": "GLSL",
-   "count": 1
-  },
-  {
    "name": "Java",
    "count": 1
   },
   {
    "name": "Kotlin",
+   "count": 1
+  },
+  {
+   "name": "C++",
    "count": 1
   }
  ],

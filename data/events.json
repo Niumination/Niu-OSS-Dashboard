@@ -1,774 +1,6 @@
 [
   {
-    "id": "18856306852",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "action": "merged",
-      "number": 46,
-      "pull_request": {
-        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/46",
-        "id": 5115699313,
-        "number": 46,
-        "head": {
-          "ref": "feat/clamp-skip-reflow",
-          "sha": "90feb86f4b94f34744decf704e08588aa14e6d7d",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "2aad5b30e4b128079009ccc05b324b3054c05243",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-11-02T05:58:29Z"
-  },
-  {
-    "id": "18856135044",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "action": "opened",
-      "number": 46,
-      "pull_request": {
-        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/46",
-        "id": 5115699313,
-        "number": 46,
-        "head": {
-          "ref": "feat/clamp-skip-reflow",
-          "sha": "90feb86f4b94f34744decf704e08588aa14e6d7d",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "2aad5b30e4b128079009ccc05b324b3054c05243",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-11-02T05:55:25Z"
-  },
-  {
-    "id": "25899723956",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1261483824,
-      "name": "Niumination/kune-ya.com",
-      "url": "https://api.github.com/repos/Niumination/kune-ya.com"
-    },
-    "payload": {
-      "repository_id": 1261483824,
-      "push_id": 48368117062,
-      "ref": "refs/heads/pr-3",
-      "head": "d216aabaf1d3d6994d88a4ddc6c3bfb6750e991a",
-      "before": "45f466da8c9b081e36824d765dfd4b75f37e7f83"
-    },
-    "public": true,
-    "created_at": "2026-10-30T13:16:44Z"
-  },
-  {
-    "id": "25899301684",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1303073415,
-      "name": "Niumination/ecosystem-config",
-      "url": "https://api.github.com/repos/Niumination/ecosystem-config"
-    },
-    "payload": {
-      "repository_id": 1303073415,
-      "push_id": 48370531739,
-      "ref": "refs/heads/main",
-      "head": "3addcf10ba68aabaf70c9420b9cecded7482e15c",
-      "before": "1aae4cabb2550bd44ad06e4f1fbdd0981e615957"
-    },
-    "public": true,
-    "created_at": "2026-10-30T13:39:32Z"
-  },
-  {
-    "id": "25898154690",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1439758126,
-      "name": "Niumination/zb-humanoid",
-      "url": "https://api.github.com/repos/Niumination/zb-humanoid"
-    },
-    "payload": {
-      "ref": "main",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/main",
-      "master_branch": "main",
-      "description": "Humanoid interface project",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-30T13:29:57Z"
-  },
-  {
-    "id": "25897672311",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1359950618,
-      "name": "Niumination/niu-gayo-agroclimate",
-      "url": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate"
-    },
-    "payload": {
-      "repository_id": 1359950618,
-      "push_id": 48366166362,
-      "ref": "refs/heads/main",
-      "head": "5916c8cf11a9f85fa37413750e1d870b5197b95c",
-      "before": "c981dd22f7fef24c8dc80c6813bbdb1c927193de"
-    },
-    "public": true,
-    "created_at": "2026-10-30T12:58:29Z"
-  },
-  {
-    "id": "25897487146",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1403147974,
-      "name": "Niumination/hermes-office",
-      "url": "https://api.github.com/repos/Niumination/hermes-office"
-    },
-    "payload": {
-      "repository_id": 1403147974,
-      "push_id": 48368877099,
-      "ref": "refs/heads/dev",
-      "head": "5d983f147ebfa45b6ee840ea191f4cf70e0b606a",
-      "before": "fcccf85503c98e8fa26ec172615450beb36d27a0"
-    },
-    "public": true,
-    "created_at": "2026-10-30T13:23:57Z"
-  },
-  {
-    "id": "25896942182",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1261483824,
-      "name": "Niumination/kune-ya.com",
-      "url": "https://api.github.com/repos/Niumination/kune-ya.com"
-    },
-    "payload": {
-      "repository_id": 1261483824,
-      "push_id": 48368394047,
-      "ref": "refs/heads/main",
-      "head": "01f8253db2e9c3d6ff70117a8089479520728898",
-      "before": "cd6be24d400a9a5c41c695cdbf65379e60841871"
-    },
-    "public": true,
-    "created_at": "2026-10-30T13:19:22Z"
-  },
-  {
-    "id": "18846177925",
-    "type": "WatchEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1161958643,
-      "name": "vercel-labs/agent-desktop",
-      "url": "https://api.github.com/repos/vercel-labs/agent-desktop"
-    },
-    "payload": {
-      "action": "started"
-    },
-    "public": true,
-    "created_at": "2026-11-02T02:41:46Z",
-    "org": {
-      "id": 108547162,
-      "login": "vercel-labs",
-      "gravatar_id": "",
-      "url": "https://api.github.com/orgs/vercel-labs",
-      "avatar_url": "https://avatars.githubusercontent.com/u/108547162?"
-    }
-  },
-  {
-    "id": "25877560507",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "ref": "work/snap-min-window-height",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/work/snap-min-window-height",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-30T10:15:56Z"
-  },
-  {
-    "id": "25859019442",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "ref": "fix/host-clamp-retry",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/fix/host-clamp-retry",
-      "master_branch": "main",
-      "description": "Hypr-Rust — Rust tiling window manager/controller research for Windows 11 x64 & Intel macOS (docs + layout-core scaffold)",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-30T13:49:06Z"
-  },
-  {
-    "id": "25856707491",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1347300426,
-      "name": "Niumination/pabrik-aplikasi-gas",
-      "url": "https://api.github.com/repos/Niumination/pabrik-aplikasi-gas"
-    },
-    "payload": {
-      "ref": "work/pabrik-audit-snapshot",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/work/pabrik-audit-snapshot",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-30T13:25:31Z"
-  },
-  {
-    "id": "25856513629",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1403147974,
-      "name": "Niumination/hermes-office",
-      "url": "https://api.github.com/repos/Niumination/hermes-office"
-    },
-    "payload": {
-      "repository_id": 1403147974,
-      "push_id": 48368861689,
-      "ref": "refs/heads/dev",
-      "head": "1542ba10b8f1f3f2489542710fd68a2ecfc3fe94",
-      "before": "9dd96995591b705a5a6b3ba2c58c687e62785043"
-    },
-    "public": true,
-    "created_at": "2026-10-30T13:23:48Z"
-  },
-  {
-    "id": "25856465513",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1403147974,
-      "name": "Niumination/hermes-office",
-      "url": "https://api.github.com/repos/Niumination/hermes-office"
-    },
-    "payload": {
-      "repository_id": 1403147974,
-      "push_id": 48368814463,
-      "ref": "refs/heads/dev",
-      "head": "b9e0dca849d1fb05eeb7b45a09b1df0b3570f132",
-      "before": "a34996725eaedd8a7c835f29c9c0a73ec032bf0b"
-    },
-    "public": true,
-    "created_at": "2026-10-30T13:23:20Z"
-  },
-  {
-    "id": "18815723959",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "action": "merged",
-      "number": 45,
-      "pull_request": {
-        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/45",
-        "id": 5108955265,
-        "number": 45,
-        "head": {
-          "ref": "feat/default-master-ratio-07",
-          "sha": "9fb996cbab7ab88343526026b602f4c2cee8f232",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "f4c668b6f888e81baaba6a325ddb6a1feef4143d",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-11-01T15:53:11Z"
-  },
-  {
-    "id": "18815630225",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "action": "opened",
-      "number": 45,
-      "pull_request": {
-        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/45",
-        "id": 5108955265,
-        "number": 45,
-        "head": {
-          "ref": "feat/default-master-ratio-07",
-          "sha": "9fb996cbab7ab88343526026b602f4c2cee8f232",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "f4c668b6f888e81baaba6a325ddb6a1feef4143d",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-11-01T15:51:14Z"
-  },
-  {
-    "id": "25843915569",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "ref": "fix/zero-partial-frame-write",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/fix/zero-partial-frame-write",
-      "master_branch": "main",
-      "description": "Hypr-Rust — Rust tiling window manager/controller research for Windows 11 x64 & Intel macOS (docs + layout-core scaffold)",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-30T11:15:20Z"
-  },
-  {
-    "id": "18812224585",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "action": "merged",
-      "number": 44,
-      "pull_request": {
-        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/44",
-        "id": 5108353859,
-        "number": 44,
-        "head": {
-          "ref": "feat/layout-submenu",
-          "sha": "81663aa52b37b3c1dacfd6a0ae2941b7fe11c3bc",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "bace6ab7990a320fea129166b2304e0782c1aa01",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-11-01T14:39:25Z"
-  },
-  {
-    "id": "18812034375",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "action": "opened",
-      "number": 44,
-      "pull_request": {
-        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/44",
-        "id": 5108353859,
-        "number": 44,
-        "head": {
-          "ref": "feat/layout-submenu",
-          "sha": "81663aa52b37b3c1dacfd6a0ae2941b7fe11c3bc",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "bace6ab7990a320fea129166b2304e0782c1aa01",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-11-01T14:35:27Z"
-  },
-  {
-    "id": "18810133371",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "action": "merged",
-      "number": 43,
-      "pull_request": {
-        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/43",
-        "id": 5088351028,
-        "number": 43,
-        "head": {
-          "ref": "docs/path-q-auto-tiling",
-          "sha": "30807c32ed156133fbac8e16f1795b71dd773463",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "6a477265300e5647e4453c7ed607299b816141aa",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-11-01T13:56:00Z"
-  },
-  {
-    "id": "18810044409",
-    "type": "WatchEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1402910030,
-      "name": "Mr-Destroyer/ZimZilla",
-      "url": "https://api.github.com/repos/Mr-Destroyer/ZimZilla"
-    },
-    "payload": {
-      "action": "started"
-    },
-    "public": true,
-    "created_at": "2026-11-01T13:53:59Z"
-  },
-  {
-    "id": "18810034150",
-    "type": "WatchEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1368596582,
-      "name": "google/elephant-goldfish-model",
-      "url": "https://api.github.com/repos/google/elephant-goldfish-model"
-    },
-    "payload": {
-      "action": "started"
-    },
-    "public": true,
-    "created_at": "2026-11-01T13:53:45Z",
-    "org": {
-      "id": 1342004,
-      "login": "google",
-      "gravatar_id": "",
-      "url": "https://api.github.com/orgs/google",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1342004?"
-    }
-  },
-  {
-    "id": "25822645556",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1438829437,
-      "name": "Niumination/Niu-Humanoid",
-      "url": "https://api.github.com/repos/Niumination/Niu-Humanoid"
-    },
-    "payload": {
-      "repository_id": 1438829437,
-      "push_id": 48391481251,
-      "ref": "refs/heads/main",
-      "head": "a4445cf80854a81be458e81021fd44bb4d7628b9",
-      "before": "1f2f9974aca2889ddb50db445b6658d2e2674554"
-    },
-    "public": true,
-    "created_at": "2026-10-30T16:49:59Z"
-  },
-  {
-    "id": "25818451252",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "ref": "docs/path-q-auto-tiling",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/docs/path-q-auto-tiling",
-      "master_branch": "main",
-      "description": "Hypr-Rust — Rust tiling window manager/controller research for Windows 11 x64 & Intel macOS (docs + layout-core scaffold)",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-30T17:22:00Z"
-  },
-  {
-    "id": "25807505906",
+    "id": "26630476025",
     "type": "PushEvent",
     "actor": {
       "id": 123625275,
@@ -785,272 +17,16 @@
     },
     "payload": {
       "repository_id": 1422508147,
-      "push_id": 48383743227,
-      "ref": "refs/heads/fix/host-clamp-retry",
-      "head": "b42b70d51e5b7185c4b080b637479693633743b6",
-      "before": "8e0c3c2a46b95f8222847840a02f1fd9fc922d57"
-    },
-    "public": true,
-    "created_at": "2026-10-30T15:38:46Z"
-  },
-  {
-    "id": "25801264997",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1347300426,
-      "name": "Niumination/pabrik-aplikasi-gas",
-      "url": "https://api.github.com/repos/Niumination/pabrik-aplikasi-gas"
-    },
-    "payload": {
-      "repository_id": 1347300426,
-      "push_id": 48369041749,
+      "push_id": 49374889197,
       "ref": "refs/heads/main",
-      "head": "4e46240a89dfe8ab0f05bf74abe5db258f9a5a31",
-      "before": "49a7a3ae9485878521fadce46c1379839a8db16b"
+      "head": "a8e5c7679bca16c52f2b58293876f8db78587eee",
+      "before": "690933c2bfcd16ff6561cf86634744b0f7a88d6f"
     },
     "public": true,
-    "created_at": "2026-10-30T13:25:30Z"
+    "created_at": "2026-11-07T15:55:54Z"
   },
   {
-    "id": "25801044176",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1439758126,
-      "name": "Niumination/zb-humanoid",
-      "url": "https://api.github.com/repos/Niumination/zb-humanoid"
-    },
-    "payload": {
-      "repository_id": 1439758126,
-      "push_id": 48369597236,
-      "ref": "refs/heads/main",
-      "head": "30fc63157fa3ee97dcc4f459e0143bfc3312714e",
-      "before": "e4bb06cebbd50e9bb45144418d1a5f50c3fc03dd"
-    },
-    "public": true,
-    "created_at": "2026-10-30T13:30:41Z"
-  },
-  {
-    "id": "25800223356",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1403147974,
-      "name": "Niumination/hermes-office",
-      "url": "https://api.github.com/repos/Niumination/hermes-office"
-    },
-    "payload": {
-      "repository_id": 1403147974,
-      "push_id": 48368853074,
-      "ref": "refs/heads/dev",
-      "head": "9dd96995591b705a5a6b3ba2c58c687e62785043",
-      "before": "7a1bd8c31432984d26c550d85743a0dd13d941bb"
-    },
-    "public": true,
-    "created_at": "2026-10-30T13:23:43Z"
-  },
-  {
-    "id": "25797215702",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1080378444,
-      "name": "Niumination/Niu-LKH",
-      "url": "https://api.github.com/repos/Niumination/Niu-LKH"
-    },
-    "payload": {
-      "ref": "omb/wira/20261020-ci",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/omb/wira/20261020-ci",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-30T12:57:48Z"
-  },
-  {
-    "id": "25796766662",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1439826960,
-      "name": "Niumination/mira-humanoid",
-      "url": "https://api.github.com/repos/Niumination/mira-humanoid"
-    },
-    "payload": {
-      "repository_id": 1439826960,
-      "push_id": 48391478645,
-      "ref": "refs/heads/main",
-      "head": "36b626332a4c2454d3db47d9535b11b4d9724034",
-      "before": "1c4a0afc0398d7d58bad39e7f3897bf365c0c935"
-    },
-    "public": true,
-    "created_at": "2026-10-30T16:49:58Z"
-  },
-  {
-    "id": "25793704471",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1261483824,
-      "name": "Niumination/kune-ya.com",
-      "url": "https://api.github.com/repos/Niumination/kune-ya.com"
-    },
-    "payload": {
-      "ref": "omb/kirana/20261020-ci",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/omb/kirana/20261020-ci",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-30T13:19:23Z"
-  },
-  {
-    "id": "25791551189",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1359950618,
-      "name": "Niumination/niu-gayo-agroclimate",
-      "url": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate"
-    },
-    "payload": {
-      "ref": "dependabot/github_actions/actions-6212fb2f78",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/dependabot/github_actions/actions-6212fb2f78",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-30T12:58:16Z"
-  },
-  {
-    "id": "25791548723",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1359950618,
-      "name": "Niumination/niu-gayo-agroclimate",
-      "url": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate"
-    },
-    "payload": {
-      "repository_id": 1359950618,
-      "push_id": 48366140922,
-      "ref": "refs/heads/main",
-      "head": "c981dd22f7fef24c8dc80c6813bbdb1c927193de",
-      "before": "d4f8f95339246abaa586deb6fdfd3093d37f36da"
-    },
-    "public": true,
-    "created_at": "2026-10-30T12:58:15Z"
-  },
-  {
-    "id": "25791526825",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1425674164,
-      "name": "Niumination/ecosystem-omb",
-      "url": "https://api.github.com/repos/Niumination/ecosystem-omb"
-    },
-    "payload": {
-      "ref": "omb/notaris/20261024-tambah-repo-baru",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/omb/notaris/20261024-tambah-repo-baru",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-30T12:58:04Z"
-  },
-  {
-    "id": "25789541462",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "repository_id": 1422508147,
-      "push_id": 48383982714,
-      "ref": "refs/heads/main",
-      "head": "6a477265300e5647e4453c7ed607299b816141aa",
-      "before": "d1defe52fb112e2a3365122d9cfb816217b419cb"
-    },
-    "public": true,
-    "created_at": "2026-10-30T15:40:56Z"
-  },
-  {
-    "id": "25788464357",
+    "id": "26628250084",
     "type": "PushEvent",
     "actor": {
       "id": 123625275,
@@ -1067,16 +43,42 @@
     },
     "payload": {
       "repository_id": 1413239984,
-      "push_id": 48374980619,
+      "push_id": 49372856780,
       "ref": "refs/heads/main",
-      "head": "4f0f27fa63e566af736b27d71a513a285872acf6",
-      "before": "85c5a11873a78472d3523097dbcdafb731483a09"
+      "head": "eef554b452cf3fe57fa11d075cc2b18c9009d207",
+      "before": "d920cf2b7dde5cabdc92b04184dd7a11df132c8a"
     },
     "public": true,
-    "created_at": "2026-10-30T14:19:03Z"
+    "created_at": "2026-11-07T15:28:36Z"
   },
   {
-    "id": "25788382963",
+    "id": "26627359262",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1353844262,
+      "name": "Niumination/sapa-ai",
+      "url": "https://api.github.com/repos/Niumination/sapa-ai"
+    },
+    "payload": {
+      "repository_id": 1353844262,
+      "push_id": 49372054639,
+      "ref": "refs/heads/dev",
+      "head": "e2f736a645bd8b04ac4ef4014acd1b4590657c5a",
+      "before": "a3f2e9b25f3d11ac8db3aea7dfd285d6c28c103f"
+    },
+    "public": true,
+    "created_at": "2026-11-07T15:17:46Z"
+  },
+  {
+    "id": "26623967770",
     "type": "DeleteEvent",
     "actor": {
       "id": 123625275,
@@ -1087,21 +89,46 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
     },
     "repo": {
-      "id": 1359950618,
-      "name": "Niumination/niu-gayo-agroclimate",
-      "url": "https://api.github.com/repos/Niumination/niu-gayo-agroclimate"
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
     },
     "payload": {
-      "ref": "dependabot/npm_and_yarn/minor-dan-patch-6b7a406798",
+      "ref": "docs/ipc-host-run",
       "ref_type": "branch",
-      "full_ref": "refs/heads/dependabot/npm_and_yarn/minor-dan-patch-6b7a406798",
+      "full_ref": "refs/heads/docs/ipc-host-run",
       "pusher_type": "user"
     },
     "public": true,
-    "created_at": "2026-10-30T12:58:31Z"
+    "created_at": "2026-11-07T14:35:26Z"
   },
   {
-    "id": "25787231045",
+    "id": "26622572475",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
+    },
+    "payload": {
+      "ref": "docs/adr0009-owner-decisions",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/docs/adr0009-owner-decisions",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-11-07T15:28:45Z"
+  },
+  {
+    "id": "26593079267",
     "type": "PushEvent",
     "actor": {
       "id": 123625275,
@@ -1112,22 +139,22 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
     },
     "repo": {
-      "id": 1303073415,
-      "name": "Niumination/ecosystem-config",
-      "url": "https://api.github.com/repos/Niumination/ecosystem-config"
+      "id": 1413239984,
+      "name": "Niumination/mirai",
+      "url": "https://api.github.com/repos/Niumination/mirai"
     },
     "payload": {
-      "repository_id": 1303073415,
-      "push_id": 48354556073,
+      "repository_id": 1413239984,
+      "push_id": 49478018768,
       "ref": "refs/heads/main",
-      "head": "1d6b24eb9cac119d3fb0b95424b816686084c05a",
-      "before": "7d280765dd3424eee540204c89a9bb50100db582"
+      "head": "6ea360929e7c8561216ca009eb5fc439ba2b1c7f",
+      "before": "9d41cfc6a471ca1d3c20f2f45f1f21f11c17214f"
     },
     "public": true,
-    "created_at": "2026-10-30T11:02:01Z"
+    "created_at": "2026-11-08T17:45:28Z"
   },
   {
-    "id": "25787131152",
+    "id": "26588200941",
     "type": "PushEvent",
     "actor": {
       "id": 123625275,
@@ -1138,22 +165,98 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
     },
     "repo": {
-      "id": 1303073415,
-      "name": "Niumination/ecosystem-config",
-      "url": "https://api.github.com/repos/Niumination/ecosystem-config"
+      "id": 1413239984,
+      "name": "Niumination/mirai",
+      "url": "https://api.github.com/repos/Niumination/mirai"
     },
     "payload": {
-      "repository_id": 1303073415,
-      "push_id": 48364991813,
+      "repository_id": 1413239984,
+      "push_id": 49480170469,
       "ref": "refs/heads/main",
-      "head": "f34ae984cafac8844ed532d97dbaa07eec2d951f",
-      "before": "cb388c9b59cc3230a1f6f0a8274267395ba70f09"
+      "head": "bc7a6f2e0dac64dc1e60ceed133eba56cd122421",
+      "before": "6ea360929e7c8561216ca009eb5fc439ba2b1c7f"
     },
     "public": true,
-    "created_at": "2026-10-30T12:47:48Z"
+    "created_at": "2026-11-08T18:13:11Z"
   },
   {
-    "id": "25787098831",
+    "id": "26585812145",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1413239984,
+      "name": "Niumination/mirai",
+      "url": "https://api.github.com/repos/Niumination/mirai"
+    },
+    "payload": {
+      "repository_id": 1413239984,
+      "push_id": 49478002945,
+      "ref": "refs/heads/main",
+      "head": "9d41cfc6a471ca1d3c20f2f45f1f21f11c17214f",
+      "before": "eef554b452cf3fe57fa11d075cc2b18c9009d207"
+    },
+    "public": true,
+    "created_at": "2026-11-08T17:45:16Z"
+  },
+  {
+    "id": "26525251901",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
+    },
+    "payload": {
+      "ref": "feat/first-run-guidance",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/feat/first-run-guidance",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-11-07T16:50:13Z"
+  },
+  {
+    "id": "26521133602",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
+    },
+    "payload": {
+      "ref": "feat/install-macos-script",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/feat/install-macos-script",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-11-07T15:55:58Z"
+  },
+  {
+    "id": "26517795384",
     "type": "PushEvent",
     "actor": {
       "id": 123625275,
@@ -1170,16 +273,16 @@
     },
     "payload": {
       "repository_id": 1422508147,
-      "push_id": 48356150297,
-      "ref": "refs/heads/fix/zero-partial-frame-write",
-      "head": "3183d7a03928295034a9440e26d69c3b45b2323b",
-      "before": "edc6c124cf8517ef3f9972575d1ad129b7f1425f"
+      "push_id": 49377382229,
+      "ref": "refs/heads/main",
+      "head": "1538770fe01ad81bf947cf0d1e0ae9836270c22b",
+      "before": "a8e5c7679bca16c52f2b58293876f8db78587eee"
     },
     "public": true,
-    "created_at": "2026-10-30T11:18:20Z"
+    "created_at": "2026-11-07T16:28:24Z"
   },
   {
-    "id": "25780695884",
+    "id": "26511300443",
     "type": "PushEvent",
     "actor": {
       "id": 123625275,
@@ -1196,16 +299,93 @@
     },
     "payload": {
       "repository_id": 1422508147,
-      "push_id": 48350038788,
+      "push_id": 49379026594,
       "ref": "refs/heads/main",
-      "head": "d83552b61e26e8fed12208d1986788ea5eb1b042",
-      "before": "8a72775409cc634b784adee9868cf3fe6a65110a"
+      "head": "cc1413cb2b721951e087176ad7368e85657ba405",
+      "before": "1538770fe01ad81bf947cf0d1e0ae9836270c22b"
     },
     "public": true,
-    "created_at": "2026-10-30T10:15:54Z"
+    "created_at": "2026-11-07T16:50:11Z"
   },
   {
-    "id": "25779741732",
+    "id": "26510264942",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1439826960,
+      "name": "Niumination/mira-humanoid",
+      "url": "https://api.github.com/repos/Niumination/mira-humanoid"
+    },
+    "payload": {
+      "repository_id": 1439826960,
+      "push_id": 49369955885,
+      "ref": "refs/heads/main",
+      "head": "33b2817057a6d82de972a83d71afbaeedb2fb1c4",
+      "before": "4fcba39d15f92eb92445b93476e1dddfc9a822c1"
+    },
+    "public": true,
+    "created_at": "2026-11-07T14:49:57Z"
+  },
+  {
+    "id": "26501061134",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
+    },
+    "payload": {
+      "repository_id": 1422508147,
+      "push_id": 49368888982,
+      "ref": "refs/heads/main",
+      "head": "243e510f0b1a9890d1b9e2e4f87bceb301acb90c",
+      "before": "cf19d9e4de215ca113449e40f75fc9c05766cb45"
+    },
+    "public": true,
+    "created_at": "2026-11-07T14:35:22Z"
+  },
+  {
+    "id": "26499403248",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
+    },
+    "payload": {
+      "ref": "docs/hardware-display-matrix",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/docs/hardware-display-matrix",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-11-07T16:28:26Z"
+  },
+  {
+    "id": "26499255683",
     "type": "CreateEvent",
     "actor": {
       "id": 123625275,
@@ -1216,23 +396,23 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
     },
     "repo": {
-      "id": 1261483824,
-      "name": "Niumination/kune-ya.com",
-      "url": "https://api.github.com/repos/Niumination/kune-ya.com"
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
     },
     "payload": {
-      "ref": "pr-3",
+      "ref": "docs/hardware-display-matrix",
       "ref_type": "branch",
-      "full_ref": "refs/heads/pr-3",
+      "full_ref": "refs/heads/docs/hardware-display-matrix",
       "master_branch": "main",
-      "description": null,
+      "description": "Hypr-Rust — Rust tiling window manager/controller research for Windows 11 x64 & Intel macOS (docs + layout-core scaffold)",
       "pusher_type": "user"
     },
     "public": true,
-    "created_at": "2026-10-30T13:05:43Z"
+    "created_at": "2026-11-07T16:26:55Z"
   },
   {
-    "id": "25778512606",
+    "id": "26498512814",
     "type": "PushEvent",
     "actor": {
       "id": 123625275,
@@ -1243,48 +423,22 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
     },
     "repo": {
-      "id": 1403147974,
-      "name": "Niumination/hermes-office",
-      "url": "https://api.github.com/repos/Niumination/hermes-office"
+      "id": 1413239984,
+      "name": "Niumination/mirai",
+      "url": "https://api.github.com/repos/Niumination/mirai"
     },
     "payload": {
-      "repository_id": 1403147974,
-      "push_id": 48368869760,
-      "ref": "refs/heads/dev",
-      "head": "fcccf85503c98e8fa26ec172615450beb36d27a0",
-      "before": "1542ba10b8f1f3f2489542710fd68a2ecfc3fe94"
+      "repository_id": 1413239984,
+      "push_id": 49366456581,
+      "ref": "refs/heads/main",
+      "head": "06049230fe1ecb89cc74918aadc390a1e8edd848",
+      "before": "1a0d00c944511e2580f721432347b6e5a2917e9e"
     },
     "public": true,
-    "created_at": "2026-10-30T13:23:53Z"
+    "created_at": "2026-11-07T14:02:08Z"
   },
   {
-    "id": "25778163721",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1261483824,
-      "name": "Niumination/kune-ya.com",
-      "url": "https://api.github.com/repos/Niumination/kune-ya.com"
-    },
-    "payload": {
-      "repository_id": 1261483824,
-      "push_id": 48368176982,
-      "ref": "refs/heads/omb/kirana/20261020-ci",
-      "head": "d216aabaf1d3d6994d88a4ddc6c3bfb6750e991a",
-      "before": "45f466da8c9b081e36824d765dfd4b75f37e7f83"
-    },
-    "public": true,
-    "created_at": "2026-10-30T13:17:18Z"
-  },
-  {
-    "id": "25775998075",
+    "id": "26491924785",
     "type": "PushEvent",
     "actor": {
       "id": 123625275,
@@ -1301,16 +455,95 @@
     },
     "payload": {
       "repository_id": 1438829437,
-      "push_id": 48375437413,
+      "push_id": 49370046012,
       "ref": "refs/heads/main",
-      "head": "1f2f9974aca2889ddb50db445b6658d2e2674554",
-      "before": "a66f5ada227d6c31f67369d6409d5fad828dc5b1"
+      "head": "865d1e51629f3a36c20f7b6d17d66d6f0f9131d0",
+      "before": "3138ceea2d12e54375191976784dac9e99a42c34"
     },
     "public": true,
-    "created_at": "2026-10-30T14:25:16Z"
+    "created_at": "2026-11-07T14:51:09Z"
   },
   {
-    "id": "25771389017",
+    "id": "26487512358",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
+    },
+    "payload": {
+      "repository_id": 1422508147,
+      "push_id": 49372864184,
+      "ref": "refs/heads/main",
+      "head": "690933c2bfcd16ff6561cf86634744b0f7a88d6f",
+      "before": "348e4637691498794428ac735fdba35a542dd689"
+    },
+    "public": true,
+    "created_at": "2026-11-07T15:28:42Z"
+  },
+  {
+    "id": "26487107108",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
+    },
+    "payload": {
+      "ref": "feat/first-run-guidance",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/feat/first-run-guidance",
+      "master_branch": "main",
+      "description": "Hypr-Rust — Rust tiling window manager/controller research for Windows 11 x64 & Intel macOS (docs + layout-core scaffold)",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-11-07T16:48:48Z"
+  },
+  {
+    "id": "26486674395",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
+    },
+    "payload": {
+      "repository_id": 1422508147,
+      "push_id": 49371929067,
+      "ref": "refs/heads/main",
+      "head": "348e4637691498794428ac735fdba35a542dd689",
+      "before": "243e510f0b1a9890d1b9e2e4f87bceb301acb90c"
+    },
+    "public": true,
+    "created_at": "2026-11-07T15:16:06Z"
+  },
+  {
+    "id": "26485341712",
     "type": "PushEvent",
     "actor": {
       "id": 123625275,
@@ -1327,16 +560,16 @@
     },
     "payload": {
       "repository_id": 1303073415,
-      "push_id": 48365373976,
+      "push_id": 49370627323,
       "ref": "refs/heads/main",
-      "head": "1aae4cabb2550bd44ad06e4f1fbdd0981e615957",
-      "before": "f34ae984cafac8844ed532d97dbaa07eec2d951f"
+      "head": "9181f5b208e6a94d8dfe62d321fd395ab2afc757",
+      "before": "bbe09273fc731eaf8f27e1decdea90767c780739"
     },
     "public": true,
-    "created_at": "2026-10-30T12:51:16Z"
+    "created_at": "2026-11-07T14:59:03Z"
   },
   {
-    "id": "25770467100",
+    "id": "26480466917",
     "type": "PushEvent",
     "actor": {
       "id": 123625275,
@@ -1347,22 +580,76 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
     },
     "repo": {
-      "id": 1376988611,
-      "name": "Niumination/Niu-OSS-Dashboard",
-      "url": "https://api.github.com/repos/Niumination/Niu-OSS-Dashboard"
+      "id": 1438829437,
+      "name": "Niumination/Niu-Humanoid",
+      "url": "https://api.github.com/repos/Niumination/Niu-Humanoid"
     },
     "payload": {
-      "repository_id": 1376988611,
-      "push_id": 48364202524,
+      "repository_id": 1438829437,
+      "push_id": 49365165688,
       "ref": "refs/heads/main",
-      "head": "6c97ded5045d85ef914156821138f35898a91812",
-      "before": "87a733ad3b20e61ac5e5c0c6f1e95bfb682c1ddf"
+      "head": "3138ceea2d12e54375191976784dac9e99a42c34",
+      "before": "37bc8ede8680159075868f0ac9449f4e67a2094b"
     },
     "public": true,
-    "created_at": "2026-10-30T12:40:04Z"
+    "created_at": "2026-11-07T13:44:19Z"
   },
   {
-    "id": "25770289917",
+    "id": "26478456288",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
+    },
+    "payload": {
+      "ref": "feat/install-macos-script",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/feat/install-macos-script",
+      "master_branch": "main",
+      "description": "Hypr-Rust — Rust tiling window manager/controller research for Windows 11 x64 & Intel macOS (docs + layout-core scaffold)",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-11-07T15:54:27Z"
+  },
+  {
+    "id": "26478154348",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
+    },
+    "payload": {
+      "ref": "docs/ipc-host-run",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/docs/ipc-host-run",
+      "master_branch": "main",
+      "description": "Hypr-Rust — Rust tiling window manager/controller research for Windows 11 x64 & Intel macOS (docs + layout-core scaffold)",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-11-07T14:34:08Z"
+  },
+  {
+    "id": "26470799855",
     "type": "PushEvent",
     "actor": {
       "id": 123625275,
@@ -1373,22 +660,2109 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
     },
     "repo": {
-      "id": 1439758126,
-      "name": "Niumination/zb-humanoid",
-      "url": "https://api.github.com/repos/Niumination/zb-humanoid"
+      "id": 1413239984,
+      "name": "Niumination/mirai",
+      "url": "https://api.github.com/repos/Niumination/mirai"
     },
     "payload": {
-      "repository_id": 1439758126,
-      "push_id": 48369558665,
+      "repository_id": 1413239984,
+      "push_id": 49367240286,
       "ref": "refs/heads/main",
-      "head": "e4bb06cebbd50e9bb45144418d1a5f50c3fc03dd",
-      "before": "79c70ed774c19621d9820f2fa5c917a68963950d"
+      "head": "d920cf2b7dde5cabdc92b04184dd7a11df132c8a",
+      "before": "06049230fe1ecb89cc74918aadc390a1e8edd848"
     },
     "public": true,
-    "created_at": "2026-10-30T13:30:20Z"
+    "created_at": "2026-11-07T14:12:49Z"
   },
   {
-    "id": "25769554678",
+    "id": "26468517433",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1413239984,
+      "name": "Niumination/mirai",
+      "url": "https://api.github.com/repos/Niumination/mirai"
+    },
+    "payload": {
+      "repository_id": 1413239984,
+      "push_id": 49227687862,
+      "ref": "refs/heads/main",
+      "head": "552df427cfa32d4f55cb9248fea2b09d816ff04e",
+      "before": "59612d8ef10359c543edc61f58e532edd8005085"
+    },
+    "public": true,
+    "created_at": "2026-11-06T09:44:42Z"
+  },
+  {
+    "id": "26468313692",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1439826960,
+      "name": "Niumination/mira-humanoid",
+      "url": "https://api.github.com/repos/Niumination/mira-humanoid"
+    },
+    "payload": {
+      "repository_id": 1439826960,
+      "push_id": 49364883760,
+      "ref": "refs/heads/main",
+      "head": "4fcba39d15f92eb92445b93476e1dddfc9a822c1",
+      "before": "d534b49c5133b218422433cb0c1412a5f158e627"
+    },
+    "public": true,
+    "created_at": "2026-11-07T13:40:17Z"
+  },
+  {
+    "id": "26466739665",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1413239984,
+      "name": "Niumination/mirai",
+      "url": "https://api.github.com/repos/Niumination/mirai"
+    },
+    "payload": {
+      "repository_id": 1413239984,
+      "push_id": 49226003126,
+      "ref": "refs/heads/main",
+      "head": "c56fa2e0edf498e4c18da47b5624f46132282032",
+      "before": "78b6a6439daaf9f187ccfee47b352033fd52f9d9"
+    },
+    "public": true,
+    "created_at": "2026-11-06T09:27:10Z"
+  },
+  {
+    "id": "26465680162",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
+    },
+    "payload": {
+      "ref": "docs/adr0009-owner-decisions",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/docs/adr0009-owner-decisions",
+      "master_branch": "main",
+      "description": "Hypr-Rust — Rust tiling window manager/controller research for Windows 11 x64 & Intel macOS (docs + layout-core scaffold)",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-11-07T15:24:18Z"
+  },
+  {
+    "id": "26465155755",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
+    },
+    "payload": {
+      "ref": "feat/partial-state-gone-targets",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/feat/partial-state-gone-targets",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-11-07T15:16:11Z"
+  },
+  {
+    "id": "26465014648",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
+    },
+    "payload": {
+      "ref": "feat/partial-state-gone-targets",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/feat/partial-state-gone-targets",
+      "master_branch": "main",
+      "description": "Hypr-Rust — Rust tiling window manager/controller research for Windows 11 x64 & Intel macOS (docs + layout-core scaffold)",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-11-07T15:13:57Z"
+  },
+  {
+    "id": "26461503520",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1438829437,
+      "name": "Niumination/Niu-Humanoid",
+      "url": "https://api.github.com/repos/Niumination/Niu-Humanoid"
+    },
+    "payload": {
+      "repository_id": 1438829437,
+      "push_id": 49221070596,
+      "ref": "refs/heads/main",
+      "head": "9895afdfbe14d67536eabf08cff24b41cde70054",
+      "before": "ed855426fc46fc94393b1fd271e932661e70c5c6"
+    },
+    "public": true,
+    "created_at": "2026-11-06T08:35:03Z"
+  },
+  {
+    "id": "19431996612",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
+    },
+    "payload": {
+      "action": "merged",
+      "number": 55,
+      "pull_request": {
+        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/55",
+        "id": 5203833394,
+        "number": 55,
+        "head": {
+          "ref": "feat/first-run-guidance",
+          "sha": "ba2d622b6110b3a591bb22faa900aa9e6737e16e",
+          "repo": {
+            "id": 1422508147,
+            "url": "https://api.github.com/repos/Niumination/hypr-rust",
+            "name": "hypr-rust"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "1538770fe01ad81bf947cf0d1e0ae9836270c22b",
+          "repo": {
+            "id": 1422508147,
+            "url": "https://api.github.com/repos/Niumination/hypr-rust",
+            "name": "hypr-rust"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2026-11-07T16:50:09Z"
+  },
+  {
+    "id": "19431954053",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
+    },
+    "payload": {
+      "action": "opened",
+      "number": 55,
+      "pull_request": {
+        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/55",
+        "id": 5203833394,
+        "number": 55,
+        "head": {
+          "ref": "feat/first-run-guidance",
+          "sha": "ba2d622b6110b3a591bb22faa900aa9e6737e16e",
+          "repo": {
+            "id": 1422508147,
+            "url": "https://api.github.com/repos/Niumination/hypr-rust",
+            "name": "hypr-rust"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "1538770fe01ad81bf947cf0d1e0ae9836270c22b",
+          "repo": {
+            "id": 1422508147,
+            "url": "https://api.github.com/repos/Niumination/hypr-rust",
+            "name": "hypr-rust"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2026-11-07T16:49:15Z"
+  },
+  {
+    "id": "19430975474",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
+    },
+    "payload": {
+      "action": "merged",
+      "number": 54,
+      "pull_request": {
+        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/54",
+        "id": 5203627241,
+        "number": 54,
+        "head": {
+          "ref": "docs/hardware-display-matrix",
+          "sha": "7058498062154d4a50f393b14ef32058848d4905",
+          "repo": {
+            "id": 1422508147,
+            "url": "https://api.github.com/repos/Niumination/hypr-rust",
+            "name": "hypr-rust"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "a8e5c7679bca16c52f2b58293876f8db78587eee",
+          "repo": {
+            "id": 1422508147,
+            "url": "https://api.github.com/repos/Niumination/hypr-rust",
+            "name": "hypr-rust"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2026-11-07T16:28:23Z"
+  },
+  {
+    "id": "19430926025",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
+    },
+    "payload": {
+      "action": "opened",
+      "number": 54,
+      "pull_request": {
+        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/54",
+        "id": 5203627241,
+        "number": 54,
+        "head": {
+          "ref": "docs/hardware-display-matrix",
+          "sha": "7058498062154d4a50f393b14ef32058848d4905",
+          "repo": {
+            "id": 1422508147,
+            "url": "https://api.github.com/repos/Niumination/hypr-rust",
+            "name": "hypr-rust"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "a8e5c7679bca16c52f2b58293876f8db78587eee",
+          "repo": {
+            "id": 1422508147,
+            "url": "https://api.github.com/repos/Niumination/hypr-rust",
+            "name": "hypr-rust"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2026-11-07T16:27:19Z"
+  },
+  {
+    "id": "19429441433",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
+    },
+    "payload": {
+      "action": "merged",
+      "number": 53,
+      "pull_request": {
+        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/53",
+        "id": 5203328398,
+        "number": 53,
+        "head": {
+          "ref": "feat/install-macos-script",
+          "sha": "84c2b32134e4854fa6b0c1138aa57e3afda9028e",
+          "repo": {
+            "id": 1422508147,
+            "url": "https://api.github.com/repos/Niumination/hypr-rust",
+            "name": "hypr-rust"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "690933c2bfcd16ff6561cf86634744b0f7a88d6f",
+          "repo": {
+            "id": 1422508147,
+            "url": "https://api.github.com/repos/Niumination/hypr-rust",
+            "name": "hypr-rust"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2026-11-07T15:55:53Z"
+  },
+  {
+    "id": "19429390908",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
+    },
+    "payload": {
+      "action": "opened",
+      "number": 53,
+      "pull_request": {
+        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/53",
+        "id": 5203328398,
+        "number": 53,
+        "head": {
+          "ref": "feat/install-macos-script",
+          "sha": "84c2b32134e4854fa6b0c1138aa57e3afda9028e",
+          "repo": {
+            "id": 1422508147,
+            "url": "https://api.github.com/repos/Niumination/hypr-rust",
+            "name": "hypr-rust"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "690933c2bfcd16ff6561cf86634744b0f7a88d6f",
+          "repo": {
+            "id": 1422508147,
+            "url": "https://api.github.com/repos/Niumination/hypr-rust",
+            "name": "hypr-rust"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2026-11-07T15:54:50Z"
+  },
+  {
+    "id": "19428195707",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
+    },
+    "payload": {
+      "action": "merged",
+      "number": 52,
+      "pull_request": {
+        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/52",
+        "id": 5203071973,
+        "number": 52,
+        "head": {
+          "ref": "docs/adr0009-owner-decisions",
+          "sha": "d56921f80dd872a045e82786faa75231c9223ae1",
+          "repo": {
+            "id": 1422508147,
+            "url": "https://api.github.com/repos/Niumination/hypr-rust",
+            "name": "hypr-rust"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "348e4637691498794428ac735fdba35a542dd689",
+          "repo": {
+            "id": 1422508147,
+            "url": "https://api.github.com/repos/Niumination/hypr-rust",
+            "name": "hypr-rust"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2026-11-07T15:28:40Z"
+  },
+  {
+    "id": "19427997951",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
+    },
+    "payload": {
+      "action": "opened",
+      "number": 52,
+      "pull_request": {
+        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/52",
+        "id": 5203071973,
+        "number": 52,
+        "head": {
+          "ref": "docs/adr0009-owner-decisions",
+          "sha": "d56921f80dd872a045e82786faa75231c9223ae1",
+          "repo": {
+            "id": 1422508147,
+            "url": "https://api.github.com/repos/Niumination/hypr-rust",
+            "name": "hypr-rust"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "348e4637691498794428ac735fdba35a542dd689",
+          "repo": {
+            "id": 1422508147,
+            "url": "https://api.github.com/repos/Niumination/hypr-rust",
+            "name": "hypr-rust"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2026-11-07T15:24:21Z"
+  },
+  {
+    "id": "19427613680",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
+    },
+    "payload": {
+      "action": "merged",
+      "number": 51,
+      "pull_request": {
+        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/51",
+        "id": 5202976555,
+        "number": 51,
+        "head": {
+          "ref": "feat/partial-state-gone-targets",
+          "sha": "baca1a66df9170f5b14cbb37f48d7023b9ddc486",
+          "repo": {
+            "id": 1422508147,
+            "url": "https://api.github.com/repos/Niumination/hypr-rust",
+            "name": "hypr-rust"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "243e510f0b1a9890d1b9e2e4f87bceb301acb90c",
+          "repo": {
+            "id": 1422508147,
+            "url": "https://api.github.com/repos/Niumination/hypr-rust",
+            "name": "hypr-rust"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2026-11-07T15:16:05Z"
+  },
+  {
+    "id": "19427545873",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
+    },
+    "payload": {
+      "action": "opened",
+      "number": 51,
+      "pull_request": {
+        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/51",
+        "id": 5202976555,
+        "number": 51,
+        "head": {
+          "ref": "feat/partial-state-gone-targets",
+          "sha": "baca1a66df9170f5b14cbb37f48d7023b9ddc486",
+          "repo": {
+            "id": 1422508147,
+            "url": "https://api.github.com/repos/Niumination/hypr-rust",
+            "name": "hypr-rust"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "243e510f0b1a9890d1b9e2e4f87bceb301acb90c",
+          "repo": {
+            "id": 1422508147,
+            "url": "https://api.github.com/repos/Niumination/hypr-rust",
+            "name": "hypr-rust"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2026-11-07T15:14:39Z"
+  },
+  {
+    "id": "19425768494",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
+    },
+    "payload": {
+      "action": "merged",
+      "number": 50,
+      "pull_request": {
+        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/50",
+        "id": 5202599944,
+        "number": 50,
+        "head": {
+          "ref": "docs/ipc-host-run",
+          "sha": "75711bb36ae12b3e0d8d3f4dc16c188fa1598a45",
+          "repo": {
+            "id": 1422508147,
+            "url": "https://api.github.com/repos/Niumination/hypr-rust",
+            "name": "hypr-rust"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "cf19d9e4de215ca113449e40f75fc9c05766cb45",
+          "repo": {
+            "id": 1422508147,
+            "url": "https://api.github.com/repos/Niumination/hypr-rust",
+            "name": "hypr-rust"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2026-11-07T14:35:21Z"
+  },
+  {
+    "id": "19425718178",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1422508147,
+      "name": "Niumination/hypr-rust",
+      "url": "https://api.github.com/repos/Niumination/hypr-rust"
+    },
+    "payload": {
+      "action": "opened",
+      "number": 50,
+      "pull_request": {
+        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/50",
+        "id": 5202599944,
+        "number": 50,
+        "head": {
+          "ref": "docs/ipc-host-run",
+          "sha": "75711bb36ae12b3e0d8d3f4dc16c188fa1598a45",
+          "repo": {
+            "id": 1422508147,
+            "url": "https://api.github.com/repos/Niumination/hypr-rust",
+            "name": "hypr-rust"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "cf19d9e4de215ca113449e40f75fc9c05766cb45",
+          "repo": {
+            "id": 1422508147,
+            "url": "https://api.github.com/repos/Niumination/hypr-rust",
+            "name": "hypr-rust"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2026-11-07T14:34:11Z"
+  },
+  {
+    "id": "26426475708",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1413239984,
+      "name": "Niumination/mirai",
+      "url": "https://api.github.com/repos/Niumination/mirai"
+    },
+    "payload": {
+      "repository_id": 1413239984,
+      "push_id": 49226932814,
+      "ref": "refs/heads/main",
+      "head": "3b3440862a7443adde57a46ab86b5042ab66a077",
+      "before": "c56fa2e0edf498e4c18da47b5624f46132282032"
+    },
+    "public": true,
+    "created_at": "2026-11-06T09:36:43Z"
+  },
+  {
+    "id": "26383712900",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49135933518,
+      "ref": "refs/heads/main",
+      "head": "6e435da5ef5403594db526ca4df32a9dc460a982",
+      "before": "db2f8df6f6369175037510e08e34e55a8e941750"
+    },
+    "public": true,
+    "created_at": "2026-11-05T16:43:13Z"
+  },
+  {
+    "id": "26383672478",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49135892924,
+      "ref": "refs/heads/main",
+      "head": "63b90595a5e37113680cde1003b1c6e20e6ef3cf",
+      "before": "f8625cb1d7510827163a8dcb1d69115c47380a3b"
+    },
+    "public": true,
+    "created_at": "2026-11-05T16:42:52Z"
+  },
+  {
+    "id": "26383557691",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49135778748,
+      "ref": "refs/heads/main",
+      "head": "04050cac27e43bd677ba8fb1cff0102c47c146b9",
+      "before": "489c5d61a728f5c3500fc76562aa2d703b142baf"
+    },
+    "public": true,
+    "created_at": "2026-11-05T16:41:51Z"
+  },
+  {
+    "id": "26383420016",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49135657211,
+      "ref": "refs/heads/main",
+      "head": "30649455cd2782f39a0eb167b32d5f461070b712",
+      "before": "35b3332d3c79b4c803b7c69a9c8dbd8035138eb6"
+    },
+    "public": true,
+    "created_at": "2026-11-05T16:40:48Z"
+  },
+  {
+    "id": "26383328128",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1438829437,
+      "name": "Niumination/Niu-Humanoid",
+      "url": "https://api.github.com/repos/Niumination/Niu-Humanoid"
+    },
+    "payload": {
+      "repository_id": 1438829437,
+      "push_id": 49147507478,
+      "ref": "refs/heads/main",
+      "head": "ed855426fc46fc94393b1fd271e932661e70c5c6",
+      "before": "2e817d3c6415ec6b145b32424dd5e6dfa5100f0f"
+    },
+    "public": true,
+    "created_at": "2026-11-05T18:26:46Z"
+  },
+  {
+    "id": "26383294746",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49135548714,
+      "ref": "refs/heads/main",
+      "head": "529525710d9ab8a0e49e6fd92c5c22b83aad41a7",
+      "before": "ad670c00587ed544d3f3663719cf0be0bfcc1009"
+    },
+    "public": true,
+    "created_at": "2026-11-05T16:39:53Z"
+  },
+  {
+    "id": "26379862129",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49132348016,
+      "ref": "refs/heads/main",
+      "head": "d57ff84e7bb8d9690d19ce5fd41bd538394f4213",
+      "before": "c797226f1b8476df967e576beb486ce4aecd11ef"
+    },
+    "public": true,
+    "created_at": "2026-11-05T16:12:39Z"
+  },
+  {
+    "id": "26377655521",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49130175468,
+      "ref": "refs/heads/main",
+      "head": "b3be9389874c33a5171745b224f984d89dcd6626",
+      "before": "ee904ccac6734a3983d51a84032c1e4610ead50e"
+    },
+    "public": true,
+    "created_at": "2026-11-05T15:50:34Z"
+  },
+  {
+    "id": "26377642002",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49130162540,
+      "ref": "refs/heads/main",
+      "head": "ee904ccac6734a3983d51a84032c1e4610ead50e",
+      "before": "70f74ce9559f34f9ee6b07a6a84cbb8f3c53731e"
+    },
+    "public": true,
+    "created_at": "2026-11-05T15:50:28Z"
+  },
+  {
+    "id": "26377070930",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49129599091,
+      "ref": "refs/heads/main",
+      "head": "9cacac130ea37cf40e940e4fb825a24effb1cb28",
+      "before": "88afc57ea3266fc89dc444148558d14bc0f473f5"
+    },
+    "public": true,
+    "created_at": "2026-11-05T15:45:45Z"
+  },
+  {
+    "id": "26376918368",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49129467806,
+      "ref": "refs/heads/main",
+      "head": "abf1a09e0a3a3fa4ec6284192235c64a3b13d20e",
+      "before": "f0b296a55684226f652eabb8e07e54921643c8bd"
+    },
+    "public": true,
+    "created_at": "2026-11-05T15:44:41Z"
+  },
+  {
+    "id": "26376844329",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49129401380,
+      "ref": "refs/heads/main",
+      "head": "4f6c69e8db75940073257ca4db2f23bfe1c9384e",
+      "before": "9d407db61b04d9b1a543348b5c48b27375cfa487"
+    },
+    "public": true,
+    "created_at": "2026-11-05T15:44:08Z"
+  },
+  {
+    "id": "26375451995",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1303073415,
+      "name": "Niumination/ecosystem-config",
+      "url": "https://api.github.com/repos/Niumination/ecosystem-config"
+    },
+    "payload": {
+      "repository_id": 1303073415,
+      "push_id": 49127972638,
+      "ref": "refs/heads/main",
+      "head": "bbe09273fc731eaf8f27e1decdea90767c780739",
+      "before": "90866bc81dbc5ef70971cca46ccd28c19bf7a800"
+    },
+    "public": true,
+    "created_at": "2026-11-05T15:32:04Z"
+  },
+  {
+    "id": "26374884481",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49127434545,
+      "ref": "refs/heads/main",
+      "head": "ac42bdbfbd8f17c057d4dfd7a23195e5c548aa43",
+      "before": "3b59995c2f6a1a536e8810eb8be367a0ee833339"
+    },
+    "public": true,
+    "created_at": "2026-11-05T15:27:36Z"
+  },
+  {
+    "id": "26374777407",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49127328856,
+      "ref": "refs/heads/main",
+      "head": "4df43a99c6c6884f7a2e78fabad6518c09125883",
+      "before": "85902e3c1af6e982225f940f9137d827858d3b86"
+    },
+    "public": true,
+    "created_at": "2026-11-05T15:26:42Z"
+  },
+  {
+    "id": "26374448503",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1439826960,
+      "name": "Niumination/mira-humanoid",
+      "url": "https://api.github.com/repos/Niumination/mira-humanoid"
+    },
+    "payload": {
+      "ref": "_probe-tmp",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/_probe-tmp",
+      "master_branch": "main",
+      "description": "MIRA humanoid rebuild (Vite + React + TS) — satu konsep dengan Niu-Humanoid",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-11-06T10:27:41Z"
+  },
+  {
+    "id": "26374418928",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49127006509,
+      "ref": "refs/heads/main",
+      "head": "fe1e0e123c807a034f572450856c2cc2fc71fb5f",
+      "before": "609b54d26eb9ad297c8cfec13126e49582114479"
+    },
+    "public": true,
+    "created_at": "2026-11-05T15:23:59Z"
+  },
+  {
+    "id": "26371907220",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1413239984,
+      "name": "Niumination/mirai",
+      "url": "https://api.github.com/repos/Niumination/mirai"
+    },
+    "payload": {
+      "repository_id": 1413239984,
+      "push_id": 49229498497,
+      "ref": "refs/heads/main",
+      "head": "d242a9d8f223b36d539925e4d449a0d7d84cdff2",
+      "before": "b73d5914663e34e1b14d90a651ec52515df21884"
+    },
+    "public": true,
+    "created_at": "2026-11-06T10:03:11Z"
+  },
+  {
+    "id": "26371318315",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49136231281,
+      "ref": "refs/heads/main",
+      "head": "478d922419d5012402bf7037a9f55b6e73948bd9",
+      "before": "dd4bb8f197d757be1ee6ed898e5341ae9c69bb0f"
+    },
+    "public": true,
+    "created_at": "2026-11-05T16:45:49Z"
+  },
+  {
+    "id": "26371060683",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49135961222,
+      "ref": "refs/heads/main",
+      "head": "2fe3a3ffbe28a17776a9ad0ab78f16ba04a5dd7d",
+      "before": "9003a8b4851966639f9a6163d7ebad61b51376c9"
+    },
+    "public": true,
+    "created_at": "2026-11-05T16:43:28Z"
+  },
+  {
+    "id": "26370975283",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49135877563,
+      "ref": "refs/heads/main",
+      "head": "f8625cb1d7510827163a8dcb1d69115c47380a3b",
+      "before": "04050cac27e43bd677ba8fb1cff0102c47c146b9"
+    },
+    "public": true,
+    "created_at": "2026-11-05T16:42:44Z"
+  },
+  {
+    "id": "26370851088",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49135762717,
+      "ref": "refs/heads/main",
+      "head": "489c5d61a728f5c3500fc76562aa2d703b142baf",
+      "before": "95424112afd0dcb27a422b4dbb322fd456fc1c83"
+    },
+    "public": true,
+    "created_at": "2026-11-05T16:41:43Z"
+  },
+  {
+    "id": "26370624037",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49135536118,
+      "ref": "refs/heads/main",
+      "head": "ad670c00587ed544d3f3663719cf0be0bfcc1009",
+      "before": "24bc1b4a51c66f1b942d22efbed3bf0eb2fde8df"
+    },
+    "public": true,
+    "created_at": "2026-11-05T16:39:46Z"
+  },
+  {
+    "id": "26370539471",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49135439896,
+      "ref": "refs/heads/main",
+      "head": "73c52b75e98d24d5730f852c0111e9e51123b702",
+      "before": "894b518968db9b2212fec39de25d5066e926d3d1"
+    },
+    "public": true,
+    "created_at": "2026-11-05T16:38:56Z"
+  },
+  {
+    "id": "26370044154",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1413239984,
+      "name": "Niumination/mirai",
+      "url": "https://api.github.com/repos/Niumination/mirai"
+    },
+    "payload": {
+      "repository_id": 1413239984,
+      "push_id": 49227814525,
+      "ref": "refs/heads/main",
+      "head": "a5901aecc2eeea17a7ab4e9d4c10ce22ff5d15de",
+      "before": "7d7a7756da80d6e1c489cbfbe7994ead1cdbf339"
+    },
+    "public": true,
+    "created_at": "2026-11-06T09:45:58Z"
+  },
+  {
+    "id": "26370012057",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1413239984,
+      "name": "Niumination/mirai",
+      "url": "https://api.github.com/repos/Niumination/mirai"
+    },
+    "payload": {
+      "repository_id": 1413239984,
+      "push_id": 49227784240,
+      "ref": "refs/heads/main",
+      "head": "7d7a7756da80d6e1c489cbfbe7994ead1cdbf339",
+      "before": "552df427cfa32d4f55cb9248fea2b09d816ff04e"
+    },
+    "public": true,
+    "created_at": "2026-11-06T09:45:40Z"
+  },
+  {
+    "id": "26366177721",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49131407365,
+      "ref": "refs/heads/main",
+      "head": "dac1edb289fe625b27e89a718d4fbcc080fda019",
+      "before": "7b62ae80a90afaa89375b071b4cc31e10a82d244"
+    },
+    "public": true,
+    "created_at": "2026-11-05T16:01:46Z"
+  },
+  {
+    "id": "26366125190",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49131348279,
+      "ref": "refs/heads/main",
+      "head": "366c36584992adf57f24bd09676fe955c1c5dc43",
+      "before": "31dab20bdee14595eccece50fdc8822824394a91"
+    },
+    "public": true,
+    "created_at": "2026-11-05T16:00:53Z"
+  },
+  {
+    "id": "26366083423",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49131313283,
+      "ref": "refs/heads/main",
+      "head": "e323acbd18874e8b9e89148935ef0b214703580c",
+      "before": "031c04d5dc42244adcb907a04511ebf0ebe2aab5"
+    },
+    "public": true,
+    "created_at": "2026-11-05T16:00:08Z"
+  },
+  {
+    "id": "26364968619",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1413239984,
+      "name": "Niumination/mirai",
+      "url": "https://api.github.com/repos/Niumination/mirai"
+    },
+    "payload": {
+      "repository_id": 1413239984,
+      "push_id": 49130272564,
+      "ref": "refs/heads/main",
+      "head": "387ecda47996f8157017ef2e70328b2bd64c6f4e",
+      "before": "4f0f27fa63e566af736b27d71a513a285872acf6"
+    },
+    "public": true,
+    "created_at": "2026-11-05T15:51:23Z"
+  },
+  {
+    "id": "26364890340",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49130189916,
+      "ref": "refs/heads/main",
+      "head": "8ac60708a84060b68e8edd83269c11da82314f2f",
+      "before": "b3be9389874c33a5171745b224f984d89dcd6626"
+    },
+    "public": true,
+    "created_at": "2026-11-05T15:50:41Z"
+  },
+  {
+    "id": "26364851463",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49130148494,
+      "ref": "refs/heads/main",
+      "head": "70f74ce9559f34f9ee6b07a6a84cbb8f3c53731e",
+      "before": "cb1e5e3d53d181982bc383254201321b7c7be3dd"
+    },
+    "public": true,
+    "created_at": "2026-11-05T15:50:21Z"
+  },
+  {
+    "id": "26364724823",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49130026100,
+      "ref": "refs/heads/main",
+      "head": "67e16617a8ead7f123bc81d375eae2b97f5c2c4a",
+      "before": "9e913d37704859c3b66d4684ebfccc3e90683b06"
+    },
+    "public": true,
+    "created_at": "2026-11-05T15:49:20Z"
+  },
+  {
+    "id": "26364399110",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49129742617,
+      "ref": "refs/heads/main",
+      "head": "b58adc7b70f7e44dd2ea805b12a1a87e56110a8d",
+      "before": "836bd259813683960bbc74cda154e1af633bdd1f"
+    },
+    "public": true,
+    "created_at": "2026-11-05T15:46:56Z"
+  },
+  {
+    "id": "26364226295",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49129583731,
+      "ref": "refs/heads/main",
+      "head": "88afc57ea3266fc89dc444148558d14bc0f473f5",
+      "before": "9f652a0f8f13e4118fa3e29a904843d698c38a40"
+    },
+    "public": true,
+    "created_at": "2026-11-05T15:45:38Z"
+  },
+  {
+    "id": "26363846645",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1438829437,
+      "name": "Niumination/Niu-Humanoid",
+      "url": "https://api.github.com/repos/Niumination/Niu-Humanoid"
+    },
+    "payload": {
+      "repository_id": 1438829437,
+      "push_id": 49129136519,
+      "ref": "refs/heads/main",
+      "head": "2e817d3c6415ec6b145b32424dd5e6dfa5100f0f",
+      "before": "e14e00aeb0e83503dd3ccc55dcc85113a1e5c186"
+    },
+    "public": true,
+    "created_at": "2026-11-05T15:41:53Z"
+  },
+  {
+    "id": "26363397553",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1413239984,
+      "name": "Niumination/mirai",
+      "url": "https://api.github.com/repos/Niumination/mirai"
+    },
+    "payload": {
+      "repository_id": 1413239984,
+      "push_id": 49228048784,
+      "ref": "refs/heads/main",
+      "head": "001f1f29d2b563a8412d0fe5cf7c4e54856c9530",
+      "before": "d843aebc6b4b13c9697ebbc111ae9de751e4f370"
+    },
+    "public": true,
+    "created_at": "2026-11-06T09:48:25Z"
+  },
+  {
+    "id": "26363232083",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1413239984,
+      "name": "Niumination/mirai",
+      "url": "https://api.github.com/repos/Niumination/mirai"
+    },
+    "payload": {
+      "repository_id": 1413239984,
+      "push_id": 49227887432,
+      "ref": "refs/heads/main",
+      "head": "d843aebc6b4b13c9697ebbc111ae9de751e4f370",
+      "before": "a5901aecc2eeea17a7ab4e9d4c10ce22ff5d15de"
+    },
+    "public": true,
+    "created_at": "2026-11-06T09:46:43Z"
+  },
+  {
+    "id": "26362049108",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49127404424,
+      "ref": "refs/heads/main",
+      "head": "aef526e922821e0b1abe41d2bf628ca11f6b7064",
+      "before": "8ea797a05fb773f3adaea2ac4ae44e23a58a016c"
+    },
+    "public": true,
+    "created_at": "2026-11-05T15:27:21Z"
+  },
+  {
+    "id": "26362037156",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49127393416,
+      "ref": "refs/heads/main",
+      "head": "8ea797a05fb773f3adaea2ac4ae44e23a58a016c",
+      "before": "9baf07d62701652f26ea20941f0c703f154c3cb5"
+    },
+    "public": true,
+    "created_at": "2026-11-05T15:27:15Z"
+  },
+  {
+    "id": "26361721486",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49127098488,
+      "ref": "refs/heads/main",
+      "head": "f1a81973f4127f21e36b2e6a52049cd40b99ebda",
+      "before": "144bd773c29c3fdeb628fd58f312a52274e59131"
+    },
+    "public": true,
+    "created_at": "2026-11-05T15:24:46Z"
+  },
+  {
+    "id": "26361691360",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49127069788,
+      "ref": "refs/heads/main",
+      "head": "7a3f61c3cb8748d11c7eead8c2382113c29ee484",
+      "before": "72cb1fe4c20ba6366a0a5805d2861dcf0bc34264"
+    },
+    "public": true,
+    "created_at": "2026-11-05T15:24:32Z"
+  },
+  {
+    "id": "26361664730",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49127041549,
+      "ref": "refs/heads/main",
+      "head": "dda5a28bf4e33e378126e680b426634c199e4fa1",
+      "before": "6933fbba548a835df1176c63986ec94bd2cfc08e"
+    },
+    "public": true,
+    "created_at": "2026-11-05T15:24:17Z"
+  },
+  {
+    "id": "26358461072",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1439826960,
+      "name": "Niumination/mira-humanoid",
+      "url": "https://api.github.com/repos/Niumination/mira-humanoid"
+    },
+    "payload": {
+      "repository_id": 1439826960,
+      "push_id": 49231911594,
+      "ref": "refs/heads/main",
+      "head": "d534b49c5133b218422433cb0c1412a5f158e627",
+      "before": "99a091e74a8e3a5a0ea3a38d31483f0e47c81991"
+    },
+    "public": true,
+    "created_at": "2026-11-06T10:27:55Z"
+  },
+  {
+    "id": "26356620564",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1413239984,
+      "name": "Niumination/mirai",
+      "url": "https://api.github.com/repos/Niumination/mirai"
+    },
+    "payload": {
+      "repository_id": 1413239984,
+      "push_id": 49228476280,
+      "ref": "refs/heads/main",
+      "head": "456bcbec700eb8a999233e8ada3deb870f7cc288",
+      "before": "001f1f29d2b563a8412d0fe5cf7c4e54856c9530"
+    },
+    "public": true,
+    "created_at": "2026-11-06T09:52:50Z"
+  },
+  {
+    "id": "26354416136",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49107686201,
+      "ref": "refs/heads/main",
+      "head": "a4fc9d1104b9b284a977fd147489b559d9e3a9c8",
+      "before": "38a4aeec27457c2f728bb4cae10da6126f3e036c"
+    },
+    "public": true,
+    "created_at": "2026-11-05T12:38:00Z"
+  },
+  {
+    "id": "26354354381",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49107624268,
+      "ref": "refs/heads/main",
+      "head": "6ee0b09e01c5d10e0abf800571e5cbc25706894b",
+      "before": "e8ac1dc30d60bcd8ff2f00ec00e2c8d58bfd92b0"
+    },
+    "public": true,
+    "created_at": "2026-11-05T12:37:25Z"
+  },
+  {
+    "id": "26354328178",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49107598847,
+      "ref": "refs/heads/main",
+      "head": "78835555e157c5303e0a7d8cf8a742ca44369a11",
+      "before": "ff347bc7edbbab36d9366e637cdbc093062ddb7b"
+    },
+    "public": true,
+    "created_at": "2026-11-05T12:37:11Z"
+  },
+  {
+    "id": "26354228792",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
+    },
+    "payload": {
+      "repository_id": 1446031915,
+      "push_id": 49107500237,
+      "ref": "refs/heads/main",
+      "head": "50304365edba44510cff1b2ab3b61da1f8420b19",
+      "before": "98fd648dc9c1087449797bd10bbb880b6412c6b9"
+    },
+    "public": true,
+    "created_at": "2026-11-05T12:36:15Z"
+  },
+  {
+    "id": "26350102396",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1439826960,
+      "name": "Niumination/mira-humanoid",
+      "url": "https://api.github.com/repos/Niumination/mira-humanoid"
+    },
+    "payload": {
+      "ref": "_probe-tmp",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/_probe-tmp",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-11-06T10:27:42Z"
+  },
+  {
+    "id": "26346177938",
+    "type": "PushEvent",
+    "actor": {
+      "id": 123625275,
+      "login": "Niumination",
+      "display_login": "Niumination",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Niumination",
+      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
+    },
+    "repo": {
+      "id": 1413239984,
+      "name": "Niumination/mirai",
+      "url": "https://api.github.com/repos/Niumination/mirai"
+    },
+    "payload": {
+      "repository_id": 1413239984,
+      "push_id": 49227028490,
+      "ref": "refs/heads/main",
+      "head": "59612d8ef10359c543edc61f58e532edd8005085",
+      "before": "3b3440862a7443adde57a46ab86b5042ab66a077"
+    },
+    "public": true,
+    "created_at": "2026-11-06T09:37:44Z"
+  },
+  {
+    "id": "26342764966",
     "type": "PushEvent",
     "actor": {
       "id": 123625275,
@@ -1405,16 +2779,16 @@
     },
     "payload": {
       "repository_id": 1403147974,
-      "push_id": 48368843888,
+      "push_id": 49108364702,
       "ref": "refs/heads/dev",
-      "head": "7a1bd8c31432984d26c550d85743a0dd13d941bb",
-      "before": "b9e0dca849d1fb05eeb7b45a09b1df0b3570f132"
+      "head": "0f4b01ae5ffaec708ceeae74a6b086fa902ad073",
+      "before": "5d983f147ebfa45b6ee840ea191f4cf70e0b606a"
     },
     "public": true,
-    "created_at": "2026-10-30T13:23:38Z"
+    "created_at": "2026-11-05T12:44:15Z"
   },
   {
-    "id": "25769031455",
+    "id": "26342727085",
     "type": "PushEvent",
     "actor": {
       "id": 123625275,
@@ -1425,22 +2799,22 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
     },
     "repo": {
-      "id": 1303073415,
-      "name": "Niumination/ecosystem-config",
-      "url": "https://api.github.com/repos/Niumination/ecosystem-config"
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
     },
     "payload": {
-      "repository_id": 1303073415,
-      "push_id": 48362681848,
+      "repository_id": 1446031915,
+      "push_id": 49096426304,
       "ref": "refs/heads/main",
-      "head": "cb388c9b59cc3230a1f6f0a8274267395ba70f09",
-      "before": "1d6b24eb9cac119d3fb0b95424b816686084c05a"
+      "head": "0e1a594464cc9e6b8fa41b350e692debf8d780f3",
+      "before": "34f5554b4c6d2926e17e2779457b16133c675c32"
     },
     "public": true,
-    "created_at": "2026-10-30T12:24:50Z"
+    "created_at": "2026-11-05T10:50:07Z"
   },
   {
-    "id": "25766980396",
+    "id": "26342613046",
     "type": "PushEvent",
     "actor": {
       "id": 123625275,
@@ -1451,1597 +2825,18 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
     },
     "repo": {
-      "id": 1425674164,
-      "name": "Niumination/ecosystem-omb",
-      "url": "https://api.github.com/repos/Niumination/ecosystem-omb"
+      "id": 1446031915,
+      "name": "Niumination/AgenticTrade",
+      "url": "https://api.github.com/repos/Niumination/AgenticTrade"
     },
     "payload": {
-      "repository_id": 1425674164,
-      "push_id": 48366118715,
+      "repository_id": 1446031915,
+      "push_id": 49108207091,
       "ref": "refs/heads/main",
-      "head": "e577611be3716c5a90fccc4ae87f22b8b00d83b2",
-      "before": "52f203bcba9856bd445ba96919033aff2c2eb01d"
+      "head": "bf206529f44a5a6ada516ac0caf8c9ecacaed5c4",
+      "before": "8be612581a49a6fa55ab872136b2426fbeb6b849"
     },
     "public": true,
-    "created_at": "2026-10-30T12:58:02Z"
-  },
-  {
-    "id": "25766943735",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1080378444,
-      "name": "Niumination/Niu-LKH",
-      "url": "https://api.github.com/repos/Niumination/Niu-LKH"
-    },
-    "payload": {
-      "repository_id": 1080378444,
-      "push_id": 48366092290,
-      "ref": "refs/heads/main",
-      "head": "6c73226ba01b886c5eedbe0bdf3fb1b3eca8f059",
-      "before": "731a25a5a8c83cf26073a83ed9ca423bcc4491a7"
-    },
-    "public": true,
-    "created_at": "2026-10-30T12:57:47Z"
-  },
-  {
-    "id": "25762953147",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "ref": "fix/zero-partial-frame-write",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/fix/zero-partial-frame-write",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-30T11:19:32Z"
-  },
-  {
-    "id": "25759066437",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "ref": "work/snap-min-window-height",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/work/snap-min-window-height",
-      "master_branch": "main",
-      "description": "Hypr-Rust — Rust tiling window manager/controller research for Windows 11 x64 & Intel macOS (docs + layout-core scaffold)",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-30T10:13:21Z"
-  },
-  {
-    "id": "25757873202",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "repository_id": 1422508147,
-      "push_id": 48356262654,
-      "ref": "refs/heads/main",
-      "head": "d1defe52fb112e2a3365122d9cfb816217b419cb",
-      "before": "d83552b61e26e8fed12208d1986788ea5eb1b042"
-    },
-    "public": true,
-    "created_at": "2026-10-30T11:19:30Z"
-  },
-  {
-    "id": "25702697800",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "ref": "work/auto-tiling-fix-tick",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/work/auto-tiling-fix-tick",
-      "master_branch": "main",
-      "description": "Hypr-Rust — Rust tiling window manager/controller research for Windows 11 x64 & Intel macOS (docs + layout-core scaffold)",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-29T17:58:28Z"
-  },
-  {
-    "id": "25698522136",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "repository_id": 1422508147,
-      "push_id": 48267425990,
-      "ref": "refs/heads/main",
-      "head": "8a72775409cc634b784adee9868cf3fe6a65110a",
-      "before": "fe6211021bf98f2f15dc4648c3e42419ea04666c"
-    },
-    "public": true,
-    "created_at": "2026-10-29T18:04:29Z"
-  },
-  {
-    "id": "25689667533",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "ref": "work/auto-tiling-trace",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/work/auto-tiling-trace",
-      "master_branch": "main",
-      "description": "Hypr-Rust — Rust tiling window manager/controller research for Windows 11 x64 & Intel macOS (docs + layout-core scaffold)",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-29T06:43:07Z"
-  },
-  {
-    "id": "25689437881",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1303073415,
-      "name": "Niumination/ecosystem-config",
-      "url": "https://api.github.com/repos/Niumination/ecosystem-config"
-    },
-    "payload": {
-      "repository_id": 1303073415,
-      "push_id": 48194682301,
-      "ref": "refs/heads/main",
-      "head": "7d280765dd3424eee540204c89a9bb50100db582",
-      "before": "f2498e58fc3c4bc1abe7be17a3b43846f2add9bf"
-    },
-    "public": true,
-    "created_at": "2026-10-29T06:39:28Z"
-  },
-  {
-    "id": "25674213561",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "ref": "work/auto-tiling-fix-tick",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/work/auto-tiling-fix-tick",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-29T18:04:34Z"
-  },
-  {
-    "id": "18689944852",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "action": "opened",
-      "number": 43,
-      "pull_request": {
-        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/43",
-        "id": 5088351028,
-        "number": 43,
-        "head": {
-          "ref": "docs/path-q-auto-tiling",
-          "sha": "30807c32ed156133fbac8e16f1795b71dd773463",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "6a477265300e5647e4453c7ed607299b816141aa",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-10-30T17:22:03Z"
-  },
-  {
-    "id": "25637822569",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1424609273,
-      "name": "Niumination/omb-lightvela",
-      "url": "https://api.github.com/repos/Niumination/omb-lightvela"
-    },
-    "payload": {
-      "repository_id": 1424609273,
-      "push_id": 48125214628,
-      "ref": "refs/heads/main",
-      "head": "db55ae5ff9fa9332c7eb6130a30b3384cbc4993a",
-      "before": "c57c6802d2392170994b9ac35be87c8cbe29e3be"
-    },
-    "public": true,
-    "created_at": "2026-10-28T17:11:19Z"
-  },
-  {
-    "id": "25635444985",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1303073415,
-      "name": "Niumination/ecosystem-config",
-      "url": "https://api.github.com/repos/Niumination/ecosystem-config"
-    },
-    "payload": {
-      "repository_id": 1303073415,
-      "push_id": 48119395378,
-      "ref": "refs/heads/main",
-      "head": "f2498e58fc3c4bc1abe7be17a3b43846f2add9bf",
-      "before": "6108f6b20f880ea00c36988124c17a2ed75f9d4d"
-    },
-    "public": true,
-    "created_at": "2026-10-28T16:20:03Z"
-  },
-  {
-    "id": "18680821051",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "action": "merged",
-      "number": 42,
-      "pull_request": {
-        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/42",
-        "id": 5085399159,
-        "number": 42,
-        "head": {
-          "ref": "fix/host-clamp-retry",
-          "sha": "b42b70d51e5b7185c4b080b637479693633743b6",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "d1defe52fb112e2a3365122d9cfb816217b419cb",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-10-30T15:40:54Z"
-  },
-  {
-    "id": "18679282743",
-    "type": "PublicEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1439826960,
-      "name": "Niumination/mira-humanoid",
-      "url": "https://api.github.com/repos/Niumination/mira-humanoid"
-    },
-    "payload": {},
-    "public": true,
-    "created_at": "2026-10-30T14:20:38Z"
-  },
-  {
-    "id": "18672472899",
-    "type": "PublicEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1438829437,
-      "name": "Niumination/Niu-Humanoid",
-      "url": "https://api.github.com/repos/Niumination/Niu-Humanoid"
-    },
-    "payload": {},
-    "public": true,
-    "created_at": "2026-10-29T18:48:05Z"
-  },
-  {
-    "id": "18670982681",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "action": "opened",
-      "number": 42,
-      "pull_request": {
-        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/42",
-        "id": 5085399159,
-        "number": 42,
-        "head": {
-          "ref": "fix/host-clamp-retry",
-          "sha": "b42b70d51e5b7185c4b080b637479693633743b6",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "d1defe52fb112e2a3365122d9cfb816217b419cb",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-10-30T13:49:08Z"
-  },
-  {
-    "id": "18669549600",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1347300426,
-      "name": "Niumination/pabrik-aplikasi-gas",
-      "url": "https://api.github.com/repos/Niumination/pabrik-aplikasi-gas"
-    },
-    "payload": {
-      "action": "merged",
-      "number": 1,
-      "pull_request": {
-        "url": "https://api.github.com/repos/Niumination/pabrik-aplikasi-gas/pulls/1",
-        "id": 4997504195,
-        "number": 1,
-        "head": {
-          "ref": "work/pabrik-audit-snapshot",
-          "sha": "46022d6e90730491869ef80809d91265878510c2",
-          "repo": {
-            "id": 1347300426,
-            "url": "https://api.github.com/repos/Niumination/pabrik-aplikasi-gas",
-            "name": "pabrik-aplikasi-gas"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "49a7a3ae9485878521fadce46c1379839a8db16b",
-          "repo": {
-            "id": 1347300426,
-            "url": "https://api.github.com/repos/Niumination/pabrik-aplikasi-gas",
-            "name": "pabrik-aplikasi-gas"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-10-30T13:25:29Z"
-  },
-  {
-    "id": "18668600270",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1261483824,
-      "name": "Niumination/kune-ya.com",
-      "url": "https://api.github.com/repos/Niumination/kune-ya.com"
-    },
-    "payload": {
-      "action": "merged",
-      "number": 3,
-      "pull_request": {
-        "url": "https://api.github.com/repos/Niumination/kune-ya.com/pulls/3",
-        "id": 4931183423,
-        "number": 3,
-        "head": {
-          "ref": "omb/kirana/20261020-ci",
-          "sha": "d216aabaf1d3d6994d88a4ddc6c3bfb6750e991a",
-          "repo": {
-            "id": 1261483824,
-            "url": "https://api.github.com/repos/Niumination/kune-ya.com",
-            "name": "kune-ya.com"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "cd6be24d400a9a5c41c695cdbf65379e60841871",
-          "repo": {
-            "id": 1261483824,
-            "url": "https://api.github.com/repos/Niumination/kune-ya.com",
-            "name": "kune-ya.com"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-10-30T13:19:20Z"
-  },
-  {
-    "id": "18667017917",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1425674164,
-      "name": "Niumination/ecosystem-omb",
-      "url": "https://api.github.com/repos/Niumination/ecosystem-omb"
-    },
-    "payload": {
-      "action": "merged",
-      "number": 12,
-      "pull_request": {
-        "url": "https://api.github.com/repos/Niumination/ecosystem-omb/pulls/12",
-        "id": 4999950294,
-        "number": 12,
-        "head": {
-          "ref": "omb/notaris/20261024-tambah-repo-baru",
-          "sha": "68b694eead3fe8822ebd091db58380a218e48b29",
-          "repo": {
-            "id": 1425674164,
-            "url": "https://api.github.com/repos/Niumination/ecosystem-omb",
-            "name": "ecosystem-omb"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "52f203bcba9856bd445ba96919033aff2c2eb01d",
-          "repo": {
-            "id": 1425674164,
-            "url": "https://api.github.com/repos/Niumination/ecosystem-omb",
-            "name": "ecosystem-omb"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-10-30T12:58:01Z"
-  },
-  {
-    "id": "18666995141",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1080378444,
-      "name": "Niumination/Niu-LKH",
-      "url": "https://api.github.com/repos/Niumination/Niu-LKH"
-    },
-    "payload": {
-      "action": "merged",
-      "number": 2,
-      "pull_request": {
-        "url": "https://api.github.com/repos/Niumination/Niu-LKH/pulls/2",
-        "id": 4930177718,
-        "number": 2,
-        "head": {
-          "ref": "omb/wira/20261020-ci",
-          "sha": "5255d9b522c2a4b55d11587e59973b7f3cc27a04",
-          "repo": {
-            "id": 1080378444,
-            "url": "https://api.github.com/repos/Niumination/Niu-LKH",
-            "name": "Niu-LKH"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "731a25a5a8c83cf26073a83ed9ca423bcc4491a7",
-          "repo": {
-            "id": 1080378444,
-            "url": "https://api.github.com/repos/Niumination/Niu-LKH",
-            "name": "Niu-LKH"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-10-30T12:57:46Z"
-  },
-  {
-    "id": "18664968895",
-    "type": "WatchEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1433355127,
-      "name": "iAmAjayTeli/devzonex-strata-kaggle",
-      "url": "https://api.github.com/repos/iAmAjayTeli/devzonex-strata-kaggle"
-    },
-    "payload": {
-      "action": "started"
-    },
-    "public": true,
-    "created_at": "2026-10-30T12:30:31Z"
-  },
-  {
-    "id": "18659793527",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "action": "merged",
-      "number": 41,
-      "pull_request": {
-        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/41",
-        "id": 5083469700,
-        "number": 41,
-        "head": {
-          "ref": "fix/zero-partial-frame-write",
-          "sha": "3183d7a03928295034a9440e26d69c3b45b2323b",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "d83552b61e26e8fed12208d1986788ea5eb1b042",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-10-30T11:19:28Z"
-  },
-  {
-    "id": "18659536060",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "action": "opened",
-      "number": 41,
-      "pull_request": {
-        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/41",
-        "id": 5083469700,
-        "number": 41,
-        "head": {
-          "ref": "fix/zero-partial-frame-write",
-          "sha": "3183d7a03928295034a9440e26d69c3b45b2323b",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "d83552b61e26e8fed12208d1986788ea5eb1b042",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-10-30T11:15:52Z"
-  },
-  {
-    "id": "18655314232",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "action": "merged",
-      "number": 40,
-      "pull_request": {
-        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/40",
-        "id": 5082766061,
-        "number": 40,
-        "head": {
-          "ref": "work/snap-min-window-height",
-          "sha": "bbb898e57c6bb538d315bd61bc11fe0bf99ede7e",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "8a72775409cc634b784adee9868cf3fe6a65110a",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-10-30T10:15:53Z"
-  },
-  {
-    "id": "18655250706",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "action": "opened",
-      "number": 40,
-      "pull_request": {
-        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/40",
-        "id": 5082766061,
-        "number": 40,
-        "head": {
-          "ref": "work/snap-min-window-height",
-          "sha": "bbb898e57c6bb538d315bd61bc11fe0bf99ede7e",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "8a72775409cc634b784adee9868cf3fe6a65110a",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-10-30T10:14:59Z"
-  },
-  {
-    "id": "25609887608",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "ref": "work/auto-tiling-trace",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/work/auto-tiling-trace",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-29T06:43:59Z"
-  },
-  {
-    "id": "25604953519",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "repository_id": 1422508147,
-      "push_id": 48195043302,
-      "ref": "refs/heads/main",
-      "head": "fe6211021bf98f2f15dc4648c3e42419ea04666c",
-      "before": "24950266157722047b6b497a37bb2bef4d38fa27"
-    },
-    "public": true,
-    "created_at": "2026-10-29T06:43:56Z"
-  },
-  {
-    "id": "25559173787",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1424609273,
-      "name": "Niumination/omb-lightvela",
-      "url": "https://api.github.com/repos/Niumination/omb-lightvela"
-    },
-    "payload": {
-      "repository_id": 1424609273,
-      "push_id": 48123293693,
-      "ref": "refs/heads/main",
-      "head": "c57c6802d2392170994b9ac35be87c8cbe29e3be",
-      "before": "3c26dc75262e1b7e6d173b3e6560620ced988d87"
-    },
-    "public": true,
-    "created_at": "2026-10-28T16:54:28Z"
-  },
-  {
-    "id": "25558011526",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "ref": "work/auto-tiling-pr-b",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/work/auto-tiling-pr-b",
-      "master_branch": "main",
-      "description": "Hypr-Rust — Rust tiling window manager/controller research for Windows 11 x64 & Intel macOS (docs + layout-core scaffold)",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-28T16:49:50Z"
-  },
-  {
-    "id": "25555664358",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1424609273,
-      "name": "Niumination/omb-lightvela",
-      "url": "https://api.github.com/repos/Niumination/omb-lightvela"
-    },
-    "payload": {
-      "repository_id": 1424609273,
-      "push_id": 48120637513,
-      "ref": "refs/heads/main",
-      "head": "3c26dc75262e1b7e6d173b3e6560620ced988d87",
-      "before": "86d533b6de9b0082b18d4c76a1347d01c7478ad7"
-    },
-    "public": true,
-    "created_at": "2026-10-28T16:30:54Z"
-  },
-  {
-    "id": "25553692958",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "repository_id": 1422508147,
-      "push_id": 48118715513,
-      "ref": "refs/heads/main",
-      "head": "f83222566dd46bbccea2a6e785c1ee9807f40418",
-      "before": "df752b12ff5b842ed319130cabc1360390456475"
-    },
-    "public": true,
-    "created_at": "2026-10-28T16:14:08Z"
-  },
-  {
-    "id": "18586345368",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "action": "merged",
-      "number": 39,
-      "pull_request": {
-        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/39",
-        "id": 5073054067,
-        "number": 39,
-        "head": {
-          "ref": "work/auto-tiling-fix-tick",
-          "sha": "fcb6e252546dc2715b255712cb30f8d60260ec55",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "fe6211021bf98f2f15dc4648c3e42419ea04666c",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-10-29T18:04:28Z"
-  },
-  {
-    "id": "18585712954",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "action": "opened",
-      "number": 39,
-      "pull_request": {
-        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/39",
-        "id": 5073054067,
-        "number": 39,
-        "head": {
-          "ref": "work/auto-tiling-fix-tick",
-          "sha": "fcb6e252546dc2715b255712cb30f8d60260ec55",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "fe6211021bf98f2f15dc4648c3e42419ea04666c",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-10-29T17:58:30Z"
-  },
-  {
-    "id": "25543213225",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1424609273,
-      "name": "Niumination/omb-lightvela",
-      "url": "https://api.github.com/repos/Niumination/omb-lightvela"
-    },
-    "payload": {
-      "repository_id": 1424609273,
-      "push_id": 48131763031,
-      "ref": "refs/heads/main",
-      "head": "618589ba0cdfefd75dd9715b01a5cb718edbfcab",
-      "before": "db55ae5ff9fa9332c7eb6130a30b3384cbc4993a"
-    },
-    "public": true,
-    "created_at": "2026-10-28T18:10:36Z"
-  },
-  {
-    "id": "25537438516",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "ref": "work/adr-0008-auto-tiling",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/work/adr-0008-auto-tiling",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-28T15:59:10Z"
-  },
-  {
-    "id": "25536609434",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "repository_id": 1422508147,
-      "push_id": 48122931349,
-      "ref": "refs/heads/main",
-      "head": "24950266157722047b6b497a37bb2bef4d38fa27",
-      "before": "f83222566dd46bbccea2a6e785c1ee9807f40418"
-    },
-    "public": true,
-    "created_at": "2026-10-28T16:51:13Z"
-  },
-  {
-    "id": "25530955141",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "ref": "work/auto-tiling-pr-b",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/work/auto-tiling-pr-b",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-28T16:51:15Z"
-  },
-  {
-    "id": "25527657380",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "ref": "work/adr-0008-auto-tiling",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/work/adr-0008-auto-tiling",
-      "master_branch": "main",
-      "description": "Hypr-Rust — Rust tiling window manager/controller research for Windows 11 x64 & Intel macOS (docs + layout-core scaffold)",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-28T15:53:11Z"
-  },
-  {
-    "id": "25527347344",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "ref": "work/auto-tiling-pr-a",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/work/auto-tiling-pr-a",
-      "master_branch": "main",
-      "description": "Hypr-Rust — Rust tiling window manager/controller research for Windows 11 x64 & Intel macOS (docs + layout-core scaffold)",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-28T16:13:23Z"
-  },
-  {
-    "id": "25526744487",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "ref": "work/auto-tiling-pr-a",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/work/auto-tiling-pr-a",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-28T16:14:10Z"
-  },
-  {
-    "id": "25525017660",
-    "type": "PushEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "repository_id": 1422508147,
-      "push_id": 48116928977,
-      "ref": "refs/heads/main",
-      "head": "df752b12ff5b842ed319130cabc1360390456475",
-      "before": "d1dd3ac6ca060b927490165a7bb2cd4921844802"
-    },
-    "public": true,
-    "created_at": "2026-10-28T15:59:06Z"
-  },
-  {
-    "id": "18532105035",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "action": "merged",
-      "number": 38,
-      "pull_request": {
-        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/38",
-        "id": 5063579748,
-        "number": 38,
-        "head": {
-          "ref": "work/auto-tiling-trace",
-          "sha": "ed9bf485ad94f0cb5a8ed741b338c8ed493a4275",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "24950266157722047b6b497a37bb2bef4d38fa27",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-10-29T06:43:55Z"
-  },
-  {
-    "id": "18532049075",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "action": "opened",
-      "number": 38,
-      "pull_request": {
-        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/38",
-        "id": 5063579748,
-        "number": 38,
-        "head": {
-          "ref": "work/auto-tiling-trace",
-          "sha": "ed9bf485ad94f0cb5a8ed741b338c8ed493a4275",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "24950266157722047b6b497a37bb2bef4d38fa27",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-10-29T06:43:09Z"
-  },
-  {
-    "id": "25493008768",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "ref": "work/hotkey-dispatch-trace",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/work/hotkey-dispatch-trace",
-      "master_branch": "main",
-      "description": "Hypr-Rust — Rust tiling window manager/controller research for Windows 11 x64 & Intel macOS (docs + layout-core scaffold)",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-27T15:48:07Z"
-  },
-  {
-    "id": "25492571147",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "ref": "work/hotkey-chord-altcmd",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/work/hotkey-chord-altcmd",
-      "master_branch": "main",
-      "description": "Hypr-Rust — Rust tiling window manager/controller research for Windows 11 x64 & Intel macOS (docs + layout-core scaffold)",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-27T17:52:45Z"
-  },
-  {
-    "id": "25464693424",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "ref": "work/global-hotkey-reflow",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/work/global-hotkey-reflow",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-27T12:08:19Z"
-  },
-  {
-    "id": "25454884547",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "ref": "work/reflow-success-host-run",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/work/reflow-success-host-run",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-27T10:16:56Z"
-  },
-  {
-    "id": "25453243004",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "ref": "work/reflow-success-host-run",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/work/reflow-success-host-run",
-      "master_branch": "main",
-      "description": "Hypr-Rust — Rust tiling window manager/controller research for Windows 11 x64 & Intel macOS (docs + layout-core scaffold)",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-27T10:14:57Z"
-  },
-  {
-    "id": "18478397262",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 123625275,
-      "login": "Niumination",
-      "display_login": "Niumination",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/Niumination",
-      "avatar_url": "https://avatars.githubusercontent.com/u/123625275?"
-    },
-    "repo": {
-      "id": 1422508147,
-      "name": "Niumination/hypr-rust",
-      "url": "https://api.github.com/repos/Niumination/hypr-rust"
-    },
-    "payload": {
-      "action": "merged",
-      "number": 35,
-      "pull_request": {
-        "url": "https://api.github.com/repos/Niumination/hypr-rust/pulls/35",
-        "id": 5053487156,
-        "number": 35,
-        "head": {
-          "ref": "work/adr-0008-auto-tiling",
-          "sha": "fbd591832492993ae926e1edb116f41b78368a56",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "d1dd3ac6ca060b927490165a7bb2cd4921844802",
-          "repo": {
-            "id": 1422508147,
-            "url": "https://api.github.com/repos/Niumination/hypr-rust",
-            "name": "hypr-rust"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-10-28T15:59:04Z"
+    "created_at": "2026-11-05T12:42:48Z"
   }
 ]
