@@ -32,8 +32,8 @@ export const SITE = {
    *  (niumination/niumination, "sinkronisasi kondisi ekosistem 20 Sep 2026"). */
   featuredRepos: [
     'PemdiAcehTengah',
-    'niu-dash',
     'Flame-ADE',
+    'sapa-ai',
     'Niu-LKH',
   ],
 

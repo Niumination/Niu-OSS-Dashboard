@@ -1,200 +1,142 @@
 {
- "generatedAt": "2026-11-09T10:42:42.943Z",
- "count": 10,
- "studies": [
-  {
-   "slug": "pemdi-aceh-tengah",
-   "title": "Pemdi Aceh Tengah",
-   "tagline": "Kokpit pemdi & dasbor transparansi untuk kabupaten di dataran tinggi Gayo.",
-   "kind": "Civic Tech",
-   "year": "2024–2026",
-   "repo": "PemdiAcehTengah",
-   "demo": "https://pemdi-aceh-tengah.vercel.app",
-   "stack": [
-    "JavaScript",
-    "Vercel",
-    "Static-first"
-   ],
-   "accent": "#00e5ff",
-   "availableLocales": [
-    "id",
-    "en"
-   ]
-  },
-  {
-   "slug": "flame-ade",
-   "title": "Flame ADE",
-   "tagline": "Emulator terminal AI-native ~7 MB — Tauri 2 + Rust + React 19.",
-   "kind": "Desktop / AI Tooling",
-   "year": "2025–2026",
-   "repo": "Flame-ADE",
-   "demo": null,
-   "stack": [
-    "Tauri 2",
-    "Rust",
-    "React 19",
-    "TypeScript",
-    "BYOK AI"
-   ],
-   "accent": "#e05a1e",
-   "availableLocales": [
-    "id",
-    "en"
-   ]
-  },
-  {
-   "slug": "ai-first-os",
-   "title": "AI First OS",
-   "tagline": "Arch Linux ISO builder dengan Hermes Agent sebagai warga kelas satu.",
-   "kind": "Sistem Operasi / Dotfiles",
-   "year": "2025–2026",
-   "repo": "AI-First-OS",
-   "demo": null,
-   "stack": [
-    "Shell",
-    "Arch Linux",
-    "AI-First",
-    "Hermes Agent"
-   ],
-   "accent": "#a78bfa",
-   "availableLocales": [
-    "id",
-    "en"
-   ]
-  },
-  {
-   "slug": "niu-gayo-agroclimate",
-   "title": "Niu Gayo Agro-Climate",
-   "tagline": "Cuaca presisi untuk kopi Arabika Gayo & mitigasi bencana Aceh Tengah.",
-   "kind": "Data & Iklim",
-   "year": "2026",
-   "repo": "niu-gayo-agroclimate",
-   "demo": null,
-   "stack": [
-    "React 19",
-    "Vite 6",
-    "Tailwind CSS",
-    "WeatherNext 3"
-   ],
-   "accent": "#34d399",
-   "availableLocales": [
-    "id",
-    "en"
-   ]
-  },
-  {
-   "slug": "kms-spbe",
-   "title": "KMS SPBE",
-   "tagline": "Rumah pengetahuan instansi — dokumen pemerintah yang akhirnya bisa dicari, bukan ditumpuk.",
-   "kind": "Civic Tech",
-   "year": "2026",
-   "repo": "kms-spbe",
-   "demo": "https://kms-spbe.vercel.app",
-   "stack": [
-    "Next.js",
-    "Supabase",
-    "TypeScript"
-   ],
-   "accent": "#f59e0b",
-   "availableLocales": [
-    "id",
-    "en"
-   ]
-  },
-  {
-   "slug": "sapa-ai",
-   "title": "SAPA Smart AI",
-   "tagline": "Asisten data statistik Aceh Tengah — tanya dalam bahasa Indonesia, dijawab lengkap dengan buktinya.",
-   "kind": "Civic Tech / AI",
-   "year": "2026",
-   "repo": "sapa-ai",
-   "demo": "https://sapa-smart-ai.vercel.app",
-   "stack": [
-    "TypeScript",
-    "Vercel",
-    "LLM"
-   ],
-   "accent": "#f472b6",
-   "availableLocales": [
-    "id",
-    "en"
-   ]
-  },
-  {
-   "slug": "didong-code",
-   "title": "Didong-Code",
-   "tagline": "Lingkungan pengembangan agentic di desktop — dengan jiwa seni Didong Gayo.",
-   "kind": "Desktop / AI Tooling",
-   "year": "2026",
-   "repo": "didong-code",
-   "demo": null,
-   "stack": [
-    "Electron",
-    "React",
-    "TypeScript"
-   ],
-   "accent": "#fb7185",
-   "availableLocales": [
-    "id",
-    "en"
-   ]
-  },
-  {
-   "slug": "niu-lkh",
-   "title": "Niu-LKH",
-   "tagline": "Laporan kegiatan harian yang nggak bikin malas — foto bukti terkompresi otomatis, PDF tinggal klik.",
-   "kind": "Produktivitas",
-   "year": "2026",
-   "repo": "Niu-LKH",
-   "demo": "https://niumination.github.io/Niu-LKH/",
-   "stack": [
-    "React 19",
-    "Vite",
-    "Tailwind 4"
-   ],
-   "accent": "#a3e635",
-   "availableLocales": [
-    "id",
-    "en"
-   ]
-  },
-  {
-   "slug": "niu-dash",
-   "title": "NIU-DASH",
-   "tagline": "Kakak dari situs ini — dasbor dark cyber untuk 112 proyek, vanilla JS tanpa framework.",
-   "kind": "Dashboard",
-   "year": "2025–2026",
-   "repo": "niu-dash",
-   "demo": "https://niumination.github.io/niu-dash/",
-   "stack": [
-    "HTML",
-    "CSS",
-    "JavaScript"
-   ],
-   "accent": "#94a3b8",
-   "availableLocales": [
-    "id",
-    "en"
-   ]
-  },
-  {
-   "slug": "niu-oss-dashboard",
-   "title": "Niu-OSS-Dashboard",
-   "tagline": "Situs yang sedang Anda baca — dasbor yang mengaudit dirinya sendiri.",
-   "kind": "Web / Observabilitas",
-   "year": "2026",
-   "repo": "Niu-OSS-Dashboard",
-   "demo": "https://niumination.web.id",
-   "stack": [
-    "Next.js 16",
-    "React 19",
-    "TypeScript"
-   ],
-   "accent": "#60a5fa",
-   "availableLocales": [
-    "id",
-    "en"
-   ]
-  }
- ]
+  "generatedAt": "2026-11-09T10:42:42.943Z",
+  "count": 7,
+  "studies": [
+    {
+      "slug": "pemdi-aceh-tengah",
+      "title": "Pemdi Aceh Tengah",
+      "tagline": "Kokpit pemdi & dasbor transparansi untuk kabupaten di dataran tinggi Gayo.",
+      "kind": "Civic Tech",
+      "year": "2024–2026",
+      "repo": "PemdiAcehTengah",
+      "demo": "https://pemdi-aceh-tengah.vercel.app",
+      "stack": [
+        "JavaScript",
+        "Vercel",
+        "Static-first"
+      ],
+      "accent": "#00e5ff",
+      "availableLocales": [
+        "id",
+        "en"
+      ]
+    },
+    {
+      "slug": "flame-ade",
+      "title": "Flame ADE",
+      "tagline": "Emulator terminal AI-native ~7 MB — Tauri 2 + Rust + React 19.",
+      "kind": "Desktop / AI Tooling",
+      "year": "2025–2026",
+      "repo": "Flame-ADE",
+      "demo": null,
+      "stack": [
+        "Tauri 2",
+        "Rust",
+        "React 19",
+        "TypeScript",
+        "BYOK AI"
+      ],
+      "accent": "#e05a1e",
+      "availableLocales": [
+        "id",
+        "en"
+      ]
+    },
+    {
+      "slug": "niu-gayo-agroclimate",
+      "title": "Niu Gayo Agro-Climate",
+      "tagline": "Cuaca presisi untuk kopi Arabika Gayo & mitigasi bencana Aceh Tengah.",
+      "kind": "Data & Iklim",
+      "year": "2026",
+      "repo": "niu-gayo-agroclimate",
+      "demo": null,
+      "stack": [
+        "React 19",
+        "Vite 6",
+        "Tailwind CSS",
+        "WeatherNext 3"
+      ],
+      "accent": "#34d399",
+      "availableLocales": [
+        "id",
+        "en"
+      ]
+    },
+    {
+      "slug": "sapa-ai",
+      "title": "SAPA Smart AI",
+      "tagline": "Asisten data statistik Aceh Tengah — tanya dalam bahasa Indonesia, dijawab lengkap dengan buktinya.",
+      "kind": "Civic Tech / AI",
+      "year": "2026",
+      "repo": "sapa-ai",
+      "demo": "https://sapa-smart-ai.vercel.app",
+      "stack": [
+        "TypeScript",
+        "Vercel",
+        "LLM"
+      ],
+      "accent": "#f472b6",
+      "availableLocales": [
+        "id",
+        "en"
+      ]
+    },
+    {
+      "slug": "didong-code",
+      "title": "Didong-Code",
+      "tagline": "Lingkungan pengembangan agentic di desktop — dengan jiwa seni Didong Gayo.",
+      "kind": "Desktop / AI Tooling",
+      "year": "2026",
+      "repo": "didong-code",
+      "demo": null,
+      "stack": [
+        "Electron",
+        "React",
+        "TypeScript"
+      ],
+      "accent": "#fb7185",
+      "availableLocales": [
+        "id",
+        "en"
+      ]
+    },
+    {
+      "slug": "niu-lkh",
+      "title": "Niu-LKH",
+      "tagline": "Laporan kegiatan harian yang nggak bikin malas — foto bukti terkompresi otomatis, PDF tinggal klik.",
+      "kind": "Produktivitas",
+      "year": "2026",
+      "repo": "Niu-LKH",
+      "demo": "https://niumination.github.io/Niu-LKH/",
+      "stack": [
+        "React 19",
+        "Vite",
+        "Tailwind 4"
+      ],
+      "accent": "#a3e635",
+      "availableLocales": [
+        "id",
+        "en"
+      ]
+    },
+    {
+      "slug": "niu-oss-dashboard",
+      "title": "Niu-OSS-Dashboard",
+      "tagline": "Situs yang sedang Anda baca — dasbor yang mengaudit dirinya sendiri.",
+      "kind": "Web / Observabilitas",
+      "year": "2026",
+      "repo": "Niu-OSS-Dashboard",
+      "demo": "https://niumination.web.id",
+      "stack": [
+        "Next.js 16",
+        "React 19",
+        "TypeScript"
+      ],
+      "accent": "#60a5fa",
+      "availableLocales": [
+        "id",
+        "en"
+      ]
+    }
+  ]
 }
