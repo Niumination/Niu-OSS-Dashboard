@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-15T17:52:23.086Z",
+ "generatedAt": "2026-11-15T22:07:54.973Z",
  "source": "data/uptime.json (GitHub Actions, tiap 15 menit)",
  "intervalMinutes": 15,
  "sites": [
@@ -12,8 +12,8 @@
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-25T06:48:21.587Z",
-    "ms": 137,
+    "t": "2026-10-25T12:08:42.883Z",
+    "ms": 190,
     "ok": true
    }
   },
@@ -22,12 +22,12 @@
    "url": "https://niu-oss.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 152,
+   "avgMs30d": 151,
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-25T06:48:21.587Z",
-    "ms": 84,
+    "t": "2026-10-25T12:08:42.883Z",
+    "ms": 134,
     "ok": true
    }
   },
@@ -36,7 +36,7 @@
    "url": "https://niu-humanoid.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 280,
+   "avgMs30d": 283,
    "days": 14,
    "lastOk": true,
    "lastCheck": {
@@ -54,7 +54,7 @@
    "days": 30,
    "lastOk": null,
    "lastCheck": {
-    "t": "2026-10-25T06:48:21.587Z",
+    "t": "2026-10-25T12:08:42.883Z",
     "ms": null,
     "ok": false
    }
@@ -64,7 +64,7 @@
    "url": "https://sapa-ai-indol.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 229,
+   "avgMs30d": 231,
    "days": 7,
    "lastOk": true,
    "lastCheck": {
@@ -78,12 +78,12 @@
    "url": "https://kelas-hazel.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 1957,
+   "avgMs30d": 1958,
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-25T06:48:21.587Z",
-    "ms": 1735,
+    "t": "2026-10-25T12:08:42.883Z",
+    "ms": 1840,
     "ok": true
    }
   },
@@ -92,7 +92,7 @@
    "url": "https://zbmaus-humanoid.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 415,
+   "avgMs30d": 421,
    "days": 7,
    "lastOk": true,
    "lastCheck": {
@@ -106,7 +106,7 @@
    "url": "https://zb-humanoid.vercel.app",
    "uptime7d": 100,
    "uptime30d": 100,
-   "avgMs30d": 319,
+   "avgMs30d": 320,
    "days": 14,
    "lastOk": true,
    "lastCheck": {
@@ -124,8 +124,8 @@
    "days": 30,
    "lastOk": null,
    "lastCheck": {
-    "t": "2026-10-25T06:48:21.587Z",
-    "ms": 80,
+    "t": "2026-10-25T12:08:42.883Z",
+    "ms": 192,
     "ok": false
    }
   },
@@ -138,8 +138,8 @@
    "days": 30,
    "lastOk": true,
    "lastCheck": {
-    "t": "2026-10-25T06:48:21.587Z",
-    "ms": 92,
+    "t": "2026-10-25T12:08:42.883Z",
+    "ms": 234,
     "ok": true
    }
   }
