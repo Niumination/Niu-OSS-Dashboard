@@ -1,12 +1,12 @@
 {
- "generatedAt": "2026-11-09T10:42:42.943Z",
+ "generatedAt": "2026-11-16T10:25:57.170Z",
  "repo": {
   "name": "mira-humanoid",
   "fullName": "Niumination/mira-humanoid",
   "description": "MIRA humanoid rebuild (Vite + React + TS) — satu konsep dengan Niu-Humanoid",
   "descriptionEn": null,
   "url": "https://github.com/Niumination/mira-humanoid",
-  "homepage": null,
+  "homepage": "https://mira-humanoid-niu.vercel.app",
   "language": "TypeScript",
   "topics": [],
   "stars": 0,
@@ -15,9 +15,9 @@
   "openIssues": 0,
   "fork": false,
   "archived": false,
-  "license": null,
-  "sizeKb": 77062,
+  "license": "NOASSERTION",
+  "sizeKb": 107826,
   "createdAt": "2026-10-30T14:20:38Z",
-  "pushedAt": "2026-11-09T07:42:01Z"
+  "pushedAt": "2026-11-16T04:19:24Z"
  }
 }

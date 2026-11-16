@@ -1,0 +1,23 @@
+{
+ "generatedAt": "2026-11-16T10:25:57.170Z",
+ "repo": {
+  "name": "apex-humanoid-rebuild",
+  "fullName": "Niumination/apex-humanoid-rebuild",
+  "description": "APEX humanoid rebuild — sumber dipulihkan dari commit 369c8f5 (Niu-Humanoid); byte-identik dgn produksi niu-humanoid.vercel.app",
+  "descriptionEn": null,
+  "url": "https://github.com/Niumination/apex-humanoid-rebuild",
+  "homepage": null,
+  "language": "TypeScript",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": "NOASSERTION",
+  "sizeKb": 6378,
+  "createdAt": "2026-11-11T18:03:18Z",
+  "pushedAt": "2026-11-16T04:20:03Z"
+ }
+}

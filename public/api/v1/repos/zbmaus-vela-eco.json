@@ -1,0 +1,23 @@
+{
+ "generatedAt": "2026-11-16T10:25:57.170Z",
+ "repo": {
+  "name": "zbmaus-vela-eco",
+  "fullName": "Niumination/zbmaus-vela-eco",
+  "description": "Complete ecosystem snapshot for OpenMausBot (zbmaus) — bots, routines, memory, skills, connected apps, rooms, and configuration. Synced from OMB state. No secrets/credentials.",
+  "descriptionEn": null,
+  "url": "https://github.com/Niumination/zbmaus-vela-eco",
+  "homepage": null,
+  "language": null,
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": null,
+  "sizeKb": 14,
+  "createdAt": "2026-11-13T19:27:44Z",
+  "pushedAt": "2026-11-13T19:50:02Z"
+ }
+}

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-09T10:42:42.943Z",
+ "generatedAt": "2026-11-16T10:25:57.170Z",
  "repo": {
   "name": "Niu-Humanoid",
   "fullName": "Niumination/Niu-Humanoid",
@@ -15,9 +15,9 @@
   "openIssues": 0,
   "fork": false,
   "archived": false,
-  "license": null,
-  "sizeKb": 208749,
+  "license": "NOASSERTION",
+  "sizeKb": 249135,
   "createdAt": "2026-10-29T18:48:05Z",
-  "pushedAt": "2026-11-09T07:45:39Z"
+  "pushedAt": "2026-11-16T04:24:23Z"
  }
 }

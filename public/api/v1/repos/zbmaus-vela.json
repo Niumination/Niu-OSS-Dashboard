@@ -1,0 +1,23 @@
+{
+ "generatedAt": "2026-11-16T10:25:57.170Z",
+ "repo": {
+  "name": "zbmaus-vela",
+  "fullName": "Niumination/zbmaus-vela",
+  "description": "Paket setup & konfigurasi lengkap OpenMausBot (OMB) untuk satu VPS: OMB UI, noVNC token gate, relay-bridge, 9Router, Cloudflare tunnel http2. Tanpa data runtime & kredensial.",
+  "descriptionEn": null,
+  "url": "https://github.com/Niumination/zbmaus-vela",
+  "homepage": null,
+  "language": "JavaScript",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": null,
+  "sizeKb": 28,
+  "createdAt": "2026-11-13T04:09:40Z",
+  "pushedAt": "2026-11-13T14:17:01Z"
+ }
+}
