@@ -1,0 +1,23 @@
+{
+ "generatedAt": "2026-11-23T11:34:20.248Z",
+ "repo": {
+  "name": "dao-playables",
+  "fullName": "Niumination/dao-playables",
+  "description": "Rekonstruksi mandiri 5 playables be-of-dao (CIRCUIT/CHAOS/GATHER/PANDORA/WAKE) — tulis ulang dari aturan, tanpa kode/aset sumber",
+  "descriptionEn": null,
+  "url": "https://github.com/Niumination/dao-playables",
+  "homepage": null,
+  "language": "TypeScript",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": null,
+  "sizeKb": 22366,
+  "createdAt": "2026-11-17T17:17:05Z",
+  "pushedAt": "2026-11-18T13:25:07Z"
+ }
+}

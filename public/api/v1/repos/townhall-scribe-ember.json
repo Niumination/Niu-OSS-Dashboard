@@ -1,0 +1,23 @@
+{
+ "generatedAt": "2026-11-23T11:34:20.248Z",
+ "repo": {
+  "name": "townhall-scribe-ember",
+  "fullName": "Niumination/townhall-scribe-ember",
+  "description": "TownHall Scribe — Turn 3-hour council meetings into 1-page citable minutes for $0.02. Muse Ember Hackathon submission.",
+  "descriptionEn": null,
+  "url": "https://github.com/Niumination/townhall-scribe-ember",
+  "homepage": "https://townhall-scribe-ember.vercel.app",
+  "language": "TypeScript",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": "NOASSERTION",
+  "sizeKb": 120,
+  "createdAt": "2026-11-21T19:29:32Z",
+  "pushedAt": "2026-11-22T16:14:25Z"
+ }
+}

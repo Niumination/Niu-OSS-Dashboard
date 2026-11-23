@@ -1,0 +1,23 @@
+{
+ "generatedAt": "2026-11-23T11:34:20.248Z",
+ "repo": {
+  "name": "canvas",
+  "fullName": "Niumination/canvas",
+  "description": "Koleksi eksperimen web interaktif (single-file HTML apps)",
+  "descriptionEn": null,
+  "url": "https://github.com/Niumination/canvas",
+  "homepage": null,
+  "language": "HTML",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": null,
+  "sizeKb": 48,
+  "createdAt": "2026-11-17T18:59:57Z",
+  "pushedAt": "2026-11-20T16:23:18Z"
+ }
+}

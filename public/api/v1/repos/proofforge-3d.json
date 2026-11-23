@@ -1,0 +1,23 @@
+{
+ "generatedAt": "2026-11-23T11:34:20.248Z",
+ "repo": {
+  "name": "proofforge-3d",
+  "fullName": "Niumination/proofforge-3d",
+  "description": "Self-Verifying Systems Compiler & 3D Visual Counterexample Engine — Gemini 4 NYC Hackathon",
+  "descriptionEn": null,
+  "url": "https://github.com/Niumination/proofforge-3d",
+  "homepage": null,
+  "language": "Python",
+  "topics": [],
+  "stars": 0,
+  "forks": 0,
+  "watchers": 0,
+  "openIssues": 0,
+  "fork": false,
+  "archived": false,
+  "license": "MIT",
+  "sizeKb": 247,
+  "createdAt": "2026-11-17T04:44:07Z",
+  "pushedAt": "2026-11-21T18:44:18Z"
+ }
+}

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-16T10:25:57.170Z",
+ "generatedAt": "2026-11-23T11:34:20.248Z",
  "repo": {
   "name": "ecosystem-config",
   "fullName": "Niumination/ecosystem-config",
@@ -16,8 +16,8 @@
   "fork": false,
   "archived": false,
   "license": null,
-  "sizeKb": 50087,
+  "sizeKb": 48264,
   "createdAt": "2026-07-16T17:39:24Z",
-  "pushedAt": "2026-11-16T10:23:12Z"
+  "pushedAt": "2026-11-22T14:27:22Z"
  }
 }
